@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>PC de Daniel</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+        html, body {
+            background-color: lightblue;
+            cursor: url(cursor.cur), auto;
+            height: 100%;
+        }
+
+        td {
+            font-family: "Press Start 2P";
+        }
+    </style>
+    <script language=javascript>
+        //definimos la variable que incrementará el valor de un ángulo que parte de 0
+        valor = 0;
+        function girar() {
+            //Incremento progresivo del ángulo con valor 0.04; el valor 0.04 establece la 
+            //precisión del movimiento. A mayor valor, menor precisión. Si damos
+            //un valor muy alto, el movimiento irá a "saltos"
+            valor = valor + 0.04;
+            //Generamos valores de seno y coseno de la variable valor
+            posicion = Math.sin(valor);
+            posicioncos = Math.cos(valor);
+            // Asignamos las fórmulas anteriores a dos variables que establecerán
+            // los movimientos horizontal y vertical
+            posicion1 = (posicion * 100) + 300;
+            posicion2 = (posicioncos * 100) + 160;
+            //Asignamos las variables anteriores a las posiciones left (horizontal) y top (vertical)
+            capa.style.left = posicion1 + 'px';
+            capa.style.top = posicion2 + 'px';
+            //Hacemos que la función se repita una y otra vez cada 10 milisegundos
+            setTimeout('girar()', 10)
+        }
+    </script>
+</head>
+
+<body onload="girar()">
+    <marquee behavior="alternate" scrollamount="20">
+        <table border=1 cellpadding=10>
+            <tr>
+                <td>
+                    <font size="32" color="yellow"><b>PC de Daniel</b>
+                </td>
+            </tr>
+        </table>
+    </marquee>
+    </font>
+    <ul type="circle">
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="ejerciciosjavascript.html">Ejercicios Javascript</a></li>
+        <li><a href="ftp.html">Cliente FTP</a></li>
+        <li><a href="spam.html">Aplicación de spam</a></li>
+        <li><a href="consola.html">Consola</a></li>
+        <li><a href="epilepsia.html">Epilepsia</a></li>
+        <li><a href="colores.html">Jueguito</a></li>
+        <li><a href="xd.html">?</a></li>
+    </ul>
+    <form name=f1>
+        <div style="position: absolute; width: 100px; height: 100px; z-index: 1; left: 351px; top: 134px" id="capa">
+            <table border="0" width="100%" id="table1" height="106">
+                <tr>
+                    <td align="center">
+                        <font size="8"><b>DEAL WITH IT</b></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="gafas.png"></td>
+                </tr>
+                <tr>
+                    <td align="center"><img width="50%" src="porro.png"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <img style="position:absolute; right:0px; bottom:0px;" src="snoopdogg.gif">
+</body>
+
+</html>

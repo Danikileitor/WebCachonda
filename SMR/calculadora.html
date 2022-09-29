@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CalculadoraPro</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script type="text/javascript">
+function cero(){document.getElementById("texto").value += "0";}
+function uno(){document.getElementById("texto").value += "1";}
+function dos(){document.getElementById("texto").value += "2";}
+function tres(){document.getElementById("texto").value += "3";}
+function cuatro(){document.getElementById("texto").value += "4";}
+function cinco(){document.getElementById("texto").value += "5";}
+function seis(){document.getElementById("texto").value += "6";}
+function siete(){document.getElementById("texto").value += "7";}
+function ocho(){document.getElementById("texto").value += "8";}
+function nueve(){document.getElementById("texto").value += "9";}
+function dividir(){document.getElementById("texto").value += "/";}
+function multiplicar(){document.getElementById("texto").value += "*";}
+function restar(){document.getElementById("texto").value += "-";}
+function sumar(){document.getElementById("texto").value += "+";}
+function coma(){document.getElementById("texto").value += ".";}
+function par1(){document.getElementById("texto").value += "(";}
+function par2(){document.getElementById("texto").value += ")";}
+function pi(){document.getElementById("texto").value += Math.PI;}
+function rng(){document.getElementById("texto").value += Math.floor(Math.random() * 10);}
+function igual(){document.getElementById("texto").value = eval(document.getElementById("texto").value);}
+function borrar(){
+	document.getElementById("texto").value = document.getElementById("texto").value.substr(0, document.getElementById("texto").value.length - 1);
+}
+</script>
+</head>
+<body>
+<form>
+<table bgcolor="blue" align="center">
+<tr align="center">
+<td colspan=4><textarea style="color: blue; background-color: lightyellow; text-align: right; font-weight: bolder;" id="texto" rows="2"></textarea></td>
+</tr>
+<tr align="center">
+<td><input style="width:100%;" type="button" value="(" onclick="par1()"></td>
+<td><input style="width:100%;" type="button" value=")" onclick="par2()"></td>
+<td><input style="width:100%;" type="reset" value="C"></td>
+<td><input style="width:100%;" type="button" value="&lArr;" onclick="borrar()"></td>
+</tr>
+<tr align="center">
+<td><input style="width:100%;" type="button" value="7" onclick="siete()"></td>
+<td><input style="width:100%;" type="button" value="8" onclick="ocho()"></td>
+<td><input style="width:100%;" type="button" value="9" onclick="nueve()"></td>
+<td><input style="width:100%;" type="button" value="/" onclick="dividir()"></td>
+</tr>
+<tr align="center">
+<td><input style="width:100%;" type="button" value="4" onclick="cuatro()"></td>
+<td><input style="width:100%;" type="button" value="5" onclick="cinco()"></td>
+<td><input style="width:100%;" type="button" value="6" onclick="seis()"></td>
+<td><input style="width:100%;" type="button" value="*" onclick="multiplicar()"></td>
+</tr>
+<tr align="center">
+<td><input style="width:100%;" type="button" value="1" onclick="uno()"></td>
+<td><input style="width:100%;" type="button" value="2" onclick="dos()"></td>
+<td><input style="width:100%;" type="button" value="3" onclick="tres()"></td>
+<td><input style="width:100%;" type="button" value="-" onclick="restar()"></td>
+</tr>
+<tr align="center">
+<td><input style="width:100%;" type="button" value="0" onclick="cero()"></td>
+<td><input style="width:100%;" type="button" value="," onclick="coma()"></td>
+<td><input style="width:100%;" type="button" value="π" onclick="pi()"></td>
+<td rowspan=2><input style="width:100%; height:100%;" type="button" value="+" onclick="sumar()"></td>
+</tr>
+<tr>
+<td colspan=2><input style="width:100%;" type="button" value="=" onclick="igual()"></td>
+<td><input style="width:100%;" type="button" value="R" onclick="rng()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

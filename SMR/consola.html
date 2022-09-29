@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consola</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script type="text/javascript">
+function enter(event){
+if(event.which == 13 || event.keyCode == 13){
+//escribir los comandos abajo, cada uno con un if
+if(document.getElementById("comando").value == ""){
+return false;
+}
+if(document.getElementById("comando").value == "hola"){
+document.getElementById("consola").value += "¡Hola Mundo!";
+document.getElementById("consola").value += "\n";
+document.getElementById("comando").value = "";
+return false;
+}
+if(document.getElementById("comando").value == "clear" || document.getElementById("comando").value == "cls"){
+document.getElementById("consola").value = "";
+document.getElementById("comando").value = "";
+return false;
+}
+if(document.getElementById("comando").value == "where"){
+document.getElementById("consola").value += window.location.href;
+document.getElementById("consola").value += "\n";
+document.getElementById("comando").value = "";
+return false;
+}
+if(document.getElementById("comando").value == "userdata"){
+document.getElementById("consola").value += "La información de su equipo es:\n";
+document.getElementById("consola").value += "Resolución de tu pantalla: ";
+document.getElementById("consola").value += window.screen.width;
+document.getElementById("consola").value += " x ";
+document.getElementById("consola").value += window.screen.height;
+document.getElementById("consola").value += " píxeles.\nProfundidad de color: ";
+var colorDepth = window.screen.colorDepth;
+if (colorDepth == 4){
+document.getElementById("consola").value += "16 colores";}
+else if (colorDepth == 8){
+document.getElementById("consola").value += "256 colores";}
+else if (colorDepth > 8){
+document.getElementById("consola").value += colorDepth;
+document.getElementById("consola").value += " bits.";}
+else{
+	document.getElementById("consola").value += "Desconocido.";}
+document.getElementById("consola").value += "\nSistema operativo: ";
+var OSName="Desconocido.";
+if (navigator.appVersion.indexOf("Win")!=-1) {OSName="Windows.";}
+if (navigator.appVersion.indexOf("Mac")!=-1) {OSName="MacOS.";}
+if (navigator.appVersion.indexOf("X11")!=-1) {OSName="UNIX.";}
+if (navigator.appVersion.indexOf("Linux")!=-1) {OSName="Linux.";}
+document.getElementById("consola").value += OSName;
+document.getElementById("consola").value += "\n";
+document.getElementById("comando").value = "";
+return false;
+}
+//fin para escribir los comandos y comienzo del help
+if(document.getElementById("comando").value == "help"){
+document.getElementById("consola").value += "Los comandos existentes son:\nhola clear where userdata";
+document.getElementById("comando").value = "";
+return false;
+}
+//fin del help
+else{
+document.getElementById("consola").value += "Error: no existe el comando solicitado.";
+document.getElementById("consola").value += "\n";
+}
+document.getElementById("comando").value = "";
+return false;
+}else{
+return true;
+}}
+</script>
+</head>
+<body>
+<form>
+<table align="center">
+<tr>
+<td><textarea disabled style="overflow-y: scroll;font-family: monospace;color: white; background-color: black;" cols="160" rows="40" id="consola"></textarea></td>
+</tr>
+<tr>
+<td><textarea autofocus style="font-family: monospace;color: white; background-color: black;" cols="160" rows="3" id="comando" onkeypress="return enter(event)" /></textarea></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

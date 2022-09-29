@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SpamPro</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script type="text/javascript">
+function spamv(){
+for (i = document.getElementById("veces").value; i > 0; i--){
+document.getElementById("spam").value += document.getElementById("texto").value;
+document.getElementById("spam").value += "\n";
+}}
+function spamh(){
+for (i = document.getElementById("veces").value; i > 0; i--){
+document.getElementById("spam").value += document.getElementById("texto").value;
+document.getElementById("spam").value += " ";
+}}
+function copiar(){
+document.getElementById("spam").select();
+window.clipboardData.setData("Text", document.getElementById("spam").value)
+}
+</script>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td><textarea id="texto" cols="109" rows="2">Texto a spamear</textarea></td>
+<td><textarea id="veces" cols="5" rows="2">Veces</textarea></td>
+<td><input type="button" value="Spam vertical" onclick="spamv()"></td>
+<td><input type="button" value="Spam horizontal" onclick="spamh()"></td>
+<td><input type="reset" value="Limpiar"></td>
+<td><input type="button" value="Copiar" onclick="copiar()"></td>
+</tr>
+<tr>
+<td colspan=6><textarea id="spam" cols="160" rows="40" style="overflow-y: scroll;"/></textarea></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

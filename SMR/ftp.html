@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ClienteFTP</title></head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script type="text/javascript">
+function logeo(form) {
+var username = form.username.value;
+var password = form.password.value;
+var server = form.server.value;
+var local = form.local.value;
+if (username && password && server && local) {
+window.open("file://" + local, '_blank', 'toolbar=yes,location=yes,status=yes,' + 'scrollbars=auto,copyhistory=no,menubar=no,width=' + ((screen.AvailWidth/2)-12) + ',height=' + (screen.AvailHeight-124) +',left=0,top=0,resizable=yes');
+window.open("ftp://" + username + ":" + password + "@" + server, '_blank', 'toolbar=yes,location=yes,status=yes,' + 'scrollbars=auto,copyhistory=no,menubar=no,width=' + ((screen.AvailWidth/2)-12) + ',height=' + (screen.AvailHeight-124) +',left=' + ((screen.AvailWidth/2)) + '),top=0,resizable=yes');
+}else {
+alert("¡No dejes campos sin rellenar!");
+}}
+</script>
+<body>
+<h1>Cliente FTP by Dani</h1><hr>
+<form name=login>
+<table>
+<tr>
+<td align='right'>Usuario</td>
+<td><input type='text' name='username' value='usuario' size='20' maxlength='20'></td>
+</tr>
+<tr>
+<td align='right'>Contraseña</td>
+<td><input type='password' name='password' value='usuario' size='20' maxlength='20'></td>
+</tr>
+<tr>
+<td align='right'>Servidor</td>
+<td><input type='text' name='server' value='10.10.2.xxx:21' size='60' maxlength='120'></td>
+</tr>
+<tr>
+<td align='right'>Directorio cliente</td>
+<td><input type='text' name='local' value='/home/usuario' size='60' maxlength='200'></td>
+</tr>
+</table>
+<hr>
+<table>
+<tr>
+<td><input type='button' value='Conectar' onClick='logeo(this.form)'></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
