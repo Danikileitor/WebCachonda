@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicios Javascript</title>
+<script type="text/javascript">
+function res(){
+for(p = 0; p < 36; p++){
+document.getElementsByTagName("p")[p].innerHTML = "";
+document.getElementById("ej35").innerHTML = "Párrafo del ejercicio 35";
+document.getElementById("ej35b").innerHTML = "";
+document.body.style.background = "#FFFFFF";
+}}
+function ej1(){
+var edad = prompt("Introduzca su edad ", "0");
+var nombre = prompt("Introduzca su nombre ", "Nombre");
+var estadocivil = prompt("Introduzca su estado civil ", "Soltero");
+document.getElementById("ej1").innerHTML = "Tiene una edad de " + edad + " años, se llama " + nombre + " y su estado civil es " + estadocivil + ".";
+}
+function ej2(){
+var sueldo = prompt("Introduzca su sueldo ", "0");
+var sueldo = Math.round(parseFloat(sueldo) * 100) / 100;
+var nombre = prompt("Introduzca su nombre ", "Nombre");
+document.getElementById("ej2a").innerHTML = "Su sueldo es " + sueldo;
+document.getElementById("ej2b").innerHTML = "Su nombre es " + nombre;
+}
+function ej3(){
+var usuario = prompt("Introduzca su nombre de usuario ", "Usuario");
+var email = prompt("Introduzca su email ", "Email");
+document.getElementById("ej3").innerHTML = "Su nombre de usuario es " + usuario + " y su email es " + email;
+}
+function ej4(){
+var n1 = prompt("Introduzca el primer número ", "1");
+var n2 = prompt("Introduzca el segundo número ", "2");
+var suma = parseFloat(n1)+parseFloat(n2);
+document.getElementById("ej4").innerHTML = "El resultado de la suma es " + suma;
+}
+function ej5(){
+var n1 = prompt("Introduzca el primer número ", "1");
+var n2 = prompt("Introduzca el segundo número ", "2");
+var n3 = prompt("Introduzca el tercer número ", "3");
+var n4 = prompt("Introduzca el cuarto número ", "4");
+var suma = parseFloat(n1)+parseFloat(n2);
+var producto = parseFloat(n3)*parseFloat(n4);
+document.getElementById("ej5").innerHTML = "El resultado de la suma es " + suma + ", y el resultado del producto es " + producto;
+}
+function ej6(){
+var n1 = prompt("Introduzca el primer número ", "1");
+var n2 = prompt("Introduzca el segundo número ", "2");
+var n3 = prompt("Introduzca el tercer número ", "3");
+var n4 = prompt("Introduzca el cuarto número ", "4");
+var suma = parseFloat(n1)+parseFloat(n2)+parseFloat(n3)+parseFloat(n4);
+var producto = parseFloat(n1)*parseFloat(n2)*parseFloat(n3)*parseFloat(n4);
+document.getElementById("ej6").innerHTML = "El resultado de la suma es " + suma + ", y el resultado del producto es " + producto;
+}
+function ej7(){
+var precio = prompt("Introduzca el precio del artículo ", "0");
+var cantidad = prompt("Introduzca su cantidad ", "0");
+var producto = parseFloat(precio)*parseFloat(cantidad);
+document.getElementById("ej7").innerHTML = "Se debe abonar " + producto + "€";
+}
+function ej8(){
+var nota = prompt("Introduzca su nota ", "0");
+if (nota >= 4) {
+document.getElementById("ej8").innerHTML = "Has aprobado";
+}else{
+document.getElementById("ej8").innerHTML = "Has suspendido";
+}}
+function ej9(){
+var nota1 = prompt("Introduzca la primera nota ", "1");
+var nota2 = prompt("Introduzca la segunda nota ", "2");
+var nota3 = prompt("Introduzca la tercera nota ", "3");
+var promedio = (parseFloat(nota1)+parseFloat(nota2)+parseFloat(nota3))/3;
+if (promedio >= 5) {
+document.getElementById("ej9").innerHTML = "Has aprobado";
+}else{
+document.getElementById("ej9").innerHTML = "Has suspendido";
+}}
+function ej10(){
+var clave1 = prompt("Introduzca su clave ", "123456aA");
+var clave2 = prompt("Vuelva a introducir su clave ", "123456aA");
+if (clave1 == clave2) {
+document.getElementById("ej10").innerHTML = "Las claves coinciden";
+}else{
+document.getElementById("ej10").innerHTML = "Las claves son diferentes";
+}}
+function ej11(){
+var n1 = prompt("Introduzca el primer número ", "1");
+var n2 = prompt("Introduzca el segundo número ", "2");
+document.getElementById("ej11").innerHTML = "El número mayor es " + Math.max(n1, n2);
+}
+function ej12(){
+var n1 = prompt("Introduzca el primer número ", "1");
+var n2 = prompt("Introduzca el segundo número ", "2");
+var suma = parseFloat(n1)+parseFloat(n2);
+var resta = parseFloat(n1)-parseFloat(n2);
+var producto = parseFloat(n1)*parseFloat(n2);
+var division = parseFloat(n1)/parseFloat(n2);
+if (n1 > n2) {
+document.getElementById("ej12").innerHTML = "El resultado de su suma es " + suma + " y el resultado de su diferencia es " + resta;
+}else{
+document.getElementById("ej12").innerHTML = "El resultado de su producto es " + producto + " y el resultado de su división es " + division;
+}}
+function ej13(){
+var nota1 = prompt("Introduzca la primera nota ", "1");
+var nota2 = prompt("Introduzca la segunda nota ", "2");
+var nota3 = prompt("Introduzca la tercera nota ", "3");
+var promedio = (parseFloat(nota1)+parseFloat(nota2)+parseFloat(nota3))/3;
+if (promedio >= 4) {
+document.getElementById("ej13").innerHTML = "Apto";
+}else{
+document.getElementById("ej13").innerHTML = "Suspenso";
+}}
+function ej14(){
+var n1 = prompt("Introduzca un número entero entre 1 y 99 ", "1");
+while (parseFloat(n1) < 1 || parseFloat(n1) > 99){
+var n1 = prompt("Error, introduzca un número entero entre 1 y 99 ", "1");
+}
+if (n1.length == 1) {
+document.getElementById("ej14").innerHTML = "El número tiene 1 dígito.";
+}
+if (n1.length == 2) {
+document.getElementById("ej14").innerHTML = "El número tiene 2 dígitos.";
+}}
+function ej15(){
+var n1 = prompt("Introduzca un número entero ", "0");
+if (n1 < 0) {
+document.getElementById("ej15").innerHTML = "El número es negativo.";
+}
+if (n1 == 0) {
+document.getElementById("ej15").innerHTML = "El número es 0.";
+}
+if (n1 > 0) {
+document.getElementById("ej15").innerHTML = "El número es positivo.";
+}}
+function ej16(){
+var nivel = prompt("Introduzca su porcentaje de respuestas correctas ", "0%");
+var nivel = parseFloat(nivel)/100;
+if (nivel < 0.5) {
+document.getElementById("ej16").innerHTML = "Estás fuera de nivel.";
+}
+if (nivel >= 0.5 && nivel < 0.75) {
+document.getElementById("ej16").innerHTML = "Tienes un nivel bajo.";
+}
+if (nivel >= 0.75 && nivel < 0.9) {
+document.getElementById("ej16").innerHTML = "Tienes un nivel medio.";
+}
+if (nivel >= 0.9) {
+document.getElementById("ej16").innerHTML = "Tienes un nivel superior.";
+}}
+function ej17(){
+var n1 = prompt("Introduzca el primer número ", "1");
+var n2 = prompt("Introduzca el segundo número ", "2");
+var n3 = prompt("Introduzca el tercer número ", "3");
+document.getElementById("ej17").innerHTML = "El número mayor es " + Math.max(n1, n2, n3);
+}
+function ej18(){
+var dia = prompt("Introduzca un día ", "0");
+var mes = prompt("Introduzca un mes ", "0");
+var anno = prompt("Introduzca un año ", "0");
+if (dia == 25 && mes == 12) {
+document.getElementById("ej18").innerHTML = "La fecha corresponde a Navidad.";
+}else{
+document.getElementById("ej18").innerHTML = "La fecha no corresponde a Navidad.";
+}}
+function ej19(){
+var sueldo = prompt("Introduzca su sueldo ", "0");
+var antiguedad = prompt("Introduzca su antigüedad ", "0");
+if (sueldo < 500 && antiguedad >= 10) {
+document.getElementById("ej19").innerHTML = "Recibirás un sueldo de " + sueldo*1.2 + "€";
+}
+if (sueldo < 500 && antiguedad < 10) {
+document.getElementById("ej19").innerHTML = "Recibirás un sueldo de " + sueldo*1.05 + "€";
+}
+if (sueldo >= 500) {
+document.getElementById("ej19").innerHTML = "Recibirás un sueldo de " + sueldo + "€";
+}}
+function ej20(){
+var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+document.getElementById("ej20").innerHTML = meses;
+alert(meses);
+}
+function ej21(){
+var valor = prompt("Introduzca un valor entre 1 y 5 ", "1");
+switch(valor >= 1 && valor <= 5){
+case true:
+document.getElementById("ej21").innerHTML = "Introdujiste el valor " + valor;
+break;
+default:
+document.getElementById("ej21").innerHTML = "Error: introdujiste un valor fuera del rango.";
+}}
+function ej22(){
+for (i = 1; i <= 100; i++){
+document.getElementById("ej22").innerHTML += i + " ";
+}}
+function ej23(){
+var numeros = [parseFloat(prompt("Introduzca el primer número ", "1")), parseFloat(prompt("Introduzca el segundo número ", "2")), parseFloat(prompt("Introduzca el tercer número ", "3")), parseFloat(prompt("Introduzca el cuarto número ", "4")), parseFloat(prompt("Introduzca el quinto número ", "5"))];
+var suma = 0;
+for (var i = 0; i < numeros.length; i++){
+suma += numeros[i];
+}
+document.getElementById("ej23").innerHTML = "El resultado de la suma de los números es " + suma;
+}
+function ej24(){
+var sueldos = [parseFloat(prompt("Introduzca el primer sueldo ", "100")), parseFloat(prompt("Introduzca el segundo sueldo ", "200")), parseFloat(prompt("Introduzca el tercer sueldo ", "300")), parseFloat(prompt("Introduzca el cuarto sueldo ", "400")), parseFloat(prompt("Introduzca el quinto sueldo ", "500"))];
+var operacion1 = 0;
+var operacion2 = 0;
+var suma = 0;
+for (var i = 0; i < sueldos.length; i++){
+suma += sueldos[i];
+if (sueldos[i] >= 100 && sueldos[i] <= 300){
+operacion1 += 1;
+}
+if (sueldos[i] > 300){
+operacion2 += 1;
+}}
+document.getElementById("ej24").innerHTML = "En la empresa hay " + operacion1 + " empleados con un sueldo entre 100 y 300 euros, " + operacion2 + " empleados con un sueldo superior a 300 euros y la suma de todos sus sueldos es " + suma + " euros.";
+}
+function ej25(){
+var numeros = [parseFloat(prompt("Introduzca el primer número ", "1")), parseFloat(prompt("Introduzca el segundo número ", "2")), parseFloat(prompt("Introduzca el tercer número ", "3")), parseFloat(prompt("Introduzca el cuarto número ", "4")), parseFloat(prompt("Introduzca el quinto número ", "5"))];
+var par = 0;
+var impar = 0;
+for (var i = 0; i < numeros.length; i++){
+if (numeros[i] % 2 == 0){
+par += 1;
+}else{
+impar += 1;
+}}
+document.getElementById("ej25").innerHTML = "Introdujiste " + par + " números pares y " + impar + " números impares.";
+}
+function ej26(){
+for (var i = 1; i > 0; i++){
+var n1 = prompt("Introduzca un número entero entre 0 y 999 ", "0");
+if (n1 == 0){
+document.getElementById("ej26").innerHTML = "";
+break;
+}
+if (n1.length == 1) {
+document.getElementById("ej26").innerHTML = "El número tiene 1 dígito.";
+}
+if (n1.length == 2) {
+document.getElementById("ej26").innerHTML = "El número tiene 2 dígitos.";
+}
+if (n1.length == 3) {
+document.getElementById("ej26").innerHTML = "El número tiene 3 dígitos.";
+}}}
+function ej27(){
+var n1 = 0;
+var suma = 0;
+var mayormenor = "x";
+for (var i = 1; i > 0; i++){
+var n1 = parseFloat(prompt("Introduzca un número ", "0"));
+if (n1 == 9999 && suma == 0){
+document.getElementById("ej27").innerHTML = "Ha finalizado la carga. ";
+document.getElementById("ej27").innerHTML += "El número final es 0";
+break;
+}
+if (n1 == 9999 && suma != 0){
+document.getElementById("ej27").innerHTML = "Ha finalizado la carga. ";
+document.getElementById("ej27").innerHTML += "El número final es " + suma + " que es " + mayormenor + " que 0";
+break;
+}else{
+suma += n1;
+document.getElementById("ej27").innerHTML = suma;
+if(suma > 0){var mayormenor = "mayor";}
+if(suma < 0){var mayormenor = "menor";}
+}}}
+function ej28(){
+var cuenta = [];
+var cliente = [];
+var saldo = [];
+var estado = [];
+var suma = 0;
+for (var i = 0; i != -1; i++){
+cuenta[i] = parseFloat(prompt("Introduzca el número de cuenta ", "0"));
+if (parseFloat(cuenta[i]) < 0){
+for (var u = 0; u < cuenta.length-1; u++){
+document.getElementById("ej28").innerHTML += "Nº de cuenta: " + cuenta[u] + " Cliente: " + cliente[u] + " Estado: " + estado[u] + "<br>";
+}
+document.getElementById("ej28").innerHTML += "La suma total de los saldos es " + suma;
+break;
+}else{
+cliente[i] = prompt("Introduzca el nombre del cliente ", "Nombre");
+saldo[i] = parseFloat(prompt("Introduzca el sueldo ", "0"));
+suma += saldo[i];
+if (saldo[i] > 0){estado[i] = "Acreedor";}
+if (saldo[i] < 0){estado[i] = "Deudor";}
+if (saldo[i] === 0){estado[i] = "Nulo";}
+}}}
+function ej29(){
+var documento = [];
+var edad = [];
+var sexo = [];
+var varones = 0;
+var mujeres = 0;
+var suma = 0;
+for (var i = 0; i != -1; i++){
+documento[i] = parseFloat(prompt("Introduzca el número de documento ", "1"));
+if (parseFloat(documento[i]) === 0){
+document.getElementById("ej29").innerHTML = "Cantidad total de personas censadas: " + parseInt(documento.length-1) + "<br>";
+document.getElementById("ej29").innerHTML += "Cantidad total de varones: " + varones + "<br>";
+document.getElementById("ej29").innerHTML += "Cantidad total de mujeres: " + mujeres + "<br>";
+document.getElementById("ej29").innerHTML += "Cantidad total de varones cuya edad varía entre 16 y 65 años: " + suma;
+break;
+}else{
+edad[i] = prompt("Introduzca la edad ", "0");
+sexo[i] = prompt("Introduzca su sexo (masculino o femenino) ", "masculino o femenino");
+if(sexo[i] = "masculino"){
+varones += 1;}
+if(sexo[i] == "femenino"){
+mujeres += 1;}
+if(sexo[i] == "masculino" && parseFloat(edad[i]) >= 16 && parseFloat(edad[i]) <= 65){
+suma += saldo[i];}
+}}}
+function ej30(){
+for(var n = 1; n < 11; n++){
+document.getElementById("ej30").innerHTML += n + " ";
+}}
+function ej31(){
+for(var n = 5; n < 51; n++){
+var multiplicar = n * 5
+document.getElementById("ej31").innerHTML += multiplicar + " ";
+}}
+function ej32(){
+var numero = prompt("Introduzca un número entre 1 y 10 ", "1");
+for(var n = 1; n < 13; n++){
+var multiplicar = n * numero
+document.getElementById("ej32").innerHTML += multiplicar + " ";
+}}
+function ej33(){
+var valores = [prompt("Introduzca el primero valor ", "1"), prompt("Introduzca el segundo valor ", "2"), prompt("Introduzca el tercer valor ", "3"), prompt("Introduzca el cuarto valor ", "4"), prompt("Introduzca el quinto valor ", "5"), prompt("Introduzca el sexto valor ", "6"), prompt("Introduzca el séptimo valor ", "7"), prompt("Introduzca el octavo valor ", "8"), prompt("Introduzca el noveno valor ", "9"), prompt("Introduzca el décimo valor ", "10")];
+var pares = 0;
+var impares = 0;
+var mult15 = 0;
+var sumapares = 0;
+for(var n = 1; n < 11; n++){
+if(valores[n] % 2 == 0){
+pares += 1;
+sumapares += "+" + valores[n];
+}
+if(valores[n] % 2 != 0){
+impares += 1;
+}
+if(valores[n] % 15 == 0){
+mult15 += 1;
+}}
+var sumapares = eval(sumapares);
+document.getElementById("ej33").innerHTML = "Cantidad de números pares: " + pares + "<br>";
+document.getElementById("ej33").innerHTML += "Cantidad de números impares: " + impares + "<br>";
+document.getElementById("ej33").innerHTML += "Cantidad de múltiplos de 15: " + mult15 + "<br>";
+document.getElementById("ej33").innerHTML += "Suma total de los números pares: " + sumapares;
+}
+function ej34(){
+alert("Has hecho click en una prueba de JavaScript");
+}
+function ej35(){
+for(var n = 1; n < 11; n++){
+document.getElementById("ej35b").innerHTML = "Pulsa en cualquiera de los siguientes botones: ";
+document.getElementById("ej35b").innerHTML += '<button onclick="rojo()">ROJO</button> ';
+document.getElementById("ej35b").innerHTML += '<button onclick="verde()">VERDE</button> ';
+document.getElementById("ej35b").innerHTML += '<button onclick="azul()">AZUL</button> ';
+document.getElementById("ej35b").innerHTML += '<button onclick="amarillo()">AMARILLO</button> ';
+document.getElementById("ej35b").innerHTML += '<button onclick="negro()">NEGRO</button>';
+}}
+function rojo(){
+document.body.style.background = "#FF0000";
+}
+function verde(){
+document.body.style.background = "#00FF00";
+}
+function azul(){
+document.body.style.background = "#0000FF";
+}
+function amarillo(){
+document.body.style.background = "#FFFF00";
+}
+function negro(){
+document.body.style.background = "#000000";
+}
+</script>
+</head>
+<body>
+<center>
+<h1>EJERCICIOS JAVASCRIPT</h1>
+<button onclick="res()">Reinciar todo</button>
+<h2>BLOQUE 2 VARIABLES Y TIPOS DE DATOS</h2>
+<button onclick="ej1()">Ejercicio 1</button>
+<p id="ej1"></p>
+<button onclick="ej2()">Ejercicio 2</button>
+<p id="ej2a"></p>
+<p id="ej2b"></p>
+<button onclick="ej3()">Ejercicio 3</button>
+<p id="ej3"></p>
+<button onclick="ej4()">Ejercicio 4</button>
+<p id="ej4"></p>
+<button onclick="ej5()">Ejercicio 5</button>
+<p id="ej5"></p>
+<button onclick="ej6()">Ejercicio 6</button>
+<p id="ej6"></p>
+<button onclick="ej7()">Ejercicio 7</button>
+<p id="ej7"></p>
+<h2>BLOQUE 3 ESTRUCTURAS DE CONTROL DE FLUJO</h2>
+<button onclick="ej8()">Ejercicio 8</button>
+<p id="ej8"></p>
+<button onclick="ej9()">Ejercicio 9</button>
+<p id="ej9"></p>
+<button onclick="ej10()">Ejercicio 10</button>
+<p id="ej10"></p>
+<button onclick="ej11()">Ejercicio 11</button>
+<p id="ej11"></p>
+<button onclick="ej12()">Ejercicio 12</button>
+<p id="ej12"></p>
+<button onclick="ej13()">Ejercicio 13</button>
+<p id="ej13"></p>
+<button onclick="ej14()">Ejercicio 14</button>
+<p id="ej14"></p>
+<button onclick="ej15()">Ejercicio 15</button>
+<p id="ej15"></p>
+<button onclick="ej16()">Ejercicio 16</button>
+<p id="ej16"></p>
+<button onclick="ej17()">Ejercicio 17</button>
+<p id="ej17"></p>
+<button onclick="ej18()">Ejercicio 18</button>
+<p id="ej18"></p>
+<button onclick="ej19()">Ejercicio 19</button>
+<p id="ej19"></p>
+<button onclick="ej20()">Ejercicio 20</button>
+<p id="ej20"></p>
+<button onclick="ej21()">Ejercicio 21</button>
+<p id="ej21"></p>
+<button onclick="ej22()">Ejercicio 22</button>
+<p id="ej22"></p>
+<button onclick="ej23()">Ejercicio 23</button>
+<p id="ej23"></p>
+<button onclick="ej24()">Ejercicio 24</button>
+<p id="ej24"></p>
+<button onclick="ej25()">Ejercicio 25</button>
+<p id="ej25"></p>
+<button onclick="ej25()">Ejercicio 25</button>
+<p id="ej25"></p>
+<button onclick="ej26()">Ejercicio 26</button>
+<p id="ej26"></p>
+<button onclick="ej27()">Ejercicio 27</button>
+<p id="ej27"></p>
+<button onclick="ej28()">Ejercicio 28</button>
+<p id="ej28"></p>
+<button onclick="ej29()">Ejercicio 29</button>
+<p id="ej29"></p>
+<button onclick="ej30()">Ejercicio 30</button>
+<p id="ej30"></p>
+<button onclick="ej31()">Ejercicio 31</button>
+<p id="ej31"></p>
+<button onclick="ej32()">Ejercicio 32</button>
+<p id="ej32"></p>
+<button onclick="ej33()">Ejercicio 33</button>
+<p id="ej33"></p>
+<h2>BLOQUE 4 EVENTOS</h2>
+<button onclick='document.getElementById("ej34").innerHTML = "Haz click en el párrafo del ejercicio 35";'>Ejercicio 34</button>
+<p id="ej34"></p>
+<button onclick="ej35()">Ejercicio 35</button>
+<p id="ej35" onclick="ej34()">Párrafo del ejercicio 35</p>
+<p id="ej35b"></p>
+<button onclick="res()">Reinciar todo</button>
+</center>
+</body>
+</html>

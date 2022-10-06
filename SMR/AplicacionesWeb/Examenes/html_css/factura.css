@@ -1,0 +1,118 @@
+body{
+background-color:lightgrey;
+border:1px solid black;
+width:680px;
+float:left;
+padding:10px;
+}
+header{
+display:block;
+float:left;
+background-color:pink;
+font-family:verdana;
+font-size:10px;
+width:680px;
+}
+header img{
+float:left;
+width:150px;
+}
+header table{
+float:left;
+padding-left:100px;
+text-align:center;
+}
+header div{
+float:right;
+}
+header h2{
+margin:0;
+}
+header label{
+float:left;
+display:block;
+width:60px;
+padding-top:10px;
+}
+header input{
+float:left;
+display:block;
+width: 100px;
+}
+fieldset{
+border:1px solid black;
+border-radius:10px;
+margin-top:20px;
+}
+container{
+display:block;
+float:left;
+background-color:cyan;
+font-family:arial;
+font-size:12px;
+width:680px;
+}
+container p{
+text-align:center;
+font-size:20px;
+}
+container input[name=cliente]{
+width: 100px;
+}
+container input[name=cif]{
+width: 200px;
+}
+container input[name=direccion]{
+width: 300px;
+}
+container input[name=provincia]{
+width: 200px;
+}
+container input[name=pais]{
+width: 200px;
+}
+container input[name=cantidad1], container input[name=cantidad2]{
+width:50px;
+}
+container input[name=articulo1], container input[name=articulo2]{
+width:400px;
+}
+container input[name=precio1], container input[name=precio2]{
+width:50px;
+}
+container input[name=subtotal1], container input[name=subtotal2]{
+width:50px;
+}
+#table1{
+border-collapse:collapse;
+margin:auto;
+margin-bottom:10px;
+}
+#table1 td{
+border:1px solid;
+}
+#table2{
+margin-left:auto;
+margin-right:10px;
+}
+#table2, #table2 td{
+border:1px solid;
+border-collapse: collapse;
+}
+footer{
+display:block;
+float:left;
+background-color:lightgreen;
+font-family:serif;
+font-size:8px;
+width:680px;
+}
+footer pre{
+font-weight:bold;
+text-align:center;
+}
+footer div{
+display:block;
+float:left;
+padding-right:100px;
+}

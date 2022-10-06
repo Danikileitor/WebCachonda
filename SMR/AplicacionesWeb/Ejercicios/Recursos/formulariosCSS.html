@@ -1,0 +1,77 @@
+<!--
+	Formularios CSS
+-->
+
+<!DOCTYPE html>
+<head>
+	<title>Formularios CSS</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="formularios.css">
+</head>
+
+<body>
+<div>
+<form action="" class="formulario1">
+
+	<h1>Formularios</h1>
+
+	<label>Nombre
+	<span>Ingrese su nombre</span>
+	</label>
+	<input type="text" name="nombre">
+
+	<label>Email
+	<span>Ingrese su email</span>
+	</label>
+	<input type="text" name="email">
+
+	<label>Password
+	<span>Mínimo 6 caracteres</span>
+	</label>
+	<input type="password" name="password">
+	
+	<input type="submit" value="Enviar">
+</form>
+</div>
+
+<div class="fondof2">
+<form action="" class="formulario2">
+<fieldset>
+<legend>Datos de acceso</legend>
+<label>Nombre:</label>
+<input type="text" name="n-usuario">
+<label>Pass:</label>
+<input type="password" name="p-usuario">
+<label>Detalles:</label>
+<textarea name="details">Detalle</textarea>
+</fieldset>
+<fieldset>
+<legend>Datos personales</legend>
+<label>Ciudad de origen:</label>
+<select name="ciudad" size=1>
+<option value="trs">Terrassa</option>
+<option value="sbd">Sabadell</option>
+<option value="bcn" selected>Barcelona</option>
+</select>
+<label>Estado civil:</label>
+<label><input type="radio" name="e-civil" value="casado">Casado</label>
+<label><input type="radio" name="e-civil" value="soltero" checked>Soltero</label>
+<label><input type="radio" name="e-civil" value="divorciado">Divorciado</label>
+
+<input type="checkbox" name="mayor" value="mayor">Soy mayor de edad
+</fieldset>
+<input type="submit" value="enviar">
+</form>
+</div>
+
+<div class="as">
+<div class="anterior">&laquo; Anterior</div>
+<div class="siguiente">Siguiente &raquo;</div>
+</div>
+<div>
+<a href="http://google.es">Enlace número 1</a><br>
+<a href="http://hotmail.com">Enlace número 2</a><br>
+<a href="http://terra.es">Enlace número 3</a>
+</div>
+</body>
+</html>

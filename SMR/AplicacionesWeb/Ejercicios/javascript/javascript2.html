@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicios Javascript</title>
+<script type="text/javascript">
+function res(){
+for(p = 0; p < 36; p++){
+document.getElementsByTagName("p")[p].innerHTML = "";
+}}
+function ej1(){
+var numeros = [];
+numeros[0]=prompt("Introduzca el primer número ", "1");
+numeros[1]=prompt("Introduzca el segundo número ", "2");
+while(numeros[0]>=numeros[1]){
+numeros[0]=prompt("ERROR! Introduzca el primer número ", "1");
+numeros[1]=prompt("Introduzca el segundo número ", "2");
+}
+var numerodeenmedio = 0;
+document.getElementById("ej1").innerHTML = "Los números entre "+numeros[0]+" y "+numeros[1]+" son: ";
+for(var i=1; i < numeros[1]-1; i++){
+numerodeenmedio = parseInt(numeros[0])+parseInt(i);
+document.getElementById("ej1").innerHTML += numerodeenmedio+" ";
+}
+}
+function ej2(){
+var enteros = [];
+enteros[0]=prompt("Introduzca el primer número entero ", "1");
+enteros[1]=prompt("Introduzca el segundo número entero ", "2");
+enteros[2]=prompt("Introduzca el tercer número entero ", "3");
+var enteromenor = Math.min(enteros[0],enteros[1],enteros[2]);
+document.getElementById("ej2").innerHTML = "El número menor es "+enteromenor;
+}
+function ej3(){
+var enteros = [];
+enteros[0]=prompt("Introduzca el primer número entero ", "1");
+enteros[1]=prompt("Introduzca el segundo número entero ", "2");
+enteros[2]=prompt("Introduzca el tercer número entero ", "3");
+enteros.sort(function(a, b){return a-b});
+document.getElementById("ej3").innerHTML = "Los números ordenados de menor a mayor son "+enteros;
+}
+function ej4(){
+var enteros = [];
+enteros[0]=prompt("Introduzca el primer número entero ", "1");
+enteros[1]=prompt("Introduzca el segundo número entero ", "2");
+enteros[2]=prompt("Introduzca el tercer número entero ", "3");
+var suma = 0;
+for( var i = 0; i < enteros.length; i++ ){suma += parseInt(enteros[i]);}
+var media = suma/enteros.length;
+document.getElementById("ej4").innerHTML = "La media de los números introducidos es "+media;
+}
+function ej5(){
+var enteros = [];
+enteros[0]=prompt("Introduzca el primer número entero ", "1");
+enteros[1]=prompt("Introduzca el segundo número entero ", "2");
+enteros[2]=prompt("Introduzca el tercer número entero ", "3");
+enteros[3]=prompt("Introduzca el cuarto número entero ", "4");
+enteros[4]=prompt("Introduzca el quinto número entero ", "5");
+var suma = 0;
+for(var i = 0; i < enteros.length; i++){suma += parseInt(enteros[i]);}
+document.getElementById("ej5").innerHTML = "La suma de los números introducidos es "+suma;
+}
+function ej6(){
+var sueldos = [];
+sueldos[0]=prompt("Introduzca el primer sueldo ", "1");
+sueldos[1]=prompt("Introduzca el segundo sueldo ", "2");
+sueldos[2]=prompt("Introduzca el tercer sueldo ", "3");
+sueldos[3]=prompt("Introduzca el cuarto sueldo ", "4");
+sueldos[4]=prompt("Introduzca el quinto sueldo ", "5");
+var suma = 0;
+for(var i = 0; i < sueldos.length; i++){suma += parseInt(sueldos[i]);}
+document.getElementById("ej6").innerHTML = "La suma de los sueldos introducidos es "+suma+"€";
+}
+function ej7(){
+var meses = [];
+meses[0]="Enero";
+meses[1]="Febrero";
+meses[2]="Marzo";
+meses[3]="Abril";
+meses[4]="Mayo";
+meses[5]="Junio";
+meses[6]="Julio";
+meses[7]="Agosto";
+meses[8]="Septiembre";
+meses[9]="Octubre";
+meses[10]="Noviembre";
+meses[11]="Diciembre";
+var meselegido=prompt("Introduzca un número entre 1 y 12 ", "1");
+while(meselegido<1 || meselegido>12){var meselegido=prompt("ERROR! Introduzca un número entre 1 y 12 ", "1");}
+if(meselegido==1){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==2){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 28 días.";}
+if(meselegido==3){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==4){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 30 días.";}
+if(meselegido==5){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==6){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 30 días.";}
+if(meselegido==7){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==8){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==9){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==10){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+if(meselegido==11){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 30 días.";}
+if(meselegido==12){document.getElementById("ej7").innerHTML = "El número introducido corresponde al mes de "+meses[meselegido-1]+" que tiene 31 días.";}
+}
+function ej8(){
+var vector1 = [];
+vector1[0]=prompt("Introduzca el primer número para el vector1 ", "1");
+vector1[1]=prompt("Introduzca el segundo número para el vector1 ", "2");
+vector1[2]=prompt("Introduzca el tercer número para el vector1 ", "3");
+var vector2 = [];
+vector2[0]=prompt("Introduzca el primer número para el vector2 ", "1");
+vector2[1]=prompt("Introduzca el segundo número para el vector2 ", "2");
+vector2[2]=prompt("Introduzca el tercer número para el vector2 ", "3");
+var vector3 = [];
+var suma = 0;
+for(var i = 0; i < vector1.length; i++){
+suma = parseInt(vector1[i])+parseInt(vector2[i]);
+vector3[i] = suma;
+}
+document.getElementById("ej8").innerHTML = "El resultado del vector suma es: "+vector3;
+}
+function ej9(){
+var nombres = [];
+var i=0;
+for(var i=0; i!=-1; i++){
+nombres[i]=prompt("Introduzca un nombre", "nombre");
+if (nombres[i]=="fin" || nombres[i]=="Fin" || nombres[i]=="FIN")
+{break;
+}}
+document.getElementById("ej9").innerHTML = "Se ingresaron "+parseInt(nombres.length-1)+" nombres.";
+}
+function ej10(){
+document.getElementById("ej10").innerHTML = "Esto...";
+document.getElementById("ej10").innerHTML += "<p>es igual a esto</p>";
+}
+function ej11(dato){
+dato=prompt("Introduzca un dato", "dato"); //esta línea sobra, es para comprobar la función.
+if(isNaN(dato)==true){
+document.getElementById("ej11").innerHTML = "El dato introducido no es un número.";
+}else{document.getElementById("ej11").innerHTML = "El dato introducido es un número.";}}
+function ej12(){
+var fecha = new Date();
+var dia = fecha.getDate();
+var mes = fecha.getMonth()+1;
+var ano = fecha.getFullYear();
+var diasdiferencia = prompt("Introduzca los días de diferencia", "0");
+dia = parseInt(dia)+parseInt(diasdiferencia);
+document.getElementById("ej12").innerHTML = "Has elegido el día "+dia+"/"+mes+"/"+ano;
+}
+function ej13(){
+var fecha = new Date();
+var diaactual = fecha.getDate();
+var mesactual = fecha.getMonth()+1;
+var anoactual = fecha.getFullYear();
+var dia = prompt("Introduzca el día actual", "1");
+var mes = prompt("Introduzca el mes actual", "1");
+var ano = prompt("Introduzca el año actual", "2016");
+if ((dia==diaactual) && (mes==mesactual) && (ano==anoactual)){
+document.getElementById("ej13").innerHTML = "La fecha actual es correcta";
+}else{
+document.getElementById("ej13").innerHTML = "La fecha actual no es correcta";
+}}
+function ej14(){
+document.getElementById("ej14").innerHTML = "Pasa el ratón por encima para cambiarme de color.";
+}
+function ej14pasarraton(){
+var aleatorio = Math.round(Math.random()* 9);
+var colores = ["red","blue","yellow","green","pink","brown","lime","coral","cian","gold"];
+document.getElementById("ej14").style.color = colores[aleatorio];
+}
+function ej15(){
+document.getElementById("ej15").innerHTML = "<table id='ej15tabla' onload='ej15preparar(this)'><tr><td id='celda1' onmouseover='ej15activar(this)' onmouseout='ej15desactivar(this)'><a href='#'>Google</a></td></tr><tr><td id='celda2' onmouseover='ej15activar(this)' onmouseout='ej15desactivar(this)'><a href='#'>Ubuntu</a></td></tr><tr><td id='celda3' onmouseover='ej15activar(this)' onmouseout='ej15desactivar(this)'><a href='#'>Oracle</a></td></tr><tr><td id='celda4' onmouseover='ej15activar(this)' onmouseout='ej15desactivar(this)'><a href='#'>Blog</a></td></tr></table>";
+}
+function ej15preparar(obj){
+document.getElementById(obj.id).style.color = "blue";
+}
+function ej15activar(obj){
+document.getElementById(obj.id).style.color = "red";
+document.getElementById(obj.id).style.background = "green";
+}
+function ej15desactivar(obj){
+document.getElementById(obj.id).style.color = "yellow";
+document.getElementById(obj.id).style.background = "pink";
+}
+function ej16(){
+document.getElementById("ej16").innerHTML = "<table id='ej16tabla'><tr><td id='ej16celda1' onmouseover='ej16colorear(this)' onmouseout='ej16descolorear(this)'>Celda1</td><td id='ej16celda2' onmouseover='ej16colorear(this)' onmouseout='ej16descolorear(this)'>Celda2</td></tr><tr><td id='ej16celda3' onmouseover='ej16colorear(this)' onmouseout='ej16descolorear(this)'>Celda3</td><td id='ej16celda4' onmouseover='ej16colorear(this)' onmouseout='ej16descolorear(this)'>Celda4</td></tr></table>";
+}
+function ej16colorear(obj){
+var aleatorio = Math.round(Math.random()* 9);
+var colores = ["red","blue","yellow","green","pink","brown","lime","coral","cian","gold"];
+document.getElementById(obj.id).style.background = colores[aleatorio];
+}
+function ej16descolorear(obj){
+document.getElementById(obj.id).style.background = "white";
+}
+function ej17(){
+document.getElementById("ej17").innerHTML = "<table border=1><tr><td>Introduzca su código postal</td><td>Su provincia es:</td></tr><tr><td><input id='ej17cp' type='number' min=0 max=52999 onblur='ej17escribirprovincia()' onkeydown='if(this.value.length==5) return false;'></td><td><input id='ej17provincia' type='text' readonly></td></tr></table>";
+}
+function ej17escribirprovincia(){
+var provincias = ["Álava","Albacete","Alicante","Almería","Ávila","Badajoz","Baleares","Barcelona","Burgos","Cáceres","Cádiz","Castellón","Ciudad Real","Córdoba","Coruña","Cuenca","Girona","Granada","Guadalajara","Guipuzcoa","Huelva","Huesca","Jaén","León","Lleida","Rioja","Lugo","Madrid","Málaga","Murcia","Navarra","Orense","Asturias","Palencia","Las Palmas","Pontevedra","Salamanca","Tenerife","Cantabria","Segovia","Sevilla","Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza","Ceuta","Melilla"];
+for(var i=1; i < provincias.length+1; i++){
+if (document.getElementById("ej17cp").value>=i*1000 && document.getElementById("ej17cp").value<=i*2000-1){
+document.getElementById("ej17provincia").value = provincias[i-1];}
+}}
+function ej18(){
+document.getElementById("ej18").innerHTML = "<form><table><tr><td><input type='text' id='ej18texto'></td></tr><tr><td><input type='button' id='ej18boton' onclick='ej18cambio()' value='Botón' title='Pulse el botón para ver su nombre en él' style='width:100%;'></td></tr></table></form>";
+}
+function ej18cambio(){
+document.getElementById("ej18boton").title = document.getElementById("ej18texto").value;
+}
+function ej19(){
+document.getElementById("ej19").innerHTML = "<form action='#' onsubmit='ej19submit()'><table><tr><td>Contraseña actual: </td><td><input type='password' id='ej19contra1'></td></tr><tr><td>Contraseña nueva: </td><td><input type='password' id='ej19contra2'></td></tr><tr><td>Repita la contraseña nueva: </td><td><input type='password' id='ej19contra3'></td></tr><tr><td colspan=2><input type='submit' id='ej19submit' style='width:100%;'></td></tr></table></form>";
+}
+function ej19submit(){
+var contra1 = document.getElementById("ej19contra1").value;
+var contra2 = document.getElementById("ej19contra2").value;
+var contra3 = document.getElementById("ej19contra3").value;
+var letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
+var numeros = "0123456789";
+var validarletra = "0";
+var validarnumero = "0";
+var validado = "0";
+for (i=0;i<contra1.length;i++){
+if (letras.indexOf(contra1.charAt(i)) != -1){validarletra++;}
+if (letras.indexOf(contra1.charAt(i)) != -1){validarnumero++;}
+}
+if (validarletra>0 && validarnumero>0){validado="1";}
+if (contra2==contra3 && contra2.length>=6 && contra1 !="" && validado=="1"){
+alert("Contraseña cambiada con éxito");
+}else{
+alert("Contraseña incorrecta");
+}}
+function ej20(){
+var provincias = ["Álava","Albacete","Alicante","Almería","Ávila","Badajoz","Baleares","Barcelona","Burgos","Cáceres","Cádiz","Castellón","Ciudad Real","Córdoba","Coruña","Cuenca","Girona","Granada","Guadalajara","Guipuzcoa","Huelva","Huesca","Jaén","León","Lleida","Rioja","Lugo","Madrid","Málaga","Murcia","Navarra","Orense","Asturias","Palencia","Las Palmas","Pontevedra","Salamanca","Tenerife","Cantabria","Segovia","Sevilla","Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza","Ceuta","Melilla"];
+var options = "";
+for(var i=0; i < provincias.length; i++){
+options += document.getElementById("ej20").innerHTML = "<option value='"+i+"'>"+provincias[i]+"</option>";
+}
+document.getElementById("ej20").innerHTML = "<form><table><tr><td align='center' colspan=2><select id='ej20select' onchange='ej20listar()'><option value='-1'>Eliga una provincia</option>"+options+"</select></td></tr><tr><td><input id='ej20cp' type='text' readonly></td><td><input id='ej20provincia' type='text' readonly></td></tr></table></form>";
+}
+function ej20listar(){
+var provincias = ["Álava","Albacete","Alicante","Almería","Ávila","Badajoz","Baleares","Barcelona","Burgos","Cáceres","Cádiz","Castellón","Ciudad Real","Córdoba","Coruña","Cuenca","Girona","Granada","Guadalajara","Guipuzcoa","Huelva","Huesca","Jaén","León","Lleida","Rioja","Lugo","Madrid","Málaga","Murcia","Navarra","Orense","Asturias","Palencia","Las Palmas","Pontevedra","Salamanca","Tenerife","Cantabria","Segovia","Sevilla","Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza","Ceuta","Melilla"];
+var provinciaelegida = document.getElementById("ej20select").value;
+if (provinciaelegida == "-1"){
+document.getElementById("ej20cp").value = "";
+document.getElementById("ej20provincia").value = "";
+}else{
+document.getElementById("ej20cp").value = "0"+(parseInt(provinciaelegida)+1)*1000;
+document.getElementById("ej20provincia").value = provincias[provinciaelegida];}
+}
+function ej21(){
+document.getElementById("ej21").innerHTML = "<form action='#' onsubmit='ej21submit()'><table border=1><tr><th colspan=2>Utilice este formulario para contactar conmigo</th></tr><tr><td>Nombre: <input type='text' id='ej21nombre' required></td><td>Edad: <input type='number' max='999' id='ej21edad' required></td></tr><tr><td colspan=2>E-mail: <input type='email' id='ej21email' required style='width:80%;'></td></tr><tr><td>¿Cómo has conocido esta página? </td><td><select id='ej20select'><option value='foro'>Foro</option><option value='Amigo'>Amigo</option></select></td></tr><tr><td>Cuéntanos algo sobre tí: </td><td><textarea required></textarea></td></tr><tr><td><input type='submit'></td><td align='right'><input type='reset'></td></tr></table></form>";
+}
+function ej21submit(){
+
+}
+</script>
+</head>
+<body>
+<center>
+<h1>EJERCICIOS JAVASCRIPT</h1>
+<button onclick="res()">Reinciar todo</button>
+<h2>BLOQUE 5 FUNCIONES Y ARRAYS</h2>
+<button onclick="ej1()">Ejercicio 1</button>
+<p id="ej1"></p>
+<button onclick="ej2()">Ejercicio 2</button>
+<p id="ej2"></p>
+<button onclick="ej3()">Ejercicio 3</button>
+<p id="ej3"></p>
+<button onclick="ej4()">Ejercicio 4</button>
+<p id="ej4"></p>
+<button onclick="ej5()">Ejercicio 5</button>
+<p id="ej5"></p>
+<button onclick="ej6()">Ejercicio 6</button>
+<p id="ej6"></p>
+<button onclick="ej7()">Ejercicio 7</button>
+<p id="ej7"></p>
+<button onclick="ej8()">Ejercicio 8</button>
+<p id="ej8"></p>
+<h2>BLOQUE 6 CADENAS, NÚMEROS Y FECHAS</h2>
+<button onclick="ej9()">Ejercicio 9</button>
+<p id="ej9"></p>
+<button onclick="ej10()">Ejercicio 10</button>
+<p id="ej10"></p>
+<button onclick="ej11()">Ejercicio 11</button>
+<p id="ej11"></p>
+<button onclick="ej12()">Ejercicio 12</button>
+<p id="ej12"></p>
+<button onclick="ej13()">Ejercicio 13</button>
+<p id="ej13"></p>
+<h2>BLOQUE 8 OBJETOS DE HTML</h2>
+<button onclick="ej14()">Ejercicio 14</button>
+<p id="ej14" onmouseover="ej14pasarraton()" onmouseout="ej14pasarraton()"></p>
+<button onclick="ej15()">Ejercicio 15</button>
+<p id="ej15" style="color:blue;"></p>
+<button onclick="ej16()">Ejercicio 16</button>
+<p id="ej16"></p>
+<button onclick="ej17()">Ejercicio 17</button>
+<p id="ej17"></p>
+<button onclick="ej18()">Ejercicio 18</button>
+<p id="ej18"></p>
+<button onclick="ej19()">Ejercicio 19</button>
+<p id="ej19"></p>
+<button onclick="ej20()">Ejercicio 20</button>
+<p id="ej20"></p>
+<button onclick="ej21()">Ejercicio 21</button>
+<p id="ej21"></p>
+<button onclick="res()">Reinciar todo</button>
+</center>
+</body>
+</html>

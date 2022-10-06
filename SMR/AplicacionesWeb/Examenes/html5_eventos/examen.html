@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Examen HTML5 y Eventos</title>
+<style type="text/css"><!--		Estilos ejercicio 4	-->
+body{
+margin:auto;
+width:auto;
+padding:auto;
+display:block;
+}
+header{
+margin:10px;
+float:none;
+background-color:lightgreen;
+padding:10px;
+}
+section{
+margin:10px;
+float:none;
+background-color:blue;
+padding:10px;
+}
+article{
+float:none;
+background-color:lightblue;
+padding:10px;
+}
+aside{
+float:right;
+background-color:green;
+padding:10px;
+}
+footer{
+margin:10px;
+background-color:red;
+float:none;
+padding:10px;
+}
+textarea{
+display:block;
+width:100px;
+height:270px;
+}
+input{
+display:block;
+}
+input[type="submit"]{
+border-radius:10px;
+border-color:green;
+background-color:green;
+}
+input[type="reset"]{
+border-radius:10px;
+border-color:green;
+background-color:green;
+}
+</style>
+<script type="text/javascript"> <!--	Funciones ejercicio 10	-->
+function alcargar(){
+alert("Bienvendio a la web");
+}
+function alsalir(){
+alert("Gracias por su visita");
+}
+</script>
+</head>
+<body onload="alcargar()" onunload="alsalir()"> <!-- onload y onunload ejercicio 10	-->
+<!--	Header ejercicio 1	-->
+<header>
+<img src="imagen.png">
+<button ondblclick="document.body.style.background='black';">Cambiar fondo a negro</button>
+<button onclick="alert('Su navegador es: '+navigator.appName);">Mostrar nombre de su navegador</button>
+</header>
+<form action="#" autocomplete="on"> <!--	Formulario ejercicios 5 6 7 8 9	-->
+<aside> <!-- Aside ejercicio 2	-->
+Observaciones: <textarea></textarea>
+</aside>
+<!--	Cuerpo ejercicio 2	-->
+<section>
+<article>
+Nombre: <input type="text" name="nombre" title="Introduzca su nombre" required>
+Fecha de nacimiento: <input type="date" name="fecha" title="Introduzca su fecha de nacimiento" required>
+Edad: <input type="number" name="edad" min=0 max=60 title="Introduzca su edad entre 0 y 60" required>
+</article>
+</section>
+<!--	Pie ejercicio 3	-->
+<footer>
+Email: <input type="email" name="email" title="Introduzca su email" value="email@de.ejemplo" required>
+Teléfono: <input type="tel" name="telefono" title="Introduzca su teléfono" required>
+<input type="submit"><input type="reset">
+</footer>
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Language" content="es">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ola k ase</title>
+</head>
+<script language=javascript>
+//definimos la variable que incrementará el valor de un ángulo que parte de 0
+valor=0;
+function girar(){
+//Incremento progresivo del ángulo con valor 0.04; el valor 0.04 establece la 
+//precisión del movimiento. A mayor valor, menor precisión. Si damos
+//un valor muy alto, el movimiento irá a "saltos"
+valor=valor+0.04;
+//Generamos valores de seno y coseno de la variable valor
+posicion=Math.sin(valor);
+posicioncos=Math.cos(valor);
+// Asignamos las fórmulas anteriores a dos variables que establecerán
+// los movimientos horizontal y vertical
+posicion1=(posicion*100)+300;
+posicion2=(posicioncos*100)+200;
+//Asignamos las variables anteriores a las posiciones left (horizontal) y top (vertical)
+capa.style.left=posicion1+'px';
+capa.style.top=posicion2+'px';
+//Hacemos que la función se repita una y otra vez cada 10 milisegundos
+setTimeout('girar()',10)
+}
+</script>
+<body onload="girar()"><form name=f1>
+<div style="position: absolute; width: 100px; height: 100px; z-index: 1; left: 351px; top: 134px" id="capa">
+<table border="0" width="100%" id="table1" height="106">
+<tr>
+<td><img src="gafas.png"></td>
+</tr>
+</table>
+</div>
+</form>
+</body>
+</html>

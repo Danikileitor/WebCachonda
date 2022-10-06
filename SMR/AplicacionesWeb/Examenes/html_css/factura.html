@@ -1,0 +1,109 @@
+<!--
+	Factura Daniel Marcos Guerra Gómez
+-->
+
+<!DOCTYPE html>
+
+<head>
+	<title>Factura Daniel</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="factura.css">
+</head>
+
+<body>
+<form action="#">
+<header>
+<img src="logodaniel.png">
+<table>
+<tr><td>Industrias StarFuerte</td></tr>
+<tr><td>CIF: 12345678-G</td></tr>
+<tr><td>C/Forjadores s/n</td></tr>
+<tr><td>Isla del Hierro</td></tr>
+<tr><td>Tenerife</td></tr>
+<tr><td>España</td></tr>
+</table>
+<div>
+<h2>FACTURA</h2>
+<label>Número:</label>
+<input type="text" name="numero">
+<br><br>
+<label>Fecha:</label>
+<input type="text" name="fecha">
+</div>
+</header>
+<container>
+<fieldset>
+<p>Datos del Cliente</p>
+<label>Cliente:</label>
+<input type="text" name="cliente">
+<label>CIF:</label>
+<input type="text" name="numero"><br><br>
+<label>Dirreción:</label>
+<input type="text" name="direccion">
+<label>Provincia:</label>
+<select name="provincia" size=1>
+<option value="washington">Washington</option>
+<option value="newyork">New York</option>
+<option value="philadelphia">Philadelphia</option>
+</select><br><br>
+<label>País:</label>
+<input type="text" name="pais">
+</fieldset>
+<fieldset>
+<p>Líneas de factura</p>
+<table id="table1">
+<tr>
+<th>Cantidad</th>
+<th>Artículo</th>
+<th>Precio</th>
+<th>Subtotal</th>
+</tr>
+<tr>
+<td><input type="text" name="cantidad1"></td>
+<td><input type="text" name="articulo1"></td>
+<td><input type="text" name="precio1"></td>
+<td><input type="text" name="subtotal1"></td>
+</tr>
+<tr>
+<td><input type="text" name="cantidad2"></td>
+<td><input type="text" name="articulo2"></td>
+<td><input type="text" name="precio2"></td>
+<td><input type="text" name="subtotal2"></td>
+</tr>
+</table>
+<table id="table2">
+<tr>
+<td>Base Imponible</td>
+<td><input type="text" name="base"></td>
+</tr>
+<tr>
+<td>Descuento</td>
+<td><input type="text" name="descuento"></td>
+</tr>
+<tr>
+<td>IVA 20%</td>
+<td><input type="text" name="iva"></td>
+</tr>
+<tr>
+<td>Total Neto</td>
+<td><input type="text" name="total"></td>
+</tr>
+</table>
+</fieldset>
+</container>
+<footer>
+<pre>Forma de pago y datos bancarios</pre>
+<div>
+<label>Pago al contado<input type="checkbox" name="pagocontado"></label><br><br>
+<label>Pago domiciliado<input type="checkbox" checked name="pagodomiciliado"></label><br><br>
+<label>Pago con tarjeta<input type="checkbox" name="pagotarjeta"></label>
+</div>
+<div>
+<label>Entidad:</label><input type="text" name="entidad"><br><br>
+<label>Nº de cuenta:</label><input type="text" name="numerocuenta">
+</div>
+</footer>
+</form>
+</body>
+
+</html>

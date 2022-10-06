@@ -1,0 +1,106 @@
+.formulario1{
+text-align: center;
+vertical-align: center;
+border: 3px solid #708090;
+background-color: #dcdcdc;
+padding: 14px;
+margin: 0 auto;
+width: 400px;
+}
+.formulario1 h1{
+font-weight: bold;
+margin:2px 0 10px 10px;
+}
+.formulario1 label{
+font-weight: bold;
+text-align: right;
+font-size: 11px;
+float: left;
+display: block;
+width: 140px;
+}
+.formulario1 span{
+text-align: right;
+color: grey;
+font-size: 11px;
+width: 140px;
+display: block;
+}
+.formulario1 input[type=text]{
+width: 200px;
+float:left;
+margin:2px 0 20px 10px;
+}
+.formulario1 input[type=password]{
+width: 200px;
+float:left;
+margin:2px 0 20px 10px;
+}
+.formulario1 input[type=submit]{
+color: white;
+background-color: dimgray;
+}
+.fondof2{
+background-color: #ffffcc;
+}
+.formulario2{
+background-color: white;
+text-align: left;
+vertical-align: center;
+width: 250px;
+padding: 14px;
+margin: 0 auto;
+}
+.formulario2 legend{
+color: #0000FF;
+font-weight: bold;
+}
+.formulario2 label{
+display: block;
+margin: 5px 0 0 0;
+}
+.formulario2 input[type=text]{
+width: 200px
+}
+.formulario2 input[type=password]{
+width: 200px
+}
+.formulario2 input[type=checkbox]{
+margin: 25px 0 0 0;
+}
+.formulario2 input[type=submit]{
+background-color: white;
+border: 1px solid black;
+border-radius: 10px;
+float:left;
+}
+.formulario2 select{
+width: 200px
+}
+.formulario2 textarea{
+width: 200px
+}
+.as{
+background-color: lightblue;
+vertical-align: center;
+padding: 25px;
+margin: 10px auto;
+}
+.anterior{
+float: left;
+text-align: left;
+}
+.siguiente{
+float: right;
+text-align: right;
+}
+a{
+color: #CC0000;
+}
+a:hover{
+color: #FFFFFF;
+background-color: #CC0000;
+}
+a:visited{
+color: #CCCCCC;
+}

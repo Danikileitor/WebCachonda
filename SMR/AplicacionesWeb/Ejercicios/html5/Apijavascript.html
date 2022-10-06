@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="es">
+<meta charset="UTF-8">
+<title>Api Javascript HTML5</title>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript">
+function destacarclase1(){
+var textos = document.getElementsByClassName("clase1");
+var i;
+for (i = 0; i < textos.length; i++) {
+    textos[i].style.background = "yellow";
+}}
+var x = document.getElementById("mapa");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapa").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+</head>
+<body>
+<p class="clase1">Texto de relleno1 con clase1</p>
+<p class="clase1">Texto de relleno2 con clase1</p>
+<p class="clase1">Texto de relleno3 con clase1</p>
+<p class="clase2">Texto de relleno4 con clase2</p>
+<p class="clase2">Texto de relleno5 con clase2</p>
+<p class="clase2">Texto de relleno6 con clase2</p>
+<button onclick="destacarclase1()">Destacar texto con clase1</button><br>
+<div id="mapa"></div>
+<button onclick="getLocation()">Mostrar tu localicación en un mapa</button>
+</body>
+</html>

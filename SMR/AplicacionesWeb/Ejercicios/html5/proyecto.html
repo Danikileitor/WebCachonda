@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="es">
+<meta charset="UTF-8">
+<title>Curriculum Vitae</title>
+<meta name="description" content="Datos profesionales de...">
+<link rel="icon" type="image/png" href="/favicon.png" />
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<style type="text/css">
+@import url('http://fonts.googleapis.com/css?family=Delius');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+#uno{
+font-family:Delius;
+}
+#dos{
+font-family:Roboto;
+}
+#tres{
+font-family:Oswald;
+}
+#cuatro{
+font-family:Montserrat;
+}
+</style>
+</head>
+<body>
+<header>
+<video controls preload="auto" width="320" height="240">
+<source src="/video.mp4" type="video/mp4">
+<source src="/video.ogg" type="video/ogg">
+<object data="flvplayer.swf" type="application/x-shockwave-flash">
+<param value="flvplayer.swf" name="videoflash"/>
+</object>
+</video>
+</header>
+<fieldset id="uno">
+<legend>Datos personales</legend>
+Nombre: Daniel Marcos<br>
+Apellidos: Guerra Gómez
+</fieldset>
+<fieldset id="dos">
+<legend>Estudios</legend>
+Enseñanza obligatoria en IES Fuentenueva<br>
+Ciclo formativo de grado medio SMR en IES Murgi
+</fieldset>
+<fieldset id="tres">
+<legend>Experiencia</legend>
+Prácticas realizadas en ""
+</fieldset>
+<fieldset id="cuatro">
+<legend>Contacto</legend>
+<form>
+<table>
+<tr>
+<td>Nombre</td>
+<td>Empresa</td>
+<td>Teléfono</td>
+<td>Email</td>
+<td>Dirección</td>
+<td>Comentarios</td>
+<td>Cita</td>
+</tr>
+<tr>
+<td><input type="text" name="nombre"></td>
+<td><input type="text" name="empresa"></td>
+<td><input type="tel" name="telefono"></td>
+<td><input type="email" name="email"></td>
+<td><input type="text" name="direccion"></td>
+<td><textarea name="comentarios"></textarea></td>
+<td><input type="datetime-local" name="cita"></td>
+</tr>
+</table>
+<input hidden type="text" name="localizacion">
+</form>
+</fieldset>
+</body>
+</html>
