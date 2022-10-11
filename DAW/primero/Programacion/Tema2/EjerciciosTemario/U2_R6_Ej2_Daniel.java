@@ -23,8 +23,8 @@ public class U2_R6_Ej2_Daniel{
 			System.out.println("La ecucación: "+a+"x² + "+b+"x + "+c+" = 0 no es de segundo grado, no puedo calcularla.");
 		}
 		else{
-			x1 = (-b+Math.sqrt(aux))/2*a;
-			x2 = (-b-Math.sqrt(aux))/2*a;
+			x1 = (-b+Math.sqrt(aux))/(2*a);
+			x2 = (-b-Math.sqrt(aux))/(2*a);
 			System.out.println("La ecucación: "+a+"x² + "+b+"x + "+c+" = 0 tiene estas soluciones:");
 				if(aux==0){
 					System.out.println("Ambas soluciones son: "+x1);
