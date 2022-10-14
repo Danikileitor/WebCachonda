@@ -1,13 +1,53 @@
 <!DOCTYPE html>
+<!--Definir dos párrafos que representen una pregunta y una respuesta. Inicializar estilos internos. 
+Crea una regla para que todos los párrafos hijos directos de h4 sean de color ocre con un borde color naranja. (Párrafos hijos de &lt;h4&gt;)
+Los &lt;h1&gt; tienen fondo negro y letra color amarillo. Pero cuando se pasa el ratón por un encabezado  &lt;h1&gt; se pone todo al contrario fondo amarillo y letra negra.
+Las etiquetas &lt;span&gt; que dependan de &lt;h1&gt; en cualquier lugar tendrán letra color amarillo y color negro cuando se pasa el ratón por encima. El fondo es color darksalmon (selector descendiente)
+Las palabras pregunta, se escriben en minúsculas pero se transforman a mayúsculas, definir una clase. 
+Utilizar selectores para márgenes y bordes.-->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>LetrasColoresHover</title>
     <style>
-        
+        h1{
+            background-color: black;
+            color: yellow;
+            padding: 5px;
+        }
+        h1:hover{
+            background-color: yellow;
+            color: black;
+        }
+        h1 span{
+            background-color: darksalmon;
+            color: yellow;
+        }
+        h1 span:hover{
+            background-color: darksalmon;
+            color: black;
+        }
+        .pregunta{
+            text-transform: uppercase;
+            margin-left: 10%;
+            border: 2px dashed red;
+        }
+        h4 p{
+            background-color: #ffdab9;
+            border: 2px solid orangered;
+        }
     </style>
 </head>
 <body>
-
+    <h1>Utiliza <span>selectores</span> avanzados</h1>
+    <h2 class="pregunta">pregunta</h2>
+    <h4>¿Quién descubrió América y en qué año?
+    <p>Colón / año 1492</p></h4>
+    <h2 class="pregunta">pregunta</h2>
+    <h4>¿Quién subvenciona el viaje a Colón?
+    <p>La tesorería de la Santa Hermandad de Aragón</p></h4>
+    <h2 class="pregunta">pregunta</h2>
+    <h4>¿Quién concedió apoyo a Colón?
+    <p>La reina Isabel quien concedió apoyo a Colón para su expedición</p></h4>
 </body>
 </html>
