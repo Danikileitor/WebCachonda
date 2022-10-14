@@ -5,7 +5,7 @@ public class U2_R7_Ej1_Daniel{
 	//Declarar variables
 	int edad = 10;
 	//Desarrollo del programa
-	switch (edad) {
+	switch (edad-2) {
 		case 1:
 			System.out.println("Hola ");
 		case 2:
