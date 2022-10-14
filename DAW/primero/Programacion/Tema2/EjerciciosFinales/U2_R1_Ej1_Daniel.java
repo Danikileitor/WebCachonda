@@ -9,7 +9,7 @@ public class U2_R1_Ej1_Daniel{
 	System.out.println("Introduzca un número:");
 	int valor = teclado.nextInt();
 	System.out.println("Este es un programa en Java");
-	System.out.printf("Este es un%s","programa en Java");
+	System.out.printf("Este es un %s%s","\n","programa en Java");
 	if(numero!=7){
 		System.out.println("La variable numero no es igual a 7");
 	}//No compila porque no se ha inicializado la variable numero ya que no se pide
