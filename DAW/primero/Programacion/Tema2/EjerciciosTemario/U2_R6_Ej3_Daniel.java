@@ -12,7 +12,7 @@ public class U2_R6_Ej3_Daniel{
 	millar=numero/1000;
 	centena=numero/100;
 	decena=numero/10;
-	if (numero>=0 && numero<= 99999){	//Comprobamos que numero esta entre 0 y 9999
+	if (numero>=0 && numero<= 99999){	//Comprobamos que numero esta entre 0 y 99999
 		if(decenaDeMillar>0){
 			System.out.println("El número introducido tiene 5 cifras");
 		}
