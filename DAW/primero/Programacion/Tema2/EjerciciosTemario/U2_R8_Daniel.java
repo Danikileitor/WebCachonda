@@ -1,6 +1,6 @@
 //Daniel Marcos Guerra Gómez
 import java.util.Scanner; //Importación de paquetes
-public class U2_R7_Ej1_Daniel{
+public class U2_R8_Daniel{
 	public static void main(String []args){
 	//Declarar variables
 	int edad;
