@@ -1,4 +1,5 @@
 //Daniel Marcos Guerra Gómez
+//Utiliza el operador ternario para calcular el valor absoluto de un número que se solicita al usuario por teclado.
 import java.util.Scanner; //Importación de paquetes
 public class U2_R2_Ej16_Daniel{
 	public static void main(String []args){

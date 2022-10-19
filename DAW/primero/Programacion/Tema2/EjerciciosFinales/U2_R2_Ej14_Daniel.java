@@ -1,4 +1,6 @@
 //Daniel Marcos Guerra Gómez
+/*Escribe un programa que solicite al usuario un número comprendido entre 1 y 99.
+El programa debe mostrarlo con letras, por ejemplo, para 56, se verá: «cincuenta y seis».*/
 import java.util.Scanner; //Importación de paquetes
 public class U2_R2_Ej14_Daniel{
 	public static void main(String []args){

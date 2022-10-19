@@ -1,4 +1,5 @@
 //Daniel Marcos Guerra Gómez
+/*Escribe una aplicación que solicite al usuario un número comprendido entre 0 y 9999. La aplicación tendrá que indicar si el número introducido es capicúa.*/
 import java.util.Scanner; //Importación de paquetes
 public class U2_R2_Ej11_Daniel{
 	public static void main(String []args){

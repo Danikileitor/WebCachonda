@@ -1,4 +1,10 @@
 //Daniel Marcos Guerra Gómez
+/*El DNI consta de un entero de 8 dígitos seguido de una letra que se obtiene a partir del número de la siguiente forma: Letra = número DNI módulo 22
+Basándote en esta información, elige la letra a partir de la numeración de la siguiente tabla:
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+T R W A G M Y F P D  X  B  N  J  Z  S  Q  V  H  L  C  K  E
+Diseña una aplicación en la que, dado un número de DNI, calcule la letra que le corresponde. Observa que un número de 8 dígitos está dentro del rango del tipo int.
+--Errata: En vez de ser módulo de 22, tiene que ser módulo de 23.--*/
 import java.util.Scanner; //Importación de paquetes
 public class U2_R2_Ej12_Daniel{
 	public static void main(String []args){

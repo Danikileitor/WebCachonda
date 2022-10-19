@@ -1,4 +1,6 @@
 //Daniel Marcos Guerra Gómez
+/*Escribe una aplicación que solicite por consola dos números reales que corresponden a la base y la altura de un triángulo.
+Deberá mostrarse su área, comprobando que lo números introducidos por el usuario no son negativos, algo que no tendría sentido.*/
 import java.util.Scanner; //Importación de paquetes
 public class U2_R2_Ej15_Daniel{
 	public static void main(String []args){

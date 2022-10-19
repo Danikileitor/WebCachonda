@@ -1,4 +1,6 @@
 //Daniel Marcos Guerra Gómez
+/*Modifica la Actividad de aplicación 2.17 para que, además de los dos números aleatorios,
+también aparezca la operación que debe realizar el jugador: suma, resta o multiplicación.*/
 import java.util.Scanner; //Importación de paquetes
 public class U2_R2_Ej18_Daniel{
 	public static void main(String []args){
