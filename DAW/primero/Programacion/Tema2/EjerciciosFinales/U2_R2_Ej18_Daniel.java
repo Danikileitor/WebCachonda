@@ -6,10 +6,12 @@ public class U2_R2_Ej18_Daniel{
 	public static void main(String []args){
 	//Declarar variables
 	int numero1, numero2, resultado;
-	numero1 = 2;//Tendría que ser aleatorio pero como no lo hemos dado pongo un 2
-	numero2 = 7;//Tendría que ser aleatorio pero como no lo hemos dado pongo un 7
 	Scanner teclado=new Scanner(System.in);
 	//Desarrollo del programa ***La operación a realizar tendría que ser aleatoria entre suma, resta y multiplicación, pero como no lo hemos dado, el programa te pedirá hacer las 3 operaciones***
+	System.out.println("Dime un número entero:");
+	numero1 = teclado.nextInt();
+	System.out.println("Dime otro número entero:");
+	numero2 = teclado.nextInt();
 	System.out.println("Calcula la suma de "+numero1+" + "+numero2+":");
 	resultado=teclado.nextInt();
 	if(resultado==numero1+numero2){
