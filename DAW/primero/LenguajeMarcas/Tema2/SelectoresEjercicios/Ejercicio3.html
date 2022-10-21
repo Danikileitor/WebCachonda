@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <title>SelectoresEjercicio3</title>
     <style>
-        
+        p.primero{
+            color: red;
+        }
+        div{
+            color: blue;
+        }
+        div .magenta{
+            color: magenta;
+            display: inline;
+        }
+        div.black{
+            color: black;
+        }
+        p{
+            color: blue;
+        }
+        h6.azul{
+            color: blue;
+        }
     </style>
 </head>
 <body>
-
+    <h1>Los textos poner los dados en la explicación</h1>
+    <h5>Ejercicio 3.</h5>
+    <p class="primero">1.- Clase dentro de un párrafo, sin espacio entre los selectores. Color de letra en rojo a todos los elementos de tipo &lt;p&gt; con atributo class="rojo".</p>
+    <div>2.- Selector descendiente, con espacio en blanco en medio de los selectores. Color de letra en magenta para todos los elementos con atributo class="magenta" que estén dentro de cualquier elemento de tipo &lt;div&gt; 
+        <div class="black">Ahora estoy dentro de otro interno &lt;div&gt; y cambio el color <span class="magenta">a magenta</span></div>
+        vuelvo a escribir dentro del párrafo y cambio otra vez a <span class="magenta">color magenta</span></div>
+    <p>3.- Combinacion de selectores tipo y clase: Color de letra en azul para todos los elementos &lt;p&gt; de la página y todos los elementos &lt;h6&gt; con el atributo class="azul" de esta página</p>
+    <h6 class="azul">Este párrafo esta en azul</h6>
 </body>
 </html>
