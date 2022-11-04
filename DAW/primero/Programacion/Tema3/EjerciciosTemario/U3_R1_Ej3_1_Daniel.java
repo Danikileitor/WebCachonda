@@ -1,7 +1,7 @@
 //Daniel Marcos Guerra Gómez
 /*Diseñar un programa que muestre, para cada número introducido por teclado, si es par, si es positivo y su cuadrado. El proceso se repetirá hasta que el número introducido sea 0.*/
 import java.util.Scanner; //Importación de paquetes
-public class U3_R1_Daniel{
+public class U3_R1_Ej3_1_Daniel{
 	public static void main(String []args){
 	//Declarar variables
 	int numero;
