@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <title>SelectoresEjercicio10</title>
     <style>
-        
+        p > a{
+            color:green;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
-
+    <h5>Título: Color verde selector hijo p &gt; a</h5>
+    <p><a href="#">Enlace del Párrafo en verde hijo directo</a></p>
+    <a href="#">Enlace en azul link normal</a>
+    <h5>Titulo: Color rojo selector descendiente p a</h5>
+    <div><span>Este <p>Este párrafo esta dentro de &lt;div&gt; y un &lt;span&gt; color amarillo</span></div></p>
+    <p><a>Esto es un texto del Párrafo sin enlace</a></p>
+    <h5>Titulo: Color rojo selector nieto p* a</h5>
+    <p>Este párrafo es &lt;p&gt; <a href="#">Enlace en link color verde hijo</a> <a href="#">este ancla no es hijo directo por lo tanto tiene
+color rojo y fondo blanco</a></p>
 </body>
 </html>
