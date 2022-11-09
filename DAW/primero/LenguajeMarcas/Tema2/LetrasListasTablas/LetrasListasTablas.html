@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LetrasListasTablas</title>
+    <style>
+        .romanos{
+            list-style-type: lower-roman;
+        }
+        .cuadrado{
+            list-style-type: square;
+        }
+        table, td{
+            border: 1px solid black;
+        }
+        .verde{
+            background-color: lawngreen;
+        }
+        .rojo{
+            background-color: red;
+        }
+        .linea{
+            border: 5px solid red;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>LISTA CON TABLAS INSERTADAS</h1>
+    <h2>LISTA ORDENADA con índice de NÚMEROS ROMANOS en "minúscula" y comienza con 1</h2>
+    <ol class="romanos">
+        <li>Elemento uno</li>
+        <li>Elemento dos</li>
+        <li>Elemento tres INSERTAR UNA TABLA.
+            <table>
+                <tr>
+                    <td class="verde">PRIMERA FILA PRIMERA COLUMNA</td>
+                    <td rowspan="3"><img src="grupojover.png" alt="imagen"></td>
+                    <td class="verde">PRIMERA FILA TERCERA COLUMNA</td>
+                </tr>
+                <tr>
+                    <td>SEGUNDA FILA CELDA 1</td>
+                    <td>SEGUNDA FILA CELDA 3</td>
+                </tr>
+                <tr>
+                    <td class="rojo">TERCERA FILA PRIMERA COLUMNA</td>
+                    <td class="rojo">TERCERA FILA TERCERA COLUMNA</td>
+                </tr>
+            </table>
+        </li>
+        <li>Elemento cuatro INSERTO LISTA DESORDENADA CON CUADRITO
+            <ul class="cuadrado">
+                <li>Primer elemento lista desordenada</li>
+                <li>Segundo elemento lista desordenada</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>Línea de color rojo alineada al centro y de tamaño 5 píxels, ocupa la mitad de la pantalla.</h3>
+    <hr class="linea">
+    <h3>LISTA DEFINICIÓN O GLOSARIO</h3>
+    <dl>
+        <dt>Coche</dt>
+        <dd>tiene cuatro ruedas</dd>
+        <dt>Bicicleta</dt>
+        <dd>tiene dos ruedas</dd>
+        <dt>Camión</dt>
+        <dd>tiene ocho ruedas</dd>
+    </dl>
+    <h3>Línea de color rojo alineada al centro y de tamaño 5 píxels, ocupa la mitad de la pantalla.</h3>
+    <hr class="linea">
+    <h3>LO SIGUIENTE ES UN TEXTO VISTO TAL COMO SE ESCRIBE</h3>
+    <pre>
+//HTML//
+ESCRIBIMOS TEXTO
+----------------
+//HTM//
+    </pre>
+</body>
+</html>
