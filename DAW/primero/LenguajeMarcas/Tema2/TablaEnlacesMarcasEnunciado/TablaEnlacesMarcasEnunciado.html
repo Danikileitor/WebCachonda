@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TablaEnlacesMarcasEnunciado</title>
+    <style>
+        table, caption, th, td{
+            border: 1px solid black;
+        }
+        table{
+            margin: auto;
+            background-color: #A68F54;
+        }
+        caption{
+            background-color: darkblue;
+            color: white;
+            font-weight: bold;
+        }
+        .centro{
+            text-align: center;
+        }
+        .derecha{
+            text-align: right;
+        }
+        .arriba{
+            vertical-align: top;
+        }
+        .medio{
+            vertical-align: middle;
+        }
+        .abajo{
+            vertical-align: bottom;
+        }
+        a{
+            color: white;
+            font-weight: bold;
+            text-decoration-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <caption>TÍTULO PARA LA TABLA</caption>
+        </tr>
+        <tr>
+            <th>Cabecera de Título 1</th>
+            <th>Cabecera de Título 2</th>
+            <th>Cabecera de Título 3</th>
+            <th>Cabecera de Título 4</th>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td class="centro">Celda 2</td>
+            <td rowspan="2" class="derecha">Celda 3 - 5</td>
+            <td class="centro">Celda 4</td>
+        </tr>
+        <tr>
+            <td class="centro"><a href="https://biblioteca.elejido.es/"><img src="libro.png" alt="libro"></a><br>Celda 6</td>
+            <td class="derecha abajo">Celda 7</td>
+            <td class="medio centro">Celda 8</td>
+        </tr>
+        <tr>
+            <td class="abajo">Celda 9</td>
+            <td>Celda 10</td>
+            <td class="centro"><a href="https://www.google.es/maps/"><img src="mundo.jpeg" alt="mundo"></a><br>Celda 11</td>
+            <td class="arriba">Celda 12</td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="pagina-anterior.html">&lt;&lt;Anterior</a></td>
+            <td colspan="2" class="derecha"><a href="pagina-posterior.html">Posterior &gt;&gt;</a></td>
+        </tr>
+    </table>
+</body>
+</html>
