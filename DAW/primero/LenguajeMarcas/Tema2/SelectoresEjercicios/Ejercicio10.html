@@ -8,13 +8,14 @@
             color: green;
             font-weight: bold;
         }
-        p a{
+        p span{
             color: yellow;
             font-weight: bold;
         }
         p * a{
             color: red;
             font-weight: bold;
+            background-color: black;
         }
     </style>
 </head>
@@ -22,11 +23,11 @@
     <h5>Título: Color verde selector hijo p &gt; a</h5>
     <p><a href="#">Enlace del Párrafo en verde hijo directo</a></p>
     <a href="#">Enlace en azul link normal</a>
-    <h5>Titulo: Color rojo selector descendiente p a</h5>
-    <div><span>Este <p>Este párrafo esta dentro de &lt;div&gt; y un &lt;span&gt; color amarillo</p></span></div>
+    <h5>Titulo: Color rojo selector descendiente p span</h5>
+    <div><p>Este <span>Este párrafo esta dentro de &lt;div&gt; y un &lt;span&gt; color amarillo</span></p></div>
     <p><a>Esto es un texto del Párrafo sin enlace</a></p>
     <h5>Titulo: Color rojo selector nieto p* a</h5>
-    <p>Este párrafo es &lt;p&gt; <a href="#">Enlace en link color verde hijo</a> <a href="#">este ancla no es hijo directo por lo tanto tiene
-color rojo y fondo blanco</a></p>
+    <p>Este párrafo es &lt;p&gt; <a href="#">Enlace en link color verde hijo</a> <span><a href="#">este ancla no es hijo directo por lo tanto tiene
+color rojo y fondo blanco</a></span></p>
 </body>
 </html>
