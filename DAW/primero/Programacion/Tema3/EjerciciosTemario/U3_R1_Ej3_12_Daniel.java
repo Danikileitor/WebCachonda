@@ -1,5 +1,5 @@
 //Daniel Marcos Guerra Gómez
-/*Pedir un número y calcular su factorial. Por ejemplo, el factorial de 5 se denota 5! y es igual a 5x4x3x2x1=120.*/
+/*Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso.*/
 import java.util.Scanner; //Importación de paquetes
 public class U3_R1_Ej3_12_Daniel{
 	public static void main(String []args){
