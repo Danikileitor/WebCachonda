@@ -10,7 +10,7 @@ public class U3_R1_Ej3_8_Daniel{
 	//Desarrollo del programa
 	System.out.println("Voy a pedirte 10 números enteros y te calcularé su media.");
 	for(int i=1;i<=10;i++){
-		System.out.println("Introduce el primer número.");
+		System.out.println("Introduce un número entero:");
 		numero=teclado.nextInt();
 		total+=numero;
 	}
