@@ -18,6 +18,6 @@ public class U3_R1_Ej3_5_Daniel{
 		cantidad++;
 	}while(suma==numero1+numero2);
 	cantidad--;
-	System.out.printf("¡Fallaste! Has acertado un total de %d sumas seguidas.",cantidad);
+	System.out.printf("¡Fallaste! Has acertado un total de %d sumas seguidas.%n",cantidad);
 	}//Fin main
 }//Fin clase
