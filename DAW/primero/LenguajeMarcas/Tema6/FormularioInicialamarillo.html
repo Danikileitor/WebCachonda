@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <title>FormularioInicialamarillo</title>
     <style>
-        h1{
-            background-color: black;
-            color: yellow;
-            padding: 5px;
+        body{
+            font-family: Arial;
+        }
+        input, textarea{
+            background-color: yellow;
+            border: 1px dotted black;
+            width: 30%;
         }
     </style>
 </head>
 <body>
-    <h1>xd</h1>
+    <form name="formulario" action="mailto:daniel.marcos.guerra@gmail.com" method="post" enctype="text/plain">
+        <h2>Formulario de contacto.</h2>
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+        <label>E-Mail:</label><br>
+        <input type="email" name="email" required><br><br>
+        <label>Asunto:</label><br>
+        <input type="text" name="asunto" required><br><br>
+        <label>Mensaje:</label><br>
+        <textarea name="texto"rows="8"></textarea><br><br>
+        <label>Adjuntar archivo:</label><br>
+        <input type="file" name="archivo">
+    </form>
 </body>
 </html>
