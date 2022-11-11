@@ -13,7 +13,6 @@ public class U3_R2_Ej12_Daniel{
 	aux=binario;
 	while(aux>0){
 		decimal+=(aux%2*(Math.pow(2, contador)));
-		System.out.println(decimal);
 		aux/=10;
 		contador++;
 	}
