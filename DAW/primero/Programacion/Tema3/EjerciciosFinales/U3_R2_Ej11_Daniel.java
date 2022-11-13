@@ -9,6 +9,7 @@ public class U3_R2_Ej11_Daniel{
 	//Desarrollo del programa
 	System.out.println("Introduzca un número entero en base decimal y te lo paso a binario:");
 	numero=teclado.nextInt();
+	System.out.printf("Vamos a convertir paso a paso el número %d en base decimal a binario:%n",numero);
 	aux=numero;
 	while(aux>0){
 		System.out.println(aux%2);
