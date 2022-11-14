@@ -10,6 +10,7 @@ public class U3_R2_Ej15_Daniel{
 	//Desarrollo del programa
 	System.out.println("Voy a dibujarte el tríangulo de Pascal con el número de filas que me indiques:");
 	n=teclado.nextInt();
+	System.out.printf("El tríangulo de Pascal con %d filas:%n",n);
 	for(int m=0;m<n;m++){
 		aux=1;
 		for(int i=0;i<=m;i++){
