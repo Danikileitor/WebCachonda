@@ -5,27 +5,18 @@ public class U3_R2_Ej15_Daniel{
 	public static void main(String []args){
 	//Declarar variables
 	int n;
-	long aux1,aux2,aux3;
-	String fila;
+	long aux;
 	Scanner teclado=new Scanner(System.in);
 	//Desarrollo del programa
 	System.out.println("Voy a dibujarte el tríangulo de Pascal con el número de filas que me indiques:");
 	n=teclado.nextInt();
-	for(int m=0;m<=n;m++){
-		fila="";
-		aux1=0;
-		aux2=0;
-		aux3=0;
-		for(int i=n;i>0;i--){
-			aux1*=i;
+	for(int m=0;m<n;m++){
+		aux=1;
+		for(int i=0;i<=m;i++){
+			System.out.printf("%d ",aux);
+			aux=aux*(m-i)/(i+1);
 		}
-		for(int j=m;j>0;j--){
-			aux2*=j;
-		}
-		for(int k=(n-m);k>0;k--){
-			aux3*=k;
-		}
-		System.out.printf("%d%n",aux1/(aux2*aux3));
+		System.out.println();
 	}
 	}//Fin main
 }//Fin clase
