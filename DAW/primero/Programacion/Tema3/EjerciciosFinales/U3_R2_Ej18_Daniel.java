@@ -1,7 +1,7 @@
 //Daniel Marcos Guerra Gómez
 /*De forma similar a la Actividad de aplicación 3.17, implementa un algoritmo que calcule el mínimo común múltiplo de dos números dados.*/
 import java.util.Scanner; //Importación de paquetes
-public class U3_R2_Ej17_Daniel{
+public class U3_R2_Ej18_Daniel{
 	public static void main(String []args){
 	//Declarar variables
 	int a,b,aux,aux2,mcd,mcm;
