@@ -23,6 +23,6 @@ public class U3_R2_Ej17_Daniel{
 		aux2=mcd%aux2;
 		mcd=aux;
 	}
-	System.out.printf("El máximo común divisor entre %d y %d es %d.%n",a,b,mcd);
+	System.out.printf("El máximo común divisor de %d y %d es %d.%n",a,b,mcd);
 	}//Fin main
 }//Fin clase
