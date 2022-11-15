@@ -4,7 +4,7 @@ import java.util.Scanner; //Importación de paquetes
 public class U3_R2_Ej20_Daniel{
 	public static void main(String []args){
 	//Declarar variables
-	double dinero,total=0.0;
+	double dinero,total=0.00;
 	Scanner teclado=new Scanner(System.in);
 	//Desarrollo del programa
 	System.out.println("Introduce el dinero del que dispones en diferentes fuentes (banco, cartera, hucha, etc), para finalizar la introducción de datos introduzca un 0.");
