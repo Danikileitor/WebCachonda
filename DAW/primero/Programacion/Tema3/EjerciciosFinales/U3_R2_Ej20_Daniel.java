@@ -4,18 +4,15 @@ import java.util.Scanner; //Importación de paquetes
 public class U3_R2_Ej20_Daniel{
 	public static void main(String []args){
 	//Declarar variables
-	int numero,raiz=0,resto;
+	double dinero,total=0;
 	Scanner teclado=new Scanner(System.in);
 	//Desarrollo del programa
-	System.out.println("Introduce el dinero del que dispones de diferentes fuentes (banco, cartera, hucha, etc), para finalizar la introducción de datos introduzca un 0.");
-	numero=teclado.nextInt();
-	for(int i=0;i*i<=numero;i++){raiz=i;}
-	resto=numero-raiz*raiz;
-	if(resto==0){
-		System.out.printf("La raíz cuadrada de %d es %d.%n",numero,raiz);
-	}
-	else{
-		System.out.printf("La raíz cuadrada aproximada de %d es %d con resto %d.%n",numero,raiz,resto);
-	}
+	System.out.println("Introduce el dinero del que dispones en diferentes fuentes (banco, cartera, hucha, etc), para finalizar la introducción de datos introduzca un 0.");
+	do{
+		System.out.println("Introduzca una cantidad de dinero:");
+		dinero=teclado.nextDouble();
+		total+=dinero;
+	}while(dinero!=0);
+	System.out.printf("La cantidad total de dinero que dispones es de %.2f€.%n",total);
 	}//Fin main
 }//Fin clase
