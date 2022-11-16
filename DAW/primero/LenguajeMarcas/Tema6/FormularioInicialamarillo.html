@@ -4,29 +4,76 @@
     <meta charset="UTF-8">
     <title>FormularioInicialamarillo</title>
     <style>
-        body{
+        table{
             font-family: Arial;
+            width: 30%;
+        }
+        th{
+            text-align: left;
         }
         input, textarea{
             background-color: yellow;
             border: 1px dotted black;
-            width: 30%;
+            width: 99%;
+            padding: 2px;
+        }
+        input[type=reset],input[type=submit]{
+            background-color: cyan;
+            color: blue;
+            font-weight: bold;
+            width: auto;
+            border: 0;
+            padding: 5px 20px 5px 20px;
+        }
+        .salto{
+            padding-bottom: 15px;
+        }
+        .derecha{
+            text-align: right;
         }
     </style>
 </head>
 <body>
-    <form name="formulario" action="mailto:daniel.marcos.guerra@gmail.com" method="post" enctype="text/plain">
-        <h2>Formulario de contacto.</h2>
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre" required><br><br>
-        <label>E-Mail:</label><br>
-        <input type="email" name="email" required><br><br>
-        <label>Asunto:</label><br>
-        <input type="text" name="asunto" required><br><br>
-        <label>Mensaje:</label><br>
-        <textarea name="texto"rows="8"></textarea><br><br>
-        <label>Adjuntar archivo:</label><br>
-        <input type="file" name="archivo">
-    </form>
+    <table>
+        <form name="formulario" action="mailto:daniel.marcos.guerra@gmail.com" method="get" enctype="text/plain">
+        <tr>
+            <th colspan="2" class="salto">Formulario de contacto.</th>
+        </tr>
+        <tr>
+            <td colspan="2">Nombre:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="salto"><input type="text" name="nombre" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">E-Mail:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="salto"><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">Asunto:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="salto"><input type="text" name="asunto" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">Mensaje:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="salto"><textarea name="texto"rows="8"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2">Adjuntar archivo:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="salto"><input type="file" name="archivo"></td>
+        </tr>
+        <tr>
+            <td><input type="reset" name="restablecer" value="Restablecer"></td>
+            <td class="derecha"><input type="submit" name="enviar" value="Enviar mensaje"></td>
+        </tr>
+        </form>
+    </table>
 </body>
 </html>
