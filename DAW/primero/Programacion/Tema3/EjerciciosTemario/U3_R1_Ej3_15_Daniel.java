@@ -13,7 +13,11 @@ public class U3_R1_Ej3_15_Daniel{
 	//Desarrollo del programa
 	System.out.println("¡Bienvenido al programa para dibujar un triángulo rectángulo!\nIndique su tamaño:");
 	n=teclado.nextInt();
-	for(){
+	for (int i=1;i<=n;i++){
+		for (int j=i;j<=n;j++){
+			System.out.print("* ");
+		}
+		System.out.println("");
 	}
 	System.out.println("¡Fin del programa!");
 	}//Fin main
