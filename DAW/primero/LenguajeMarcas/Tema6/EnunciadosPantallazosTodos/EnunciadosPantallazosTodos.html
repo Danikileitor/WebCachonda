@@ -59,6 +59,9 @@
         .segundo input, .segundo textarea, .segundo select{
             width: 200px;
         }
+        .segundo input[type=radio]{
+            width: auto;
+        }
     </style>
 </head>
 <body>
@@ -124,7 +127,7 @@
                 </table>
             </fieldset>
             <fieldset>
-                <legend>Datos de acceso</legend>
+                <legend>Datos personales</legend>
                 <table>
                     <tr>
                         <td>Ciudad de origen:</td>
@@ -136,6 +139,24 @@
                                 <option value="sbd">Sabadell</option>
                                 <option value="bcn" selected>Barcelona</option>
                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Estado civil:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="e-civil" value="casado">Casado
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="e-civil" value="soltero" checked>Soltero
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="e-civil" value="divorciado">Divorciado
                         </td>
                     </tr>
                 </table>
