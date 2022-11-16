@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EnunciadosPantallazosTodos</title>
+    <style>
+        .primero{
+            border: 2px solid darkcyan;
+            background-color: Gainsboro;
+            margin: auto;
+            font-family: Arial;
+        }
+        .primero th{
+            text-align: center;
+            font-size: larger;
+        }
+        .negrita{
+            font-weight: bold;
+            text-align: right;
+        }
+        .gris{
+            color: gray;
+            text-align: right;
+        }
+        .primero input[type=submit]{
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+            padding: 10px 30px 5px 30px;
+        }
+    </style>
+</head>
+<body>
+    <table class="primero">
+        <form>
+            <tr>
+                <th colspan="2">Formulario</th>
+            </tr>
+            <tr>
+                <td class="negrita">Nombre</td>
+                <td rowspan="2"><input type="text" required></td>
+            </tr>
+            <tr>
+                <td class="gris">Ingrese su nombre</td>
+            </tr>
+            <tr>
+                <td class="negrita">Email</td>
+                <td rowspan="2"><input type="email" required></td>
+            </tr>
+            <tr>
+                <td class="gris">Ingrese su email</td>
+            </tr>
+            <tr>
+                <td class="negrita">Password</td>
+                <td rowspan="2"><input type="password" required></td>
+            </tr>
+            <tr>
+                <td class="gris">Mínimo 6 caracteres</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="enviar" value="Enviar"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
