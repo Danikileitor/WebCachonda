@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <title>EnunciadosPantallazosTodos</title>
     <style>
-        .primero{
+        body{
+            font-family: Arial;
+        }
+        /*Primer formulario*/
+        .primero table{
             border: 2px solid darkcyan;
             background-color: Gainsboro;
             margin: auto;
             padding: 10px 30px 10px 30px;
-            font-family: Arial;
         }
         .primero th{
             text-align: center;
-            font-size: larger;
+            font-size: 24px;
         }
         .negrita, .gris{
             text-align: right;
@@ -30,40 +33,114 @@
             font-weight: bold;
             padding: 10px 30px 5px 30px;
         }
+        /*Segundo formulario*/
+        .segundo{
+            background-color: lightyellow;
+            width: 50%;
+            margin: auto;
+            border: 1px solid black;
+        }
+        .segundo h3{
+            padding-left: 20px;
+            font-style: italic;
+        }
+        .segundo form{
+            background-color: white;
+            width: 50%;
+            margin: auto;
+        }
+        .segundo fieldset{
+            width: 50%;
+        }
+        .segundo legend{
+            color: blue;
+            font-weight: bold;
+        }
+        .segundo input, .segundo textarea, .segundo select{
+            width: 200px;
+        }
     </style>
 </head>
 <body>
-    <table class="primero">
+    <div class="primero">
+        <table>
+            <form>
+                <tr>
+                    <th colspan="2">Formulario</th>
+                </tr>
+                <tr>
+                    <td class="negrita">Nombre</td>
+                    <td rowspan="2"><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td class="gris">Ingrese su nombre</td>
+                </tr>
+                <tr>
+                    <td class="negrita">Email</td>
+                    <td rowspan="2"><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td class="gris">Ingrese su email</td>
+                </tr>
+                <tr>
+                    <td class="negrita">Password</td>
+                    <td rowspan="2"><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td class="gris">Mínimo 6 caracteres</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="enviar" value="Enviar"></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+    <br>
+    <div class="segundo">
+        <h3>PRÁCTICA: Codifica el siguiente formulario:</h3>
         <form>
-            <tr>
-                <th colspan="2">Formulario</th>
-            </tr>
-            <tr>
-                <td class="negrita">Nombre</td>
-                <td rowspan="2"><input type="text" required></td>
-            </tr>
-            <tr>
-                <td class="gris">Ingrese su nombre</td>
-            </tr>
-            <tr>
-                <td class="negrita">Email</td>
-                <td rowspan="2"><input type="email" required></td>
-            </tr>
-            <tr>
-                <td class="gris">Ingrese su email</td>
-            </tr>
-            <tr>
-                <td class="negrita">Password</td>
-                <td rowspan="2"><input type="password" required></td>
-            </tr>
-            <tr>
-                <td class="gris">Mínimo 6 caracteres</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" name="enviar" value="Enviar"></td>
-            </tr>
+            <fieldset>
+                <legend>Datos de acceso</legend>
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="n-usuario"></td>
+                    </tr>
+                    <tr>
+                        <td>Pass:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="p-usuario"></td>
+                    </tr>
+                    <tr>
+                        <td>Detalles:</td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="details" rows="4">Detalle</textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de acceso</legend>
+                <table>
+                    <tr>
+                        <td>Ciudad de origen:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="ciudad">
+                                <option value="trs">Terrasa</option>
+                                <option value="sbd">Sabadell</option>
+                                <option value="bcn" selected>Barcelona</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
         </form>
-    </table>
+    </div>
 </body>
 </html>
