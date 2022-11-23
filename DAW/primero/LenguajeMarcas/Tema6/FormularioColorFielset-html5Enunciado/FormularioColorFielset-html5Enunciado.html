@@ -8,115 +8,135 @@
         body{
             font-family: Arial;
             font-weight: bold;
+            width: 50%;
+            margin: auto;
         }
         h1,h3{
             color: #A52A2B;
         }
-        fieldset{
-            border: 0;
+        table{
+            padding: 5px;
+            width: 100%;
         }
-        div{
-            display: block;
-            padding: 1px;
+        th{
+            text-align: left;
         }
-        label{
-            display: inline-block;
-            width: 170px;
-            text-align: center;
+        .claro{
             background-color: #9EA202;
             color: white;
             text-align: center;
             border: 1px solid black;
-            padding: 2px 5px 2px 5px;
+            width: 200px;
         }
-        label+input{
-            border: 1px solid gray;
-            border-radius: 5px;
-        }
-        fieldset+fieldset{
+        .oscuro{
             background-color: #87D097;
+            padding: 20px 10px 30px 10px;
         }
-        fieldset>fieldset{
-            background-color: white;
+        .oscuro .claro{
+            padding: 10px;
+        }
+        .separado{
+            border-spacing: 20px 0px;
+        }
+        .centro{
+            text-align: center;
+        }
+        ::placeholder{
+            color: black;
         }
     </style>
 </head>
 <body>
     <div>
         <h1>FORMULARIO QUE SE ABRE A SI MISMO</h1>
-        <form name="formulario" action="#" method="get" enctype="text/plain"></form>
+        <form name="formulario" action="#" method="get" enctype="text/plain">
             <fieldset>
                 <legend>Datos básicos</legend>
-                <div>
-                    <label for="nombre">Nombre: (*)</label>
-                    <input type="text" name="nombre" id="nombre" size="20" maxlength="40" autocomplete="on" autofocus required>
-                </div>
-                <div>
-                    <label for="apellido">Apellido: (*)</label>
-                    <input type="text" name="apellido" id="apellido" size="20" maxlength="40" autocomplete="on" required>
-                </div>
-                <div>
-                    <label for="email">Correo electrónico: (*)</label>
-                    <input type="email" name="email" placeholder=".....@....." autocomplete="on" required>
-                </div>
-                <div>
-                    <label for="poblacion">Población:</label>
-                    <input type="text" name="poblacion" id="poblacion" size="20" maxlength="40" autocomplete="on">
-                </div>
-                <div>
-                    <label>Provincia:</label>
-                    <input type="text" name="provincia" size="20" maxlength="40" autocomplete="on">
-                </div>
-                <h3>(Campos con asterisco son campos obligatorios)</h3>
+                <table>
+                    <tr>
+                        <td class="claro">Nombre: (*)</td>
+                        <td><input type="text" name="nombre" title="Introduzca su nombre" size="20" maxlength="40" autocomplete="on"  autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td class="claro">Apellido: (*)</td>
+                        <td><input type="text" name="apellido" title="Introduzca su apellido" size="20" maxlength="40" autocomplete="on" required></td>
+                    </tr>
+                    <tr>
+                        <td class="claro">Correo electrónico: (*)</td>
+                        <td><input type="email" name="email" title="Introduzca su e-mail" placeholder=".....@....." autocomplete="on" required></td>
+                    </tr>
+                    <tr>
+                        <td class="claro">Población:</td>
+                        <td><input type="text" name="poblacion" title="Introduzca su población" size="20" maxlength="40" autocomplete="on"></td>
+                    </tr>
+                    <tr>
+                        <td class="claro">Provincia:</td>
+                        <td><input type="text" name="provincia" title="Introduzca su provincia" size="20" maxlength="40" autocomplete="on"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h3>(Campos con asterisco son campos obligatorios)</h3></td>
+                    </tr>
+                </table>
             </fieldset>
             <fieldset>
                 <legend>Datos Adicionales</legend>
-                <div>
-                    <label>Edad:</label>
-                    <label>¿Cómo nos conociste?</label>
-                </div>
-                <div>
-                    <input type="radio" name="edad" autocomplete="on">0-20
-                    <input type="radio" name="edad" autocomplete="on" checked>20-40
-                    <input type="radio" name="edad" autocomplete="on">40-60
-                    <input type="radio" name="edad" autocomplete="on">60-100
-                </div>
-                <div>
-                    <input type="checkbox" name="conociste" autocomplete="on" value="amigo" id="amigo"><label for="amigo">A través de un amigo.</label>
-                    <input type="checkbox" name="conociste" autocomplete="on" value="buscador" id="buscador"><label for="buscador">A través de un buscador.</label>
-                    <input type="checkbox" name="conociste" autocomplete="on" value="red" id="red"><label for="red">Navegando por la red.</label>
-                    <input type="checkbox" name="conociste" autocomplete="on" value="otros" id="otros"><label for="otros">Otros</label>
-                </div>
+                <table class="oscuro separado">
+                    <tr>
+                        <td class="claro">Edad:</td>
+                        <td class="claro">¿Cómo nos conociste?</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            <input type="radio" name="edad" title="Edad entre 0 y 20 años" autocomplete="on">0-20
+                            <input type="radio" name="edad" title="Edad entre 20 y 40 años" autocomplete="on" checked>20-40
+                            <input type="radio" name="edad" title="Edad entre 40 y 60 años" autocomplete="on">40-60
+                            <input type="radio" name="edad" title="Edad entre 60 y 100 años" autocomplete="on">60-100
+                        </td>
+                        <td><input type="checkbox" name="conociste" title="Nos conciste a través de un amigo" value="amigo" autocomplete="on">A través de un amigo.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conociste" title="Nos conciste a través de un buscador" value="buscador" autocomplete="on">A través de un buscador.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conociste" title="Nos conciste navegando por la red" value="navegando" autocomplete="on">Navegando por la red.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conociste" title="Nos conciste de otra manera" value="otros" autocomplete="on">Otros</td>
+                    </tr>
+                </table>
+            </fieldset>
             <fieldset>
                 <legend>Datos Complementarios</legend>
-                <tr>
-                    <td>Opinión sobre nuestra página web</td>
-                    <td>Tiene alguna sugerencia...</td>
-                </tr>
-                <tr>
-                    <td><textarea rows="5" cols="40" autocomplete="on">Escriba aquí su opinión...</textarea></td>
-                    <td><textarea rows="5" cols="40" autocomplete="on">Escriba aquí sus sugerencias...</textarea></td>
-                </tr>
-                <tr>
-                    <td>¿Cuánto navegas por internet? (Señala la opción que más se acerque)</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input list="horas" name"horas" autocomplete="on">
-                        <datalist id="horas">
-                            <option value="2 horas al día."></option>
-                            <option value="4 horas al día."></option>
-                            <option value="10 horas a la semana."></option>
-                            <option value="20 horas al mes."></option>
-                        </datalist>
-                    </td>
-                </tr>
-            </fieldset>
-
-                <tr>
-                    <td><input type="submit" value="Enviar formulario"></td>
-                    <td><input type="reset" value="Borrar formulario"></td>
-                </tr>
+                <table>
+                    <tr>
+                        <td>Opinión sobre nuestra página web</td>
+                        <td>Tiene alguna sugerencia...</td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="5" cols="40" title="Escriba aquí su opinión sobre nuestra página web" placeholder="Escriba aquí su opinión..." autocomplete="on"></textarea></td>
+                        <td><textarea rows="5" cols="40" title="Escriba aquí sus sugerencias para mejorar nuestra página web" placeholder="Escriba aquí sus sugerencias..." autocomplete="on"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>¿Cuánto navegas por internet? (Señala la opción que más se acerque)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input list="horas" name"horas" autocomplete="on">
+                            <datalist id="horas">
+                                <option value="2 horas al día."></option>
+                                <option value="4 horas al día."></option>
+                                <option value="10 horas a la semana."></option>
+                                <option value="20 horas al mes."></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                </table>
+                <table class="oscuro">
+                    <tr>
+                        <td class="centro"><input type="submit" value="Enviar formulario"></td>
+                        <td class="centro"><input type="reset" value="Borrar formulario"></td>
+                    </tr>
+                </table>
             </fieldset>
         </form>
     </div>
