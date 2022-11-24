@@ -10,34 +10,43 @@
         div div{
             background-color: blue;
             width: 100px;
-            height: 100px;
+            height: 75px;
         }
         .grande{
-            width: 50%;
             margin: auto;
             background-color: lime;
-            border: 50px solid black;
+            border: 30px solid black;
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin: 20px;
         }
         .segunda{
             position: absolute;
             left: 200px;
+            top: -30px;
         }
         .tercera{
             position: relative;
             top: 20px;
+            left: 20px;
         }
         .cuarta{
-            position: fixed;
-            left: 20px;
-            top: 20px;
+            position: fixed; /*Para que se vea bien hay que quitar zoom*/
         }
     </style>
 </head>
 <body>
     <div class="grande">
         <div></div>
+    </div>
+    <div class="grande">
         <div class="segunda"></div>
+    </div>
+    <div class="grande">
         <div class="tercera"></div>
+    </div>
+    <div class="grande">
         <div class="cuarta"></div>
     </div>
 </body>
