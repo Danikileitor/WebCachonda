@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TodosPosicionamientosCajas</title>
+    <style>
+        body{
+            background-color: cyan;
+        }
+        div div{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+        .grande{
+            width: 50%;
+            margin: auto;
+            background-color: lime;
+            border: 50px solid black;
+        }
+        .segunda{
+            position: absolute;
+            left: 200px;
+        }
+        .tercera{
+            position: relative;
+            top: 20px;
+        }
+        .cuarta{
+            position: fixed;
+            left: 20px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grande">
+        <div></div>
+        <div class="segunda"></div>
+        <div class="tercera"></div>
+        <div class="cuarta"></div>
+    </div>
+</body>
+</html>
