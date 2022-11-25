@@ -5,22 +5,37 @@
     <title>CuatroBox</title>
     <style>
         body{
-            width: 50%;
-            margin: auto;
+            background-color: aqua;
         }
-        .menu1 hr{
-            border: 1px solid blue;
+        div{
+            border: 5px dashed grey;
+            border-top: 0;
+            width: fit-content;
+            position: absolute;
         }
-        .menu1 ul{
-            width: 180px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            border: 1px solid blue;
+        .box1{
+            float: left;
+            top: 10px;
+        }
+        .box2{
+            float: right;
+            right: 10px;
+        }
+        .box3{
+            float: right;
+            right: 10px;
+            bottom: 10px;
+        }
+        .box4{
+            float: left;
+            bottom: 10px;
         }
     </style>
 </head>
 <body>
-
+    <div class="box1">Box 1 Arriba Izquierda</div>
+    <div class="box2">Box 2 Arriba Derecha</div>
+    <div class="box3">Box 3 Abajo Derecha</div>
+    <div class="box4">Box 4 Abajo Izquierda</div>
 </body>
 </html>
