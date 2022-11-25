@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos4EstilosOweflowEnunciado</title>
+    <style>
+        body{
+            background-color: aqua;
+            margin: auto;
+            width: 50%;
+        }
+        .borde{
+            border: 5px dotted black;
+            display: flex;
+            width: fit-content;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        div div{
+            padding: 5px;
+        }
+        div div div{
+            width: 85px;
+            height: 200px;
+        }
+        .caja1{
+            background-color: papayawhip;
+            border: 2px solid red;
+            overflow: visible;
+        }
+        .caja2{
+            background-color: papayawhip;
+            border: 2px solid blue;
+            overflow: hidden;
+        }
+        .caja3{
+            background-color: papayawhip;
+            border: 2px solid green;
+            overflow: scroll;
+        }
+        .caja4{
+            background-color: papayawhip;
+            border: 2px solid orange;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>overflow css</h1>
+    <div class="borde">
+        <div>
+            <h1>visible</h1>
+            <div class="caja1">
+                Caja 1
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+        <div>
+            <h1>hidden</h1>
+            <div class="caja2">
+                Caja 2
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+        <div>
+            <h1>scroll</h1>
+            <div class="caja3">
+                Caja 3
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+        <div>
+            <h1>auto</h1>
+            <div class="caja4">
+                Caja 4
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+    </div>
+</body>
+</html>
