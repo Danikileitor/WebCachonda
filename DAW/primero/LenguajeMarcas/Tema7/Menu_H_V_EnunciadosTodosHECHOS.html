@@ -5,18 +5,86 @@
     <title>Menu_H_V_EnunciadosTodosHECHOS</title>
     <style>
         body{
-            width: 50%;
+            width: fit-content;
             margin: auto;
+            background-color: whitesmoke;
         }
+        /*Menú 1*/
         .menu1 hr{
             border: 1px solid blue;
         }
         .menu1 ul{
-            width: 180px;
+            width: fit-content;
             list-style: none;
-            margin: 0;
+            margin: auto;
             padding: 0;
-            border: 1px solid blue;
+            display: flex;
+        }
+        .menu1 li{
+            padding: 5px;
+            margin: 3px;
+            border: 2px solid blue;
+            background-color: aquamarine;
+            color: black;
+        }
+        .menu1 li:hover{
+            border-color: whitesmoke;
+            background-color: darkblue;
+            color: yellow;
+        }
+        .menu1 a{
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+        /*Menú 2*/
+        .menu2 ul{
+            width: fit-content;
+            list-style: none;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            border-bottom: 1px solid grey;
+        }
+        .menu2 li{
+            width: 200px;
+            background-color: lightgray;
+            color: gray;
+        }
+        .menu2 a{
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+        /*Menú 3*/
+        .menu3 ul{
+            width: fit-content;
+            list-style: none;
+            margin: auto;
+            padding: 0;
+        }
+        .menu3{
+            width: fit-content;
+            margin: auto;
+            border: 2px solid blue;
+            background-color: aqua;
+        }
+        .menu3 li{
+            padding: 5px;
+            margin: 3px;
+            border: 2px solid blue;
+            background-color: aquamarine;
+            color: black;
+        }
+        .menu3 li:hover{
+            border-color: aqua;
+            background-color: darkblue;
+            color: yellow;
+        }
+        .menu3 a{
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -29,6 +97,25 @@
             <li><a href="#" title="Elemento de menú 3">Elemento de menú 3</a></li>
         </ul>
         <hr>
+    </div>
+    <div class="menu2">
+        <hr>
+        <ul id="nav">
+            <li><a href="#" title="Menú 1">Menú 1</a></li>
+            <li><a href="#" title="Menú 2">Menú 2</a></li>
+            <li><a href="#" title="Menú 3">Menú 3</a></li>
+            <li><a href="#" title="Menú 4">Menú 4</a></li>
+            <li><a href="#" title="Menú 5">Menú 5</a></li>
+            <li><a href="#" title="Menú 6">Menú 6</a></li>
+        </ul>
+        <hr>
+    </div>
+    <div class="menu3">
+        <ul>
+            <li><a href="#" title="Elemento de menú 1">Elemento de menú 1</a></li>
+            <li><a href="#" title="Elemento de menú 2">Elemento de menú 2</a></li>
+            <li><a href="#" title="Elemento de menú 3">Elemento de menú 3</a></li>
+        </ul>
     </div>
 </body>
 </html>
