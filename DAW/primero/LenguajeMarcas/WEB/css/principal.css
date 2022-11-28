@@ -1,0 +1,33 @@
+*{
+    cursor: url(../cursores/pokeball.cur), auto;
+}
+body{
+    background-color: aqua;
+}
+header{
+    background-color: red;
+}
+nav ul{
+    width: fit-content;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid grey;
+}
+nav li{
+    width: 200px;
+    background-color: lightgray;
+    color: gray;
+}
+nav li:hover{
+    width: 200px;
+    background-color: gray;
+    color: lightgray;
+}
+nav a{
+    cursor: url(../cursores/charmander.cur), pointer;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
