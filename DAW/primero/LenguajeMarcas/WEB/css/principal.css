@@ -25,6 +25,12 @@ nav li:hover{
     background-color: gray;
     color: lightgray;
 }
+img:hover{
+    animation: 1s rotar infinite;
+}
+@keyframes rotar{
+    100%{transform: rotate(360deg);}
+}
 nav a{
     cursor: url(../cursores/charmander.cur), pointer;
     text-decoration: none;
