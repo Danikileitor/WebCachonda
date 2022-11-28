@@ -36,7 +36,7 @@ public class CorrecionExamen{
 					System.out.println();
 					continue;
 				}
-				if(inquilino<0){//Rechazamos los inquilinos negativos
+				if(calcularNegativo(inquilino)){//Rechazamos los inquilinos negativos
 					System.out.println(rechazado);
 				}
 				else{//Comprobamos si el inquilino es primo, tenemos que reiniciar las variables esPrimo y aux para cada iteración.
@@ -71,5 +71,8 @@ public class CorrecionExamen{
 			factorial*=i;
 		}
 		return factorial;
+	}public static boolean calcularNegativo(int n){
+		boolean esNegativo=n<0;
+		return esNegativo;
 	}
 }
