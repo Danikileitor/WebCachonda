@@ -56,6 +56,10 @@ public class CorrecionExamen{
 		}while(salir=='n');
 		System.out.println("Gracias por presentar su solicitud de admisión a la Pensión de los números.\nHasta la próxima.");
 	}
+	public static boolean calcularNegativo(int n){
+		boolean esNegativo=n<0;
+		return esNegativo;
+	}
 	public static boolean calcularPrimo(int n){
 		boolean esPrimo=true;
 		int aux=2;
@@ -71,8 +75,5 @@ public class CorrecionExamen{
 			factorial*=i;
 		}
 		return factorial;
-	}public static boolean calcularNegativo(int n){
-		boolean esNegativo=n<0;
-		return esNegativo;
 	}
 }
