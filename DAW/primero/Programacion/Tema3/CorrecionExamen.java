@@ -63,7 +63,7 @@ public class CorrecionExamen{
 	public static boolean calcularPrimo(int n){
 		boolean esPrimo=true;
 		int aux=2;
-		while(esPrimo && aux<n){//Tercer bucle para comprobar si el inquilino es primo.
+		while(esPrimo && aux<n){//Bucle para comprobar si el inquilino es primo.
 			esPrimo=n%aux==0?false:true;
 			aux++;
 		}
@@ -71,7 +71,7 @@ public class CorrecionExamen{
 	}
 	public static long calcularFactorial(int n){
 		long factorial=1;
-		for(int i=2;i<=n;i++){//Cuarto y último bucle para calcular el factorial del inquilino.
+		for(int i=2;i<=n;i++){//Bucle para calcular el factorial del inquilino.
 			factorial*=i;
 		}
 		return factorial;
