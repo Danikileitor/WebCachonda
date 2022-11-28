@@ -3,9 +3,7 @@ public class CorrecionExamen{
 	public static void main(String[] args){
 		//Declarar variables
 		Scanner teclado=new Scanner(System.in);
-		int inquilino=1,aux;
-		long factorial;
-		boolean esPrimo=true;
+		int inquilino=1;
 		char salir='n';
 		String aceptado,rechazado;
 		aceptado="Bienvenido a la pensión.\n";
@@ -42,21 +40,11 @@ public class CorrecionExamen{
 					System.out.println(rechazado);
 				}
 				else{//Comprobamos si el inquilino es primo, tenemos que reiniciar las variables esPrimo y aux para cada iteración.
-					esPrimo=true;
-					aux=2;
-					while(esPrimo && aux<inquilino){//Tercer bucle para comprobar si el inquilino es primo.
-						esPrimo=inquilino%aux==0?false:true;
-						aux++;
-					}
-					if(esPrimo){
+					if(calcularPrimo(inquilino)){
 						System.out.println(rechazado);
 					}
 					else{//Calculamos el factorial del inquilino, tenemos que reiniciar la variable factorial para cada iteración.
-						factorial=1;
-						for(int i=2;i<=inquilino;i++){//Cuarto y último bucle para calcular el factorial del inquilino.
-							factorial*=i;
-						}
-						if(factorial>1000000000 || factorial<=0){//Comprobamos que el factorial no supera el billón inglés (el que usamos en España da error al compilar porque se sale del rango) y el <=0 es para los resultados que desbordan del rango y dan resultados negativos o 0.
+						if(calcularFactorial(inquilino)>1000000000 || calcularFactorial(inquilino)<=0){//Comprobamos que el factorial no supera el billón inglés (el que usamos en España da error al compilar porque se sale del rango) y el <=0 es para los resultados que desbordan del rango y dan resultados negativos o 0.
 							System.out.println(rechazado);
 						}
 						else{
@@ -67,5 +55,21 @@ public class CorrecionExamen{
 			}
 		}while(salir=='n');
 		System.out.println("Gracias por presentar su solicitud de admisión a la Pensión de los números.\nHasta la próxima.");
+	}
+	public static boolean calcularPrimo(int n){
+		boolean esPrimo=true;
+		int aux=2;
+		while(esPrimo && aux<n){//Tercer bucle para comprobar si el inquilino es primo.
+			esPrimo=n%aux==0?false:true;
+			aux++;
+		}
+		return esPrimo;
+	}
+	public static long calcularFactorial(int n){
+		long factorial=1;
+		for(int i=2;i<=n;i++){//Cuarto y último bucle para calcular el factorial del inquilino.
+			factorial*=i;
+		}
+		return factorial;
 	}
 }
