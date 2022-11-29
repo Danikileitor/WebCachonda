@@ -1,5 +1,6 @@
 *{
     cursor: url(../cursores/pokeball.cur), auto;
+    user-select: none;
 }
 body{
     background-color: aqua;
