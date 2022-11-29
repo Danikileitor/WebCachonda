@@ -18,13 +18,13 @@ public class U4_R1_Daniel{
 	System.out.println("Introduce otro número entero:");
 	m=teclado.nextInt();
 	System.out.println("Introduce una letra:");
-	letra=teclado.next.charAt(0);
-	System.out.printf("Método 1: eco %n veces:%n",n);
+	letra=teclado.next().charAt(0);
+	System.out.printf("Método 1: Eco..... %d veces:%n",n);
 	eco(n);
 	System.out.println("Métodos 2 y 3:");
 	comprendidos(n,m);
 	System.out.printf("Método 4: El número mayor entre %d y %d es %d.%n",n,m,mayor(n, m));
-	System.out.println("¿La letra introducida es una vocal? "+esVocal(letra));
+	System.out.println("¿La letra "+letra+" es una vocal? "+esVocal(letra));
 	System.err.println("¿El número "+n+" es primo? "+esPrimo(n));
 	}//Fin main
 	//1 - Método eco
@@ -42,7 +42,7 @@ public class U4_R1_Daniel{
 			n=aux;
 		}
 		System.out.printf("Los números comprendidos entre %d y %d son:",n,m);
-		for(int i=1;i<=n;i++){
+		for(int i=m;i<=n;i++){
 			System.out.printf(" %d",i);
 		}
 		System.out.println();
