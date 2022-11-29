@@ -7,22 +7,23 @@ body{
 }
 header{
     background-color: red;
+    border: 1px solid black;
+    border-bottom: 0;
 }
 nav ul{
-    width: fit-content;
     list-style: none;
-    margin: auto;
+    margin: 0;
     padding: 0;
     display: flex;
-    border-bottom: 1px solid grey;
+    border: 1px solid black;
 }
 nav li{
-    width: 200px;
+    width: fit-content;
     background-color: lightgray;
     color: gray;
+    padding: 4px 10px 0 4px;
 }
 nav li:hover{
-    width: 200px;
     background-color: gray;
     color: lightgray;
 }
@@ -37,4 +38,21 @@ nav a{
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+}
+.pokedex{
+    display: inline-block;
+    position: relative;
+}
+.contenido{
+    display: none;
+    width: 100%;
+    overflow: auto;
+}
+.pokedex:hover .contenido{
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+.contenido:hover{
+    background-color: blue;
 }
