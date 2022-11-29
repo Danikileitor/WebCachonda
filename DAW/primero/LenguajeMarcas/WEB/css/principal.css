@@ -25,7 +25,7 @@ nav li:hover{
     background-color: gray;
     color: lightgray;
 }
-img:hover{
+nav li:hover img{
     animation: 1s rotar infinite;
 }
 @keyframes rotar{
