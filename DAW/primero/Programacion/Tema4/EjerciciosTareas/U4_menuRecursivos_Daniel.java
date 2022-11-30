@@ -1,5 +1,5 @@
 //Daniel Marcos Guerra Gómez
-/*Un menú con un método recursivo y otro sobrecargado.*/
+/*Pŕactica U4_menuRecursivos*/
 import java.util.Scanner; //Importación de paquetes
 public class U4_menuRecursivos_Daniel {
 	public static void main(String[] args) {
