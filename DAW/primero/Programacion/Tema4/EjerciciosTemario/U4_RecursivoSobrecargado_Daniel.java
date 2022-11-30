@@ -43,6 +43,7 @@ public class U4_RecursivoSobrecargado_Daniel {
 					}
 					break;
 				default:
+					menu=0;
 					break;
 			}
 		} while (menu != 0);
