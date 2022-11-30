@@ -24,7 +24,7 @@ public class U4_R1_Daniel {
 				case 1:
 					System.out.println("Introduce un número entero:");
 					n = teclado.nextInt();
-					System.out.printf("Método 1: Eco..... %d veces:%n", n);
+					System.out.printf("Hacemos eco %d veces:%n", n);
 					eco(n);
 					break;
 				case 2:
@@ -47,14 +47,17 @@ public class U4_R1_Daniel {
 					System.out.println("Introduce otro número entero:");
 					m = teclado.nextInt();
 					System.out.printf("El número mayor entre %d y %d es %d.%n", n, m, mayor(n, m));
+					break;
 				case 5:
 					System.out.println("Introduce una letra:");
 					letra = teclado.next().charAt(0);
 					System.out.println("¿La letra " + letra + " es una vocal? " + esVocal(letra));
+					break;
 				case 6:
 					System.out.println("Introduce un número entero:");
 					n = teclado.nextInt();
 					System.err.println("¿El número " + n + " es primo? " + esPrimo(n));
+					break;
 				default:
 					System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 					break;
