@@ -1,7 +1,7 @@
 //Daniel Marcos Guerra Gómez
 /*Un menú con un método recursivo y otro sobrecargado.*/
 import java.util.Scanner; //Importación de paquetes
-public class U4_RecursivoSobrecargado_Daniel {
+public class U4_menuRecursivos_Daniel {
 	public static void main(String[] args) {
 		// Declarar variables
 		int menu, n, m;
@@ -42,6 +42,15 @@ public class U4_RecursivoSobrecargado_Daniel {
 							break;
 					}
 					break;
+				case 3:
+					System.out.println("Introduce la base real:");
+					o=teclado.nextDouble();
+					do {
+						System.out.println("Introduce el exponente entero positivo:");
+						n=teclado.nextInt();
+					} while (n<0);
+					System.out.printf("La potencia %f elevado a %d es %f.%n",o,n,potenciaIterativa(o,n));
+					break;
 				default:
 					menu=0;
 					break;
@@ -63,5 +72,16 @@ public class U4_RecursivoSobrecargado_Daniel {
 	}
 	public static double sumaSobrecargada(double x, double y){
 		return (x+y);
+	}
+	public static double potenciaIterativa(double x, int y){
+		double potencia=1;
+		if (y==0) {
+			return potencia;
+		} else {
+			for(int i=1;i<=y;i++){
+				potencia*=x;
+			}
+			return potencia;
+		}
 	}
 }// Fin clase
