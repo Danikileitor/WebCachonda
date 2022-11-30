@@ -17,10 +17,10 @@ nav ul{
     padding: 0;
     display: flex;
     border: 1px solid black;
+    background-color: lightgray;
 }
 nav li{
     width: fit-content;
-    background-color: lightgray;
     color: gray;
     padding: 4px 10px 0 4px;
 }
