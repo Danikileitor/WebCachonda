@@ -10,7 +10,7 @@ public class U4_menuRecursivos_Daniel {
 		Scanner teclado = new Scanner(System.in);
 		// Desarrollo del programa
 		do {
-			System.out.println("Elige una opción:\n1.Factorial recursivo\n2.Suma sobrecargada\n0.Salir");
+			System.out.println("Elige una opción:\n1.Factorial recursivo\n2.Suma sobrecargada\n3.Potencia iterativa\n4.Potencia recursiva\n5.MCD recursivo\n6.Fibonacci recursivo\n0.Salir");
 			menu = teclado.nextInt();
 			switch (menu) {
 				case 0:
@@ -51,6 +51,19 @@ public class U4_menuRecursivos_Daniel {
 					} while (n<0);
 					System.out.printf("La potencia %f elevado a %d es %f.%n",o,n,potenciaIterativa(o,n));
 					break;
+				case 4:
+					System.out.println("Introduce la base real:");
+					o=teclado.nextDouble();
+					do {
+						System.out.println("Introduce el exponente entero positivo:");
+						n=teclado.nextInt();
+					} while (n<0);
+					System.out.printf("La potencia %f elevado a %d es %f.%n",o,n,potenciaRecursiva(o,n));
+					break;
+				case 5:
+					break;
+				case 6:
+					break;
 				default:
 					menu=0;
 					break;
@@ -74,6 +87,17 @@ public class U4_menuRecursivos_Daniel {
 		return (x+y);
 	}
 	public static double potenciaIterativa(double x, int y){
+		double potencia=1;
+		if (y==0) {
+			return potencia;
+		} else {
+			for(int i=1;i<=y;i++){
+				potencia*=x;
+			}
+			return potencia;
+		}
+	}
+	public static double potenciaRecursiva(double x, int y){
 		double potencia=1;
 		if (y==0) {
 			return potencia;
