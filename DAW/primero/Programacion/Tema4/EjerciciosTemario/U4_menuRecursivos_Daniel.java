@@ -61,8 +61,16 @@ public class U4_menuRecursivos_Daniel {
 					System.out.printf("La potencia %f elevado a %d es %f.%n",o,n,potenciaRecursiva(o,n));
 					break;
 				case 5:
+					System.out.println("Introduce un número entero:");
+					n=teclado.nextInt();
+					System.out.println("Introduce otro número entero:");
+					m=teclado.nextInt();
+					System.out.printf("El máximo común divisor entre %d y %d es %d.%n",n,m,mcdRecursivo(n,m));
 					break;
 				case 6:
+					System.out.println("Introduce un número entero:");
+					n=teclado.nextInt();
+					System.out.printf("El termino número %d de la serie de Fibonacci es %d.%n",n,fibonacciRecursivo(n));
 					break;
 				default:
 					menu=0;
@@ -107,5 +115,13 @@ public class U4_menuRecursivos_Daniel {
 			}
 			return potencia;
 		}
+	}
+	public static int mcdRecursivo(int x, int y){
+		int mcd=1;
+		return mcd;
+	}
+	public static int fibonacciRecursivo(int x){
+		int fibonacci=1;
+		return fibonacci;
 	}
 }// Fin clase
