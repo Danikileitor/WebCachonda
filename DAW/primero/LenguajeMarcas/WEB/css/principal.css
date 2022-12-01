@@ -4,12 +4,18 @@
 }
 body{
     background-color: aqua;
+    position: relative;
 }
 header{
+    position: relative;
     height: 8vh;
     background-color: red;
     border: 1px solid black;
     border-bottom: 0;
+}
+nav{
+    position: sticky;
+    top: 0;
 }
 nav ul{
     height: 24px;
@@ -68,18 +74,15 @@ nav a{
     color: lightgray;
 }
 section{
-    height: 70vh;
+    height: 80vh;
     border: 1px solid black;
     border-top: 0;
     background-color: white;
-    display: flex;
 }
 aside{
-    position: absolute;
+    position: fixed;
     width: 10%;
     height: 69vh;
-    display: flex;
-    float: right;
     right: 0;
     top: 11vh;
     margin: inherit;
