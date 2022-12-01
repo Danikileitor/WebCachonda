@@ -6,6 +6,7 @@ body{
     background-color: aqua;
 }
 header{
+    height: 8vh;
     background-color: red;
     border: 1px solid black;
     border-bottom: 0;
@@ -65,4 +66,28 @@ nav a{
 .contenido:hover{
     background-color: gray;
     color: lightgray;
+}
+section{
+    height: 70vh;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: white;
+    display: flex;
+}
+aside{
+    position: absolute;
+    width: 10%;
+    height: 69vh;
+    display: flex;
+    float: right;
+    right: 0;
+    top: 11vh;
+    margin: inherit;
+    background-color: yellow;
+}
+footer{
+    height: 5vh;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: green;
 }
