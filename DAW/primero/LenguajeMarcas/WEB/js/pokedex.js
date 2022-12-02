@@ -50,7 +50,7 @@ function getPokemon(id) {
     '"water": "img/tipos/agua.png"'+
 '}'
 
-    let pokemonApi = "https://pokeapi.co/api/v2/pokemon/"+id
+    let pokemonApi = "https://pokeapi.co/api/v2/pokemon/"+id;
     // let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
     let pokemonreq = new XMLHttpRequest();
     // let typesreq = new XMLHttpRequest();
@@ -65,4 +65,14 @@ function getPokemon(id) {
     document.getElementById("pokemonType").innerHTML = "";
     pokemonTypes = JSON.parse(typesJson);
     pokemonData.types.map(item => document.getElementById("pokemonType").innerHTML += "<img src="+pokemonTypes[item.type.name]+" height=50>");
+    // Ahora viene la parte de información adicional
+    let speciesApi = "https://pokeapi.co/api/v2/pokemon-species/"+pokemonData.species.name;
+    let speciesreq = new XMLHttpRequest();
+    speciesreq.open("GET", speciesApi, false);
+    speciesreq.send();
+    let speciesData = JSON.parse(pokemonreq.responseText);
+    //document.getElementById("categoria").value = speciesData.genera[0].genus.language;
+    document.getElementById("altura").value = pokemonData.height/10+" m";
+    document.getElementById("peso").value = pokemonData.weight/10+" kg";
+    document.getElementById("habilidad").value = pokemonData.abilities[0].ability.name;
 }
