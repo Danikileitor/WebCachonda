@@ -2,44 +2,58 @@
     cursor: url(../cursores/pokeball.cur), auto;
     user-select: none;
 }
+@keyframes rotar{
+    100%{transform: rotate(360deg);}
+}
+@keyframes subir{
+    0%{bottom: 0;}
+    100%{bottom: 1%;}
+}
+html{
+    height: 100%;
+}
 body{
-    background-color: aqua;
+    width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(red,white);
+    background-repeat: no-repeat;
     position: relative;
+    margin: 0;
 }
 header{
     position: relative;
-    height: 8vh;
-    background-color: red;
+    height: 8%;
     border: 1px solid black;
+    background-color: black;
+    color: yellow;
     border-bottom: 0;
 }
 nav{
     position: sticky;
     top: 0;
+    height: 2.7%;
+    z-index: 1;
 }
 nav ul{
-    height: 24px;
+    height: 2.7vh;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     border: 1px solid black;
-    background-color: lightgray;
+    background-color: black;
 }
 nav li{
     width: fit-content;
-    color: gray;
+    color: yellow;
     padding: 4px 10px 0 4px;
 }
 nav li:hover{
-    background-color: gray;
-    color: lightgray;
+    background-color: yellow;
+    color: black;
 }
 nav li:hover img{
     animation: 1s rotar infinite;
-}
-@keyframes rotar{
-    100%{transform: rotate(360deg);}
 }
 nav a{
     cursor: url(../cursores/charmander.cur), pointer;
@@ -54,8 +68,8 @@ nav a{
 .contenido{
     display: none;
     width: 100%;
-    background-color: lightgray;
-    color: gray;
+    background-color: black;
+    color: yellow;
     border: 1px solid black;
     border-top: 0;
     margin-left: -4px;
@@ -70,27 +84,37 @@ nav a{
     text-decoration: none;
 }
 .contenido:hover{
-    background-color: gray;
-    color: lightgray;
+    background-color: yellow;
+    color: black;
 }
 section{
-    height: 80vh;
-    border: 1px solid black;
+    position: relative;
     border-top: 0;
-    background-color: white;
+    border-bottom: 0;
+    margin: 0;
+}
+article{
+    padding: 10px;
 }
 aside{
     position: fixed;
-    width: 10%;
-    height: 69vh;
     right: 0;
-    top: 11vh;
-    margin: inherit;
-    background-color: yellow;
+    bottom: 0;
+    z-index: 1;
+}
+aside:hover{
+    animation: 0.5s subir infinite alternate;
 }
 footer{
-    height: 5vh;
-    border: 1px solid black;
-    border-top: 0;
+    position: absolute;
+    height: 5%;
+    width: 100%;
     background-color: green;
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    bottom: 0;
+}
+footer p{
+    text-align: center;
 }
