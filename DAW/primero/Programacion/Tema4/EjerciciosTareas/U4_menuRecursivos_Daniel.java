@@ -9,8 +9,9 @@ public class U4_menuRecursivos_Daniel {
 		char decimales;
 		Scanner teclado = new Scanner(System.in);
 		// Desarrollo del programa
+		System.out.println("Bienvenido a mi humilde programa.");
 		do {
-			System.out.println("Elige una opción:\n1.Factorial recursivo\n2.Suma sobrecargada\n3.Potencia iterativa\n4.Potencia recursiva\n5.MCD recursivo\n6.Fibonacci recursivo\n0.Salir");
+			System.out.println("\nElige una opción:\n1.Factorial recursivo\n2.Suma sobrecargada\n3.Potencia iterativa\n4.Potencia recursiva\n5.MCD recursivo\n6.Fibonacci recursivo\n0.Salir");
 			menu = teclado.nextInt();
 			switch (menu) {
 				case 0:
@@ -106,22 +107,35 @@ public class U4_menuRecursivos_Daniel {
 		}
 	}
 	public static double potenciaRecursiva(double x, int y){
-		double potencia=1;
+		double potencia;
 		if (y==0) {
-			return potencia;
+			potencia=1;
 		} else {
-			for(int i=1;i<=y;i++){
-				potencia*=x;
-			}
-			return potencia;
+			potencia=x*potenciaRecursiva(x,y-1);
 		}
+		return potencia;
 	}
 	public static int mcdRecursivo(int x, int y){
-		int mcd=1;
+		int mcd;
+		if(y==0){
+			mcd=x;
+		}
+		else{
+			mcd=mcdRecursivo(y,x%y);
+		}
 		return mcd;
 	}
 	public static int fibonacciRecursivo(int x){
-		int fibonacci=1;
+		int fibonacci;
+		if(x<=0){
+			fibonacci=0;
+		}
+		if(x==1 || x==2){
+			fibonacci=1;
+		}
+		else{
+			fibonacci=fibonacciRecursivo(x-1)+fibonacciRecursivo(x-2);
+		}
 		return fibonacci;
 	}
 }// Fin clase
