@@ -36,6 +36,7 @@
     </nav>
     <section>
       <article class="lapokedex">
+        <div class="caja">
         <div class="info-display center">
           <div class="name-display">Pokédex nacional</div>
         </div>
@@ -61,11 +62,16 @@
           <div class="button" onClick="next()">Siguiente &gt;&gt;</div>
         </div>
         <div class="center">
-          <div class="button" onClick="marcar('shiny');getPokemon(document.getElementById('pokemonId').value)"><input id="shiny" type="checkbox" hidden disabled>Shiny</div>
+          <div class="button" id="bshiny" onClick="marcar('shiny');getPokemon(document.getElementById('pokemonId').value)"><input id="shiny" type="checkbox" hidden disabled>Shiny</div>
+          <div class="button" onClick="vermasinfo()">Más info +</div>
         </div>
         <div class="api">
           API: <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co/</a>
         </div>
+      </div>
+      <div class="caja oculto">
+        <div class="info">Peso</div>
+      </div>
       </article>
     </section>
     <aside>

@@ -19,6 +19,8 @@ function pokemonKeyId() {
 
 function marcar(idElemento) {
     document.getElementById(idElemento).checked = !document.getElementById(idElemento).checked;
+    if(document.getElementById(idElemento).checked){document.getElementById("bshiny").className += " shiny";}
+    else{document.getElementById("bshiny").className = "button";}
 }
 
 function getPokemon(id) {

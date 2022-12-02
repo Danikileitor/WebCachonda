@@ -116,5 +116,6 @@ footer{
     bottom: 0;
 }
 footer p{
+    font-family: Arial;
     text-align: center;
 }

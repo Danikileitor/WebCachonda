@@ -5,7 +5,7 @@
     border-radius: 8%;
     width: 300px;
     height: auto;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 0px 20px 45px;
     margin: 2% auto;
     font-family: sans-serif;
 }
@@ -21,6 +21,14 @@
 }
 .lapokedex a:hover {
     color: black;
+}
+
+.caja{
+    display: inline-block;
+}
+
+.oculto{
+    display: none;
 }
 
 .center {
@@ -118,6 +126,15 @@
 .button:active {
     box-shadow: 0 5px #27408B;
     transform: translateY(3px);
+}
+
+.shiny {
+    background: yellow;
+    box-shadow: 0 5px #2e2600;
+}
+
+.shiny:active{
+    box-shadow: 0 5px #2e2600;
 }
 
 .api {
