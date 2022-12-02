@@ -23,6 +23,11 @@ function marcar(idElemento) {
     else{document.getElementById("bshiny").className = "button";}
 }
 
+function vermasinfo() {
+    if(document.getElementById("masinfo").className=="oculto"){document.getElementById("masinfo").className="";}
+    else{document.getElementById("masinfo").className="oculto";}
+}
+
 function getPokemon(id) {
     typesJson = '{'+
     '"bug": "img/tipos/bicho.png",'+
