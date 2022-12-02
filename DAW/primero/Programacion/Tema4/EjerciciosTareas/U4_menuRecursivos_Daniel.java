@@ -125,12 +125,23 @@ public class U4_menuRecursivos_Daniel {
 		}
 		return mcd;
 	}
+	/*Esta sería mi método para fibonacci porque 0=0, 1y2=1, pero el ejercicio dice que los 2 primeros números serán 0 y 1 asique lo hago de nuevo
 	public static int fibonacciRecursivo(int x){
 		int fibonacci;
 		if(x<=0){
 			fibonacci=0;
 		}
 		if(x==1 || x==2){
+			fibonacci=1;
+		}
+		else{
+			fibonacci=fibonacciRecursivo(x-1)+fibonacciRecursivo(x-2);
+		}
+		return fibonacci;
+	} */
+	public static int fibonacciRecursivo(int x){
+		int fibonacci;
+		if(x==0 || x==1){
 			fibonacci=1;
 		}
 		else{
