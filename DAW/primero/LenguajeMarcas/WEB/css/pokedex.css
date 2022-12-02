@@ -148,3 +148,78 @@ article{
 .techs {
     margin-bottom: 10px;
 }
+
+.masinfo-title{
+    user-select: none;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration-style: solid;
+    border: solid 2px;
+    border-radius: 15px;
+    width: 195px;
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.dato-display {
+    height: 40px;
+    margin: auto;
+}
+
+.desc-title{
+    user-select: none;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration-style: solid;
+    border: solid 2px;
+    border-radius: 15px;
+    width: 300px;
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dato{
+    user-select: none;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration-style: solid;
+    border: solid 2px black;
+    border-radius: 15px;
+    width: 100px;
+    padding: 5px 0 5px 0;
+    font-size: 15px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+    color: black;
+}
+
+.dato-desc{
+    user-select: none;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration-style: solid;
+    border: solid 2px black;
+    border-radius: 15px;
+    width: 300px;
+    height: 193px;
+    padding: 5px 0 5px 0;
+    font-size: 15px;
+    float: left;
+    margin: 0px 5px 0px 5px;
+    color: black;
+    resize: none;
+    overflow: hidden;
+}

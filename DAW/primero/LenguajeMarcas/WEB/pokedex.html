@@ -70,38 +70,35 @@
           </div>
         </div>
       </article>
-      <article class="oculto" id="masinfo">
+      <article class="ocultoo" id="masinfo">
         <div class="lapokedex">
-          <div class="info-display center">
-            <div class="name-display">Pokédex nacional</div>
+          <div class="dato-display center">
+            <div class="masinfo-title">Información</div>
           </div>
-          <div class="info-display center">
-            <form name="pokemonKeySend" method="POST" action="">
-              <input type="text" id="pokemonId" name="pokemonId" class="id-display" value="" onKeyUp="pokemonKeyId()"/>
-            </form>
-            <div class="name-display">
-              <b id="name-display"></b>
-            </div>
+          <div class="dato-display center">
+            <div class="dato">Categoría</div>
+            <input class="dato" id="categoria" type="text" value="" disabled>
           </div>
-          <div style="clear: both;"></div>
-          <div class="pokemon-display">
-            <div class="pokemon">
-              <img id="imgPokemon" src="" width="100%" height="100%">
-            </div>
-            <div class="pokemon type">
-              <span id="pokemonType"></span>
-            </div>
+          <div class="dato-display center">
+            <div class="dato">Altura</div>
+            <input class="dato" id="altura" type="text" value="" disabled>
           </div>
-          <div class="buttons">
-            <div class="button" onClick="previous()">&lt;&lt; Anterior</div>
-            <div class="button" onClick="next()">Siguiente &gt;&gt;</div>
+          <div class="dato-display center">
+            <div class="dato">Peso</div>
+            <input class="dato" id="peso" type="text" value="" disabled>
+          </div>
+          <div class="dato-display center">
+            <div class="dato">Habilidad</div>
+            <input class="dato" id="habilidad" type="text" value="" disabled>
           </div>
           <div class="center">
-            <div class="button" id="bshiny" onClick="marcar('shiny');getPokemon(document.getElementById('pokemonId').value)"><input id="shiny" type="checkbox" hidden disabled>Shiny</div>
-            <div class="button" onClick="vermasinfo()">Más info +</div>
+            <div class="desc-title">Nota sobre el pokémon</div>
+          </div>
+          <div class="center">
+            <textarea class="dato-desc" id="descripcion" disabled></textarea>
           </div>
           <div class="api">
-            API: <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co/</a>
+            Información adicional
           </div>
         </div>
       </article>
