@@ -1,3 +1,7 @@
+article{
+    display: inline-block;
+}
+
 .lapokedex {
     background-color: #5F9EA0;
     box-shadow: 0 5px #4682B4;
