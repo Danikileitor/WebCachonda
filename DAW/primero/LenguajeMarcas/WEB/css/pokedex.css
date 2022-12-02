@@ -5,7 +5,7 @@
     border-radius: 8%;
     width: 300px;
     height: auto;
-    padding: 20px 0px 20px 45px;
+    padding: 20px 20px 20px 20px;
     margin: 2% auto;
     font-family: sans-serif;
 }
@@ -21,14 +21,6 @@
 }
 .lapokedex a:hover {
     color: black;
-}
-
-.caja{
-    display: inline-block;
-}
-
-.oculto{
-    display: none;
 }
 
 .center {
