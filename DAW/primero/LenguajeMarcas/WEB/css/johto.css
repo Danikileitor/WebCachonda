@@ -1,34 +1,54 @@
-td.row2 { border-color: #999;  background-color: #e0e0e0; border-top:1px #999 solid; border-lfeft:1px #ccc solid; border-rigdht:1px #ccc solid;}
-td.row1 { border-color: #999;  background-color: #f0f0f0; border-top:1px #999 solid; border-lfeft:1px #ccc solid; border-rigdht:1px #ccc solid;}
-td.row0 { text-align:center; background-color: #ccc; border-color: #333; padding:5px; border:0px solid; border-bottom:1px #666 solid; }
-table.sortable td.row0 { cursor:pointer; }
-td.center { text-align:center; }
-table.dex {
-border-width:0px;
--moz-box-shadow: 1px 1px 3px #666,1px 1px #000,-1px 1px #000,1px -1px #000,-1px -1px #000;
--webkit-box-shadow: 1px 1px 3px #666,1px 1px #000,-1px 1px #000,1px -1px #000,-1px -1px #000;
-box-shadow: 1px 1px 3px #666, 1px 1px #000,-1px 1px #000,1px -1px #000,-1px -1px #000;
+td.row0 {
+  text-align: center;
+  background-color: #ccc;
+  border-color: #333;
+  padding: 5px;
+  border: 0px solid;
+  border-bottom: 1px #666 solid;
 }
+
+td.row1 {
+  border-color: #999;  
+  background-color: #f0f0f0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+}  
+
+td.row2 {
+  border-color: #999;    
+  background-color: #e0e0e0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+}    
+
+td.center {
+  text-align: center;
+}
+
+table.dex {
+  border-width: 0px;
+  box-shadow: 1px 1px 3px #666, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000;
+}
+
 table.dexg {
-border-width:0px;
--moz-box-shadow: 1px 1px 4px #333,1px 1px #666, -1px 1px #666,1px -1px #666,-1px -1px #666;
--webkit-box-shadow: 1px 1px 4px #333,1px 1px #666,-1px 1px #666,1px -1px #666,-1px -1px #666;
-box-shadow: 1px 1px 4px #333,1px 1px #666,-1px 1px #666,1px -1px #666,-1px -1px #666;
+  border-width: 0px;
+  box-shadow: 1px 1px 4px #333, 1px 1px #666, -1px 1px #666, 1px -1px #666, -1px -1px #666;
 }
 
 table.dex tr.sort_even td {
-border-color: #999;  background-color: #e0e0e0; border-top:1px #999 solid; border-lfeft:1px #ccc solid; border-rigdht:1px #ccc solid;
-}
-table.dex tr.sort_odd td {
-border-color: #999;  background-color: #f0f0f0; border-top:1px #999 solid; border-lfeft:1px #ccc solid; border-rigdht:1px #ccc solid;
+  border-color: #999;
+  background-color: #e0e0e0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
 }
 
-.input, .select {
-border: 1px solid black;
--webkit-border-radius: .33em;
--moz-border-radius: .33em;
-border-radius: .33em;
-padding:2px;
-margin-bottom:2px;
--moz-box-shadow: gray 1px 1px 2px;
+table.dex tr.sort_odd td {
+  border-color: #999;
+  background-color: #f0f0f0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
 }
