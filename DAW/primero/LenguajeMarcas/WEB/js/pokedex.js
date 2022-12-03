@@ -76,8 +76,17 @@ function getPokemon(id) {
     speciesreq.open("GET", speciesApi, false);
     speciesreq.send();
     let speciesData = JSON.parse(speciesreq.responseText);
-    document.getElementById("categoria").value = borrarPrimeraPalabra(speciesData.genera[5].genus);
+    if(id>898){document.getElementById("categoria").value = borrarPrimeraPalabra(speciesData.genera[3].genus);}//estos no han sido traducidos al español aún
+    else{document.getElementById("categoria").value = borrarPrimeraPalabra(speciesData.genera[5].genus);}
     document.getElementById("altura").value = pokemonData.height / 10 + " m";
     document.getElementById("peso").value = pokemonData.weight / 10 + " kg";
-    document.getElementById("habilidad").value = pokemonData.abilities[0].ability.name;
+    // Ahora habrá que traducir las habilidades, si que te lo ponen chungo
+    let habilidadesApi = "https://pokeapi.co/api/v2/ability/" + pokemonData.abilities[0].ability.name;
+    let habilidadesreq = new XMLHttpRequest();
+    habilidadesreq.open("GET", habilidadesApi, false);
+    habilidadesreq.send();
+    let habilidadesData = JSON.parse(habilidadesreq.responseText);
+    document.getElementById("habilidad").value = habilidadesData.names[5].name;
+    //Finalizamos por fin con la descripción del pokémon lo cual esta jodido porque no coincide la entrada española en todos los pokémon
+    document.getElementById("descripcion").value = speciesData.flavor_text_entries[26].flavor_text;
 }
