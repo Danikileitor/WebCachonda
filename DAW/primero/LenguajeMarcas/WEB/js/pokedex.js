@@ -87,6 +87,7 @@ function getPokemon(id) {
     habilidadesreq.send();
     let habilidadesData = JSON.parse(habilidadesreq.responseText);
     document.getElementById("habilidad").value = habilidadesData.names[5].name;
+    document.getElementById("desc-habilidad").value = habilidadesData.flavor_text_entries[13].flavor_text;
     //Finalizamos por fin con la descripción del pokémon lo cual esta jodido porque no coincide la entrada española en todos los pokémon
     document.getElementById("descripcion").value = speciesData.flavor_text_entries[26].flavor_text;
 }
