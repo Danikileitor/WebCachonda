@@ -28,6 +28,11 @@ function vermasinfo() {
     else { document.getElementById("masinfo").className = "oculto"; }
 }
 
+function borrarPrimeraPalabra(especie) {
+    const indexOfSpace = especie.indexOf(' ');
+    return especie.substring(indexOfSpace + 1);
+}
+
 function getPokemon(id) {
     typesJson = '{' +
         '"bug": "img/tipos/bicho.png",' +
@@ -71,7 +76,7 @@ function getPokemon(id) {
     speciesreq.open("GET", speciesApi, false);
     speciesreq.send();
     let speciesData = JSON.parse(speciesreq.responseText);
-    document.getElementById("categoria").value = speciesData.genera[5].genus;
+    document.getElementById("categoria").value = borrarPrimeraPalabra(speciesData.genera[5].genus);
     document.getElementById("altura").value = pokemonData.height / 10 + " m";
     document.getElementById("peso").value = pokemonData.weight / 10 + " kg";
     document.getElementById("habilidad").value = pokemonData.abilities[0].ability.name;
