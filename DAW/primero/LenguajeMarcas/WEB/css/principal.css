@@ -36,15 +36,16 @@ nav{
     top: 0;
     height: 2.7%;
     z-index: 1;
+    background-color: black;
 }
 nav ul{
     height: 2.7vh;
     list-style: none;
     margin: 0;
+    margin-left: 1%;
     padding: 0;
     display: flex;
     border: 1px solid black;
-    background-color: black;
 }
 nav li{
     width: fit-content;
