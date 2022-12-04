@@ -5,25 +5,60 @@
     <title>EjercicioProfundidad</title>
     <style>
         body{
+            position: relative;
+            display: flex;
             background-color: grey;
             margin: auto;
             width: 50%;
             font-weight: bold;
+            text-align: center;
+            justify-content: center;
         }
         .capa1{
+            position: absolute;
+            z-index: 3;
+            margin: auto;
+            width: 100%;
+            height: 60px;
             background-color: blue;
             border: 2px solid red;
             color: red;
         }
         .capa2{
+            position: absolute;
+            z-index: 2;
+            margin: auto;
+            width: 75%;
+            height: 120px;
             background-color: yellow;
             border: 2px solid brown;
             color: blue;
+            
         }
         .capa3{
+            position: absolute;
+            z-index: 1;
+            margin: auto;
+            width: 50%;
+            height: 180px;
             background-color: green;
             border: 2px solid orange;
             color: yellow;
+        }
+        span{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+        }
+        .capa1:hover{
+            z-index: 4;
+        }
+        .capa2:hover{
+            z-index: 4;
+        }
+        .capa3:hover{
+            z-index: 4;
         }
     </style>
 </head>
@@ -34,11 +69,13 @@
         Está por encima de todas
     </div>
     <div class="capa2">
-        SEGUNDA CAPA POR DEBAJO DE LA PRIMERA.
+        <span>SEGUNDA CAPA POR DEBAJO DE LA PRIMERA.</span>
     </div>
     <div class="capa3">
+        <span>
         TERCERA CAPA POR DEBAJO DE LA SEGUNDA<br>
         Es decir, por debajo de todas
+        </span>
     </div>
 </body>
 </html>
