@@ -19,6 +19,6 @@ public class U4_R3_Ej14_Daniel {
 	}// Fin main
 
 	public static int calcularSegundos(int d, int h, int m) {
-		return 0;
+		return m*60+h*3600+d*24*3600;
 	}
 }// Fin clase
