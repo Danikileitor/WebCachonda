@@ -2,7 +2,7 @@
 //Crea la función: 'muestraPares(int n)' que muestre por consola los primeros n números pares.
 import java.util.Scanner; //Importación de paquetes
 
-public class U4_R3_Ej12_Daniel {
+public class U4_R3_Ej13_Daniel {
 	public static void main(String[] args) {
 		// Declarar variables
 		int cantidad;
@@ -19,6 +19,7 @@ public class U4_R3_Ej12_Daniel {
 			if (i%2 == 0) {
                 System.out.println(i);
             }
+			else{n++;}
 		}
 	}
 }// Fin clase
