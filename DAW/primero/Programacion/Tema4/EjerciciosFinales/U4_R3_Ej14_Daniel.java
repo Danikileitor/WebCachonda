@@ -2,7 +2,7 @@
 //Crea la función: 'muestraPares(int n)' que muestre por consola los primeros n números pares.
 import java.util.Scanner; //Importación de paquetes
 
-public class U4_R3_Ej13_Daniel {
+public class U4_R3_Ej14_Daniel {
 	public static void main(String[] args) {
 		// Declarar variables
 		int cantidad;
@@ -13,20 +13,4 @@ public class U4_R3_Ej13_Daniel {
 		System.out.printf("Los primeros %d números pares son:%n",cantidad);
 		muestraPares(1,cantidad);
 	}// Fin main
-	
-	public static void muestraPares(int i, int n) {
-		if(n>0){
-			System.out.println(i*2);
-			muestraPares(i+1, n-1);
-		}
-	}
-	/* Hice esto primero por si no me salía de forma recursiva:
-	public static void muestraPares(int n) {
-		for(int i=1;i<=n;i++){
-			if (i%2 == 0) {
-				System.out.println(i);
-			}
-			else{n++;}
-		}
-	} */
 }// Fin clase
