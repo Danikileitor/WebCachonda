@@ -23,9 +23,7 @@ public class U4_R3_Ej17_Daniel {
 	}// Fin main
 
 	public static boolean comprobarAmigos(int a, int b) {
-		boolean amigos;
-		amigos = sumaDivisores(a)==sumaDivisores(b);
-		return amigos;
+		return sumaDivisores(a)==sumaDivisores(b);
 	}
 
 	public static int sumaDivisores(int n) {
