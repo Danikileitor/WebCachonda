@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="murgi.png">
+    <title>formularioCss-Azul</title>
+    <style>
+        body {
+            background: #728EAA;
+        }
+
+        header {
+            width: 90%;
+            margin: auto;
+            border-top: 5px solid darkblue;
+            border-bottom: 5px solid darkblue;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 20px;
+        }
+
+        header>h1 {
+            margin: 0;
+            color: #445668;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        article {
+            margin: auto;
+            border-radius: 25px;
+            background: #EEEEEE;
+            width: 80%;
+            padding: 20px;
+        }
+
+        label {
+            color: #4D5768;
+        }
+
+        input, textarea {
+            color: white;
+            background-color: #204C5C;
+            border-radius: 5px;
+        }
+
+        textarea {
+            text-align: center;
+            width: 100%;
+            padding-top: 10px;
+            resize: none;
+            height: 100px;
+        }
+
+        .primera {
+            padding-top: 30px;
+        }
+
+        .botones input {
+            display: inline;
+        }
+
+        .botones input:last-child {
+
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>RELLENA TU CV</h1>
+    </header>
+    <section>
+        <article>
+            <form action="./formularioCss-Azul.html" target="_blank">
+                <div class="primera">
+                    <label for="nombre">NOMBRE *</label>
+                    <input id="nombe" type="text" size="20" placeholder="NOMBRE" title="Introduce tu nombre"
+                        autocomplete="on" required autofocus>
+                </div>
+                <br>
+                <div>
+                    <label for="apellidos">APELLIDOS *</label>
+                    <input id="apellidos" type="text" size="20" placeholder="APELLIDOS" title="Introduce tus apellidos"
+                        autocomplete="on" required>
+                </div>
+                <br>
+                <div>
+                    <label for="password">PASSWORD *</label>
+                    <input id="password" type="password" pattern="[A-Za-z]{5}+[0-9]{1}" maxlength="6" size="20"
+                        placeholder="CONTRASEÑA" title="Introduce tu contraseña" autocomplete="on" required>
+                </div>
+                <br>
+                <div>
+                    <label for="dni">DNI *</label>
+                    <input id="dni" type="text" size="20" placeholder="Nombre" title="Introduce tus apellidos"
+                        autocomplete="on" required>
+                </div>
+                <br>
+                <div>
+                    <label for="sexo">SEXO</label>
+                    <input id="sexo" name="sexo" type="radio" title="Hombre" value="hombre">Hombre
+                    <input id="sexo" name="sexo" type="radio" title="Mujer" value="mujer">Mujer
+                </div>
+                <br>
+                <div class="fichero">
+                    <label for="foto">INCLUIR MI FOTO</label><br>
+                    <input id="foto" type="file" title="Inserta tu foto">
+                </div>
+                <br>
+                <div>
+                    <input id="novedades" name="novedades" type="checkbox">¿Subscribirte al boletín de novedades?
+                </div>
+                <br>
+                <div>
+                    <textarea id="comentarios" title="Escribe aquí tus comentarios">ESCRIBE COMENTARIOS</textarea>
+                </div>
+                <br>
+                <div class="botones">
+                    <input id="borrar" type="reset" title="Borrar datos">
+                    <input id="enviar" type="submit" title="Enviar datos">
+                </div>
+            </form>
+        </article>
+    </section>
+    <footer>
+        <a href="Menu_H_Imagen_Daniel.html">
+            <h1>VOLVER</h1>
+        </a>
+    </footer>
+</body>
+
+</html>
