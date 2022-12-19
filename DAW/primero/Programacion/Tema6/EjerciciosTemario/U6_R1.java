@@ -31,4 +31,10 @@ public class U6_R1 {
 		num = c-d;
 		System.out.println("Valor de la operación en num: " + num);
 	}// Fin main
+
+
+
+	public static int generarAleatorio() {
+		return (int)Math.floor(Math.random()*(122-65+1)+65);
+	}
 }// Fin clase
