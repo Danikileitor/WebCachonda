@@ -3,7 +3,7 @@
 //Implementa un menú recursivo con confirmación de salida. Donde en una de las opciones generes números aleatorios (enteros positivos) y compruebes a que símbolo corresponde. Para ello debes usar la clase Character.
 import java.util.Scanner; //Importación de paquetes
 
-public class U6_R1_Character_Daniel {
+public class U6_R1_Character_3EjerciciosMas_Daniel {
 	public static void main(String[] args) {
 		// Declarar variables
 		int menu = 1;
