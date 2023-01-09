@@ -29,7 +29,8 @@ public class U4_Examen_Daniel {
 							System.out.println("Introduzca un número entero que no sea negativo:");
 							numero = teclado.nextInt();
 						}while (numero < 0);//Bucle para seguir preguntando al usuario hasta que introduzca un mayor o igual que 0
-						System.out.printf("El número decimal %d convertido a binario es %d.%n",numero,decBin(numero));
+						System.out.printf("El número decimal %d convertido a binario es: ",numero);
+						decBin(numero);
 						break;
 					default: break;
 				}
@@ -59,17 +60,13 @@ public class U4_Examen_Daniel {
 		}
 	}
 	
-	public static int decBin(int n){
-		int binario;
-		if (n == 0){//primer caso base, en caso de que el usuario introduzca un 0 simplemente se devolverá 0.
-			binario=0;
-		}
-		else if (n == 1){//segundo caso base, será 1 dado que vamos a ir dividiendo el número entre 2 hasta que el resultado sea 1 (no podamos seguir dividiendo)
-			binario=1;
+	public static void decBin(int n){
+		if (n < 2){//caso base
+			System.out.print(n);
 		}
 		else{//caso recursivo
-			binario=decBin(n/2)*10+n%2;
+			decBin(n/2);
+			System.out.print(n%2);
 		}
-		return binario;
 	}
 }
