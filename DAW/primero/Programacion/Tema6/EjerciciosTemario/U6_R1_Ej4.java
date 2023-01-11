@@ -57,6 +57,10 @@ public class U6_R1_Ej4 {
 							frase2 = pedirFrase();
 							indicarLaMasCorta(frase1, frase2);
 							break;
+						case 7:
+							frase = pedirFrase();
+							comprobarEspacios(frase);
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -112,6 +116,16 @@ public class U6_R1_Ej4 {
 		} else {
 			System.out.println("La primera frase es más corta.");
 		}
+	}
+
+	public static void comprobarEspacios(String cadena) {
+		int espacios = 0;
+		for (int i=0; i<cadena.length(); i++) {
+			if (cadena.charAt(i) == ' ') {
+				espacios++;
+			}
+		}
+		System.out.println("La frase tiene " + espacios + " espacios en blanco.");
 	}
 
 }// Fin clase
