@@ -3,8 +3,23 @@ article{
     margin: auto;
     margin-top: 1%;
     background-color: aqua;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+}
+fieldset{
+    border-radius: 25px;
+    border-color: red;
+}
+legend{
+    color: yellow;
+    font-weight: bold;
 }
 textarea{
     width: 800px;
     height: 200px;
+}
+span{
+    color: red;
+    font-weight: bold;
 }
