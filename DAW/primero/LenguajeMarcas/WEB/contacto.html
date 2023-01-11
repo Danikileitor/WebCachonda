@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/principal.css" rel="stylesheet" type="text/css" />
+  <title>Pokeinfo - Contacto</title>
+</head>
+<body>
+  <header id="inicio">
+    <marquee behavior="alternate">
+      <h1>Pokeinfo</h1>
+    </marquee>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html" title="Inicio"><img src="img/pokeball.svg" width="15"> Home</a></li>
+      <li class="pokedex">
+        <a href="pokedex.html" title="Pokédex"><img src="img/pokeball.svg" width="15"> Pokédex</a>
+        <a href="kanto.html" title="Kanto" class="contenido">Kanto</a>
+        <a href="johto.html" title="Johto" class="contenido">Johto</a>
+        <a href="hoenn.html" title="Hoenn" class="contenido">Hoenn</a>
+        <a href="sinnoh.html" title="Sinnoh" class="contenido">Sinnoh</a>
+        <a href="teselia.html" title="Teselia" class="contenido">Teselia</a>
+        <a href="kalos.html" title="Kalos" class="contenido">Kalos</a>
+        <a href="alola.html" title="Alola" class="contenido">Alola</a>
+        <a href="galar.html" title="Galar" class="contenido">Galar</a>
+        <a href="hisui.html" title="Hisui" class="contenido">Hisui</a>
+        <a href="paldea.html" title="Paldea" class="contenido">Paldea</a>
+      </li>
+      <li><a href="equipos.html" title="Equipos"><img src="img/pokeball.svg" width="15px"> Equipos</a></li>
+      <li><a href="curiosidades.html" title="Curiosidades"><img src="img/pokeball.svg" width="15px"> Curiosidades</a>
+      </li>
+      <li><a href="contacto.html" title="Contacto"><img src="img/pokeball.svg" width="15px"> Contacto</a></li>
+    </ul>
+  </nav>
+  <section>
+    <article>
+      <form action="/enviar.php" method="post" enctype="text/plain">
+        <fieldset>
+          <legend>Datos de usuario</legend>
+          <label for="Usuario">Usuario:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Usuario" required><br><br>
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="contrasena" name="contrasena" placeholder="********" required><br><br>
+        </fieldset>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder=".....@.....com" required><br><br>
+          <label for="fecha">Fecha de nacimiento:</label>
+          <input type="date" id="fecha" name="fecha" required><br><br>
+          <label for="telefono">Número de teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="699999999" maxlength="9"><br><br>
+        </fieldset>
+        <fieldset>
+          <legend>Consulta</legend>
+          <textarea id="consulta" name="consulta" placeholder="Consulta a realizar"></textarea><br><br>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Borrar">
+        </fieldset>
+      </form>
+    </article>
+  </section>
+  <aside>
+    <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
+  </aside>
+  <footer>
+    <p>Copyright &copy; 2022 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
