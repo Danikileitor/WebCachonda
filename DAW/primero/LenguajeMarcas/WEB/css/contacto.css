@@ -1,0 +1,10 @@
+article{
+    width: 50%;
+    margin: auto;
+    margin-top: 1%;
+    background-color: aqua;
+}
+textarea{
+    width: 800px;
+    height: 200px;
+}
