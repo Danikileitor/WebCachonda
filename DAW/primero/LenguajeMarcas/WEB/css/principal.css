@@ -117,6 +117,9 @@ aside{
 aside:hover{
     animation: 0.5s subir infinite alternate;
 }
+aside img{
+    cursor: url(../cursores/squirtle.cur),pointer;
+}
 footer{
     position: absolute;
     height: auto;
@@ -133,6 +136,12 @@ footer p{
 }
 .oculto{
     display: none;
+}
+.mapa area{
+    cursor: url(../cursores/pikachu.cur),pointer;
+}
+.logos img{
+    cursor: url(../cursores/bulbasur.cur),pointer;
 }
 .logos, .logos img{
     display: flex;
