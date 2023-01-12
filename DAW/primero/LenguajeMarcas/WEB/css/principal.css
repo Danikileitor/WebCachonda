@@ -36,6 +36,9 @@ header{
 h1{
     display: inline;
 }
+marquee img{
+    animation: 1s rotar infinite alternate;
+}
 nav{
     position: sticky;
     top: 0;
