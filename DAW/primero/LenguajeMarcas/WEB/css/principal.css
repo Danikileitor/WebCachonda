@@ -114,7 +114,7 @@ aside:hover{
 }
 footer{
     position: absolute;
-    height: 55px;
+    height: auto;
     width: 100%;
     background-color: silver;
     border: 1px solid black;
@@ -128,4 +128,12 @@ footer p{
 }
 .oculto{
     display: none;
+}
+.logos, .logos img{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+p{
+    margin-top: auto;
 }
