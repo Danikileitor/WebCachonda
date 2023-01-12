@@ -1,5 +1,5 @@
 article{
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -9,13 +9,32 @@ article{
     color: white;
     padding: auto;
 }
-h2{
+h2, h3{
     color: yellow;
 }
 ol{
     text-align: justify;
+    margin: 1%;
 }
-ol > li::marker { /* Ajustamos tamaño y negrita de los números de la lista */
+ol > li::marker { /* Ajustamos tamaño, color y negrita de los números de la lista */
     font-weight: bold;
+    color: yellow;
     font-size: large;
-  }
+}
+figure img{
+    display: block;
+    margin: auto;
+}
+div figure, div figure img{
+    display: flex;
+    margin: auto;
+    margin-right: 1%;
+    justify-content: right;
+    width: 30%;
+}
+div figure img:hover{
+    cursor: url(../cursores/vaporeon.cur), pointer;
+}
+span{
+    font-weight: bold;
+}
