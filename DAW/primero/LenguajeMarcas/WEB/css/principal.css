@@ -38,6 +38,8 @@ nav{
     height: 2.7%;
     z-index: 1;
     background-color: black;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 nav ul{
     height: 2.7vh;
@@ -51,7 +53,8 @@ nav ul{
 nav li{
     width: fit-content;
     color: yellow;
-    padding: 4px 10px 0 4px;
+    padding: 4px 10px 0px 4px;
+    height: 100%;
     cursor: url(../cursores/charmander.cur), pointer;
 }
 nav li:hover{
@@ -60,6 +63,7 @@ nav li:hover{
 }
 nav li:hover img{
     animation: 1s rotar infinite;
+    cursor: url(../cursores/charmander.cur), pointer;
 }
 nav a{
     cursor: url(../cursores/charmander.cur), pointer;
