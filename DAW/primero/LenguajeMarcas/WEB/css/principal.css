@@ -1,3 +1,4 @@
+/* css para todo la página, se modifica la imagen del cursor, se impide seleccionar elementos */
 *{
     cursor: url(../cursores/pokeball.cur), auto;
     user-select: none;

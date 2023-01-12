@@ -1,0 +1,21 @@
+article{
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: aqua;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    padding: auto;
+}
+h2{
+    color: yellow;
+}
+ol{
+    text-align: justify;
+}
+ol > li::marker { /* Ajustamos tamaño y negrita de los números de la lista */
+    font-weight: bold;
+    font-size: large;
+  }
