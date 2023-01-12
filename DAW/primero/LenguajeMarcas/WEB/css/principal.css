@@ -31,7 +31,7 @@ header{
     background-color: black;
     color: yellow;
     border-bottom: 0;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
 }
 h1{
     display: inline;
@@ -47,6 +47,15 @@ nav{
     background-color: black;
     font-size: 20px;
     padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+nav audio{
+    margin: auto;
+    margin-top: 8px;
+    margin-right: 1%;
+    height: 2.7vh;
+    padding: 0;
 }
 nav ul{
     height: 2.7vh;
