@@ -121,7 +121,7 @@ public class U6_R2 {
 		int pos, cantidad=0;
 		System.out.println("Introduce la letra o frase que deseas buscar:");
 		c = teclado.nextLine();
-		for(int i=0; i<cadena.length(); i = pos+1){
+		for(int i=0; i<cadena.lastIndexOf(c); i = pos+1){
 			pos = cadena.indexOf(c,i);
 			cantidad++;
 		}
