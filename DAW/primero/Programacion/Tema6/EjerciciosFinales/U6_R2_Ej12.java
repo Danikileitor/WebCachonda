@@ -25,7 +25,7 @@ public class U6_R2_Ej12 {
 						case 0:
 							continue;
 						case 1:
-							System.out.println("El jugador A introduce una palabra:");
+							System.out.println("Turno del jugador A");
 							ahorcado(pedirFrase());
 							break;
 						default:
@@ -98,8 +98,57 @@ public class U6_R2_Ej12 {
 		System.out.printf("En la frase '%s', [%s] aparece en %d ocasiones.%n",cadena,c,cantidad);
 	}
 
-	public static void ahorcado(String frase) {
-		System.out.println();
+	public static void limpiar() {
+		System.out.println("\n\n\n\n\n\n\n\n\n");
+	}
+
+	public static String preparar(String frase) {
+		String preparado = new String("");
+		for (int i = 0; i < frase.length(); i++) {
+			if (frase.charAt(i) == ' ') {
+				preparado += ' ';
+			} else {
+				preparado += '_';				
+			}
+		}
+		return preparado;
+	}
+
+	public static void ahorcado(String fraseA) {
+		boolean resuelto = false;
+		char intento;
+		int vidas = 7;
+		String intentos = new String("");
+		String progreso = new String(preparar(fraseA));
+		Scanner teclado = new Scanner(System.in);
+		limpiar();
+		System.out.println("El jugador B tratará de adivinar la frase, ¡solo se permiten 7 fallos!.");
+		do {
+			System.out.println(progreso);
+			System.out.println("Introduce una letra:");
+			intento = teclado.nextLine().charAt(0);
+			if (fraseA.indexOf(intento) >= 0 && intentos.indexOf(intento) < 0) {
+				for (int i = 0; i < fraseA.length(); i++) {
+					if (intento == fraseA.charAt(i)) {
+						progreso = progreso.substring(0,i) + intento + progreso.substring(i+1);
+					}
+				}
+				intentos += intento;
+				resuelto = fraseA.equals(progreso);
+			} else {
+				vidas--;
+				System.out.println("¡Fallo! La letra que has introducido no está en la frase o ya la introduciste anteriormente.");
+				System.out.printf("¡Te quedan [%d] intentos!%n",vidas);
+			}
+			System.out.println();
+		} while (!resuelto && vidas > 0);
+		if (vidas > 0) {
+			System.out.println(fraseA);
+			System.out.println("¡Enhorabuena, has adivinado la frase del jugador A! El jugador B gana la partida.");
+		} else {
+			System.out.println("¡El jugador B se ha agotado todos sus intentos! El jugador A gana la partida.");
+			System.out.println("La frase era: "+fraseA);
+		}
 	}
 
 }// Fin clase
