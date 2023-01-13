@@ -46,7 +46,6 @@ nav{
     z-index: 1;
     background-color: black;
     font-size: 20px;
-    padding-bottom: 10px;
     display: flex;
     align-items: center;
 }
@@ -54,6 +53,7 @@ nav audio{
     margin: auto;
     margin-top: 8px;
     margin-right: 1%;
+    margin-bottom: 8px;
     height: 2.7vh;
     padding: 0;
 }
