@@ -1,5 +1,5 @@
 //Daniel Marcos Guerra Gómez
-//Diseñar una aplicación que pida al usuario que introduzca una frase por teclado e indique cuántos espacios en blanco tiene.
+//Diseñar una aplicación que pida al usuario que introduzca una frase por teclado e indique cuántos espacios en blanco tiene. *Además contar sus palabras*
 //Va a ser el case 7
 import java.util.Scanner; //Importación de paquetes
 
@@ -60,6 +60,7 @@ public class U6_R1_Ej4 {
 						case 7:
 							frase = pedirFrase();
 							comprobarEspacios(frase);
+							comprobarPalabras(frase);
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -71,7 +72,7 @@ public class U6_R1_Ej4 {
 	}
 
 	public static void menu() {
-		System.out.printf("%n#################################################################################%n# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #%n# [1] Mostrar las String con un método                                          #%n# [2] Usar el método valueOf()                                                  #%n# [3] Usar el método equals()                                                   #%n# [4] Usar el método regionMatches()                                            #%n# [5] Concatenar cadenas usando concat()                                        #%n# [6] Ej6.2 Comparar tamaño de 2 frases                                         #%n# [7] Ej6.4 Comprobar espacios en blanco de una frase                           #%n# [0] Salir                                                                     #%n#################################################################################%n");
+		System.out.printf("%n#################################################################################%n# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #%n# [1] Mostrar las String con un método                                          #%n# [2] Usar el método valueOf()                                                  #%n# [3] Usar el método equals()                                                   #%n# [4] Usar el método regionMatches()                                            #%n# [5] Concatenar cadenas usando concat()                                        #%n# [6] Ej6.2 Comparar tamaño de 2 frases                                         #%n# [7] Ej6.4 Comprobar espacios en blanco y palabras de una frase                #%n# [0] Salir                                                                     #%n#################################################################################%n");
 	}
 
 	public static void mostrarMensaje(String miCadena) {
@@ -126,6 +127,17 @@ public class U6_R1_Ej4 {
 			}
 		}
 		System.out.println("La frase tiene " + espacios + " espacios en blanco.");
+	}
+
+	public static void comprobarPalabras(String cadena) {
+		int espacios = 0;
+		for (int i=0; i<cadena.length(); i++) {
+			if (cadena.charAt(i) == ' ') {
+				espacios++;
+			}
+		}
+		espacios++;
+		System.out.println("La frase tiene " + espacios + " palabras.");
 	}
 
 }// Fin clase
