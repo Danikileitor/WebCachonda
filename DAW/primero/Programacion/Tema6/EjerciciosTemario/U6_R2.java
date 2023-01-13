@@ -50,6 +50,10 @@ public class U6_R2 {
 							System.out.println(frase1 + frase2);
 							System.out.println(frase1.concat(frase2));
 							break;
+						case 6:
+							frase = pedirFrase();
+							buscar(frase);
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -60,7 +64,7 @@ public class U6_R2 {
 	}
 
 	public static void menu() {
-		System.out.printf("%n#################################################################################%n# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #%n# [1] Mostrar las String con un método                                          #%n# [2] Usar el método valueOf()                                                  #%n# [3] Usar el método equals()                                                   #%n# [4] Usar el método regionMatches()                                            #%n# [5] Concatenar cadenas usando concat()                                        #%n# [0] Salir                                                                     #%n#################################################################################%n");
+		System.out.printf("%n#################################################################################%n# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #%n# [1] Mostrar las String con un método                                          #%n# [2] Usar el método valueOf()                                                  #%n# [3] Usar el método equals()                                                   #%n# [4] Usar el método regionMatches()                                            #%n# [5] Concatenar cadenas usando concat()                                        #%n# [6] Buscar en una frase                                                       #%n# [0] Salir                                                                     #%n#################################################################################%n");
 	}
 
 	public static void mostrarMensaje(String miCadena) {
@@ -95,6 +99,16 @@ public class U6_R2 {
 		System.out.println("Dame una frase");
 		cad = teclado.nextLine();
 		return cad;
+	}
+
+	public static void buscar(String cadena) {
+		Scanner teclado = new Scanner(System.in);
+		String c;
+		int pos;
+		System.out.println("Introduce la letra o frase que deseas buscar:");
+		c = teclado.nextLine();
+		pos = cadena.indexOf(c);
+		System.out.printf("En la frase '%s', [%s] aparece por primera vez en la posición %d.%n",cadena,c,pos);
 	}
 
 }// Fin clase
