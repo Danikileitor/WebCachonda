@@ -7,10 +7,6 @@ public class U6_R2_Ej12 {
 		int menu = 1;
 		char salir = 'n';
 		Scanner teclado = new Scanner(System.in);
-		String mensaje = "Hola caracola";
-		String cadena, frase1, frase2;
-		cadena = new String("Esto es un ejemplo");
-		String frase = new String("Clase de 1º DAW");
 		// Desarrollo del programa
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
