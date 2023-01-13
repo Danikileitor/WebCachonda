@@ -54,6 +54,10 @@ public class U6_R2 {
 							frase = pedirFrase();
 							buscar(frase);
 							break;
+						case 7:
+							frase = pedirFrase();
+							buscarTodo(frase);
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -109,6 +113,19 @@ public class U6_R2 {
 		c = teclado.nextLine();
 		pos = cadena.indexOf(c);
 		System.out.printf("En la frase '%s', [%s] aparece por primera vez en la posición %d.%n",cadena,c,pos);
+	}
+
+	public static void buscarTodo(String cadena) {
+		Scanner teclado = new Scanner(System.in);
+		String c;
+		int pos, cantidad=0;
+		System.out.println("Introduce la letra o frase que deseas buscar:");
+		c = teclado.nextLine();
+		for(int i=0; i<cadena.length(); i = pos+1){
+			pos = cadena.indexOf(c,i);
+			cantidad++;
+		}
+		System.out.printf("En la frase '%s', [%s] aparece en %d ocasiones.%n",cadena,c,cantidad);
 	}
 
 }// Fin clase
