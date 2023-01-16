@@ -124,7 +124,7 @@ section{    /* estilos para section, tamaño, posición y margen */
 article{    /* estilos para los artículos*/
     padding: 10px;
 }
-dt{
+dt{ /* ajustamos negrita, cursiva y aumentamos tamaño para la primera línea de la lista */
     font-weight: bold;
     font-style: italic;
     font-size: large;
