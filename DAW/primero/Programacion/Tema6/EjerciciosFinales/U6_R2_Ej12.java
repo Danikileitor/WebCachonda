@@ -34,7 +34,11 @@ public class U6_R2_Ej12 {
 	}
 
 	public static void menu() {
-		System.out.printf("%n#################################################################################%n# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #%n# [1] El juego del ahorcado                                                     #%n# [0] Salir                                                                     #%n#################################################################################%n");
+		System.out.println("#################################################################################");
+		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
+		System.out.println("# [1] El juego del ahorcado                                                     #");
+		System.out.println("# [0] Salir                                                                     #");
+		System.out.println("#################################################################################");
 	}
 
 	public static void mostrarResultado(int vidas, String frase) {
