@@ -1,4 +1,4 @@
-article{
+article{    /* ajustamos tamaño y colores */
     width: 50%;
     margin: auto;
     margin-top: 1%;
@@ -8,19 +8,19 @@ article{
     background-color: black;
     color: white;
 }
-fieldset{
+fieldset{   /* redondeamos el borde y le cambiamos el color */
     border-radius: 25px;
     border-color: red;
 }
-legend{
+legend{ /* cambiamos el color y añadimos negrita */
     color: yellow;
     font-weight: bold;
 }
-textarea{
+textarea{   /* cambiamos tamaño */
     width: 90%;
     height: 200px;
 }
-span{
+span{   /* cambiamos color y añadimos negrita */
     color: red;
     font-weight: bold;
 }
