@@ -22,7 +22,7 @@ public class U6_R2_Ej12 {
 							continue;
 						case 1:
 							System.out.println("Turno del jugador A");
-							ahorcado(pedirFrase());
+							ahorcado(pedirFraseMayus());
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -42,16 +42,18 @@ public class U6_R2_Ej12 {
 		System.out.println(miCadena);
 	}
 
-	public static String pedirFrase() {
+	public static String pedirFraseMayus() {
 		Scanner teclado = new Scanner(System.in);
 		String cad = "";
 		System.out.println("Dame una frase");
 		cad = teclado.nextLine();
-		return cad;
+		return cad.toUpperCase();
 	}
 
 	public static void limpiar() {
-		System.out.println("\n\n\n\n\n\n\n\n\n");
+		for (int i = 0; i < 24; i++) {
+			System.out.println();
+		}
 	}
 
 	public static String preparar(String frase) {
@@ -78,7 +80,7 @@ public class U6_R2_Ej12 {
 		do {
 			System.out.println(progreso);
 			System.out.println("Introduce una letra:");
-			intento = teclado.nextLine().charAt(0);
+			intento = Character.toUpperCase(teclado.nextLine().charAt(0));
 			if (fraseA.indexOf(intento) >= 0 && intentos.indexOf(intento) < 0) {
 				for (int i = 0; i < fraseA.length(); i++) {
 					if (intento == fraseA.charAt(i)) {
