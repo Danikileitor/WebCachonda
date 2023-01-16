@@ -1,7 +1,7 @@
-article{
+article{    /* ajustamos posición para que todo vaya en línea */
     display: inline-block;
 }
-
+/* todo el resto del css no es más que cambiar colore, tamaño y posiciones */
 .lapokedex {
     background-color: #5F9EA0;
     box-shadow: 0 5px #4682B4;

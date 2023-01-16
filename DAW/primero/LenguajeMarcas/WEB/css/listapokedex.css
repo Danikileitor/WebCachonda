@@ -1,9 +1,9 @@
-table{
+table{  /* ajustamos margen, tamaño y borde de la tabla */
   margin: auto;
   width: 95%;
   border: 0;
 }
-
+/* el resto del css son cambios en los colores y alinear texto al centro */
 td.row0 {
   text-align: center;
   background-color: #ccc;
