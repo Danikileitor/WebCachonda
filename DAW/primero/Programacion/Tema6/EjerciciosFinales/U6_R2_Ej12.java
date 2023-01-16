@@ -37,9 +37,14 @@ public class U6_R2_Ej12 {
 		System.out.printf("%n#################################################################################%n# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #%n# [1] El juego del ahorcado                                                     #%n# [0] Salir                                                                     #%n#################################################################################%n");
 	}
 
-	public static void mostrarMensaje(String miCadena) {
-		System.out.println("##### Vemos el contenido #####");
-		System.out.println(miCadena);
+	public static void mostrarResultado(int vidas, String frase) {
+		if (vidas > 0) {
+			System.out.println(frase);
+			System.out.println("¡Enhorabuena, has adivinado la frase del jugador A! El jugador B gana la partida.");
+		} else {
+			System.out.println("¡El jugador B se ha agotado todos sus intentos! El jugador A gana la partida.");
+			System.out.println("La frase era: "+frase);
+		}
 	}
 
 	public static String pedirFraseMayus() {
@@ -96,13 +101,7 @@ public class U6_R2_Ej12 {
 			}
 			System.out.println();
 		} while (!resuelto && vidas > 0);
-		if (vidas > 0) {
-			System.out.println(fraseA);
-			System.out.println("¡Enhorabuena, has adivinado la frase del jugador A! El jugador B gana la partida.");
-		} else {
-			System.out.println("¡El jugador B se ha agotado todos sus intentos! El jugador A gana la partida.");
-			System.out.println("La frase era: "+fraseA);
-		}
+		mostrarResultado(vidas, fraseA);
 	}
 
 }// Fin clase
