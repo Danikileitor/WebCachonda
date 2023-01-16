@@ -1,20 +1,20 @@
-/* css para todo la página, se modifica la imagen del cursor, se impide seleccionar elementos */
-*{
+*{  /* css para todo la página, se modifica la imagen del cursor, se impide seleccionar elementos */
     cursor: url(../cursores/pokeball.cur), auto;
     user-select: none;
     scroll-behavior: smooth;
 }
-@keyframes rotar{
+@keyframes rotar{   /* animación para rotar */
     100%{transform: rotate(360deg);}
 }
-@keyframes subir{
+@keyframes subir{   /* animación sube y baja */
     0%{bottom: 0;}
     100%{bottom: 1%;}
 }
-html{
+html{   /* Nos aseguramos de que la página ocupe el 100% de la pantalla  */
+    width: 100%;
     height: 100%;
 }
-body{
+body{   /* estilos para el body, ajustamos tamaño, posición y colores */
     width: 100%;
     min-height: 100%;
     height: fit-content;
@@ -24,7 +24,7 @@ body{
     position: relative;
     margin: 0;
 }
-header{
+header{ /* estilos para el header, ajustamos tamaño, posición y colores  */
     position: relative;
     height: 8%;
     border: 1px solid black;
@@ -33,13 +33,13 @@ header{
     border-bottom: 0;
     padding: 20px;
 }
-h1{
+h1{ /* ajustamos que el h1 se quede en linea con las imágenes */
     display: inline;
 }
-marquee img{
+marquee img{    /* ponemos animación a las imágenes de la marquesina (los pokemon bailando) */
     animation: 1s rotar infinite alternate;
 }
-nav{
+nav{    /* estilos para el menú */
     position: sticky;
     top: 0;
     height: 2.7%;
@@ -49,7 +49,7 @@ nav{
     display: flex;
     align-items: center;
 }
-nav audio{
+nav audio{  /* estilos para el audio del menú, ajustamos tamaño */
     margin: auto;
     margin-top: 8px;
     margin-right: 1%;
@@ -57,7 +57,7 @@ nav audio{
     height: 2.7vh;
     padding: 0;
 }
-nav ul{
+nav ul{ /* estilos para la lista desordenada del menú, ajustamos tamaño y eliminamos los puntitos de la lista */
     height: 2.7vh;
     list-style: none;
     margin: 0;
@@ -66,32 +66,32 @@ nav ul{
     display: flex;
     border: 1px solid black;
 }
-nav li{
+nav li{ /* estilos para los elementos de la lista del menú, ajustamos tamaño, color y cambiamos el cursor al pasar por encima */
     width: fit-content;
     color: yellow;
     padding: 4px 10px 0px 4px;
     height: 100%;
     cursor: url(../cursores/charmander.cur), pointer;
 }
-nav li:hover{
+nav li:hover{   /* al pasar por encima se cambia el color */
     background-color: yellow;
     color: black;
 }
-nav li:hover img{
+nav li:hover img{   /* al pasar por encima la pokeball gira y se cambia el cursor */
     animation: 1s rotar infinite;
     cursor: url(../cursores/charmander.cur), pointer;
 }
-nav a{
+nav a{  /* estilos para los enlaces del menú, eliminamos el subrayado, añadimos negrita y se cambia el cursor */
     cursor: url(../cursores/charmander.cur), pointer;
     text-decoration: none;
     color: inherit;
     font-weight: bold;
 }
-.pokedex{
+.pokedex{   /* ajustamos posición del menú desplegable */
     display: inline-block;
     position: relative;
 }
-.contenido{
+.contenido{ /* estilos para los elementos del menú despegable, color, tamaño y por defecto estaría oculto */
     display: none;
     width: 100%;
     background-color: black;
@@ -100,20 +100,20 @@ nav a{
     border-top: 0;
     margin-left: -4px;
 }
-.pokedex .contenido:nth-child(2){
+.pokedex .contenido:nth-child(2){   /* Ajustamos margen y borde del primer elemento del menú desplegable */
     margin-top: 1px;
     border: 1px solid black;
 }
-.pokedex:hover .contenido{
+.pokedex:hover .contenido{  /* al pasar por encima del menú desplegable se muestran sus elementos */
     display: block;
     padding: 5px;
     text-decoration: none;
 }
-.contenido:hover{
+.contenido:hover{   /* al pasar por los elementos del menú desplegable cambian de color */
     background-color: yellow;
     color: black;
 }
-section{
+section{    /* estilos para section, tamaño, posición y margen */
     position: relative;
     border-top: 0;
     border-bottom: 0;
@@ -121,22 +121,22 @@ section{
     padding-bottom: 85px;
     text-align: center;
 }
-article{
+article{    /* estilos para los artículos*/
     padding: 10px;
 }
-aside{
+aside{  /* estilos para el aside, en este caso será la flecha para subir al inicio de la página, ajustamos posición y que siempre se vea por encima de todo */
     position: fixed;
     right: 0;
     bottom: 0;
     z-index: 1;
 }
-aside:hover{
+aside:hover{    /* al pasar por encima se activa la animación que sube y baja */
     animation: 0.5s subir infinite alternate;
 }
-aside img{
+aside img{  /* al pasar por encima se cambia el cursor */
     cursor: url(../cursores/squirtle.cur),pointer;
 }
-footer{
+footer{ /* estilos para el pie de página, posicion, tamaño y colores */
     position: absolute;
     height: auto;
     width: 100%;
@@ -146,24 +146,21 @@ footer{
     border-right: 0;
     bottom: 0;
 }
-footer p{
+footer p{   /* estilos para los párrafos del pie de página, tipo de letra y posición del texto al centro */
     font-family: Arial;
     text-align: center;
 }
-.oculto{
-    display: none;
-}
-.mapa area{
+.mapa area{ /* al pasar por encima del mapa se cambia el cursor */
     cursor: url(../cursores/pikachu.cur),pointer;
 }
-.logos img{
+.logos img{ /* al pasar por encima de las imágenes de redes sociales se cambia el cursor */
     cursor: url(../cursores/bulbasur.cur),pointer;
 }
-.logos, .logos img{
+.logos, .logos img{ /* ajustamos margen y posición de las imágenes de redes sociales */
     display: flex;
     margin: auto;
     justify-content: center;
 }
-p{
+p{  /* ajustamos margen superior de los párrafos */
     margin-top: auto;
 }
