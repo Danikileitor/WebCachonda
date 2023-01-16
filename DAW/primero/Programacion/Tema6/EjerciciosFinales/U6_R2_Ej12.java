@@ -55,8 +55,8 @@ public class U6_R2_Ej12 {
 		Scanner teclado = new Scanner(System.in);
 		String cad = "";
 		System.out.println("Dame una frase");
-		cad = teclado.nextLine().toUpperCase();
-		return cad.trim();
+		cad = teclado.nextLine().toUpperCase().trim();
+		return cad;
 	}
 
 	public static void limpiar() {
