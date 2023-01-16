@@ -124,6 +124,11 @@ section{    /* estilos para section, tamaño, posición y margen */
 article{    /* estilos para los artículos*/
     padding: 10px;
 }
+dt{
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+}
 aside{  /* estilos para el aside, en este caso será la flecha para subir al inicio de la página, ajustamos posición y que siempre se vea por encima de todo */
     position: fixed;
     right: 0;
