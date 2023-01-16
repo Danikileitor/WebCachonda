@@ -46,6 +46,7 @@ public class U6_R2_Ej12 {
 			System.out.println(frase);
 			System.out.println("¡Enhorabuena, has adivinado la frase del jugador A! El jugador B gana la partida.");
 		} else {
+			dibujar(vidas);
 			System.out.println("¡El jugador B se ha agotado todos sus intentos! El jugador A gana la partida.");
 			System.out.println("La frase era: "+frase);
 		}
@@ -77,6 +78,28 @@ public class U6_R2_Ej12 {
 		return preparado;
 	}
 
+	public static void dibujar(int vidas) {
+		System.out.println(" +---+");
+		System.out.println(" |   |");
+		System.out.print(" |   ");
+		if (vidas < 7) {System.out.print("O");}
+		System.out.println();
+		System.out.print(" |  ");
+		if (vidas < 6) {System.out.print("/");}
+		if (vidas < 5) {System.out.print("|");}
+		if (vidas < 4) {System.out.print("\\");}
+		System.out.println();
+		System.out.print(" |   ");
+		if (vidas < 3) {System.out.print("|");}
+		System.out.println();
+		System.out.print(" |  ");
+		if (vidas < 2) {System.out.print("/");}
+		if (vidas < 1) {System.out.print(" \\");}
+		System.out.println();
+		System.out.println(" |");
+		System.out.println("==========");
+	}
+
 	public static void ahorcado(String fraseA) {
 		boolean resuelto = false;
 		char intento;
@@ -87,6 +110,7 @@ public class U6_R2_Ej12 {
 		limpiar();
 		System.out.println("El jugador B tratará de adivinar la frase, ¡solo se permiten 7 fallos!.");
 		do {
+			dibujar(vidas);
 			System.out.println(progreso);
 			System.out.println("Introduce una letra:");
 			intento = Character.toUpperCase(teclado.nextLine().charAt(0));
