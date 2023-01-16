@@ -56,7 +56,7 @@ public class U6_R2_Ej12 {
 		String cad = "";
 		System.out.println("Dame una frase");
 		cad = teclado.nextLine().toUpperCase();
-		return cad;
+		return cad.trim();
 	}
 
 	public static void limpiar() {
