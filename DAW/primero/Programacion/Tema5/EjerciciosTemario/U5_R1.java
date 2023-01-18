@@ -1,8 +1,10 @@
+
 //Daniel Marcos Guerra Gómez
 import java.util.Scanner; //Importación de paquetes
 
 public class U5_R1 {
 	static Scanner teclado = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		// Declarar variables
 		int menu = 1;
@@ -22,8 +24,9 @@ public class U5_R1 {
 							continue;
 						case 1:
 							int edades[] = crearVector2DEnteros();
-							System.out.println("Las edades de los alumnos son:");
+							System.out.print("Las edades de los alumnos son:" );
 							mostrarVector2D(edades);
+							System.out.println();
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -48,7 +51,7 @@ public class U5_R1 {
 		rango = teclado.nextInt();
 		int vector[] = new int[rango];
 		for (int i = 0; i < vector.length; i++) {
-			System.out.printf("Indica el valor del índice [%d]:%n",i);
+			System.out.printf("Indica el valor del índice [%d]:%n", i);
 			valor = teclado.nextInt();
 			vector[i] = valor;
 		}
@@ -56,10 +59,14 @@ public class U5_R1 {
 	}
 
 	public static void mostrarVector2D(int[] vector) {
+		System.out.print("{");
 		for (int i = 0; i < vector.length; i++) {
-			System.out.printf("[%d] ",vector[i]);
+			System.out.print(vector[i]);
+			if (i < vector.length - 1) {
+				System.out.print(",");
+			}
 		}
-		System.out.println("\n");
+		System.out.print("}");
 	}
 
 }// Fin clase
