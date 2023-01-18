@@ -40,7 +40,7 @@ public class U5_R1 {
 							mostrarVector1D(palabra);
 							System.out.println();
 							contarLetra1D(palabra);
-							System.out.println("\n");
+							System.out.println();
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
