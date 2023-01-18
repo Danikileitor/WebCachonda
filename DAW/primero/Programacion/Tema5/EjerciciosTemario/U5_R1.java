@@ -34,6 +34,14 @@ public class U5_R1 {
 							mostrarVector1D(letras);
 							System.out.println("\n");
 							break;
+						case 3:
+							char palabra[] = crearVector1DLetras();
+							System.out.print("Las palabra es: ");
+							mostrarVector1D(palabra);
+							System.out.println();
+							contarLetra1D(palabra);
+							System.out.println("\n");
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -48,6 +56,7 @@ public class U5_R1 {
 		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Crear vector para almacenar edades                                        #");
 		System.out.println("# [2] Crear vector para almacenar letras                                        #");
+		System.out.println("# [3] Crear vector para almacenar letras, mostrarlo y buscar una letra          #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
@@ -88,7 +97,7 @@ public class U5_R1 {
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]);
 			if (i < vector.length - 1) {
-				System.out.print(",");
+				// System.out.print(",");
 			}
 		}
 		System.out.print("}");
@@ -103,6 +112,19 @@ public class U5_R1 {
 			}
 		}
 		System.out.print("}");
+	}
+
+	public static void contarLetra1D(char[] vector) {
+		char letra;
+		int contador = 0;
+		System.out.println("Introduce la letra a buscar:");
+		letra = teclado.next().charAt(0);
+		for (int i = 0; i < vector.length; i++) {
+			if (Character.toLowerCase(vector[i])  == Character.toLowerCase(letra)) {
+				contador++;
+			}
+		}
+		System.out.printf("La cantidad de [%s] en la palabra es de: %d.%n", letra, contador);
 	}
 
 }// Fin clase
