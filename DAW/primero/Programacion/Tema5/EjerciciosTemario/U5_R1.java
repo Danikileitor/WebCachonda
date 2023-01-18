@@ -43,16 +43,16 @@ public class U5_R1 {
 	}
 
 	public static int[] crearVectorEnteros() {
-		int rango, edad;
+		int rango, valor;
 		System.out.println("Indica su rango:");
 		rango = teclado.nextInt();
-		int edades[] = new int[rango];
-		for (int i = 0; i < edades.length; i++) {
+		int vector[] = new int[rango];
+		for (int i = 0; i < vector.length; i++) {
 			System.out.printf("Indica el valor del índice [%d]:%n",i);
-			edad = teclado.nextInt();
-			edades[i] = edad;
+			valor = teclado.nextInt();
+			vector[i] = valor;
 		}
-		return edades;
+		return vector;
 	}
 
 	public static void mostrarVector(int[] vector) {
