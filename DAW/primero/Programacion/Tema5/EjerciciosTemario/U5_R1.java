@@ -24,13 +24,13 @@ public class U5_R1 {
 							continue;
 						case 1:
 							int edades[] = crearVector2DEnteros();
-							System.out.print("Las edades de los alumnos son:");
+							System.out.print("Las edades de los alumnos son:" );
 							mostrarVector2D(edades);
 							System.out.println();
 							break;
 						case 2:
 							char letras[] = crearVector2DLetras();
-							System.out.print("Las edades de los alumnos son:");
+							System.out.print("Las edades de los alumnos son:" );
 							mostrarVector2D(letras);
 							System.out.println();
 							break;
@@ -68,24 +68,6 @@ public class U5_R1 {
 	public static char[] crearVector2DLetras() {
 		int rango;
 		char letra;
-		System.out.println("Indica su rango:");
-		rango = teclado.nextInt();
-		char vector[] = new char[rango];
-		for (int i = 0; i < vector.length; i++) {
-			System.out.printf("Indica la letra para el índice [%d]:%n", i);
-			letra = teclado.next().charAt(0);
-			vector[i] = letra;
-		}
-		return vector;
-	}
-
-	public static char[] crearVectorLetras() {
-		int dimension, rango;
-		char letra;
-		do {
-			System.out.println("Introduce una dimensión válida:");
-			dimension = teclado.nextInt();
-		} while (dimension <= 0);
 		System.out.println("Indica su rango:");
 		rango = teclado.nextInt();
 		char vector[] = new char[rango];
