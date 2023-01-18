@@ -30,7 +30,7 @@ public class U5_R1 {
 							break;
 						case 2:
 							char letras[] = crearVector2DLetras();
-							System.out.print("Las edades de los alumnos son:" );
+							System.out.print("Las letras introducidas son:" );
 							mostrarVector2D(letras);
 							System.out.println();
 							break;
