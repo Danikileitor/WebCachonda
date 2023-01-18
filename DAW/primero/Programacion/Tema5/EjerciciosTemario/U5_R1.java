@@ -24,13 +24,13 @@ public class U5_R1 {
 							continue;
 						case 1:
 							int edades[] = crearVector1DEnteros();
-							System.out.print("Las edades de los alumnos son:" );
+							System.out.print("Las edades de los alumnos son: ");
 							mostrarVector1D(edades);
 							System.out.println();
 							break;
 						case 2:
 							char letras[] = crearVector1DLetras();
-							System.out.print("Las letras introducidas son:" );
+							System.out.print("Las letras introducidas son: ");
 							mostrarVector1D(letras);
 							System.out.println();
 							break;
