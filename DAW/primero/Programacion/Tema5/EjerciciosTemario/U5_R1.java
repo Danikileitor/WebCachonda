@@ -21,7 +21,9 @@ public class U5_R1 {
 						case 0:
 							continue;
 						case 1:
-							crearVectorEdades();
+							int edades[] = crearVectorEdades();
+							System.out.println("Las edades de los alumnos son:");
+							mostrarVector(edades);
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -40,7 +42,7 @@ public class U5_R1 {
 		System.out.println("#################################################################################");
 	}
 
-	public static void crearVectorEdades() {
+	public static int[] crearVectorEdades() {
 		int rango, edad;
 		System.out.println("Indica su rango:");
 		rango = teclado.nextInt();
@@ -50,9 +52,12 @@ public class U5_R1 {
 			edad = teclado.nextInt();
 			edades[i] = edad;
 		}
-		System.out.println("Las edades de los alumnos son:");
-		for (int i = 0; i < edades.length; i++) {
-			System.out.printf("[%d] ",edades[i]);
+		return edades;
+	}
+
+	public static void mostrarVector(int[] vector) {
+		for (int i = 0; i < vector.length; i++) {
+			System.out.printf("[%d] ",vector[i]);
 		}
 		System.out.println("\n");
 	}
