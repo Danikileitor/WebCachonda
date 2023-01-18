@@ -28,6 +28,12 @@ public class U5_R1 {
 							mostrarVector2D(edades);
 							System.out.println();
 							break;
+						case 2:
+							char letras[] = crearVector2DLetras();
+							System.out.print("Las edades de los alumnos son:" );
+							mostrarVector2D(letras);
+							System.out.println();
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -41,7 +47,7 @@ public class U5_R1 {
 		System.out.println("#################################################################################");
 		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Crear vector para almacenar edades                                        #");
-		System.out.println("# [2] Crear vector para almacenar edades                                        #");
+		System.out.println("# [2] Crear vector para almacenar letras                                        #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
@@ -59,7 +65,32 @@ public class U5_R1 {
 		return vector;
 	}
 
+	public static char[] crearVector2DLetras() {
+		int rango;
+		char letra;
+		System.out.println("Indica su rango:");
+		rango = teclado.nextInt();
+		char vector[] = new char[rango];
+		for (int i = 0; i < vector.length; i++) {
+			System.out.printf("Indica la letra para el índice [%d]:%n", i);
+			letra = teclado.next().charAt(0);
+			vector[i] = letra;
+		}
+		return vector;
+	}
+
 	public static void mostrarVector2D(int[] vector) {
+		System.out.print("{");
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print(vector[i]);
+			if (i < vector.length - 1) {
+				System.out.print(",");
+			}
+		}
+		System.out.print("}");
+	}
+
+	public static void mostrarVector2D(char[] vector) {
 		System.out.print("{");
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]);
