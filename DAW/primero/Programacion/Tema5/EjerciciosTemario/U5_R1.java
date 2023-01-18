@@ -23,15 +23,15 @@ public class U5_R1 {
 						case 0:
 							continue;
 						case 1:
-							int edades[] = crearVector2DEnteros();
+							int edades[] = crearVector1DEnteros();
 							System.out.print("Las edades de los alumnos son:" );
-							mostrarVector2D(edades);
+							mostrarVector1D(edades);
 							System.out.println();
 							break;
 						case 2:
-							char letras[] = crearVector2DLetras();
+							char letras[] = crearVector1DLetras();
 							System.out.print("Las letras introducidas son:" );
-							mostrarVector2D(letras);
+							mostrarVector1D(letras);
 							System.out.println();
 							break;
 						default:
@@ -52,7 +52,7 @@ public class U5_R1 {
 		System.out.println("#################################################################################");
 	}
 
-	public static int[] crearVector2DEnteros() {
+	public static int[] crearVector1DEnteros() {
 		int rango, valor;
 		System.out.println("Indica su rango:");
 		rango = teclado.nextInt();
@@ -65,7 +65,7 @@ public class U5_R1 {
 		return vector;
 	}
 
-	public static char[] crearVector2DLetras() {
+	public static char[] crearVector1DLetras() {
 		int rango;
 		char letra;
 		System.out.println("Indica su rango:");
@@ -79,7 +79,7 @@ public class U5_R1 {
 		return vector;
 	}
 
-	public static void mostrarVector2D(int[] vector) {
+	public static void mostrarVector1D(int[] vector) {
 		System.out.print("{");
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]);
@@ -90,7 +90,7 @@ public class U5_R1 {
 		System.out.print("}");
 	}
 
-	public static void mostrarVector2D(char[] vector) {
+	public static void mostrarVector1D(char[] vector) {
 		System.out.print("{");
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]);
