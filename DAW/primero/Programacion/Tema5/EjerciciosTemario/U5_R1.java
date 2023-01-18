@@ -41,6 +41,7 @@ public class U5_R1 {
 		System.out.println("#################################################################################");
 		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Crear vector para almacenar edades                                        #");
+		System.out.println("# [2] Crear vector para almacenar edades                                        #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
