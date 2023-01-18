@@ -54,8 +54,10 @@ public class U5_R1 {
 
 	public static int[] crearVector1DEnteros() {
 		int rango, valor;
-		System.out.println("Indica su rango:");
-		rango = teclado.nextInt();
+		do {
+			System.out.println("Indica un rango válido:");
+			rango = teclado.nextInt();
+		} while (rango <= 0);
 		int vector[] = new int[rango];
 		for (int i = 0; i < vector.length; i++) {
 			System.out.printf("Indica el valor del índice [%d]:%n", i);
@@ -68,8 +70,10 @@ public class U5_R1 {
 	public static char[] crearVector1DLetras() {
 		int rango;
 		char letra;
-		System.out.println("Indica su rango:");
-		rango = teclado.nextInt();
+		do {
+			System.out.println("Indica un rango válido:");
+			rango = teclado.nextInt();
+		} while (rango <= 0);
 		char vector[] = new char[rango];
 		for (int i = 0; i < vector.length; i++) {
 			System.out.printf("Indica la letra para el índice [%d]:%n", i);
