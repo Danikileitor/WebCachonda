@@ -26,13 +26,13 @@ public class U5_R1 {
 							int edades[] = crearVector1DEnteros();
 							System.out.print("Las edades de los alumnos son: ");
 							mostrarVector1D(edades);
-							System.out.println();
+							System.out.println("\n");
 							break;
 						case 2:
 							char letras[] = crearVector1DLetras();
 							System.out.print("Las letras introducidas son: ");
 							mostrarVector1D(letras);
-							System.out.println();
+							System.out.println("\n");
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
