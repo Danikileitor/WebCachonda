@@ -97,7 +97,7 @@ public class U5_R1 {
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]);
 			if (i < vector.length - 1) {
-				// System.out.print(",");
+				System.out.print(",");
 			}
 		}
 		System.out.print("}");
@@ -108,7 +108,7 @@ public class U5_R1 {
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]);
 			if (i < vector.length - 1) {
-				System.out.print(",");
+				// System.out.print(",");
 			}
 		}
 		System.out.print("}");
@@ -120,7 +120,7 @@ public class U5_R1 {
 		System.out.println("Introduce la letra a buscar:");
 		letra = teclado.next().charAt(0);
 		for (int i = 0; i < vector.length; i++) {
-			if (Character.toLowerCase(vector[i])  == Character.toLowerCase(letra)) {
+			if (Character.toLowerCase(vector[i]) == Character.toLowerCase(letra)) {
 				contador++;
 			}
 		}
