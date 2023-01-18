@@ -21,7 +21,7 @@ public class U5_R1 {
 						case 0:
 							continue;
 						case 1:
-							int edades[] = crearVectorEdades();
+							int edades[] = crearVectorEnteros();
 							System.out.println("Las edades de los alumnos son:");
 							mostrarVector(edades);
 							break;
@@ -42,13 +42,13 @@ public class U5_R1 {
 		System.out.println("#################################################################################");
 	}
 
-	public static int[] crearVectorEdades() {
+	public static int[] crearVectorEnteros() {
 		int rango, edad;
 		System.out.println("Indica su rango:");
 		rango = teclado.nextInt();
 		int edades[] = new int[rango];
 		for (int i = 0; i < edades.length; i++) {
-			System.out.printf("Indica la edad del alumno [%d]:%n",i);
+			System.out.printf("Indica el valor del índice [%d]:%n",i);
 			edad = teclado.nextInt();
 			edades[i] = edad;
 		}
