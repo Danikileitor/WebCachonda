@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+EJERCICIO 3.  Modelar en XML una libreta de contactos.
+Se debe modelar la siguiente información. Se utilizarán sólo elementos.
+Crear un gráfico de árbol con los elementos y contenidos.
+Utiliza el programa “dia”.
+    • nombre
+    • dirección (calle, código postal, ciudad)
+    • medios de contacto (teléfono fijo, teléfono móvil, correo electrónico)
+-->
+<contactos>
+    <nombre>Maria</nombre>
+    <direccion>
+        <calle>la calle</calle>
+        <codigo-postal>1300</codigo-postal>
+        <ciudad>Jaen</ciudad>
+    </direccion>
+    <medios>
+        <telefono-fijo>123456789</telefono-fijo>
+        <telefono-movil>123456789</telefono-movil>
+        <correo-electronico>correo@electronico.com</correo-electronico>
+    </medios>
+</contactos>
