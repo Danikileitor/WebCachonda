@@ -57,6 +57,7 @@ public class U6_R2_StringBuilder_Daniel {
 		boolean empieza = cadena.startsWith("J");
 		boolean acaba = cadena.endsWith("a");
 		String reemplazo = cadena.replace("tengo", "hubo");
+		System.out.println(cadena);
 	}
 
 	public static void EjercicioStringBuilder() {
