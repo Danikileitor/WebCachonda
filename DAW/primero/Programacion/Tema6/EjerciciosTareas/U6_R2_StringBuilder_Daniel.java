@@ -46,17 +46,17 @@ public class U6_R2_StringBuilder_Daniel {
 
 	public static void EjercicioString() {
 		String cadena = new String("Hoy es lunes y tengo clase de programacion a ultima hora");
-		String concatenar = cadena + " con mi tutor";
-		String subcadena1 = cadena.substring(0, 3);
-		String subcadena2 = cadena.substring(7, cadena.length());
-		String minus = cadena.toLowerCase();
-		String mayus = cadena.toUpperCase();
-		int posicion1 = cadena.indexOf("hora", 15);
-		int posicion2 = cadena.indexOf('y');
-		boolean incluye = cadena.contains("jueves");
-		boolean empieza = cadena.startsWith("J");
-		boolean acaba = cadena.endsWith("a");
-		String reemplazo = cadena.replace("tengo", "hubo");
+		cadena.concat(" con mi tutor");
+		cadena.substring(0, 3);
+		cadena.substring(7, cadena.length());
+		cadena.toLowerCase();
+		cadena.toUpperCase();
+		cadena.indexOf("hora", 15);
+		cadena.indexOf('y');
+		cadena.contains("jueves");
+		cadena.startsWith("J");
+		cadena.endsWith("a");
+		cadena.replace("tengo", "hubo");
 		System.out.println(cadena);
 	}
 
