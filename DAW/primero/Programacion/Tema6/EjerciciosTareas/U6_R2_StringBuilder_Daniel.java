@@ -21,7 +21,10 @@ public class U6_R2_StringBuilder_Daniel {
 						case 0:
 							continue;
 						case 1:
-							System.out.println("Hola mundo");
+							EjercicioString();
+							break;
+						case 2:
+							EjercicioStringBuilder();
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -35,9 +38,19 @@ public class U6_R2_StringBuilder_Daniel {
 	public static void menu() {
 		System.out.println("#################################################################################");
 		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
-		System.out.println("# [1] Hola mundo                                                                #");
+		System.out.println("# [1] Ejercicios con String                                                     #");
+		System.out.println("# [2] Ejercicios con StringBuilder                                              #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
+	}
+
+	public static void EjercicioString() {
+		String cadena = new String("Hoy es lunes y tengo clase de programacion a ultima hora");
+
+	}
+
+	public static void EjercicioStringBuilder() {
+		StringBuilder cadena2 = new StringBuilder("martes");
 	}
 
 }// Fin clase
