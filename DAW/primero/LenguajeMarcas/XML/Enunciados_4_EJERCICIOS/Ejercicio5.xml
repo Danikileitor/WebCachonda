@@ -6,16 +6,92 @@ una lista sin orden (<ul> <li>...</ul>);. Hacer de dos formas
 – Una con secciones CDATA y
 – otra con entidades predefinidas. 
 -->
-<contactos>
-    <nombre>Maria</nombre>
-    <direccion>
-        <calle>la calle</calle>
-        <codigo-postal>1300</codigo-postal>
-        <ciudad>Jaen</ciudad>
-    </direccion>
-    <medios>
-        <telefono-fijo>123456789</telefono-fijo>
-        <telefono-movil>123456789</telefono-movil>
-        <correo-electronico>correo@electronico.com</correo-electronico>
-    </medios>
-</contactos>
+<datos>
+<![CDATA[ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>VariasListasEnunciado</title>
+    <style>
+        .negrita{
+            font-weight: bold;
+        }
+        dt{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menú</h1>
+    <ul>
+        <li>Inicio</li>
+        <li class="negrita">Noticias</li>
+        <ul>
+            <li><a href="#">Recientes</a></li>
+            <li class="negrita"><a href="#">Más leídas</a></li>
+            <li><a href="#">Más valoradas</a></li>
+        </ul>
+        <li>Artículos</li>
+        <ol>
+            <li class="negrita">XHTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Otros</li>
+        </ol>
+        <li>Contacto</li>
+        <dl>
+            <dt>Email</dt>
+            <dd class="negrita">nombre@direccion.com</dd>
+            <dt>Teléfono</dt>
+            <dd>900 900 900</dd>
+            <dt>Fax</dt>
+            <dd>900 900 900</dd>
+        </dl>
+    </ul>
+</body>
+</html> ]]>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;VariasListasEnunciado&lt;/title&gt;
+    &lt;style&gt;
+        .negrita{
+            font-weight: bold;
+        }
+        dt{
+            font-style: italic;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Menú&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Inicio&lt;/li&gt;
+        &lt;li class="negrita"&gt;Noticias&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Recientes&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="negrita"&gt;&lt;a href="#"&gt;Más leídas&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Más valoradas&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;li&gt;Artículos&lt;/li&gt;
+        &lt;ol&gt;
+            &lt;li class="negrita"&gt;XHTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+            &lt;li&gt;Otros&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;li&gt;Contacto&lt;/li&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;Email&lt;/dt&gt;
+            &lt;dd class="negrita"&gt;nombre@direccion.com&lt;/dd&gt;
+            &lt;dt&gt;Teléfono&lt;/dt&gt;
+            &lt;dd&gt;900 900 900&lt;/dd&gt;
+            &lt;dt&gt;Fax&lt;/dt&gt;
+            &lt;dd&gt;900 900 900&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</datos>
