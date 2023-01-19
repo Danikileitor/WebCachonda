@@ -41,7 +41,7 @@ public class U6_R2_StringBuilder_Daniel {
 		System.out.println("# [1] Ejercicios con String                                                     #");
 		System.out.println("# [2] Ejercicios con StringBuilder                                              #");
 		System.out.println("# [0] Salir                                                                     #");
-		System.out.println("#################################################################################");
+		System.out.println("#################################################################################"); 
 	}
 
 	public static void EjercicioString() {
