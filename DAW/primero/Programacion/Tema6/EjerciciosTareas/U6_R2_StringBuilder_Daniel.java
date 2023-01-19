@@ -62,7 +62,11 @@ public class U6_R2_StringBuilder_Daniel {
 
 	public static void EjercicioStringBuilder() {
 		StringBuilder cadena2 = new StringBuilder("martes");
-		
+		cadena2.insert(0, "Hoy es ");
+		cadena2.append(" a última hora");
+		cadena2.insert(0, '¡');
+		cadena2.replace(0, 4, "Ya");
+		System.out.println(cadena2);
 	}
 
 }// Fin clase
