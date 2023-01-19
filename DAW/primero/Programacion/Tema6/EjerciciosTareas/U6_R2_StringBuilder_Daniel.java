@@ -62,6 +62,7 @@ public class U6_R2_StringBuilder_Daniel {
 
 	public static void EjercicioStringBuilder() {
 		StringBuilder cadena2 = new StringBuilder("martes");
+		
 	}
 
 }// Fin clase
