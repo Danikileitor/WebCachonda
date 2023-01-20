@@ -86,7 +86,7 @@ public class U6_R3 {
 		for (int i=cadena.length()-1; i>=0; i--) {
 			invertida += cadena.charAt(i);
 		}
-		return cadena == invertida;
+		return cadena.equals(invertida);
 	}
 
 }// Fin clase
