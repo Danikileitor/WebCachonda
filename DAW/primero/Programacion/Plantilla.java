@@ -2,11 +2,12 @@
 import java.util.Scanner; //Importación de paquetes
 
 public class Plantilla {
+	static Scanner teclado = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		// Declarar variables
 		int menu = 1;
 		char salir = 'n';
-		Scanner teclado = new Scanner(System.in);
 		// Desarrollo del programa
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
