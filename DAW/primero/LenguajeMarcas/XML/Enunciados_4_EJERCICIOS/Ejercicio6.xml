@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+EJERCICIO 6. Crea un documento XML para el siguiente pedido que ha recibido por correo
+electrónico una empresa que se dedica a la venta de herramientas para jardinería:
+"Hola, necesito
+una cortadora de césped para mi jardín de esas que anuncian en oferta, me gustaría que fuera uno de
+esos modelos eléctricos, pues las de gasolina contaminan mucho. Me llamo Roberto Movilla, la
+cortadora la tendrán que enviar a Albacete, la dirección es Plaza de la Duquesa 12, la recogerá mi
+esposa que se llama Alicia Abad. Ahora que lo pienso también necesitaré 3 podadoras para los setos.
+Les paso mi dirección de aquí para lo referente al pago, es General Ricardos 56, aquí en Madrid. Es
+urgente, por favor, el césped está muy alto."
+La fecha del pedido es el 20 de octubre del 99. El
+empleado que se encarga del pedido ha comprobado algunos datos necesarios: el código postal de la
+dirección de Albacete es 05020 y el de la de Madrid 28055; también ha consultado el catálogo de
+productos y ha averiguado que la cortadora vale 148.95 euros y su código de producto es 872-AA,; una
+podadora vale 7.98 y su código es 926-FH.”
+-->
+<datos>
+    <datos-facturacion>
+        <nombre>Roberto Movilla</nombre>
+        <direccion>
+            <calle>General Ricardos 56</calle>
+            <codigo-postal>28055</codigo-postal>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+    </datos-facturacion>
+    <datos-entrega>
+        <nombre>Alicia Abad</nombre>
+        <direccion>
+            <calle>Plaza de la Duquesa 12</calle>
+            <codigo-postal>05020</codigo-postal>
+            <ciudad>Albacete</ciudad>
+        </direccion>
+    </datos-entrega>
+    <datos-pedido>
+        <fecha>20/10/1999</fecha>
+        <prodcutos>
+            <p1>
+                <codigo>872-AA</codigo>
+                <nombre>Cortadora de césped eléctrica</nombre>
+                <precio>148.95 €</precio>
+                <cantidad>1</cantidad>
+            </p1>
+            <p2>
+                <codigo>926-FH</codigo>
+                <nombre>Podadora para setos</nombre>
+                <precio>7.98 €</precio>
+                <cantidad>3</cantidad>
+            </p2>
+        </prodcutos>
+        <precio-total>172.89 €</precio-total>
+    </datos-pedido>
+</datos>
