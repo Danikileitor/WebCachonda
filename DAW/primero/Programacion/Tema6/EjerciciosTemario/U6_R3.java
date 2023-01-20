@@ -26,6 +26,9 @@ public class U6_R3 {
 						case 2:
 							System.out.printf("El número de ocasiones en que aparece la palabra es: %d.%n", contarPalabra(pedirFrase(), pedirFrase()));
 							break;
+						case 3:
+							System.out.printf("¿La frase introducida es un palíndromo? %s.%n",comprobarPalindromo(pedirFrase()));
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -68,14 +71,22 @@ public class U6_R3 {
 		return cad;
 	}
 
-	public static int contarPalabra(String cadena, String palabra) {
+	public static int contarPalabra(String frase, String palabra) {
 		int contador = 0;
-		for (int i = 0; i < cadena.length(); i++) {
-			if (cadena.startsWith(palabra, i)) {
+		for (int i = 0; i < frase.length(); i++) {
+			if (frase.startsWith(palabra, i)) {
 				contador++;
 			}
 		}
 		return contador;
+	}
+
+	public static boolean comprobarPalindromo(String cadena) {
+		String invertida = "";
+		for (int i=cadena.length()-1; i>=0; i--) {
+			invertida += cadena.charAt(i);
+		}
+		return cadena == invertida;
 	}
 
 }// Fin clase
