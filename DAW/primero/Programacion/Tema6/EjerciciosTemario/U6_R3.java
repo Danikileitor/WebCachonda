@@ -36,6 +36,9 @@ public class U6_R3 {
 						case 5:
 							System.out.printf("¿Las palabras introducidas son anagramas? %s.%n", comprobarAnagrama(pedirFrase(), pedirFrase()));
 							break;
+						case 6:
+							dividirPalabra(pedirFrase());
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -121,6 +124,19 @@ public class U6_R3 {
 		Arrays.sort(c1);
 		Arrays.sort(c2);
 		return Arrays.equals(c1, c2);
+	}
+
+	public static void dividirPalabra(String cadena) {
+		int longitud;
+		String aux = cadena;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Indica el tamaño de cada división:");
+		longitud = teclado.nextInt();
+		while (aux.length() > longitud) {
+			System.out.println(aux.substring(0, longitud));
+			aux = aux.substring(longitud);
+		}
+		System.out.println(aux);
 	}
 
 }// Fin clase
