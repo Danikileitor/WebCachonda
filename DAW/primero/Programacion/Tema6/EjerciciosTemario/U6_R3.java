@@ -53,7 +53,9 @@ public class U6_R3 {
 		System.out.println("# [3] Pedir un frase y comprobar si es un palíndromo                            #");
 		System.out.println("# [4] Ej 6.11                                                                   #");
 		System.out.println("# [5] Ej 6.12                                                                   #");
-		System.out.println("# [6] Ej 6.17, 6.18 y 6.19                                                      #");
+		System.out.println("# [6] Ej 6.17                                                                   #");
+		System.out.println("# [7] Ej 6.18                                                                   #");
+		System.out.println("# [8] Ej 6.19                                                                   #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
