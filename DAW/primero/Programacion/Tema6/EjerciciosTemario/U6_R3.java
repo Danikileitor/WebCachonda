@@ -1,4 +1,5 @@
 //Daniel Marcos Guerra Gómez
+import java.util.Arrays;
 import java.util.Scanner; //Importación de paquetes
 
 public class U6_R3 {
@@ -30,7 +31,10 @@ public class U6_R3 {
 							System.out.printf("¿La frase introducida es un palíndromo? %s.%n", comprobarPalindromo(pedirFrase()));
 							break;
 						case 4:
-							System.out.printf("La frase codificada es: %s.%n", codificar(pedirFrase()));
+							System.out.printf("El resultado de la codificación es: %s.%n", codificar(pedirFrase()));
+							break;
+						case 5:
+							System.out.printf("¿Las palabras introducidas son anagramas? ", comprobarAnagrama(pedirFrase(), pedirFrase()));
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -94,12 +98,9 @@ public class U6_R3 {
 
 	public static String codificar(String cadena) {
 		String codificado = "";
-		char codificando[] = new char[cadena.length()];
+		char codificando[] = cadena.toLowerCase().toCharArray();
 		char clave1[] = { 'e', 'i', 'k', 'm', 'p', 'q', 'r', 's', 't', 'u', 'v' };
 		char clave2[] = { 'p', 'v', 'i', 'u', 'm', 't', 'e', 'r', 'k', 'q', 's' };
-		for (int i = 0; i < cadena.length(); i++) {
-			codificando[i] = cadena.toLowerCase().charAt(i);
-		}
 		for (int i = 0; i < codificando.length; i++) {
 			for (int j = 0; j < clave1.length; j++) {
 				if (codificando[i] == clave1[j]) {
@@ -110,6 +111,14 @@ public class U6_R3 {
 			codificado += codificando[i];
 		}
 		return codificado;
+	}
+
+	public static boolean comprobarAnagrama(String cad1, String cad2) {
+		char c1[] = cad1.toLowerCase().toCharArray();
+		char c2[] = cad2.toLowerCase().toCharArray();
+		Arrays.sort(c1);
+		Arrays.sort(c2);
+		return Arrays.equals(c1, c2);
 	}
 
 }// Fin clase
