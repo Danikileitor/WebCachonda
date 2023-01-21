@@ -133,10 +133,10 @@ public class U6_R3 {
 		System.out.println("Indica el tamaño de cada división:");
 		longitud = teclado.nextInt();
 		while (aux.length() > longitud) {
-			System.out.println(aux.substring(0, longitud));
+			System.out.println("\t" + aux.substring(0, longitud));
 			aux = aux.substring(longitud);
 		}
-		System.out.println(aux + "\n");
+		System.out.println("\t" + aux + "\n");
 	}
 
 }// Fin clase
