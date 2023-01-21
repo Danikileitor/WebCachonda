@@ -27,7 +27,10 @@ public class U6_R3 {
 							System.out.printf("El número de ocasiones en que aparece la palabra es: %d.%n", contarPalabra(pedirFrase(), pedirFrase()));
 							break;
 						case 3:
-							System.out.printf("¿La frase introducida es un palíndromo? %s.%n",comprobarPalindromo(pedirFrase()));
+							System.out.printf("¿La frase introducida es un palíndromo? %s.%n", comprobarPalindromo(pedirFrase()));
+							break;
+						case 4:
+							System.out.printf("La frase codificada es: %s.%n", codificar(pedirFrase()));
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -83,10 +86,30 @@ public class U6_R3 {
 
 	public static boolean comprobarPalindromo(String cadena) {
 		String invertida = "";
-		for (int i=cadena.length()-1; i>=0; i--) {
+		for (int i = cadena.length() - 1; i >= 0; i--) {
 			invertida += cadena.charAt(i);
 		}
 		return cadena.equals(invertida);
+	}
+
+	public static String codificar(String cadena) {
+		String codificado = "";
+		char codificando[] = new char[cadena.length()];
+		char clave1[] = { 'e', 'i', 'k', 'm', 'p', 'q', 'r', 's', 't', 'u', 'v' };
+		char clave2[] = { 'p', 'v', 'i', 'u', 'm', 't', 'e', 'r', 'k', 'q', 's' };
+		for (int i = 0; i < cadena.length(); i++) {
+			codificando[i] = cadena.toLowerCase().charAt(i);
+		}
+		for (int i = 0; i < codificando.length; i++) {
+			for (int j = 0; j < clave1.length; j++) {
+				if (codificando[i] == clave1[j]) {
+					codificando[i] = clave2[j];
+					break;
+				}
+			}
+			codificado += codificando[i];
+		}
+		return codificado;
 	}
 
 }// Fin clase
