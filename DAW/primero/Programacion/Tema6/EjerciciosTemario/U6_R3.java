@@ -42,6 +42,9 @@ public class U6_R3 {
 						case 7:
 							System.out.printf("La frase en nomenclatura Camel es: %s.%n", camel(pedirFrase()));
 							break;
+						case 8:
+							reemplazarTexto();
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -150,6 +153,20 @@ public class U6_R3 {
 			}
 		}
 		return camel;
+	}
+
+	public static void reemplazarTexto() {
+		String texto, objetivo, reemplazo;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce el texto que desea modificar:");
+		texto = teclado.nextLine().trim();
+		System.out.println("Introduce que palabra desea modificar en todo el texto:");
+		objetivo = teclado.nextLine();
+		System.out.println("Introduce la nueva palabra que reemplazará a la anterior:");
+		reemplazo = teclado.nextLine();
+		texto = texto.replaceAll(objetivo, reemplazo);
+		System.out.println("El texto final quedaría así:");
+		System.out.println(texto + "\n");
 	}
 
 }// Fin clase
