@@ -39,6 +39,9 @@ public class U6_R3 {
 						case 6:
 							dividirPalabra(pedirFrase());
 							break;
+						case 7:
+							System.out.printf("La frase en nomenclatura Camel es: %s.%n", camel(pedirFrase()));
+							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -137,6 +140,16 @@ public class U6_R3 {
 			aux = aux.substring(longitud);
 		}
 		System.out.println("\t" + aux + "\n");
+	}
+
+	public static String camel(String cadena) {
+		String camel = cadena.toLowerCase();
+		for (int i = 0; i < camel.length(); i++) {
+			if (camel.charAt(i) == ' ') {
+				camel = camel.substring(0, i) + camel.substring(i+1, i+2).toUpperCase() + camel.substring(i+2);
+			}
+		}
+		return camel;
 	}
 
 }// Fin clase
