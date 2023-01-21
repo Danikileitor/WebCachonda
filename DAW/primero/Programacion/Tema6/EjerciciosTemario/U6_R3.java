@@ -136,7 +136,7 @@ public class U6_R3 {
 			System.out.println(aux.substring(0, longitud));
 			aux = aux.substring(longitud);
 		}
-		System.out.println(aux);
+		System.out.println(aux + "\n");
 	}
 
 }// Fin clase
