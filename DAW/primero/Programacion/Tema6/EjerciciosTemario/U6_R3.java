@@ -34,7 +34,7 @@ public class U6_R3 {
 							System.out.printf("El resultado de la codificación es: %s.%n", codificar(pedirFrase()));
 							break;
 						case 5:
-							System.out.printf("¿Las palabras introducidas son anagramas? ", comprobarAnagrama(pedirFrase(), pedirFrase()));
+							System.out.printf("¿Las palabras introducidas son anagramas? %s.%n", comprobarAnagrama(pedirFrase(), pedirFrase()));
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
