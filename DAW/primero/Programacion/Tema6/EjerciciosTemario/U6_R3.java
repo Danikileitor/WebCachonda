@@ -90,11 +90,17 @@ public class U6_R3 {
 	}
 
 	public static boolean comprobarPalindromo(String cadena) {
+		String base = cadena.toLowerCase().replaceAll("[' ',¡,!,¿,?,',','.']", "");
+		base = base.replaceAll("á", "a");
+		base = base.replaceAll("é", "e");
+		base = base.replaceAll("í", "i");
+		base = base.replaceAll("ó", "o");
+		base = base.replaceAll("ú", "u");
 		String invertida = "";
-		for (int i = cadena.length() - 1; i >= 0; i--) {
-			invertida += cadena.charAt(i);
+		for (int i = base.length() - 1; i >= 0; i--) {
+			invertida += base.charAt(i);
 		}
-		return cadena.equals(invertida);
+		return base.equals(invertida);
 	}
 
 	public static String codificar(String cadena) {
