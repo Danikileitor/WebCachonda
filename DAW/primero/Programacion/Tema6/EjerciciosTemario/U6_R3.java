@@ -88,14 +88,14 @@ public class U6_R3 {
 		}
 		return contador;
 	}
-
+s
 	public static boolean comprobarPalindromo(String cadena) {
 		String base = cadena.toLowerCase().replaceAll("[' ',¡,!,¿,?,',','.',':',';']", "");
 		base = base.replaceAll("á", "a");
 		base = base.replaceAll("é", "e");
 		base = base.replaceAll("í", "i");
 		base = base.replaceAll("ó", "o");
-		base = base.replaceAll("ú", "u");
+		base = base.replaceAll("[ú,ü]", "u");
 		String invertida = "";
 		for (int i = base.length() - 1; i >= 0; i--) {
 			invertida += base.charAt(i);
