@@ -90,7 +90,7 @@ public class U6_R3 {
 	}
 
 	public static boolean comprobarPalindromo(String cadena) {
-		String base = cadena.toLowerCase().replaceAll("[' ',¡,!,¿,?,',','.']", "");
+		String base = cadena.toLowerCase().replaceAll("[' ',¡,!,¿,?,',','.',':',';']", "");
 		base = base.replaceAll("á", "a");
 		base = base.replaceAll("é", "e");
 		base = base.replaceAll("í", "i");
