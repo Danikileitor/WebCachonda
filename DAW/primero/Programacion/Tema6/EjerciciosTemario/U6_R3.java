@@ -76,17 +76,7 @@ public class U6_R3 {
 	}
 
 	public static String quitarVocales(String palabra) {
-		String cad = palabra.replace("A", "");
-		cad = cad.replace("a", "");
-		cad = cad.replace("E", "");
-		cad = cad.replace("e", "");
-		cad = cad.replace("i", "");
-		cad = cad.replace("i", "");
-		cad = cad.replace("O", "");
-		cad = cad.replace("o", "");
-		cad = cad.replace("U", "");
-		cad = cad.replace("u", "");
-		return cad;
+		return palabra.replaceAll("[A,E,I,O,U,a,e,i,o,u,Á,É,Í,Ó,Ú,á,é,í,ó,ú,Ü,ü]", "");
 	}
 
 	public static int contarPalabra(String frase, String palabra) {
