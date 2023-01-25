@@ -5,10 +5,12 @@ public class Plantilla {
 	static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// Declarar variables
+		menu();
+	}
+
+	public static void menu() {
 		int menu = 1;
 		char salir = 'n';
-		// Desarrollo del programa
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
 				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
@@ -16,7 +18,7 @@ public class Plantilla {
 				menu++;
 			} else {
 				do {
-					menu();
+					opcionesMenu();
 					menu = teclado.nextInt();
 					switch (menu) {
 						case 0:
@@ -33,7 +35,7 @@ public class Plantilla {
 		} while (salir == 'n');
 	}
 
-	public static void menu() {
+	public static void opcionesMenu() {
 		System.out.println("#################################################################################");
 		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Hola mundo                                                                #");
