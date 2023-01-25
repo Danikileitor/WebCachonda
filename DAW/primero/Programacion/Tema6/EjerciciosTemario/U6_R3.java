@@ -88,7 +88,7 @@ public class U6_R3 {
 		}
 		return contador;
 	}
-s
+
 	public static boolean comprobarPalindromo(String cadena) {
 		String base = cadena.toLowerCase().replaceAll("[' ',¡,!,¿,?,',','.',':',';']", "");
 		base = base.replaceAll("á", "a");
