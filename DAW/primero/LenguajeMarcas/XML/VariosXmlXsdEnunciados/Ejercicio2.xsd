@@ -6,7 +6,7 @@
                 <xs:element name="vehiculo">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nombre" type="xs:string" maxOccurs="unbounded" minOccurs="1" />
+                            <xs:element name="nombre" type="tiponombre" maxOccurs="unbounded" minOccurs="1" />
                             <xs:element name="modelo" type="xs:string" />
                             <xs:element name="fabricacion">
                                 <xs:complexType>
