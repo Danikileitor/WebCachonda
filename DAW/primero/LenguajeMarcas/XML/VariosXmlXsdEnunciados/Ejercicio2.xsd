@@ -74,4 +74,10 @@
             <xs:maxInclusive value="2017"></xs:maxInclusive>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="tiponombre">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5"></xs:minLength>
+            <xs:maxLength value="20"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
