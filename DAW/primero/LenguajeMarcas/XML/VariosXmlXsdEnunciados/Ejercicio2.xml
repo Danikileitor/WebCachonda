@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+EJERCICIO 2.  Escribir un XML Schema para el siguiente documento XML, e incluir los cambios necesarios en el mismo para referenciar al esquema creado.
+Se debe cumplir también lo siguiente: 
+    • Los elementos “vehículo”, “nombre” y “modificación” deben aparecer mínimo una vez, y el máximo no está limitado. El resto de los elementos deben aparecer 1 vez.
+    • Todos los elementos que aparecen en el documento instancia de abajo son obligatorios y deben aparecer siempre en el mismo orden.
+    • Los elementos que contienen información de fecha hay que validar el día, mes y el año entre 1500 y 2017.
+-->
+<vehiculos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Ejercicio2.xsd">
+    <vehiculo>
+        <nombre>Count Zero</nombre>
+        <modelo>Series I, 80"</modelo>
+        <fabricacion>
+            <inicio>
+                <dia>21</dia>
+                <mes>July</mes>
+                <anyo>1949</anyo>
+            </inicio>
+            <fin>
+                <dia>9</dia>
+                <mes>August</mes>
+                <anyo>1949</anyo>
+            </fin>
+        </fabricacion>
+        <modificaciones>
+            <modificacion>Change Engine</modificacion>
+            <modificacion>Change pedals</modificacion>
+            <modificacion>Change gearbox</modificacion>
+            <modificacion>Fit Rollcage</modificacion>
+        </modificaciones>
+    </vehiculo>
+</vehiculos>

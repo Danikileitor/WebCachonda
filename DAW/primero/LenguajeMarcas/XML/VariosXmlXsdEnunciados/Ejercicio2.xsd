@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vehiculos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" maxOccurs="unbounded" minOccurs="1" />
+                            <xs:element name="modelo" type="xs:string" />
+                            <xs:element name="fabricacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="inicio">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dia" type="tipodia" />
+                                                    <xs:element name="mes" type="tipomes" />
+                                                    <xs:element name="anyo" type="tipoanyo" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="fin">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dia" type="tipodia" />
+                                                    <xs:element name="mes" type="tipomes" />
+                                                    <xs:element name="anyo" type="tipoanyo" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="modificaciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="modificacion" maxOccurs="unbounded" minOccurs="1" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- DECLARACIÓN DE RESTRICCIONES -->
+    <xs:simpleType name="tipodia">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="30"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipomes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="January"></xs:enumeration>
+            <xs:enumeration value="February"></xs:enumeration>
+            <xs:enumeration value="March"></xs:enumeration>
+            <xs:enumeration value="April"></xs:enumeration>
+            <xs:enumeration value="May"></xs:enumeration>
+            <xs:enumeration value="June"></xs:enumeration>
+            <xs:enumeration value="July"></xs:enumeration>
+            <xs:enumeration value="August"></xs:enumeration>
+            <xs:enumeration value="September"></xs:enumeration>
+            <xs:enumeration value="October"></xs:enumeration>
+            <xs:enumeration value="November"></xs:enumeration>
+            <xs:enumeration value="December"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoanyo">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1500"></xs:minInclusive>
+            <xs:maxInclusive value="2017"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
