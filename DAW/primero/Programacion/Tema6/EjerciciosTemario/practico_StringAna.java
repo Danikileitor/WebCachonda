@@ -65,11 +65,9 @@ public class practico_StringAna {
 	}
 
 	public static String pedirTexto() {
-		String frase = new String("");
-
+		teclado.nextLine();
 		System.out.println("Dame el texto al traducir");
-		frase = teclado.nextLine();
-		return frase;
+		return teclado.nextLine().trim();
 	}
 
 	public static void mostrar() {
