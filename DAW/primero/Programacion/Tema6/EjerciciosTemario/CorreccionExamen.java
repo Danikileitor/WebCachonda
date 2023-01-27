@@ -33,7 +33,7 @@ public class CorreccionExamen {
 							descodificarMorse();
 							break;
 						case 3:
-							//tablaPalabras();
+							tablaPalabras();
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -89,31 +89,6 @@ public class CorreccionExamen {
 		}
 		System.out.println(frase);
 	}
-/* 
-	public static String decode(String aux, String aux2, String codificada, int i, int pos) {
-		aux = codificada.substring(0, i);
-		codificada = codificada.substring(i + 1);
-		for (int k = 0; k < morse.length; k++) {
-			if (morse[k] == aux) {
-				pos = k;
-			}
-		}
-		aux2 = "";
-		aux2 += mayusNum.charAt(pos);
-		return aux.replaceAll(aux, aux2);
-	}
-
-	public static String decodeLast(String aux, String aux2, String codificada, int pos) {
-		aux = codificada;
-		for (int k = 0; k < morse.length; k++) {
-			if (morse[k] == aux) {
-				pos = k;
-			}
-		}
-		aux2 = "";
-		aux2 += mayusNum.charAt(pos);
-		return aux.replaceAll(aux, aux2);
-	}
 
 	public static void tablaPalabras() {
 		String frase = new String("");
@@ -137,6 +112,6 @@ public class CorreccionExamen {
 		for (int i = 1; i < longitudes.length; i++) {
 			System.out.println("Palabras con " + (i) + " letras: " + longitudes[i]);
 		}
-	}*/
+	}
 
 }// Fin clase
