@@ -44,16 +44,6 @@ public class practico_StringAna {
 
 	public static void pasarAMorse(String cadena) {
 		// Convertirmos una cadena a codigo Morse según tabla del ejercicio
-		String frase = cadena.toUpperCase();
-		String codificada = new String("");
-		for (int i = 0; i < frase.length(); i++) {
-			if (Character.isWhitespace(frase.charAt(i))) {
-				i++;
-			}
-			codificada += morse[mayusNum.toString().indexOf(frase.charAt(i))];
-			codificada += "   ";
-		}
-		System.out.println(codificada.trim());
 	}
 
 	public static void leerDeMorse(String cadena) {
