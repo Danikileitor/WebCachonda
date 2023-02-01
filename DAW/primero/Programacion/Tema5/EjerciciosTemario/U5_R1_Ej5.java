@@ -86,6 +86,9 @@ public class U5_R1_Ej5 {
 		int boleto[] = new int[6];
 		int ganador[] = new int[6];
 		for (int i = 0; i < ganador.length; i++) {
+			ganador[i] = 51+i;
+		}
+		for (int i = 0; i < ganador.length; i++) {
 			do {
 				ganador[i] = generarAleatorio(0, 50);
 			} while (estaRepetido(ganador[i], ganador, i));
