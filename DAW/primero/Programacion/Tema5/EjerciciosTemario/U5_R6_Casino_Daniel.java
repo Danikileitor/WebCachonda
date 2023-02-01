@@ -3,7 +3,7 @@
 import java.util.Arrays;
 import java.util.Scanner; //Importación de paquetes
 
-public class U5_R1_Ej5 {
+public class U5_R6_Casino_Daniel {
 	static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -40,12 +40,12 @@ public class U5_R1_Ej5 {
 
 	public static void menu() {
 		System.out.println();
-		System.out.println("#################################################################################");
-		System.out.println("# Bienvenido a este maravilloso programa, elige una de las siguientes opciones: #");
-		System.out.println("# [1] Crear un array con 100 enteros aleatorios y ordenarlos                    #");
-		System.out.println("# [2] Echar un boleto de la primitiva                                           #");
-		System.out.println("# [0] Salir                                                                     #");
-		System.out.println("#################################################################################");
+		System.out.println("###############################################################################");
+		System.out.println("# Bienvenido a este maravilloso casino, elige una de las siguientes opciones: #");
+		System.out.println("# [1] Crear un array con 100 enteros aleatorios y ordenarlos                  #");
+		System.out.println("# [2] Echar un boleto de la primitiva                                         #");
+		System.out.println("# [0] Salir                                                                   #");
+		System.out.println("###############################################################################");
 	}
 	
 	public static int generarAleatorio(int min, int max) {
