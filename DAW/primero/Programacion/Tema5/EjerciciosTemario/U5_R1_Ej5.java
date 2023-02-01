@@ -81,8 +81,6 @@ public class U5_R1_Ej5 {
 	}
 
 	public static void ejercicio2() {
-		//metodo que recibe 2 enteros, uno se pide al usuario y otro son 6 números generados de forma aleatoria de rango [0, 50] que se corresponden con el número ganador de la primitiva.
-		//devolver el número de aciertos del usuario, ningún array puede tener números repetidos
 		int boleto[] = new int[6];
 		int ganador[] = new int[6];
 		for (int i = 0; i < ganador.length; i++) {
