@@ -93,6 +93,7 @@ public class U5_R1_Ej5 {
 				ganador[i] = generarAleatorio(0, 50);
 			} while (estaRepetido(ganador[i], ganador, i));
 		}
+		Arrays.sort(ganador);
 		for (int i = 0; i < boleto.length; i++) {
 			boleto[i] = 51+i;
 		}
@@ -103,7 +104,12 @@ public class U5_R1_Ej5 {
 				boleto[i] = pedirNum();
 			} while (boleto[i] < 0 || boleto[i] > 50 || estaRepetido(boleto[i], boleto, i));
 		}
+		System.out.printf("Los números premiados de la primitiva son: ");
+		for (int i = 0; i < ganador.length; i++) {
+			System.out.print(ganador[i] + " / ");
+		}
 		System.out.println();
+		System.out.println("El número de aciertos que has consegido es de: " + comprobarAciertos(boleto, ganador));
 	}
 
 	public static boolean estaRepetido(int numero, int[] numeros, int pos) {
@@ -117,6 +123,18 @@ public class U5_R1_Ej5 {
 			}
 		}
 		return repetido;
+	}
+
+	public static int comprobarAciertos(int[] numeros1, int[] numeros2) {
+		int aciertos = 0;
+		for (int i = 0; i < numeros1.length; i++) {
+			for (int j = 0; j < numeros2.length; j++) {
+				if (numeros1[i] == numeros2[j]) {
+					aciertos++;
+				}
+			}
+		}
+		return aciertos;
 	}
 
 }// Fin clase
