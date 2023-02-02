@@ -40,8 +40,8 @@
     <!-- DECLARACIÓN DE RESTRICCIONES -->
     <xs:simpleType name="dni">
         <xs:restriction base="xs:string">
-            <xs:length value="9"/>
-            <xs:pattern value="\d{8}[A-Za-z]"/>
+            <xs:length value="9" />
+            <xs:pattern value="\d{8}[A-Za-z]" />
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
