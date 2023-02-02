@@ -1,0 +1,10 @@
+<!ELEMENT liga (equipo+)>
+<!ELEMENT equipo (nombre,jugadores)>
+<!ELEMENT jugadores (nombre,edad,nacionalidad)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+
+<!ATTLIST liga xmlns:E ID #REQUIRED>
+<!ATTLIST liga xmlns:J ID #REQUIRED>
