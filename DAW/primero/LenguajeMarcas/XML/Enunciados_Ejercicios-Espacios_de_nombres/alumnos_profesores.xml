@@ -3,8 +3,7 @@
 Hay varios alumnos y varios profesores. Definir un nombre de espacio para cada uno de ellos
 alumnos_profesores.xml.
 Asociarle una definición DTD-->
-<!DOCTYPE asistentes SYSTEM "alumnos_profesores.dtd">
-<asistentes xmlns:P="profesores" xmlns:A="alumnos">
+<asistentes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="alumnos_profesores.xsd" xmlns:P="profesores" xmlns:A="alumnos">
     <profesores>
         <profesor>
             <nombre>Profesor 1</nombre>
