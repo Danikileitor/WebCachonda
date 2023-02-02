@@ -1,3 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Enunciado dado una relación de asistentes formada por alumnos y profesores, y cada uno de ellos tiene nombre.
-    Hay varios alumnos y varios profesores. Definir un nombre de espacio para cada uno de ellos alumnos_profesores.xml.
-    Asociarle una definición DTD-->
+Hay varios alumnos y varios profesores. Definir un nombre de espacio para cada uno de ellos
+alumnos_profesores.xml.
+Asociarle una definición DTD-->
+<!DOCTYPE asistentes SYSTEM "alumnos_profesores.dtd">
+<asistentes xmlns:P="profesores" xmlns:A="alumnos">
+    <profesores>
+        <profesor>
+            <nombre>Profesor 1</nombre>
+        </profesor>
+        <profesor>
+            <nombre>Profesor 2</nombre>
+        </profesor>
+    </profesores>
+    <alumnos>
+        <alumno>
+            <nombre>Alumno 1</nombre>
+        </alumno>
+        <alumno>
+            <nombre>Alumno 2</nombre>
+        </alumno>
+    </alumnos>
+</asistentes>

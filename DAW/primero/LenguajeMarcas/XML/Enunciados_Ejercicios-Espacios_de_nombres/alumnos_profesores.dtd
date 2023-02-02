@@ -1,0 +1,11 @@
+<!ELEMENT asistentes (profesores,alumnos)>
+<!ELEMENT profesores (profesor+)>
+<!ELEMENT profesor (nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombre)>
+
+<!ATTLIST asistentes
+    xmlns:P CDATA #FIXED "profesores"
+    xmlns:A CDATA #FIXED "alumnos"
+>
