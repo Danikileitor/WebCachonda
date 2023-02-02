@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<matricula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio4.xsd">
+    <personal>
+        <dni>99223366M</dni>
+        <nombre>Juan Pardo Martín</nombre>
+        <titulacion>Ingeniería Informática</titulacion>
+        <curso_academico>1997/1998</curso_academico>
+        <domicilios>
+            <domicilio tipo="familiar">
+                <nombre>C/ Principal nº1</nombre>
+            </domicilio>
+            <domicilio tipo="habitual">
+                <nombre>C/ Secundaria nº2</nombre>
+            </domicilio>
+        </domicilios>
+    </personal>
+    <pago>
+        <tipo_matricula>Matrícula Ordinaria</tipo_matricula>
+    </pago>
+</matricula>
