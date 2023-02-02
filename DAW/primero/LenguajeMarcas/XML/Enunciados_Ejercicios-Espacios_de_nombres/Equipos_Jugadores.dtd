@@ -6,5 +6,7 @@
 <!ELEMENT edad (#PCDATA)>
 <!ELEMENT nacionalidad (#PCDATA)>
 
-<!ATTLIST liga xmlns:E ID #REQUIRED>
-<!ATTLIST liga xmlns:J ID #REQUIRED>
+<!ATTLIST liga
+    xmlns:E CDATA #FIXED "Equipo"
+    xmlns:J CDATA #FIXED "Jugador"
+>
