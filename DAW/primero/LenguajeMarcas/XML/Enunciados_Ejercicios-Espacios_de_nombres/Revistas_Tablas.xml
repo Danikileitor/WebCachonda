@@ -1,0 +1,3 @@
+<!--EJERCICIO crear dos espacios de nombres uno para los elementos de una revista y otro para los elementos de html, con una tabla sencilla.
+    La revista forma el raiz, tiene un title, y dentro de las celdas de la tabla va el autor, precio, paginas, fecha también de la revista.
+    Revistas_Tablas.xml-->

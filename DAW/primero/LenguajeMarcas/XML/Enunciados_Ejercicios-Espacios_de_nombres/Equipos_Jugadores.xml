@@ -1,0 +1,21 @@
+<!--Crear una DTD, Equipos_Jugadores.dtd  asociada a este fichero  con nombres de espacios, llamado Equipos_Jugadores.xml.-->
+<?xml version="1.0" encoding="UTF-8"?>
+<liga xmlns:E="Equipo" xmlns:J="Jugador">
+    <equipo>
+        <nombre>equipo1</nombre>
+        <jugadores>
+            <nombre>jugador1</nombre>
+            <edad>20</edad>
+            <nacionalidad>española</nacionalidad>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre>equipo2</nombre>
+        <jugadores>
+            <nombre>jugador2</nombre>
+            <edad>20</edad>
+            <nacionalidad>española</nacionalidad>
+        </jugadores>
+    </equipo>
+</liga>
