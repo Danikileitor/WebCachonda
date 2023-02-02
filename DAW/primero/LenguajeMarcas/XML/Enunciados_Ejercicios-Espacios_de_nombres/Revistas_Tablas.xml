@@ -13,10 +13,10 @@
                 <datos:td>Fecha</datos:td>
             </html:tr>
             <html:tr>
-                <html:td>Juan Pérez</html:td>
+                <html:td>Daniel Guerra</html:td>
                 <html:td>20€</html:td>
                 <html:td>100</html:td>
-                <html:td>01/01/2022</html:td>
+                <html:td>02/02/2023</html:td>
             </html:tr>
         </html:table>
     </revista>
