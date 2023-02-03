@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--EJERCICIO 7. Escribe un Schema XML para el siguiente documento XML.
+Ten en cuenta las siguientes restricciones:
+• La fecha de publicación debe ser entre el siglo XVII y el siglo XX. 
+• La fecha de edición debe ser del siglo XIX o posterior 
+• Las estanterías están codificadas de la A a la Z 
+• Las filas están numeradas de la 1 a la 10.-->
+<lista_libros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LibrosEstanterias.xsd">
+    <libro>
+        <titulo>El Ingenioso Hidalgo Don Quixote de la Mancha</titulo>
+        <autor>Miguel de Cervantes Saavedra</autor>
+        <publicacion>1605</publicacion>
+        <edicion>2009</edicion>
+        <estanteria>B</estanteria>
+        <fila>7</fila>
+    </libro>
+    <libro>
+        <titulo>El libro del buen amor</titulo>
+        <autor>Juan Ruiz Arcipreste de Hita</autor>
+        <publicacion>1630</publicacion>
+        <edicion>1869</edicion>
+        <estanteria>M</estanteria>
+        <fila>9</fila>
+    </libro>
+</lista_libros>
