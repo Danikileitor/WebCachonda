@@ -116,6 +116,7 @@ public class U5_R6_Casino_Daniel {
 			}
 			if (numero == numeros[i]) {
 				repetido = true;
+				break;
 			}
 		}
 		return repetido;
