@@ -85,6 +85,7 @@ public class U5_R6_Casino_Daniel {
 		int ganador[] = new int[6];
 		for (int i = 0; i < ganador.length; i++) {
 			ganador[i] = 51+i;
+			boleto[i] = 51+i;
 		}
 		for (int i = 0; i < ganador.length; i++) {
 			do {
@@ -92,9 +93,6 @@ public class U5_R6_Casino_Daniel {
 			} while (estaRepetido(ganador[i], ganador, i));
 		}
 		Arrays.sort(ganador);
-		for (int i = 0; i < boleto.length; i++) {
-			boleto[i] = 51+i;
-		}
 		System.out.println("Para participar en la primitiva, indique los 6 números con los que participarás:");
 		for (int i = 0; i < boleto.length; i++) {
 			do {
