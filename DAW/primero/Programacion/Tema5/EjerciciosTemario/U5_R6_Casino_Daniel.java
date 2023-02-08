@@ -88,7 +88,7 @@ public class U5_R6_Casino_Daniel {
 		}
 		for (int i = 0; i < ganador.length; i++) {
 			do {
-				ganador[i] = generarAleatorio(0, 50);
+				ganador[i] = generarAleatorio(1, 49);
 			} while (estaRepetido(ganador[i], ganador, i));
 		}
 		Arrays.sort(ganador);
@@ -98,9 +98,9 @@ public class U5_R6_Casino_Daniel {
 		System.out.println("Para participar en la primitiva, indique los 6 números con los que participarás:");
 		for (int i = 0; i < boleto.length; i++) {
 			do {
-				System.out.println("Introduzca su número [" + (i+1) + "] del 0 al 50:");
+				System.out.println("Introduzca su número [" + (i+1) + "] del 1 al 49:");
 				boleto[i] = pedirNum();
-			} while (boleto[i] < 0 || boleto[i] > 50 || estaRepetido(boleto[i], boleto, i));
+			} while (boleto[i] < 1 || boleto[i] > 49 || estaRepetido(boleto[i], boleto, i));
 		}
 		System.out.printf("Los números premiados de la primitiva son: ");
 		for (int i = 0; i < ganador.length; i++) {
