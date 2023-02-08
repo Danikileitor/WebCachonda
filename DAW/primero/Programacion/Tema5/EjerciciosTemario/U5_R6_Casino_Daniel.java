@@ -84,8 +84,8 @@ public class U5_R6_Casino_Daniel {
 		int boleto[] = new int[6];
 		int ganador[] = new int[6];
 		for (int i = 0; i < ganador.length; i++) {
-			ganador[i] = 51+i;
-			boleto[i] = 51+i;
+			ganador[i] = 50+i;
+			boleto[i] = 50+i;
 		}
 		for (int i = 0; i < ganador.length; i++) {
 			do {
