@@ -43,4 +43,13 @@ public class Plantilla {
 		System.out.println("#################################################################################");
 	}
 
+	public static int generarAleatorio(int min, int max) {
+		return (int) Math.floor(Math.random() * (max - min + 1) + min);
+	}
+
+	public static int pedirNum() {
+		teclado.nextLine();
+		return teclado.nextInt();
+	}
+
 }// Fin clase
