@@ -25,6 +25,9 @@ public class U5_R2_19 {
 						case 0:
 							continue;
 						case 1:
+							carrera();
+							break;
+						case 2:
 							System.out.println("Hola mundo");
 							break;
 						default:
@@ -52,6 +55,59 @@ public class U5_R2_19 {
 	public static int pedirNum() {
 		teclado.nextLine();
 		return teclado.nextInt();
+	}
+
+	public static void carrera() {
+		System.out.println("Vaya introduciendo los dorsales de los participantes según su llegada a meta, introduce [-1] para finalizar");
+		int dorsal;
+		String dorsales = "", clasificacion[];
+		do {
+			System.out.println("Introduce el siguiente dorsal:");
+			dorsal = pedirNum();
+			if (dorsal == -1) {
+				break;
+			}
+			dorsales += dorsal + " ";
+		} while (dorsal != -1);
+		//Generamos la tabla de clasificación:
+		clasificacion = dorsales.split(" ");
+		//Comprobamos edad:
+		System.out.println("Introduca los dorsales de los participantes menores de edad, introduce [-1] para finalizar");
+		for (int i = 0; i < clasificacion.length; i++) {
+			System.out.println("Introduce el siguiente dorsal:");
+			dorsal = pedirNum();
+			if (dorsal == -1) {
+				break;
+			}
+			actualizarMenor(clasificacion, dorsal);
+		}
+		//Comprobar doping:
+		System.out.println("Introduca los dorsales de los participantes que hayan dado positivo en el test antidopaje, introduce [-1] para finalizar");
+		for (int i = 0; i < clasificacion.length; i++) {
+			System.out.println("Introduce el siguiente dorsal:");
+			dorsal = pedirNum();
+			if (dorsal == -1) {
+				break;
+			}
+		}
+		//Comprobar moroso:
+		System.out.println("Introduca los dorsales de los participantes que no pagaron su inscripción, introduce [-1] para finalizar");
+		for (int i = 0; i < clasificacion.length; i++) {
+			System.out.println("Introduce el siguiente dorsal:");
+			dorsal = pedirNum();
+			if (dorsal == -1) {
+				break;
+			}
+		}
+		//Resultado
+		System.out.println("El resultado final de la clasificación es:");
+		for (int i = 0; i < clasificacion.length; i++) {
+			System.out.println(clasificacion[i]);
+		}
+	}
+
+	public static void actualizarMenor(String[] clasificacion, int dorsal) {
+		
 	}
 
 }// Fin clase
