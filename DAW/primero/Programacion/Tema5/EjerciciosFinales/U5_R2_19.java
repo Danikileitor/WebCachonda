@@ -89,7 +89,7 @@ public class U5_R2_19 {
 			if (dorsal == -1) {
 				break;
 			}
-			expulsar(clasificacion, dorsal);
+			clasificacion = expulsar(clasificacion, dorsal);
 		}
 		//Comprobar moroso:
 		System.out.println("Introduca los dorsales de los participantes que no pagaron su inscripción, introduce [-1] para finalizar");
@@ -99,6 +99,7 @@ public class U5_R2_19 {
 			if (dorsal == -1) {
 				break;
 			}
+			clasificacion = moverImpagos(clasificacion, dorsal);
 		}
 		//Resultado
 		System.out.println("El resultado final de la clasificación es:");
@@ -120,15 +121,31 @@ public class U5_R2_19 {
 		}
 	}
 
-	public static void expulsar(String[] clasificacion, int dorsal) {
-		String aux = "",aux2[];
+	public static String[] expulsar(String[] clasificacion, int dorsal) {
+		int pos = 0;
+		String aux = "", clasificacionNueva[] = new String[clasificacion.length-1];
 		aux += dorsal;
-		for (int i = 0; i < clasificacion.length; i++) {
-			if (clasificacion[i].equals(aux) && i != 0) {
-				clasificacion[i-1] = aux;
-				break;
+		for (int i = 0; i < clasificacionNueva.length; i++) {
+			if (clasificacion[i].equals(aux)) {
+				pos++;
 			}
+			clasificacionNueva[i] = clasificacion[i+pos];
 		}
+		return clasificacionNueva;
+	}
+
+	public static String[] moverImpagos(String[] clasificacion, int dorsal) {
+		int pos = 0;
+		String aux = "", clasificacionNueva[] = new String[clasificacion.length];
+		aux += dorsal;
+		for (int i = 0; i < clasificacionNueva.length-1; i++) {
+			if (clasificacion[i].equals(aux)) {
+				pos++;
+			}
+			clasificacionNueva[i] = clasificacion[i+pos];
+		}
+		clasificacionNueva[clasificacionNueva.length-1] = aux;
+		return clasificacionNueva;
 	}
 
 }// Fin clase
