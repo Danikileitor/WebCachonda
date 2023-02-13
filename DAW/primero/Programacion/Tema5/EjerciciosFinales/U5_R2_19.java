@@ -89,6 +89,7 @@ public class U5_R2_19 {
 			if (dorsal == -1) {
 				break;
 			}
+			expulsar(clasificacion, dorsal);
 		}
 		//Comprobar moroso:
 		System.out.println("Introduca los dorsales de los participantes que no pagaron su inscripción, introduce [-1] para finalizar");
@@ -107,7 +108,27 @@ public class U5_R2_19 {
 	}
 
 	public static void actualizarMenor(String[] clasificacion, int dorsal) {
-		
+		String aux = "",aux2;
+		aux += dorsal;
+		for (int i = 0; i < clasificacion.length; i++) {
+			if (clasificacion[i].equals(aux) && i != 0) {
+				aux2=clasificacion[i-1];
+				clasificacion[i-1] = aux;
+				clasificacion[i] = aux2;
+				break;
+			}
+		}
+	}
+
+	public static void expulsar(String[] clasificacion, int dorsal) {
+		String aux = "",aux2[];
+		aux += dorsal;
+		for (int i = 0; i < clasificacion.length; i++) {
+			if (clasificacion[i].equals(aux) && i != 0) {
+				clasificacion[i-1] = aux;
+				break;
+			}
+		}
 	}
 
 }// Fin clase
