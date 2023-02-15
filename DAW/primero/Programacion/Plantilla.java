@@ -1,4 +1,5 @@
 //Daniel Marcos Guerra Gómez
+import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
 public class Plantilla {
@@ -48,8 +49,19 @@ public class Plantilla {
 	}
 
 	public static int pedirNum() {
-		teclado.nextLine();
-		return teclado.nextInt();
+		boolean error;
+		int num = 0;
+		do {
+			error = false;
+			teclado.nextLine();
+			try {
+				num = teclado.nextInt();
+			} catch (InputMismatchException e) {
+				System.out.println("¡Escribe un número entero!");
+				error = true;
+			}
+		} while (error);
+		return num;
 	}
 
 }// Fin clase
