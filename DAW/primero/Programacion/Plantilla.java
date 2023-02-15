@@ -20,7 +20,7 @@ public class Plantilla {
 			} else {
 				do {
 					opcionesMenu();
-					menu = teclado.nextInt();
+					menu = pedirNum();
 					switch (menu) {
 						case 0:
 							continue;
@@ -33,7 +33,7 @@ public class Plantilla {
 					}// Fin switch
 				} while (menu != 0);
 			}
-		} while (salir == 'n');
+		} while (salir != 's');
 	}
 
 	public static void opcionesMenu() {
@@ -48,18 +48,34 @@ public class Plantilla {
 		return (int) Math.floor(Math.random() * (max - min + 1) + min);
 	}
 
+	public static char pedirLetra() {
+		boolean error;
+		char letra = 'n';
+		do {
+			error = false;
+			try {
+				letra = teclado.next().charAt(0);
+			} catch (InputMismatchException e) {
+				System.out.println("¡Escribe una letra!");
+				error = true;
+			}
+			teclado.nextLine();
+		} while (error);
+		return Character.toLowerCase(letra);
+	}
+
 	public static int pedirNum() {
 		boolean error;
 		int num = 0;
 		do {
 			error = false;
-			teclado.nextLine();
 			try {
 				num = teclado.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println("¡Escribe un número entero!");
 				error = true;
 			}
+			teclado.nextLine();
 		} while (error);
 		return num;
 	}
