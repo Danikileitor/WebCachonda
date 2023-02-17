@@ -5,6 +5,12 @@ import java.util.Scanner; //Importación de paquetes
 public class CorreccionExamen {
 	static String morse[] = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----" };
 	static String mayusNum[] = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+	public static final String ROJO = "\u001B[31m";
+	public static final String VERDE = "\u001B[32m";
+	public static final String AMARILLO = "\u001B[33m";
+	public static final String AZUL = "\u001B[34m";
+	public static final String RESET = "\u001B[0m";
+	static String colores[] = {ROJO, VERDE, AMARILLO, AZUL};
 
 	public static void main(String[] args) {
 		menu();
@@ -62,6 +68,7 @@ public class CorreccionExamen {
 		frase = teclado.nextLine().trim().toUpperCase();
 		String[] palabras = frase.split(" ");
 		for (int i = 0; i < palabras.length; i++) {
+			codificada += colores[i%4];
 			String[] letras = palabras[i].split("");
 			for (int j = 0; j < letras.length; j++) {
 				for (int k = 0; k < mayusNum.length; k++) {
@@ -70,9 +77,9 @@ public class CorreccionExamen {
 					}
 				}
 			}
-			codificada += "  ";
+			codificada += "  " + RESET;
 		}
-		System.out.println(codificada.trim());
+		System.out.println(codificada);
 	}
 
 	public static void descodificarMorse() {
