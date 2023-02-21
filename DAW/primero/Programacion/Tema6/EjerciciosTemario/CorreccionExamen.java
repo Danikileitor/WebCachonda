@@ -107,25 +107,24 @@ public class CorreccionExamen {
 	}
 
 	public static void tablaPalabras() {
-		String frase = new String("");
-		int longitud = 0;
-		int longitudes[] = new int[8];
+		String frase;
+		String palabras[];
+		int longitudes[] = new int[24];
 		for (int i = 0; i < longitudes.length; i++) {
 			longitudes[i] = 0;
 		}
 		System.out.println("Introduce una frase:");
 		frase = pedirFrase();
-		for (int i = 0; i < frase.length(); i++) {
-			if (Character.isWhitespace(frase.charAt(i))) {
-				longitudes[longitud]++;
-				longitud = -1;
-			}
-			longitud++;
+		palabras = frase.split(" ");
+		for (int i = 0; i < palabras.length; i++) {
+			longitudes[palabras[i].length()]++;
 		}
-		frase = frase.substring(frase.lastIndexOf(' '));
-		longitudes[frase.length() + 1]++;
-		for (int i = 1; i < longitudes.length; i++) {
-			System.out.println("Palabras con " + (i) + " letras: " + longitudes[i]);
+		for (int i = 0; i < longitudes.length; i++) {
+			if (longitudes[i] == 0) {
+				continue;
+			} else {
+				System.out.println("Palabras con " + (i) + " letras: " + longitudes[i]);
+			}
 		}
 	}
 
