@@ -87,16 +87,25 @@ public class U5_R2_Worder {
 
 	public static void insertarPalabras() {
 		String palabra = "";
+		Boolean repetida = false;
 		do {
 			System.out.println("Inserta una palabra de 5 letras para añadirla al almacén de palabras (F para salir)");
 			palabra = pedirPalabra();
-			if (!palabra.equals("F") && palabra.length() != 5) {
+			for (int i = 0; i < totalPalabras; i++) {
+				if (palabras[i].equals(palabra)) {
+					repetida = true;
+					break;
+				}
+			}
+			if (repetida) {
+				System.out.printf("La palabra [%s] ya está en el almacén de palabras!%n", palabra);
+			} else if (!palabra.equals("F") && palabra.length() != 5) {
 				do {
 					System.out.println("¡La palabra ha de ser de 5 letras!");
 					palabra = pedirPalabra();
 				} while (!palabra.equals("F") && palabra.length() != 5);
 			}
-			if (!palabra.equals("F")) {
+			if (!palabra.equals("F") && !repetida) {
 				addPalabra(palabra);
 			}
 		} while (!palabra.equals("F"));
