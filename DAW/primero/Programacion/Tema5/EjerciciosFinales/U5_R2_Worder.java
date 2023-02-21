@@ -129,6 +129,7 @@ public class U5_R2_Worder {
 			}
 		}
 		if (secreta.equals(palabra)) {
+			darPista(secreta, intentos, intento);
 			victoria(secreta, intento);
 		} else {
 			derrota(secreta);
@@ -143,7 +144,7 @@ public class U5_R2_Worder {
 	}
 
 	public static void colorear(String secreta, String palabra) {
-		for (int i = 0; i < palabras.length; i++) {
+		for (int i = 0; i < palabra.length(); i++) {
 			if (secreta.indexOf(palabra.charAt(i)) != -1) {
 				if (palabra.charAt(i) == secreta.charAt(i)) {
 					System.out.print(VERDE + palabra.charAt(i));
