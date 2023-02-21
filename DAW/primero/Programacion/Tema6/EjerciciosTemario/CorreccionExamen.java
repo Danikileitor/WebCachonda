@@ -119,7 +119,7 @@ public class CorreccionExamen {
 		for (int i = 0; i < palabras.length; i++) {
 			longitudes[palabras[i].length()]++;
 		}
-		for (int i = 0; i < longitudes.length; i++) {
+		for (int i = 1; i < longitudes.length; i++) {
 			if (longitudes[i] == 0) {
 				continue;
 			} else {
