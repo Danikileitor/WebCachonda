@@ -3,6 +3,7 @@
 import java.util.Scanner; //Importación de paquetes
 
 public class CorreccionExamen {
+	static Scanner teclado = new Scanner(System.in);
 	static String morse[] = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----" };
 	static String mayusNum[] = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 	public static final String ROJO = "\u001B[31m";
@@ -19,7 +20,6 @@ public class CorreccionExamen {
 	public static void menu() {
 		int menu = 1;
 		char salir = 'n';
-		Scanner teclado = new Scanner(System.in);
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
 				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
@@ -29,6 +29,7 @@ public class CorreccionExamen {
 				do {
 					opcionesMenu();
 					menu = teclado.nextInt();
+					teclado.nextLine();
 					switch (menu) {
 						case 0:
 							continue;
@@ -60,12 +61,15 @@ public class CorreccionExamen {
 		System.out.println("###########################################################################");
 	}
 
+	public static String pedirFrase() {
+		return teclado.nextLine().trim();
+	}
+
 	public static void codificarMorse() {
 		String frase = new String("");
 		String codificada = new String("");
-		Scanner teclado = new Scanner(System.in);
 		System.out.println("Introduce una frase en español para codificarla en código morse:");
-		frase = teclado.nextLine().trim().toUpperCase();
+		frase = pedirFrase().toUpperCase();
 		String[] palabras = frase.split(" ");
 		for (int i = 0; i < palabras.length; i++) {
 			codificada += colores[i%4];
@@ -85,9 +89,8 @@ public class CorreccionExamen {
 	public static void descodificarMorse() {
 		String codificada = new String("");
 		String frase = new String("");
-		Scanner teclado = new Scanner(System.in);
 		System.out.println("Introduce una frase en código morse (cada letra separada por solo 1 espacio y cada palabra por 3 espacios) para descodificarla al español:");
-		codificada = teclado.nextLine().trim();
+		codificada = pedirFrase();
 		String[] palabras = codificada.split("   ");
 		for (int i = 0; i < palabras.length; i++) {
 			String[] letras = palabras[i].split(" ");
@@ -105,14 +108,13 @@ public class CorreccionExamen {
 
 	public static void tablaPalabras() {
 		String frase = new String("");
-		Scanner teclado = new Scanner(System.in);
 		int longitud = 0;
 		int longitudes[] = new int[8];
 		for (int i = 0; i < longitudes.length; i++) {
 			longitudes[i] = 0;
 		}
 		System.out.println("Introduce una frase:");
-		frase = teclado.nextLine().trim();
+		frase = pedirFrase();
 		for (int i = 0; i < frase.length(); i++) {
 			if (Character.isWhitespace(frase.charAt(i))) {
 				longitudes[longitud]++;
