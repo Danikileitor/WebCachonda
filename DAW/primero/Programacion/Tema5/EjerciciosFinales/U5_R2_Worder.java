@@ -129,10 +129,14 @@ public class U5_R2_Worder {
 		String intentos[] = new String[6];
 		int intento = 0;
 		limpiar();
+		System.out.println("Adivina la palabra de 5 letras, tienes 6 intentos.");
 		while (!secreta.equals(palabra) && intento < 6) {
 			intento++;
 			do {
 				palabra = pedirPalabra();
+				if (palabra.length() != 5) {
+					System.out.println("¡La palabra ha de ser de 5 letras!");
+				}
 			} while (palabra.length() != 5);
 			intentos[intento-1] = palabra;
 			if (!secreta.equals(palabra)) {
