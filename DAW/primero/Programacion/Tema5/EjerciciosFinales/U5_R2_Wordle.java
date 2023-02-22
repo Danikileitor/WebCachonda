@@ -2,7 +2,7 @@
 //Aparte añadir un segundo ejercicio con un array bidimensional que sea un cuadrado cuya diagonal sea 1 y el resto de casillas random (2-20)
 import java.util.Scanner; //Importación de paquetes
 
-public class U5_R2_Worder {
+public class U5_R2_Wordle {
 	static Scanner teclado = new Scanner(System.in);
 	static final String GRIS = "\u001B[90m";
 	static final String VERDE = "\u001B[32m";
