@@ -172,7 +172,7 @@ public class U5_R2_Wordle {
 					System.out.print(" " + palabra.charAt(i));
 				}
 			} else {
-				System.out.print(FONDO_GRIS + " " +  palabra.charAt(i));
+				System.out.print(FONDO_GRIS + " " + palabra.charAt(i));
 			}
 			System.out.print(" ");
 		}
