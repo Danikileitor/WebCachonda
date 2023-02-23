@@ -208,8 +208,9 @@ public class U5_R2_Wordle {
 
 	public static void opcionesConfig() {
 		System.out.println("#################################################################################");
+		System.out.println("# Menú de configuración, elige una de las siguientes opciones:                  #");
 		System.out.println("# [1] Cambiar daltonismo                                                        #");
-		System.out.println("# [0] Volver                                                                     #");
+		System.out.println("# [0] Volver                                                                    #");
 		System.out.println("#################################################################################");
 	}
 	
