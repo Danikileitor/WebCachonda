@@ -57,7 +57,7 @@ public class U5_R2_Wordle {
 		System.out.println("# Bienvenido a este maravilloso juegardo, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Insertar palabras                                                         #");
 		System.out.println("# [2] Jugar                                                                     #");
-		System.out.println("# [3] Configración                                                              #");
+		System.out.println("# [3] Configuración                                                              #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
