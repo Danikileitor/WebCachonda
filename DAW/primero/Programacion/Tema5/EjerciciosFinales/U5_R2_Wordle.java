@@ -57,7 +57,7 @@ public class U5_R2_Wordle {
 		System.out.println("# Bienvenido a este maravilloso juegardo, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Insertar palabras                                                         #");
 		System.out.println("# [2] Jugar                                                                     #");
-		System.out.println("# [3] Configración                                                              #");
+		System.out.println("# [3] Configuración                                                              #");
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
@@ -172,7 +172,7 @@ public class U5_R2_Wordle {
 					System.out.print(" " + palabra.charAt(i));
 				}
 			} else {
-				System.out.print(FONDO_GRIS + " " +  palabra.charAt(i));
+				System.out.print(FONDO_GRIS + " " + palabra.charAt(i));
 			}
 			System.out.print(" ");
 		}
@@ -208,8 +208,9 @@ public class U5_R2_Wordle {
 
 	public static void opcionesConfig() {
 		System.out.println("#################################################################################");
+		System.out.println("# Menú de configuración, elige una de las siguientes opciones:                  #");
 		System.out.println("# [1] Cambiar daltonismo                                                        #");
-		System.out.println("# [0] Volver                                                                     #");
+		System.out.println("# [0] Volver                                                                    #");
 		System.out.println("#################################################################################");
 	}
 	
