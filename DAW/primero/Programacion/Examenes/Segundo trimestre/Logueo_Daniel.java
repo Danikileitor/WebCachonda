@@ -2,7 +2,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
-public class Logeo_Daniel {
+public class Logueo_Daniel {
     static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
