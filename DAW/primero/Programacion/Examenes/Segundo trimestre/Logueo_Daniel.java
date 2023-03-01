@@ -25,7 +25,7 @@ public class Logueo_Daniel {
 						case 0:
 							continue;
 						case 1:
-							logeo();
+							login();
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -64,7 +64,7 @@ public class Logueo_Daniel {
         return teclado.nextLine();
     }
 
-    public static void logeo() {
+    public static void login() {
         String nif;
         int contador = 0;
         do {
