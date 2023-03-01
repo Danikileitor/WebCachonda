@@ -4,6 +4,9 @@ import java.util.Scanner; //Importación de paquetes
 
 public class Logueo_Daniel {
     static Scanner teclado = new Scanner(System.in);
+    static final String ROJO = "\u001B[31m";
+	static final String VERDE = "\u001B[32m";
+	static final String RESET = "\u001B[0m";
 
 	public static void main(String[] args) {
 		menu();
@@ -46,16 +49,13 @@ public class Logueo_Daniel {
 
     public static int pedirNum() {
         int num;
-        do {
-            try {
-                num = teclado.nextInt();
-                break;
-            } catch (InputMismatchException e) {
-                System.out.println("¡Introduce un número!");
-                teclado.nextLine();
-                continue;
-            }
-        } while (true);
+        try {
+            num = teclado.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("¡Introduce un número!");
+            teclado.nextLine();
+            return pedirNum();
+        }
         teclado.nextLine();
         return num;
     }
@@ -72,15 +72,15 @@ public class Logueo_Daniel {
             nif=pedirNIF().trim().toUpperCase();
             if (!validar(nif) && !nif.equals("F")) {
                 if (contador < 2) {
-                    System.out.println("¡Incorrecto! Inténtelo de nuevo o introduzca [F] para salir.");
+                    System.out.println(ROJO + "¡Incorrecto! Inténtelo de nuevo o introduzca [F] para salir." + RESET);
                 }
                 contador++;
             }
         } while (!validar(nif) && contador < 3 && !nif.equals("F"));
         if (validar(nif)) {
-            System.out.println("Inicio de sesión correcto, lamentablemente no hay nada más en este programa por lo que te devuelvo al menú principal.");
+            System.out.println(VERDE + "Inicio de sesión correcto, lamentablemente no hay nada más en este programa por lo que te devuelvo al menú principal." + RESET);
         } else if (contador == 3) {
-            System.out.println("Has superado el límite de intentos, has sido expulsado del inicio de sesión.");
+            System.out.println(ROJO + "Has superado el límite de intentos, has sido expulsado del inicio de sesión." + RESET);
         } else {
             System.out.println("Volviendo al menú principal...");
         }
