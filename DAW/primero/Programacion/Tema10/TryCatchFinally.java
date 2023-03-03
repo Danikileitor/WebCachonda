@@ -15,7 +15,7 @@ public class TryCatchFinally {
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
 				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
-				salir = Character.toLowerCase(teclado.next().charAt(0));
+				salir = Character.toLowerCase(pedirLetra());
 				menu++;
 			} else {
 				do {
@@ -44,24 +44,25 @@ public class TryCatchFinally {
 		System.out.println("#################################################################################");
 	}
 
+	public static int generarAleatorio(int min, int max) {
+		return (int) Math.floor(Math.random() * (max - min + 1) + min);
+	}
+
 	public static char pedirLetra() {
 		return teclado.next().charAt(0);
 	}
 
 	public static int pedirNum() {
-		boolean error;
-		int num = 0;
-		do {
-			error = false;
-			try {
-				num = teclado.nextInt();
-			} catch (InputMismatchException e) {
-				System.out.println("¡Escribe un número entero!");
-				error = true;
-			}
-			teclado.nextLine();
-		} while (error);
-		return num;
-	}
+        int num;
+        try {
+            num = teclado.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("¡Introduce un número!");
+            teclado.nextLine();
+            return pedirNum();
+        }
+        teclado.nextLine();
+        return num;
+    }
 
 }// Fin clase
