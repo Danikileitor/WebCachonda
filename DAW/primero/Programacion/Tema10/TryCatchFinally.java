@@ -2,7 +2,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
-public class Plantilla {
+public class TryCatchFinally {
 	static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Plantilla {
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
 				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
-				salir = Character.toLowerCase(pedirLetra());
+				salir = Character.toLowerCase(teclado.next().charAt(0));
 				menu++;
 			} else {
 				do {
@@ -44,25 +44,24 @@ public class Plantilla {
 		System.out.println("#################################################################################");
 	}
 
-	public static int generarAleatorio(int min, int max) {
-		return (int) Math.floor(Math.random() * (max - min + 1) + min);
-	}
-
 	public static char pedirLetra() {
 		return teclado.next().charAt(0);
 	}
 
 	public static int pedirNum() {
-        int num;
-        try {
-            num = teclado.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("¡Introduce un número!");
-            teclado.nextLine();
-            return pedirNum();
-        }
-        teclado.nextLine();
-        return num;
-    }
+		boolean error;
+		int num = 0;
+		do {
+			error = false;
+			try {
+				num = teclado.nextInt();
+			} catch (InputMismatchException e) {
+				System.out.println("¡Escribe un número entero!");
+				error = true;
+			}
+			teclado.nextLine();
+		} while (error);
+		return num;
+	}
 
 }// Fin clase
