@@ -57,7 +57,7 @@ public class Plantilla {
         try {
             num = teclado.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("¡Introduce un número!");
+            System.out.println("¡Introduce un número entero!");
             teclado.nextLine();
             return pedirNum();
         }
