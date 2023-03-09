@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+    <titulo>El juego del calamar</titulo>
+    <fecha_estreno>17/09/2021</fecha_estreno>
+    <temporadas>1</temporadas>
+    <genero>drama</genero>
+</serie>

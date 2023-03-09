@@ -1,0 +1,8 @@
+<!ELEMENT pedido (cliente,lista_productos)>
+<!ELEMENT cliente (nombre,direccion_entrega)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion_entrega (#PCDATA)>
+<!ELEMENT lista_productos (producto+)>
+<!ELEMENT producto (nombre,precio,cantidad)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>

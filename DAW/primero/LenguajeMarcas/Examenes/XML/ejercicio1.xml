@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedido SYSTEM "ejercicio1.dtd">
+<pedido>
+    <cliente>
+        <nombre>Rodolfo Rivera</nombre>
+        <direccion_entrega>Calle Río Guadiaro, 8, 2º B</direccion_entrega>
+    </cliente>
+    <lista_productos>
+        <producto>
+            <nombre>Hamburguesa completa</nombre>
+            <precio>3,08€</precio>
+            <cantidad>2</cantidad>
+        </producto>
+        <producto>
+            <nombre>Ración de patatas</nombre>
+            <precio>1,45€</precio>
+            <cantidad>1</cantidad>
+        </producto>
+        <producto>
+            <nombre>Coca-cola</nombre>
+            <precio>2,00€</precio>
+            <cantidad>2</cantidad>
+        </producto>
+    </lista_productos>
+</pedido>
