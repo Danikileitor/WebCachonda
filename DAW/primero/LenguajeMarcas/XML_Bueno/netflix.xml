@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netflix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="netflix.xsd">
+    <produccion>
+        <nombre tipo="serie">Breaking bad</nombre>
+        <genero>drama</genero>
+        <num_temporadas>5</num_temporadas>
+        <ano_estreno>2008</ano_estreno>
+        <director>Vince Gilligan</director>
+    </produccion>
+</netflix>
