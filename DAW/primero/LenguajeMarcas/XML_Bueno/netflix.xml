@@ -8,13 +8,6 @@
         <director>Vince Gilligan</director>
     </produccion>
     <produccion>
-        <nombre tipo="serie">Breaking bad</nombre>
-        <genero>drama</genero>
-        <num_temporadas>5</num_temporadas>
-        <ano_estreno>2008</ano_estreno>
-        <director>Vince Gilligan</director>
-    </produccion>
-    <produccion>
         <nombre tipo="película">El padrino</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
