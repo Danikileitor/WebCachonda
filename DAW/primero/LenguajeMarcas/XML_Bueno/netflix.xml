@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<netflix>
+<netflix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="netflix.xsd">
+    <!-- 1-10 -->
     <produccion>
         <nombre tipo="serie">Breaking bad</nombre>
         <genero>drama</genero>
@@ -8,7 +9,7 @@
         <director>Vince Gilligan</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El padrino</nombre>
+        <nombre tipo="pelicula">El padrino</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1972</ano_estreno>
@@ -29,7 +30,7 @@
         <director>Alastair Fothergill</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El club de la pelea</nombre>
+        <nombre tipo="pelicula">El club de la pelea</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1999</ano_estreno>
@@ -50,7 +51,7 @@
         <director>Peter Morgan</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Forrest Gump</nombre>
+        <nombre tipo="pelicula">Forrest Gump</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1994</ano_estreno>
@@ -70,6 +71,7 @@
         <ano_estreno>2020</ano_estreno>
         <director>Pippa Ehrlich, James Reed</director>
     </produccion>
+    <!-- 11-20 -->
     <produccion>
         <nombre tipo="serie">The Office</nombre>
         <genero>comedia</genero>
@@ -78,7 +80,7 @@
         <director>Greg Daniels</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Pulp Fiction</nombre>
+        <nombre tipo="pelicula">Pulp Fiction</nombre>
         <genero>crimen</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1994</ano_estreno>
@@ -106,7 +108,7 @@
         <director>Jason Hehir</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Señor de los Anillos: La Comunidad del Anillo</nombre>
+        <nombre tipo="pelicula">El Señor de los Anillos: La Comunidad del Anillo</nombre>
         <genero>fantasía</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2001</ano_estreno>
@@ -134,12 +136,13 @@
         <director>David Crane, Marta Kauffman</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Padrino: Parte II</nombre>
+        <nombre tipo="pelicula">El Padrino: Parte II</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1974</ano_estreno>
         <director>Francis Ford Coppola</director>
     </produccion>
+    <!-- 21-30 -->
     <produccion>
         <nombre tipo="serie">Narcos</nombre>
         <genero>crimen</genero>
@@ -148,14 +151,14 @@
         <director>Chris Brancato, Carlo Bernard, Doug Miro</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Caballero de la Noche</nombre>
+        <nombre tipo="pelicula">El Caballero de la Noche</nombre>
         <genero>acción</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2008</ano_estreno>
         <director>Christopher Nolan</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Rey León</nombre>
+        <nombre tipo="pelicula">El Rey León</nombre>
         <genero>animación</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1994</ano_estreno>
@@ -169,7 +172,7 @@
         <director>Álex Pina</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">La La Land</nombre>
+        <nombre tipo="pelicula">La La Land</nombre>
         <genero>musical</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2016</ano_estreno>
@@ -183,14 +186,14 @@
         <director>Asif Kapadia</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Señor de los Anillos: El Retorno del Rey</nombre>
+        <nombre tipo="pelicula">El Señor de los Anillos: El Retorno del Rey</nombre>
         <genero>fantasía</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2003</ano_estreno>
         <director>Peter Jackson</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Laberinto del Fauno</nombre>
+        <nombre tipo="pelicula">El Laberinto del Fauno</nombre>
         <genero>fantasía</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2006</ano_estreno>
@@ -204,12 +207,13 @@
         <director>Morgan Neville</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Pianista</nombre>
+        <nombre tipo="pelicula">El Pianista</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2002</ano_estreno>
         <director>Roman Polanski</director>
     </produccion>
+    <!-- 31-40 -->
     <produccion>
         <nombre tipo="documental">The Act of Killing</nombre>
         <genero>documental</genero>
@@ -267,7 +271,7 @@
         <director>Reed Morano</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Parásitos</nombre>
+        <nombre tipo="pelicula">Parásitos</nombre>
         <genero>comedia negra</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2019</ano_estreno>
@@ -280,8 +284,9 @@
         <ano_estreno>2011</ano_estreno>
         <director>David Gelb</director>
     </produccion>
+    <!-- 41-50 -->
     <produccion>
-        <nombre tipo="película">El Gran Hotel Budapest</nombre>
+        <nombre tipo="pelicula">El Gran Hotel Budapest</nombre>
         <genero>comedia</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2014</ano_estreno>
@@ -295,21 +300,21 @@
         <director>David Chase</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Interstellar</nombre>
+        <nombre tipo="pelicula">Interstellar</nombre>
         <genero>ciencia ficción</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2014</ano_estreno>
         <director>Christopher Nolan</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Whiplash</nombre>
+        <nombre tipo="pelicula">Whiplash</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2014</ano_estreno>
         <director>Damien Chazelle</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">La forma del agua</nombre>
+        <nombre tipo="pelicula">La forma del agua</nombre>
         <genero>fantasía</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2017</ano_estreno>
@@ -337,19 +342,20 @@
         <director>Baran bo Odar</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">La red social</nombre>
+        <nombre tipo="pelicula">La red social</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2010</ano_estreno>
         <director>David Fincher</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El renacido</nombre>
+        <nombre tipo="pelicula">El renacido</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2015</ano_estreno>
         <director>Alejandro González Iñárritu</director>
     </produccion>
+    <!-- 51-60 -->
     <produccion>
         <nombre tipo="serie">Peaky Blinders</nombre>
         <genero>drama</genero>
@@ -365,21 +371,21 @@
         <director>Kief Davidson</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">The Dark Knight</nombre>
+        <nombre tipo="pelicula">The Dark Knight</nombre>
         <genero>acción</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2008</ano_estreno>
         <director>Christopher Nolan</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">El Cisne Negro</nombre>
+        <nombre tipo="pelicula">El Cisne Negro</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2010</ano_estreno>
         <director>Darren Aronofsky</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Black Swan</nombre>
+        <nombre tipo="pelicula">Black Swan</nombre>
         <genero>terror psicológico</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2010</ano_estreno>
@@ -393,7 +399,7 @@
         <director>Steven Bognar, Julia Reichert</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">Ex Machina</nombre>
+        <nombre tipo="pelicula">Ex Machina</nombre>
         <genero>ciencia ficción</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>2014</ano_estreno>
@@ -414,10 +420,66 @@
         <director>Orlando von Einsiedel</director>
     </produccion>
     <produccion>
-        <nombre tipo="película">The Shawshank Redemption</nombre>
+        <nombre tipo="pelicula">The Shawshank Redemption</nombre>
         <genero>drama</genero>
         <num_temporadas>1</num_temporadas>
         <ano_estreno>1994</ano_estreno>
         <director>Frank Darabont</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="pelicula">Interstella 5555: The 5tory of the 5ecret 5tar 5ystem</nombre>
+        <genero>Ciencia Ficción</genero>
+        <num_temporadas>1</num_temporadas>
+        <ano_estreno>2003</ano_estreno>
+        <director>Leiji Matsumoto</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="pelicula">Kill bill</nombre>
+        <genero>Acción</genero>
+        <num_temporadas>2</num_temporadas>
+        <ano_estreno>2003</ano_estreno>
+        <director>Quentin Tarantino</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="serie">Hajime no Ippo</nombre>
+        <genero>Spokon</genero>
+        <num_temporadas>3</num_temporadas>
+        <ano_estreno>2000</ano_estreno>
+        <director>Satoshi Nishimura</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="serie">Fate/Zero</nombre>
+        <genero>Acción</genero>
+        <num_temporadas>2</num_temporadas>
+        <ano_estreno>2011</ano_estreno>
+        <director>Yuki Kajiura</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="pelicula">La tumba de las luciérnagas</nombre>
+        <genero>Drama</genero>
+        <num_temporadas>1</num_temporadas>
+        <ano_estreno>1988</ano_estreno>
+        <director>Isao Takahata</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="pelicula">La forma de la voz</nombre>
+        <genero>Drama</genero>
+        <num_temporadas>1</num_temporadas>
+        <ano_estreno>2016</ano_estreno>
+        <director>Naoko Yamada</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="pelicula">Se7en</nombre>
+        <genero>Crimen</genero>
+        <num_temporadas>1</num_temporadas>
+        <ano_estreno>1995</ano_estreno>
+        <director>David Fincher</director>
+    </produccion>
+    <produccion>
+        <nombre tipo="serie">Persona 4: The Animation</nombre>
+        <genero>Ciencia Ficción</genero>
+        <num_temporadas>1</num_temporadas>
+        <ano_estreno>2011</ano_estreno>
+        <director>Seiji Kishi</director>
     </produccion>
 </netflix>
