@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<netflix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="netflix.xsd">
-    <!-- 1-10 -->
+<netflix>
     <produccion>
         <nombre tipo="serie">Breaking bad</nombre>
         <genero>drama</genero>
@@ -71,7 +70,6 @@
         <ano_estreno>2020</ano_estreno>
         <director>Pippa Ehrlich, James Reed</director>
     </produccion>
-    <!-- 11-20 -->
     <produccion>
         <nombre tipo="serie">The Office</nombre>
         <genero>comedia</genero>
@@ -142,7 +140,6 @@
         <ano_estreno>1974</ano_estreno>
         <director>Francis Ford Coppola</director>
     </produccion>
-    <!-- 21-30 -->
     <produccion>
         <nombre tipo="serie">Narcos</nombre>
         <genero>crimen</genero>
@@ -213,7 +210,6 @@
         <ano_estreno>2002</ano_estreno>
         <director>Roman Polanski</director>
     </produccion>
-    <!-- 31-40 -->
     <produccion>
         <nombre tipo="documental">The Act of Killing</nombre>
         <genero>documental</genero>
@@ -284,7 +280,6 @@
         <ano_estreno>2011</ano_estreno>
         <director>David Gelb</director>
     </produccion>
-    <!-- 41-50 -->
     <produccion>
         <nombre tipo="pelicula">El Gran Hotel Budapest</nombre>
         <genero>comedia</genero>
@@ -355,7 +350,6 @@
         <ano_estreno>2015</ano_estreno>
         <director>Alejandro González Iñárritu</director>
     </produccion>
-    <!-- 51-60 -->
     <produccion>
         <nombre tipo="serie">Peaky Blinders</nombre>
         <genero>drama</genero>
