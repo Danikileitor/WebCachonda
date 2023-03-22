@@ -144,13 +144,13 @@ public class U5_R2_Wordle {
 		limpiar();
 		System.out.println("Adivina la palabra de 5 letras, tienes 6 intentos.");
 		if (daltonismo) {
-			System.out.printf("Las letras que se encuentren en su lugar correcto se mostraran con fondo %sAZUL%s", FONDO_AZUL, RESET);
-			System.out.printf("Las letras que se encuentren en la palabra, pero en otro lugar se mostraran con fondo %sAMARILLO%s", FONDO_AMARILLO, RESET);
+			System.out.printf("Las letras que se encuentren en su lugar correcto se mostraran con fondo %sAZUL%s%n", FONDO_AZUL, RESET);
+			System.out.printf("Las letras que se encuentren en la palabra, pero en otro lugar se mostraran con fondo %sAMARILLO%s%n", FONDO_AMARILLO, RESET);
 		} else {
-			System.out.printf("Las letras que se encuentren en su lugar correcto se mostraran con fondo %sVERDE%s", FONDO_VERDE, RESET);
-			System.out.printf("Las letras que se encuentren en la palabra, pero en otro lugar se mostraran con fondo %sAMARILLO%s", FONDO_AMARILLO2, RESET);
+			System.out.printf("Las letras que se encuentren en su lugar correcto se mostraran con fondo %sVERDE%s%n", FONDO_VERDE, RESET);
+			System.out.printf("Las letras que se encuentren en la palabra, pero en otro lugar se mostraran con fondo %sAMARILLO%s%n", FONDO_AMARILLO2, RESET);
 		}
-		System.out.printf("Las letras que no se encuentren en la palabra se mostraran con fondo %sGRIS%s", FONDO_GRIS, RESET);
+		System.out.printf("Las letras que no se encuentren en la palabra se mostraran con fondo %sGRIS%s%n", FONDO_GRIS, RESET);
 		while (!secreta.equals(palabra) && intento < 6) {
 			intento++;
 			do {
