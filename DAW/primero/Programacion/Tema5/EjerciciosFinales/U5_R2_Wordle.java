@@ -1,5 +1,6 @@
 //Daniel Marcos Guerra Gómez
 //Aparte añadir un segundo ejercicio con un array bidimensional que sea un cuadrado cuya diagonal sea 1 y el resto de casillas random (2-20)
+import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
 public class U5_R2_Wordle {
@@ -22,15 +23,15 @@ public class U5_R2_Wordle {
 		char salir = 'n';
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
-				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
-				salir = Character.toLowerCase(teclado.next().charAt(0));
-				teclado.nextLine();
+				do {
+					System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
+					salir = Character.toLowerCase(pedirLetra());
+				} while (salir != 'n' && salir != 's');
 				menu++;
 			} else {
 				do {
 					opcionesMenu();
-					menu = teclado.nextInt();
-					teclado.nextLine();
+					menu = pedirNum();
 					switch (menu) {
 						case 0:
 							continue;
@@ -61,6 +62,23 @@ public class U5_R2_Wordle {
 		System.out.println("# [0] Salir                                                                     #");
 		System.out.println("#################################################################################");
 	}
+
+	public static char pedirLetra() {
+		return teclado.next().charAt(0);
+	}
+
+	public static int pedirNum() {
+        int num;
+        try {
+            num = teclado.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("¡Introduce un número entero!");
+            teclado.nextLine();
+            return pedirNum();
+        }
+        teclado.nextLine();
+        return num;
+    }
 
 	public static int generarAleatorio(int min, int max) {
 		return (int) Math.floor(Math.random() * (max - min + 1) + min);
@@ -125,6 +143,14 @@ public class U5_R2_Wordle {
 		int intento = 0;
 		limpiar();
 		System.out.println("Adivina la palabra de 5 letras, tienes 6 intentos.");
+		if (daltonismo) {
+			System.out.printf("Las letras que se encuentren en su lugar correcto se mostraran con fondo %sAZUL%s", FONDO_AZUL, RESET);
+			System.out.printf("Las letras que se encuentren en la palabra, pero en otro lugar se mostraran con fondo %sAMARILLO%s", FONDO_AMARILLO, RESET);
+		} else {
+			System.out.printf("Las letras que se encuentren en su lugar correcto se mostraran con fondo %sVERDE%s", FONDO_VERDE, RESET);
+			System.out.printf("Las letras que se encuentren en la palabra, pero en otro lugar se mostraran con fondo %sAMARILLO%s", FONDO_AMARILLO2, RESET);
+		}
+		System.out.printf("Las letras que no se encuentren en la palabra se mostraran con fondo %sGRIS%s", FONDO_GRIS, RESET);
 		while (!secreta.equals(palabra) && intento < 6) {
 			intento++;
 			do {
@@ -191,8 +217,7 @@ public class U5_R2_Wordle {
 		int menuConfig;
 		do {
 				opcionesConfig();
-				menuConfig = teclado.nextInt();
-				teclado.nextLine();
+				menuConfig = pedirNum();
 				switch (menuConfig) {
 					case 0:
 						break;
