@@ -2,7 +2,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
-public class Logueo_Daniel {
+public class U5_EjercicioDNI_NIE_Daniel {
     static Scanner teclado = new Scanner(System.in);
     static final String ROJO = "\u001B[31m";
 	static final String VERDE = "\u001B[32m";
