@@ -88,8 +88,8 @@ public class Logueo_Daniel {
 
     public static boolean validar(String nif) {
         boolean valido = false;
-        char control[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
-        if (nif.length() == 9 && nif.charAt(8) == control[calcularNum(nif)%23]) {
+        String control = "TRWAGMYFPDXBNJZSQVHLCKE";
+        if (nif.length() == 9 && nif.charAt(8) == control.charAt(calcularNum(nif)%23)) {
             valido = true;
         }
         return valido;
