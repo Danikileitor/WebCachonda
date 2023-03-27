@@ -78,7 +78,7 @@ public class Ordenar {
 	public static void ordenar(String[] nombres) {
 		String aux;
 		for (int i = 1; i < nombres.length; i++) {
-			if (nombres[i].charAt(0) < nombres[i-1].charAt(0)) {
+			if (nombres[i].compareTo(nombres[i-1]) < 0) {
 				aux = nombres[i];
 				nombres[i] = nombres[i-1];
 				nombres[i-1] = aux;
