@@ -78,10 +78,12 @@ public class Ordenar {
 	public static void ordenar(String[] nombres) {
 		String aux;
 		for (int i = 1; i < nombres.length; i++) {
-			if (nombres[i].compareTo(nombres[i-1]) < 0) {
-				aux = nombres[i];
-				nombres[i] = nombres[i-1];
-				nombres[i-1] = aux;
+			for (int j = 0; j < nombres.length; j++) {
+				if (nombres[i].compareTo(nombres[j]) < 0) {
+					aux = nombres[i];
+					nombres[i] = nombres[j];
+					nombres[j] = aux;
+				}
 			}
 		}
 	}
