@@ -141,6 +141,7 @@ public class U5_R2_Wordle {
 		String palabra = "";
 		String intentos[] = new String[6];
 		int intento = 0;
+		boolean buena = true;
 		limpiar();
 		System.out.println("Adivina la palabra de 5 letras, tienes 6 intentos.");
 		if (daltonismo) {
@@ -155,10 +156,13 @@ public class U5_R2_Wordle {
 			intento++;
 			do {
 				palabra = pedirPalabra();
+				buena = comprobarLetras(palabra);
 				if (palabra.length() != 5) {
 					System.out.println("¡La palabra ha de ser de 5 letras!");
+				} else if (!buena) {
+					System.out.println("¡La palabra solo puede contener letras!");
 				}
-			} while (palabra.length() != 5);
+			} while (palabra.length() != 5 || buena == false);
 			intentos[intento-1] = palabra;
 			if (!secreta.equals(palabra)) {
 				darPista(secreta, intentos, intento);
@@ -170,6 +174,17 @@ public class U5_R2_Wordle {
 		} else {
 			derrota(secreta);
 		}
+	}
+
+	public static boolean comprobarLetras(String palabra) {
+		boolean correcto = true;
+		for (int i = 0; i < palabra.length(); i++) {
+			if (!Character.isLetter(palabra.charAt(i))) {
+				correcto = false;
+				break;
+			}
+		}
+		return correcto;
 	}
 	
 	public static void darPista(String secreta, String[] intentos, int intento) {
