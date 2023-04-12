@@ -28,11 +28,11 @@ class Persona {
 
     void cumplirAnos() {
         edad++;
-        System.out.println(nombre + "ahora tiene " + edad + " años.");
+        System.out.println(nombre + " ahora tiene " + edad + " años.");
     }
 
     void crecer(double incremento) {
         estatura += incremento;
-        System.out.println(nombre + "ahora mide " + estatura + "m.");
+        System.out.println(nombre + " ahora mide " + estatura + "m.");
     }
 }
