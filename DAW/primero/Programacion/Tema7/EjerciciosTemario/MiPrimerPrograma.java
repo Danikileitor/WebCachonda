@@ -5,7 +5,7 @@ public class MiPrimerPrograma {
         p.nombre = "Daniel";
         p.edad = 27;
         p.estatura = 1.80;
-        p.dni = "54146993W";
+        //p.dni = "54146993W"; da error por ser final
         System.out.println(p.nombre);
         System.out.println(p.edad);
         System.out.println(p.estatura);
@@ -23,10 +23,28 @@ class Persona {
     String nombre;
     byte edad;
     double estatura;
-    String dni;
+    final String dni;
     static String hoy;
 
-    Persona(){}
+    Persona(){this.dni = null;}
+
+    Persona(String nombre){
+        this.nombre = nombre;
+        this.dni = null;
+    }
+
+    Persona(String nombre, byte edad){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.dni = null;
+    }
+
+    Persona(String nombre, byte edad, double estatura){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estatura = estatura;
+        this.dni = null;
+    }
 
     Persona(String nombre, byte edad, double estatura, String dni) {
         this.nombre = nombre;
