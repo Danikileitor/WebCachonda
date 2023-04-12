@@ -1,6 +1,7 @@
 public class MiPrimerPrograma {
     public static void main(String[] args) {
-        Persona p = new Persona();
+        Persona p;
+        p = new Persona();
         p.nombre = "Daniel";
         p.edad = 27;
         p.estatura = 1.80;
