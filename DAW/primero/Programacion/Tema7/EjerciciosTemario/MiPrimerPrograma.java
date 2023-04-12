@@ -15,6 +15,7 @@ public class MiPrimerPrograma {
         p.crecer(0.5);
         Persona.hoy = "miércoles";
         System.out.println(Persona.hoy);
+        Persona.hoyEs(4);
     }
 }
 
