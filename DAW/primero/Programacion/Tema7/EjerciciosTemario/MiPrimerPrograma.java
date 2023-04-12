@@ -23,7 +23,7 @@ class Persona {
     String dni;
 
     void saludar() {
-        System.out.println("Hola, soy " + nombre);
+        System.out.println("Hola, soy " + nombre + ".");
     }
 
     void cumplirAnos() {
