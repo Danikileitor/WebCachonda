@@ -13,6 +13,8 @@ public class MiPrimerPrograma {
         p.saludar();
         p.cumplirAnos();
         p.crecer(0.5);
+        Persona.hoy = "miércoles";
+        System.out.println(Persona.hoy);
     }
 }
 
@@ -21,6 +23,7 @@ class Persona {
     byte edad;
     double estatura;
     String dni;
+    static String hoy;
 
     void saludar() {
         System.out.println("Hola, soy " + nombre + ".");
