@@ -14,10 +14,8 @@ public class MiPrimerPrograma {
 }
 
 class Persona {
-
     String nombre;
     byte edad;
     double estatura;
     String dni;
-
 }
