@@ -26,6 +26,15 @@ class Persona {
     String dni;
     static String hoy;
 
+    Persona(){}
+
+    Persona(String nombre, byte edad, double estatura, String dni) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estatura = estatura;
+        this.dni = dni;
+    }
+
     void saludar() {
         System.out.println("Hola, soy " + nombre + ".");
     }
