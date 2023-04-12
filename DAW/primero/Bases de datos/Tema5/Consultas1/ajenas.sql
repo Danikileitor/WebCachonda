@@ -13,7 +13,7 @@ SELECT Modulos.Nombre AS Modulo, Profesores.Nombre AS Profesor FROM Modulos, Pro
 #6 Nombre de todos los alumnos y nombre de su delegado.
 SELECT AL.Nombre AS Alumno, DE.Nombre AS Delegado FROM Alumnos AS AL, Alumnos AS DE, Grupos WHERE DE.N_expdte = Grupos.Delegado AND (AL.Curso = Grupos.Curso AND AL.Letra = Grupos.Letra);
 #7 Nombre de todos los alumnos matriculados en Bases de Datos.
-SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = 'BBDD1';
+SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Nombre = 'Bases de Datos';
 #8 Nombre de los alumnos de Fernando nacidos antes de 1999.
 SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Dni_profesor = '44444444D';
 #9 Listado de todos los grupos con su delegado.
