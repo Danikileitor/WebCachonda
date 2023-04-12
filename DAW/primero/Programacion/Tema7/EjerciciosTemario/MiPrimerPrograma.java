@@ -24,6 +24,7 @@ public class MiPrimerPrograma {
         p1.saludar();
         p2.saludar();
         p3.saludar();
+        System.out.println("Se han creado un total de " + Persona.contador + " personas.");
     }
 }
 
@@ -33,18 +34,24 @@ class Persona {
     double estatura;
     final String dni;
     static String hoy;
+    static int contador;
 
-    Persona(){this.dni = null;}
+    Persona(){
+        this.dni = null;
+        contador++;
+    }
 
     Persona(String nombre){
         this.nombre = nombre;
         this.dni = null;
+        contador++;
     }
 
     Persona(String nombre, byte edad){
         this.nombre = nombre;
         this.edad = edad;
         this.dni = null;
+        contador++;
     }
 
     Persona(String nombre, byte edad, double estatura){
@@ -52,6 +59,7 @@ class Persona {
         this.edad = edad;
         this.estatura = estatura;
         this.dni = null;
+        contador++;
     }
 
     Persona(String nombre, byte edad, double estatura, String dni) {
@@ -59,6 +67,7 @@ class Persona {
         this.edad = edad;
         this.estatura = estatura;
         this.dni = dni;
+        contador++;
     }
 
     void saludar() {
