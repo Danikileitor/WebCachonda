@@ -5,7 +5,7 @@ public class MiPrimerPrograma {
         p.nombre = "Daniel";
         p.edad = 27;
         p.estatura = 1.80;
-        //p.dni = "54146993W"; da error por ser final
+        //p.dni = "54146993W"; da error por ser final, no se puede modificar.
         System.out.println(p.nombre);
         System.out.println(p.edad);
         System.out.println(p.estatura);
