@@ -15,7 +15,7 @@ SELECT AL.Nombre AS Alumno, DE.Nombre AS Delegado FROM Alumnos AS AL, Alumnos AS
 #7 Nombre de todos los alumnos matriculados en Bases de Datos.
 SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Nombre = 'Bases de Datos';
 #8 Nombre de los alumnos de Fernando nacidos antes de 1999.
-SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Dni_profesor = '44444444D';
+SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos, Profesores WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Dni_profesor = Profesores.Dni AND Profesores.Nombre = 'Fernando';
 #9 Listado de todos los grupos con su delegado.
 SELECT DISTINCT concat(Grupos.Curso, 'º', Grupos.Letra) AS Grupo, Alumnos.Nombre AS Delegado FROM Grupos, Alumnos, Matriculas, Modulos WHERE Alumnos.N_expdte = Matriculas.Alumno AND Matriculas.Modulo = Modulos.Codigo AND Alumnos.N_expdte = Grupos.Delegado;
 #10 Listado de los módulos en los que hay delegados matriculados.
