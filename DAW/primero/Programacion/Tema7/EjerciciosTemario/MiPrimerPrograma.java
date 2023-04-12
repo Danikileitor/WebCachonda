@@ -16,6 +16,14 @@ public class MiPrimerPrograma {
         Persona.hoy = "miércoles";
         System.out.println(Persona.hoy);
         Persona.hoyEs(4);
+        //Probamos los constructores:
+        Persona p1,p2,p3;
+        p1 = new Persona("Salvador");
+        p2 = new Persona("Rubén", (byte) 22);
+        p3 = new Persona("Fran", (byte) 25, 1.72, "12345678Z");
+        p1.saludar();
+        p2.saludar();
+        p3.saludar();
     }
 }
 
