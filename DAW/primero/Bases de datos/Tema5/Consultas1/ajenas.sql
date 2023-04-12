@@ -17,8 +17,8 @@ SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos WHERE Matricul
 #8 Nombre de los alumnos de Fernando nacidos antes de 1999.
 SELECT Alumnos.Nombre AS Alumno FROM Alumnos, Matriculas, Modulos, Profesores WHERE Matriculas.Alumno = Alumnos.N_expdte AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Dni_profesor = Profesores.Dni AND Profesores.Nombre = 'Fernando';
 #9 Listado de todos los grupos con su delegado.
-SELECT DISTINCT concat(Grupos.Curso, 'º', Grupos.Letra) AS Grupo, Alumnos.Nombre AS Delegado FROM Grupos, Alumnos, Matriculas, Modulos WHERE Alumnos.N_expdte = Matriculas.Alumno AND Matriculas.Modulo = Modulos.Codigo AND Alumnos.N_expdte = Grupos.Delegado;
+SELECT DISTINCT CONCAT(Grupos.Curso, 'º', Grupos.Letra) AS Grupo, Alumnos.Nombre AS Delegado FROM Grupos, Alumnos, Matriculas, Modulos WHERE Alumnos.N_expdte = Matriculas.Alumno AND Matriculas.Modulo = Modulos.Codigo AND Alumnos.N_expdte = Grupos.Delegado;
 #10 Listado de los módulos en los que hay delegados matriculados.
 SELECT DISTINCT Modulos.Nombre AS Modulo FROM Modulos, Alumnos, Grupos, Matriculas WHERE Matriculas.Alumno = Alumnos.N_expdte AND Alumnos.N_expdte = Grupos.Delegado AND Matriculas.Modulo = Modulos.Codigo;
 #11 Listado de grupos en los que imparte clase Macarena.
-SELECT concat(Alumnos.Curso, 'º', Alumnos.Letra) AS Grupo FROM Alumnos, Matriculas, Modulos, Profesores WHERE Alumnos.N_expdte = Matriculas.Alumno AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Dni_profesor = Profesores.Dni AND Profesores.Nombre = 'Macarena';
+SELECT CONCAT(Alumnos.Curso, 'º', Alumnos.Letra) AS Grupo FROM Alumnos, Matriculas, Modulos, Profesores WHERE Alumnos.N_expdte = Matriculas.Alumno AND Matriculas.Modulo = Modulos.Codigo AND Modulos.Dni_profesor = Profesores.Dni AND Profesores.Nombre = 'Macarena';
