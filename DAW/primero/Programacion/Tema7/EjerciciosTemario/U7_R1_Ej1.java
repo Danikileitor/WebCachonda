@@ -43,7 +43,7 @@ class CuentaCorriente {
     void mostrarInfo(){
         System.out.println("###################################");
         System.out.println("# Datos del titular de la cuenta: #");
-        System.out.println("# DNI: " + this.dni + " #");
+        System.out.println("# DNI: " + this.dni + "                  #");
         System.out.println("# Titular: " + this.titular + " #");
         System.out.println("###################################");
         System.out.println("# Saldo: " + this.saldo + "€ #");
