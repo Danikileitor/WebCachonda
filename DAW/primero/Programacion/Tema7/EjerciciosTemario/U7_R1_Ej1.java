@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class U7_R1_Ej1 {
     static Scanner teclado = new Scanner(System.in);
     static CuentaCorriente c;
+    static boolean hayCuenta = false;
     public static void main(String[] args) {
         
         menu();
@@ -34,13 +35,25 @@ public class U7_R1_Ej1 {
 							crearCuenta();
 							break;
                         case 2:
-							sacar();
+                            if (hayCuenta) {
+                                sacar();
+                            } else {
+                                System.out.println("¡Es necesario crear una cuenta primero!");
+                            }
 							break;
                         case 3:
-							ingresar();
+                            if (hayCuenta) {
+                                ingresar();
+                            } else {
+                                System.out.println("¡Es necesario crear una cuenta primero!");
+                            }
 							break;
                         case 4:
-							info();
+                            if (hayCuenta) {
+                                info();
+                            } else {
+                                System.out.println("¡Es necesario crear una cuenta primero!");
+                            }
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -114,6 +127,7 @@ public class U7_R1_Ej1 {
         System.out.println("Introduce el nombre del titular:");
         titular = pedirTexto();
         c = new CuentaCorriente(dni, titular);
+        hayCuenta = true;
     }
 
     public static void sacar() {
