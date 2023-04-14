@@ -66,6 +66,17 @@ public class U7_R1_Ej1 {
 		return teclado.nextLine().trim();
 	}
 
+    public static String pedirDni() {
+        String dni;
+        do {
+            dni = teclado.nextLine().trim().toUpperCase();
+            if (dni.length() != 9) {
+                System.out.println("Un DNI tiene 8 Números y 1 Letra");
+            }
+        } while (dni.length() != 9);
+		return dni;
+	}
+
     public static double pedirDinero() {
 		double dinero;
         try {
@@ -99,7 +110,7 @@ public class U7_R1_Ej1 {
     public static void crearCuenta(){
         String dni, titular;
         System.out.println("Introduce el DNI del titular:");
-        dni = pedirTexto().toUpperCase();
+        dni = pedirDni();
         System.out.println("Introduce el nombre del titular:");
         titular = pedirTexto();
         c = new CuentaCorriente(dni, titular);
