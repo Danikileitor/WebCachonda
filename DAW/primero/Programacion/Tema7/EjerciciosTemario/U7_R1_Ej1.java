@@ -6,7 +6,6 @@ public class U7_R1_Ej1 {
     static CuentaCorriente c;
     static boolean hayCuenta = false;
     public static void main(String[] args) {
-        
         menu();
         CuentaCorriente c1;
         c1 = new CuentaCorriente("12345678Z", "Paco");
