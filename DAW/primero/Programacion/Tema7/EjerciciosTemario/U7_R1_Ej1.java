@@ -14,12 +14,6 @@ class CuentaCorriente {
     String titular;
     double saldo;
 
-    CuentaCorriente(String dni){
-        this.dni = dni;
-        this.titular = "Sin información";
-        this.saldo = 0;
-    }
-
     CuentaCorriente(String dni, String titular){
         this.dni = dni;
         this.titular = titular;
