@@ -71,7 +71,7 @@ public class U7_R1_Ej1 {
         do {
             dni = teclado.nextLine().trim().toUpperCase();
             if (dni.length() != 9) {
-                System.out.println("Un DNI tiene 8 Números y 1 Letra");
+                System.out.println("¡Un DNI tiene 9 caracteres!");
             }
         } while (dni.length() != 9);
 		return dni;
