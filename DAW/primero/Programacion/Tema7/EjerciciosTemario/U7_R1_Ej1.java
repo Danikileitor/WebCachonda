@@ -147,7 +147,7 @@ public class U7_R1_Ej1 {
     public static void info() {
         c.mostrarInfo();
     }
-}
+}//Fin clase principal
 
 class CuentaCorriente {
     String dni;
@@ -183,4 +183,4 @@ class CuentaCorriente {
         System.out.println("# Saldo: " + this.saldo + "€ #");
         System.out.println("###################################");
     }
-}
+}//Fin clase
