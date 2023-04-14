@@ -10,7 +10,7 @@ public class U7_R1_Ej1 {
 }
 
 class CuentaCorriente {
-    final String dni;
+    String dni;
     String titular;
     double saldo;
 
