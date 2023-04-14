@@ -1,11 +1,126 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class U7_R1_Ej1 {
+    static Scanner teclado = new Scanner(System.in);
+    static CuentaCorriente c;
     public static void main(String[] args) {
+        
+        menu();
         CuentaCorriente c1;
         c1 = new CuentaCorriente("12345678Z", "Paco");
         c1.sacarDinero(5);
         c1.ingresarDinero(10);
         c1.sacarDinero(5);
         c1.mostrarInfo();
+    }
+
+    public static void menu() {
+		int menu = 1;
+		char salir = 'n';
+		do {
+			if (menu == 0) {// Confirmación para salir del programa
+				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
+				salir = Character.toLowerCase(pedirLetra());
+				menu++;
+			} else {
+				do {
+					opcionesMenu();
+					menu = pedirNum();
+					switch (menu) {
+						case 0:
+							continue;
+						case 1:
+							crearCuenta();
+							break;
+                        case 2:
+							sacar();
+							break;
+                        case 3:
+							ingresar();
+							break;
+                        case 4:
+							info();
+							break;
+						default:
+							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
+							break;
+					}// Fin switch
+				} while (menu != 0);
+			}
+		} while (salir != 's');
+	}
+
+	public static void opcionesMenu() {
+		System.out.println("######################################################");
+		System.out.println("# Bienvenido al banco de España, indique una opción: #");
+		System.out.println("# [1] Crear cuenta bancaria                          #");
+        System.out.println("# [2] Sacar dinero                                   #");
+        System.out.println("# [3] Ingresar dinero                                #");
+        System.out.println("# [4] Mostrar información sobre su cuenta bancaria   #");
+		System.out.println("# [0] Salir                                          #");
+		System.out.println("######################################################");
+	}
+
+	public static String pedirTexto() {
+		return teclado.nextLine().trim();
+	}
+
+    public static double pedirDinero() {
+		double dinero;
+        try {
+            dinero = teclado.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("¡Introduce un número real!");
+            teclado.nextLine();
+            return pedirDinero();
+        }
+        teclado.nextLine();
+        return dinero;
+	}
+
+    public static char pedirLetra() {
+		return teclado.next().charAt(0);
+	}
+
+	public static int pedirNum() {
+        int num;
+        try {
+            num = teclado.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("¡Introduce un número entero!");
+            teclado.nextLine();
+            return pedirNum();
+        }
+        teclado.nextLine();
+        return num;
+    }
+
+    public static void crearCuenta(){
+        String dni, titular;
+        System.out.println("Introduce el DNI del titular:");
+        dni = pedirTexto().toUpperCase();
+        System.out.println("Introduce el nombre del titular:");
+        titular = pedirTexto();
+        c = new CuentaCorriente(dni, titular);
+    }
+
+    public static void sacar() {
+        double dinero;
+        System.out.println("Introduce la cantidad deseada:");
+        dinero = pedirDinero();
+        c.sacarDinero(dinero);
+    }
+
+    public static void ingresar() {
+        double dinero;
+        System.out.println("Introduce la cantidad deseada:");
+        dinero = pedirDinero();
+        c.ingresarDinero(dinero);
+    }
+
+    public static void info() {
+        c.mostrarInfo();
     }
 }
 
