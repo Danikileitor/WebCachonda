@@ -68,9 +68,9 @@ public class U7_R1_Ej1 {
 		System.out.println("######################################################");
 		System.out.println("# Bienvenido al banco de España, indique una opción: #");
 		System.out.println("# [1] Crear cuenta bancaria                          #");
-        System.out.println("# [2] Sacar dinero                                   #");
-        System.out.println("# [3] Ingresar dinero                                #");
-        System.out.println("# [4] Mostrar información sobre su cuenta bancaria   #");
+		System.out.println("# [2] Sacar dinero                                   #");
+		System.out.println("# [3] Ingresar dinero                                #");
+		System.out.println("# [4] Mostrar información sobre su cuenta bancaria   #");
 		System.out.println("# [0] Salir                                          #");
 		System.out.println("######################################################");
 	}
