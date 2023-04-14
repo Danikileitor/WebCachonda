@@ -5,6 +5,7 @@ public class U7_R1_Ej1 {
     static Scanner teclado = new Scanner(System.in);
     static CuentaCorriente c;
     static boolean hayCuenta = false;
+    
     public static void main(String[] args) {
         menu();
         CuentaCorriente c1;
