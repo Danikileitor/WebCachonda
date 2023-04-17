@@ -27,12 +27,12 @@ public class U7_R1_Ej8 {
 						case 1:
 							r.display();
 							break;
-                                                case 2:
-                                                        r.up();
-                                                        break;
-                                                case 3:
-                                                        r.down();
-                                                        break;
+                        case 2:
+                            r.up();
+                            break;
+                        case 3:
+                            r.down();
+                            break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
 							break;
@@ -46,8 +46,8 @@ public class U7_R1_Ej8 {
 		System.out.println("##############################################################################");
 		System.out.println("# Bienvenido a esta maravilloso radio, elige una de las siguientes opciones: #");
 		System.out.println("# [1] Mostrar frecuencia sintonizada                                         #");
-                System.out.println("# [2] Subir frecuencia                                                       #");
-                System.out.println("# [3] Bajar frecuencia                                                       #");
+        System.out.println("# [2] Subir frecuencia                                                       #");
+        System.out.println("# [3] Bajar frecuencia                                                       #");
 		System.out.println("# [0] Salir                                                                  #");
 		System.out.println("##############################################################################");
 	}
