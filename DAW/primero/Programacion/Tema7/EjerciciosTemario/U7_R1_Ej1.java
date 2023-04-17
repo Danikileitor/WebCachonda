@@ -93,7 +93,7 @@ public class U7_R1_Ej1 {
     public static double pedirDinero() {
 		double dinero;
         try {
-            dinero = teclado.nextInt();
+            dinero = teclado.nextDouble();
         } catch (InputMismatchException e) {
             System.out.println("¡Introduce un número real!");
             teclado.nextLine();
