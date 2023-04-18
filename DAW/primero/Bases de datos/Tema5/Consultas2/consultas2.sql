@@ -46,15 +46,15 @@ SELECT Clientes.NombreCliente AS 'Cliente', CONCAT(Empleados.Nombre, ' ', Emplea
 #23 Sacar un listado de clientes donde aparezca el nombre de su comercial y la ciudad donde está su oficina. (Es la misma consulta que la 13)
 SELECT Clientes.NombreCliente AS 'Cliente', Empleados.Nombre AS 'Representante', Oficinas.Ciudad FROM Clientes JOIN Empleados ON Clientes.CodigoEmpleadoRepVentas = Empleados.CodigoEmpleado JOIN Oficinas ON Empleados.CodigoOficina = Oficinas.CodigoOficina;
 #24 Sacar el nombre, apellidos, oficina y cargo de aquellos que no sean representantes de ventas.
-SELECT
+SELECT Empleados.Nombre, Empleados.Apellido1, Empleados.Apellido2, Empleados.Puesto, Empleados.CodigoOficina FROM Empleados WHERE Empleados.CodigoEmpleado NOT IN (SELECT Clientes.CodigoEmpleadoRepVentas FROM Clientes);
 #25 Sacar cuantos empleados tiene cada oficina, mostrando el nombre de la ciudad donde está la oficina.
-SELECT
+SELECT Oficinas.CodigoOficina, Oficinas.Ciudad, COUNT(*) AS 'Empleados' FROM Oficinas NATURAL JOIN Empleados GROUP BY Oficinas.CodigoOficina;
 #26 Sacar los clientes que residan en la misma ciudad donde hay una oficina, indicando dónde está la oficina.
-SELECT
+SELECT Clientes.NombreCliente, concat(Oficinas.LineaDireccion1, ' ', Oficinas.LineaDireccion2) AS 'Dirección', Oficinas.Ciudad FROM Oficinas JOIN Clientes ON Clientes.Ciudad = Oficinas.Ciudad;
 #27 Sacar el número de clientes que tiene asignado cada representante de ventas.
-SELECT
+SELECT Empleados.Nombre, Empleados.Apellido1, COUNT(*) AS 'Clientes' FROM Empleados JOIN Clientes ON Clientes.CodigoEmpleadoRepVentas = Empleados.CodigoEmpleado GROUP BY Clientes.CodigoEmpleadoRepVentas;
 #28 Sacar cuál fue el cliente que hizo el pago con mayor cuantía y el que hizo el pago con menor cuantía.
-SELECT
+SELECT Clientes.NombreCliente, Detallepedidos.Cantidad FROM Clientes JOIN Pedidos ON Clientes.CodigoCliente = Pedidos.CodigoCliente JOIN Detallepedidos ON Detallepedidos.CodigoPedido = Pedidos.CodigoPedido GROUP BY Clientes.CodigoCliente HAVING MAX(Detallepedidos.Cantidad);
 #29 Sacar un listado con el precio total de cada pedido.
 SELECT
 #30 Sacar los clientes que hayan hecho pedidos en el 2008 por una cuantía superior a 2000 euros.
