@@ -54,12 +54,12 @@ SELECT Clientes.NombreCliente, concat(Oficinas.LineaDireccion1, ' ', Oficinas.Li
 #27 Sacar el número de clientes que tiene asignado cada representante de ventas.
 SELECT Empleados.Nombre, Empleados.Apellido1, COUNT(*) AS 'Clientes' FROM Empleados JOIN Clientes ON Clientes.CodigoEmpleadoRepVentas = Empleados.CodigoEmpleado GROUP BY Clientes.CodigoEmpleadoRepVentas;
 #28 Sacar cuál fue el cliente que hizo el pago con mayor cuantía y el que hizo el pago con menor cuantía.
-SELECT Clientes.NombreCliente, Detallepedidos.Cantidad FROM Clientes JOIN Pedidos ON Clientes.CodigoCliente = Pedidos.CodigoCliente JOIN Detallepedidos ON Detallepedidos.CodigoPedido = Pedidos.CodigoPedido GROUP BY Clientes.CodigoCliente HAVING MAX(Detallepedidos.Cantidad);
+SELECT Clientes.NombreCliente, Pagos.Cantidad FROM Clientes JOIN Pagos ON Clientes.CodigoCliente = Pagos.CodigoCliente WHERE Pagos.Cantidad = (SELECT MAX(Pagos.Cantidad) FROM Pagos) OR Pagos.Cantidad = (SELECT MIN(Pagos.Cantidad) FROM Pagos);
 #29 Sacar un listado con el precio total de cada pedido.
-SELECT
+SELECT CodigoPedido, SUM(PrecioUnidad*Cantidad) AS 'Precio Total' FROM Detallepedidos GROUP BY CodigoPedido;
 #30 Sacar los clientes que hayan hecho pedidos en el 2008 por una cuantía superior a 2000 euros.
-SELECT
+SELECT Clientes.NombreCliente FROM Clientes JOIN Pedidos ON Clientes.CodigoCliente = Pedidos.CodigoCliente JOIN Detallepedidos ON Pedidos.CodigoPedido = Detallepedidos.CodigoPedido WHERE YEAR(Pedidos.FechaPedido) = 2008 GROUP BY Clientes.NombreCliente HAVING SUM(Detallepedidos.Cantidad * Detallepedidos.PrecioUnidad) > 2000;
 #31 Sacar cuantos pedidos tiene cada cliente en cada estado.
-SELECT
+SELECT Clientes.CodigoCliente, Pedidos.Estado, COUNT(*) AS NumeroPedidos FROM Clientes JOIN Pedidos ON Clientes.CodigoCliente = Pedidos.CodigoCliente GROUP BY Clientes.CodigoCliente, Pedidos.Estado ORDER BY Clientes.CodigoCliente ASC;
 #32 Sacar los clientes que han pedido más de 200 unidades de cualquier producto.
-SELECT
+SELECT DISTINCT Clientes.NombreCliente FROM Clientes JOIN Pedidos ON Clientes.CodigoCliente = Pedidos.CodigoCliente JOIN Detallepedidos ON Pedidos.CodigoPedido = Detallepedidos.CodigoPedido WHERE Detallepedidos.Cantidad > 200;
