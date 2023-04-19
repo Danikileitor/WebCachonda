@@ -78,9 +78,9 @@ public class RadioPrincipal {
         try {
             num = teclado.nextLong();
         } catch (InputMismatchException e) {
-            System.out.println("¡Introduce un número entero!");
+            System.out.println("¡Introduce un número real!");
             teclado.nextLine();
-            return pedirNum();
+            return pedirFrecuencia();
         }
         teclado.nextLine();
         return num;
@@ -89,7 +89,7 @@ public class RadioPrincipal {
     public static void comprobarRadios(Radio r1) {
         System.out.println("Indica la frecuenca para la segunda radio:");
         Radio r2 = new Radio(pedirFrecuencia());
-        r1.iguales(r2);
+        System.out.println("Iguales: " + r1.iguales(r2));
     }
 }
 
@@ -130,8 +130,7 @@ class Radio {
         System.out.println("Frecuencia sintonizada: " + this.frecuencia + " MHz.");
     }
 
-    void iguales(Radio r) {
-        boolean iguales = this.frecuencia == r.frecuencia;
-        System.out.println("Iguales: " + iguales);
+    boolean iguales(Radio r) {
+        return this.frecuencia == r.frecuencia;
     }
 }
