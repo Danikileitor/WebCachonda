@@ -103,6 +103,7 @@ class Radio {
 
     Radio(double frecuencia) {
         this.frecuencia = frecuencia;
+        this.comprobar();
     }
 
     void up() {
