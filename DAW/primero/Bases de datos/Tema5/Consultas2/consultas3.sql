@@ -44,17 +44,17 @@ SELECT Equipos.Nombre AS Equipo, Equipos.Ciudad AS Ciudad, Jugadores.Nombre AS J
 #22 Puntos por partido de 'Pau Gasol' en toda su carrera.
 SELECT Temporada, Puntos_por_partido FROM Estadisticas JOIN Jugadores ON Estadisticas.Jugador = Jugadores.Codigo WHERE Nombre = 'Pau Gasol';
 #23 Puntos por partido de los jugadores de los 'cavaliers'.
-SELECT
+SELECT Estadisticas.Temporada, Jugadores.Nombre, Estadisticas.Puntos_por_partido FROM Jugadores JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre WHERE Equipos.Nombre = 'Cavaliers' ORDER BY Estadisticas.Temporada;
 #24 Número de jugadores que tiene cada equipo de la conferencia oeste ('west').
-SELECT
+SELECT Nombre_equipo, COUNT(*) AS Jugadores FROM Jugadores WHERE Nombre_equipo IN (SELECT Nombre FROM Equipos WHERE Conferencia = 'west') GROUP BY Nombre_equipo;
 #25 Asistencias por partido de 'José Calderón' en la temporada '07/08'.
-SELECT
+SELECT Asistencias_por_partido FROM Estadisticas JOIN Jugadores ON Estadisticas.Jugador = Jugadores.Codigo WHERE Jugadores.Nombre = 'José Calderón' AND Estadisticas.Temporada = '07/08';
 #26 Puntos por partido de 'LeBron James' en las temporadas del '03/04' al '05/06'.
-SELECT
+SELECT Temporada, Puntos_por_partido FROM Estadisticas INNER JOIN Jugadores ON Estadisticas.Jugador = Jugadores.Codigo WHERE Jugadores.Nombre = 'LeBron James' AND Temporada BETWEEN '03/04' AND '05/06';
 #27 Número de jugadores que tiene cada equipo en la conferencia este ('east').
-SELECT
+SELECT Nombre_equipo, COUNT(*) AS Jugadores FROM Jugadores INNER JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre WHERE Equipos.Conferencia = 'east' GROUP BY Nombre_equipo;
 #28 Tapones por partido de los jugadores de los ' Trail Blazers'.
-SELECT
+SELECT Estadisticas.Temporada, Jugadores.Nombre, Estadisticas.Tapones_por_partido FROM Jugadores JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador WHERE Equipos.Nombre = 'Trail Blazers' ORDER BY Estadisticas.Temporada;
 #29 Media de rebotes de los jugadores de la conferencia este ('east').
 SELECT
 #30 Rebotes por partido de los jugadores de los equipos de Los Angeles.
