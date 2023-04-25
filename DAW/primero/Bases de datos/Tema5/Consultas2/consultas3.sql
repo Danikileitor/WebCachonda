@@ -74,4 +74,4 @@ SELECT Jugadores.Nombre, MAX(Estadisticas.Rebotes_por_partido) AS Rebotes_por_pa
 #37 Máximo anotador de toda la base de datos en una temporada.
 SELECT Jugadores.Nombre AS Jugador, Estadisticas.Temporada, Estadisticas.Puntos_por_partido FROM Jugadores JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador ORDER BY Estadisticas.Puntos_por_partido DESC LIMIT 1;
 #38 ¿Cuantas letras tiene el equipo con nombre más largo de la NBA (Ciudad y Nombre)?
-SELECT Nombre, Ciudad, LENGTH(CONCAT(Nombre,Ciudad)) AS 'Cantidad de letras' FROM Equipos WHERE LENGTH(CONCAT(Nombre,Ciudad)) = (SELECT MAX(LENGTH(CONCAT(Nombre,Ciudad))) FROM Equipos);
+SELECT DISTINCT LENGTH(CONCAT(Nombre,Ciudad)) AS 'Cantidad de letras' FROM Equipos WHERE LENGTH(CONCAT(Nombre,Ciudad)) = (SELECT MAX(LENGTH(CONCAT(Nombre,Ciudad))) FROM Equipos);
