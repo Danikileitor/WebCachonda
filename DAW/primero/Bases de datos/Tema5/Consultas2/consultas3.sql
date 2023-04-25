@@ -56,22 +56,22 @@ SELECT Nombre_equipo, COUNT(*) AS Jugadores FROM Jugadores INNER JOIN Equipos ON
 #28 Tapones por partido de los jugadores de los ' Trail Blazers'.
 SELECT Estadisticas.Temporada, Jugadores.Nombre, Estadisticas.Tapones_por_partido FROM Jugadores JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador WHERE Equipos.Nombre = 'Trail Blazers' ORDER BY Estadisticas.Temporada;
 #29 Media de rebotes de los jugadores de la conferencia este ('east').
-SELECT
+SELECT Jugadores.Nombre AS Jugador, AVG(Estadisticas.Rebotes_por_partido) AS Media_Rebotes FROM Jugadores JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador WHERE Equipos.Conferencia = 'east' GROUP BY Jugadores.Nombre;
 #30 Rebotes por partido de los jugadores de los equipos de Los Angeles.
-SELECT
+SELECT Jugadores.Nombre AS Jugador, AVG(Estadisticas.Rebotes_por_partido) AS Media_Rebotes FROM Jugadores JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador WHERE Equipos.Ciudad = 'Los Angeles' GROUP BY Jugadores.Nombre;
 #31 Número de jugadores que tiene cada equipo en la división NorthWest.
-SELECT
+SELECT Equipos.Nombre AS Equipo, COUNT(Jugadores.Codigo) AS Num_Jugadores FROM Equipos JOIN Jugadores ON Equipos.Nombre = Jugadores.Nombre_equipo WHERE Equipos.Division = 'NorthWest' GROUP BY Equipos.Nombre;
 #32 Jugadores que no metieron ningún punto en alguna temporada.
-SELECT
+SELECT Jugadores.Nombre FROM Jugadores LEFT JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador WHERE Estadisticas.Puntos_por_partido = 0;
 #33 Número total de jugadores de cada división.
-SELECT
+SELECT Equipos.Division, COUNT(DISTINCT Jugadores.Codigo) AS Num_Jugadores FROM Jugadores JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre GROUP BY Equipos.Division;
 #34 Temporada con más puntos por partido de 'Kobe Bryant'.
-SELECT
+SELECT Temporada, MAX(Puntos_por_partido) as 'Puntos por partido' FROM Estadisticas JOIN Jugadores ON Estadisticas.Jugador = Jugadores.Codigo WHERE Jugadores.Nombre = 'Kobe Bryant' GROUP BY Temporada;
 #35 Número de bases 'G' que tiene cada equipo de la conferencia este 'East'.
-SELECT
+SELECT Equipos.Nombre AS Equipo, COUNT(*) AS Bases FROM Jugadores JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre WHERE Equipos.Conferencia = 'East' AND Jugadores.Posicion = 'G' GROUP BY Equipos.Nombre;
 #36 Máximo reboteador de los 'Suns'.
-SELECT
+SELECT Jugadores.Nombre, MAX(Estadisticas.Rebotes_por_partido) AS Rebotes_por_partido FROM Jugadores JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador JOIN Equipos ON Jugadores.Nombre_equipo = Equipos.Nombre WHERE Equipos.Nombre = 'Suns' GROUP BY Jugadores.Nombre ORDER BY Rebotes_por_partido DESC LIMIT 1;
 #37 Máximo anotador de toda la base de datos en una temporada.
-SELECT
+SELECT Jugadores.Nombre AS Jugador, Estadisticas.Temporada, Estadisticas.Puntos_por_partido FROM Jugadores JOIN Estadisticas ON Jugadores.Codigo = Estadisticas.Jugador ORDER BY Estadisticas.Puntos_por_partido DESC LIMIT 1;
 #38 ¿Cuantas letras tiene el equipo con nombre más largo de la NBA (Ciudad y Nombre)?
-SELECT
+SELECT Nombre, Ciudad, LENGTH(CONCAT(Nombre,Ciudad)) AS 'Cantidad de letras' FROM Equipos WHERE LENGTH(CONCAT(Nombre,Ciudad)) = (SELECT MAX(LENGTH(CONCAT(Nombre,Ciudad))) FROM Equipos);
