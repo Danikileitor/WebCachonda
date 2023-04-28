@@ -20,26 +20,13 @@ public class HoraExacta extends Hora {
             this.segundos = 0;
             this.minutos++;
         }
-        if (this.minutos < 0) {
-            this.minutos = 0;
-            this.hora--;
-        }
-        if (this.minutos > 59) {
-            this.minutos = 0;
-            this.hora++;
-        }
-        if (this.hora < 0) {
-            this.hora = 23;
-        }
-        if (this.hora > 23) {
-            this.hora = 0;
-        }
+        super.comprobar();
     }
 
     @Override
     public void inc() {
         this.segundos++;
-        comprobar();
+        this.comprobar();
     }
 
     public boolean setSegundos(int segundos) {
