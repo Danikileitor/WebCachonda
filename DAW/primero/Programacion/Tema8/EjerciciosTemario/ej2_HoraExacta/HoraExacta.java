@@ -44,7 +44,7 @@ public class HoraExacta extends Hora {
 
     public boolean setSegundos(int segundos) {
         boolean posible = false;
-        if (segundos > 0 && segundos < 59) {
+        if (segundos >= 0 && segundos < 60) {
             this.segundos = segundos;
             posible = true;
         }
