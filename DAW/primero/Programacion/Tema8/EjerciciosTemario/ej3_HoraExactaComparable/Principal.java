@@ -104,7 +104,7 @@ public class Principal {
         return num;
     }
 
-    public void comprobar(HoraExacta h1) {
+    public static void comprobar(HoraExacta h1) {
         HoraExacta h2 = new HoraExacta(0, 0, 0);
         System.out.println("Vamos a indicar la hora correcta.");
         System.out.println("Indica los segundos:");
