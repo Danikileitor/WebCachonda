@@ -34,7 +34,7 @@ public class Hora {
 
     boolean setMinutos(int minutos) {
         boolean posible = false;
-        if (minutos > 0 && minutos < 59) {
+        if (minutos >= 0 && minutos < 60) {
             this.minutos = minutos;
             posible = true;
         }
@@ -43,7 +43,7 @@ public class Hora {
 
     boolean setHora(int hora) {
         boolean posible = false;
-        if (hora > 0 && hora < 23) {
+        if (hora >= 0 && hora < 24) {
             this.hora = hora;
             posible = true;
         }
