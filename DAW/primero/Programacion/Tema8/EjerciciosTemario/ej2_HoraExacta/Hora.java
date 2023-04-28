@@ -43,7 +43,7 @@ public class Hora {
 
     public boolean setHora(int hora) {
         boolean posible = false;
-        if (hora >= 0 && hora < 23) {
+        if (hora >= 0 && hora < 24) {
             this.hora = hora;
             posible = true;
         }
