@@ -4,22 +4,20 @@ import java.util.Arrays;
 
 public class Pila extends Lista {
 
-    private Lista lista;
-
     public Pila() {
-        this.lista = new Lista();
+        this.tabla = new Integer[0];
     }
 
     public void apilar(Integer elemento) {
-        this.lista.insertarFinal(elemento);
+        this.insertarFinal(elemento);
     }
 
     public Integer desapilar() {
-        return this.lista.eliminar(this.lista.tabla.length - 1);
+        return this.eliminar(this.tabla.length - 1);
     }
 
     @Override
     public String toString() {
-        return "Pila: " + Arrays.toString(this.lista.tabla);
+        return "Pila: " + Arrays.toString(this.tabla);
     }
 }
