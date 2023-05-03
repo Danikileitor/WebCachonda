@@ -27,8 +27,8 @@ public class Principal {
 						case 0:
 							continue;
 						case 1:
-							Campana.Nota cancion[] = {Nota.DO, Nota.SI, Nota.SOL, Nota.RE, Nota.FA};
-							for (Nota nota:cancion) {
+							Campana.Nota cancion[] = {Campana.Nota.DO, Campana.Nota.SI, Campana.Nota.SOL, Campana.Nota.RE, Campana.Nota.FA};
+							for (Campana.Nota nota:cancion) {
 								c.add(nota);
 							}
 							c.interpretar();
