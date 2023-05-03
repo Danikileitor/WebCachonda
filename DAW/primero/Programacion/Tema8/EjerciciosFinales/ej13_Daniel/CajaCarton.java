@@ -2,7 +2,7 @@ package ej13_Daniel;
 
 public class CajaCarton extends Caja {
 
-    public CajaCarton(int ancho, int alto, int fondo, Unidad unidad){
+    public CajaCarton(int ancho, int alto, int fondo){
         super(ancho, alto, fondo, Unidad.cm);
     }
 
