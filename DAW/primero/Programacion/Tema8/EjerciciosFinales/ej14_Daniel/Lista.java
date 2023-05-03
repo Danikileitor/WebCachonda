@@ -67,7 +67,8 @@ public class Lista {
         return tabla.length;
     }
 
-    public void mostrar() {
-        System.out.println("Lista: " + Arrays.toString(tabla));
+    @Override
+    public String toString() {
+        return "Lista: " + Arrays.toString(tabla);
     }
 }
