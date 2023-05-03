@@ -8,7 +8,7 @@ public class CajaCarton extends Caja {
 
     @Override
     public double getVolumen() {
-        return ancho*alto*fondo*0.8;
+        return super.getVolumen()*0.8;
     }
 
     public double getSuperficie() {
