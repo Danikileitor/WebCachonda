@@ -73,6 +73,6 @@ public class Lista {
     }
 
     public boolean equals(Lista otraLista) {
-        return super.equals(otraLista);
+        return Arrays.equals(this.tabla, otraLista.tabla);
     }
 }
