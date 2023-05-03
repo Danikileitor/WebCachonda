@@ -1,8 +1,8 @@
 package ej11_Daniel;
 
-public class Piano extends Instrumento {
+public class Campana extends Instrumento {
     
-    public Piano() {
+    public Campana() {
         super();
     }
 

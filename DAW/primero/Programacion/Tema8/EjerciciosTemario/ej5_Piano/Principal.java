@@ -3,8 +3,6 @@ package ej5_Piano;
 import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
-import ej5_Piano.Instrumento.Nota;
-
 public class Principal {
 	static Scanner teclado = new Scanner(System.in);
 
@@ -29,8 +27,8 @@ public class Principal {
 						case 0:
 							continue;
 						case 1:
-							Piano.Nota cancion[] = {Nota.DO, Nota.SI, Nota.SOL, Nota.RE, Nota.FA};
-							for (Nota nota:cancion) {
+							Piano.Nota cancion[] = {Piano.Nota.DO, Piano.Nota.SI, Piano.Nota.SOL, Piano.Nota.RE, Piano.Nota.FA};
+							for (Piano.Nota nota:cancion) {
 								p.add(nota);
 							}
 							p.interpretar();

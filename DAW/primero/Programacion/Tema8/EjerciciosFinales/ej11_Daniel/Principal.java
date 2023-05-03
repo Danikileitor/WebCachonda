@@ -3,8 +3,6 @@ package ej11_Daniel;
 import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
-import ej5_Piano.Instrumento.Nota;
-
 public class Principal {
 	static Scanner teclado = new Scanner(System.in);
 
@@ -15,7 +13,7 @@ public class Principal {
 	public static void menu() {
 		int menu = 1;
 		char salir = 'n';
-		Piano p = new Piano();
+		Campana c = new Campana();
 		do {
 			if (menu == 0) {// Confirmación para salir del programa
 				System.out.println("Has elegido salir, ¿estas seguro? (s/n)");
@@ -29,11 +27,11 @@ public class Principal {
 						case 0:
 							continue;
 						case 1:
-							Piano.Nota cancion[] = {Nota.DO, Nota.SI, Nota.SOL, Nota.RE, Nota.FA};
+							Campana.Nota cancion[] = {Nota.DO, Nota.SI, Nota.SOL, Nota.RE, Nota.FA};
 							for (Nota nota:cancion) {
-								p.add(nota);
+								c.add(nota);
 							}
-							p.interpretar();
+							c.interpretar();
 							break;
 						default:
 							System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
