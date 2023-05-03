@@ -3,7 +3,6 @@ package ej12_Daniel;
 public class Caja {
 
     private final int ancho, alto, fondo;
-    public enum Unidad {cm, m};
     private final Unidad unidad;
     private String etiqueta;
 
@@ -13,6 +12,8 @@ public class Caja {
         this.fondo = fondo;
         this.unidad = unidad;
     }
+
+    public enum Unidad {cm, m};
 
     public double getVolumen() {
         return ancho*alto*fondo;
