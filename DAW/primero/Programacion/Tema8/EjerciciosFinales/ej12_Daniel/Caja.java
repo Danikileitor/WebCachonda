@@ -16,7 +16,11 @@ public class Caja {
     public enum Unidad {cm, m};
 
     public double getVolumen() {
-        return ancho*alto*fondo;
+        double resultado = ancho*alto*fondo;
+        if (this.unidad == Unidad.cm) {
+            resultado /= 1000000;
+        }
+        return resultado;
     }
 
     public void setEtiqueta(String etiqueta) {
