@@ -10,7 +10,7 @@ public class Cola extends Lista {
         return this.tabla[n];
     }
 
-    private Integer[] prepararAux() {
+    protected Integer[] prepararAux() {
         Integer[] aux = new Integer[this.tabla.length + 1];
         for (int i = 0; i < this.tabla.length; i++) {
             aux[i] = this.tabla[i];
