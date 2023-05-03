@@ -1,7 +1,5 @@
 package ej16_Daniel;
 
-import java.util.Arrays;
-
 public class Pila extends Lista {
 
     public Pila() {
@@ -14,10 +12,5 @@ public class Pila extends Lista {
 
     public Integer desapilar() {
         return this.eliminar(this.tabla.length - 1);
-    }
-
-    @Override
-    public String toString() {
-        return "Pila: " + Arrays.toString(this.tabla);
     }
 }
