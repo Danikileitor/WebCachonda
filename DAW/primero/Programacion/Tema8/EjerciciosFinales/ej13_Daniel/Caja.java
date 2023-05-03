@@ -2,9 +2,9 @@ package ej13_Daniel;
 
 public class Caja {
 
-    private final int ancho, alto, fondo;
-    private final Unidad unidad;
-    private String etiqueta;
+    protected final int ancho, alto, fondo;
+    protected final Unidad unidad;
+    protected String etiqueta;
 
     public Caja(int ancho, int alto, int fondo, Unidad unidad){
         this.ancho = ancho;
