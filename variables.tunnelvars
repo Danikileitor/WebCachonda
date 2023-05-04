@@ -1,9 +1,0 @@
-#use ${DEBUG()} or ${DEBUG("var_name")} or ${DEBUG(":l","var_name")} in your freemarker template to dump vars in your output
-#xpath OT3.0 style so always prefix with xpath:// never only //
-#With xslt template use xslt.transformer.factory=jdk|saxon|xalan; saxon is prefered, it is very actively developed and maintained
-
-#definitions like xmlns:// header:// and mapping:// go here.
-
-
-#Tunnelvars go here
-
