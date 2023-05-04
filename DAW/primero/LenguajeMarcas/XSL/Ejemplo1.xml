@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Ejemplo1.xsl" type="text/xsl"?>
+<libro>
+    <titulo>El señor de los anillos: La comunidad del anillo</titulo>
+    <autor>J.R.R. Tolkien</autor>
+</libro>
