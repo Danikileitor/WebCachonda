@@ -3,6 +3,7 @@
     <xsl:template match="/">
         <html>
             <body>
+                <h1>Libros</h1>
                 <ul>
                     <li>Titulo: <xsl:value-of select="libro/titulo" /></li>
                     <li>Autor: <xsl:value-of select="libro/autor" /></li>
