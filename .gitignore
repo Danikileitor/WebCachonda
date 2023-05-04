@@ -12,10 +12,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-test.xml
-test.json
-variables.tunnelvars
-Transforminator.jar
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
