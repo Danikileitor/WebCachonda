@@ -12,6 +12,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+test.xml
 test.json
 variables.tunnelvars
 
