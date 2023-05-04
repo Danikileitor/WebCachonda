@@ -15,6 +15,7 @@
 test.xml
 test.json
 variables.tunnelvars
+Transforminator.java
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
