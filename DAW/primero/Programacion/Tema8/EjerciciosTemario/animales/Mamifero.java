@@ -22,12 +22,20 @@ public class Mamifero extends Animal {
         return tipo;
     }
 
-    public boolean nadar() {
-        return this.tipo == Tipo.Acuatico;
+    public void nadar() {
+        if (this.tipo == Tipo.Acuatico) {
+            System.out.println("¡Estoy preparado para nadar!");
+        } else {
+            System.out.println("¡No puedo nadar mucho!");
+        }
     }
 
-    public boolean correr() {
-        return this.tipo == Tipo.Terrestre;
+    public void correr() {
+        if (this.tipo == Tipo.Terrestre) {
+            System.out.println("¡Estoy preparado para correr!");
+        } else {
+            System.out.println("¡No puedo correr! yo solo sé nadar");
+        }
     }
 
     public void duerme() {
