@@ -15,15 +15,19 @@ public class Prueba {
 
         Gato[] gatos = {elsa, pataky, fito, fitipaldis};
 
+        System.out.println("Pruebas generales con cada gato:");
         for (Gato gato : gatos) {
+            System.out.println(gato);
             gato.duerme();
             gato.ronronear();
             gato.correr();
             gato.nadar();
             gato.comer(Comida.Pescado);
             gato.comer(Comida.Fruta);
+            System.out.println();
         }
 
+        System.out.println("Pruebas interactivas:");
         fito.peleaCon(fitipaldis);
         fito.peleaCon(elsa);
         elsa.juegaCon(pataky);
