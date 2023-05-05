@@ -6,7 +6,10 @@
                 <h2>Producciones de Netflix</h2>
                 <ul>
                     <xsl:for-each select="netflix/produccion">
-                        <li><xsl:value-of select="nombre"/> creado por <xsl:value-of select="director"/></li>
+                        <xsl:sort select="nombre"/>
+                        <xsl:if test="nombre/@tipo='serie'">
+                            <li><xsl:value-of select="nombre"/></li>
+                        </xsl:if>
                     </xsl:for-each>
                 </ul>
             </body>
