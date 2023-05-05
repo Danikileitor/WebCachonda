@@ -44,11 +44,11 @@ public class Mamifero extends Animal {
 
     public void comer(Comida comida) {
         if (comida == Comida.Algas && this.tipo == Tipo.Acuatico) {
-            System.out.println("¡Le ha encantado la comida!");
+            System.out.println("¡Me ha encantado la comida!");
         } else if (comida != Comida.Algas && this.tipo == Tipo.Terrestre) {
-            System.out.println("¡Le ha encantado la comida!");
+            System.out.println("¡Me ha encantado la comida!");
         } else {
-            System.out.println("¡No le gusta para nada esta comida!");
+            System.out.println("¡No me gusta para nada esta comida!");
         }
     }
 }
