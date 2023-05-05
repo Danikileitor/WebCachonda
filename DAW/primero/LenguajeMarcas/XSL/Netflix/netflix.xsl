@@ -6,9 +6,9 @@
                 <h2>Producciones de Netflix</h2>
                 <ul>
                     <xsl:for-each select="netflix/produccion">
-                        <xsl:sort select="nombre"/>
+                        <xsl:sort select="num_temporadas" data-type="number"/>
                         <xsl:if test="nombre/@tipo='serie'">
-                            <li><xsl:value-of select="nombre"/></li>
+                            <li><xsl:value-of select="nombre"/> - <xsl:value-of select="num_temporadas"/></li>
                         </xsl:if>
                     </xsl:for-each>
                 </ul>
