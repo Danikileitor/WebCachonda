@@ -53,5 +53,8 @@ public class Prueba {
         andy.juegaCon(nana);
         System.out.println();
 
+        System.out.println("Finalizamos la prueba indicando la cantidad de animales:");
+        System.out.println(Animal.cantidadAnimales);
+
     }
 }
