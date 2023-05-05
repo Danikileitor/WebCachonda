@@ -1,13 +1,5 @@
 package animales;
 
-/*
-    toString() mostrar toda la info del gato
-    maullar()
-    ronronear()
-    comer(comida) solo le gusta el pescado
-    peleaCon(Gato contrincante) solo se pelean entre machos
- */
-
 public class Gato extends Mamifero {
     
     protected Raza raza;
