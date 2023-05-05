@@ -37,6 +37,10 @@ public abstract class Animal {
         System.out.println("Zzz...");
     }
 
+    public int getCantidadAnimales() {
+        return cantidadAnimales;
+    }
+
     @Override
     public String toString(){
         return "Sexo: " + this.sexo;
