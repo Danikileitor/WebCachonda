@@ -4,14 +4,22 @@
         <html>
             <body>
                 <h2>Producciones de Netflix</h2>
-                <ul>
+                <table>
+                    <tr>
+                        <td>Producción</td>
+                        <td>Tipo</td>
+                        <td>Creador</td>
+                    </tr>
                     <xsl:for-each select="netflix/produccion">
-                        <xsl:sort select="num_temporadas" data-type="number" order="descending"/>
-                        <xsl:if test="nombre/@tipo='serie'">
-                            <li><xsl:value-of select="nombre"/> - <xsl:value-of select="num_temporadas"/></li>
-                        </xsl:if>
+                        <xsl:sort select="nombre/@tipo"/>
+                        <xsl:sort select="nombre"/>
+                        <tr>
+                            <td><xsl:value-of select="nombre"/></td>
+                            <td><xsl:value-of select="nombre/@tipo"/></td>
+                            <td><xsl:value-of select="director"/></td>
+                        </tr>
                     </xsl:for-each>
-                </ul>
+                </table>
             </body>
         </html>
     </xsl:template>
