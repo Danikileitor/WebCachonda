@@ -43,7 +43,7 @@ public class Gato extends Mamifero {
     }
 
     public void ronronear() {
-        System.out.println("¡Miau miau!");
+        System.out.println("Prrrrrrrr...");
     }
 
     public void comer(Comida comida) {
