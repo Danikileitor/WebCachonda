@@ -15,20 +15,6 @@ public abstract class Animal {
         cantidadAnimales++;
     }
 
-    public void setSexo(int n) {
-        switch (n) {
-            case 1:
-                this.sexo = Sexo.Macho;
-                break;
-            case 2:
-                this.sexo = Sexo.Hembra;
-                break;
-            case 3:
-                this.sexo = Sexo.Hermafrodita;
-                break;
-        }
-    }
-
     public Sexo getSexo() {
         return this.sexo;
     }
