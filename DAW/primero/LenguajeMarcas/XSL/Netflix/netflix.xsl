@@ -11,13 +11,14 @@
                         <th>Creador</th>
                     </tr>
                     <xsl:for-each select="netflix/produccion">
-                        <xsl:sort select="nombre/@tipo"/>
-                        <xsl:sort select="nombre"/>
-                        <tr>
-                            <td><xsl:value-of select="nombre"/></td>
-                            <td><xsl:value-of select="nombre/@tipo"/></td>
-                            <td><xsl:value-of select="director"/></td>
-                        </tr>
+                        <xsl:sort select="ano_estreno" order="descending"/>
+                        <xsl:if test="nombre/@tipo='pelicula'">                            
+                            <tr>
+                                <td><xsl:value-of select="nombre"/></td>
+                                <td><xsl:value-of select="nombre/@tipo"/></td>
+                                <td><xsl:value-of select="director"/></td>
+                            </tr>
+                        </xsl:if>
                     </xsl:for-each>
                 </table>
             </body>
