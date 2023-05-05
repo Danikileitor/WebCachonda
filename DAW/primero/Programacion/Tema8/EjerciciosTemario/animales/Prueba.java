@@ -26,7 +26,8 @@ public class Prueba {
 
         fito.peleaCon(fitipaldis);
         fito.peleaCon(elsa);
+        elsa.juegaCon(pataky);
+        elsa.juegaCon(fito);
 
-        
     }
 }
