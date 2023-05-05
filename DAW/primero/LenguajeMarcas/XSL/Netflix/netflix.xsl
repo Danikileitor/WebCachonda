@@ -4,7 +4,7 @@
         <html>
             <body>
                 <h2>Producciones de Netflix</h2>
-                <table>
+                <table border="1">
                     <tr>
                         <td>Producción</td>
                         <td>Tipo</td>
