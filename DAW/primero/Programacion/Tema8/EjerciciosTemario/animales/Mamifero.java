@@ -51,4 +51,9 @@ public class Mamifero extends Animal {
             System.out.println("¡No me gusta para nada esta comida!");
         }
     }
+
+    @Override
+    public String toString(){
+        return super.toString() + " Tipo: " + this.tipo;
+    }
 }
