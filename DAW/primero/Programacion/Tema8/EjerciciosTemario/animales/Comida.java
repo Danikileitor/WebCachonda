@@ -1,5 +1,5 @@
 package animales;
 
 public enum Comida {
-    Algas, Fruta, Carne
+    Algas, Fruta, Carne, Pescado
 }

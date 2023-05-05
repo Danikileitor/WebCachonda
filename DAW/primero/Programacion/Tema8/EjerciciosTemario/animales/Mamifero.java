@@ -2,7 +2,7 @@ package animales;
 
 public class Mamifero extends Animal {
 
-    Tipo tipo;
+    protected Tipo tipo;
 
     Mamifero() {
         super(Sexo.Macho);
