@@ -5,11 +5,11 @@
             <body>
                 <h2>Producciones de Netflix</h2>
                 <table border="1">
-                    <th>
-                        <td>Producción</td>
-                        <td>Tipo</td>
-                        <td>Creador</td>
-                    </th>
+                    <tr>
+                        <th>Producción</th>
+                        <th>Tipo</th>
+                        <th>Creador</th>
+                    </tr>
                     <xsl:for-each select="netflix/produccion">
                         <xsl:sort select="nombre/@tipo"/>
                         <xsl:sort select="nombre"/>
