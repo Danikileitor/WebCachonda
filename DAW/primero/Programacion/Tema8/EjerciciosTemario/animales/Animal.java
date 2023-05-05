@@ -10,6 +10,11 @@ public abstract class Animal {
         cantidadAnimales++;
     }
 
+    public Animal(Sexo sexo) {
+        this.sexo = sexo;
+        cantidadAnimales++;
+    }
+
     public void setSexo(int n) {
         switch (n) {
             case 1:
