@@ -36,4 +36,9 @@ public abstract class Animal {
     public void dormir() {
         System.out.println("Zzz...");
     }
+
+    @Override
+    public String toString(){
+        return "Sexo: " + this.sexo;
+    }
 }
