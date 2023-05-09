@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Basurero {
 
     static String entrada = new String();
-    static Basura basura = new Basura();
+    static Basura[] basura = new Basura[1000000];
     static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -17,8 +17,8 @@ public class Basurero {
     }
 
     public static void generarBasura() {
-        for (int i = 0; i < 1000; i++) {
-            basura = new Basura();
+        for (int i = 0; i < 1000000; i++) {
+            basura[i] = new Basura();
         }
     }
     
