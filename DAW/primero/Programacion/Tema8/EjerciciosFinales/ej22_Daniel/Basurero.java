@@ -12,18 +12,16 @@ public class Basurero {
         do {
             System.out.println("Presiona enter para generar basura o escribe 0 para finalizar:");
             entrada = teclado.nextLine();
+            if (!entrada.equals("0")) {
+                generarBasura();
+            }
         } while (!entrada.equals("0"));
-        
+
     }
 
     public static void generarBasura() {
         for (int i = 0; i < 1000000; i++) {
             basura[i] = new Basura();
         }
-    }
-    
-    @Override
-    protected void finalize() throws Throwable {
-        System.out.println("Ha pasado el basurero...");
     }
 }
