@@ -27,7 +27,7 @@ public class Prueba2 {
         nombres.remove(2);      //Borra el objeto según su posición
         nombres.remove("Fito"); //Borra el primero objeto indicado
 
-        //nombres nombresCopia = (ArrayList) nombres.clone();   //Ni puta idea de como clonar
+        ArrayList nombresCopia = (ArrayList) nombres.clone();   //Ni puta idea de como clonar
 
         Object[] array = nombres.toArray();     //Convertir a array normal
 
