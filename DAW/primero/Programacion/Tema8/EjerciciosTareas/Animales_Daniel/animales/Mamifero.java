@@ -1,6 +1,6 @@
 package animales;
 
-public class Mamifero extends Animal implements Cloneable {
+public class Mamifero extends Animal {
 
     protected Tipo tipo;
 
@@ -20,11 +20,6 @@ public class Mamifero extends Animal implements Cloneable {
 
     Mamifero(Mamifero mamifero) {
         this(mamifero.sexo, mamifero.tipo);
-    }
-
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     public Tipo getTipo() {
