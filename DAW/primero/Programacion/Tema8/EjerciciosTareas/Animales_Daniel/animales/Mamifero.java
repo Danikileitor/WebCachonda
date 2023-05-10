@@ -18,6 +18,10 @@ public class Mamifero extends Animal {
         this(sexo, Tipo.Terrestre);
     }
 
+    Mamifero(Mamifero mamifero) {
+        this(mamifero.sexo, mamifero.tipo);
+    }
+
     public Tipo getTipo() {
         return tipo;
     }
