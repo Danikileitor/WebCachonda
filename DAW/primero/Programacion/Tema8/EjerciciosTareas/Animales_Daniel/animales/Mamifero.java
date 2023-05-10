@@ -22,6 +22,11 @@ public class Mamifero extends Animal {
         this(mamifero.sexo, mamifero.tipo);
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
     public Tipo getTipo() {
         return tipo;
     }
