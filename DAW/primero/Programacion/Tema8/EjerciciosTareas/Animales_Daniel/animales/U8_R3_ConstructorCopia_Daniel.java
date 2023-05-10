@@ -29,7 +29,7 @@ public class U8_R3_ConstructorCopia_Daniel {
         System.out.println("# Prueba con el método constructor copia #");
         System.out.println("Original:");
         System.out.println(delfin);
-        System.out.println("Clonado:");
+        System.out.println("Copia:");
         System.out.println(delfinCopia);
 
         delfinCopia.sexo = Sexo.Hembra;
@@ -38,7 +38,7 @@ public class U8_R3_ConstructorCopia_Daniel {
         System.out.println("# Prueba después de modificar la copia: #");
         System.out.println("Original:");
         System.out.println(delfin);
-        System.out.println("Clonado:");
+        System.out.println("Copia:");
         System.out.println(delfinCopia);
     }
 }
