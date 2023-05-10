@@ -27,6 +27,8 @@ public class U8_R2_ArrayList_Daniel {
         perros.remove(0);
         perros.remove(lucas);
 
+        ArrayList perrosCopia = (ArrayList) perros.clone();
+
         Object[] array = perros.toArray();
 
         Iterator<Perro> miIterator = perros.iterator();
