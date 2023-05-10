@@ -22,6 +22,8 @@ public class U8_R3_ConstructorCopia_Daniel {
         System.out.println("Clonado:");
         System.out.println(conejaClonada);
 
+        System.out.println("Resultado de la prueba: Al modificar el clonado, se modifica el original.");
+
         // Prueba con el método constructor copia
         Mamifero delfin = new Mamifero(Sexo.Macho, Tipo.Acuatico);
         Mamifero delfinCopia = new Mamifero(delfin);
@@ -40,5 +42,7 @@ public class U8_R3_ConstructorCopia_Daniel {
         System.out.println(delfin);
         System.out.println("Copia:");
         System.out.println(delfinCopia);
+
+        System.out.println("Resultado de la prueba: Al modificar la copia, no se modifica el original.");
     }
 }
