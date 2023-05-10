@@ -11,6 +11,10 @@ public class U8_R2_ArrayList_Daniel {
         Perro lucas = new Perro(Sexo.Macho, Tipo.Acuatico, PerroRaza.Shiba);
 
         ArrayList<Perro> perros = new ArrayList<Perro>();
-        
+        perros.add(nana);
+        perros.add(0, laika);
+        perros.add(andy);
+        perros.add(lucas);
+        perros.add(2, lucas);
     }
 }
