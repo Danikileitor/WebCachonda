@@ -1,6 +1,6 @@
 package animales;
 
-public class Mamifero extends Animal {
+public class Mamifero extends Animal implements Cloneable {
 
     protected Tipo tipo;
 
