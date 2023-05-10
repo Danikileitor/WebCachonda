@@ -40,6 +40,5 @@ public class U8_R3_ConstructorCopia_Daniel {
         System.out.println(delfin);
         System.out.println("Clonado:");
         System.out.println(delfinCopia);
-
     }
 }
