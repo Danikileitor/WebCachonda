@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netflix>
+    <serie>
+        <nombre>Breaking bad</nombre>
+        <ano_estreno>2008</ano_estreno>
+        <num_temporadas>5</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El padrino</nombre>
+        <ano_estreno>1972</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Game of Thrones</nombre>
+        <ano_estreno>2011</ano_estreno>
+        <num_temporadas>8</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Planet Earth</nombre>
+        <ano_estreno>2006</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El club de la pelea</nombre>
+        <ano_estreno>1999</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Social Dilemma</nombre>
+        <ano_estreno>2020</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Crown</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>4</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Forrest Gump</nombre>
+        <ano_estreno>1994</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Stranger Things</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>4</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>My Octopus Teacher</nombre>
+        <ano_estreno>2020</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Office</nombre>
+        <ano_estreno>2005</ano_estreno>
+        <num_temporadas>9</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Pulp Fiction</nombre>
+        <ano_estreno>1994</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>March of the Penguins</nombre>
+        <ano_estreno>2005</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Breaking Bad</nombre>
+        <ano_estreno>2008</ano_estreno>
+        <num_temporadas>5</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Last Dance</nombre>
+        <ano_estreno>2020</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Señor de los Anillos: La Comunidad del Anillo</nombre>
+        <ano_estreno>2001</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Stranger Things</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>3</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Making a Murderer</nombre>
+        <ano_estreno>2015</ano_estreno>
+        <num_temporadas>2</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Friends</nombre>
+        <ano_estreno>1994</ano_estreno>
+        <num_temporadas>10</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Padrino: Parte II</nombre>
+        <ano_estreno>1974</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Narcos</nombre>
+        <ano_estreno>2015</ano_estreno>
+        <num_temporadas>3</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Caballero de la Noche</nombre>
+        <ano_estreno>2008</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Rey León</nombre>
+        <ano_estreno>1994</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>La Casa de Papel</nombre>
+        <ano_estreno>2017</ano_estreno>
+        <num_temporadas>5</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>La La Land</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Amy</nombre>
+        <ano_estreno>2015</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Señor de los Anillos: El Retorno del Rey</nombre>
+        <ano_estreno>2003</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Laberinto del Fauno</nombre>
+        <ano_estreno>2006</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Won't You Be My Neighbor?</nombre>
+        <ano_estreno>2018</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Pianista</nombre>
+        <ano_estreno>2002</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Act of Killing</nombre>
+        <ano_estreno>2012</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Mandalorian</nombre>
+        <ano_estreno>2019</ano_estreno>
+        <num_temporadas>2</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Blackfish</nombre>
+        <ano_estreno>2013</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Beatles: Eight Days a Week</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Walking Dead</nombre>
+        <ano_estreno>2010</ano_estreno>
+        <num_temporadas>11</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Imposter</nombre>
+        <ano_estreno>2012</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Boys</nombre>
+        <ano_estreno>2019</ano_estreno>
+        <num_temporadas>3</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Handmaid's Tale</nombre>
+        <ano_estreno>2017</ano_estreno>
+        <num_temporadas>4</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Parásitos</nombre>
+        <ano_estreno>2019</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Jiro Dreams of Sushi</nombre>
+        <ano_estreno>2011</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Gran Hotel Budapest</nombre>
+        <ano_estreno>2014</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Sopranos</nombre>
+        <ano_estreno>1999</ano_estreno>
+        <num_temporadas>6</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Interstellar</nombre>
+        <ano_estreno>2014</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Whiplash</nombre>
+        <ano_estreno>2014</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>La forma del agua</nombre>
+        <ano_estreno>2017</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Fyre: The Greatest Party That Never Happened</nombre>
+        <ano_estreno>2019</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Cove</nombre>
+        <ano_estreno>2009</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Dark</nombre>
+        <ano_estreno>2017</ano_estreno>
+        <num_temporadas>3</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>La red social</nombre>
+        <ano_estreno>2010</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El renacido</nombre>
+        <ano_estreno>2015</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Peaky Blinders</nombre>
+        <ano_estreno>2013</ano_estreno>
+        <num_temporadas>5</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Ivory Game</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Dark Knight</nombre>
+        <ano_estreno>2008</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>El Cisne Negro</nombre>
+        <ano_estreno>2010</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Black Swan</nombre>
+        <ano_estreno>2010</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>American Factory</nombre>
+        <ano_estreno>2019</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Ex Machina</nombre>
+        <ano_estreno>2014</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Free Solo</nombre>
+        <ano_estreno>2018</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Virunga</nombre>
+        <ano_estreno>2014</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>The Shawshank Redemption</nombre>
+        <ano_estreno>1994</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Interstella 5555: The 5tory of the 5ecret 5tar 5ystem</nombre>
+        <ano_estreno>2003</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Kill bill</nombre>
+        <ano_estreno>2003</ano_estreno>
+        <num_temporadas>2</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Hajime no Ippo</nombre>
+        <ano_estreno>2000</ano_estreno>
+        <num_temporadas>3</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Fate/Zero</nombre>
+        <ano_estreno>2011</ano_estreno>
+        <num_temporadas>2</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>La tumba de las luciérnagas</nombre>
+        <ano_estreno>1988</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>La forma de la voz</nombre>
+        <ano_estreno>2016</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Se7en</nombre>
+        <ano_estreno>1995</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+    <serie>
+        <nombre>Persona 4: The Animation</nombre>
+        <ano_estreno>2011</ano_estreno>
+        <num_temporadas>1</num_temporadas>
+    </serie>
+</netflix>
