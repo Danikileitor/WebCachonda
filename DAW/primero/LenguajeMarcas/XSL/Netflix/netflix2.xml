@@ -1,343 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netflix>
-    <serie>
-        <nombre>Breaking bad</nombre>
-        <ano_estreno>2008</ano_estreno>
-        <num_temporadas>5</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El padrino</nombre>
-        <ano_estreno>1972</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Game of Thrones</nombre>
-        <ano_estreno>2011</ano_estreno>
-        <num_temporadas>8</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Planet Earth</nombre>
-        <ano_estreno>2006</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El club de la pelea</nombre>
-        <ano_estreno>1999</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Social Dilemma</nombre>
-        <ano_estreno>2020</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Crown</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>4</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Forrest Gump</nombre>
-        <ano_estreno>1994</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Stranger Things</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>4</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>My Octopus Teacher</nombre>
-        <ano_estreno>2020</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Office</nombre>
-        <ano_estreno>2005</ano_estreno>
-        <num_temporadas>9</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Pulp Fiction</nombre>
-        <ano_estreno>1994</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>March of the Penguins</nombre>
-        <ano_estreno>2005</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Breaking Bad</nombre>
-        <ano_estreno>2008</ano_estreno>
-        <num_temporadas>5</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Last Dance</nombre>
-        <ano_estreno>2020</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Señor de los Anillos: La Comunidad del Anillo</nombre>
-        <ano_estreno>2001</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Stranger Things</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>3</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Making a Murderer</nombre>
-        <ano_estreno>2015</ano_estreno>
-        <num_temporadas>2</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Friends</nombre>
-        <ano_estreno>1994</ano_estreno>
-        <num_temporadas>10</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Padrino: Parte II</nombre>
-        <ano_estreno>1974</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Narcos</nombre>
-        <ano_estreno>2015</ano_estreno>
-        <num_temporadas>3</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Caballero de la Noche</nombre>
-        <ano_estreno>2008</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Rey León</nombre>
-        <ano_estreno>1994</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>La Casa de Papel</nombre>
-        <ano_estreno>2017</ano_estreno>
-        <num_temporadas>5</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>La La Land</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Amy</nombre>
-        <ano_estreno>2015</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Señor de los Anillos: El Retorno del Rey</nombre>
-        <ano_estreno>2003</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Laberinto del Fauno</nombre>
-        <ano_estreno>2006</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Won't You Be My Neighbor?</nombre>
-        <ano_estreno>2018</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Pianista</nombre>
-        <ano_estreno>2002</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Act of Killing</nombre>
-        <ano_estreno>2012</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Mandalorian</nombre>
-        <ano_estreno>2019</ano_estreno>
-        <num_temporadas>2</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Blackfish</nombre>
-        <ano_estreno>2013</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Beatles: Eight Days a Week</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Walking Dead</nombre>
-        <ano_estreno>2010</ano_estreno>
-        <num_temporadas>11</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Imposter</nombre>
-        <ano_estreno>2012</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Boys</nombre>
-        <ano_estreno>2019</ano_estreno>
-        <num_temporadas>3</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Handmaid's Tale</nombre>
-        <ano_estreno>2017</ano_estreno>
-        <num_temporadas>4</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Parásitos</nombre>
-        <ano_estreno>2019</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Jiro Dreams of Sushi</nombre>
-        <ano_estreno>2011</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Gran Hotel Budapest</nombre>
-        <ano_estreno>2014</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Sopranos</nombre>
-        <ano_estreno>1999</ano_estreno>
-        <num_temporadas>6</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Interstellar</nombre>
-        <ano_estreno>2014</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Whiplash</nombre>
-        <ano_estreno>2014</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>La forma del agua</nombre>
-        <ano_estreno>2017</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Fyre: The Greatest Party That Never Happened</nombre>
-        <ano_estreno>2019</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Cove</nombre>
-        <ano_estreno>2009</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Dark</nombre>
-        <ano_estreno>2017</ano_estreno>
-        <num_temporadas>3</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>La red social</nombre>
-        <ano_estreno>2010</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El renacido</nombre>
-        <ano_estreno>2015</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Peaky Blinders</nombre>
-        <ano_estreno>2013</ano_estreno>
-        <num_temporadas>5</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Ivory Game</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Dark Knight</nombre>
-        <ano_estreno>2008</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>El Cisne Negro</nombre>
-        <ano_estreno>2010</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Black Swan</nombre>
-        <ano_estreno>2010</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>American Factory</nombre>
-        <ano_estreno>2019</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Ex Machina</nombre>
-        <ano_estreno>2014</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Free Solo</nombre>
-        <ano_estreno>2018</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Virunga</nombre>
-        <ano_estreno>2014</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>The Shawshank Redemption</nombre>
-        <ano_estreno>1994</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Interstella 5555: The 5tory of the 5ecret 5tar 5ystem</nombre>
-        <ano_estreno>2003</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Kill bill</nombre>
-        <ano_estreno>2003</ano_estreno>
-        <num_temporadas>2</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Hajime no Ippo</nombre>
-        <ano_estreno>2000</ano_estreno>
-        <num_temporadas>3</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Fate/Zero</nombre>
-        <ano_estreno>2011</ano_estreno>
-        <num_temporadas>2</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>La tumba de las luciérnagas</nombre>
-        <ano_estreno>1988</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>La forma de la voz</nombre>
-        <ano_estreno>2016</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Se7en</nombre>
-        <ano_estreno>1995</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
-    <serie>
-        <nombre>Persona 4: The Animation</nombre>
-        <ano_estreno>2011</ano_estreno>
-        <num_temporadas>1</num_temporadas>
-    </serie>
+    <peliculas>
+        <pelicula>
+            <nombre>El padrino</nombre>
+            <director>Francis Ford Coppola</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El club de la pelea</nombre>
+            <director>David Fincher</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Forrest Gump</nombre>
+            <director>Robert Zemeckis</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Pulp Fiction</nombre>
+            <director>Quentin Tarantino</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Señor de los Anillos: La Comunidad del Anillo</nombre>
+            <director>Peter Jackson</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Padrino: Parte II</nombre>
+            <director>Francis Ford Coppola</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Caballero de la Noche</nombre>
+            <director>Christopher Nolan</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Rey León</nombre>
+            <director>Rob Minkoff, Roger Allers</director>
+        </pelicula>
+        <pelicula>
+            <nombre>La La Land</nombre>
+            <director>Damien Chazelle</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Señor de los Anillos: El Retorno del Rey</nombre>
+            <director>Peter Jackson</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Laberinto del Fauno</nombre>
+            <director>Guillermo del Toro</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Pianista</nombre>
+            <director>Roman Polanski</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Parásitos</nombre>
+            <director>Bong Joon-ho</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Gran Hotel Budapest</nombre>
+            <director>Wes Anderson</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Interstellar</nombre>
+            <director>Christopher Nolan</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Whiplash</nombre>
+            <director>Damien Chazelle</director>
+        </pelicula>
+        <pelicula>
+            <nombre>La forma del agua</nombre>
+            <director>Guillermo del Toro</director>
+        </pelicula>
+        <pelicula>
+            <nombre>La red social</nombre>
+            <director>David Fincher</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El renacido</nombre>
+            <director>Alejandro González Iñárritu</director>
+        </pelicula>
+        <pelicula>
+            <nombre>The Dark Knight</nombre>
+            <director>Christopher Nolan</director>
+        </pelicula>
+        <pelicula>
+            <nombre>El Cisne Negro</nombre>
+            <director>Darren Aronofsky</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Black Swan</nombre>
+            <director>Darren Aronofsky</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Ex Machina</nombre>
+            <director>Alex Garland</director>
+        </pelicula>
+        <pelicula>
+            <nombre>The Shawshank Redemption</nombre>
+            <director>Frank Darabont</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Interstella 5555: The 5tory of the 5ecret 5tar 5ystem</nombre>
+            <director>Leiji Matsumoto</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Kill bill</nombre>
+            <director>Quentin Tarantino</director>
+        </pelicula>
+        <pelicula>
+            <nombre>La tumba de las luciérnagas</nombre>
+            <director>Isao Takahata</director>
+        </pelicula>
+        <pelicula>
+            <nombre>La forma de la voz</nombre>
+            <director>Naoko Yamada</director>
+        </pelicula>
+        <pelicula>
+            <nombre>Se7en</nombre>
+            <director>David Fincher</director>
+        </pelicula>
+    </peliculas>
+    <series>
+        <serie>
+            <nombre larga="si">Breaking bad</nombre>
+            <director>Vince Gilligan</director>
+            <num_temporadas>5</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">Game of Thrones</nombre>
+            <director>David Benioff</director>
+            <num_temporadas>8</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">The Crown</nombre>
+            <director>Peter Morgan</director>
+            <num_temporadas>4</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Stranger Things</nombre>
+            <director>Los Hermanos Duffer</director>
+            <num_temporadas>4</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">The Office</nombre>
+            <director>Greg Daniels</director>
+            <num_temporadas>9</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">Breaking Bad</nombre>
+            <director>Vince Gilligan</director>
+            <num_temporadas>5</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Stranger Things</nombre>
+            <director>Los Hermanos Duffer</director>
+            <num_temporadas>3</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">Friends</nombre>
+            <director>David Crane, Marta Kauffman</director>
+            <num_temporadas>10</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Narcos</nombre>
+            <director>Chris Brancato, Carlo Bernard, Doug Miro</director>
+            <num_temporadas>3</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">La Casa de Papel</nombre>
+            <director>Álex Pina</director>
+            <num_temporadas>5</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">The Mandalorian</nombre>
+            <director>Jon Favreau</director>
+            <num_temporadas>2</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">The Walking Dead</nombre>
+            <director>Frank Darabont</director>
+            <num_temporadas>11</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">The Boys</nombre>
+            <director>Eric Kripke</director>
+            <num_temporadas>3</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">The Handmaid's Tale</nombre>
+            <director>Reed Morano</director>
+            <num_temporadas>4</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">The Sopranos</nombre>
+            <director>David Chase</director>
+            <num_temporadas>6</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Dark</nombre>
+            <director>Baran bo Odar</director>
+            <num_temporadas>3</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="si">Peaky Blinders</nombre>
+            <director>Steven Knight</director>
+            <num_temporadas>5</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Hajime no Ippo</nombre>
+            <director>Satoshi Nishimura</director>
+            <num_temporadas>3</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Fate/Zero</nombre>
+            <director>Yuki Kajiura</director>
+            <num_temporadas>2</num_temporadas>
+        </serie>
+        <serie>
+            <nombre larga="no">Persona 4: The Animation</nombre>
+            <director>Seiji Kishi</director>
+            <num_temporadas>1</num_temporadas>
+        </serie>
+    </series>
+    <documentales>
+        <documental>
+            <nombre>Planet Earth</nombre>
+            <director>Alastair Fothergill</director>
+        </documental>
+        <documental>
+            <nombre>The Social Dilemma</nombre>
+            <director>Jeff Orlowski</director>
+        </documental>
+        <documental>
+            <nombre>My Octopus Teacher</nombre>
+            <director>Pippa Ehrlich, James Reed</director>
+        </documental>
+        <documental>
+            <nombre>March of the Penguins</nombre>
+            <director>Luc Jacquet</director>
+        </documental>
+        <documental>
+            <nombre>The Last Dance</nombre>
+            <director>Jason Hehir</director>
+        </documental>
+        <documental>
+            <nombre>Making a Murderer</nombre>
+            <director>Laura Ricciardi, Moira Demos</director>
+        </documental>
+        <documental>
+            <nombre>Amy</nombre>
+            <director>Asif Kapadia</director>
+        </documental>
+        <documental>
+            <nombre>Won't You Be My Neighbor?</nombre>
+            <director>Morgan Neville</director>
+        </documental>
+        <documental>
+            <nombre>The Act of Killing</nombre>
+            <director>Joshua Oppenheimer</director>
+        </documental>
+        <documental>
+            <nombre>Blackfish</nombre>
+            <director>Gabriela Cowperthwaite</director>
+        </documental>
+        <documental>
+            <nombre>The Beatles: Eight Days a Week</nombre>
+            <director>Ron Howard</director>
+        </documental>
+        <documental>
+            <nombre>The Imposter</nombre>
+            <director>Bart Layton</director>
+        </documental>
+        <documental>
+            <nombre>Jiro Dreams of Sushi</nombre>
+            <director>David Gelb</director>
+        </documental>
+        <documental>
+            <nombre>Fyre: The Greatest Party That Never Happened</nombre>
+            <director>Chris Smith</director>
+        </documental>
+        <documental>
+            <nombre>The Cove</nombre>
+            <director>Louie Psihoyos</director>
+        </documental>
+        <documental>
+            <nombre>The Ivory Game</nombre>
+            <director>Kief Davidson</director>
+        </documental>
+        <documental>
+            <nombre>American Factory</nombre>
+            <director>Steven Bognar, Julia Reichert</director>
+        </documental>
+        <documental>
+            <nombre>Free Solo</nombre>
+            <director>Elizabeth Chai Vasarhelyi, Jimmy Chin</director>
+        </documental>
+        <documental>
+            <nombre>Virunga</nombre>
+            <director>Orlando von Einsiedel</director>
+        </documental>
+    </documentales>
 </netflix>
