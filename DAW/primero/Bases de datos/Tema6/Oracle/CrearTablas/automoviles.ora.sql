@@ -27,7 +27,6 @@ CREATE TABLE Revisiones (
 	CONSTRAINT pk_Revisiones PRIMARY KEY (Cod_revision),
 	CONSTRAINT fk_RevisionesVehiculos FOREIGN KEY (Matricula)
 		REFERENCES Vehiculos(Matricula)
-		ON UPDATE CASCADE
 		ON DELETE CASCADE
 );
 
@@ -37,10 +36,8 @@ CREATE TABLE Compras (
 	CONSTRAINT pk_compras PRIMARY KEY (Matricula, Cod_comprador),
 	CONSTRAINT fk_comprasVehiculos FOREIGN KEY (Matricula)
 		REFERENCES Vehiculos(Matricula)
-		ON UPDATE CASCADE
 		ON DELETE CASCADE,
 	CONSTRAINT fk_comprasClientes FOREIGN KEY (Cod_comprador)
 		REFERENCES Clientes (Cod_cliente)
-		ON UPDATE CASCADE
 		ON DELETE RESTRICT
 );
