@@ -1,4 +1,4 @@
-connect automoviles/automoviles;
+CONNECT automoviles/automoviles;
 
 CREATE TABLE Clientes (
 	Cod_cliente NUMBER(5) PRIMARY KEY,
