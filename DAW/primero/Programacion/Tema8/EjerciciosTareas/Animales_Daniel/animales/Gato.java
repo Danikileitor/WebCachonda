@@ -1,12 +1,16 @@
 package animales;
 
+import java.util.ArrayList;
+
 public class Gato extends Mamifero {
     
     protected GatoRaza raza;
+    protected ArrayList<Diente> boca;
 
     public Gato(Sexo sexo, Tipo tipo, GatoRaza raza) {
         super(sexo, tipo);
         this.raza = raza;
+        this.boca = new
     }
 
     public Gato(Sexo sexo) {
