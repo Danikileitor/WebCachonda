@@ -144,10 +144,21 @@ public class U8_R4_Daniel {
         System.out.println("Indica el gato que deseas eliminar: (0-" + (gatos.size() - 1) + ")");
         int pos = pedirNum();
         System.out.println("Gato [" + pos + "] - " + gatos.get(pos));
-        System.out.println("En desarrollo...");
+        System.out.println("Indica el sexo del gato: (0-Macho | 1-Hembra | 2-Hermafrodita)");
+        Sexo sexo = Sexo.values()[pedirNum()];
+        System.out.println("Indica la raza del gato: (0-Siames | 1-Persa | 2-Angora | 3-Bengali | 4-Siberiano | 5-Esfinge)");
+        GatoRaza raza = GatoRaza.values()[pedirNum()];
+        gatos.get(pos).sexo = sexo;
+        gatos.get(pos).raza = raza;
+        System.out.println("Se ha modificado el gato [" + pos + "] - " + gatos.get(pos));
     }
 
     public static void insertar() {
-        System.out.println("En desarrollo...");
+        System.out.println("Indica el sexo del gato: (0-Macho | 1-Hembra | 2-Hermafrodita)");
+        Sexo sexo = Sexo.values()[pedirNum()];
+        System.out.println("Indica la raza del gato: (0-Siames | 1-Persa | 2-Angora | 3-Bengali | 4-Siberiano | 5-Esfinge)");
+        GatoRaza raza = GatoRaza.values()[pedirNum()];
+        gatos.add(new Gato(sexo, Tipo.Terrestre, raza));
+        System.out.println("Se ha insertado el gato [" + (gatos.size() - 1) + "] - " + gatos.get((gatos.size() - 1)));
     }
 }
