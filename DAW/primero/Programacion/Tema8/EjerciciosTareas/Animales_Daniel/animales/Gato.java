@@ -10,7 +10,8 @@ public class Gato extends Mamifero {
     public Gato(Sexo sexo, Tipo tipo, GatoRaza raza) {
         super(sexo, tipo);
         this.raza = raza;
-        this.boca = new
+        this.boca = new ArrayList<>();
+        bocaInicial();
     }
 
     public Gato(Sexo sexo) {
@@ -64,6 +65,21 @@ public class Gato extends Mamifero {
             System.out.println("¡Ambos gatos se ponen a jugar!");
         } else {
             System.out.println("¡No quiero jugar con ese gato!");
+        }
+    }
+
+    private void bocaInicial(){
+        for (int i = 0; i < 12; i++) {
+            this.boca.add(new Diente(TipoDiente.Incisivo));  
+        }
+        for (int i = 0; i < 4; i++) {
+            this.boca.add(new Diente(TipoDiente.Canino));  
+        }
+        for (int i = 0; i < 10; i++) {
+            this.boca.add(new Diente(TipoDiente.Premolar));  
+        }
+        for (int i = 0; i < 4; i++) {
+            this.boca.add(new Diente(TipoDiente.Molar));  
         }
     }
 }
