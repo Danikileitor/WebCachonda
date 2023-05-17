@@ -38,7 +38,13 @@ public class U8_R4_Daniel {
                         case 0:
                             continue;
                         case 1:
-                            System.out.println("Hola mundo");
+                            visualizar();
+                            break;
+                        case 2:
+                            consultar();
+                            break;
+                        case 3:
+                            jugar2();
                             break;
                         default:
                             System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
@@ -78,5 +84,27 @@ public class U8_R4_Daniel {
         }
         teclado.nextLine();
         return num;
+    }
+
+    public static void visualizar() {
+        System.out.println("Lista de gatos:");
+        for (int i = 0; i < gatos.size(); i++) {
+            System.out.println("Gato [" + i + "] - " + gatos.get(i));
+        }
+    }
+
+    public static void consultar() {
+        System.out.println("Indica el gato que deseas consultar: (0-" + (gatos.size() - 1) + ")");
+        int pos = pedirNum();
+        System.out.println("Gato [" + pos + "] - " + gatos.get(pos));
+    }
+
+    public static void jugar2() {
+        System.out.println("Indica el gato que va a jugar: (0-" + (gatos.size() - 1) + ")");
+        int pos1 = pedirNum();
+        System.out.println("Indica el gato con quien va a jugar: (0-" + (gatos.size() - 1) + ")");
+        int pos2 = pedirNum();
+        System.out.println("El gato [" + pos1 + "] intenta jugar con el gato [" + pos2 + "] ...");
+        gatos.get(pos1).juegaCon(gatos.get(pos2));
     }
 }

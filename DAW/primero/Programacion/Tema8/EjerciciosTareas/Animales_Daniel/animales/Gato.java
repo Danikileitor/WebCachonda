@@ -54,4 +54,12 @@ public class Gato extends Mamifero {
             System.out.println("¡Las hembras no se pelean!");
         }
     }
+
+    public void juegaCon(Gato amigo) {
+        if (this.sexo == Sexo.Macho && amigo.sexo == Sexo.Macho || this.sexo == Sexo.Hembra && amigo.sexo == Sexo.Hembra) {
+            System.out.println("¡Ambos gatos se ponen a jugar!");
+        } else {
+            System.out.println("¡No quiero jugar con ese gato!");
+        }
+    }
 }
