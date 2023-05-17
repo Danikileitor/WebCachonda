@@ -32,7 +32,7 @@ public class Gato extends Mamifero {
 
     @Override
     public String toString() {
-        return super.toString() + " Raza: " + this.raza;
+        return super.toString() + " Raza: " + this.raza + " Dientes: " + this.boca.size();
     }
 
     public void maullar() {
