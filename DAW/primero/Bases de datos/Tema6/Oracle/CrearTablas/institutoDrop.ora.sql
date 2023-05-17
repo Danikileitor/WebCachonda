@@ -1,6 +1,7 @@
 CONNECT instituto/instituto;
 
-DROP TABLE Compras;
-DROP TABLE Productos;
-DROP TABLE Proveedores;
-DROP TABLE Clientes;
+DROP TABLE Matriculados;
+DROP TABLE Grupos;
+DROP TABLE Alumnos;
+DROP TABLE Modulos;
+DROP TABLE Profesores; 
