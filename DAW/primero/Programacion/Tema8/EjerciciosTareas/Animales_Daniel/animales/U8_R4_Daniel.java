@@ -52,6 +52,12 @@ public class U8_R4_Daniel {
                         case 5:
                             eliminar();
                             break;
+                        case 6:
+                            modificar();
+                            break;
+                        case 7:
+                            insertar();
+                            break;
                         default:
                             System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
                             break;
@@ -138,6 +144,10 @@ public class U8_R4_Daniel {
         System.out.println("Indica el gato que deseas eliminar: (0-" + (gatos.size() - 1) + ")");
         int pos = pedirNum();
         System.out.println("Gato [" + pos + "] - " + gatos.get(pos));
-        System.out.println();
+        System.out.println("En desarrollo...");
+    }
+
+    public static void insertar() {
+        System.out.println("En desarrollo...");
     }
 }
