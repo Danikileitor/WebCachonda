@@ -39,5 +39,4 @@ CREATE TABLE Compras (
 		ON DELETE CASCADE,
 	CONSTRAINT fk_comprasClientes FOREIGN KEY (Cod_comprador)
 		REFERENCES Clientes (Cod_cliente)
-		ON DELETE RESTRICT
 );
