@@ -103,12 +103,14 @@ public class U8_R4_Daniel {
         for (int i = 0; i < gatos.size(); i++) {
             System.out.println("Gato [" + i + "] - " + gatos.get(i));
         }
+        System.out.println();
     }
 
     public static void consultar() {
         System.out.println("Indica el gato que deseas consultar: (0-" + (gatos.size() - 1) + ")");
         int pos = pedirNum();
         System.out.println("Gato [" + pos + "] - " + gatos.get(pos));
+        System.out.println();
     }
 
     public static void jugar2() {
@@ -116,8 +118,9 @@ public class U8_R4_Daniel {
         int pos1 = pedirNum();
         System.out.println("Indica el gato con quien va a jugar: (0-" + (gatos.size() - 1) + ")");
         int pos2 = pedirNum();
-        System.out.println("El gato [" + pos1 + "] intenta jugar con el gato [" + pos2 + "] ...");
+        System.out.print("El gato [" + pos1 + "] intenta jugar con el gato [" + pos2 + "] ... ");
         gatos.get(pos1).juegaCon(gatos.get(pos2));
+        System.out.println();
     }
 
     public static void jugarTodos() {
@@ -126,10 +129,11 @@ public class U8_R4_Daniel {
                 if (i == j) {
                     continue;
                 } else {
-                    System.out.println("El gato [" + i + "] intenta jugar con el gato [" + j + "] ...");
+                    System.out.print("El gato [" + i + "] intenta jugar con el gato [" + j + "] ... ");
                     gatos.get(i).juegaCon(gatos.get(j));
                 }
             }
+            System.out.println();
         }
     }
 
@@ -138,6 +142,7 @@ public class U8_R4_Daniel {
         int pos = pedirNum();
         System.out.println("Se ha eliminado el gato [" + pos + "] - " + gatos.get(pos));
         gatos.remove(pos);
+        System.out.println();
     }
 
     public static void modificar() {
@@ -151,6 +156,7 @@ public class U8_R4_Daniel {
         gatos.get(pos).sexo = sexo;
         gatos.get(pos).raza = raza;
         System.out.println("Se ha modificado el gato [" + pos + "] - " + gatos.get(pos));
+        System.out.println();
     }
 
     public static void insertar() {
@@ -160,5 +166,6 @@ public class U8_R4_Daniel {
         GatoRaza raza = GatoRaza.values()[pedirNum()];
         gatos.add(new Gato(sexo, Tipo.Terrestre, raza));
         System.out.println("Se ha insertado el gato [" + (gatos.size() - 1) + "] - " + gatos.get((gatos.size() - 1)));
+        System.out.println();
     }
 }
