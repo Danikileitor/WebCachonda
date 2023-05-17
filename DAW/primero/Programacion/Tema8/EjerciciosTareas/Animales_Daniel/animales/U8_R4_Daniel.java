@@ -46,6 +46,12 @@ public class U8_R4_Daniel {
                         case 3:
                             jugar2();
                             break;
+                        case 4:
+                            jugarTodos();
+                            break;
+                        case 5:
+                            eliminar();
+                            break;
                         default:
                             System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
                             break;
@@ -106,5 +112,32 @@ public class U8_R4_Daniel {
         int pos2 = pedirNum();
         System.out.println("El gato [" + pos1 + "] intenta jugar con el gato [" + pos2 + "] ...");
         gatos.get(pos1).juegaCon(gatos.get(pos2));
+    }
+
+    public static void jugarTodos() {
+        for (int i = 0; i < gatos.size(); i++) {
+            for (int j = 0; j < gatos.size(); j++) {
+                if (i == j) {
+                    continue;
+                } else {
+                    System.out.println("El gato [" + i + "] intenta jugar con el gato [" + j + "] ...");
+                    gatos.get(i).juegaCon(gatos.get(j));
+                }
+            }
+        }
+    }
+
+    public static void eliminar() {
+        System.out.println("Indica el gato que deseas eliminar: (0-" + (gatos.size() - 1) + ")");
+        int pos = pedirNum();
+        System.out.println("Se ha eliminado el gato [" + pos + "] - " + gatos.get(pos));
+        gatos.remove(pos);
+    }
+
+    public static void modificar() {
+        System.out.println("Indica el gato que deseas eliminar: (0-" + (gatos.size() - 1) + ")");
+        int pos = pedirNum();
+        System.out.println("Gato [" + pos + "] - " + gatos.get(pos));
+        System.out.println();
     }
 }
