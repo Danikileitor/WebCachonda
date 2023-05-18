@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+    <carreras>
+        <nombre_carrera>I.T. Informática</nombre_carrera>
+        <nombre_carrera>Dipl. Empresariales</nombre_carrera>
+        <nombre_carrera>Dipl. Relaciones Laborales</nombre_carrera>
+        <nombre_carrera>Lic. Quimica</nombre_carrera>
+        <nombre_carrera>Lic. Biología</nombre_carrera>
+        <nombre_carrera>Lic. Humanidades</nombre_carrera>
+    </carreras>
+    <asignaturas>
+        <nombre_asignatura>Ofimática</nombre_asignatura>
+        <nombre_asignatura>Ingeniería del Software</nombre_asignatura>
+        <nombre_asignatura>Administración de Empresas</nombre_asignatura>
+        <nombre_asignatura>Derecho Internacional</nombre_asignatura>
+        <nombre_asignatura>Pedagogía</nombre_asignatura>
+        <nombre_asignatura>Didáctica</nombre_asignatura>
+        <nombre_asignatura>Tecnología de los Alimentos</nombre_asignatura>
+        <nombre_asignatura>Bases de Datos</nombre_asignatura>
+        <nombre_asignatura>Historia del Pensamiento</nombre_asignatura>
+    </asignaturas>
+</universidad>
