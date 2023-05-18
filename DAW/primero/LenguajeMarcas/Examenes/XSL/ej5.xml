@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectos>
+    <proyecto>
+        <nombre_proyecto>Web de IBM.com</nombre_proyecto>
+        <alumno>Luisa Pérez García</alumno>
+    </proyecto>
+    <proyecto>
+        <nombre_proyecto>Estudio de Salinidad del Pantano Iris</nombre_proyecto>
+        <alumno>María Avalón Jiménez</alumno>
+    </proyecto>
+</proyectos>
