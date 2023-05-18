@@ -141,4 +141,3 @@ CREATE TABLE Visitas (
     CONSTRAINT fk_visitasNaves FOREIGN KEY (Cod_nave)
         REFERENCES Naves (Codigo)
 );
-
