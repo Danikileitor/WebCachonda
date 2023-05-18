@@ -5,7 +5,7 @@
             <body>
                 <h2>Listado de alumnos matriculados en Ingeniería del Software</h2>
                 <ul>
-                    <xsl:for-each select="universidad/alumnos/alumno[estudios/carrera/@codigo = 'c01']">
+                    <xsl:for-each select="universidad/alumnos/alumno[estudios/asignaturas/asignatura/@codigo = 'a02']">
                         <li>
                             <xsl:value-of select="nombre"/><xsl:text> </xsl:text><xsl:value-of select="apellido1"/><xsl:text> </xsl:text><xsl:value-of select="apellido2"/>
                         </li>
