@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carreras>
+    <carrera>
+        <identificador>c06</identificador>
+        <nombre>Lic. Humanidades</nombre>
+        <creditos>475</creditos>
+    </carrera>
+    <carrera>
+        <identificador>c03</identificador>
+        <nombre>Dipl. Relaciones Laborales</nombre>
+        <creditos>280</creditos>
+    </carrera>
+    <carrera>
+        <identificador>c02</identificador>
+        <nombre>Dipl. Empresariales</nombre>
+        <creditos>275</creditos>
+    </carrera>
+    <carrera>
+        <identificador>c01</identificador>
+        <nombre>I.T. Informática</nombre>
+        <creditos>250</creditos>
+    </carrera>
+    <carrera>
+        <identificador>c04</identificador>
+        <nombre>Lic. Quimica</nombre>
+        <creditos>175</creditos>
+    </carrera>
+    <carrera>
+        <identificador>c05</identificador>
+        <nombre>Lic. Biología</nombre>
+        <creditos>175</creditos>
+    </carrera>
+</carreras>
