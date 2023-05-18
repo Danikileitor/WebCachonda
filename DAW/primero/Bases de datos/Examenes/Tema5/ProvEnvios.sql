@@ -6,7 +6,7 @@ SELECT CodArt, Ciudad FROM Articulos WHERE Ciudad LIKE '%d' OR Ciudad LIKE '%e%'
 #Consulta 2
 SELECT Cnombre FROM Componentes WHERE Peso BETWEEN 15 AND 18;
 
-#Consulta 3
+#Consulta 3 (Supongo que se pide media de las cantidades)
 SELECT AVG(Cantidad) AS 'Cantidad media de envíos de los artículos procedentes de Cáceres' FROM Envios NATURAL JOIN Articulos WHERE Ciudad = 'Cáceres';
 
 #Consulta 4
