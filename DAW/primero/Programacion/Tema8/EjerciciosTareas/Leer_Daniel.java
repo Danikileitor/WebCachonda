@@ -2,7 +2,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner; //Importación de paquetes
 
-public class Leer {
+public class Leer_Daniel {
 
     static final String ROJO = "\u001B[31m";
     static final String VERDE = "\u001B[32m";
