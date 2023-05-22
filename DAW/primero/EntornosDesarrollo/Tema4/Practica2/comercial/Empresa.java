@@ -18,9 +18,9 @@ public class Empresa {
    * 
    * @element-type Cliente
    */
-  private Vector  clientes;
+  private Vector<Cliente> clientes;
 
-  public void asignar(String CIF, String razonSocial, String direccion, String telefono, Vector clientes) {
+  public void asignar(String CIF, String razonSocial, String direccion, String telefono, Vector<Cliente> clientes) {
   }
 
   public Empresa obtener() {
