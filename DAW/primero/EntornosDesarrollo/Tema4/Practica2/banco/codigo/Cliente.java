@@ -9,6 +9,6 @@ public class Cliente extends Persona {
    * 
    * @element-type Cartilla
    */
-  private Vector<Cartilla>  cartillas;
+  private Vector<Cartilla> cartillas;
 
 }

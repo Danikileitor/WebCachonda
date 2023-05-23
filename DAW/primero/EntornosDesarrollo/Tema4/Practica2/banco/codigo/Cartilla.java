@@ -8,7 +8,7 @@ public class Cartilla {
    * 
    * @element-type Cliente
    */
-  private Vector<Cliente>  titulares;
+  private Vector<Cliente> titulares;
 
   public boolean ingresar(double cantidad) {
   return false;
