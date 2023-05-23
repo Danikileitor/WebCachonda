@@ -12,7 +12,7 @@ public class Cartilla {
 
   public boolean ingresar(double cantidad) {
   this.saldo += cantidad;
-  return false;
+  return true;
   }
 
   public boolean reintegrar(double cantidad) {
