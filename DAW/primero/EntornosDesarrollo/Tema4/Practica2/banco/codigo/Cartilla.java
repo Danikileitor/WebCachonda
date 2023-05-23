@@ -11,11 +11,17 @@ public class Cartilla {
   private Vector<Cliente> titulares;
 
   public boolean ingresar(double cantidad) {
+  this.saldo += cantidad;
   return false;
   }
 
   public boolean reintegrar(double cantidad) {
-  return false;
+  boolean esPosible = false;
+  if (this.saldo >= cantidad) {
+    this.saldo -= cantidad;
+    esPosible = true;
+  }
+  return esPosible;
   }
 
 }
