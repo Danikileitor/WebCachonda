@@ -1,0 +1,11 @@
+Resumen ArgoUML
+----------------------
+
+Flecha Amarrilla (Generalización) --> Herencia
+Flecha con rombo Negro --> Composición Fuerte (Depende 1 de la otra)
+Flecha con rombo Blanco --> Composición Débil (No depende 1 de la otra)
+Flecha normal --> Asociación (Una clase es atributo de otra)
+
+IMPORTANTE:
+	- Métodos set/get SOLO PONEMOS los atributos de la clase
+	- Método asignar() tenemos que incluir los atributos de la clase y los de la clase padre/asociada (aunque no los tengamos representados en nuestra clase)

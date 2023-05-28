@@ -1,0 +1,57 @@
+Eclipse
+----------------------
+IMPORTANTE: Cerrar TODOS los proyectos abiertos.
+Abrir el Proyecto en el que queramos trabajar.
+
+	Abrir Punto de Ruptura (Debugger/Desbichador)
+	----------------------------
+	Izquierda de la línea de números:
+	- Doble Click --> Click Derecho al punto que genera.
+	- Propiedades de Punto de Interrupción --> Propiedades de Punto de Ruptura.
+	- Check Conditional/Condicional --> Especificamos el valor para el que queremos que nos muestre el resultado/error (por ejemplo i==30).
+	- Menú de arriba (Icono del bichito/Ejecutar-Depura/Depurar como) --> Se activa la interfaz de depuración (Si no sale, está arriba a la derecha (dibujito del bichito)).
+	- Me voy a la pestaña de variables (arriba a la derecha, si no sale automaticamente) y le doy a F7 las veces que pueda y cuando no me deja a F6 (flechas que aparecen en el menú de arriba).
+	- Voy haciendo las capturas de las variables que me pida (por ejemplo si me pide captura de cada resultado en el que i==275).
+
+	Excepciones con JUnit
+	----------------------------
+	- Crear archivo de excepciones --> Click derecho sobre la clase.
+	- Nuevo --> Caso de Prueba Junit(si no sale, Otros --> Java --> JUnit --> Caso de Prueba JUnit).
+	- Nombre (el que quieras/te pidan) --> Clase sometida a prueba (la que te pidan en el ejercicio).
+	- Siguiente --> Seleccionamos las clases/métodos en las que queramos hacer pruebas --> Finalizar.
+	- Abrimos PDF TEMA 3 - Página 23 (AssertsEquals).
+	- Completamos los @Test con los asserts que nos indicque el ejercicio. Por ejemplo:
+		- assertFalse(Enteros.esPrimo(0));
+		- assertEquals(6, Enteros.factorial(3)); -- (6 es lo que se espera, 3 lo que entra por cabecera)
+		- assertThrows(IllegalArgumentException.class, () -> Enteros.factorial(-3));
+		- assertTrue(Enteros.divisible(18, 3));
+	- Ejecutamos la clase Test --> Ejecutar - Ejecutar/Ejecutar como - Ejecutar como prueba JUnit.
+	- Tiene que salir todo con un check verde
+		- X ROJA o X AZUL = Revisar el código y los asserts, corregirlos (cambio en el código del programa, en el test o tipo de variable)
+
+	- Tests Parametrizados --> Abrimos PDF TEMA 3 - Página 30 --> Se crea igual que el anterior.
+	- Reemplazamos @Test por @ParameterizedTest --> A diferencia del anterior este se tiene que dividir en secciones.
+	- IMPORTANTE: Hay que importar todos los @ --> Irá apareciendo la bombilla para importarlos
+	- Con @DisplayName vamos separando las secciones y le ponemos nombre para identificar la sección que estamos tratando.
+	- Usamos @ValueSource (valores individuales) o @CsvSource (varios valores de entrada) para las pruebas que tengamos que hacer.
+		- @ValueSource(ints= {3,5,7,2}).
+		- @CsvSource({"18,3","18,1","18,-1","-18,3","18,-3","18,3"})
+	- Dentro del método de Test tratamos como en el caso anterior (incluimos los ASSERTS correspondientes)
+		- final void testDivisible(int multiplo, int divisor) {
+        		assertTrue(Enteros.divisible(multiplo, divisor));
+		  }
+
+	- Para mostrar las excepciones añadimos una de las siguientes líneas:
+		- assertThrows(Exception.class, () -> Clase.método(atributo de entrada)); (fallo genérico)
+		- assertThrows(IllegalArgumentException.class, () -> Clase.método(atributo de entrada)); (fallo que hemos puesto antes con los asserts anteriormente (la 1º es la mejor opción)
+
+NetBeans
+-------------------
+Cambios:
+	- Abrir Punto de Ruptura --> Un click --> Click Derecho
+	- Breakpoint/Punto de Ruptura --> Properties/Propiedades --> Línea --> Conditión/Condición
+
+	- Debugger/Desbichador --> Se cambia a sección Debug --> F11 se cambia por Ctrl+F5
+
+	- IMPORTANTE: Si no sale alguna ventana del Debugger, acceder al menú Window/Ventana
+	--> Debugging --> Pulsas la ventana que quieras que salga

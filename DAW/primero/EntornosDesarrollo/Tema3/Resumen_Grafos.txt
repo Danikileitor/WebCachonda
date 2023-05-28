@@ -1,0 +1,19 @@
+Resumen Grafos
+----------------------
+
+Nº de Nodos: Círculos.
+Nº de Aristas: Líneas/Caminos.
+Nº de Regiones: Áreas que se crean entre los caminos (FUERA ES 1 YA).
+Nº de Nodos Predicado: Nodos con varias salidas (diferente color).
+Complejidad ciclomática: Coincide con el número de regiones.
+Secuencia de nodos: Caminos que recorren (TODOS).
+
+Numeración de grafos:
+	- Inicio.
+	- Asignación de atributos.
+	- Bucles "for" las 3 gestiones (iniciación, comparación y aumento).
+	- Blucles "if" la comprobación cuando como 1 instrucción solo.
+	- Si las condiciones están separadas por && || se separan en diferentes y se cuentan.
+
+Casos de prueba:
+	- Pruebas que dan a todos los caminos
