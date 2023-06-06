@@ -8,6 +8,7 @@ public class Ejercicio6_Daniel {
         String texto = "";
         FileInputStream lectura = null;
         FileOutputStream escritura = null;
+        //Primero leemos la imagen
         try {
             lectura = new FileInputStream("C:/Users/FOCUS/Desktop/Murgi/IesMurgi.jpeg");
             int c = lectura.read();
@@ -26,6 +27,7 @@ public class Ejercicio6_Daniel {
                 }
             }
         }
+        //Ahora escribimos la copia de la imagen
         try {
             escritura = new FileOutputStream("C:/Users/FOCUS/Desktop/Murgi/IesMurgi_copia.jpeg");
             for (int i = 0; i < texto.length(); i++) {
