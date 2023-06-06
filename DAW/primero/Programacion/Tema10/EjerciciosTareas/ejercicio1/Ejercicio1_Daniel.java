@@ -5,20 +5,20 @@ public class Ejercicio1_Daniel {
 
     public static void main(String[] args) {
         String texto = "";
-        FileReader lectura = null;
+        FileReader entrada = null;
         try {
-            lectura = new FileReader("mensajecortesia.txt");
-            int c = lectura.read();
+            entrada = new FileReader("mensajecortesia.txt");
+            int c = entrada.read();
             while (c != -1) {
                 texto = texto + (char) c;
-                c = lectura.read();
+                c = entrada.read();
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         } finally {
-            if (lectura != null) {
+            if (entrada != null) {
                 try {
-                    lectura.close();
+                    entrada.close();
                 } catch (IOException e) {
                     System.out.println(e);
                 }
