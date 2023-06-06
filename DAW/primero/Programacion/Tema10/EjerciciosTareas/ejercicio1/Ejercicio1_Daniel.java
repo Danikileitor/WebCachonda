@@ -7,7 +7,7 @@ public class Ejercicio1_Daniel {
         String texto = "";
         FileReader entrada = null;
         try {
-            entrada = new FileReader("mensajecortesia.txt");
+            entrada = new FileReader("C:/Users/FOCUS/Documents/Ficheros/mensajecortesia.txt");
             int c = entrada.read();
             while (c != -1) {
                 texto = texto + (char) c;
