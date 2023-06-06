@@ -1,0 +1,1 @@
+Estamos escribiendo a través de streams de datos.
