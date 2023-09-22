@@ -18,7 +18,6 @@ body{
     text-align: center;
     text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
     padding: 10px;
-    flex: 1;
 }
 .box1{
     background-color: lightseagreen;
