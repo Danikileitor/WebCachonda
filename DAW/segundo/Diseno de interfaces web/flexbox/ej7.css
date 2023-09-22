@@ -15,7 +15,8 @@ body{
     height: 100vh;
     box-sizing: border-box;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-content: center;
+    justify-content: center;
 }
 .box{
     color: white;
@@ -23,6 +24,7 @@ body{
     text-align: center;
     text-shadow: 4px 4px 0 black;
     padding: 10px;
+    width: 33.33333%;
 }
 .box1{
     background-color: lightseagreen;
