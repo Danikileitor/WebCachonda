@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    border: 10px solid red;
+    border-radius: 5px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+}
+div{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+.c1{
+    background-color: lightseagreen;
+}
+.c2{
+    background-color: blue;
+}
+.c3{
+    background-color: magenta;
+}
+.c4{
+    background-color: purple;
+}
+.c5{
+    background-color: yellow;
+}
+.c6{
+    background-color: orange;
+}
+.c7{
+    background-color: crimson;
+}
+.c8{
+    background-color: aqua;
+}
+.c9{
+    background-color: limegreen;
+}
+.c10{
+    background-color: darkcyan;
+}
