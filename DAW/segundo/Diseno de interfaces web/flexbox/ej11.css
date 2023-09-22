@@ -11,6 +11,8 @@ body{
 .container{
     display: flex;
     box-sizing: border-box;
+    border: 10px solid gold;
+    border-radius: 5px;
 }
 .box{
     color: white;
