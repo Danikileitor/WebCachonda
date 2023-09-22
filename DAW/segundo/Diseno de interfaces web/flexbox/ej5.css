@@ -11,52 +11,45 @@ body{
 .container{
     display: flex;
     box-sizing: border-box;
+    height: 100vh;
+    border: 10px solid mistyrose;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .box{
     color: white;
-    font-size: 100px;
     text-align: center;
     text-shadow: 4px 4px 0 black;
     padding: 10px;
-    flex: 1;
 }
 .box1{
     background-color: lightseagreen;
-    order: 3;
 }
 .box2{
     background-color: blue;
-    order: 4;
 }
 .box3{
     background-color: magenta;
-    order: 9;
 }
 .box4{
     background-color: purple;
-    order: 5;
 }
 .box5{
     background-color: yellow;
-    order: 1;
 }
 .box6{
     background-color: orange;
-    order: 6;
 }
 .box7{
     background-color: crimson;
-    order: 10;
 }
 .box8{
     background-color: aqua;
-    order: 7;
 }
 .box9{
     background-color: limegreen;
-    order: 2;
 }
 .box10{
     background-color: darkcyan;
-    order: 8;
 }
