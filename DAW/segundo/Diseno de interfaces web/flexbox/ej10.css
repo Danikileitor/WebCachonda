@@ -22,33 +22,13 @@ body{
 }
 .box1{
     background-color: lightseagreen;
+    flex-grow: 10;
+    flex-shrink: 5;
+    flex-basis: 400px;
 }
 .box2{
     background-color: blue;
-    flex: 2;
-}
-.box3{
-    background-color: magenta;
-}
-.box4{
-    background-color: purple;
-}
-.box5{
-    background-color: yellow;
-    flex: 3;
-}
-.box6{
-    background-color: orange;
-}
-.box7{
-    background-color: crimson;
-}
-.box8{
-    background-color: aqua;
-}
-.box9{
-    background-color: limegreen;
-}
-.box10{
-    background-color: darkcyan;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
 }
