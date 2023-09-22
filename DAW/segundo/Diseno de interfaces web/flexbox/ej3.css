@@ -10,10 +10,11 @@ body{
 }
 .container{
     display: flex;
-    border: 10px solid red;
+    border: 10px solid goldenrod;
     border-radius: 5px;
     height: 100vh;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .box{
     color: white;
@@ -21,6 +22,7 @@ body{
     text-align: center;
     text-shadow: 4px 4px 0 black;
     padding: 10px;
+    width: 33.3333333%;
 }
 .box1{
     background-color: lightseagreen;
