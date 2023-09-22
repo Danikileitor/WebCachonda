@@ -39,7 +39,7 @@ public class MenuString {
 						comprobarPalindromo(cadena);
 						break;
 					default:
-						System.out.println("¡Introduce un número que corresponda a una de las opciones del menú!");
+						System.out.println("¡Introduce una opción válida!");
 						break;
 				}
 			}
