@@ -12,6 +12,7 @@ body{
     color: white;
     font-size: 100px;
     text-align: center;
+    text-shadow: 4px 4px 0 black;
     padding: 10px;
 }
 .box1{
