@@ -14,6 +14,7 @@ body{
     border-radius: 5px;
     height: 100vh;
     box-sizing: border-box;
+    align-items: flex-start;
 }
 .box{
     color: white;
@@ -21,12 +22,15 @@ body{
     text-align: center;
     text-shadow: 4px 4px 0 black;
     padding: 10px;
+    width: 33.33333%;
 }
 .box1{
     background-color: lightseagreen;
 }
 .box2{
     background-color: blue;
+    align-self: stretch;
+    padding-bottom: 200px;
 }
 .box3{
     background-color: magenta;
@@ -39,6 +43,8 @@ body{
 }
 .box6{
     background-color: orange;
+    align-self: center;
+    padding-bottom: 0;
 }
 .box7{
     background-color: crimson;
@@ -48,6 +54,8 @@ body{
 }
 .box9{
     background-color: limegreen;
+    align-self: flex-end;
+    padding-bottom: 50px;
 }
 .box10{
     background-color: darkcyan;
