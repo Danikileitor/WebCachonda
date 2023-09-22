@@ -26,22 +26,18 @@ body{
 }
 .box1{
     background-color: lightseagreen;
-    font-size: 30px;
 }
 .box2{
     background-color: blue;
 }
 .box3{
     background-color: magenta;
-    font-size: 130px;
 }
 .box4{
     background-color: purple;
-    font-size: 200px;
 }
 .box5{
     background-color: yellow;
-    font-size: 10px;
 }
 .box6{
     background-color: orange;
@@ -57,5 +53,4 @@ body{
 }
 .box10{
     background-color: darkcyan;
-    font-size: 90px;
 }
