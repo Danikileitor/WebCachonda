@@ -11,11 +11,11 @@
             $a = strtolower("casa");
             $b = strtolower("pasa");
             if (substr($a, -3) === substr($b, -3)) {
-                print "Las palabras riman."
+                print "Las palabras riman.";
             } else if (substr($a, -2) === substr($b, -2)) {
-                print "Las palabras riman un poco."
+                print "Las palabras riman un poco.";
             } else {
-                print "Las palabras no riman."
+                print "Las palabras no riman.";
             }
         ?>
     </p>
