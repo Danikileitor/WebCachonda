@@ -13,6 +13,9 @@ body{
     box-sizing: border-box;
     border: 10px solid gold;
     border-radius: 5px;
+    height: 100vh;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .box{
     color: white;
@@ -20,23 +23,25 @@ body{
     text-align: center;
     text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
     padding: 10px;
+    flex-basis: 250px;
+    flex-grow: 1;
 }
 .box1{
     background-color: lightseagreen;
 }
 .box2{
     background-color: blue;
-    flex: 2;
 }
 .box3{
     background-color: magenta;
+    flex-grow: 5;
 }
 .box4{
     background-color: purple;
+    flex-basis: 100px;
 }
 .box5{
     background-color: yellow;
-    flex: 3;
 }
 .box6{
     background-color: orange;
