@@ -1,0 +1,11 @@
+1.- Conteste con verdadero o falso a cada una de las siguientes proposiciones; en caso de ser falso,
+explique por qué.
+
+a) Cuando los objetos String se comparan utilizando ==, el resultado es true si los objetos
+String contiene los mismos valores.
+
+Falso, para comparar objetos tipo String, es necesario el uso del método equals(), como ejemplo: cadena1.equals(cadena2).
+
+b) Un objeto String puede modificarse una vez creado.
+
+Verdadero, se puede cambiar el valor de una String como cualquier otra variable.
