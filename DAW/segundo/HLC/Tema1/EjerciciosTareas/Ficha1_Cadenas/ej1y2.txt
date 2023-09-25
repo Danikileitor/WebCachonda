@@ -23,4 +23,3 @@ s1 += s2;
 c) Determinar la longitud de la cadena en s1.
 
 s1.length();
-
