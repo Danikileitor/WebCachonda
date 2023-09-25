@@ -1,0 +1,3 @@
+9. ¿En qué se diferencia JavaScript de Java?
+
+10. Describe las ventajas más importantes de usar JavaScript.
