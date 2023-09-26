@@ -12,7 +12,7 @@
             $correo = explode("@",$correo);
             print "<p>Correo válido</p>";
             print "<p>Usuario: $correo[0]</p>";
-            print "<p>Dominio: $correo[1]</p>"
+            print "<p>Dominio: $correo[1]</p>";
         } else {
             print "<p>Correo no válido</p>";
         }
