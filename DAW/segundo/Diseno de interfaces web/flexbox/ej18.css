@@ -86,3 +86,7 @@ a.button {
     text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
     padding-bottom: 1rem;
 }
+
+.icon-bar a:first-child, .icon-bar a:hover {
+    border-bottom: 5px solid rgba(0,0,0,0.1);
+}
