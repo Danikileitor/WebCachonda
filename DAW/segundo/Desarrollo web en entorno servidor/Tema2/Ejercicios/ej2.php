@@ -9,7 +9,7 @@
     <?php
         $a = strtolower("correo@valido.com");
         if (strpos($a, "@") == true && strpos($a, ".") == true) {
-            $correo = explode("@",$correo);
+            $correo = explode("@",$a);
             print "<p>Correo válido</p>";
             print "<p>Usuario: $correo[0]</p>";
             print "<p>Dominio: $correo[1]</p>";
