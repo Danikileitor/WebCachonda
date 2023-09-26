@@ -9,8 +9,13 @@ public class Ej5 {
         System.out.println("Introduce un carácter:");
         char c2 = pedirChar();
         int cantidad = 0;
-        for (int i = 0; i < args.length; i++) {
-            //falta hacer esto con indexOf();
+        int posicion = 0;
+        while (posicion != -1) {
+            posicion = c1.indexOf(c2, posicion);
+            if (posicion != -1) {
+                cantidad++;
+                posicion++;
+            }
         }
         System.out.println("Total de coincidencias: " + cantidad);
     }
