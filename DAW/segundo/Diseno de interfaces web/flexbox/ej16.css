@@ -13,23 +13,69 @@ body {
     background: linear-gradient(to right, #EC6EAD, #3494E6);
 }
 
-.elements{
+a {
+    color: white;
+}
+
+.plan ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plan ul li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.plan ul li:last-child {
+    border-bottom: 0;
+}
+
+.plan a {
+    text-decoration: none;
+    background: #FEFF00;
+    padding: 10px;
+    color: black;
+    border-radius: 4px;
+}
+
+.plan h2 {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.price {
+    font-size: 50px;
+    font-family: serif;
+    margin: 10px 0;
+}
+
+.pricing-grid {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.plan {
+    flex: 1;
+    background: rgba(255,255,255, .2);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-.item{
-    font-size: 30px;
-    margin: 10px;
-    padding: 20px;
-    background: rgba(255,255,255,0.2);
-    flex: 1 1 calc(33.33% - 20px);
+.plan > * {
+    flex: 1;
+    flex-basis: 100%;
 }
 
-.large{
-    font-size: 40px;
-}
-
-.small{
-    font-size: 20px;
+.plan .cta {
+    align-self: flex-end;
 }

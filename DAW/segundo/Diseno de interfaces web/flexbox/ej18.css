@@ -5,88 +5,50 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-html {
-    font-size: 10px;
-}
-
 body {
     font-family: sans-serif;
     margin: 0;
-    font-size: 1.5rem;
-    background: #3494E6;
-    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
-    background: linear-gradient(to right, #EC6EAD, #3494E6);
+    overflow: hidden;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a.button {
-    background: rgba(0,0,0,0.1);
-    padding: 1rem 1.5rem;
-    border-radius: 4px;
-}
-
-.app-wrap {
+.cover  {
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    max-width: 540px;
-    height: 90vh;
-    margin: 5vh auto 5vh auto;
-    border: 10px solid rgba(0,0,0,0.8);
-    border-bottom-width: 70px;
-    border-radius: 10px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.3);
-}
-
-.app-header {
-    background: #F0CB45;
-    color: rgba(0,0,0,0.5);
-    padding: 1rem;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 }
 
-.content {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px;
-    background: white;
-    box-shadow: inset 0 5px 0 rgba(0,0,0,0.1);
-    line-height: 1.6;
-}
-
-.content img {
-    max-width: 50%;
-    float: left;
-    margin-right: 10px;
-}
-
-.icon-bar {
+.flex-form {
     display: flex;
-    border-top: 1px solid #E6E6E6;
+    border: 20px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
 }
 
-.icon-bar a {
-    flex: 1;
-    text-align: center;
-    padding: 1.5rem;
-    border-left: 1px solid rgba(0,0,0,0.1);
-    background: #EFCA51;
-    color: rgba(0,0,0,0.5);
+.flex-form > * {
+    border: 0;
+    padding: 10px;
+    background: white;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 0;
+    outline: 0;
+    border-right: 1px solid rgba(0,0,0,0.2);
 }
 
-.icon-bar i {
-    display: block;
-    font-size: 2.5rem;
+.flex-form input[type="submit"] {
+    background: #FF5A5F;
+    border-top: 1px solid #FF5A5F;
+    border-bottom: 1px solid #FF5A5F;
     color: white;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-    padding-bottom: 1rem;
 }
 
-.icon-bar a:first-child, .icon-bar a:hover {
-    border-bottom: 5px solid rgba(0,0,0,0.1);
+.dog {
+    height: 100%;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }

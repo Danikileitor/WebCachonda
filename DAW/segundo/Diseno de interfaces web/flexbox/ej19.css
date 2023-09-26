@@ -5,31 +5,88 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
+    font-size: 1.5rem;
     background: #3494E6;
     background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
     background: linear-gradient(to right, #EC6EAD, #3494E6);
 }
 
-.elements{
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a.button {
+    background: rgba(0,0,0,0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+}
+
+.app-wrap {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 540px;
+    height: 90vh;
+    margin: 5vh auto 5vh auto;
+    border: 10px solid rgba(0,0,0,0.8);
+    border-bottom-width: 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
 }
 
-.item{
-    font-size: 30px;
-    margin: 10px;
+.app-header {
+    background: #F0CB45;
+    color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: 20px;
-    background: rgba(255,255,255,0.2);
-    flex: 1 1 calc(33.33% - 20px);
+    background: white;
+    box-shadow: inset 0 5px 0 rgba(0,0,0,0.1);
+    line-height: 1.6;
 }
 
-.large{
-    font-size: 40px;
+.content img {
+    max-width: 50%;
+    float: left;
+    margin-right: 10px;
 }
 
-.small{
-    font-size: 20px;
+.icon-bar {
+    display: flex;
+    border-top: 1px solid #E6E6E6;
+}
+
+.icon-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 1.5rem;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    background: #EFCA51;
+    color: rgba(0,0,0,0.5);
+}
+
+.icon-bar i {
+    display: block;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+    padding-bottom: 1rem;
+}
+
+.icon-bar a:first-child, .icon-bar a:hover {
+    border-bottom: 5px solid rgba(0,0,0,0.1);
 }
