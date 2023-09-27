@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        $a = strtolower("correo@valido.com");
+        $a = "correo@valido.com";
         $correo = explode("@",$a);
         if (strpos($a, "@") == true && strpos($a, ".") == true) {
             if (strlen($correo[0]) < 3 || strlen($correo[0]) > 20) {
