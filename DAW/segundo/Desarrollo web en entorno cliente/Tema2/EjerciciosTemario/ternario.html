@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h1>Operador ternario</h1>
+    <p>Comprobar nota de exámen</p>
+    <label>Nota: </label><input type="number" id="nota">
+    <button onclick="comprobar()">Comprobar</button>
+    <p id="resultado"></p>
+    <script>
+        function comprobar() {
+            var nota = document.getElementById("nota").value;
+            document.getElementById("resultado").innerHTML = "Con una nota de " + nota + " estás ";
+            nota >= 5 ? document.getElementById("resultado").innerHTML += "aprobado." : document.getElementById("resultado").innerHTML += "suspenso.";
+        }
+    </script>
+</body>
+</html>
