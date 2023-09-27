@@ -10,6 +10,9 @@
         $a = "La bala mata la vaca";
         $contador = substr_count($a, "a");
         print "$contador";
+
+        //A continuación muestra un array cuyas claves sean todas las letras
+        //contenidas en la frase y valor el número de veces que aparece esa letra.
     ?>
 </body>
 </html>
