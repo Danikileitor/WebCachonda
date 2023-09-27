@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h1>Operador ternario con prompt</h1>
+    <h2>Comprobar nota de exámen</h2>
+    <p>Nota: <span id="nota"></span></p>
+    <p>Resultado: <span id="resultado"></span></p>
+    <button onclick="comprobar()">Comprobar</button>
+    <script>
+        function comprobar() {
+            var contador = 1;
+            do {
+                var nota = prompt("Introduzca su nota");
+                contador++;
+            } while (parseInt(nota) < 0 || parseInt(nota) > 10);
+            document.getElementById("nota").innerHTML = nota;
+            nota >= 5 ? document.getElementById("resultado").innerHTML = "Aprobado" : document.getElementById("resultado").innerHTML = "Suspenso";
+        }
+    </script>
+</body>
+</html>
