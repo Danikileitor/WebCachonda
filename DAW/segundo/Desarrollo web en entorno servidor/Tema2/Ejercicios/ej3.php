@@ -10,6 +10,11 @@
         $a = strtolower("correo@valido.com");
         $correo = explode("@",$a);
         if (strpos($a, "@") == true && strpos($a, ".") == true) {
+            if (strlen($correo[0] < 3) && strlen($correo[0] > 20)) {
+                print "<p>El usuario ha de tener entre 3 y 20 caracteres.</p>";
+            } else if (strlen($correo[0]) != strspn($correo[0], "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_")) {
+                print "<p>Solo se admiten letras y los cararcteres _ y -</p>";
+            }
             print "<p>Correo válido</p>";
             print "<p>Usuario: $correo[0]</p>";
             print "<p>Dominio: $correo[1]</p>";
