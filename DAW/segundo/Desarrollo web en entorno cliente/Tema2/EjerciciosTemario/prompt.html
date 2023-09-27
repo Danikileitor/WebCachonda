@@ -10,7 +10,7 @@
         function comprobar() {
             var contador = 1;
             do {
-                var nota = prompt("Introduzca su nota");
+                var nota = prompt("Introduzca su nota:");
                 contador++;
             } while (parseInt(nota) < 0 || parseInt(nota) > 10);
             document.getElementById("nota").innerHTML = nota;
