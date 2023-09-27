@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4</title>
+    <title>Ejercicio 5</title>
 </head>
 <body>
     <?php
-        $a = "Tres tristes tigres";
-        $palabras = explode(" ", $a);
-        print "<p>$palabras[0] $palabras[1]</p>"
+        $a = "La bala mata la vaca";
+        $contador = substr_count($a, "a");
+        print "$contador";
     ?>
 </body>
 </html>
