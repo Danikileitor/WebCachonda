@@ -8,5 +8,6 @@ public class Ej10 {
         for (int i = 0; i < 256; i++) {
             System.out.print(i + ": " + (char) i + "\t");
         }
+        System.out.println();
     }
 }
