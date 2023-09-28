@@ -32,9 +32,10 @@ public class Ej6 {
             char letra = alfabeto.charAt(i);
             int contador = contadorLetras[i];
             if (contador > 0) {
-                System.out.println(letra + ": " + contador);
+                System.out.print(letra + ": " + contador + "\t");
             }
         }
+        System.out.println();
     }
 
     public static String pedirCadena() {
