@@ -1,31 +1,28 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ej13 {
     static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Introduzca una cadena de texto:");
+        System.out.println("Introduzca una fecha en formato dd/MM/yyyy:");
         String c = pedirCadena();
 
-        String[] palabras = c.split(" "); // Dividir el texto en palabras por espacios en blanco
+        // Formato de entrada
+        SimpleDateFormat formatoEntrada = new SimpleDateFormat("dd/MM/yyyy");
+        // Formato de salida
+        SimpleDateFormat formatoSalida = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy", new Locale("es", "ES"));
 
-        int[] contadorPalabrasPorLongitud = new int[31]; // Contar palabras por longitud
-
-        // Contar palabras por longitud
-        for (String palabra : palabras) {
-            int longitud = palabra.length();
-            if (longitud <= 30) { // Limitar la longitud máxima
-                contadorPalabrasPorLongitud[longitud]++;
-            }
-        }
-
-        // Imprimir la tabla de conteo
-        System.out.println("Longitud de palabra\tOcurrencias");
-        for (int i = 1; i <= 30; i++) {
-            int cantidad = contadorPalabrasPorLongitud[i];
-            if (cantidad > 0) {
-                System.out.println(i + "\t" + cantidad);
-            }
+        try {
+            Date fecha = formatoEntrada.parse(c);
+            // Formatear y mostrar la fecha en el nuevo formato
+            String fechaFormateada = formatoSalida.format(fecha);
+            System.out.println(fechaFormateada);
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
     }
 
