@@ -31,7 +31,6 @@ public class Ej15 {
         return cantidadFormateada.toString();
     }
 
-
     public static double pedirNum() {
         double num;
         try {
