@@ -15,10 +15,10 @@ public class Ej15 {
                 if (asiento != -1) {
                     imprimirTarjeta(asiento, "Primera Clase");
                 } else {
-                    System.out.println("La sección de Primera Clase está llena. ¿Desea viajar en Económico? (Sí/No)");
+                    System.out.println("La sección de Primera Clase está llena. ¿Desea viajar en Económico? (s/n)");
                     scanner.nextLine(); // Consumir el salto de línea anterior
                     String respuesta = scanner.nextLine();
-                    if (respuesta.equalsIgnoreCase("Sí")) {
+                    if (respuesta.equalsIgnoreCase("s")) {
                         asiento = asignarAsiento(asientos, 6, 10);
                         if (asiento != -1) {
                             imprimirTarjeta(asiento, "Económico");
@@ -36,10 +36,10 @@ public class Ej15 {
                 if (asiento != -1) {
                     imprimirTarjeta(asiento, "Económico");
                 } else {
-                    System.out.println("La sección Económica está llena. ¿Desea viajar en Primera Clase? (Sí/No)");
+                    System.out.println("La sección Económica está llena. ¿Desea viajar en Primera Clase? (s/n)");
                     scanner.nextLine(); // Consumir el salto de línea anterior
                     String respuesta = scanner.nextLine();
-                    if (respuesta.equalsIgnoreCase("Sí")) {
+                    if (respuesta.equalsIgnoreCase("s")) {
                         asiento = asignarAsiento(asientos, 1, 5);
                         if (asiento != -1) {
                             imprimirTarjeta(asiento, "Primera Clase");
