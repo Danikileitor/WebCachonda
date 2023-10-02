@@ -8,11 +8,11 @@
     <button onclick="comprobar()">Comprobar</button>
     <script>
         function comprobar() {
-            var contador = 1;
+            var contador = 0;
             do {
                 var nota = prompt("Introduzca su nota:");
                 contador++;
-            } while (parseInt(nota) < 0 || parseInt(nota) > 10);
+            } while (parseInt(nota) < 0 || parseInt(nota) > 10 && contador != 3);
             document.getElementById("nota").innerHTML = nota;
             nota >= 5 ? document.getElementById("resultado").innerHTML = "Aprobado" : document.getElementById("resultado").innerHTML = "Suspenso";
         }
