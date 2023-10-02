@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .principal{
+            display: flex;
+        }
+        .izquierda{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            border: 1px dashed red;
+        }
+        .derecha{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            margin-left: 0;
+            border: 1px dashed blue;
+        }
+        .contenido{
+            display: flex;
+        }
+        p{
+            padding: 10px;
+        }
+        img{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="izquierda">
+            <img src="http://placekitten.com/100/150">
+            <img src="http://placekitten.com/100/150">
+            <img src="http://placekitten.com/100/150">
+        </div>
+        <div class="derecha">
+            <div class="contenido">
+                <img src="http://placekitten.com/150/100">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, harum. Mollitia, voluptas odio! Minima error autem, aspernatur tempore voluptatem quod ipsam ex suscipit aliquam optio unde, rem porro debitis nulla?</p>
+            </div>
+            <div class="contenido">
+                <img src="http://placekitten.com/150/100">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, harum. Mollitia, voluptas odio! Minima error autem, aspernatur tempore voluptatem quod ipsam ex suscipit aliquam optio unde, rem porro debitis nulla?</p>
+            </div>
+            <div class="contenido">
+                <img src="http://placekitten.com/150/100">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, harum. Mollitia, voluptas odio! Minima error autem, aspernatur tempore voluptatem quod ipsam ex suscipit aliquam optio unde, rem porro debitis nulla?</p>
+            </div>
+            <div class="contenido">
+                <img src="http://placekitten.com/150/100">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, harum. Mollitia, voluptas odio! Minima error autem, aspernatur tempore voluptatem quod ipsam ex suscipit aliquam optio unde, rem porro debitis nulla?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
