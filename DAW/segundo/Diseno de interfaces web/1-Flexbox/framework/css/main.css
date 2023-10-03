@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
 }
 
 body {
@@ -9,8 +9,9 @@ body {
 }
 
 .grid {
-    width: 80%;
+    margin: 0 auto;
     max-width: 1200px;
+    width: 100%;
 }
 
 .row {
