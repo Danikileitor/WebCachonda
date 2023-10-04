@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relación de Ejercicios 1 – JavaScript -</title>
     <style>
+        *{
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam372.cur), auto;/*Normal*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), pointer;/*Azul*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam379.cur), context-menu;/*Gris*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam370.cur), wait;/*Engranaje*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam373.cur), text;/*Correo*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam374.cur), grab;/*Loot*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam371.cur), help;/*Desuello*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam376.cur), none;/*Espada*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam378.cur), alias;/*Vuelo*/
+        }
         body{
             background-color: black;
             color: aqua;
             text-align: center;
+            margin: 0 auto;
+        }
+        div{
+            display: none;
+            align-items: center;
+            flex-direction: column;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            list-style-type: none;
+        }
+        li:before{
+            content: "- "
         }
     </style>
     <script>
@@ -51,32 +77,29 @@
 </head>
 <body>
     <h1>Relación de Ejercicios 1 – JavaScript -</h1>
-    <h2>Ejercicio 1</h2>
-    <!--
-        Haz un programa de nombre 2dawA.htm, que has de grabar en TuCarpeta que
-        sirva para restar dos  números cualesquiera, sean enteros o reales. ¿Qué sucede
-        si en lugar de restar dos números, intentamos restar dos textos?. Haz un programa
-        de nombre 2dawAB.htm, que demuestre el único caso en que podemos restar dos
-        cadenas de texto.
-    -->
+    <h2 onclick="document.getElementById('ej1').style.display = 'flex'">Ejercicio 1</h2>
+    <div id="ej1">
+        Haz un programa de nombre 2dawA.htm, que has de grabar en TuCarpeta que sirva para restar dos  números cualesquiera, sean enteros o reales.<br>
+        ¿Qué sucede si en lugar de restar dos números, intentamos restar dos textos?<br>
+        Haz un programa de nombre 2dawAB.htm, que demuestre el único caso en que podemos restar dos cadenas de texto.<br><br>
+    </div>
     <button onclick="ej1()">Parte A</button>
     <button onclick="ej1b()">Parte B</button>
-    <h2>Ejercicio 2</h2>
-    <!--
-        Haz un programa de nombre 2dawB.htm, que has de grabar en TuCarpeta, que
-        sirva para dividir dos números. ¿Qué sucede si en lugar de dividir dos números,
-        intentamos dividir dos textos?¿Qué sucede si el divisor es el número 0?
-    -->
+    <h2 onclick="document.getElementById('ej2').style.display = 'flex'">Ejercicio 2</h2>
+    <div id="ej2">
+        Haz un programa de nombre 2dawB.htm, que has de grabar en TuCarpeta, que sirva para dividir dos números.<br>
+        ¿Qué sucede si en lugar de dividir dos números, intentamos dividir dos textos? ¿Qué sucede si el divisor es el número 0?<br><br>
+    </div>
     <button onclick="ej2()">-Iniciar-</button>
-    <h2>Ejercicio 3</h2>
-    <!--
-        Haz un programa de nombre 2dawC.htm, que has de grabar en TuCarpeta, que
-        funcione de la siguiente forma:
-        - El programa nos pregunta nuestro nombre.
-        - El programa nos pregunta nuestra edad.
-        - El programa da como resultado nuestro nombre y a continuación los días que
-        hemos vivido hasta el momento (deberás multiplicar la edad por 365).
-    -->
+    <h2 onclick="document.getElementById('ej3').style.display = 'flex'">Ejercicio 3</h2>
+    <div id="ej3">
+        Haz un programa de nombre 2dawC.htm, que has de grabar en TuCarpeta, que funcione de la siguiente forma:
+        <ul>
+            <li>El programa nos pregunta nuestro nombre.</li>
+            <li>El programa nos pregunta nuestra edad.</li>
+            <li>El programa da como resultado nuestro nombre y a continuación los días que hemos vivido hasta el momento (deberás multiplicar la edad por 365).</li>
+        </ul>
+    </div>
     <button onclick="ej3()">-Iniciar-</button>
 </body>
 </html>
