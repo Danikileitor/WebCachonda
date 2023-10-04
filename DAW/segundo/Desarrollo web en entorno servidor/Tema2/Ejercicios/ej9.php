@@ -8,7 +8,7 @@
 <body>
     <?php
         $a = "Bienvenidos al a aventura de aprender PHP en 30 horas";
-        //Divido la frase en 3 partes iguales y muesto la parte central
+        //Divido la frase en 3 partes iguales y muestro la parte central
         $primerTercio = strlen($a)/3;
         $segundoTercio = strlen($a)*2/3;
         $central = substr($a, $primerTercio, $segundoTercio-$primerTercio);
