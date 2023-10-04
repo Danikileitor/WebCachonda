@@ -32,6 +32,21 @@
             var c = a-b;
             alert("El resultado es:\n" + c);
         }
+        function ej2() {
+            var a = prompt("Introduce un número:");
+            var b = prompt("Introduce otro número:");
+            var c = a/b;
+            alert("El resultado es: " + c);
+        }
+        function ej3() {
+            var nombre = prompt("Introduzca su nombre:");
+            var edad = prompt("Introduce su edad:");
+            if (isNaN(edad)) {
+                alert("¡No has introducido un número! Inténtalo de nuevo.");
+            } else {
+                alert("Su nombre es: " + nombre +"\nHas vivido durante " + edad*365 + " días.");
+            }
+        }
         </script>
 </head>
 <body>
@@ -53,5 +68,15 @@
         intentamos dividir dos textos?¿Qué sucede si el divisor es el número 0?
     -->
     <button onclick="ej2()">-Iniciar-</button>
+    <h2>Ejercicio 3</h2>
+    <!--
+        Haz un programa de nombre 2dawC.htm, que has de grabar en TuCarpeta, que
+        funcione de la siguiente forma:
+        - El programa nos pregunta nuestro nombre.
+        - El programa nos pregunta nuestra edad.
+        - El programa da como resultado nuestro nombre y a continuación los días que
+        hemos vivido hasta el momento (deberás multiplicar la edad por 365).
+    -->
+    <button onclick="ej3()">-Iniciar-</button>
 </body>
 </html>
