@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        print '<a href="/arbol/prueba.php" class="prueba" onmouseover="status=\'hola\'; return trae;">pruebade\enlace</a>';
+        print htmlspecialchars('<a href="/arbol/prueba.php" class="prueba" onmouseover="status=\'hola\'; return trae;">pruebade\enlace</a>');
     ?>
 </body>
 </html>
