@@ -24,8 +24,7 @@
                 $ocurrencias[$letra] = 1;
             }
         }
-
-        print_r($ocurrencias);
+        print_r(ksort($ocurrencias));
     ?>
 </body>
 </html>
