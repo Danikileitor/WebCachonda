@@ -6,15 +6,10 @@
     <title>Relación de Ejercicios 1 – JavaScript -</title>
     <style>
         *{
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam372.cur), auto;/*Normal*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), pointer;/*Azul*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam379.cur), context-menu;/*Gris*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam370.cur), wait;/*Engranaje*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam373.cur), text;/*Correo*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam374.cur), grab;/*Loot*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam371.cur), help;/*Desuello*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam376.cur), none;/*Espada*/
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam378.cur), alias;/*Vuelo*/
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam372.cur), auto;
+        }
+        button:hover, h2:hover{
+            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), pointer;
         }
         body{
             background-color: black;
@@ -38,6 +33,9 @@
         }
     </style>
     <script>
+        function mostrar(id) {
+            document.getElementById(id).style.display == "" || document.getElementById(id).style.display == "none" ? document.getElementById(id).style.display = "flex" : document.getElementById(id).style.display = "none";
+        }
         function ej1() {
             var a = prompt("Introduce un número:");
             if (isNaN(a)) {
@@ -77,7 +75,7 @@
 </head>
 <body>
     <h1>Relación de Ejercicios 1 – JavaScript -</h1>
-    <h2 onclick="document.getElementById('ej1').style.display = 'flex'">Ejercicio 1</h2>
+    <h2 onclick="mostrar('ej1')">Ejercicio 1</h2>
     <div id="ej1">
         Haz un programa de nombre 2dawA.htm, que has de grabar en TuCarpeta que sirva para restar dos  números cualesquiera, sean enteros o reales.<br>
         ¿Qué sucede si en lugar de restar dos números, intentamos restar dos textos?<br>
@@ -85,13 +83,13 @@
     </div>
     <button onclick="ej1()">Parte A</button>
     <button onclick="ej1b()">Parte B</button>
-    <h2 onclick="document.getElementById('ej2').style.display = 'flex'">Ejercicio 2</h2>
+    <h2 onclick="mostrar('ej2')">Ejercicio 2</h2>
     <div id="ej2">
         Haz un programa de nombre 2dawB.htm, que has de grabar en TuCarpeta, que sirva para dividir dos números.<br>
         ¿Qué sucede si en lugar de dividir dos números, intentamos dividir dos textos? ¿Qué sucede si el divisor es el número 0?<br><br>
     </div>
     <button onclick="ej2()">-Iniciar-</button>
-    <h2 onclick="document.getElementById('ej3').style.display = 'flex'">Ejercicio 3</h2>
+    <h2 onclick="mostrar('ej3')">Ejercicio 3</h2>
     <div id="ej3">
         Haz un programa de nombre 2dawC.htm, que has de grabar en TuCarpeta, que funcione de la siguiente forma:
         <ul>
