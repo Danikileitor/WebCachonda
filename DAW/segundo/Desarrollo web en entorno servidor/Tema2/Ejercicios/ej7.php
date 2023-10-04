@@ -7,7 +7,13 @@
 </head>
 <body>
     <?php
-        $a = "CadenaOriginal";
+        $cadenaOriginal = "CadenaOriginal";
+        $caracteres = str_split($cadenaOriginal);
+        $cadenaDuplicada = "";
+        foreach ($caracteres as $caracter) {
+            $cadenaDuplicada .= $caracter . $caracter;
+        }
+        print $cadenaDuplicada;
     ?>
 </body>
 </html>
