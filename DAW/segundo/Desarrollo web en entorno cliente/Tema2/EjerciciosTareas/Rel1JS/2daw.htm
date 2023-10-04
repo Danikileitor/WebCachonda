@@ -22,6 +22,16 @@
             align-items: center;
             flex-direction: column;
         }
+        p{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .negrita{
+            font-weight: bold;
+        }
+        .cursiva{
+            font-style: italic;
+        }
         ul{
             display: flex;
             flex-direction: column;
@@ -71,33 +81,50 @@
                 alert("Su nombre es: " + nombre +"\nHas vivido durante " + edad*365 + " días.");
             }
         }
+        function ej4() {
+            var a = prompt("Introduce un número:");
+            if (isNaN(a)) {
+                alert("¡No has introducido un número! Inténtalo de nuevo.");
+            } else {
+                alert("Doble: " + a*2 + "\nTriple: " + a*3 + "\nCuádruple: " + a*4);
+            }
+        }
         </script>
 </head>
 <body>
     <h1>Relación de Ejercicios 1 – JavaScript -</h1>
     <h2 onclick="mostrar('ej1')">Ejercicio 1</h2>
     <div id="ej1">
-        Haz un programa de nombre 2dawA.htm, que has de grabar en TuCarpeta que sirva para restar dos  números cualesquiera, sean enteros o reales.<br>
-        ¿Qué sucede si en lugar de restar dos números, intentamos restar dos textos?<br>
-        Haz un programa de nombre 2dawAB.htm, que demuestre el único caso en que podemos restar dos cadenas de texto.<br><br>
+        <p>Haz un programa de nombre <span class="negrita">2dawA.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span> que sirva para restar dos  números cualesquiera, sean enteros o reales.</p>
+        <p>¿Qué sucede si en lugar de restar dos números, intentamos restar dos textos?</p>
+        <p>Haz un programa de nombre <span class="negrita">2dawAB.htm</span>, que demuestre el único caso en que podemos restar dos cadenas de texto.</p>
     </div>
-    <button onclick="ej1()">Parte A</button>
-    <button onclick="ej1b()">Parte B</button>
+    <h3><button onclick="ej1()">Parte A</button>
+    <button onclick="ej1b()">Parte B</button></h3>
     <h2 onclick="mostrar('ej2')">Ejercicio 2</h2>
     <div id="ej2">
-        Haz un programa de nombre 2dawB.htm, que has de grabar en TuCarpeta, que sirva para dividir dos números.<br>
-        ¿Qué sucede si en lugar de dividir dos números, intentamos dividir dos textos? ¿Qué sucede si el divisor es el número 0?<br><br>
+        <p>Haz un programa de nombre <span class="negrita">2dawB.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que sirva para dividir dos números.</p>
+        <p>¿Qué sucede si en lugar de dividir dos números, intentamos dividir dos textos? ¿Qué sucede si el divisor es el número 0?</p>
     </div>
-    <button onclick="ej2()">-Iniciar-</button>
+    <h3><button onclick="ej2()">-Iniciar-</button></h3>
     <h2 onclick="mostrar('ej3')">Ejercicio 3</h2>
     <div id="ej3">
-        Haz un programa de nombre 2dawC.htm, que has de grabar en TuCarpeta, que funcione de la siguiente forma:
+        <p>Haz un programa de nombre <span class="negrita">2dawC.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
         <ul>
             <li>El programa nos pregunta nuestro nombre.</li>
             <li>El programa nos pregunta nuestra edad.</li>
             <li>El programa da como resultado nuestro nombre y a continuación los días que hemos vivido hasta el momento (deberás multiplicar la edad por 365).</li>
         </ul>
     </div>
-    <button onclick="ej3()">-Iniciar-</button>
+    <h3><button onclick="ej3()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej4')">Ejercicio 4</h2>
+    <div id="ej4">
+        <p>Haz un programa de nombre <span class="negrita">2dawD.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
+        <ul>
+            <li>El programa nos pide un número.</li>
+            <li>El programa nos muestra en una única pantalla (un único “alert”), el doble, el triple y cuádruple del número que habíamos introducido.</li>
+        </ul>
+    </div>
+    <h3><button onclick="ej4()">-Iniciar-</button></h3>
 </body>
 </html>
