@@ -165,6 +165,19 @@
                 alert("Base decimal: " + parseInt(a, 8) + "\nBase 2: " + parseInt(a, 8).toString(2));
             }
         }
+        function ej10() {
+            var a = parseInt(prompt("Introduce un número entero:"));
+            var b = parseInt(prompt("Introduce la base:"));
+            if (isNaN(a)) {
+                alert("¡No has introducido un número entero! Inténtalo de nuevo.");
+            } else {
+                if (isNaN(b)) {
+                    alert("¡No has introducido un número entero! Inténtalo de nuevo.");
+                } else {
+                    alert("El número en la base indicada es: " + a.toString(b));
+                }
+            }
+        }
         </script>
 </head>
 <body>
@@ -279,5 +292,15 @@
         <p>Comprueba el programa para el número 6561<sub>8</sub>. Deberás resolver en primer lugar el problema matemáticamente.</p>
     </div>
     <h3><button onclick="ej9()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej10')">Ejercicio 10</h2>
+    <div id="ej10">
+        <p>Haz un programa de nombre <span class="negrita">2dawJ.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
+        <ul>
+            <li>El programa nos pide un número entero.</li>
+            <li>El programa nos pide la <span class="negrita">base</span></li>
+            <li>El programa nos escribe el número introducido en la "base" deseada.</li>
+        </ul>
+    </div>
+    <h3><button onclick="ej10()">-Iniciar-</button></h3>
 </body>
 </html>
