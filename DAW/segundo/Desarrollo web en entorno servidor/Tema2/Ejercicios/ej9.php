@@ -12,6 +12,7 @@
         $primerTercio = strlen($a)/3;
         $segundoTercio = strlen($a)*2/3;
         $central = substr($a, $primerTercio, $segundoTercio-$primerTercio);
+        
         $posPHP = strpos($a, 'PHP');
         $b = str_replace("aventura", "<b>misión</b>", $a);
 
