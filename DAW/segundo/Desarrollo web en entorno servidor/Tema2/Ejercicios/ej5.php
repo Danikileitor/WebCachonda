@@ -24,7 +24,11 @@
                 $ocurrencias[$letra] = 1;
             }
         }
-        print_r(ksort($ocurrencias));
+
+        ksort($ocurrencias);
+        foreach ($ocurrencias as $ocurrencia => $cantidad) {
+            print "<p>[$ocurrencia]: $cantidad</p>";
+        }
     ?>
 </body>
 </html>
