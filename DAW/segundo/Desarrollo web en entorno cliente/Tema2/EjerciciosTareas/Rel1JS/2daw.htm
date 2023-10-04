@@ -148,6 +148,14 @@
                 alert("Número introducido:\u00A0" + a + "\nContadores:\u00A0" + b + "\u00A0" + c + "\u00A0" + d);
             }
         }
+        function ej8() {
+            var a = parseInt(prompt("Introduce un número entero:"));
+            if (isNaN(a)) {
+                alert("¡No has introducido un número entero! Inténtalo de nuevo.");
+            } else {
+                alert("Base 16: " + a.toString(16) + "\nBase 5: " + a.toString(5));
+            }
+        }
         </script>
 </head>
 <body>
@@ -220,7 +228,7 @@
     <h3><button onclick="ej6()">-Iniciar-</button></h3>
     <h2 onclick="mostrar('ej7')">Ejercicio 7</h2>
     <div id="ej7">
-        <p>Haz un programa de nombre <span class="negrita">2dawF.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
+        <p>Haz un programa de nombre <span class="negrita">2dawG.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
         <ul>
             <li>El programa nos pide un número.</li>
             <li>Utiliza tres contadores:
@@ -240,5 +248,16 @@
         <p>De forma que si introducimos el nº 5 debería aparecer:</p><img src="ej7.png">
     </div>
     <h3><button onclick="ej7()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej8')">Ejercicio 8</h2>
+    <div id="ej8">
+        <p>Haz un programa de nombre <span class="negrita">2dawH.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
+        <ul>
+            <li>El programa nos pide un número entero.</li>
+            <li>El programa nos da como resultado el mismo número pero en base 16</li>
+            <li>Y por último nos lo escribe en base 5</li>
+        </ul>
+        <p>Comprueba el programa para el número 52. Deberás calcular en primer lugar matemáticamente el valor de 52 en base 16 y en base 5.</p>
+    </div>
+    <h3><button onclick="ej8()">-Iniciar-</button></h3>
 </body>
 </html>
