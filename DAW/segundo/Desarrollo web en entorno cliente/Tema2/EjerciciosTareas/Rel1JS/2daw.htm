@@ -6,13 +6,31 @@
     <title>Relación de Ejercicios 1 – JavaScript -</title>
     <script>
         function ej1() {
-            
+            var a = prompt("Introduce un número:");
+            if (isNaN(a)) {
+                alert("¡No has introducido un número! Inténtalo de nuevo.");
+            } else {
+                var b = prompt("Introduce otro número:");
+                if (isNaN(b)) {
+                    alert("¡No has introducido un número! Inténtalo de nuevo.");
+                } else {
+                    var c = a-b;
+                    alert("El resultado es: " + c);
+                }
+            }
         }
-    </script>
+        </script>
 </head>
 <body>
     <h1>Relación de Ejercicios 1 – JavaScript -</h1>
     <h2>Ejercicio 1</h2>
-    <button onclick="ej1()"></button>
+    <!--
+        Haz un programa de nombre 2dawA.htm, que has de grabar en TuCarpeta que
+        sirva para restar dos  números cualesquiera, sean enteros o reales. ¿Qué sucede
+        si en lugar de restar dos números, intentamos restar dos textos?. Haz un programa
+        de nombre 2dawAB.htm, que demuestre el único caso en que podemos restar dos
+        cadenas de texto.
+    -->
+    <button onclick="ej1()">-Iniciar-</button>
 </body>
 </html>
