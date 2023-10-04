@@ -191,6 +191,23 @@
                 }
             alert(s);
         }
+        function ej12() {
+            var a = parseFloat(prompt("Introduce un número positivo menor que 57:"));
+            if (isNaN(a) || a>=57 || a<=0) {
+                alert("¡No has introducido un número positivo menor que 57! Inténtalo de nuevo.");
+            } else {
+                var b = parseFloat(prompt("Introduce otro número positivo menor que 57:"));
+                if (isNaN(b) || b>=57 || b<=0) {
+                    alert("¡No has introducido un número positivo menor que 57! Inténtalo de nuevo.");
+                } else {
+                    alert("El producto de ambos números es: " + a*b);
+                    var c = prompt("Si quieres volver a empezar escribe [otra]", 'otra');
+                    if (c.toLowerCase() == "otra") {
+                        ej12();
+                    }
+                }
+            }
+        }
         </script>
 </head>
 <body>
@@ -363,5 +380,17 @@
         <p>Haciendo click en el texto puedes intercambiar entre el código erróneo y corregido.</p>
     </div>
     <h3><button onclick="ej11()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej12')">Ejercicio 12</h2>
+    <div id="ej12">
+        <p>Haz un programa que funcione de la siguiente forma:</p>
+        <ul>
+            <li>El programa nos pide que escribamos dos números positivos menores de 57</li>
+            <li>El programa nos da como resultado el producto de los dos números</li>
+            <li>Si los números no son positivos o son mayores de 57, el programa nos lo dice.</li>
+            <li>El programa nos pregunta al final si queremos volver a empezar.</li>
+        </ul>
+        <p>Graba el programa con el nombre<span class="negrita">2dawL.htm</span> en <span class="cursiva">TuCarpeta</span></p>
+    </div>
+    <h3><button onclick="ej12()">-Iniciar-</button></h3>
 </body>
 </html>
