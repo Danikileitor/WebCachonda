@@ -178,6 +178,19 @@
                 }
             }
         }
+        function ej11() {
+            var farenheit,celsius;
+            var s="";
+            for (i=-2;i<=12;i++)
+                {
+                celsius=10*i;
+                farenheit=32+(celsius*9)/5;
+                s=s+"C= "+celsius+" F= "+farenheit+"\n";
+                if (celsius==0) s=s+"Punto congelación del Agua\n";
+                if (celsius==100) s=s+"Punto de ebullición del Agua\n";
+                }
+            alert(s);
+        }
         </script>
 </head>
 <body>
@@ -302,5 +315,53 @@
         </ul>
     </div>
     <h3><button onclick="ej10()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej11'); corregir('ej11')">Ejercicio 11</h2>
+    <div id="ej11" onclick="corregir('ej11')" class="clickable">
+        <p>El siguiente programa tiene errores. Escríbelo y corrígelo para que funcione (grábalo con el nombre <span class="negrita">2dawK.htm</span> en <span class="cursiva">TuCarpeta</span>):</p>
+        <pre id="ej11mal">
+            Código erróneo:
+            &lt;SCRIPT&gt;
+            &lt;HTML LANGUAGE="JavaScript"
+            // 2DAWA.HTM
+
+            var farenheit,celsius,
+            var s="";
+            for (i=-2;i&lt;=12:i++)
+                {
+                celsius=10*i;
+                farenheit=32+(celsius*9)/5;
+                s=s+"C= "+celsius+" F= "+farenheit+"\n";
+                if (celsius==0) s=s+"Punto congelación del Agua\n";
+                if (celsius==100) s=s+"Punto de ebullición del Agua\n";
+                }
+            alert(s;
+
+            &lt;//SCRIPT&gt;
+            &lt;HTML&gt;
+        </pre>
+        <pre id="ej11bien">
+            Código corregido:
+            &lt;HTML&gt;
+            &lt;SCRIPT LANGUAGE="JavaScript"&gt;
+            // 2DAWA.HTM
+
+            var farenheit,celsius;
+            var s="";
+            for (i=-2;i&lt;=12;i++)
+                {
+                celsius=10*i;
+                farenheit=32+(celsius*9)/5;
+                s=s+"C= "+celsius+" F= "+farenheit+"\n";
+                if (celsius==0) s=s+"Punto congelación del Agua\n";
+                if (celsius==100) s=s+"Punto de ebullición del Agua\n";
+                }
+            alert(s);
+
+            &lt;/SCRIPT&gt;
+            &lt;/HTML&gt;
+        </pre>
+        <p>Haciendo click en el texto puedes intercambiar entre el código erróneo y corregido.</p>
+    </div>
+    <h3><button onclick="ej11()">-Iniciar-</button></h3>
 </body>
 </html>
