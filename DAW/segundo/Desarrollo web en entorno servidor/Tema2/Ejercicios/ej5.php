@@ -9,10 +9,23 @@
     <?php
         $a = "La bala mata la vaca";
         $contador = substr_count($a, "a");
-        print "$contador";
+        print "<p>La frase [$a] contiene $contador [a]</p>";
 
-        //A continuación muestra un array cuyas claves sean todas las letras
-        //contenidas en la frase y valor el número de veces que aparece esa letra.
+        // Eliminamos los espacios y convertimos la cadena a minúsculas para evitar diferencias de mayúsculas y minúsculas
+        $a = strtolower(str_replace(' ', '', $a));
+
+        for ($i = 0; $i < strlen($a); $i++) {
+            $letra = $a[$i];
+            
+            // Verificamos si la letra ya existe en el array de ocurrencias
+            if (isset($ocurrencias[$letra])) {
+                $ocurrencias[$letra]++;
+            } else {
+                $ocurrencias[$letra] = 1;
+            }
+        }
+
+        print_r($ocurrencias);
     ?>
 </body>
 </html>
