@@ -23,8 +23,7 @@
             flex-direction: column;
         }
         p {
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0 auto;
         }
         .negrita {
             font-weight: bold;
@@ -124,6 +123,25 @@
             alert("Área= "+(a*b/2));
             alert("Este programa pide al usuario 2 números, calcula y muestra el área de un triángulo.");
         }
+        function ej6() {
+            var radio = prompt("Introduce el radio:");
+            if (isNaN(radio)) {
+                alert("¡No has introducido un número! Inténtalo de nuevo.");
+            } else {
+                alert("Longitud de la circunferencia: " + 2*Math.PI*radio + "\nÁrea del círculo: " + Math.PI*radio*radio);
+            }
+        }
+        function ej7() {
+            var a = parseFloat(prompt("Introduce un número:"));
+            if (isNaN(a)) {
+                alert("¡No has introducido un número! Inténtalo de nuevo.");
+            } else {
+                var b = a+5;
+                var c = b+21;
+                var d = c-4;
+                alert("Número introducido:\u00A0" + a + "\nContadores:\u00A0" + b + "\u00A0" + c + "\u00A0" + d);
+            }
+        }
         </script>
 </head>
 <body>
@@ -189,5 +207,32 @@
         <p>Haciendo click en el texto puedes intercambiar entre el código erróneo y corregido.</p>
     </div>
     <h3><button onclick="ej5()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej6')">Ejercicio 6</h2>
+    <div id="ej6">
+        <p>Haz un programa de nombre <span class="negrita">2dawF.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que sirva para calcular la longitud de una circunferencia y el área del círculo correspondiente.</p>
+    </div>
+    <h3><button onclick="ej6()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej7')">Ejercicio 7</h2>
+    <div id="ej7">
+        <p>Haz un programa de nombre <span class="negrita">2dawF.htm</span>, que has de grabar en <span class="cursiva">TuCarpeta</span>, que funcione de la siguiente forma:</p>
+        <ul>
+            <li>El programa nos pide un número.</li>
+            <li>Utiliza tres contadores:
+                <ul>
+                    <li>Un contador: suma 5</li>
+                    <li>Otro contador: suma 21</li>
+                    <li>Otro contador: resta 4</li>
+                </ul>
+            </li>
+            <li>El programa nos presenta los 4 números de la siguiente forma:
+                <ul>
+                    <li>La primera línea: el número introducido.</li>
+                    <li>La segunda línea: los tres números tabulados, que han resultado de los tres contadores.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>De forma que si introducimos el nº 5 debería aparecer:</p><img src="ej7.png">
+    </div>
+    <h3><button onclick="ej7()">-Iniciar-</button></h3>
 </body>
 </html>
