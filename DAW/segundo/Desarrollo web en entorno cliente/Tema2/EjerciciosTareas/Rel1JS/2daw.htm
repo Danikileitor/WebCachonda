@@ -157,6 +157,14 @@
                 alert("Base 16: " + a.toString(16) + "\nBase 5: " + a.toString(5));
             }
         }
+        function ej9() {
+            var a = parseInt(prompt("Introduce un número en base ocho:"));
+            if (isNaN(a)) {
+                alert("¡No has introducido un número entero! Inténtalo de nuevo.");
+            } else {
+                alert("Base decimal: " + parseInt(a, 8) + "\nBase 2: " + parseInt(a, 8).toString(2));
+            }
+        }
         </script>
 </head>
 <body>
