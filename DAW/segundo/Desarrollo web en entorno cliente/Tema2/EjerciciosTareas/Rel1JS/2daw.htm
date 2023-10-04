@@ -222,6 +222,21 @@
                 }
             } while (a != 9999);
         }
+        function ej14() {
+            var contador = 0;
+            var suma = 0;
+            do {
+                var a = parseFloat(prompt("Introduce un número: (escribe 9999 para finalizar)"));
+                if (a == 9999) {
+                    alert("El total de números introducidos es: " + contador + "\nSu suma total es: " + suma);
+                } else {
+                    if (!isNaN(a)) {
+                        contador++;
+                        suma += a;
+                    }
+                }
+            } while (a != 9999);
+        }
         </script>
 </head>
 <body>
@@ -411,5 +426,10 @@
         <p>Escribe un programa que nos vaya pidiendo números. Si escribimos el número 9999 se acaba; por último el programa nos da como resultado el número de números introducidos, exceptuando el 9999. Graba el programa con el nombre <span class="negrita">2dawM.htm</spa> en <span class="cursiva">TuCarpeta</span></p>
     </div>
     <h3><button onclick="ej13()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej14')">Ejercicio 14</h2>
+    <div id="ej14">
+        <p>Haz un programa que haga lo mismo que el anterior, pero además nos dé la suma de todos los números introducidos, exceptuando el 9999. Graba el programa con el nombre <span class="negrita">2dawN.htm</spa> en <span class="cursiva">TuCarpeta</span></p>
+    </div>
+    <h3><button onclick="ej14()">-Iniciar-</button></h3>
 </body>
 </html>
