@@ -32,6 +32,10 @@
         .cursiva {
             font-style: italic;
         }
+        pre{
+            display: none;
+            text-align: left;
+        }
         ul {
             display: flex;
             flex-direction: column;
@@ -45,16 +49,30 @@
             background-color: aqua;
             color: black;
             border: 2px solid aqua;
+            border-radius: 5px;
             transition-duration: 0.4s;
         }
         button:hover {
             background-color: black;
             color: aqua;
         }
+        button:active {
+            background-color: yellow;
+            color: black;
+        }
     </style>
     <script>
         function mostrar(id) {
             document.getElementById(id).style.display == "" || document.getElementById(id).style.display == "none" ? document.getElementById(id).style.display = "flex" : document.getElementById(id).style.display = "none";
+        }
+        function corregir(id) {
+            if (document.getElementById(id+'mal').style.display == "" || document.getElementById(id+'mal').style.display == "none") {
+                document.getElementById(id+'mal').style.display = "flex";
+                document.getElementById(id+'bien').style.display = "none";
+            } else {
+                document.getElementById(id+'mal').style.display = "none";
+                document.getElementById(id+'bien').style.display = "flex";
+            }
         }
         function ej1() {
             var a = prompt("Introduce un número:");
@@ -99,6 +117,13 @@
                 alert("Doble: " + a*2 + "\nTriple: " + a*3 + "\nCuádruple: " + a*4);
             }
         }
+        function ej5() {
+            var a,b;
+            a=prompt("Escribe la base:")
+            b=prompt("Escribe la altura:")
+            alert("Área= "+(a*b/2));
+            alert("Este programa pide al usuario 2 números, calcula y muestra el área de un triángulo.");
+        }
         </script>
 </head>
 <body>
@@ -136,5 +161,33 @@
         </ul>
     </div>
     <h3><button onclick="ej4()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej5'); corregir('ej5')">Ejercicio 5</h2>
+    <div id="ej5" onclick="corregir('ej5')">
+        <p>El siguiente programa tiene errores. Escríbelo (grábalo con el nombre <span class="negrita">2dawE.htm</span> en <span class="cursiva">TuCarpeta</span>) y corrígelo para que funcione y explica para qué sirve:</p>
+        <pre id="ej5mal">
+            Código erróneo:
+            &lt;HTML&gt; &lt;SCRIPT LANGUAGE="JavaScrip"&gt;
+            /* 2DAWE.HTM
+            var a,b;
+            a=prompt("Escribe la base:")
+            b=promp("Escribe la altura:")
+            alert("Área= "+(a*b/2);
+            &lt;/SCRIP&gt;
+            &lt;/HTML&gt;
+        </pre>
+        <pre id="ej5bien">
+            Código corregido:
+            &lt;HTML&gt; &lt;SCRIPT LANGUAGE="JavaScript"&gt;
+            /* 2DAWE.HTM */
+            var a,b;
+            a=prompt("Escribe la base:")
+            b=prompt("Escribe la altura:")
+            alert("Área= "+(a*b/2));
+            &lt;/SCRIPT&gt;
+            &lt;/HTML&gt;
+        </pre>
+        <p>Haciendo click en el texto puedes intercambiar entre el código erróneo y corregido.</p>
+    </div>
+    <h3><button onclick="ej5()">-Iniciar-</button></h3>
 </body>
 </html>
