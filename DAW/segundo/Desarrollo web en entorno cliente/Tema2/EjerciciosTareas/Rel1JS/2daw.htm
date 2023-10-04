@@ -42,7 +42,13 @@
             list-style-type: none;
         }
         li:before {
-            content: "- "
+            content: "- ";
+        }
+        ul ul{
+            list-style-type: disc;
+        }
+        li li:before {
+            content: none;
         }
         button {
             background-color: aqua;
