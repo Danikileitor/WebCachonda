@@ -5,3 +5,15 @@ h1 {
 .centrado {
   justify-content: center;
 }
+
+.relleno {
+  padding: 28px;
+  background-color: #95ffcc;
+  color: #02a28e;
+}
+
+.relleno2 {
+  padding: 28px;
+  background-color: #02a28e;
+  color: white
+}
