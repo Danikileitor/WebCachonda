@@ -6,6 +6,7 @@ public class CuentaDeAhorros {
     
     public CuentaDeAhorros(double saldoAhorros) {
         this.saldoAhorros = saldoAhorros;
+        tasaInteresAnual = 0.04;
     }
 
     public CuentaDeAhorros() {
@@ -24,7 +25,7 @@ public class CuentaDeAhorros {
         return this.getSaldoAhorros()*tasaInteresAnual/12;
     }
 
-    public static void modificarTasaInteres() {
-        tasaInteresAnual;
+    public static void modificarTasaInteres(double valor) {
+        tasaInteresAnual = valor/100;
     }
 }
