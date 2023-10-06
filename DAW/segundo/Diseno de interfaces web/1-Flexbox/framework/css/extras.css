@@ -15,5 +15,14 @@ h1 {
 .relleno2 {
   padding: 28px;
   background-color: #02a28e;
-  color: white
+  color: white;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ajustar {
+  width: 100%;
 }
