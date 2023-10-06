@@ -3,7 +3,7 @@ package ej3;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class PruebaRectangulo {
+public class Main {
     static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
