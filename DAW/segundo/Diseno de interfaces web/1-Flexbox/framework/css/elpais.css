@@ -34,3 +34,12 @@ p {
     font-size: 15px;
     margin-top: 8px;
 }
+
+.borde > * {
+    border-left: 1px solid rgb(235, 235, 235);
+    border-left-width: 80%;
+}
+
+.borde > :first-child {
+    border-left: 0;
+}
