@@ -1,0 +1,36 @@
+h2 {
+  font-family: MajritTx, serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h2.grande {
+  font-size: 30px;
+}
+
+h3 {
+    font-family: MarcinAntB, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: MajritTx, serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: MarcinAntB, sans-serif;
+    color: rgb(255, 6, 37);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+p {
+    font-family: MajritTxRoman, serif;
+    font-size: 15px;
+    margin-top: 8px;
+}
