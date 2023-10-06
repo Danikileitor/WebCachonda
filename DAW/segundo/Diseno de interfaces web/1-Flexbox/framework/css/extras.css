@@ -18,11 +18,10 @@ h1 {
   color: white;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
 .ajustar {
   width: 100%;
+}
+
+.cursiva {
+  font-style: italic;
 }
