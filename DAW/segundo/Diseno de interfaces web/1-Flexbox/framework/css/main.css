@@ -20,6 +20,11 @@ body {
   flex-wrap: wrap;
 }
 
+.row > * {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .col-1 {
   width: 8.33333333%;
 }
