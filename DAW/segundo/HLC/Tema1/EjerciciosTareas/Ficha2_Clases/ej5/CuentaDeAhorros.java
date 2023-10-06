@@ -23,4 +23,8 @@ public class CuentaDeAhorros {
     public double calcularInteresMensual() {
         return this.getSaldoAhorros()*tasaInteresAnual/12;
     }
+
+    public static void modificarTasaInteres() {
+        tasaInteresAnual;
+    }
 }
