@@ -25,3 +25,7 @@ h1 {
 .cursiva {
   font-style: italic;
 }
+
+article {
+  padding-bottom: 1rem;
+}
