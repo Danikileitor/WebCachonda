@@ -22,7 +22,9 @@ public class CuentaDeAhorros {
     }
 
     public double calcularInteresMensual() {
-        return this.getSaldoAhorros()*tasaInteresAnual/12;
+        double interesMensual = this.getSaldoAhorros()*tasaInteresAnual/12;
+        this.setSaldoAhorros(this.saldoAhorros + interesMensual);
+        return interesMensual;
     }
 
     public static void modificarTasaInteres(double valor) {
