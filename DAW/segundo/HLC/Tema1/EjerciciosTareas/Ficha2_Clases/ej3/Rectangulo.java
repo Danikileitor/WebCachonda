@@ -1,8 +1,7 @@
 package ej3;
 
 public class Rectangulo {
-    protected double longitud;
-    protected double anchura;
+    protected double longitud, anchura;
 
     public Rectangulo(double longitud, double anchura) {
         this.longitud = longitud;
