@@ -8,12 +8,16 @@ h2.grande {
   font-size: 30px;
 }
 
-h3 {
+h3, figcaption {
     font-family: MarcinAntB, sans-serif;
     font-size: 10px;
     font-weight: normal;
     text-size-adjust: 100%;
     text-transform: uppercase;
+}
+
+figcaption {
+    padding-bottom: 1rem;
 }
 
 h4 {
