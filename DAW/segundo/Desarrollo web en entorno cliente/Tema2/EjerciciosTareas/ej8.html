@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h1>Ejemplo para mostrar una fecha</h1>
+    <p>El resultado se muestra por consola</p>
+
+    <script>
+        var fecha = new Date('2023-10-09');
+        var mes = fecha.getMonth()+1; //Se suma uno porque Enero ocupa el mes 0
+        var ano = fecha.getFullYear();
+
+        console.log("Mes:", mes, "Año:", ano);
+    </script>
+</body>
+</html>
