@@ -2,11 +2,20 @@
 <html lang="es">
 <body>
     <h1>Ejemplos de eventos</h1>
-    <p>Pasa el ratón por encima (onmouseover)</p>
-    <p>Pasa el ratón por encima (onmouseoout)</p>
-    <p>Pierde el foco de este elemento (onblur)</p>
+    <p onmouseover="primero()">Pasa el ratón por encima (onmouseover)</p>
+    <p onmouseout="segundo()">Pasa el ratón por encima y aléjalo (onmouseoout)</p>
+    <input onblur="tercero()" type="text" placeholder="Pierde el foco de este elemento (onblur)" style="width: 15rem;"></input>
 
     <script>
+        function primero() {
+            alert("Has pasado el ratón por encima");
+        }
+        function segundo() {
+            alert("Has alejado el ratón de este elemento");
+        }
+        function tercero() {
+            alert("Has perdido el foco de este elemento");
+        }
     </script>
 </body>
 </html>
