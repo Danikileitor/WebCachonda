@@ -87,3 +87,24 @@ body {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .col-9 {
+    width: 100%;
+  }
+  .col-3 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .col-9 {
+    width: 100%;
+  }
+  .col-3 {
+    width: 100%;
+  }
+  body {
+    font-size: large;
+  }
+}
