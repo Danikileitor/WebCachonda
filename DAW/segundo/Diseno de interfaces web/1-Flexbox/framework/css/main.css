@@ -73,3 +73,8 @@ body {
 .col-12 {
   width: 100%;
 }
+
+.centrado {
+  justify-content: center;
+  text-align: center;
+}
