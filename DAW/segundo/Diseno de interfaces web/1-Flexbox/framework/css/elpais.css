@@ -43,3 +43,10 @@ p {
 .borde > :first-child {
     border-left: 0;
 }
+
+hr {
+    height: 1px;
+    border-width: 0;
+    background: rgb(235, 235, 235);
+    margin-bottom: 1rem;
+}
