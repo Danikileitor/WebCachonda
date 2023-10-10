@@ -1,0 +1,32 @@
+.red {
+  background-color: red;
+}
+.light_blue {
+  background-color: lightblue;
+  width: 50%;
+}
+.green {
+  background-color: green;
+  width: 50%;
+}
+.dark_blue {
+  background-color: darkblue;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .red {
+    width: 25%;
+  }
+  .orange {
+    width: 75%;
+  }
+}
