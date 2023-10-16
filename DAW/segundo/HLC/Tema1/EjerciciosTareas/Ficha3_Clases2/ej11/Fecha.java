@@ -13,7 +13,7 @@ public class Fecha {
         this.anio = anio;
     }
 
-    public Fecha(String dia, int mes, int anio) {
+    public Fecha(int dia, String mes, int anio) {
         this.dia = dia;
         this.mes = mes;
         this.anio = anio;
