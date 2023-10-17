@@ -100,6 +100,17 @@
                 alert("Su producto es: " + a*b + "\nSu división es: " + a/b);
             }
         }
+        function ej72() {
+            var a = parseFloat(prompt("Introduce la primera nota"));
+            var b = parseFloat(prompt("Introduce la segunda nota"));
+            var c = parseFloat(prompt("Introduce la tercera nota"));
+            var promedio = (a+b+c)/3;
+            if (promedio >= 4) {
+                alert("Su promedio es de: " + promedio + "\nRegular");
+            } else {
+                alert("Su promedio es de: " + promedio + "\nReprobado");
+            }
+        }
         </script>
 </head>
 <body>
@@ -147,5 +158,10 @@
         <p>en caso contrario informar el producto y la división del primero respecto al segundo.</p>
     </div>
     <h3><button onclick="ej71()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej72')">Ejercicio 7.2</h2>
+    <div id="ej72">
+        <p>Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje 'regular', sino 'reprobado'.</p>
+    </div>
+    <h3><button onclick="ej72()">-Iniciar-</button></h3>
 </body>
 </html>
