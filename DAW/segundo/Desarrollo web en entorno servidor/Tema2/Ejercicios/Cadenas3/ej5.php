@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <p>
+        <?php
+            $a = "El caballo blanco de Santiago es gris";
+            $b = str_ireplace(['a', 'e', 'i', 'o', 'u'], ['A', 'E', 'I', 'O', 'U'], $a);
+            print $b;
+        ?>
+    </p>
+</body>
+</html>
