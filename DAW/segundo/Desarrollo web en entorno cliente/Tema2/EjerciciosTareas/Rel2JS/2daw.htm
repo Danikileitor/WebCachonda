@@ -55,8 +55,21 @@
             var b = prompt("Introduce el segundo número");
             var c = prompt("Introduce el tercer número");
             var d = prompt("Introduce el cuarto número");
-            var suma = parseInt(a)+parseInt(b);
+            var suma = parseFloat(a)+parseFloat(b);
             alert("La suma de los dos primeros números es: " + suma + "\nEl producto de los dos últimos números es: " + c*d);
+        }
+        function ej53() {
+            var a = prompt("Introduce el primer número");
+            var b = prompt("Introduce el segundo número");
+            var c = prompt("Introduce el tercer número");
+            var d = prompt("Introduce el cuarto número");
+            var suma = parseFloat(a)+parseFloat(b)+parseFloat(c)+parseFloat(d);
+            alert("La suma de los números es: " + suma + "\nEl producto de los números es: " + a*b*c*d);
+        }
+        function ej54() {
+            var precio = prompt("Introduce el precio del producto");
+            var cantidad = prompt("Introduce la cantidad del producto");
+            alert("La cantidad total a pagar es de: " + precio*cantidad);
         }
         </script>
 </head>
@@ -73,5 +86,16 @@
         <p>Escribir un programa en el cual se ingresen cuatro números, calcular e informar la suma de los dos primeros y el producto del tercero y el cuarto.</p>
     </div>
     <h3><button onclick="ej52()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej53')">Ejercicio 5.3</h2>
+    <div id="ej53">
+        <p>Realizar un programa que lea cuatro valores numéricos e informar su suma y producto.</p>
+    </div>
+    <h3><button onclick="ej53()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej54')">Ejercicio 5.4</h2>
+    <div id="ej54">
+        <p>Se debe desarrollar un programa que pida el ingreso del precio de un artículo y la cantidad que lleva el cliente.</p>
+        <p>Mostrar lo que debe abonar el comprador (Ingresar por teclado un precio sin decimales, es decir un entero: 2, 7, 90 etc.)</p>
+    </div>
+    <h3><button onclick="ej54()">-Iniciar-</button></h3>
 </body>
 </html>
