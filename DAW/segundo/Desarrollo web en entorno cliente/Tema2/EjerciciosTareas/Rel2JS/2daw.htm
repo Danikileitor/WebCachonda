@@ -91,6 +91,15 @@
                 alert("Las contraseñas no coinciden");
             }
         }
+        function ej71() {
+            var a = parseFloat(prompt("Introduce el primer número"));
+            var b = parseFloat(prompt("Introduce el segundo número"));
+            if (a > b) {
+                alert("Su suma es: " + (a+b) + "\nSu diferencia es: " + (a-b));
+            } else {
+                alert("Su producto es: " + a*b + "\nSu división es: " + a/b);
+            }
+        }
         </script>
 </head>
 <body>
@@ -132,5 +141,11 @@
         <p>(tener en cuenta que para ver si dos variables tienen el mismo valor almacenado debemos utilizar el operador ==)</p>
     </div>
     <h3><button onclick="ej62()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej71')">Ejercicio 7.1</h2>
+    <div id="ej71">
+        <p>Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia,</p>
+        <p>en caso contrario informar el producto y la división del primero respecto al segundo.</p>
+    </div>
+    <h3><button onclick="ej71()">-Iniciar-</button></h3>
 </body>
 </html>
