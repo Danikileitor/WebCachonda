@@ -2,8 +2,8 @@ package ej11;
 
 public class Main {
     public static void main(String[] args) {
-        Fecha fecha1 = new Fecha(6, 15, 1992);
-        Fecha fecha2 = new Fecha("junio", 15, 1992);
+        Fecha fecha1 = new Fecha(20, 11, 2000);
+        Fecha fecha2 = new Fecha(25, "Abril", 1995);
         Fecha fecha3 = new Fecha(167, 1992);
 
         fecha1.imprimirFecha1();
