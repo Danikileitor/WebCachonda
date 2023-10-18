@@ -10,7 +10,7 @@
         <?php
             $a = "vamos al o'Brian";
             print "<p>" + addslashes($a) + "</p>";
-            print "<p>" + stripcslashes($a) + "</p>";
+            print "<p>" + stripslashes($a) + "</p>";
         ?>
     </p>
 </body>
