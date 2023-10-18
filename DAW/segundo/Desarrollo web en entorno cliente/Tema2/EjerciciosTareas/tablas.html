@@ -68,7 +68,7 @@
     </section>
     <h2>Operaciones empleando desplazamiento de bits</h2>
     <section>
-        <p id="op1">125 &divide 8 = </p>
+        <p id="op1">125 &divide 8 = </p><!-- Aquí se imprimiran los resultados de cada operación -->
         <p id="op2">40 x 4 = </p>
         <p id="op3">25 &divide 2 = </p>
         <p id="op4">10 x 16 = </p>
@@ -79,6 +79,18 @@
         tablaMultiplicar(8, 8);
         tablaDividir(9, 9);
 
+        //Calculamos y mostramos las operaciones empleando desplazamiento de bits
+        var operacion1 = 125 >> 3;//Desplazamos 3 bits a la derecha para dividir entre 8 (125 / 2^3)
+        document.getElementById("op1").innerHTML += operacion1;
+
+        var operacion2 = 40 << 2;;//Desplazamos 2 bits a la izquierda para multiplicar por 4 (40 / 2^2)
+        document.getElementById("op2").innerHTML += operacion2;
+
+        var operacion3 = 25 >> 1;//Desplazamos 1 bit a la derecha para dividir entre 2 (25 / 2^1)
+        document.getElementById("op3").innerHTML += operacion3;
+
+        var operacion4 = 10 << 4;//Desplazamos 4 bits a la izquierda para multiplicar por 16 (10 / 2^4)
+        document.getElementById("op4").innerHTML += operacion4;
     </script>
 </body>
 
