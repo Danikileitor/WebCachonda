@@ -9,9 +9,8 @@
     <p>
         <?php
             $a = "vamos al o'Brian";
-            print addslashes($a);
-            print ("\n");//metemos un salto de línea para diferenciar
-            print stripcslashes($a);
+            print "<p>" + addslashes($a) + "</p>";
+            print "<p>" + stripcslashes($a) + "</p>";
         ?>
     </p>
 </body>
