@@ -9,7 +9,7 @@
     <p>
         <?php
             $a = "No me gusta usar +*[] en cadenas";
-            print $a;
+            print quotemeta($a);
         ?>
     </p>
 </body>

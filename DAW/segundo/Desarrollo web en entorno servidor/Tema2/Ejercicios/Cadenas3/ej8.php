@@ -9,8 +9,7 @@
     <p>
         <?php
             $a = "vamos al o'Brian";
-            print $a;
-            //no hace falta escapar ningún caracter, ni siquiera el apóstrofe
+            print addslashes($a);
         ?>
     </p>
 </body>
