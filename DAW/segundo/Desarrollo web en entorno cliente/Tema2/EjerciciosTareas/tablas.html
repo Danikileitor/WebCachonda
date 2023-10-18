@@ -5,11 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablas de Multiplicar</title>
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 75rem;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div {
+            align-items: center;
+        }
+
+        p {
+            margin: 0 auto;
+        }
+    </style>
     <script>
-        function tabla(numero, id) {
+        function tablaMultiplicar(numero, id) {
             for (let i = 1; i <= 10; i++) {
-                const producto = numero << i;
-                document.getElementById(id).innerHTML += `numero x ${i} = ${producto}`;
+                const producto = numero * i;
+                document.getElementById(id).innerHTML += `${numero} x ${i} = ${producto}<br>`;
+            }
+        }
+        function tablaDividir(numero, id) {
+            for (let i = 1; i <= 10; i++) {
+                const producto = numero * i;
+                document.getElementById(id).innerHTML += `${numero} x ${i} = ${producto}<br>`;
             }
         }
     </script>
@@ -17,8 +45,26 @@
 
 <body>
     <h1>Tarea_P_RA2-g-Tablas de Multiplicar</h1>
-    <h2>Tabla del 7</h2>
-    <p id="7"></p>
+    <section>
+        <div>
+            <h2>Tabla de multiplicar del 7</h2>
+            <p id="7"></p>
+        </div>
+        <div>
+            <h2>Tabla de multiplicar del 8</h2>
+            <p id="8"></p>
+        </div>
+        <div>
+            <h2>Tabla de dividir del 9</h2>
+            <p id="9"></p>
+        </div>
+    </section>
+    <h2>Operaciones empleando desplazamiento de bits</h2>
+    <script>
+        tablaMultiplicar(7, 7);
+        tablaMultiplicar(8, 8);
+        tablaDividir(9, 9);
+    </script>
 </body>
 
 </html>
