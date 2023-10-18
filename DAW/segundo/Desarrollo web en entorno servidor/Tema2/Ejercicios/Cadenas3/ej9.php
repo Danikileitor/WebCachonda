@@ -9,7 +9,8 @@
     <p>
         <?php
             $a = "El caballo blanco de Santiago es gris";
-            print $a;
+            print "<p>" . addcslashes($a, "e,i,o,u") . "</p>";
+            print "<p>" . stripcslashes($a) . "</p>";
         ?>
     </p>
 </body>
