@@ -29,16 +29,20 @@
         }
     </style>
     <script>
+        //Esta función recibe el numero para calcular su tabla de multiplicar y la id del elemento donde se va a imprimir
         function tablaMultiplicar(numero, id) {
+            //Bucle para calcular la tabla del 1 al 10
             for (let i = 1; i <= 10; i++) {
-                const resultado = numero * i;
-                document.getElementById(id).innerHTML += `${numero} x ${i} = ${resultado}<br>`;
+                var resultado = numero * i;//En cada iteración se calcula su multiplicación
+                document.getElementById(id).innerHTML += `${numero} x ${i} = ${resultado}<br>`;//Imprimimos el resultado
             }
         }
+        //Esta función recibe el numero para calcular su tabla de dividir y la id del elemento donde se va a imprimir
         function tablaDividir(numero, id) {
+            //Bucle para calcular la tabla del 1 al 10
             for (let i = 1; i <= 10; i++) {
-                const resultado = numero / i;
-                document.getElementById(id).innerHTML += `${numero} &divide ${i} = ${resultado}<br>`;
+                var resultado = numero / i;//En cada iteración se calcula su división
+                document.getElementById(id).innerHTML += `${numero} &divide ${i} = ${resultado}<br>`;//Imprimimos el resultado
             }
         }
     </script>
@@ -50,23 +54,31 @@
         <div>
             <h2>Tabla de multiplicar del 7</h2>
             <div>
-                <p id="7"></p>
+                <p id="7"></p><!-- Aquí se imprime la tabla de multiplicar del 7 -->
             </div>
         </div>
         <div>
             <h2>Tabla de multiplicar del 8</h2>
-            <p id="8"></p>
+            <p id="8"></p><!-- Aquí se imprime la tabla de multiplicar del 8 -->
         </div>
         <div>
             <h2>Tabla de dividir del 9</h2>
-            <p id="9"></p>
+            <p id="9"></p><!-- Aquí se imprime la tabla de dividir del 9 -->
         </div>
     </section>
     <h2>Operaciones empleando desplazamiento de bits</h2>
+    <section>
+        <p id="op1">125 &divide 8 = </p>
+        <p id="op2">40 x 4 = </p>
+        <p id="op3">25 &divide 2 = </p>
+        <p id="op4">10 x 16 = </p>
+    </section>
     <script>
+        //Mostramos las tablas
         tablaMultiplicar(7, 7);
         tablaMultiplicar(8, 8);
         tablaDividir(9, 9);
+
     </script>
 </body>
 
