@@ -10,6 +10,8 @@
         <?php
             $a = "vamos al o'Brian";
             print addslashes($a);
+            print ("\n");//metemos un salto de línea para diferenciar
+            print stripcslashes($a);
         ?>
     </p>
 </body>
