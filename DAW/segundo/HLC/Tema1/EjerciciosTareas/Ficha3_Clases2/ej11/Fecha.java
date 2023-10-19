@@ -6,7 +6,6 @@ public class Fecha {
     private int dia;
     private int mes;
     private int anio;
-    private static String[] dias = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
     private static String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
     public Fecha(int dia, int mes, int anio) {
@@ -16,7 +15,7 @@ public class Fecha {
     }
 
     public Fecha(int dia, String mes, int anio) {
-        this(dia, Arrays.binarySearch(meses, mes) + 1, anio);
+        this(dia, Arrays.asList(meses).indexOf(mes) + 1, anio);
     }
 
     public Fecha(int dia, int anio) {
@@ -45,7 +44,7 @@ public class Fecha {
             : new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         int resultado = dia;
-        for (int i = 1; i < mes-1; i++) {
+        for (int i = 1; i < mes; i++) {
             resultado += diasPorMes[i];
         }
         return resultado;
@@ -56,7 +55,7 @@ public class Fecha {
     }
 
     public void imprimirFecha2() {
-        System.out.printf("%s %d, %d\n",meses[mes],dia,anio);
+        System.out.printf("%s %d, %d\n",meses[mes-1],dia,anio);
     }
 
     public void imprimirFecha3() {
