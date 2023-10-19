@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Tarea_P_RA2-g-Tablas de Multiplicar por Daniel Marcos Guerra Gómez -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,27 +59,30 @@
 </body>
 
 <script>
-    //Esta función recibe el numero para calcular su tabla de multiplicar y la id del elemento donde se va a imprimir
-    function tablaMultiplicar(numero, id) {
-        //Bucle para calcular la tabla del 1 al 10
-        for (let i = 1; i <= 10; i++) {
-            var resultado = numero * i;//En cada iteración se calcula su multiplicación
-            document.getElementById(id).innerHTML += `${numero} x ${i} = ${resultado}<br>`;//Imprimimos el resultado
-        }
-    }
-    //Esta función recibe el numero para calcular su tabla de dividir y la id del elemento donde se va a imprimir
-    function tablaDividir(numero, id) {
-        //Bucle para calcular la tabla del 1 al 10
-        for (let i = 1; i <= 10; i++) {
-            var resultado = numero / i;//En cada iteración se calcula su división
-            document.getElementById(id).innerHTML += `${numero} &divide ${i} = ${resultado}<br>`;//Imprimimos el resultado
-        }
+    //Tabla de multiplicar del 7
+    //Bucle for para calcular la tabla del 1 al 10
+    for (let i = 1; i <= 10; i++) {
+        var resultado = 7 * i;//En cada iteración se calcula su multiplicación
+        document.getElementById("tabla7").innerHTML += "7 x " + i + " = " + resultado + "<br>";//Imprimimos el resultado
     }
 
-    //Mostramos las tablas
-    tablaMultiplicar(7, "tabla7");
-    tablaMultiplicar(8, "tabla8");
-    tablaDividir(9, "tabla9");
+    //Tabla de multiplicar del 8
+    //Bucle while calcular la tabla del 1 al 10
+    var j = 1;
+    while (j <= 10) {
+        var resultado = 8 * j;//En cada iteración se calcula su multiplicación
+        document.getElementById("tabla8").innerHTML += "8 x " + j + " = " + resultado + "<br>";//Imprimimos el resultado
+        j++;//Aumentamos el contador
+    }
+
+    //Tabla de dividir del 9
+    //Bucle do while para calcular la tabla del 1 al 10
+    var k = 1;
+    do {
+        var resultado = 9 / k;//En cada iteración se calcula su división
+        document.getElementById("tabla9").innerHTML += "9 &divide " + k + " = " + resultado + "<br>";//Imprimimos el resultado
+        k++;//Aumentamos el contador
+    } while (k <= 10)
 
     //Calculamos y mostramos las operaciones empleando desplazamiento de bits
     var operacion1 = 125 >> 3;//Desplazamos 3 bits a la derecha para dividir entre 8 (125 / 2^3)
