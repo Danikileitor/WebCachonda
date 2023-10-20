@@ -15,8 +15,8 @@
 
             print "<p>Me llamo $Nom $Apell1 $Apell2 y tengo $edad años</p>";
             print "<p>Me llamo " . $Nom . " " . $Apell1 . " " . $Apell2 . " y tengo " . $edad . " años</p>";
-            print "<p>Me llamo $Nom\n$Apell1\n$Apell2\ny tengo $edad años</p>";
-            print "<p>Me llamo $Nom\n$Apell1\n$Apell2\ny tengo $edad años</p>";
+            print "<p>Me llamo $Nom<br>$Apell1<br>$Apell2<br>y tengo $edad años</p>";
+            print "<p>Me llamo $Nom<br>$Apell1<br>$Apell2<br>y tengo $edad años</p>";
         ?>
     </p>
 </body>
