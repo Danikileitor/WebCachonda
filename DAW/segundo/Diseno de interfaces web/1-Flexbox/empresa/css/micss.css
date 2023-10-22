@@ -1,5 +1,9 @@
 * {
-    
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+}
+
+a, [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
 }
 
 #carouselId{
