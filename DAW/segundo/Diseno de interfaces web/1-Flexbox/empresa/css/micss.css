@@ -2,7 +2,7 @@
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
 }
 
-a,
+a, .social img,
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
@@ -19,10 +19,21 @@ main {
 }
 
 .nav-link {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-size: 15px;
-    font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 2px 2px 2px;
 }
 
 @media (min-width: 576px) {
