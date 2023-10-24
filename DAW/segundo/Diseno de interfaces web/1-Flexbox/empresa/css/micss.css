@@ -2,7 +2,8 @@
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
 }
 
-a, .social img,
+a,
+.social img,
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
