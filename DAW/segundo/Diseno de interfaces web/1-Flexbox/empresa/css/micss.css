@@ -16,13 +16,17 @@ main {
   background-color: #eeeeee;
 }
 
+main > :first-child{
+  margin-top: 20px;
+}
+
 .container > .row {
   margin-bottom: 5px;
 }
 
 .galeria > img {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
+  width: 230px;
 }
 
 .carousel {
