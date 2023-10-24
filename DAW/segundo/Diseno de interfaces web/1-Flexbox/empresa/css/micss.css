@@ -12,12 +12,21 @@ button:not(:disabled) {
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
 }
 
-#carouselId {
-  padding-bottom: 50px;
-}
-
 main {
   background-color: #eeeeee;
+}
+
+.container > .row {
+  margin-bottom: 5px;
+}
+
+.galeria > img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.carousel {
+  padding: 0;
 }
 
 .nav-link {
