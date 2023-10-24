@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Reloj</title>
+    <title>Cuenta Atrás</title>
 </head>
-
 <body>
-    <div>
-        <input type="time" name="reloj" id="reloj" step="2">
-        <button onclick="temporizador()">Comenzar</button>
-    </div>
     <div id="laHora"></div>
     <script>
-        var miFecha;
-        var horas;
-        var minutos;
-        var segundos;
         function crono() {
             var elCrono;
-            miFecha = document.getElementById("reloj").valueAsDate;
-            horas = miFecha.getHours();
-            minutos = miFecha.getMinutes();
-            segundos = miFecha.getSeconds();
+            var miFecha = new Date();
+            var horas = miFecha.getHours();
+            var minutos = miFecha.getMinutes();
+            var segundos = miFecha.getSeconds();
             if (horas > 12) {
                 ampm = 'pm';
                 horas -= 12;
@@ -34,40 +24,9 @@
             var texto = document.getElementById('laHora');
             texto.innerHTML = horas + ':' + minutos + ':' + segundos + ' ' + ampm;
         }
-        function cuentaAtras() {
-            segundos = parseInt(segundos);
-            minutos = parseInt(minutos);
-            horas = parseInt(horas);
-            if (segundos > 0) {
-                segundos--;
-            } else {
-                if (minutos > 0) {
-                    minutos--;
-                    segundos = 59;
-                } else {
-                    if (horas > 0) {
-                        horas--;
-                        minutos = 59;
-                    }
-                }
-            }
-            if (horas > 12) {
-                ampm = 'pm';
-                horas -= 12;
-            } else {
-                ampm = 'am';
-            }
-            if (horas < 10) { horas = '0' + horas; }
-            if (minutos < 10) { minutos = '0' + minutos; }
-            if (segundos < 10) { segundos = '0' + segundos; }
-            var texto = document.getElementById('laHora');
-            texto.innerHTML = horas + ':' + minutos + ':' + segundos + ' ' + ampm;
-        }
-        function temporizador() {
-            crono();
-            elCrono = setInterval(cuentaAtras, 1000);
+        window.onload = function () {
+            elCrono = setInterval(crono, 1000);
         }
     </script>
 </body>
-
 </html>
