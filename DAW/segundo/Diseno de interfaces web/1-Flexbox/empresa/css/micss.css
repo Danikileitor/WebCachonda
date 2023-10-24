@@ -1,15 +1,38 @@
 * {
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
 }
 
-a, [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+a,
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
 }
 
-#carouselId{
-    padding-bottom: 50px;
+#carouselId {
+  padding-bottom: 50px;
 }
 
 main {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media print {
 }
