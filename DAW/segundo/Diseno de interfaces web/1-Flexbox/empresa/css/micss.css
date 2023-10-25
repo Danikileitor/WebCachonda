@@ -3,6 +3,7 @@
 }
 
 a,
+a > *,
 .social img,
 button > span,
 [type="button"]:not(:disabled),
@@ -16,7 +17,7 @@ main {
   background-color: #eeeeee;
 }
 
-main > :first-child{
+main > :first-child {
   margin-top: 20px;
 }
 
@@ -24,9 +25,11 @@ main > :first-child{
   margin-bottom: 5px;
 }
 
-.galeria > img {
-  padding: 5px;
+.galeria > a div {
   width: 230px;
+  height: 312px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .carousel {
