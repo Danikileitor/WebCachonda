@@ -22,17 +22,11 @@
             horas = miFecha.getHours();
             minutos = miFecha.getMinutes();
             segundos = miFecha.getSeconds();
-            if (horas > 12) {
-                ampm = 'pm';
-                horas -= 12;
-            } else {
-                ampm = 'am';
-            }
             if (horas < 10) { horas = '0' + horas; }
             if (minutos < 10) { minutos = '0' + minutos; }
             if (segundos < 10) { segundos = '0' + segundos; }
             var texto = document.getElementById('laHora');
-            texto.innerHTML = horas + ':' + minutos + ':' + segundos + ' ' + ampm;
+            texto.innerHTML = horas + ':' + minutos + ':' + segundos;
         }
         function cuentaAtras() {
             segundos = parseInt(segundos);
@@ -51,17 +45,11 @@
                     }
                 }
             }
-            if (horas > 12) {
-                ampm = 'pm';
-                horas -= 12;
-            } else {
-                ampm = 'am';
-            }
             if (horas < 10) { horas = '0' + horas; }
             if (minutos < 10) { minutos = '0' + minutos; }
             if (segundos < 10) { segundos = '0' + segundos; }
             var texto = document.getElementById('laHora');
-            texto.innerHTML = horas + ':' + minutos + ':' + segundos + ' ' + ampm;
+            texto.innerHTML = horas + ':' + minutos + ':' + segundos;
         }
         function temporizador() {
             crono();
