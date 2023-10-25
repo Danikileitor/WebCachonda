@@ -3,6 +3,29 @@
 
 <head>
     <title>Reloj</title>
+    <style>
+        body :first-child {
+            display: flex;
+            justify-content: center;
+        }
+
+        #ventana {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 400px;
+            margin-top: 10px;
+            background: pink;
+            border: solid 1px black;
+        }
+
+        #laHora {
+            font-size: 80px;
+            color: dodgerblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -10,7 +33,9 @@
         <input type="time" name="reloj" id="reloj" step="2">
         <button onclick="temporizador()">Comenzar</button>
     </div>
-    <div id="laHora"></div>
+    <div id="ventana">
+        <div id="laHora"></div>
+    </div>
     <script>
         var miFecha;
         var horas;
@@ -19,7 +44,7 @@
         function crono() {
             var elCrono;
             miFecha = document.getElementById("reloj").valueAsDate;
-            horas = miFecha.getHours()-1;
+            horas = miFecha.getHours() - 1;
             minutos = miFecha.getMinutes();
             segundos = miFecha.getSeconds();
             if (horas < 10) { horas = '0' + horas; }
