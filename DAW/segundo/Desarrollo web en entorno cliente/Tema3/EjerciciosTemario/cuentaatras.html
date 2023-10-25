@@ -4,9 +4,10 @@
 <head>
     <title>Reloj</title>
     <style>
-        body :first-child {
+        body > div {
             display: flex;
             justify-content: center;
+            width: 100%;
         }
 
         #ventana {
@@ -37,12 +38,10 @@
     <div id="ventana">
         <div id="laHora"></div>
     </div>
-    <center>
     <div>
         <button onclick="clearInterval(elCrono)">Pausar</button>
         <button onclick="elCrono = setInterval(cuentaAtras, 1000)">Continuar</button>
     </div>
-</center>
     <script>
         var miFecha;
         var horas;
