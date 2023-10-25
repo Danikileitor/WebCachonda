@@ -19,7 +19,7 @@
         function crono() {
             var elCrono;
             miFecha = document.getElementById("reloj").valueAsDate;
-            horas = miFecha.getHours();
+            horas = miFecha.getHours()-1;
             minutos = miFecha.getMinutes();
             segundos = miFecha.getSeconds();
             if (horas < 10) { horas = '0' + horas; }
