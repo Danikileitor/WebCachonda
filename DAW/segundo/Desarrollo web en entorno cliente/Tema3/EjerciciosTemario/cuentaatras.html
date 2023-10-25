@@ -17,6 +17,7 @@
             height: 200px;
             width: 400px;
             margin-top: 10px;
+            margin-bottom: 10px;
             background: pink;
             border: solid 1px black;
         }
@@ -36,6 +37,12 @@
     <div id="ventana">
         <div id="laHora"></div>
     </div>
+    <center>
+    <div>
+        <button onclick="clearInterval(elCrono)">Pausar</button>
+        <button onclick="elCrono = setInterval(cuentaAtras, 1000)">Continuar</button>
+    </div>
+</center>
     <script>
         var miFecha;
         var horas;
