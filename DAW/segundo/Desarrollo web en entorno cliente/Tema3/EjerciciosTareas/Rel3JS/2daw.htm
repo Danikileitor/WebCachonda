@@ -101,6 +101,16 @@
                 alert("No se ha encontrado la clave \""+ clave + "\", el texto fuente es:\n" + fuente);
             }
         }
+        function ej234() {
+            var texto = prompt("Introduce una palabra o texto").trim().toLowerCase();
+            var palindromo = true;
+            for (let i = 0; i < texto.length; i++) {
+                if (texto[i] !== texto[texto.length - 1 - i]) {
+                    palindromo = false;
+                }
+            }
+            palindromo ? alert("El texto introducido es palíndromo.") : alert("El texto introducido no es palíndromo.");
+        }
         </script>
 </head>
 <body>
@@ -136,5 +146,11 @@
         <p>En caso de encontrarla, imprimir la posición, de lo contrario una leyenda.</p>
     </div>
     <h3><button onclick="ej233()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej234')">Ejercicio 23.4</h2>
+    <div id="ej234">
+        <p>Ingresar una palabra o texto por teclado y determinar si es o no una palabra palíndromo.</p>
+        <p>(Palabra que se lee de igual manera de adelante hacia atrás, que de atrás hacia delante)</p>
+    </div>
+    <h3><button onclick="ej234()">-Iniciar-</button></h3>
 </body>
 </html>
