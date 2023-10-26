@@ -126,6 +126,22 @@
         function ej34() {
             var ventana = window.open("", "Ventana", "width=600,height=300")
         }
+        function ej35() {
+            var num;
+            num = Math.random() * 3; //se guarda en num un valor comprendido entre 0.00001 y 2.99999
+            num = parseInt(num); //guardamos solo la parte entera de la variable num
+            switch (num) {
+                case 0:
+                    window.location = 'http://www.hotmail.com';
+                    break;
+                case 1:
+                    window.location = 'http://mail.google.com';
+                    break;                
+                case 2:
+                    window.location = 'http://www.yahoo.com';
+                    break;
+            }
+        }
         </script>
 </head>
 <body>
@@ -186,5 +202,19 @@
         <p>Confeccionar una página que permita abrir otra ventana cuando se presiona un botón. Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles.</p>
     </div>
     <h3><button onclick="ej34()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej35')">Ejercicio 35</h2>
+    <div id="ej35">
+        <p>Confeccionar una página que tenga un hipervínculo. Cuando se presione dicho hipervínculo generar un valor aleatorio entre 0 y 2.</p>
+        <p>Si se genera el 0 llamar al webmail de hotmail, si se genera un 1 llamar a gmail en caso de generarse un 2 llamar a yahoo.</p>
+        <p>Para generar un valor aleatorio utilizar la función random del objeto Math.</p>
+        <pre>
+            var num;
+            num=Math.random()*3; //se guarda en num un valor comprendido entre 0.00001 y 2.99999
+            num=parseInt(num); //guardamos solo la parte entera de la variable num
+            if (num==0)
+                window.location='http://www.hotmail.com';
+        </pre>
+    </div>
+    <h3><button onclick="ej35()">-Iniciar-</button></h3>
 </body>
 </html>
