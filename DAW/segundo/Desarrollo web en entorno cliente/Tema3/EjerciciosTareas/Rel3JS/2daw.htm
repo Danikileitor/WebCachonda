@@ -114,6 +114,15 @@
             }
             palindromo ? alert("El texto introducido es palíndromo.") : alert("El texto introducido no es palíndromo.");
         }
+        function ej237() {
+            var texto = prompt("Introduce una frase o texto").trim();
+            var palabras = texto.split(" ");
+            var resultado = "";
+            palabras.forEach(palabra => {
+                resultado += palabra + "\n";
+            });
+            alert(resultado);
+        }
         </script>
 </head>
 <body>
