@@ -88,7 +88,7 @@ h3 {
 }
 
 .social img,
-.contacto img {
+.contacto a img {
   width: 30px;
   height: 30px;
   margin: 10px 2px 2px 2px;
@@ -96,6 +96,10 @@ h3 {
 
 footer .social {
   justify-content: flex-start;
+}
+
+footer.row > * {
+  margin-top: 5px;
 }
 
 .contacto p,
