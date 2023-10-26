@@ -14,7 +14,8 @@ button:not(:disabled) {
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
 }
 
-main {
+main,
+footer > :first-child {
   background-color: #eeeeee;
   margin-bottom: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -22,7 +23,8 @@ main {
   padding-bottom: 12px;
 }
 
-main > :first-child {
+main > :first-child,
+footer .donde-estamos {
   margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -35,6 +37,32 @@ main > :first-child {
 h2 {
   font-weight: bold;
   font-size: 27px;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 20px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.boton-rojo {
+  color: white;
+  background-color: red;
+  font-size: 14px;
+  padding: 6px 12px 6px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.boton-rojo:hover {
+  color: red;
+  background-color: white;
+  font-size: 14px;
+  padding: 6px 12px 6px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .galeria > a div {
@@ -59,10 +87,40 @@ h2 {
   justify-content: flex-end;
 }
 
-.social img {
+.social img,
+.contacto img {
   width: 30px;
   height: 30px;
   margin: 10px 2px 2px 2px;
+}
+
+footer .social {
+  justify-content: flex-start;
+}
+
+.contacto p,
+.contacto td {
+  margin: auto;
+  font-size: 14px;
+}
+
+.contacto a {
+  color: black;
+  text-decoration-line: none;
+  transition: 0.3s;
+}
+
+.contacto a:hover {
+  color: red;
+}
+
+.contacto td {
+  vertical-align: middle;
+  padding: 2px;
+}
+
+.contacto td img {
+  margin: auto;
 }
 
 @media (min-width: 576px) {
