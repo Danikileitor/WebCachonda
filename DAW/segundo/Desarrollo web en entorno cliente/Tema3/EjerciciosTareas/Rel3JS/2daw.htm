@@ -69,6 +69,28 @@
             var resultado = Math.sqrt(num, 2);
             alert("La raíz cuadrada de " + num + " es: " + resultado);
         }
+        function ej231() {
+            var nombres = [];
+            var nombre = "";
+            do {
+                nombre = prompt("Introduce un nombre (Escribe Fin para finalizar)", "Fin");
+                if (nombre != "Fin") {
+                    nombres.push(nombre);
+                }
+            } while (nombre != "Fin");
+            alert("La cantidad de nombres ingresados ha sido: " + nombres.length);
+        }
+        function ej232() {
+            var nombres = [];
+            var nombre = "";
+            do {
+                nombre = prompt("Introduce un nombre (Escribe Fin para finalizar)", "Fin");
+                if (nombre.toLowerCase() != "fin") {
+                    nombres.push(nombre);
+                }
+            } while (nombre.toLowerCase() != "fin");
+            alert("La cantidad de nombres ingresados ha sido: " + nombres.length);
+        }
         </script>
 </head>
 <body>
@@ -88,5 +110,15 @@
         <p>Utilizando la clase Math confecciona un programa que solicite ingresar por teclado un valor y luego mostrar la raíz cuadrada de dicho valor.</p>
     </div>
     <h3><button onclick="ej222()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej231')">Ejercicio 23.1</h2>
+    <div id="ej231">
+        <p>Ingresar una serie de nombres por teclado hasta que se cargue la palabra Fin, y mostrar cuántos nombres se ingresaron.</p>
+    </div>
+    <h3><button onclick="ej231()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej232')">Ejercicio 23.2</h2>
+    <div id="ej232">
+        <p>Igual al anterior, pero que termine la aplicación sin contemplar mayúsculas ni minúsculas. Es decir que para salir se pueda teclear fin, Fin o FIN.</p>
+    </div>
+    <h3><button onclick="ej232()">-Iniciar-</button></h3>
 </body>
 </html>
