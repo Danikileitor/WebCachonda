@@ -64,6 +64,11 @@
             var resultado = Math.pow(num, 3);
             alert(num + " elevado al cubo es: " + resultado);
         }
+        function ej222() {
+            var num = prompt("Introduce un número");
+            var resultado = Math.sqrt(num, 2);
+            alert("La raíz cuadrada de " + num + " es: " + resultado);
+        }
         </script>
 </head>
 <body>
@@ -78,5 +83,10 @@
         <p>Utilizando la clase Math confecciona un programa que solicite el ingreso de un número y nos muestre dicho valor elevado a la tercera potencia.</p>
     </div>
     <h3><button onclick="ej221()">-Iniciar-</button></h3>
+    <h2 onclick="mostrar('ej222')">Ejercicio 22.2</h2>
+    <div id="ej222">
+        <p>Utilizando la clase Math confecciona un programa que solicite ingresar por teclado un valor y luego mostrar la raíz cuadrada de dicho valor.</p>
+    </div>
+    <h3><button onclick="ej222()">-Iniciar-</button></h3>
 </body>
 </html>
