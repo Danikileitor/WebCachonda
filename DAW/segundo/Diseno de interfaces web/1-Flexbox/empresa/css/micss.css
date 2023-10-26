@@ -1,5 +1,6 @@
 * {
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 a,
@@ -19,10 +20,16 @@ main {
 
 main > :first-child {
   margin-top: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .container > .row {
   margin-bottom: 5px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 27px;
 }
 
 .galeria > a div {
@@ -37,10 +44,9 @@ main > :first-child {
 }
 
 .nav-link {
-  font-family: "Montserrat", sans-serif;
   color: black;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .social {
