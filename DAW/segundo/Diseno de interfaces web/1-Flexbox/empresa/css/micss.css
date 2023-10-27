@@ -192,6 +192,10 @@ iframe {
   font-size: 14px;
 }
 
+.precios table tr:hover {
+  background-color: #f5f5f5;
+}
+
 .precios table tr:first-child td {
   border-top: 1px solid rgb(221, 221, 221);
 }
