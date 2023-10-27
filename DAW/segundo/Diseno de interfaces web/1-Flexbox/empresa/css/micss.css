@@ -138,6 +138,10 @@ footer.row > * {
   margin: auto;
 }
 
+iframe {
+  overflow-clip-margin: content-box;
+}
+
 @media (min-width: 576px) {
 }
 
