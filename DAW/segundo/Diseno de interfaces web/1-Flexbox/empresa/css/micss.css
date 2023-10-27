@@ -34,6 +34,17 @@ footer .donde-estamos {
   margin-bottom: 5px;
 }
 
+.carousel-control-prev {
+  justify-content: left;
+  padding-left: 10px;
+  width: 70px;
+}
+
+.carousel-control-next {
+  justify-content: right;
+  padding-right: 10px;
+}
+
 h2 {
   font-weight: bold;
   font-size: 27px;
