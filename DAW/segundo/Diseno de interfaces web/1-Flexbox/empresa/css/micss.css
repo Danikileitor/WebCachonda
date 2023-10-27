@@ -148,6 +148,38 @@ iframe {
   max-width: 100%;
 }
 
+.faq {
+  max-width: 43em;
+  margin: auto;
+}
+
+.faq > :first-child {
+  background-color: white;
+  width: auto;
+  margin: auto;
+  padding: 0;
+}
+
+.faq h4 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.faq p {
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.faq a {
+  font-family: "Montserrat", sans-serif;
+  color: red;
+  text-decoration: none;
+}
+
+.negrita {
+  font-weight: 600;
+}
+
 @media (min-width: 576px) {
 }
 
