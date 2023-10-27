@@ -176,6 +176,29 @@ iframe {
   text-decoration: none;
 }
 
+.precios {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.precios h4 {
+  font-size: 18.2px;
+  padding: 0;
+}
+
+.precios table {
+  width: 95%;
+}
+
+.precios tr > td {
+  width: 70%;
+}
+
+.precios tr > td:nth-child(2) {
+  text-align: center;
+}
+
 .negrita {
   font-weight: 600;
 }
