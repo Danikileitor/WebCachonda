@@ -139,7 +139,7 @@ footer.row > * {
 }
 
 iframe {
-  overflow-clip-margin: content-box;
+  max-width: 100%;
 }
 
 @media (min-width: 576px) {
