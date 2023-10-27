@@ -189,6 +189,15 @@ iframe {
 
 .precios table {
   width: 95%;
+  font-size: 14px;
+}
+
+.precios table tr:first-child td {
+  border-top: 1px solid rgb(221, 221, 221);
+}
+
+.precios table tr:last-child td {
+  border-bottom: none;
 }
 
 .precios tr > td {
