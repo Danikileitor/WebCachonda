@@ -155,7 +155,7 @@ iframe {
 }
 
 .donde-estamos div:last-of-type {
-  display: inline-block;
+  align-self: flex-start;
 }
 
 .faq {
