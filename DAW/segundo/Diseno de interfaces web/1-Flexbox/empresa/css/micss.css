@@ -260,6 +260,12 @@ iframe {
   padding: 10px;
 }
 
+.quienes-somos div div div {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+}
+
 .negrita {
   font-weight: 600;
 }
