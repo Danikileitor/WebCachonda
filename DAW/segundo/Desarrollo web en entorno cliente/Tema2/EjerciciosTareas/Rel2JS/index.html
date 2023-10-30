@@ -6,81 +6,15 @@
     <title>Relación de Ejercicios 2 – JavaScript -</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <script>
-        function ej51() {
-            var lado = prompt("Introduce el lado de un cuadrado");
-            alert("El perímetro del cuadrado es: " + lado*4);
-        }
-        function ej52() {
-            var a = prompt("Introduce el primer número");
-            var b = prompt("Introduce el segundo número");
-            var c = prompt("Introduce el tercer número");
-            var d = prompt("Introduce el cuarto número");
-            var suma = parseFloat(a)+parseFloat(b);
-            alert("La suma de los dos primeros números es: " + suma + "\nEl producto de los dos últimos números es: " + c*d);
-        }
-        function ej53() {
-            var a = prompt("Introduce el primer número");
-            var b = prompt("Introduce el segundo número");
-            var c = prompt("Introduce el tercer número");
-            var d = prompt("Introduce el cuarto número");
-            var suma = parseFloat(a)+parseFloat(b)+parseFloat(c)+parseFloat(d);
-            alert("La suma de los números es: " + suma + "\nEl producto de los números es: " + a*b*c*d);
-        }
-        function ej54() {
-            var precio = prompt("Introduce el precio del producto");
-            var cantidad = prompt("Introduce la cantidad del producto");
-            alert("La cantidad total a pagar es de: " + precio*cantidad);
-        }
-        function ej61() {
-            var a = parseFloat(prompt("Introduce la primera nota"));
-            var b = parseFloat(prompt("Introduce la segunda nota"));
-            var c = parseFloat(prompt("Introduce la tercera nota"));
-            var promedio = (a+b+c)/3;
-            if (promedio >= 7) {
-                alert("Su promedio es de: " + promedio + "\nPromocionado");
-            } else {
-                alert("Su promedio es de: " + promedio + "\nNo ha promocionado");
-            }
-        }
-        function ej62() {
-            var a = prompt("Introduzca su contraseña:");
-            var b = prompt("Vuelva a introducir su contraseña:");
-            if (a == b) {
-                alert("Las contraseñas coinciden");
-            } else {
-                alert("Las contraseñas no coinciden");
-            }
-        }
-        function ej71() {
-            var a = parseFloat(prompt("Introduce el primer número"));
-            var b = parseFloat(prompt("Introduce el segundo número"));
-            if (a > b) {
-                alert("Su suma es: " + (a+b) + "\nSu diferencia es: " + (a-b));
-            } else {
-                alert("Su producto es: " + a*b + "\nSu división es: " + a/b);
-            }
-        }
-        function ej72() {
-            var a = parseFloat(prompt("Introduce la primera nota"));
-            var b = parseFloat(prompt("Introduce la segunda nota"));
-            var c = parseFloat(prompt("Introduce la tercera nota"));
-            var promedio = (a+b+c)/3;
-            if (promedio >= 4) {
-                alert("Su promedio es de: " + promedio + "\nRegular");
-            } else {
-                alert("Su promedio es de: " + promedio + "\nReprobado");
-            }
-        }
-        function ej73() {
-            var a = parseInt(prompt("Introduce un número entero de 1 o 2 dígitos"));
-            if (isNaN(a) || a.toString().length > 2) {
-                alert("¡No has introducido un número entero de 1 o 2 dígitos!");
-            } else {
-                a.toString().length == 1 ? alert("El número tiene 1 dígito") : alert("El número tiene 2 dígitos");
-            }
-        }
-        </script>
+    <script src="js/ej5.1.js"></script>
+    <script src="js/ej5.2.js"></script>
+    <script src="js/ej5.3.js"></script>
+    <script src="js/ej5.4.js"></script>
+    <script src="js/ej6.1.js"></script>
+    <script src="js/ej6.2.js"></script>
+    <script src="js/ej7.1.js"></script>
+    <script src="js/ej7.2.js"></script>
+    <script src="js/ej7.3.js"></script>
 </head>
 <body>
     <h1>Relación de Ejercicios 2 – JavaScript -</h1>
