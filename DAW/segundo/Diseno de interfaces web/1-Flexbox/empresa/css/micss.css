@@ -61,7 +61,7 @@ h4 {
   color: red;
 }
 
-h4+h4 {
+h4 + h4 {
   font-size: 14px;
 }
 
@@ -224,7 +224,7 @@ iframe {
   margin-top: 35px;
 }
 
-.otros div div+div {
+.otros div div + div {
   display: none;
 }
 
@@ -232,6 +232,22 @@ iframe {
   text-align: justify;
   font-size: 14px;
   max-width: 26em;
+}
+
+.quienes-somos p,
+.quienes-somos table {
+  font-size: 14px;
+}
+
+.quienes-somos p {
+  max-width: 74em;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quienes-somos h4 {
+  padding: 10px;
 }
 
 .negrita {
@@ -242,7 +258,7 @@ iframe {
 }
 
 @media (min-width: 768px) {
-  .otros div div+div {
+  .otros div div + div {
     display: block;
   }
 }
