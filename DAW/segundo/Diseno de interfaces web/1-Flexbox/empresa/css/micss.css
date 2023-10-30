@@ -284,3 +284,21 @@ iframe {
 
 @media print {
 }
+
+.container-lg {
+  container-type: inline-size;
+  container-name: summary;
+}
+
+@container summary (max-width: 321px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 16px !important;
+  }
+
+  p {
+    font-size: 12px !important;
+  }
+}
