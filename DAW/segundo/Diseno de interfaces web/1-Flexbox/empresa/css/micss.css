@@ -280,10 +280,17 @@ iframe {
   font-weight: 600;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 320px) {
+  body .social:first-child {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
+  body .social:first-child {
+    display: flex;
+  }
+
   .otros div div + div {
     display: block;
   }
@@ -297,6 +304,10 @@ iframe {
 }
 
 @media print {
+  body .social:first-child,
+  .carousel span {
+    display: none;
+  }
 }
 
 .container-lg {
