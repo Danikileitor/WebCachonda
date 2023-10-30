@@ -212,6 +212,12 @@ iframe {
   text-align: center;
 }
 
+.otros p {
+  text-align: justify;
+  font-size: 14px;
+  max-width: 26em;
+}
+
 .negrita {
   font-weight: 600;
 }
