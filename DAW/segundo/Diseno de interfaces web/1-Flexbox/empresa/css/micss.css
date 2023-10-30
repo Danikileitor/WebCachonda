@@ -4,6 +4,7 @@
   --max-ancho: 1250px;
   --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
   --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+  --bcolor: #eee;
 }
 
 * {
@@ -24,7 +25,7 @@ button:not(:disabled) {
 
 main,
 footer .donde-estamos {
-  background-color: #eeeeee;
+  background-color: var(--bcolor);
   margin-bottom: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.2);
