@@ -91,6 +91,11 @@ h4 + h4 {
   margin-bottom: 5px;
 }
 
+.galeria > a div:hover {
+  -webkit-filter: brightness(30%);
+  filter: brightness(30%);
+}
+
 .carousel {
   padding: 0;
 }
