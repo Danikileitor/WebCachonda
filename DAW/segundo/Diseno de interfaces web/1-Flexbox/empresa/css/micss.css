@@ -154,10 +154,6 @@ iframe {
   font-size: 14px;
 }
 
-.donde-estamos div:last-of-type {
-  align-self: flex-start;
-}
-
 .faq {
   max-width: 43em;
   margin: auto;
