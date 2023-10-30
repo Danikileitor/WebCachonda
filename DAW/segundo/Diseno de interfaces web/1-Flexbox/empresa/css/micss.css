@@ -216,6 +216,10 @@ iframe {
   margin-top: 35px;
 }
 
+.otros div div+div {
+  display: none;
+}
+
 .otros p {
   text-align: justify;
   font-size: 14px;
@@ -230,6 +234,9 @@ iframe {
 }
 
 @media (min-width: 768px) {
+  .otros div div+div {
+    display: block;
+  }
 }
 
 @media (min-width: 992px) {
