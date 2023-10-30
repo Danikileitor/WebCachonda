@@ -5,11 +5,14 @@
   --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
   --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
   --bcolor: #eee;
+  --ffMontserrat: "Montserrat", sans-serif;
+  --ffGeorgia: Georgia, serif;
+
 }
 
 * {
   cursor: var(--puntero-normal);
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ffMontserrat);
 }
 
 a,
@@ -188,12 +191,12 @@ iframe {
 }
 
 .faq p {
-  font-family: Georgia, serif;
+  font-family: var(--ffGeorgia);
   font-size: 17px;
 }
 
 .faq a {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ffMontserrat);
   color: var(--hcolor);
   text-decoration: none;
 }
