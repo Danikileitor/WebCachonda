@@ -1,5 +1,13 @@
+:root {
+  --hcolor: red;
+  --peque: 14px;
+  --max-ancho: 1250px;
+  --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+}
+
 * {
-  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  cursor: var(--puntero-normal);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -11,7 +19,7 @@ button > span,
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
 button:not(:disabled) {
-  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+  cursor: var(--puntero-enlace);
 }
 
 main,
@@ -58,17 +66,17 @@ h3 {
 }
 
 h4 {
-  color: red;
+  color: var(--hcolor);
 }
 
 h4 + h4 {
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .boton-rojo {
   color: white;
-  background-color: red;
-  font-size: 14px;
+  background-color: var(--hcolor);
+  font-size: var(--peque);
   padding: 6px 12px 6px 12px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border: none;
@@ -77,9 +85,9 @@ h4 + h4 {
 }
 
 .boton-rojo:hover {
-  color: red;
+  color: var(--hcolor);
   background-color: white;
-  font-size: 14px;
+  font-size: var(--peque);
   padding: 6px 12px 6px 12px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -129,7 +137,7 @@ footer.row > * {
 .contacto p,
 .contacto td {
   margin: auto;
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .contacto a {
@@ -139,7 +147,7 @@ footer.row > * {
 }
 
 .contacto a:hover {
-  color: red;
+  color: var(--hcolor);
 }
 
 .contacto td {
@@ -156,7 +164,7 @@ iframe {
 }
 
 .donde-estamos p {
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .faq {
@@ -185,7 +193,7 @@ iframe {
 
 .faq a {
   font-family: "Montserrat", sans-serif;
-  color: red;
+  color: var(--hcolor);
   text-decoration: none;
 }
 
@@ -202,7 +210,7 @@ iframe {
 
 .precios table {
   width: 95%;
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .precios table tr:hover {
@@ -235,13 +243,13 @@ iframe {
 
 .otros p {
   text-align: justify;
-  font-size: 14px;
+  font-size: var(--peque);
   max-width: 26em;
 }
 
 .quienes-somos p,
 .quienes-somos table {
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .quienes-somos p {
@@ -280,6 +288,10 @@ iframe {
 }
 
 @media (min-width: 992px) {
+  .container-lg {
+    max-width: var(--max-ancho);
+    padding: 0;
+  }
 }
 
 @media print {
@@ -290,7 +302,7 @@ iframe {
   container-name: summary;
 }
 
-@container summary (max-width: 321px) {
+@container summary (max-width: 320px) {
   h1,
   h2,
   h3,
@@ -298,7 +310,9 @@ iframe {
     font-size: 16px !important;
   }
 
-  p {
+  p,
+  a,
+  td {
     font-size: 12px !important;
   }
 }
