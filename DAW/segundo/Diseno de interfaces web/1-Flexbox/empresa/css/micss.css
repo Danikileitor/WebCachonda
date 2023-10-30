@@ -251,6 +251,11 @@ iframe {
   margin-right: auto;
 }
 
+.quienes-somos td {
+  border: 1px solid #00000a;
+  padding: 0cm 0.19cm 0cm 0.2cm;
+}
+
 .quienes-somos h4 {
   padding: 10px;
 }
