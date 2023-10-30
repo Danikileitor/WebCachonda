@@ -5,204 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relación de Ejercicios 1 – JavaScript -</title>
     <link rel="stylesheet" href="css/main.css">
-    <script>
-        function mostrar(id) {
-            document.getElementById(id).style.display == "" || document.getElementById(id).style.display == "none" ? document.getElementById(id).style.display = "flex" : document.getElementById(id).style.display = "none";
-        }
-        function corregir(id) {
-            if (document.getElementById(id+'mal').style.display == "" || document.getElementById(id+'mal').style.display == "none") {
-                document.getElementById(id+'mal').style.display = "flex";
-                document.getElementById(id+'bien').style.display = "none";
-            } else {
-                document.getElementById(id+'mal').style.display = "none";
-                document.getElementById(id+'bien').style.display = "flex";
-            }
-        }
-        function ej1() {
-            var a = prompt("Introduce un número:");
-            if (isNaN(a)) {
-                alert("¡No has introducido un número! Inténtalo de nuevo.");
-            } else {
-                var b = prompt("Introduce otro número:");
-                if (isNaN(b)) {
-                    alert("¡No has introducido un número! Inténtalo de nuevo.");
-                } else {
-                    var c = a-b;
-                    alert("El resultado es: " + c);
-                }
-            }
-        }
-        function ej1b() {
-            var a = prompt("Introduce una frase:");
-            var b = prompt("Introduce otra frase:");
-            var c = a-b;
-            alert("El resultado es:\n" + c);
-        }
-        function ej2() {
-            var a = prompt("Introduce un número:");
-            var b = prompt("Introduce otro número:");
-            var c = a/b;
-            alert("El resultado es: " + c);
-        }
-        function ej3() {
-            var nombre = prompt("Introduzca su nombre:");
-            var edad = prompt("Introduce su edad:");
-            if (isNaN(edad)) {
-                alert("¡No has introducido un número! Inténtalo de nuevo.");
-            } else {
-                alert("Su nombre es: " + nombre +"\nHas vivido durante " + edad*365 + " días.");
-            }
-        }
-        function ej4() {
-            var a = prompt("Introduce un número:");
-            if (isNaN(a)) {
-                alert("¡No has introducido un número! Inténtalo de nuevo.");
-            } else {
-                alert("Doble: " + a*2 + "\nTriple: " + a*3 + "\nCuádruple: " + a*4);
-            }
-        }
-        function ej5() {
-            var a,b;
-            a=prompt("Escribe la base:")
-            b=prompt("Escribe la altura:")
-            alert("Área= "+(a*b/2));
-            alert("Este programa pide al usuario 2 números, calcula y muestra el área de un triángulo.");
-        }
-        function ej6() {
-            var radio = prompt("Introduce el radio:");
-            if (isNaN(radio)) {
-                alert("¡No has introducido un número! Inténtalo de nuevo.");
-            } else {
-                alert("Longitud de la circunferencia: " + 2*Math.PI*radio + "\nÁrea del círculo: " + Math.PI*radio*radio);
-            }
-        }
-        function ej7() {
-            var a = parseFloat(prompt("Introduce un número:"));
-            if (isNaN(a)) {
-                alert("¡No has introducido un número! Inténtalo de nuevo.");
-            } else {
-                var b = a+5;
-                var c = b+21;
-                var d = c-4;
-                alert("Número introducido:\u00A0" + a + "\nContadores:\u00A0" + b + "\u00A0" + c + "\u00A0" + d);
-            }
-        }
-        function ej8() {
-            var a = parseInt(prompt("Introduce un número entero:"));
-            if (isNaN(a)) {
-                alert("¡No has introducido un número entero! Inténtalo de nuevo.");
-            } else {
-                alert("Base 16: " + a.toString(16) + "\nBase 5: " + a.toString(5));
-            }
-        }
-        function ej9() {
-            var a = parseInt(prompt("Introduce un número en base ocho:"));
-            if (isNaN(a)) {
-                alert("¡No has introducido un número entero! Inténtalo de nuevo.");
-            } else {
-                alert("Base decimal: " + parseInt(a, 8) + "\nBase 2: " + parseInt(a, 8).toString(2));
-            }
-        }
-        function ej10() {
-            var a = parseInt(prompt("Introduce un número entero:"));
-            var b = parseInt(prompt("Introduce la base:"));
-            if (isNaN(a)) {
-                alert("¡No has introducido un número entero! Inténtalo de nuevo.");
-            } else {
-                if (isNaN(b)) {
-                    alert("¡No has introducido un número entero! Inténtalo de nuevo.");
-                } else {
-                    alert("El número en la base indicada es: " + a.toString(b));
-                }
-            }
-        }
-        function ej11() {
-            var farenheit,celsius;
-            var s="";
-            for (i=-2;i<=12;i++)
-                {
-                celsius=10*i;
-                farenheit=32+(celsius*9)/5;
-                s=s+"C= "+celsius+" F= "+farenheit+"\n";
-                if (celsius==0) s=s+"Punto congelación del Agua\n";
-                if (celsius==100) s=s+"Punto de ebullición del Agua\n";
-                }
-            alert(s);
-        }
-        function ej12() {
-            var a = parseFloat(prompt("Introduce un número positivo menor que 57:"));
-            if (isNaN(a) || a>=57 || a<=0) {
-                alert("¡No has introducido un número positivo menor que 57! Inténtalo de nuevo.");
-            } else {
-                var b = parseFloat(prompt("Introduce otro número positivo menor que 57:"));
-                if (isNaN(b) || b>=57 || b<=0) {
-                    alert("¡No has introducido un número positivo menor que 57! Inténtalo de nuevo.");
-                } else {
-                    alert("El producto de ambos números es: " + a*b);
-                    var c = prompt("Si quieres volver a empezar escribe [otra]", 'otra');
-                    if (c.toLowerCase() == "otra") {
-                        ej12();
-                    }
-                }
-            }
-        }
-        function ej13() {
-            var contador = 0;
-            do {
-                var a = parseFloat(prompt("Introduce un número: (escribe 9999 para finalizar)"));
-                if (a == 9999) {
-                    alert("El total de números introducidos es: " + contador);
-                } else {
-                    if (!isNaN(a)) {
-                        contador++;
-                    }
-                }
-            } while (a != 9999);
-        }
-        function ej14() {
-            var contador = 0;
-            var suma = 0;
-            do {
-                var a = parseFloat(prompt("Introduce un número: (escribe 9999 para finalizar)"));
-                if (a == 9999) {
-                    alert("El total de números introducidos es: " + contador + "\nSu suma total es: " + suma);
-                } else {
-                    if (!isNaN(a)) {
-                        contador++;
-                        suma += a;
-                    }
-                }
-            } while (a != 9999);
-        }
-        function ej15() {
-            var contador = 0;
-            var suma = 0;
-            var producto = 1;
-            do {
-                var a = parseFloat(prompt("Introduce un número: (escribe 9999 para finalizar)"));
-                if (a == 9999) {
-                    alert("El total de números introducidos es: " + contador + "\nSu suma total es: " + suma + "\nSu producto total es: " + producto);
-                } else {
-                    if (!isNaN(a)) {
-                        contador++;
-                        suma += a;
-                        producto *= a;
-                    }
-                }
-            } while (a != 9999);
-        }
-        function ej16() {
-            var suma = 0;
-            var multiplos = "Múltiplos de 23 inferiores a 1000:\n";
-            for (let i = 1; i < 1000; i++) {
-                if (i % 23 === 0) {
-                    multiplos += i + " ";
-                    suma += i ;
-                }
-            }
-            alert(multiplos + "\nSu suma total es: " + suma);
-        }
-        </script>
+    <script src="js/ej1.js"></script>
+    <script src="js/ej2.js"></script>
+    <script src="js/ej3.js"></script>
+    <script src="js/ej4.js"></script>
+    <script src="js/ej5.js"></script>
+    <script src="js/ej6.js"></script>
+    <script src="js/ej7.js"></script>
+    <script src="js/ej8.js"></script>
+    <script src="js/ej9.js"></script>
+    <script src="js/ej10.js"></script>
+    <script src="js/ej11.js"></script>
+    <script src="js/ej12.js"></script>
+    <script src="js/ej13.js"></script>
+    <script src="js/ej14.js"></script>
+    <script src="js/ej15.js"></script>
+    <script src="js/ej16.js"></script>
 </head>
 <body>
     <h1>Relación de Ejercicios 1 – JavaScript -</h1>
