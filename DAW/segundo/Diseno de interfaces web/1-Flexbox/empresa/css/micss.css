@@ -306,10 +306,14 @@ iframe {
 
 @media print {
   body .social:first-child,
-  footer.row,
+  footer > *:not(:nth-last-child(2)),
   .navbar,
   .carousel span {
     display: none;
+  }
+
+  footer > :last-child {
+    display: block;
   }
 
   .logo {
@@ -324,10 +328,10 @@ iframe {
 
 .container-lg {
   container-type: inline-size;
-  container-name: summary;
+  container-name: principal;
 }
 
-@container summary (max-width: 320px) {
+@container principal (max-width: 320px) {
   h1,
   h2,
   h3,
