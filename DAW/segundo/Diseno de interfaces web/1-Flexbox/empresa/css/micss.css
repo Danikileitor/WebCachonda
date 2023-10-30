@@ -25,6 +25,10 @@ button:not(:disabled) {
   cursor: var(--puntero-enlace);
 }
 
+body .social:first-child {
+  display: none;
+}
+
 main,
 footer .donde-estamos {
   background-color: var(--bcolor);
@@ -281,9 +285,6 @@ iframe {
 }
 
 @media (min-width: 320px) {
-  body .social:first-child {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
@@ -305,8 +306,19 @@ iframe {
 
 @media print {
   body .social:first-child,
+  footer.row,
+  .navbar,
   .carousel span {
     display: none;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .galeria > * {
+    break-inside: avoid;
   }
 }
 
