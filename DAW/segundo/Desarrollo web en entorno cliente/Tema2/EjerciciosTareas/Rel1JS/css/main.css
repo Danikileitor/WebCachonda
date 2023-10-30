@@ -1,0 +1,78 @@
+* {
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam372.cur), auto;
+}
+
+button:hover,
+h2:hover,
+.clickable * {
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), pointer;
+}
+
+body {
+    background-color: black;
+    color: aqua;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 75rem;
+}
+
+div {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    margin: 0 auto;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+pre {
+    display: none;
+    text-align: left;
+}
+
+ul {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    list-style-type: none;
+}
+
+li:before {
+    content: "- ";
+}
+
+ul ul {
+    list-style-type: disc;
+}
+
+li li:before {
+    content: none;
+}
+
+button {
+    background-color: aqua;
+    color: black;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: black;
+    color: aqua;
+}
+
+button:active {
+    background-color: yellow;
+    color: black;
+}

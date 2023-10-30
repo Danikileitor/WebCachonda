@@ -4,70 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relación de Ejercicios 1 – JavaScript -</title>
-    <style>
-        * {
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam372.cur), auto;
-        }
-        button:hover, h2:hover, .clickable *{
-            cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), pointer;
-        }
-        body {
-            background-color: black;
-            color: aqua;
-            text-align: center;
-            margin: 0 auto;
-            max-width: 75rem;
-        }
-        div {
-            display: none;
-            align-items: center;
-            flex-direction: column;
-        }
-        p {
-            margin: 0 auto;
-        }
-        .negrita {
-            font-weight: bold;
-        }
-        .cursiva {
-            font-style: italic;
-        }
-        pre{
-            display: none;
-            text-align: left;
-        }
-        ul {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            list-style-type: none;
-        }
-        li:before {
-            content: "- ";
-        }
-        ul ul{
-            list-style-type: disc;
-        }
-        li li:before {
-            content: none;
-        }
-        button {
-            background-color: aqua;
-            color: black;
-            border: 2px solid aqua;
-            border-radius: 5px;
-            transition-duration: 0.4s;
-        }
-        button:hover {
-            background-color: black;
-            color: aqua;
-        }
-        button:active {
-            background-color: yellow;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
     <script>
         function mostrar(id) {
             document.getElementById(id).style.display == "" || document.getElementById(id).style.display == "none" ? document.getElementById(id).style.display = "flex" : document.getElementById(id).style.display = "none";
@@ -354,7 +291,7 @@
                 </ul>
             </li>
         </ul>
-        <p>De forma que si introducimos el nº 5 debería aparecer:</p><img src="ej7.png">
+        <p>De forma que si introducimos el nº 5 debería aparecer:</p><img src="img/ej7.png">
     </div>
     <h3><button onclick="ej7()">-Iniciar-</button></h3>
     <h2 onclick="mostrar('ej8')">Ejercicio 8</h2>
