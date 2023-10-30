@@ -212,6 +212,10 @@ iframe {
   text-align: center;
 }
 
+.otros {
+  margin-top: 35px;
+}
+
 .otros p {
   text-align: justify;
   font-size: 14px;
