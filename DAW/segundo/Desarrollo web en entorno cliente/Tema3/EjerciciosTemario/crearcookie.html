@@ -8,15 +8,21 @@
     <script>
         function crearCookie() {
             var usuarioCookie="Daniel Marcos Guerra Gómez";//Variable para indicar el valor de la cookie
-            document.cookie="usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT";//creamos la cookie con fecha de expiración
+            document.cookie="usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT";//Codificamos y creamos la cookie con fecha de expiración
         }
+
         function leerCookie() {
-            alert(decodeURIComponent(document.cookie));//leemos la cookie 
+            alert(decodeURIComponent(document.cookie));//Decodificamos y leemos la cookie 
+        }
+
+        function borrarCookie() {
+            document.cookie="usuario=;expires Sat, 6 Aug 2020 12:15:00 GMT";//Para borrar la cookie se pone una fecha de expiración ya pasada
         }
     </script>
 </head>
 <body>
-    <button onclick="crearCookie()">Crear una Cookie</button>
-    <button onclick="leerCookie()">Leer una Cookie</button>
+    <button onclick="crearCookie()">Crear Cookie</button>
+    <button onclick="leerCookie()">Leer Cookie</button>
+    <button onclick="borrarCookie()">Borrar Cookie</button>
 </body>
 </html>
