@@ -24,11 +24,11 @@ button > span,
 [type="submit"]:not(:disabled),
 button:not(:disabled) {
   cursor: var(--puntero-enlace);
-}/* Con el uso de bootstrap he tenido que utilizar todos estos selectores para poder editar el puntero del ratón sobre los enlaces, para evitar el uso de !important*/
+}/* Con el uso de bootstrap he tenido que utilizar todos estos selectores para poder editar el puntero del ratón sobre los enlaces, para evitar el uso de !important */
 
 body .social:first-child {
   display: none;
-}
+}/* Escondemos el panel de enlaces a redes sociales al principio de la página para las versiones móviles, en pantallas más grandes se mostrará */
 
 main,
 footer .donde-estamos {
@@ -397,7 +397,7 @@ iframe {
   h3,
   h4 {
     font-size: 16px !important;
-  }
+  }/* Si no utilizaba el !important me iba a ser complicado aplicar bien este estilo por el uso de bootstrap */
 
   p,
   a,
