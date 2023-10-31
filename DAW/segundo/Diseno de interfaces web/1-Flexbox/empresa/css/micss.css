@@ -288,19 +288,19 @@ iframe {
   padding: 7px;
 }
 
-.circuito-actual colgroup:first-child {
+.circuito-actual colgroup :first-child {
   width: 160px;
 }
 
-.circuito-actual colgroup:nth-child(2) {
+.circuito-actual colgroup :nth-child(2) {
   width: 213px;
 }
 
-.circuito-actual colgroup:nth-child(3) {
+.circuito-actual colgroup :nth-child(3) {
   width: 85px;
 }
 
-.circuito-actual colgroup:last-child {
+.circuito-actual colgroup :last-child {
   width: 76px;
 }
 
