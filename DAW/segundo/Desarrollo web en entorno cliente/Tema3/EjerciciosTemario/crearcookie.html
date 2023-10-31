@@ -10,9 +10,13 @@
             var usuarioCookie="Dimas";
             document.cookie="usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT";
         }
+        function leerCookie() {
+            alert(document.cookie);
+        }
     </script>
 </head>
 <body>
     <button onclick="crearCookie()">Crear una Cookie</button>
+    <button onclick="leerCookie()">Leer una Cookie</button>
 </body>
 </html>
