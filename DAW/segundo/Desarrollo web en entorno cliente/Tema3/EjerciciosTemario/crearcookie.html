@@ -7,11 +7,11 @@
 
     <script>
         function crearCookie() {
-            var usuarioCookie="Daniel Marcos Guerra Gómez";
-            document.cookie="usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT";
+            var usuarioCookie="Daniel Marcos Guerra Gómez";//Variable para indicar el valor de la cookie
+            document.cookie="usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT";//creamos la cookie con fecha de expiración
         }
         function leerCookie() {
-            alert(decodeURIComponent(document.cookie));
+            alert(decodeURIComponent(document.cookie));//leemos la cookie 
         }
     </script>
 </head>
