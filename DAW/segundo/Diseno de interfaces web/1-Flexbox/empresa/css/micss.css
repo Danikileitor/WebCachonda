@@ -282,6 +282,32 @@ iframe {
   align-items: first baseline;
 }
 
+.circuito-actual {
+  margin: auto;
+  border-spacing: 0;
+  padding: 7px;
+}
+
+.circuito-actual colgroup:first-child {
+  width: 160px;
+}
+
+.circuito-actual colgroup:nth-child(2) {
+  width: 213px;
+}
+
+.circuito-actual colgroup:nth-child(3) {
+  width: 85px;
+}
+
+.circuito-actual colgroup:last-child {
+  width: 76px;
+}
+
+.circuito-actual tr{
+  vertical-align: top;
+}
+
 .negrita {
   font-weight: 600;
 }
