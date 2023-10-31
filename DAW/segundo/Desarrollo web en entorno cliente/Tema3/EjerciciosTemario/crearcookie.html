@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cookie</title>
+
+    <script>
+        function crearCookie() {
+            var usuarioCookie="Dimas";
+            document.cookie="usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="crearCookie()">Crear una Cookie</button>
+</body>
+</html>
