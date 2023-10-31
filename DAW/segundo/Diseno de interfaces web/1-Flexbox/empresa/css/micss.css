@@ -149,7 +149,8 @@ footer.row > * {
 
 .contacto a {
   color: black;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   transition: 0.3s;
 }
 
@@ -354,7 +355,8 @@ iframe {
   }
 
   .galeria > * {
-    break-inside: avoid;
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
   }
 }
 
