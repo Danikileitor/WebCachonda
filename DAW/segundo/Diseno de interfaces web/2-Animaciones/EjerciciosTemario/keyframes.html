@@ -16,12 +16,21 @@
             border: 1px solid black;
             
             animation-name: cambiarGato;
-            animation-duration: 2s;
+            animation-duration: 5s;
         }
 
         @keyframes cambiarGato {
-            to {
+            25% {
                 background-image: url("https://placekitten.com/300/101");
+            }
+            50% {
+                background-image: url("https://placekitten.com/300/102");
+            }
+            75% {
+                background-image: url("https://placekitten.com/300/103");
+            }
+            100% {
+                background-image: url("https://placekitten.com/300/104");
             }
         }
     </style>
