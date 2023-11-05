@@ -1,8 +1,4 @@
-import java.util.Scanner;
-
 public class Ej10 {
-    static Scanner teclado = new Scanner(System.in);
-
     public static void main(String[] args) {
         double[][] triangulos = { { 0, 0 }, { 0, 12 }, { 8, 15 } };
 
