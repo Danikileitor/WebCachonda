@@ -19,11 +19,11 @@ public class Ej7 {
 
         System.out.println("Original|\tRedondeado");
         for (double original : valores) {
-            System.out.println(original + "\t|\t" + rendoear(original));
+            System.out.println(original + "\t|\t" + redondear(original));
         }
     }
 
-    public static double rendoear(double valor) {
+    public static double redondear(double valor) {
         return Math.floor(valor + 0.5);
     }
 
