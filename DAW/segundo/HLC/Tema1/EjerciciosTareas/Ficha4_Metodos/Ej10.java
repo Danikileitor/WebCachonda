@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ej10 {
@@ -15,18 +14,5 @@ public class Ej10 {
 
     public static double hipotenusa(double lado1, double lado2) {
         return Math.sqrt(lado1 * lado1 + lado2 * lado2);
-    }
-
-    public static double pedirNum() {
-        double num;
-        try {
-            num = teclado.nextDouble();
-        } catch (InputMismatchException e) {
-            System.out.println("¡Introduce un número!");
-            teclado.nextLine();
-            return pedirNum();
-        }
-        teclado.nextLine();
-        return num;
     }
 }
