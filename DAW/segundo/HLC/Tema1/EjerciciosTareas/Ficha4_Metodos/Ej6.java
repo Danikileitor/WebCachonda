@@ -7,7 +7,7 @@ public class Ej6 {
 
     public static void main(String[] args) {
         ArrayList<Double> clientes = new ArrayList<>();
-        double horas, total;
+        double horas, pago, total = 0;
 
         do {
             System.out.println("Indica las horas de estacionamiento del cliente [" + clientes.size() + "] (introduce 0 para finalizar)");
@@ -17,10 +17,13 @@ public class Ej6 {
             }
         } while (horas > 0);
 
-        for (Double cliente : clientes) {
-            System.out.println("El pago para el cliente ... es:");
-            //nos quedamos por aqui
+        for (int i = 0; i < clientes.size(); i++) {
+            pago = calcularPagos(clientes.get(i));
+            System.out.printf("El pago para el cliente %d es de %.2f€\n", i, pago);
+            total += pago;
         }
+
+        System.out.printf("El pago total de la jornada es de %.2f€\n", total);
     }
 
     public static double calcularPagos(double horas) {
