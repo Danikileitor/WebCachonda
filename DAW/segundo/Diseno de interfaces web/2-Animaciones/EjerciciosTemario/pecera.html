@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pecera</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .pecera {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid black;
+            background-image: linear-gradient(cyan, blue);
+        }
+        
+        .pez1 {
+            width: 100px;
+            position: relative;
+
+            animation-name: nadar1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .pez2 {
+            width: 100px;
+            position: relative;
+
+            animation-name: nadar2;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .pez3 {
+            width: 100px;
+            position: relative;
+
+            animation-name: nadar3;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .pompa {
+            width: 50px;
+            position: relative;
+            border-radius: 50%;
+
+            animation-name: subir;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes nadar1 {
+            from {
+                top: 50%;
+                left: 90%;
+            }
+            to {
+                top: 50%;
+                left: 0;
+            }
+        }
+
+        @keyframes nadar2 {
+            from {
+                top: 80%;
+                left: 70%;
+            }
+            to {
+                top: 50%;
+                left: 0;
+            }
+        }
+
+        @keyframes nadar3 {
+            from {
+                top: 30%;
+                left: 50%;
+            }
+            to {
+                top: 50%;
+                left: 0;
+            }
+        }
+
+        @keyframes subir {
+            from {
+                top: 80%;
+            }
+            to {
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pecera">
+        <img class="pez1" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/64152/cartoon-fish-clipart-md.png">
+        <img class="pompa" src="https://banner2.cleanpng.com/20180402/gyq/kisspng-soap-bubble-speech-balloon-clip-art-shape-5ac27356f39525.1984485915226929509977.jpg">
+        <img class="pez2" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/64152/cartoon-fish-clipart-md.png">
+        <img class="pompa" src="https://banner2.cleanpng.com/20180402/gyq/kisspng-soap-bubble-speech-balloon-clip-art-shape-5ac27356f39525.1984485915226929509977.jpg">
+        <img class="pez3" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/64152/cartoon-fish-clipart-md.png">
+        <img class="pompa" src="https://banner2.cleanpng.com/20180402/gyq/kisspng-soap-bubble-speech-balloon-clip-art-shape-5ac27356f39525.1984485915226929509977.jpg">
+    </div>
+</body>
+</html>
