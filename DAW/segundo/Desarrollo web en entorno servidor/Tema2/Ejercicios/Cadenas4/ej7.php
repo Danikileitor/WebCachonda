@@ -6,7 +6,7 @@
     <title>Ejercicio 7</title>
 </head>
 <body>
-    <p>
+    <ol type="a">
         <?php
             $cadena = "Bienvenido a nestro cine. Ha efectuado usted la decisión correcta.";
             $a = substr($cadena, 26);
@@ -15,13 +15,13 @@
             $d = substr_replace(substr($cadena, 26, 36), "q", 2, 0);
             $e = ucfirst(substr($cadena, 21, 10));
             $f = ucfirst(substr($cadena, 21, 41));
-            print "a. " . $a . "<br>";
-            print "b. " . $b . "<br>";
-            print "c. " . $c . "<br>";
-            print "d. " . $d . "<br>";
-            print "e. " . $e . "<br>";
-            print "f. " . $f;
+            print "<li>" . $a . "</li>";
+            print "<li>" . $b . "</li>";
+            print "<li>" . $c . "</li>";
+            print "<li>" . $d . "</li>";
+            print "<li>" . $e . "</li>";
+            print "<li>" . $f;
         ?>
-    </p>
+    </ol>
 </body>
 </html>
