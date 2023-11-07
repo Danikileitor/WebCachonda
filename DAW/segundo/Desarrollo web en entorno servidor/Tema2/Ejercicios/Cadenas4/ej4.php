@@ -14,7 +14,7 @@
             print $c . "<br>";
             print "El primer carácter es: " . substr($c, 0, 1) . "<br>";
             print "El tercer carácter es: " . substr($c, 2, 1) . "<br>";
-            print "El último carácter es: " . substr($c, -1, 1) . "<br>";
+            print "El último carácter es: " . substr($c, -1, 1);
         ?>
     </p>
 </body>

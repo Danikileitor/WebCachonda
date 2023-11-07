@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3</title>
+    <title>Ejercicio 4</title>
 </head>
 <body>
     <p>
@@ -12,9 +12,9 @@
             $b = " un poco más larga";
             $c = $a . $b;
             print $c . "<br>";
-            print "La posición de la primera [c] es: " . strpos($c, 'c') . "<br>";
-            print "La posición de la última [c] es: " . strrpos($c, 'c') . "<br>";
-            print "La posición de la palabra [poco] es: " . strpos($c, "poco");
+            print "El primer carácter es: " . substr($c, 0, 1) . "<br>";
+            print "El tercer carácter es: " . substr($c, 2, 1) . "<br>";
+            print "El último carácter es: " . substr($c, -1, 1) . "<br>";
         ?>
     </p>
 </body>
