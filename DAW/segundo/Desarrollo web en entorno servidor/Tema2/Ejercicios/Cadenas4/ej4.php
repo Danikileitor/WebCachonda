@@ -9,12 +9,12 @@
     <p>
         <?php
             $a = "Esto es una cadena";
-            $b = " un poco más larga.";
+            $b = " un poco más larga";
             $c = $a . $b;
             print $c . "<br>";
-            print "La posición de la primera [c] es: " . strpos($c, 'c') . "<br>";
-            print "La posición de la última [c] es: " . strrpos($c, 'c') . "<br>";
-            print "La posición de la palabra [poco] es: " . strpos($c, "poco") . "<br>";
+            print "El primer carácter es: " . substr($c, 0, 1) . "<br>";
+            print "El tercer carácter es: " . substr($c, 2, 1) . "<br>";
+            print "El último carácter es: " . substr($c, -1, 1) . "<br>";
         ?>
     </p>
 </body>

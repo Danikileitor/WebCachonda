@@ -9,7 +9,7 @@
     <p>
         <?php
             $a = "Esto es una cadena";
-            $b = " un poco más larga.";
+            $b = " un poco más larga";
             $c = $a . $b;
             print $c;
         ?>
