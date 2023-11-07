@@ -8,13 +8,10 @@
 <body>
     <p>
         <?php
-            $a = "Esto es una cadena";
-            $b = " un poco más larga";
-            $c = $a . $b;
-            print $c . "<br>";
-            print "El primer carácter es: " . substr($c, 0, 1) . "<br>";
-            print "El tercer carácter es: " . substr($c, 2, 1) . "<br>";
-            print "El último carácter es: " . substr($c, -1, 1) . "<br>";
+            $cadena = "Bienvenido a nestro cine. Ha efectuado usted la decisión correcta.";
+            $nombrecliente = ", Pablo González. ";
+            $c = substr_replace($cadena, $nombrecliente, 24, 2);
+            print $c;
         ?>
     </p>
 </body>
