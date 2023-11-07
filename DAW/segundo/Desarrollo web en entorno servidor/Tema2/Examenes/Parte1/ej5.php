@@ -17,7 +17,7 @@
                     print "$telefono es un teléfono fijo válido.";
                 }
             } else {
-                print "Error, no se ha introducido un número de teléfono en el formato correcto!!!";
+                print "Error, $telefono no es un número de teléfono con formato correcto!!!";
             }
         ?>
     </p>
