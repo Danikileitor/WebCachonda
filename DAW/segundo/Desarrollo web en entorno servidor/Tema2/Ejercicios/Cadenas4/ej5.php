@@ -9,7 +9,7 @@
     <p>
         <?php
             $a = "Observa a cada una";
-            $b = substr($a, 0, strlen($a)-1) . 'o';
+            $b = substr_replace($a, 'o', -1);
             print $b;
         ?>
     </p>
