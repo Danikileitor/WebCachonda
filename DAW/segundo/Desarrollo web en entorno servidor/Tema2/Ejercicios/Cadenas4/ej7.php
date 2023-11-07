@@ -20,7 +20,7 @@
             print "<li>" . $c . "</li>";
             print "<li>" . $d . "</li>";
             print "<li>" . $e . "</li>";
-            print "<li>" . $f;
+            print "<li>" . $f . "</li>";
         ?>
     </ol>
 </body>
