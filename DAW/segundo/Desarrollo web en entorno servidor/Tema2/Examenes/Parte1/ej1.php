@@ -39,7 +39,6 @@
             } else {
                 print "$cad1 es igual que $cad2";
             }
-            
         ?>
     </p>
 </body>
