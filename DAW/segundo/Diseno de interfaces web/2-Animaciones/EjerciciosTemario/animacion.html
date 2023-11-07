@@ -10,32 +10,44 @@
             box-sizing: border-box;
         }
 
-        div {
+        button {
             width: 200px;
             height: 500px;
             background-image: url("https://placekitten.com/200/500");
             border: 1px solid black;
             position: relative;
 
-            animation: aparecer 2s;
+            animation: aparecer 2s forwards;
+        }
+
+        button:focus {
+            animation: transformar 10s;
         }
 
         @keyframes aparecer {
             from {
                 left: -300px;
-                opacity: 0
+                opacity: 0;
+                transform: rotate(-180deg);
             }
 
             to {
                 left: 0;
-                opacity: 1
+                opacity: 1;
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes transformar {
+            50% {
+                transform: scale(0.5);
             }
         }
     </style>
 </head>
 
 <body>
-    <div></div>
+    <button></button>
 </body>
 
 </html>
