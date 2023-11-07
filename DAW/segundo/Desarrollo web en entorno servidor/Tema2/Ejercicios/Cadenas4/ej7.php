@@ -9,12 +9,12 @@
     <p>
         <?php
             $cadena = "Bienvenido a nestro cine. Ha efectuado usted la decisión correcta.";
-            $a = "";
-            $b = "";
-            $c = "";
-            $d = "";
-            $e = "";
-            $f = "";
+            $a = substr($cadena, 26);
+            $b = ucfirst(substr($cadena, 39));
+            $c = substr($cadena, 26, 5);
+            $d = substr_replace(substr($cadena, 26, 36), "q", 2, 0);
+            $e = ucfirst(substr($cadena, 21, 10));
+            $f = ucfirst(substr($cadena, 21, 41));
             print "a. " . $a . "<br>";
             print "b. " . $b . "<br>";
             print "c. " . $c . "<br>";
