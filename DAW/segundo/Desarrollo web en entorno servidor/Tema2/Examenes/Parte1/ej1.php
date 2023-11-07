@@ -10,7 +10,6 @@
         <?php
             $cad1 = "Hola9";
             $cad2 = "Hola10";
-            $resultado;
             $modo = 4;
             $ncaracteres = 4;
 
