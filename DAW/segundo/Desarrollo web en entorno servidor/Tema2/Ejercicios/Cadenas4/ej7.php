@@ -16,11 +16,11 @@
             $e = "";
             $f = "";
             print "a. " . $a . "<br>";
-            print "a. " . $b . "<br>";
-            print "a. " . $c . "<br>";
-            print "a. " . $d . "<br>";
-            print "a. " . $e . "<br>";
-            print "a. " . $f;
+            print "b. " . $b . "<br>";
+            print "c. " . $c . "<br>";
+            print "d. " . $d . "<br>";
+            print "e. " . $e . "<br>";
+            print "f. " . $f;
         ?>
     </p>
 </body>
