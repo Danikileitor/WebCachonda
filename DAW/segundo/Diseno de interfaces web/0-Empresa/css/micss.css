@@ -1,0 +1,407 @@
+:root {
+  --hcolor: red;
+  --peque: 14px;
+  --max-ancho: 1250px;
+  --max-ancho-4k: 2000px;
+  --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+  --bcolor: #eee;
+  --ffMontserrat: "Montserrat", sans-serif;
+  --ffGeorgia: Georgia, serif;
+}
+
+* {
+  cursor: var(--puntero-normal);
+  font-family: var(--ffMontserrat);
+}
+
+a,
+a > *,
+.social img,
+button > span,
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: var(--puntero-enlace);
+}/* Con el uso de bootstrap he tenido que utilizar todos estos selectores para poder editar el puntero del ratón sobre los enlaces, para evitar el uso de !important */
+
+body .social:first-child {
+  display: none;
+}/* Escondemos el panel de enlaces a redes sociales al principio de la página para las versiones móviles, en pantallas más grandes se mostrará */
+
+main,
+footer .donde-estamos {
+  background-color: var(--bcolor);
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+
+main > :first-child,
+footer .donde-estamos h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.container-lg > .row {
+  margin-bottom: 5px;
+}
+
+.carousel-control-prev {
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.carousel-control-next {
+  justify-content: right;
+  padding-right: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 27px;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 20px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+h4 {
+  color: var(--hcolor);
+}
+
+h4 + h4 {
+  font-size: var(--peque);
+}
+
+.boton-rojo {
+  color: white;
+  background-color: var(--hcolor);
+  font-size: var(--peque);
+  padding: 6px 12px 6px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.boton-rojo:hover {
+  color: var(--hcolor);
+  background-color: white;
+  font-size: var(--peque);
+  padding: 6px 12px 6px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.galeria > a div {
+  width: 230px;
+  height: 312px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.galeria > a div:hover {
+  -webkit-filter: brightness(30%);
+  filter: brightness(30%);
+}
+
+.carousel {
+  padding: 0;
+}
+
+.nav-link {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social img,
+.contacto a img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 2px 2px 2px;
+}
+
+footer .social {
+  justify-content: flex-start;
+}
+
+footer.row > * {
+  margin-top: 5px;
+}
+
+.contacto p,
+.contacto td {
+  margin: auto;
+  font-size: var(--peque);
+}
+
+.contacto a {
+  color: black;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  transition: 0.3s;
+}
+
+.contacto a:hover {
+  color: var(--hcolor);
+}
+
+.contacto td {
+  vertical-align: middle;
+  padding: 2px;
+}
+
+.contacto td img {
+  margin: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.donde-estamos p {
+  font-size: var(--peque);
+}
+
+.faq {
+  max-width: 43em;
+  margin: auto;
+}
+
+.faq > :first-child {
+  background-color: white;
+  width: auto;
+  margin: auto;
+  padding: 0;
+}
+
+.faq h4 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.faq p {
+  font-family: var(--ffGeorgia);
+  font-size: 17px;
+}
+
+.faq a {
+  font-family: var(--ffMontserrat);
+  color: var(--hcolor);
+  text-decoration: none;
+}
+
+.precios {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.precios h4 {
+  font-size: 18.2px;
+  padding: 0;
+}
+
+.precios table {
+  width: 95%;
+  font-size: var(--peque);
+}
+
+.precios table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.precios table tr:first-child td {
+  border-top: 1px solid rgb(221, 221, 221);
+}
+
+.precios table tr:last-child td {
+  border-bottom: none;
+}
+
+.precios tr > td {
+  width: 70%;
+}
+
+.precios tr > td:nth-child(2) {
+  text-align: center;
+}
+
+.otros {
+  margin-top: 35px;
+}
+
+.otros div div + div {
+  display: none;
+}
+
+.otros h4 ~ p {
+  text-align: justify;
+  font-size: var(--peque);
+  max-width: 26em;
+}
+
+.quienes-somos p,
+.quienes-somos table {
+  font-size: var(--peque);
+}
+
+.quienes-somos p {
+  max-width: 74em;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quienes-somos td {
+  border: 1px solid black;
+  padding: 0 0.19cm 0 0.2cm;
+}
+
+.quienes-somos h4 {
+  padding: 10px;
+}
+
+.quienes-somos div div div {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+}
+
+.circuito-actual {
+  margin: auto;
+  border-spacing: 0;
+  padding: 7px;
+}
+
+.circuito-actual colgroup :first-child {
+  width: 160px;
+}
+
+.circuito-actual colgroup :nth-child(2) {
+  width: 213px;
+}
+
+.circuito-actual colgroup :nth-child(3) {
+  width: 85px;
+}
+
+.circuito-actual colgroup :last-child {
+  width: 76px;
+}
+
+.circuito-actual tr {
+  vertical-align: top;
+}
+
+.negrita {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  body .social:first-child {
+    display: flex;
+  }
+
+  .otros div div + div {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-lg {
+    max-width: var(--max-ancho);
+    padding: 0;
+  }
+}
+
+@media (min-width: 2560px) {
+  h2,
+  h4,
+  main.row h4 {
+    font-size: 300%;
+  }
+
+  .nav-link,
+  .donde-estamos p,
+  h4 + h4,
+  footer a,
+  footer p,
+  main.row p,
+  .precios td {
+    font-size: 160%;
+  }
+
+  .boton-rojo {
+    font-size: 50%;
+  }
+
+  .container-lg {
+    max-width: var(--max-ancho-4k);
+  }
+
+  .galeria {
+    zoom: 150%;
+  }
+
+  .faq {
+    max-width: calc(43em * 1.5);
+  }
+}
+
+@media print {
+  body .social:first-child,
+  footer > *:not(:nth-last-child(2)),
+  .navbar,
+  .carousel span {
+    display: none;
+  }
+
+  footer > :last-child {
+    display: block;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .galeria > * {
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+.container-lg {
+  container-type: inline-size;
+  container-name: principal;
+}
+
+@container principal (max-width: 320px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 16px !important;
+  }/* Si no utilizaba el !important me iba a ser complicado aplicar bien este estilo por el uso de bootstrap */
+
+  p,
+  a,
+  td {
+    font-size: 12px !important;
+  }
+}
