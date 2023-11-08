@@ -15,7 +15,6 @@
 * {
   cursor: var(--puntero-normal);
   font-family: var(--ffMontserrat);
-  position: relative;
   animation: aparecer 2s forwards;
 }
 
