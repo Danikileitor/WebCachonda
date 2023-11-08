@@ -112,11 +112,13 @@ h4 + h4 {
   height: 312px;
   margin-top: 5px;
   margin-bottom: 5px;
+  transition: transform 1.5s;
 }
 
-.galeria > a div:hover {
+.galeria > a:hover div {
   -webkit-filter: brightness(30%);
   filter: brightness(30%);
+  transform: rotateY(180deg);
 }
 
 .nav-link {
@@ -412,12 +414,24 @@ iframe {
 
 @keyframes aparecer {
   from {
-      bottom: -1vh;
-      opacity: 0;
+    bottom: -1vh;
+    opacity: 0;
   }
 
   to {
-      bottom: 0;
-      opacity: 1;
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    bottom: -1vh;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
   }
 }
