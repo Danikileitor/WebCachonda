@@ -15,6 +15,7 @@
 * {
   cursor: var(--puntero-normal);
   font-family: var(--ffMontserrat);
+  position: relative;
   animation: aparecer 2s forwards;
 }
 
@@ -136,6 +137,12 @@ h4 + h4 {
   width: 30px;
   height: 30px;
   margin: 10px 2px 2px 2px;
+  animation: none;
+  transition: animation 2s;
+}
+
+.social a:hover img {
+  animation: tada 2s;
 }
 
 footer .social {
@@ -432,5 +439,29 @@ iframe {
   to {
     bottom: 0;
     opacity: 1;
+  }
+}
+
+@keyframes tada {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }
