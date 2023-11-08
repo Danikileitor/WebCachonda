@@ -3,8 +3,10 @@
   --peque: 14px;
   --max-ancho: 1250px;
   --max-ancho-4k: 2000px;
-  --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
-  --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+  --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402),
+    auto;
+  --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415),
+    auto;
   --bcolor: #eee;
   --ffMontserrat: "Montserrat", sans-serif;
   --ffGeorgia: Georgia, serif;
@@ -13,6 +15,8 @@
 * {
   cursor: var(--puntero-normal);
   font-family: var(--ffMontserrat);
+  position: relative;
+  animation: aparecer 2s forwards;
 }
 
 a,
@@ -24,11 +28,11 @@ button > span,
 [type="submit"]:not(:disabled),
 button:not(:disabled) {
   cursor: var(--puntero-enlace);
-}/* Con el uso de bootstrap he tenido que utilizar todos estos selectores para poder editar el puntero del ratón sobre los enlaces, para evitar el uso de !important */
+} /* Con el uso de bootstrap he tenido que utilizar todos estos selectores para poder editar el puntero del ratón sobre los enlaces, para evitar el uso de !important */
 
 body .social:first-child {
   display: none;
-}/* Escondemos el panel de enlaces a redes sociales al principio de la página para las versiones móviles, en pantallas más grandes se mostrará */
+} /* Escondemos el panel de enlaces a redes sociales al principio de la página para las versiones móviles, en pantallas más grandes se mostrará */
 
 main,
 footer .donde-estamos {
@@ -48,6 +52,10 @@ footer .donde-estamos h2 {
 
 .container-lg > .row {
   margin-bottom: 5px;
+}
+
+.carousel {
+  padding: 0;
 }
 
 .carousel-control-prev {
@@ -109,10 +117,6 @@ h4 + h4 {
 .galeria > a div:hover {
   -webkit-filter: brightness(30%);
   filter: brightness(30%);
-}
-
-.carousel {
-  padding: 0;
 }
 
 .nav-link {
@@ -397,11 +401,23 @@ iframe {
   h3,
   h4 {
     font-size: 16px !important;
-  }/* Si no utilizaba el !important me iba a ser complicado aplicar bien este estilo por el uso de bootstrap */
+  } /* Si no utilizaba el !important me iba a ser complicado aplicar bien este estilo por el uso de bootstrap */
 
   p,
   a,
   td {
     font-size: 12px !important;
+  }
+}
+
+@keyframes aparecer {
+  from {
+      bottom: -1vh;
+      opacity: 0;
+  }
+
+  to {
+      bottom: 0;
+      opacity: 1;
   }
 }
