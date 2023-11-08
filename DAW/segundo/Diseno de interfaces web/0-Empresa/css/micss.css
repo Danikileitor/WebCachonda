@@ -460,7 +460,7 @@ iframe {
   }
   10%,
   20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);/* Primero se hace un poco más pequeño */
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);/* Primero se hace un poco más pequeño y rota un poco a la izquierda */
   }
   30%,
   50%,
