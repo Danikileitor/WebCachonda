@@ -19,6 +19,10 @@
   animation: aparecer 2s forwards;
 }
 
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
 a,
 a > *,
 .social img,
@@ -347,7 +351,8 @@ iframe {
   }
 
   .logo:hover > img {
-    transform: scale(1, 1.5) skew(30deg, 5deg) translate(100px, -20px) rotate(180deg);
+    transform: scale(1, 1.5) skew(30deg, 5deg) translate(100px, -20px)
+      rotate(180deg);
   }
 }
 
@@ -457,17 +462,21 @@ iframe {
 /* Animación para agitar un elemento */
 @keyframes agitar {
   0% {
-    transform: scale3d(1, 1, 1);/* Partimos desde una escala base 1 (sin modificar) */
+    transform: scale3d(
+      1,
+      1,
+      1
+    ); /* Partimos desde una escala base 1 (sin modificar) */
   }
   10%,
   20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);/* Primero se hace un poco más pequeño y rota un poco a la izquierda */
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); /* Primero se hace un poco más pequeño y rota un poco a la izquierda */
   }
   30%,
   50%,
   70%,
   90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);/* Posteriormente va rotando de derecha a izquierda */
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); /* Posteriormente va rotando de derecha a izquierda */
   }
   40%,
   60%,
@@ -475,51 +484,51 @@ iframe {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
   100% {
-    transform: scale3d(1, 1, 1);/* Finalmente volvemos al punto de origen */
+    transform: scale3d(1, 1, 1); /* Finalmente volvemos al punto de origen */
   }
 }
 
 /* Animación para aparecer desde el centro y que rebote en la pantalla */
 @keyframes entrada-botando {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: scale(0);
-	}
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(0);
+  }
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: scale(1);
-	}
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: scale(1);
+  }
 
-	55% {
-		animation-timing-function: ease-in;
-		transform: scale(0.7);
-	}
+  55% {
+    animation-timing-function: ease-in;
+    transform: scale(0.7);
+  }
 
-	72% {
-		animation-timing-function: ease-out;
-		transform: scale(1);
-	}
+  72% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
 
-	81% {
-		animation-timing-function: ease-in;
-		transform: scale(0.84);
-	}
+  81% {
+    animation-timing-function: ease-in;
+    transform: scale(0.84);
+  }
 
-	89% {
-		animation-timing-function: ease-out;
-		transform: scale(1);
-	}
+  89% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
 
-	95% {
-		animation-timing-function: ease-in;
-		transform: scale(0.95);
-	}
+  95% {
+    animation-timing-function: ease-in;
+    transform: scale(0.95);
+  }
 
-	100% {
-		animation-timing-function: ease-out;
-		transform: scale(1);
-	}
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
 }
