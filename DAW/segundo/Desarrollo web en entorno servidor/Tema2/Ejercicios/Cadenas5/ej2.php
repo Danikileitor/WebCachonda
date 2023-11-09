@@ -8,15 +8,16 @@
 </head>
 
 <body>
-    <p>
-        <?php
-        function infoPais($pais, $capital = "Madrid", $habitantes = "muchos") {
-            return "La capital de $pais es $capital y tiene $habitantes habitantes.";
-        }
+    <?php
+    function infoPais($pais, $capital = "Madrid", $habitantes = "muchos")
+    {
+        return "La capital de $pais es $capital y tiene $habitantes habitantes.";
+    }
 
-        print 
-        ?>
-    </p>
+    printf("<p>%s</p>", infoPais("España"));
+    printf("<p>%s</p>", infoPais("Portugal", "Lisboa"));
+    printf("<p>%s</p>", infoPais("Francia", "París", 6000000));
+    ?>
 </body>
 
 </html>
