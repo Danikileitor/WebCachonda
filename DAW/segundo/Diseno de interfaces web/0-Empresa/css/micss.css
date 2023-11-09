@@ -112,6 +112,7 @@ h4 + h4 {
   height: 312px;
   margin-top: 5px;
   margin-bottom: 5px;
+  animation: entrada-botando 2s;
   transition: transform 1.5s, filter 1s;
 }
 
@@ -476,4 +477,48 @@ iframe {
   100% {
     transform: scale3d(1, 1, 1);/* Finalmente volvemos al punto de origen */
   }
+}
+
+@keyframes entrada-botando {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: scale(0.7);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: scale(0.84);
+	}
+
+	89% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: scale(0.95);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
 }
