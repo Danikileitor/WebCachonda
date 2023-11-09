@@ -10,8 +10,7 @@
 <body>
     <p>
         <?php
-        function calculaCantidad($tiempo, $dinero, $interes)
-        {
+        function calculaCantidad($tiempo, $dinero, $interes) {
             if ($tiempo == 0) {
                 return $dinero;
             } else {
