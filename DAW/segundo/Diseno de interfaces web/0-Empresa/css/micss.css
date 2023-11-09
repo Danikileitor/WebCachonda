@@ -479,6 +479,7 @@ iframe {
   }
 }
 
+/* Animación para aparecer desde el centro y que rebote en la pantalla */
 @keyframes entrada-botando {
 	0% {
 		animation-timing-function: ease-in;
