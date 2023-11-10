@@ -9,7 +9,7 @@ public class Ej16 {
         int a = pedirNum();
         System.out.println("Introduce otro número entero:");
         int b = pedirNum();
-        System.out.printf("La parte entera de %d / %d es: %d.", a, b, parteEntera(a/b));
+        System.out.printf("La parte entera de %d / %d es: %d\n.", a, b, parteEntera(a / b));
     }
 
     public static int parteEntera(double n) {
