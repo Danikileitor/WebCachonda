@@ -19,7 +19,7 @@ public class Ej16 {
         b = pedirNum();
         System.out.printf("El resto de %d / %d es: %d.\n", a, b, resto(a, b));
 
-        // Parte c)
+        // Partes c) y d)
         System.out.println("Introduce un número entero entre 1 y 99999:");
         a = pedirNum();
         System.out.printf("Los dígitos introducidos son: %s.\n", mostrarDigitos(a));
