@@ -34,6 +34,14 @@ public class Ej16 {
     }
 
     public static String mostrarDigitos(int n) {
+        String digitos = Integer.toString(n);
+        String salida = "";
+
+        for (int i = 0; i < digitos.length(); i++) {
+            salida += digitos.charAt(i) + "  ";
+        }
+
+        return salida.trim();
     }
 
     public static int pedirNum() {
