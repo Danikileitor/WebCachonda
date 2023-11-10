@@ -20,8 +20,8 @@ public class Ej16 {
         System.out.printf("El resto de %d / %d es: %d.\n", a, b, resto(a, b));
 
         // Partes c) y d)
-        System.out.println("Introduce un número entero entre 1 y 99999:");
         do {
+            System.out.println("Introduce un número entero entre 1 y 99999:");
             a = pedirNum();
         } while (a < 1 || a > 99999);
         System.out.printf("Los dígitos introducidos son: %s.\n", mostrarDigitos(a));
