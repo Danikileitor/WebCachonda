@@ -7,7 +7,7 @@ public class Ej15 {
     public static void main(String[] args) {
         System.out.println("Introduce el radio del círculo:");
         double radio = pedirNum();
-        System.out.printf("El área del círculo con radio %f es: %f.", radio, circuloArea(radio));
+        System.out.printf("El área del círculo con radio %.2f es: %.2f.\n", radio, circuloArea(radio));
     }
 
     public static double circuloArea(double radio) {
