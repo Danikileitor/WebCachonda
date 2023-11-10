@@ -18,6 +18,10 @@ public class Ej16 {
         System.out.println("Introduce otro número entero:");
         b = pedirNum();
         System.out.printf("El resto de %d / %d es: %d.\n", a, b, resto(a, b));
+
+        // Parte c)
+        System.out.println("Introduce un número entero entre 1 y 99999:");
+        a = pedirNum();
     }
 
     public static int parteEntera(int a, int b) {
