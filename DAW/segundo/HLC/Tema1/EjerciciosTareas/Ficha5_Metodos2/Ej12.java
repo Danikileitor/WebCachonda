@@ -9,7 +9,9 @@ public class Ej12 {
         do {
             System.out.println("Introduce un número entero: (0 para salir)");
             valor = pedirNum();
-            System.out.printf("¿El número %d es par? %s.\n", valor, esPar(valor));
+            if (valor != 0) {
+                System.out.printf("¿El número %d es par? %s.\n", valor, esPar(valor));
+            }
         } while (valor != 0);
     }
 
