@@ -1,1 +1,1 @@
-{"version":3,"sources":["../.scss/estilo.scss","estilo.css"],"names":[],"mappings":"AAEA;EACI,qBAHU;ACEd","file":"estilo.css"}
+{"version":3,"sources":["../.scss/estilo.scss","../.scss/_variables.scss","estilo.css"],"names":[],"mappings":"AAEA;EACI,sBCHU;ACEd","file":"estilo.css"}
