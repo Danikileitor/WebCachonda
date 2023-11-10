@@ -5,15 +5,27 @@ public class Ej16 {
     static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
+        // Parte a)
         System.out.println("Introduce un número entero:");
         int a = pedirNum();
         System.out.println("Introduce otro número entero:");
         int b = pedirNum();
-        System.out.printf("La parte entera de %d / %d es: %d.\n", a, b, parteEntera(a / b));
+        System.out.printf("La parte entera de %d / %d es: %d.\n", a, b, parteEntera(a, b));
+
+        // Parte b)
+        System.out.println("Introduce un número entero:");
+        a = pedirNum();
+        System.out.println("Introduce otro número entero:");
+        b = pedirNum();
+        System.out.printf("El resto de %d / %d es: %d.\n", a, b, resto(a, b));
     }
 
-    public static int parteEntera(double n) {
-        return (int) n;
+    public static int parteEntera(int a, int b) {
+        return a / b;
+    }
+
+    public static int resto(int a, int b) {
+        return a % b;
     }
 
     public static int pedirNum() {
