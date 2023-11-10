@@ -7,17 +7,17 @@ public class Ej17 {
     public static void main(String[] args) {
         System.out.println("Introduce los grados farenheit como un número entero:");
         int f = pedirNum();
-        System.out.printf("%d grados farenheit equivalen a %d grados centígrados.\n", f, centigrados(f));
+        System.out.printf("%d grados farenheit equivalen a %.2f grados centígrados.\n", f, centigrados(f));
         System.out.println("Introduce los grados centígrados como un número entero:");
         int c = pedirNum();
-        System.out.printf("%d grados centígrados equivalen a %d grados farenheit.\n", c, farenheit(c));
+        System.out.printf("%d grados centígrados equivalen a %.2f grados farenheit.\n", c, farenheit(c));
     }
 
-    public static int centigrados(int f) {
+    public static double centigrados(int f) {
         return 5 / 9 * (f - 32);
     }
 
-    public static int farenheit(int c) {
+    public static double farenheit(int c) {
         return 9 / 5 * c + 32;
     }
 
