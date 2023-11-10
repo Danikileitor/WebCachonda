@@ -14,11 +14,11 @@ public class Ej17 {
     }
 
     public static double centigrados(int f) {
-        return 5 / 9 * (f - 32);
+        return 5.0 / 9.0 * (f - 32);
     }
 
     public static double farenheit(int c) {
-        return 9 / 5 * c + 32;
+        return 9.0 / 5.0 * c + 32;
     }
 
     public static int pedirNum() {
