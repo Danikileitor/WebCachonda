@@ -22,6 +22,7 @@ public class Ej16 {
         // Parte c)
         System.out.println("Introduce un número entero entre 1 y 99999:");
         a = pedirNum();
+        System.out.printf("Los dígitos introducidos son: %s.\n", mostrarDigitos(a));
     }
 
     public static int parteEntera(int a, int b) {
@@ -30,6 +31,9 @@ public class Ej16 {
 
     public static int resto(int a, int b) {
         return a % b;
+    }
+
+    public static String mostrarDigitos(int n) {
     }
 
     public static int pedirNum() {
