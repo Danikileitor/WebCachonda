@@ -19,6 +19,7 @@
             list-style: none;
             width: 100%;
             border: 2px solid $primary_dark;
+            font-size: $fontsize;
 
             >li {
                 width: 100%;
@@ -54,6 +55,7 @@
         }
 
         >ul {
+            font-size: $fontsize;
             list-style-position: inside;
         }
     }

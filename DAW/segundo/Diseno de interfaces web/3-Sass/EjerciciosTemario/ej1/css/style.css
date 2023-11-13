@@ -17,6 +17,7 @@
   list-style: none;
   width: 100%;
   border: 2px solid #235e71;
+  font-size: 16px;
 }
 #container > nav > ul > li {
   width: 100%;
@@ -44,5 +45,6 @@
   color: #235e71;
 }
 #container > main > ul {
+  font-size: 16px;
   list-style-position: inside;
 }/*# sourceMappingURL=style.css.map */
