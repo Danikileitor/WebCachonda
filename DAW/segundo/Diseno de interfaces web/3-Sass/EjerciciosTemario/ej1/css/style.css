@@ -16,14 +16,33 @@
   align-items: center;
   list-style: none;
   width: 100%;
-  background-color: lightblue;
+  border: 2px solid #235e71;
+}
+#container > nav > ul > li {
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 2px solid #3a9fc0;
+  color: #235e71;
+  background-color: lightblue;
+  text-align: center;
+}
+#container > nav > ul > li:not(:last-child) {
+  border-right: 2px solid #235e71;
+}
+#container > nav > ul > li:hover {
+  font-weight: bold;
+  color: white;
+  background-color: #235e71;
+  transition: 1s;
 }
 #container > nav > ul > li > a {
+  width: 100%;
+  color: inherit;
   text-decoration: none;
 }
 #container > main > h1 {
-  color: #3a9fc0;
+  color: #235e71;
+}
+#container > main > ul {
+  list-style-position: inside;
 }/*# sourceMappingURL=style.css.map */

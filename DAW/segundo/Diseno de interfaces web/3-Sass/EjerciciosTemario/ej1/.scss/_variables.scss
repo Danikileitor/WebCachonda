@@ -2,4 +2,5 @@
 $fontstack: 'Gotu', sans-serif;
 $fontsize: 16px;
 $primary: lightblue;
-$primary_dark: darken($primary, 30%);
+$primary_dark: darken($primary, 50%);
+$primary_light: lighten($primary, 30%);
