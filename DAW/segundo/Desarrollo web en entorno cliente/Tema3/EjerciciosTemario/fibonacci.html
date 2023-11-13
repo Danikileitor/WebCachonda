@@ -9,11 +9,20 @@
         function fibonacci(n) {
             if (n == 0) return 0;
             if (n == 1) return 1;
-
             return fibonacci(n - 2) + fibonacci(n - 1);
         }
 
-        console.log(fibonacci(8));
+        function sucesionFibonacci(n) {
+            if (n > 40) {
+                document.write("¡Ha introducido un número demasiado grande!");
+            } else {
+                for (let i = 1; i <= n; i++) {
+                    document.write(fibonacci(i) + " ");
+                }
+            }
+        }
+
+        sucesionFibonacci(prompt("Introduce un número para mostrar su sucesión de Fibonacci:", 10));
     </script>
 </head>
 
