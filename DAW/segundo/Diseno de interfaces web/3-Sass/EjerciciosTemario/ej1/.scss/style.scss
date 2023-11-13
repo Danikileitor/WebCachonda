@@ -14,12 +14,17 @@
     >nav {
         >ul {
             display: flex;
+            flex-direction: column;
             justify-content: space-around;
             align-items: center;
             list-style: none;
             width: 100%;
             border: 2px solid $primary_dark;
             font-size: $fontsize;
+
+            @media (min-width: 650px) {
+                flex-direction: row;
+            }
 
             >li {
                 width: 100%;
@@ -30,7 +35,14 @@
                 text-align: center;
 
                 &:not(:last-child) {
-                    border-right: 2px solid $primary_dark;
+                    border-bottom: 2px solid $primary_dark;
+                }
+
+                @media (min-width: 650px) {
+                    &:not(:last-child) {
+                        border-bottom: none;
+                        border-right: 2px solid $primary_dark;
+                    }
                 }
 
                 &:hover {

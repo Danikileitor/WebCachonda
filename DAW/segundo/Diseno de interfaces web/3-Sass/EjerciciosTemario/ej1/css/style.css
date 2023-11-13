@@ -12,12 +12,18 @@
 }
 #container > nav > ul {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   list-style: none;
   width: 100%;
   border: 2px solid #235e71;
   font-size: 16px;
+}
+@media (min-width: 650px) {
+  #container > nav > ul {
+    flex-direction: row;
+  }
 }
 #container > nav > ul > li {
   width: 100%;
@@ -28,7 +34,13 @@
   text-align: center;
 }
 #container > nav > ul > li:not(:last-child) {
-  border-right: 2px solid #235e71;
+  border-bottom: 2px solid #235e71;
+}
+@media (min-width: 650px) {
+  #container > nav > ul > li:not(:last-child) {
+    border-bottom: none;
+    border-right: 2px solid #235e71;
+  }
 }
 #container > nav > ul > li:hover {
   font-weight: bold;
