@@ -27,8 +27,6 @@
 }
 #container > nav > ul > li {
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: #235e71;
   background-color: lightblue;
   text-align: center;
@@ -49,6 +47,9 @@
   transition: 1s;
 }
 #container > nav > ul > li > a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   color: inherit;
   text-decoration: none;

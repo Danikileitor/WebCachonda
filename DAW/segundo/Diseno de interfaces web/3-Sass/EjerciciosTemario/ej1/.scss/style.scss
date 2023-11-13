@@ -28,31 +28,32 @@
 
             >li {
                 width: 100%;
-                padding-top: 10px;
-                padding-bottom: 10px;
                 color: $primary_dark;
                 background-color: $primary;
                 text-align: center;
-
+                
                 &:not(:last-child) {
                     border-bottom: 2px solid $primary_dark;
                 }
-
+                
                 @media (min-width: 650px) {
                     &:not(:last-child) {
                         border-bottom: none;
                         border-right: 2px solid $primary_dark;
                     }
                 }
-
+                
                 &:hover {
                     font-weight: bold;
                     color: $primary_light;
                     background-color: $primary_dark;
                     transition: 1s;
                 }
-
+                
                 >a {
+                    display: block;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     width: 100%;
                     color: inherit;
                     text-decoration: none;
