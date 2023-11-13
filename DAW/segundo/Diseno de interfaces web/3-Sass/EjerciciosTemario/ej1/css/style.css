@@ -1,6 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Gotu&display=swap");
 * {
-  margin: 0;
   padding: 0;
+  box-sizing: border-box;
   line-height: normal;
+  font-family: "Gotu", sans-serif;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+#container > nav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  background-color: lightblue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid #3a9fc0;
+}
+#container > nav > ul > li > a {
+  text-decoration: none;
+}
+#container > main > h1 {
+  color: #3a9fc0;
 }/*# sourceMappingURL=style.css.map */

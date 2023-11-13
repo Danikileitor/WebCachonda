@@ -1,6 +1,39 @@
 @import "variables";
-*{
-    margin: 0;
+
+* {
     padding: 0;
+    box-sizing: border-box;
     line-height: normal;
+    font-family: $fontstack;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 800px;
+
+    >nav {
+        >ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            width: 100%;
+            background-color: $primary;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 2px solid $primary_dark;
+            
+            >li {
+                >a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    >main {
+        >h1 {
+            color: $primary_dark;
+        }
+    }
 }
