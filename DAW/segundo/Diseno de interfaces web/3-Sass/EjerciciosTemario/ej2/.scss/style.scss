@@ -9,11 +9,11 @@
 #container {
     @include layout(darkred);
 
-    @media (min-width=$small) {
+    @media (min-width: $small) {
         @include layout(darkblue, 16px);
     }
 
-    @media (min-width=$medium) {
+    @media (min-width: $medium) {
         @include layout(darkgreen, 20px);
     }
 }
