@@ -1,0 +1,19 @@
+@import "variables";
+@import "funciones";
+
+* {
+    padding: 0;
+    font-family: $fontstack;
+}
+
+#container {
+    @include layout(darkred);
+
+    @media (min-width=$small) {
+        @include layout(darkblue, 16px);
+    }
+
+    @media (min-width=$medium) {
+        @include layout(darkgreen, 20px);
+    }
+}
