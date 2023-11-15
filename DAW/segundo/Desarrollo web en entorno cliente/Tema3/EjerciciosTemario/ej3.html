@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
 </head>
+
 <body>
-    
+    <input type="text" id="texto" placeholder="Introduce un texto"><br>
+    <input type="text" id="buscar" placeholder="Introduce la palabra a buscar"><br>
+    <div id="pos"></div>
+    <button onclick="buscar()">Buscar</button>
 </body>
+<script>
+    function buscar() {
+        var frase = document.getElementById("texto").value;
+        var palabra = document.getElementById("buscar").value;
+        var busqueda = frase.lastIndexOf(palabra);
+        document.getElementById("pos").innerHTML = "Última posición: " + busqueda;
+    }
+</script>
+
 </html>
