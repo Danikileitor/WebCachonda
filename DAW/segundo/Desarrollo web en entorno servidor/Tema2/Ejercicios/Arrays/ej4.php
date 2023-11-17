@@ -10,8 +10,8 @@
 <body>
     <?php
     $colores = [
-        'Colores fuertes' => ['Rojo:FF0000', 'Verde:00FF00', 'Azul:0000FF'],
-        'Colores suaves' => ['Rosa:FE9ABC', 'Amarillo:FDF189', 'Malva:BC8F8F']
+        'Colores fuertes' => ['Rojo' => 'FF0000', 'Verde' => '00FF00', 'Azul' => '0000FF'],
+        'Colores suaves' => ['Rosa' => 'FE9ABC', 'Amarillo' => 'FDF189', 'Malva' => 'BC8F8F']
     ];
 
     print "<p>¿Se encuentra el color 'FF88CC' en el array? ";

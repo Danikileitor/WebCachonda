@@ -10,19 +10,16 @@
 <body>
     <?php
     $colores = [
-        'Colores fuertes' => ['Rojo:FF0000', 'Verde:00FF00', 'Azul:0000FF'],
-        'Colores suaves' => ['Rosa:FE9ABC', 'Amarillo:FDF189', 'Malva:BC8F8F']
+        'Colores fuertes' => ['Rojo' => 'FF0000', 'Verde' => '00FF00', 'Azul' => '0000FF'],
+        'Colores suaves' => ['Rosa' => 'FE9ABC', 'Amarillo' => 'FDF189', 'Malva' => 'BC8F8F']
     ];
 
     print "<h2>Tabla de colores</h2><table border='1'>";
     foreach ($colores as $tipo => $listaColores) {
         print "<tr><th>$tipo</th>";
-
-        foreach ($listaColores as $color) {
-            $fondo = explode(':', $color);
-            print "<td bgcolor='$fondo[1]'>$color</td>";
+        foreach ($listaColores as $color => $hex) {
+            print "<td bgcolor='$hex'>$color:$hex</td>";
         }
-
         print "</tr>";
     }
     print "</table>";
