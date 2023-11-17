@@ -19,8 +19,7 @@
         "Dinamarca" => "Copenhague",
         "Portugal" => "Lisboa",
         "Alemania" => "Berlín",
-        "Finlandia" => "Helsinki",
-        "Países Bajos" => "Ámsterdam"
+        "Finlandia" => "Helsinki"
     );
 
     print "<h2>Lista de países de la Unión Europea y sus capitales:</h2><ul>";
