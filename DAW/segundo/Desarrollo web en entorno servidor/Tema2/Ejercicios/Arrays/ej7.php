@@ -10,12 +10,13 @@
 <body>
     <?php
     //Imprimimos el array para verificar el resultado:
-    print "Números generados: ";
+    print "<p>Números generados: ";
     $aleatorios;
     for ($i = 0; $i < 10; $i++) {
         $aleatorios[$i] = rand(1, 10);
         print $aleatorios[$i] . " ";
     }
+    print "</p>";
 
     $veces2 = 0;
     foreach ($aleatorios as $n) {
