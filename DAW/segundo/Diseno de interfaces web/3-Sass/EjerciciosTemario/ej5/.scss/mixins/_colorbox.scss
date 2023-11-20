@@ -1,9 +1,11 @@
+@use "sass:color";
+
 @mixin color-box($color...) {
     @each $key, $value in $color {
         &-#{$key} {
             color: $value;
             background-color: rgba($value, 0.15);
-            border: 1px solid darken($value, 10%);
+            border: 1px solid color.adjust($value, $lightness: -10%);
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 0.25rem;
