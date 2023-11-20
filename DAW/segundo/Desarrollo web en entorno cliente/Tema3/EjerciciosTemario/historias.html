@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historias de Leperos y Murcianos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        div {
+            background-color: whitesmoke;
+            margin: 20px auto;
+            width: fit-content;
+            padding: 20px;
+            border: 5px solid grey;
+        }
+
+        #texto {
+            width: 40%;
+            background-color: #FFC126;
+            color: black;
+        }
+    </style>
 </head>
+
 <body>
-    <label for="nombre"><strong>Nombre del Protagonista:</strong></label><br>
-    <input type="text" id="nombre" required>
-    <br><br>
-    <label for="lepero"><strong>LEPERO:</strong></label>
-    <input type="radio" name="localidad" value="lepero" id="lepero">
-    <label for="lepero"><strong>MURCIANO:</strong></label>
-    <input type="radio" name="localidad" value="murciano" id="murciano">
-    <br><br>
-    <input type="button" id="btnSubmit" value="Generar Historia" />
-    <p id="texto" style="width: 40%; background-color: #FFC126; color: black;"></p>
+    <div>
+        <label for="nombre"><strong>Nombre del Protagonista:</strong></label><br>
+        <input type="text" id="nombre" required>
+        <br><br>
+        <label for="lepero"><strong>LEPERO:</strong></label>
+        <input type="radio" name="localidad" value="lepero" id="lepero">
+        <label for="murciano"><strong>MURCIANO:</strong></label>
+        <input type="radio" name="localidad" value="murciano" id="murciano">
+        <br><br>
+        <input type="button" id="btnSubmit" value="Generar Historia" />
+        <p id="texto"></p>
+    </div>
     <script src="historias.js"></script>
 </body>
+
 </html>
