@@ -154,4 +154,293 @@ p {
 }
 .border-radius-100 {
   border-radius: 1rem;
+}
+
+.box-primary {
+  color: #009cab;
+  background-color: rgba(0, 156, 171, 0.15);
+  border: 1px solid #006d78;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.box-danger {
+  color: #f04c25;
+  background-color: rgba(240, 76, 37, 0.15);
+  border: 1px solid #d3340f;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.box-success {
+  color: #8dab3d;
+  background-color: rgba(141, 171, 61, 0.15);
+  border: 1px solid #6e8530;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.box-info {
+  color: #f7ae19;
+  background-color: rgba(247, 174, 25, 0.15);
+  border: 1px solid #d69207;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.box-black {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.box-gray {
+  color: #a4a4a4;
+  background-color: rgba(164, 164, 164, 0.15);
+  border: 1px solid #8b8b8b;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.box-white {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+
+.bg-primary-0 {
+  background-color: rgba(0, 156, 171, 0);
+}
+.bg-danger-0 {
+  background-color: rgba(240, 76, 37, 0);
+}
+.bg-success-0 {
+  background-color: rgba(141, 171, 61, 0);
+}
+.bg-info-0 {
+  background-color: rgba(247, 174, 25, 0);
+}
+.bg-black-0 {
+  background-color: rgba(0, 0, 0, 0);
+}
+.bg-gray-0 {
+  background-color: rgba(164, 164, 164, 0);
+}
+.bg-white-0 {
+  background-color: rgba(255, 255, 255, 0);
+}
+.bg-primary-10 {
+  background-color: rgba(0, 156, 171, 0.1);
+}
+.bg-danger-10 {
+  background-color: rgba(240, 76, 37, 0.1);
+}
+.bg-success-10 {
+  background-color: rgba(141, 171, 61, 0.1);
+}
+.bg-info-10 {
+  background-color: rgba(247, 174, 25, 0.1);
+}
+.bg-black-10 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bg-gray-10 {
+  background-color: rgba(164, 164, 164, 0.1);
+}
+.bg-white-10 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.bg-primary-20 {
+  background-color: rgba(0, 156, 171, 0.2);
+}
+.bg-danger-20 {
+  background-color: rgba(240, 76, 37, 0.2);
+}
+.bg-success-20 {
+  background-color: rgba(141, 171, 61, 0.2);
+}
+.bg-info-20 {
+  background-color: rgba(247, 174, 25, 0.2);
+}
+.bg-black-20 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.bg-gray-20 {
+  background-color: rgba(164, 164, 164, 0.2);
+}
+.bg-white-20 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bg-primary-30 {
+  background-color: rgba(0, 156, 171, 0.3);
+}
+.bg-danger-30 {
+  background-color: rgba(240, 76, 37, 0.3);
+}
+.bg-success-30 {
+  background-color: rgba(141, 171, 61, 0.3);
+}
+.bg-info-30 {
+  background-color: rgba(247, 174, 25, 0.3);
+}
+.bg-black-30 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bg-gray-30 {
+  background-color: rgba(164, 164, 164, 0.3);
+}
+.bg-white-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.bg-primary-40 {
+  background-color: rgba(0, 156, 171, 0.4);
+}
+.bg-danger-40 {
+  background-color: rgba(240, 76, 37, 0.4);
+}
+.bg-success-40 {
+  background-color: rgba(141, 171, 61, 0.4);
+}
+.bg-info-40 {
+  background-color: rgba(247, 174, 25, 0.4);
+}
+.bg-black-40 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.bg-gray-40 {
+  background-color: rgba(164, 164, 164, 0.4);
+}
+.bg-white-40 {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.bg-primary-50 {
+  background-color: rgba(0, 156, 171, 0.5);
+}
+.bg-danger-50 {
+  background-color: rgba(240, 76, 37, 0.5);
+}
+.bg-success-50 {
+  background-color: rgba(141, 171, 61, 0.5);
+}
+.bg-info-50 {
+  background-color: rgba(247, 174, 25, 0.5);
+}
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-gray-50 {
+  background-color: rgba(164, 164, 164, 0.5);
+}
+.bg-white-50 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.bg-primary-60 {
+  background-color: rgba(0, 156, 171, 0.6);
+}
+.bg-danger-60 {
+  background-color: rgba(240, 76, 37, 0.6);
+}
+.bg-success-60 {
+  background-color: rgba(141, 171, 61, 0.6);
+}
+.bg-info-60 {
+  background-color: rgba(247, 174, 25, 0.6);
+}
+.bg-black-60 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.bg-gray-60 {
+  background-color: rgba(164, 164, 164, 0.6);
+}
+.bg-white-60 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.bg-primary-70 {
+  background-color: rgba(0, 156, 171, 0.7);
+}
+.bg-danger-70 {
+  background-color: rgba(240, 76, 37, 0.7);
+}
+.bg-success-70 {
+  background-color: rgba(141, 171, 61, 0.7);
+}
+.bg-info-70 {
+  background-color: rgba(247, 174, 25, 0.7);
+}
+.bg-black-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.bg-gray-70 {
+  background-color: rgba(164, 164, 164, 0.7);
+}
+.bg-white-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.bg-primary-80 {
+  background-color: rgba(0, 156, 171, 0.8);
+}
+.bg-danger-80 {
+  background-color: rgba(240, 76, 37, 0.8);
+}
+.bg-success-80 {
+  background-color: rgba(141, 171, 61, 0.8);
+}
+.bg-info-80 {
+  background-color: rgba(247, 174, 25, 0.8);
+}
+.bg-black-80 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.bg-gray-80 {
+  background-color: rgba(164, 164, 164, 0.8);
+}
+.bg-white-80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.bg-primary-90 {
+  background-color: rgba(0, 156, 171, 0.9);
+}
+.bg-danger-90 {
+  background-color: rgba(240, 76, 37, 0.9);
+}
+.bg-success-90 {
+  background-color: rgba(141, 171, 61, 0.9);
+}
+.bg-info-90 {
+  background-color: rgba(247, 174, 25, 0.9);
+}
+.bg-black-90 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.bg-gray-90 {
+  background-color: rgba(164, 164, 164, 0.9);
+}
+.bg-white-90 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.bg-primary-100 {
+  background-color: #009cab;
+}
+.bg-danger-100 {
+  background-color: #f04c25;
+}
+.bg-success-100 {
+  background-color: #8dab3d;
+}
+.bg-info-100 {
+  background-color: #f7ae19;
+}
+.bg-black-100 {
+  background-color: black;
+}
+.bg-gray-100 {
+  background-color: #a4a4a4;
+}
+.bg-white-100 {
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

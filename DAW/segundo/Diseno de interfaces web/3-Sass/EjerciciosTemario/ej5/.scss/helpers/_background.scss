@@ -1,0 +1,9 @@
+.bg {
+    @for $i from 0 through 10 {
+        @each $key, $value in $color-map {
+            &-#{$key}-#{$i*10} {
+                background-color: rgba($value, $i/10);
+            }
+        }
+    }
+}
