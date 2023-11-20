@@ -1,4 +1,4 @@
-@mixin color-box($color) {
+@mixin color-box($color...) {
     @each $key, $value in $color-map {
         &-#{$key} {
             color: $value;
