@@ -1,12 +1,10 @@
-.box-primary {
-    @each $key, $value in $color-map {
-        &-#{$key} {
-            color: $value;
-            background-color: rgba($value, 0.15);
-            border: 1px solid darken($value, 10%);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 0.25rem;
-        }
+@each $key, $value in $color-map {
+    &-#{$key} {
+        color: $value;
+        background-color: rgba($value, 0.15);
+        border: 1px solid darken($value, 10%);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
     }
 }
