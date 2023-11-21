@@ -37,21 +37,21 @@ function clasificar() {
     var t4lados = clasificarLados(t4l1, t4l2, t4l3);//Obtenemos su clasificación según sus lados
 
     //Imprimimos resultados:
-    document.getElementById("primero").innerHTML = "El primer tríangúlo es: " + t1lados;
-    document.getElementById("segundo").innerHTML = "El segundo tríangúlo es: " + t2lados;
-    document.getElementById("tercero").innerHTML = "El tercer tríangúlo es: " + t3lados;
-    document.getElementById("cuarto").innerHTML = "El cuarto tríangúlo es: " + t4lados;
+    document.getElementById("primero").innerHTML = "El primer triángulo es: " + t1lados;
+    document.getElementById("segundo").innerHTML = "El segundo triángulo es: " + t2lados;
+    document.getElementById("tercero").innerHTML = "El tercer triángulo es: " + t3lados;
+    document.getElementById("cuarto").innerHTML = "El cuarto triángulo es: " + t4lados;
     document.getElementById("tipos").innerHTML = "Cantidad de tríangulos equiláteros: " + equilatero;
     document.getElementById("tipos").innerHTML += "<br>Cantidad de tríangulos isósceles: " + isosceles;
     document.getElementById("tipos").innerHTML += "<br>Cantidad de tríangulos escalenos: " + escaleno;
 
     //Calculamos e imprimimos el tipo de triángulo de menor cantidad:
     if (equilatero < isosceles && equilatero < escaleno) {
-        document.getElementById("menor").innerHTML = "El tipo tríangúlo de menor cantidad es: Equilátero";
+        document.getElementById("menor").innerHTML = "El tipo triángulo de menor cantidad es: Equilátero";
     } else if (isosceles < escaleno) {
-        document.getElementById("menor").innerHTML = "El tipo tríangúlo de menor cantidad es: Isósceles";
+        document.getElementById("menor").innerHTML = "El tipo triángulo de menor cantidad es: Isósceles";
     } else if (escaleno < isosceles) {
-        document.getElementById("menor").innerHTML = "El tipo tríangúlo de menor cantidad es: Escaleno";
+        document.getElementById("menor").innerHTML = "El tipo triángulo de menor cantidad es: Escaleno";
     } else {
         document.getElementById("menor").innerHTML = "¡Ningún tipo de triángulo es menor que los demás!";
     }
