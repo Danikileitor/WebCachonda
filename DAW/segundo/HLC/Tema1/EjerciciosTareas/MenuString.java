@@ -43,7 +43,7 @@ public class MenuString {
 						break;
 				}
 			}
-		} while (menu != "salir");
+		} while (!menu.equals("salir"));
 	}
 
 	public static void opcionesMenu() {
