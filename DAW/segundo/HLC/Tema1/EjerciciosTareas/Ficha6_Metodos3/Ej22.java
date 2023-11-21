@@ -1,4 +1,3 @@
-//Daniel Marcos Guerra Gómez
 import java.util.Scanner;
 
 public class Ej22 {
