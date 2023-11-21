@@ -32,7 +32,7 @@ public class Ej22 {
 						break;
 				}
 			}
-		} while (menu != "salir");
+		} while (!menu.equals("salir"));
 	}
 
 	public static void opcionesMenu() {
