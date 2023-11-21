@@ -1,0 +1,53 @@
+<!-- Autor: Daniel Marcos Guerra Gómez -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triángulo</title>
+</head>
+<body>
+    <h1>Clasificador de triángulos</h1>
+    <h2>Introduce los lados de 4 tríangulos diferentes</h2>
+    <table>
+        <tr>
+            <th colspan="4">(Introduce solamente valores positivos)</th>
+        </tr>
+        <tr>
+            <td><label>Primero:</label></td>
+            <td><input id="uno1" type="number" placeholder="Lado 1"></td>
+            <td><input id="uno2" type="number" placeholder="Lado 2"></td>
+            <td><input id="uno3" type="number" placeholder="Lado 3"></td>
+        </tr>
+        <tr>
+            <td><label>Segundo:</label></td>
+            <td><input id="dos1" type="number" placeholder="Lado 1"></td>
+            <td><input id="dos2" type="number" placeholder="Lado 2"></td>
+            <td><input id="dos3" type="number" placeholder="Lado 3"></td>
+        </tr>
+        <tr>
+            <td><label>Tercero:</label></td>
+            <td><input id="tres1" type="number" placeholder="Lado 1"></td>
+            <td><input id="tres2" type="number" placeholder="Lado 2"></td>
+            <td><input id="tres3" type="number" placeholder="Lado 3"></td>
+        </tr>
+        <tr>
+            <td><label>Cuarto:</label></td>
+            <td><input id="cuatro1" type="number" placeholder="Lado 1"></td>
+            <td><input id="cuatro2" type="number" placeholder="Lado 2"></td>
+            <td><input id="cuatro3" type="number" placeholder="Lado 3"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><button onclick="clasificar()" style="width: 100%;">Clasificar</button></td>
+        </tr>
+    </table>
+    <br>
+    <div id="primero"></div>
+    <div id="segundo"></div>
+    <div id="tercero"></div>
+    <div id="cuarto"></div>
+    <div id="tipos"></div>
+    <div id="menor"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>
