@@ -37,10 +37,10 @@
         <span>Introduzca la cadena a buscar: </span><input type="text" name="busqueda" value="valor por defecto">
         <hr>
         <h3>RADIO</h3>
-        <span>Sexo: </span><input type="radio" name="sexo" value="mujer" id="mujer"><label for="mujer">Mujer</label> <input type="radio" name="sexo" value="hombre" id="hombre"><label for="hombre">Hombre</label>
+        <span>Sexo: </span><input type="radio" name="sexo" value="mujer" id="mujer" checked><label for="mujer">Mujer</label> <input type="radio" name="sexo" value="hombre" id="hombre"><label for="hombre">Hombre</label>
         <hr>
         <h3>CHECKBOX</h3>
-        <span>Extras: </span><input type="checkbox" name="extras[]" value="garaje" id="garaje"><label for="garaje">Garaje</label> <input type="checkbox" name="extras[]" value="piscina" id="piscina"><label for="piscina">Piscina</label> <input type="checkbox" name="extras[]" value="jardin" id="jardin"><label for="jardin">Jardín</label>
+        <span>Extras: </span><input type="checkbox" name="extras[]" value="garaje" id="garaje" checked><label for="garaje">Garaje</label> <input type="checkbox" name="extras[]" value="piscina" id="piscina"><label for="piscina">Piscina</label> <input type="checkbox" name="extras[]" value="jardin" id="jardin"><label for="jardin">Jardín</label>
         <hr>
         <h3>FILE</h3>
         <span>Fichero: </span><input type="file" name="fichero">
