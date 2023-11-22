@@ -32,7 +32,7 @@
 <body>
     <h1>Formulario simple</h1>
     <h2>Búsqueda de canciones</h2>
-    <form>
+    <form name="formulario" action="./ejercicio1-resultados.php" method="post">
         <table>
             <tr>
                 <td>Texto a buscar:</td>
