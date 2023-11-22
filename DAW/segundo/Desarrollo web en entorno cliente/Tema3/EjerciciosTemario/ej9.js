@@ -16,4 +16,5 @@ function buscar() {
     const busqueda = document.getElementById("busqueda").value;
     const imprimir = document.getElementById("resultado");
     var resultado = "";
+    imprimir.innerHTML = resultado;
 }
