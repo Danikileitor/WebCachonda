@@ -69,6 +69,8 @@
         <hr>
         <h2>Elemento TEXTAREA</h2>
         <span>Comentario: </span><textarea name="comentario" cols="50" rows="4">Este libro me parece ...</textarea>
+        <hr>
+        <input type="submit" name="enviar" value="enviar datos"> <input type="reset" name="borrar" value="borrar datos">
     </form>
 </body>
 
