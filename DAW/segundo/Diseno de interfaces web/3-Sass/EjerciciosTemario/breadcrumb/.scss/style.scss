@@ -1,0 +1,12 @@
+$breadcrumb-bg: lightgray;
+$breadcrumb-border-radius: 10px;
+$breadcrumb-divider: quote("\00B7");
+$breadcrumb-padding-y: 10px;
+$breadcrumb-padding-x: 10px;
+$breadcrumb-item-padding-x: 10px;
+@import "bootstrap/bootstrap.scss";
+
+header {
+    margin: 20px auto;
+    width: fit-content;
+}
