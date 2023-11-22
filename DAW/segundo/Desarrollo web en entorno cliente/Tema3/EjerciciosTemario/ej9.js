@@ -13,5 +13,6 @@ var arraygrande = ["28924; Estepona",
     "28006;Alcobendas"];
 
 function buscar() {
-    //a buscar
+    var busqueda = document.getElementById("busqueda").value;
+    var resultado = document.getElementById("resultado");
 }
