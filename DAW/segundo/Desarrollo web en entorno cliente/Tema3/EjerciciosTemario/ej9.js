@@ -13,8 +13,13 @@ var arraygrande = ["28924; Estepona",
     "28006;Alcobendas"];
 
 function buscar() {
-    const busqueda = document.getElementById("busqueda").value;
-    const imprimir = document.getElementById("resultado");
-    var resultado = "";
-    imprimir.innerHTML = resultado;
+    const busqueda = document.getElementById("busqueda").value.toLowerCase();
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+    for (let i = 0; i < arraygrande.length; i++) {
+        if (arraygrande[i].toLowerCase().includes(busqueda)) {
+            var auxiliar = arraygrande[i].split(';');
+            resultado.innerHTML += "CP: " + auxiliar[0] + ", Ciudad: " + auxiliar[1] + "<br>";
+        }
+    }
 }

@@ -3,7 +3,7 @@ console.log(perrillos.toString());//Ambos Console.log() estaban mal, tienen que 
 var ciudades = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
 perrillos = perrillos.concat(ciudades.split(','));//Unimos los nombres de los perrillos y las ciudades
 for (let i = perrillos.length - 1; i >= 0; i--) {//Eliminamos los elementos que contengan C o c:
-    if (perrillos[i].toLocaleLowerCase().includes('c')) {
+    if (perrillos[i].toLowerCase().includes('c')) {
         perrillos.splice(i, 1);
     }
 }
