@@ -48,7 +48,7 @@
             echo "<li>Título: " . $_REQUEST["titulo"] . "</li>";
             echo "<li>Texto: " . $_REQUEST["texto"] . "</li>";
             echo "<li>Categoría: " . $_REQUEST["categoria"] . "</li>";
-            echo "<li>Imagen: " . $_REQUEST["imagen"]["name"] . "</li>";
+            echo "<li>Imagen: " . $_REQUEST['imagen']['name'] . "</li>";
             echo "</ul><p>[ <a href='./ejercicio4.php'>Insertar otra noticia</a> ]</p>";
         }
     } else {
