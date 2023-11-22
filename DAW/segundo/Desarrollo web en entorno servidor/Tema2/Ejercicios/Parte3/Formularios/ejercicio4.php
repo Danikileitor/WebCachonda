@@ -48,7 +48,21 @@
             echo "<li>Título: " . $_REQUEST["titulo"] . "</li>";
             echo "<li>Texto: " . $_REQUEST["texto"] . "</li>";
             echo "<li>Categoría: " . $_REQUEST["categoria"] . "</li>";
-            echo "<li>Imagen: " . $_REQUEST['imagen']['name'] . "</li>";
+            if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
+                $directorio = "img/";
+                $nombre = $_FILES['imagen']['name'];
+                if (is_dir($directorio)) {
+                    $idUnico = time();
+                    $nombreFichero = $idUnico . "-" . $nombre;
+                    $nombreCompleto = $directorio . $nombreFichero;
+                    move_uploaded_file($_FILES['imagen']['tmp_name'], $nombreCompleto);
+                    echo "<li>Imagen: <a href='" . $nombreCompleto . "'>" . $nombre . "</a></li>";
+                } else {
+                    echo "<li>Directorio no válido</li>";
+                }
+            } else {
+                echo "<li>Imagen: ¡No se ha podido subir el fichero!</li>";
+            }
             echo "</ul><p>[ <a href='./ejercicio4.php'>Insertar otra noticia</a> ]</p>";
         }
     } else {
