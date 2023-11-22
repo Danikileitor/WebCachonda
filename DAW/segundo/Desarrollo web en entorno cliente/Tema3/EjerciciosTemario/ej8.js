@@ -1,5 +1,5 @@
 var perrillos = ["Rocket", "Flash", "Bella", "Slugger"];
-Console.log(perrillos.toString());
+console.log(perrillos.toString());//Ambos Console.log() esta mal, tiene que estar en mínuscula
 var ciudades = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
 perrillos = ciudades.split(',');
-Console.log(perrillos.toString());
+console.log(perrillos.toString());
