@@ -32,7 +32,7 @@
 <body>
     <h1>Elementos de entrada</h1>
     <h2>Elementos tipo INPUT</h2>
-    <form name="formulario" action="./ejercicio1-resultados.php" method="post" enctype="multipart/form-data">
+    <form name="formulario" action="./ejercicio2-resultados.php" method="post" enctype="multipart/form-data">
         <h3>TEXT</h3>
         <span>Introduzca la cadena a buscar: </span><input type="text" name="busqueda" value="valor por defecto">
         <hr>
