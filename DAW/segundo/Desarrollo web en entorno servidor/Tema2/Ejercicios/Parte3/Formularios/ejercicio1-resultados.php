@@ -21,7 +21,9 @@
     <p>Estos son los datos introducidos:</p>
     <ul>
         <?php
-        //el programita
+        echo "<li>Texto de búsqueda: ".$_POST["busqueda"]."</li>";
+        echo "<li>Buscar en: ".$_POST["buscaren"]."</li>";
+        echo "<li>Género: ".$_POST["genero"]."</li>";
         ?>
     </ul>
     <p>[ <a href="./ejercicio1.php">Nueva búsqueda</a> ]</p>
