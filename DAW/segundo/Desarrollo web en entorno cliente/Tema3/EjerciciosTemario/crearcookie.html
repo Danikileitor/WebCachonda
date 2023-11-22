@@ -15,11 +15,11 @@
             visitas = parseInt(visitas) + 1;
             console.log(visitas);
         }
-        document.cookie = "visitas=" + visitas + "; expires=Sat, 6 Aug 2024 12:15:00 GMT";// Cookie de visitas con fecha de expiración
+        document.cookie = "visitas=" + visitas + ";expires=Sat, 6 Aug 2024 12:15:00 GMT;path=/";// Cookie de visitas con fecha de expiración
 
         function crearCookie() {
             var usuarioCookie = "Daniel Marcos Guerra Gómez";// Variable para indicar el valor de la cookie
-            document.cookie = "usuario=" + encodeURIComponent(usuarioCookie) + "; expires=Sat, 6 Aug 2024 12:15:00 GMT";// Codificamos y creamos la cookie con fecha de expiración
+            document.cookie = "usuario=" + encodeURIComponent(usuarioCookie) + ";expires=Sat, 6 Aug 2024 12:15:00 GMT;path=/";// Codificamos y creamos la cookie con fecha de expiración
         }
 
         function leerCookie() {
@@ -27,7 +27,7 @@
         }
 
         function borrarCookie() {
-            document.cookie = "usuario=; expires Sat, 6 Aug 2020 12:15:00 GMT";// Para borrar la cookie se pone una fecha de expiración ya pasada
+            document.cookie = "usuario=; expires Sat, 6 Aug 2020 12:15:00 GMT;path=/";// Para borrar la cookie se pone una fecha de expiración ya pasada
         }
     </script>
 </head>
