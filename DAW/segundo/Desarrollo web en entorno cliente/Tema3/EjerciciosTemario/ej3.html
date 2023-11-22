@@ -12,14 +12,7 @@
     <input type="text" id="buscar" placeholder="Introduce la palabra a buscar"><br>
     <div id="pos"></div>
     <button onclick="buscar()">Buscar</button>
+    <script src="ej3.js"></script>
 </body>
-<script>
-    function buscar() {
-        var frase = document.getElementById("texto").value;
-        var palabra = document.getElementById("buscar").value;
-        var busqueda = frase.lastIndexOf(palabra);
-        document.getElementById("pos").innerHTML = "Última posición: " + busqueda;
-    }
-</script>
 
 </html>
