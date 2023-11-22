@@ -32,42 +32,53 @@
 <body>
     <h1>Formulario simple</h1>
     <h2>Búsqueda de canciones</h2>
-    <form name="formulario" action="./ejercicio1-resultados.php" method="post">
-        <table>
-            <tr>
-                <td>Texto a buscar:</td>
-                <td><input type="text" name="busqueda" required></td>
-            </tr>
-            <tr>
-                <td>Buscar en:</td>
-                <td>
-                    <input type="radio" name="buscaren" value="titulos" id="titulos"><label for="titulos">Títulos de canción</label>
-                    <input type="radio" name="buscaren" value="album" id="album"><label for="album">Nombres de álbum</label>
-                    <input type="radio" name="buscaren" value="ambos" id="ambos" checked><label for="ambos">Ambos campos</label>
-                </td>
-            </tr>
-            <tr>
-                <td>Género musical:</td>
-                <td>
-                    <select name="genero">
-                        <option value="todos" selected>Todos</option>
-                        <option value="acustica">Acústica</option>
-                        <option value="banda">Banda Sonora</option>
-                        <option value="acustica">Blues</option>
-                        <option value="electronica">Electrónica</option>
-                        <option value="folk">Folk</option>
-                        <option value="jazz">Jazz</option>
-                        <option value="newage">New Age</option>
-                        <option value="pop">Pop</option>
-                        <option value="rock">Rock</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="buscar" value="Buscar"></td>
-            </tr>
-        </table>
-    </form>
+    <?php
+    if (isset($_REQUEST['buscar'])) {
+        echo "<ul><li>Texto de búsqueda: " . $_POST["busqueda"] . "</li>";
+        echo "<li>Buscar en: " . $_POST["buscaren"] . "</li>";
+        echo "<li>Género: " . $_POST["genero"] . "</li></ul>";
+        echo "<p>[ <a href='./ejercicio3.php'>Nueva búsqueda</a> ]</p>";
+    } else {
+    ?>
+        <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <table>
+                <tr>
+                    <td>Texto a buscar:</td>
+                    <td><input type="text" name="busqueda" required></td>
+                </tr>
+                <tr>
+                    <td>Buscar en:</td>
+                    <td>
+                        <input type="radio" name="buscaren" value="titulos" id="titulos"><label for="titulos">Títulos de canción</label>
+                        <input type="radio" name="buscaren" value="album" id="album"><label for="album">Nombres de álbum</label>
+                        <input type="radio" name="buscaren" value="ambos" id="ambos" checked><label for="ambos">Ambos campos</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Género musical:</td>
+                    <td>
+                        <select name="genero">
+                            <option value="todos" selected>Todos</option>
+                            <option value="acustica">Acústica</option>
+                            <option value="banda">Banda Sonora</option>
+                            <option value="acustica">Blues</option>
+                            <option value="electronica">Electrónica</option>
+                            <option value="folk">Folk</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="newage">New Age</option>
+                            <option value="pop">Pop</option>
+                            <option value="rock">Rock</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="buscar" value="Buscar"></td>
+                </tr>
+            </table>
+        </form>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
