@@ -17,7 +17,7 @@ function combinaciones() {
 }
 
 function calcularCombinaciones(parejas, trios, simples, completas, pokers) {
-    for (let i = 0; index <= 9999; i++) {
+    for (let i = 0; i <= 9999; i++) {
         repeticiones(i, parejas, trios, pokers);
         escaleras(i, simples, completas);
     }
