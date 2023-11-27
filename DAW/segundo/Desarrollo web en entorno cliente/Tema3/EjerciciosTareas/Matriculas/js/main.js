@@ -8,11 +8,11 @@ function combinaciones() {
     calcularCombinaciones(parejas, trios, simples, completas, pokers);
     div.innerHTML = "<h2>Combinaciones posibles</h2>";
     div.innerHTML += "<ul>";
-    div.innerHTML += "<li>Pareja: </li>"
-    div.innerHTML += "<li>Trío: </li>"
-    div.innerHTML += "<li>Escalera Simple: </li>"
-    div.innerHTML += "<li>Escalera Completa: </li>"
-    div.innerHTML += "<li>Poker: </li>"
+    div.innerHTML += "<li>Pareja: " + parejas + "</li>"
+    div.innerHTML += "<li>Trío: " + trios + "</li>"
+    div.innerHTML += "<li>Escalera Simple: " + simples + "</li>"
+    div.innerHTML += "<li>Escalera Completa: " + completas + "</li>"
+    div.innerHTML += "<li>Poker: " + pokers + "</li>"
     div.innerHTML += "</ul>";
 }
 
