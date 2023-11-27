@@ -3,6 +3,8 @@
 
 // 2. Include any default variable overrides here
 
+$btn-border-radius: 20px;
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../../../0-Modulos/bootstrap/scss/variables";
 @import "../../../../0-Modulos/bootstrap/scss/variables-dark";
@@ -14,10 +16,21 @@
 @import "../../../../0-Modulos/bootstrap/scss/reboot";
 @import "../../../../0-Modulos/bootstrap/scss/type";
 @import "../../../../0-Modulos/bootstrap/scss/images";
+@import "../../../../0-Modulos/bootstrap/scss/utilities";
+@import "../../../../0-Modulos/bootstrap/scss/utilities/api";
+@import "../../../../0-Modulos/bootstrap/scss/helpers";
 @import "../../../../0-Modulos/bootstrap/scss/containers";
 @import "../../../../0-Modulos/bootstrap/scss/grid";
-@import "../../../../0-Modulos/bootstrap/scss/utilities";
 @import "../../../../0-Modulos/bootstrap/scss/card";
 @import "../../../../0-Modulos/bootstrap/scss/buttons";
 
 // 5. Add additional custom code here
+
+ul li:before {
+    content: '✓';
+    padding-right: 0.1rem;
+}
+
+.btn {
+    display: block;
+}
