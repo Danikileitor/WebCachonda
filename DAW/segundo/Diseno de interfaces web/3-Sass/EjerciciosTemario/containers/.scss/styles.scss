@@ -5,14 +5,17 @@
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../../../0-Modulos/bootstrap/scss/variables";
+@import "../../../../0-Modulos/bootstrap/scss/variables-dark";
 @import "../../../../0-Modulos/bootstrap/scss/mixins";
 
 // 4. Include any optional Bootstrap components as you like
+@import "../../../../0-Modulos/bootstrap/scss/maps";
 @import "../../../../0-Modulos/bootstrap/scss/root";
 @import "../../../../0-Modulos/bootstrap/scss/reboot";
 @import "../../../../0-Modulos/bootstrap/scss/type";
 @import "../../../../0-Modulos/bootstrap/scss/images";
 @import "../../../../0-Modulos/bootstrap/scss/containers";
 @import "../../../../0-Modulos/bootstrap/scss/grid";
+@import "../../../../0-Modulos/bootstrap/scss/utilities";
 
 // 5. Add additional custom code here
