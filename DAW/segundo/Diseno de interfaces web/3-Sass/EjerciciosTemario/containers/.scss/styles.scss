@@ -1,0 +1,18 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../../0-Modulos/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../../0-Modulos/bootstrap/scss/variables";
+@import "../../../../0-Modulos/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../../../../0-Modulos/bootstrap/scss/root";
+@import "../../../../0-Modulos/bootstrap/scss/reboot";
+@import "../../../../0-Modulos/bootstrap/scss/type";
+@import "../../../../0-Modulos/bootstrap/scss/images";
+@import "../../../../0-Modulos/bootstrap/scss/containers";
+@import "../../../../0-Modulos/bootstrap/scss/grid";
+
+// 5. Add additional custom code here
