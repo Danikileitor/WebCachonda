@@ -20,32 +20,39 @@ function combinaciones() {
 
 function calcularCombinaciones() {
     for (let i = 0; i <= 9999; i++) {
-        repeticiones(i,);
+        contarDoblesParejas(i);
+        contarTrios(i);
+        contarPokers(i);
         escaleras(i);
     }
 }
 
-function repeticiones(n) {
+function contarDoblesParejas(n) {
     var num = n.toString().padStart(4, '0');
     var repeticiones = 0;
-    for (let i = 0; i < num.length; i++) {
-        for (let j = i + 1; j < num.length + 1; j++) {
-            repeticiones += num.charAt(i) == num.charAt(j) ? 1 : 0;
+    for (let i = 0; i < num.length - 1; i++) {
+        if (num.charAt(i) == num.charAt(i + 1)) {
+            repeticiones++;
         }
     }
-    switch (repeticiones) {
-        case 1:
-            doblesparejas++;
-            break;
-        case 2:
+    doblesparejas += repeticiones == 2 ? 1 : 0;
+}
+
+function contarTrios(n) {
+    var num = n.toString().padStart(4, '0');
+    for (let i = 0; i < num.length - 2; i++) {
+        if (num.charAt(i) == num.charAt(i + 1) && num.charAt(i) == num.charAt(i + 2)) {
             trios++;
-            break;
-        case 3:
-            pokers++;
-            break;
-        default:
-            break;
-    };
+            break;//Si encuentra un trío dejamos de contar para que no haya duplicados con los pokers
+        }
+    }
+}
+
+function contarPokers(n) {
+    var num = n.toString().padStart(4, '0');
+    if (num.charAt(0) == num.charAt(1) && num.charAt(0) == num.charAt(2) && num.charAt(0) == num.charAt(3)) {
+        pokers++;
+    }
 }
 
 function escaleras(n) {
