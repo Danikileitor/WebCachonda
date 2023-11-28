@@ -28,17 +28,17 @@ function plantarArbol($altura)
 
 function dibujarArbol($arbol)
 {
-    echo "<table>";
+    echo "<table class='margin: 0 auto;'>";
     foreach ($arbol as $fila) {
         echo "<tr>";
         foreach ($fila as $columna) {
             switch ($columna) {
                 case '*':
-                    echo "<td class='nieve'>$columna</td>";
+                    echo "<td style='background-color: #00FFFF; color: white; width: 10px; text-align: center;'>$columna</td>";
                     break;
 
                 case '\\':
-                    echo "<td class='arbol'>$columna</td>";
+                    echo "<td style='background-color: #00FFFF; color: green; width: 10px; text-align: center;'>$columna</td>";
                     break;
             }
         }
@@ -60,25 +60,6 @@ function dibujarArbol($arbol)
             background-color: whitesmoke;
             margin: 20px auto;
             width: fit-content;
-        }
-
-        table {
-            margin: 0 auto;
-        }
-
-        td {
-            width: 10px;
-            text-align: center;
-        }
-
-        .nieve {
-            background-color: #00FFFF;
-            color: white;
-        }
-
-        .arbol {
-            background-color: #00FFFF;
-            color: green;
         }
     </style>
 </head>
