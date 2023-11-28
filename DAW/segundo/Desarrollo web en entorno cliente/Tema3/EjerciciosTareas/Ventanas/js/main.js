@@ -10,3 +10,7 @@ function moverVentana() {
     var y = document.getElementById("y").value;
     ventana.moveTo(x, y);
 }
+
+function colorVentana() {
+    ventana.document.body.style.backgroundColor = document.getElementById("color").value;
+}
