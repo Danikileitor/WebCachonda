@@ -86,8 +86,7 @@ function esEscaleraCompleta(n) {
 
 function jugar() {
     var matricula = document.getElementById("matricula").value;
-    var resultado = comprobarMatricula(matricula);
-    document.getElementById("resultado").innerHTML = resultado;
+    document.getElementById("resultado").innerHTML = "La matrícula " + matricula + " es: " + comprobarMatricula(matricula);
 }
 
 function comprobarMatricula(n) {
