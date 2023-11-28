@@ -13,9 +13,9 @@
     <button onClick="abrirVentana();">Abrir ventana</button>
     <ol>
         <li>Poner botón de cierre de la ventana secundaria en la ventana principal.</li>
-        <p><button onclick="ventana.close();">Cerrar ventana</button></p>
+        <p><button onclick="ventana.close()">Cerrar ventana</button></p>
         <li>Pedir las coordenadas de la ventana secundaria en la ventana principal y poner un botón para aplicarlas.</li>
-        <p><label for="x">Coordenada X:</label> <input type="number" id="x" value="500"> <label for="y">Coordenada Y:</label> <input type="number" value="20" id="y"> <button onclick="moverVentana();">Aplicar</button></p>
+        <p><label for="x">Coordenada X:</label> <input type="number" id="x" value="500"> <label for="y">Coordenada Y:</label> <input type="number" value="20" id="y"> <button onclick="moverVentana()">Aplicar</button></p>
         <li>Con un control option en la ventana principal seleccionar al menos 3 colores de la ventana secundaria.</li>
         <p>
             <select id="color">
@@ -23,11 +23,12 @@
                 <option value="blue" selected>Azul</option>
                 <option value="green">Verde</option>
             </select>
-            <button onclick="colorVentana();">Aplicar</button>
+            <button onclick="colorVentana()">Aplicar</button>
         </p>
         <li>Utilizar en la ventana principal un botón para focus y otro para blur.</li>
         <p><button onclick="ventana.focus()">Focus</button> <button onclick="ventana.blur()">Blur</button></p>
         <li>Pedir en la ventana principal el tiempo que quieres que este activa la ventana secundaria.</li>
+        <p><label for="tiempo">Segundos:</label> <input type="number" id="tiempo" value="3"> <button onclick="cerrarVentana()">Cerrar</button></p>
         <li>Pedir en al ventana principal el texto que quieres que aparezca en la ventana secundaria.</li>
         <li>Solicitar en la ventana principal el tamaño  y color del texto a mostrar en la ventana secundaria.</li>
     </ol>

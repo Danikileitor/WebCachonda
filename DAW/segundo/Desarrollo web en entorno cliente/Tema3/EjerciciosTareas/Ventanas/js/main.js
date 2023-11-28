@@ -14,3 +14,8 @@ function moverVentana() {
 function colorVentana() {
     ventana.document.body.style.backgroundColor = document.getElementById("color").value;
 }
+
+function cerrarVentana() {
+    var tiempo = document.getElementById("tiempo").value;
+    setTimeout("ventana.close()", tiempo * 1000);
+}
