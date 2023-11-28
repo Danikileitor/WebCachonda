@@ -10,11 +10,11 @@ function combinaciones() {
     calcularCombinaciones();
     div.innerHTML = "<h2>Combinaciones posibles</h2>";
     div.innerHTML += "<ul>";
-    div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
-    div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
-    div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
-    div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
     div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
+    div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
+    div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
+    div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
+    div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
     div.innerHTML += "</ul>";
 }
 
