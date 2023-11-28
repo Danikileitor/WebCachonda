@@ -20,14 +20,16 @@ function combinaciones() {
 
 function calcularCombinaciones() {
     for (let i = 0; i <= 9999; i++) {
-        contarDoblesParejas(i);
-        contarTrios(i);
-        contarPokers(i);
-        contarEscaleras(i);
+        doblesparejas += esDoblePareja(i) ? 1 : 0;
+        trios += esTrio(i) ? 1 : 0;
+        pokers += esPoker(i) ? 1 : 0;
+        simples += esEscaleraSimple(i) ? 1 : 0;
+        completas += esEscaleraCompleta(i) ? 1 : 0;
     }
+    doblesparejas -= pokers; // Restamos la cantidad de pokers a las dobles parejas porque una doble pareja del mismo número es póker y así evitamos duplicidad
 }
 
-function contarDoblesParejas(n) {
+function esDoblePareja(n) {
     var num = n.toString().padStart(4, '0');
     var repeticiones = 0;
     for (let i = 0; i < num.length - 1; i++) {
@@ -38,36 +40,47 @@ function contarDoblesParejas(n) {
             }
         }
     }
-    doblesparejas += repeticiones == 2 ? 1 : 0;
+    return repeticiones == 2;
 }
 
-function contarTrios(n) {
+function esTrio(n) {
     var num = n.toString().padStart(4, '0');
     for (let i = 0; i < num.length - 2; i++) {
         if (num.charAt(i) == num.charAt(i + 1) && num.charAt(i) == num.charAt(i + 2)) {
-            trios++;
-            break;// Si encuentra un trío dejamos de contar para que no haya duplicados con los pokers
+            return true; // Si encuentra un trío dejamos de contar para que no haya duplicados con los pokers
         }
     }
+    return false;
 }
 
-function contarPokers(n) {
+function esPoker(n) {
     var num = n.toString().padStart(4, '0');
     if (num.charAt(0) == num.charAt(1) && num.charAt(0) == num.charAt(2) && num.charAt(0) == num.charAt(3)) {
-        pokers++;
+        return true;
+    } else {
+        return false;
     }
 }
 
-function contarEscaleras(n) {
+function esEscaleraSimple(n) {
     var num = n.toString().padStart(4, '0');
-    if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == parseInt(num.charAt(0)) + 1) ||
-        (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
-        completas++;
-    } else if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1) ||
+    if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1) ||
         (num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == num.charAt(0) + 1) ||
         (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1) ||
         (num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
-        simples++;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function esEscaleraCompleta(n) {
+    var num = n.toString().padStart(4, '0');
+    if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == parseInt(num.charAt(0)) + 1) ||
+        (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
+        return true;
+    } else {
+        return false;
     }
 }
 
