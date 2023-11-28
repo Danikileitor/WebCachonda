@@ -85,6 +85,23 @@ function esEscaleraCompleta(n) {
 }
 
 function jugar() {
-    var resultado = "test";
+    var matricula = document.getElementById("matricula").value;
+    var resultado = comprobarMatricula(matricula);
     document.getElementById("resultado").innerHTML = resultado;
+}
+
+function comprobarMatricula(n) {
+    if (esEscaleraCompleta(n)) {
+        return "Escalera Completa";
+    } else if (esEscaleraSimple(n)) {
+        return "Escalera Simple";
+    } else if (esPoker(n)) {
+        return "Póker";
+    } else if (esTrio(n)) {
+        return "Trío";
+    } else if (esDoblePareja(n)) {
+        return "Doble Pareja";
+    } else {
+        return "Nada";
+    }
 }
