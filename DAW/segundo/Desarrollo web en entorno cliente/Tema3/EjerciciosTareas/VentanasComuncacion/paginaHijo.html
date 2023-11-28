@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>prueba-beforeclose</title>
+
+    <script type='text/javascript'>
+
+        function cerrar() {
+            var data = window.document.getElementById('val1').value;
+            window.opener.document.getElementById('deHijo').innerHTML = 'Este texto viene de la página hijo: ' + data;
+
+            this.window.close();
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1 id='text'>Ésta es la página hijo lo que escriba en el input se mostrará en la página padre al cerrarla.</h1>
+    <input type='text' id='val1' /> <button onclick='cerrar();'>Cerrar</button>
+    <div id='dialog1'>
+        <p>In scelerisque pid, porttitor magnis, in, cras aliquam nec et pulvinar nec odio adipiscing in integer. Augue
+            ultricies scelerisque a, odio scelerisque elementum elementum, pulvinar integer nascetur! Pulvinar
+            dignissim! Phasellus? Cras proin platea platea vut sit velit pid sit purus, ac elit purus enim, aliquet! Est
+            mus arcu elementum cum! In. Augue odio magnis nunc! Diam. Ac? Elementum tincidunt, platea vel platea mauris
+            parturient? Integer, elit sociis integer ac dapibus augue cras. In tincidunt, amet, enim phasellus aliquet
+            pellentesque magna.</p>
+    </div>
+</body>
+
+</html>
