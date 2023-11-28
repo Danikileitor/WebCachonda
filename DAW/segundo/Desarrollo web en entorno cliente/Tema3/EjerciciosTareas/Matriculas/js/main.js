@@ -29,7 +29,7 @@ function repeticiones(n) {
     var num = n.toString().padStart(4, '0');
     var repeticiones = 0;
     for (let i = 0; i < num.length; i++) {
-        for (let j = i + 1; j < num.length; j++) {
+        for (let j = i + 1; j < num.length + 1; j++) {
             repeticiones += num.charAt(i) == num.charAt(j) ? 1 : 0;
         }
     }
