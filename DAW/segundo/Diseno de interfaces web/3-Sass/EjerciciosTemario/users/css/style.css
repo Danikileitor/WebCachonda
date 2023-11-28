@@ -2120,7 +2120,7 @@ progress {
           appearance: none;
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--bs-secondary);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2152,11 +2152,11 @@ progress {
   padding: 0;
 }
 .form-control::-moz-placeholder {
-  color: var(--bs-secondary-color);
+  color: var(--bs-secondary);
   opacity: 1;
 }
 .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: var(--bs-secondary);
   opacity: 1;
 }
 .form-control:disabled {
@@ -2279,7 +2279,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--bs-secondary);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2696,7 +2696,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: var(--bs-tertiary-bg);
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--bs-secondary);
   border-radius: var(--bs-border-radius);
 }
 

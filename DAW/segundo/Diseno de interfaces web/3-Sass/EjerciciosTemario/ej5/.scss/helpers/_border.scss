@@ -20,7 +20,7 @@
   // .border-radius-25, .border-radius-50, .border-radius-75, .border-radius-100
   @for $i from 1 through 4 {
     &-radius-#{$i*25} {
-      border-radius: #{$i/4}rem;
+      border-radius: calc($i / 4)rem;
     }
   }
 }

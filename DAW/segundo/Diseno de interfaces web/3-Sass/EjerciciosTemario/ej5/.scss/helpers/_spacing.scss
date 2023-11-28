@@ -1,7 +1,7 @@
 .p {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding: #{$i/3}rem;
+            padding: calc($i / 3)rem;
         }
     }
 }
@@ -9,8 +9,8 @@
 .px {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding-left: #{$i/3}rem;
-            padding-right: #{$i/3}rem;
+            padding-left: calc($i / 3)rem;
+            padding-right: calc($i / 3)rem;
         }
     }
 }
@@ -18,8 +18,8 @@
 .py {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding-top: #{$i/3}rem;
-            padding-bottom: #{$i/3}rem;
+            padding-top: calc($i / 3)rem;
+            padding-bottom: calc($i / 3)rem;
         }
     }
 }
@@ -27,7 +27,7 @@
 .pt {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding-top: #{$i/3}rem;
+            padding-top: calc($i / 3)rem;
         }
     }
 }
@@ -35,7 +35,7 @@
 .pr {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding-right: #{$i/3}rem;
+            padding-right: calc($i / 3)rem;
         }
     }
 }
@@ -43,7 +43,7 @@
 .pb {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding-bottom: #{$i/3}rem;
+            padding-bottom: calc($i / 3)rem;
         }
     }
 }
@@ -51,7 +51,7 @@
 .pl {
     @for $i from 0 through 5 {
         &-#{$i} {
-            padding-left: #{$i/3}rem;
+            padding-left: calc($i / 3)rem;
         }
     }
 }
@@ -59,7 +59,7 @@
 .m {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin: #{$i/3}rem;
+            margin: calc($i / 3)rem;
         }
     }
 }
@@ -67,8 +67,8 @@
 .mx {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin-left: #{$i/3}rem;
-            margin-right: #{$i/3}rem;
+            margin-left: calc($i / 3)rem;
+            margin-right: calc($i / 3)rem;
         }
     }
 }
@@ -76,8 +76,8 @@
 .my {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin-top: #{$i/3}rem;
-            margin-bottom: #{$i/3}rem;
+            margin-top: calc($i / 3)rem;
+            margin-bottom: calc($i / 3)rem;
         }
     }
 }
@@ -85,7 +85,7 @@
 .mt {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin-top: #{$i/3}rem;
+            margin-top: calc($i / 3)rem;
         }
     }
 }
@@ -93,7 +93,7 @@
 .mr {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin-right: #{$i/3}rem;
+            margin-right: calc($i / 3)rem;
         }
     }
 }
@@ -101,7 +101,7 @@
 .mb {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin-bottom: #{$i/3}rem;
+            margin-bottom: calc($i / 3)rem;
         }
     }
 }
@@ -109,7 +109,7 @@
 .ml {
     @for $i from 0 through 5 {
         &-#{$i} {
-            margin-left: #{$i/3}rem;
+            margin-left: calc($i / 3)rem;
         }
     }
 }
