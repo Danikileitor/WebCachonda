@@ -1,14 +1,16 @@
+var doblesparejas, trios, simples, completas, pokers;
+
 function combinaciones() {
     var div = document.getElementById("combinaciones");
-    var parejas = 0;
-    var trios = 0;
-    var simples = 0;
-    var completas = 0;
-    var pokers = 0;
-    calcularCombinaciones(parejas, trios, simples, completas, pokers);
+    doblesparejas = 0;
+    trios = 0;
+    simples = 0;
+    completas = 0;
+    pokers = 0;
+    calcularCombinaciones();
     div.innerHTML = "<h2>Combinaciones posibles</h2>";
     div.innerHTML += "<ul>";
-    div.innerHTML += "<li>Pareja: " + parejas + "</li>"
+    div.innerHTML += "<li>Doble Pareja: " + doblesparejas + "</li>"
     div.innerHTML += "<li>Trío: " + trios + "</li>"
     div.innerHTML += "<li>Escalera Simple: " + simples + "</li>"
     div.innerHTML += "<li>Escalera Completa: " + completas + "</li>"
@@ -16,14 +18,14 @@ function combinaciones() {
     div.innerHTML += "</ul>";
 }
 
-function calcularCombinaciones(parejas, trios, simples, completas, pokers) {
+function calcularCombinaciones() {
     for (let i = 0; i <= 9999; i++) {
-        repeticiones(i, parejas, trios, pokers);
-        escaleras(i, simples, completas);
+        repeticiones(i,);
+        escaleras(i);
     }
 }
 
-function repeticiones(n, parejas, trios, pokers) {
+function repeticiones(n) {
     var num = n.toString().padStart(4, '0');
     var repeticiones = 0;
     for (let i = 0; i < num.length; i++) {
@@ -33,7 +35,7 @@ function repeticiones(n, parejas, trios, pokers) {
     }
     switch (repeticiones) {
         case 1:
-            parejas++;
+            doblesparejas++;
             break;
         case 2:
             trios++;
@@ -46,7 +48,7 @@ function repeticiones(n, parejas, trios, pokers) {
     };
 }
 
-function escaleras(n, simples, completas) {
+function escaleras(n) {
     var num = n.toString().padStart(4, '0');
     if (num.charAt(3) == num.charAt(2) + 1 && num.charAt(2) == num.charAt(1) + 1 && num.charAt(1) == num.charAt(0) + 1) {
         completas++;
