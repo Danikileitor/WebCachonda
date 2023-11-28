@@ -23,7 +23,7 @@ function plantarArbol($altura)
         }
         array_push($arbol, $fila);
     }
-    return $arbol;
+    dibujarArbol($arbol);
 }
 
 function dibujarArbol($arbol)
@@ -86,7 +86,7 @@ function dibujarArbol($arbol)
 <body>
     <h1>Tremendo árbol navideño</h1>
     <?php
-    dibujarArbol(plantarArbol(13)); // <-- Aquí está la llamada de la función
+    plantarArbol(13); // <-- Aquí está la llamada de la función
     ?>
 </body>
 
