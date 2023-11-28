@@ -10,11 +10,11 @@ function combinaciones() {
     calcularCombinaciones();
     div.innerHTML = "<h2>Combinaciones posibles</h2>";
     div.innerHTML += "<ul>";
-    div.innerHTML += "<li>Doble Pareja: " + doblesparejas + "</li>"
-    div.innerHTML += "<li>Trío: " + trios + "</li>"
-    div.innerHTML += "<li>Escalera Simple: " + simples + "</li>"
-    div.innerHTML += "<li>Escalera Completa: " + completas + "</li>"
-    div.innerHTML += "<li>Poker: " + pokers + "</li>"
+    div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
+    div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
+    div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
+    div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
+    div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
     div.innerHTML += "</ul>";
 }
 
@@ -23,7 +23,7 @@ function calcularCombinaciones() {
         contarDoblesParejas(i);
         contarTrios(i);
         contarPokers(i);
-        escaleras(i);
+        contarEscaleras(i);
     }
 }
 
@@ -31,8 +31,11 @@ function contarDoblesParejas(n) {
     var num = n.toString().padStart(4, '0');
     var repeticiones = 0;
     for (let i = 0; i < num.length - 1; i++) {
-        if (num.charAt(i) == num.charAt(i + 1)) {
-            repeticiones++;
+        for (let j = i + 1; j < num.length; j++) {
+            if (num.charAt(i) == num.charAt(j)) {
+                repeticiones++;
+                break; // Rompemos el bucle si ya encontramos una pareja
+            }
         }
     }
     doblesparejas += repeticiones == 2 ? 1 : 0;
@@ -43,7 +46,7 @@ function contarTrios(n) {
     for (let i = 0; i < num.length - 2; i++) {
         if (num.charAt(i) == num.charAt(i + 1) && num.charAt(i) == num.charAt(i + 2)) {
             trios++;
-            break;//Si encuentra un trío dejamos de contar para que no haya duplicados con los pokers
+            break;// Si encuentra un trío dejamos de contar para que no haya duplicados con los pokers
         }
     }
 }
@@ -55,11 +58,15 @@ function contarPokers(n) {
     }
 }
 
-function escaleras(n) {
+function contarEscaleras(n) {
     var num = n.toString().padStart(4, '0');
-    if (num.charAt(3) == num.charAt(2) + 1 && num.charAt(2) == num.charAt(1) + 1 && num.charAt(1) == num.charAt(0) + 1) {
+    if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == parseInt(num.charAt(0)) + 1) ||
+        (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
         completas++;
-    } else if ((num.charAt(3) == num.charAt(2) + 1 && num.charAt(2) == num.charAt(1) + 1) || (num.charAt(2) == num.charAt(1) + 1 && num.charAt(1) == num.charAt(0) + 1)) {
+    } else if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1) ||
+        (num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == num.charAt(0) + 1) ||
+        (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1) ||
+        (num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
         simples++;
     }
 }
