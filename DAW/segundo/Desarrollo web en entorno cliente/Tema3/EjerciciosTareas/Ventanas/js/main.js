@@ -23,3 +23,8 @@ function cerrarVentana() {
 function escribirVentana() {
     ventana.document.getElementById("texto").innerHTML = document.getElementById("texto").value;
 }
+
+function estiloVentana() {
+    ventana.document.getElementById("texto").style.fontSize = document.getElementById("size").value + "px";
+    ventana.document.getElementById("texto").style.color = document.getElementById("textcolor").value;
+}

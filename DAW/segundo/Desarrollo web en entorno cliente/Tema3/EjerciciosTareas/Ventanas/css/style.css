@@ -1,0 +1,12 @@
+input[type="number"] {
+  width: 2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#size {
+  text-align: right;
+}
