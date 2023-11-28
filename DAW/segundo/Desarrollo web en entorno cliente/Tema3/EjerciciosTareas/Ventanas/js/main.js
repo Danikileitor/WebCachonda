@@ -4,3 +4,9 @@ var ventana;
 function abrirVentana() {
     ventana = window.open("texto_de_secundaria_2.htm", "ventana", parametros);
 }
+
+function moverVentana() {
+    var x = document.getElementById("x").value;
+    var y = document.getElementById("y").value;
+    ventana.moveTo(x, y);
+}
