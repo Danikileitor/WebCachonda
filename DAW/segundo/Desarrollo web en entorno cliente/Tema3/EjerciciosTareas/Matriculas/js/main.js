@@ -72,5 +72,6 @@ function contarEscaleras(n) {
 }
 
 function jugar() {
-
+    var resultado = "test";
+    document.getElementById("resultado").innerHTML = resultado;
 }
