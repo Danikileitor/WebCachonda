@@ -19,3 +19,7 @@ function cerrarVentana() {
     var tiempo = document.getElementById("tiempo").value;
     setTimeout("ventana.close()", tiempo * 1000);
 }
+
+function escribirVentana() {
+    ventana.document.getElementById("texto").innerHTML = document.getElementById("texto").value;
+}
