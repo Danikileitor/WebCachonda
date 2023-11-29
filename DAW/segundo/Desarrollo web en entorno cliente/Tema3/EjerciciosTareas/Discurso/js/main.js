@@ -70,12 +70,28 @@ var parte4 = [
     "de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora."
 ];
 
-//Contador de frases generadas, aumentará cada vez que generamos una frase aleatoria.
-var contador = 0;
-
 //Esta función devuelve un número entero entre 2 números incluidos.
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//Contador de frases generadas, aumentará cada vez que generamos una frase aleatoria.
+var contador = obtenerValorCookie("Frases generadas");
+contador = contador == null ? 0 : contador;// Si es la primera vez que visitamos la página y no existe la cookie, el valor por defecto será 0
+
+//Con esta función obtendremos el valor actual del contador de frases generadas
+function obtenerValorCookie(nombre) {
+    const nombreCookie = nombre + "=";
+    const cookies = document.cookie.split(';');
+
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.indexOf(nombreCookie) === 0) {
+            return cookie.substring(nombreCookie.length, cookie.length);
+        }
+    }
+
+    return null;
 }
 
 //Esta función actualiza la cookie con el contador de frases generadas
