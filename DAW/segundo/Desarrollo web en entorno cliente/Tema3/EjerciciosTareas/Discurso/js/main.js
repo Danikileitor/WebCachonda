@@ -70,6 +70,7 @@ var parte4 = [
     "de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora."
 ];
 
+//Contador de frases generadas, aumentará cada vez que generamos una frase aleatoria.
 var contador = 0;
 
 //Esta función devuelve un número entero entre 2 números incluidos.
@@ -77,7 +78,7 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+//Esta función actualiza la cookie con el contador de frases generadas
 function cookieFrasesGeneradas() {
     var fecha = new Date();
     fecha.setTime(fecha.getTime() + (7 * 24 * 60 * 60 * 1000));//fecha para que expire en una semana
