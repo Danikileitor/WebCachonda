@@ -75,8 +75,22 @@ function random(min, max) {
 }
 
 function escribirFrase() {
-    var frase = "";
-    var comienzo = ;
-    var cuerpo = ;
-    var final = ;
+    //Comprobamos si quedan frases por escribir, si no quedan se mostrará un error
+    if (parte1.length > 0) {
+        var uno = random(0, parte1.length - 1);
+        var dos = random(0, parte2.length - 1);
+        var tres = random(0, parte3.length - 1);
+        var cuatro = random(0, parte4.length - 1);
+        var frase = "<p>" + parte1[uno] + parte2[dos] + parte3[tres] + parte4[cuatro] + "</p>";
+        document.getElementById("discurso").innerHTML += frase;
+        //Si no ha marcado el check de repetir, eliminamos las entradas de los arrays
+        if (!document.getElementById("repetir").checked) {
+            parte1.splice(uno, 1);
+            parte2.splice(dos, 1);
+            parte3.splice(tres, 1);
+            parte4.splice(cuatro, 1);
+        }
+    } else {
+        alert("¡No quedan frases por escribir!");
+    }
 }
