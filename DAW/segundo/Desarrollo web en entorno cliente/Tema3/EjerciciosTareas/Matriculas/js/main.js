@@ -2,7 +2,7 @@ var doblesparejas, trios, simples, completas, pokers, ventana;
 
 function combinaciones() {  // Es posible que las combinaciones que el profesor tenga en mente no sean equivalentes a las que yo he pensado, las describo:
     doblesparejas = 0;  // La matrícula tiene 2 pares de números iguales (no tienen que ser consecutivos). Ej: 1122 4545 6886
-    trios = 0;          // La matrícula tiene 3 números iguales consecutivos. Ej: 0666 7773
+    trios = 0;          // La matrícula tiene 3 números iguales. Ej: 0666 7377
     simples = 0;        // La matrícula tiene una escalera de 3 elementos consecutivos de forma ascendente o descendente. Ej: 0129 6321
     completas = 0;      // La matrícula tiene una escalera de 4 elementos consecutivos de forma ascendente o descendente. Ej: 6789 7654
     pokers = 0;         // La matrícula tiene los 4 números iguales. Ej: 8888
@@ -14,9 +14,9 @@ function combinaciones() {  // Es posible que las combinaciones que el profesor 
         div.innerHTML += "<ul>";
         div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
         div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
-        div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
         div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
         div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
+        div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
         div.innerHTML += "</ul>";
     }
     setTimeout("ventana.close()", 10000);
@@ -31,27 +31,25 @@ function calcularCombinaciones() {
         completas += esEscaleraCompleta(i) ? 1 : 0;
     }
     doblesparejas -= pokers; // Restamos la cantidad de pokers a las dobles parejas porque una doble pareja del mismo número es póker y así evitamos duplicidad
+    trios -= pokers; // Restamos la cantidad de pokers a los tríos porque si sale póker tambíen cuenta como trío y así evitamos duplicidad
 }
 
 function esDoblePareja(n) {
     var num = n.toString().padStart(4, '0');
-    var repeticiones = 0;
-    for (let i = 0; i < num.length - 1; i++) {
-        for (let j = i + 1; j < num.length; j++) {
-            if (num.charAt(i) == num.charAt(j)) {
-                repeticiones++;
-                break; // Rompemos el bucle si ya encontramos una pareja
-            }
-        }
-    }
-    return repeticiones == 2;
+    return (num.charAt(0) === num.charAt(1) && num.charAt(2) === num.charAt(3)) ||
+        (num.charAt(0) === num.charAt(2) && num.charAt(1) === num.charAt(3)) ||
+        (num.charAt(0) === num.charAt(3) && num.charAt(1) === num.charAt(2));
 }
 
 function esTrio(n) {
     var num = n.toString().padStart(4, '0');
-    for (let i = 0; i < num.length - 2; i++) {
-        if (num.charAt(i) == num.charAt(i + 1) && num.charAt(i) == num.charAt(i + 2)) {
-            return true; // Si encuentra un trío dejamos de contar para que no haya duplicados con los pokers
+    for (let i = 0; i < num.length; i++) {
+        for (let j = i + 1; j < num.length; j++) {
+            for (let k = j + 1; k < num.length; k++) {
+                if (num.charAt(i) === num.charAt(j) && num.charAt(i) === num.charAt(k)) {
+                    return true;
+                }
+            }
         }
     }
     return false;
