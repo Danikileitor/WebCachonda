@@ -1,5 +1,31 @@
 var doblesparejas, trios, simples, completas, pokers, ventana;
 
+var contador = obtenerValorCookie("Jugadas");
+contador = contador == null ? 0 : contador;// Si es la primera vez que visitamos la página y no existe la cookie, el valor por defecto será 0
+
+//Con esta función obtendremos el valor actual del contador de veces que se ha jugado
+function obtenerValorCookie(nombre) {
+    const nombreCookie = nombre + "=";
+    const cookies = document.cookie.split(';');
+
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.indexOf(nombreCookie) === 0) {
+            return cookie.substring(nombreCookie.length, cookie.length);
+        }
+    }
+
+    return null;
+}
+
+//Esta función actualiza la cookie con el contador de veces que se ha jugado
+function cookieVecesJugado() {
+    var fecha = new Date();
+    fecha.setTime(fecha.getTime() + (7 * 24 * 60 * 60 * 1000));//Fecha para que expire en una semana
+    var expira = "expires=" + fecha.toUTCString();
+    document.cookie = "Jugadas=" + contador + ";" + expira + ";path=/";//Actualizamos la cookie
+}
+
 function combinaciones() {
     doblesparejas = 0;  // La matrícula tiene 2 pares de números iguales. Ej: 1122 4545 6886
     trios = 0;          // La matrícula tiene 3 números iguales. Ej: 0666 7377
@@ -105,6 +131,8 @@ function jugar() {
     var matricula = document.getElementById("matricula").value;
     if (matricula.length == 4 && matricula >= 0 && matricula <= 9999) {
         document.getElementById("resultado").innerHTML = "La matrícula " + matricula.toString().padStart(4, '0') + " es: " + comprobarMatricula(matricula);
+        contador++;
+        cookieVecesJugado();
         //Llamamos a la función para comprobar la matrícula introducida por el usuario y actualizamos la cookie del contador de veces que se ha jugado
     } else {
         alert("La matrícula introducida no es correcta, introduce un núero de 4 dígitos entre 0000 y 9999");
