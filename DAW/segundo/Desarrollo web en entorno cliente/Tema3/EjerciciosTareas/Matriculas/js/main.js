@@ -1,6 +1,6 @@
 var doblesparejas, trios, simples, completas, pokers, ventana;
 
-function combinaciones() {  // Es posible que las combinaciones que el profesor tenga en mente no sean equivalentes a las que yo he pensado, las describo:
+function combinaciones() {
     doblesparejas = 0;  // La matrícula tiene 2 pares de números iguales. Ej: 1122 4545 6886
     trios = 0;          // La matrícula tiene 3 números iguales. Ej: 0666 7377
     simples = 0;        // La matrícula tiene una escalera de 3 elementos consecutivos de forma ascendente o descendente. Ej: 0129 6321 4856
