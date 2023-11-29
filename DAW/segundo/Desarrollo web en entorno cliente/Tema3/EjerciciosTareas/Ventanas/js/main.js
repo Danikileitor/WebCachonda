@@ -16,8 +16,8 @@ function colorVentana() {
 }
 
 function cerrarVentana() {
-    var tiempo = document.getElementById("tiempo").value;
-    setTimeout("ventana.close()", tiempo * 1000);
+    var tiempo = document.getElementById("tiempo").value * 1000;
+    setTimeout("ventana.close()", tiempo);
 }
 
 function escribirVentana() {
