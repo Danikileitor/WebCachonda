@@ -69,3 +69,7 @@ var parte4 = [
     "para configurar una interface amigable y coadyuvante a la reingeniería del sistema.",
     "de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora."
 ];
+
+function escribirFrase() {
+    
+}
