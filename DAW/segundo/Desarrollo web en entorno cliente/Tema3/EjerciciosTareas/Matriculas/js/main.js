@@ -78,8 +78,10 @@ function esEscaleraCompleta(n) {
 function jugar() {
     var matricula = document.getElementById("matricula").value;
     document.getElementById("resultado").innerHTML = "La matrícula " + matricula.toString().padStart(4, '0') + " es: " + comprobarMatricula(matricula);
+    //Llamamos a la función para comprobar la matrícula introducida por el usuario y devolvemos el resultado
 }
 
+//En esta función comprobamos una matrícula concreta y devolvemos de qué tipo es, es necesario hacerlo en el orden correcto
 function comprobarMatricula(n) {
     if (esEscaleraCompleta(n)) {
         return "Escalera Completa";
