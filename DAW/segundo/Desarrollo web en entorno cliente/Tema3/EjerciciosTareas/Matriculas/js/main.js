@@ -22,18 +22,44 @@ function combinaciones() {
     setTimeout("ventana.close()", 10000);//Cerramos la ventana pasados 10 segundos
 }
 
+//En esta función comprobamos una matrícula concreta y devolvemos de qué tipo es, es necesario hacerlo en el orden correcto
+function comprobarMatricula(n) {
+    if (esEscaleraCompleta(n)) {
+        return "Escalera Completa";
+    } else if (esEscaleraSimple(n)) {
+        return "Escalera Simple";
+    } else if (esPoker(n)) {
+        return "Póker";
+    } else if (esTrio(n)) {
+        return "Trío";
+    } else if (esDoblePareja(n)) {
+        return "Doble Pareja";
+    } else {
+        return "Nada";
+    }
+}
+
 function calcularCombinaciones() {
     //Contamos todas las combinaciones posibles desde el 0000 hasta el 9999 y comprobamos individualmente cada una
     for (let i = 0; i <= 9999; i++) {
-        doblesparejas += esDoblePareja(i) ? 1 : 0;
-        trios += esTrio(i) ? 1 : 0;
-        pokers += esPoker(i) ? 1 : 0;
-        simples += esEscaleraSimple(i) ? 1 : 0;
-        completas += esEscaleraCompleta(i) ? 1 : 0;
+        switch (comprobarMatricula(i)) {
+            case "Escalera Completa":
+                completas++;
+                break;
+            case "Escalera Simple":
+                simples++;
+                break;
+            case "Póker":
+                pokers++;
+                break;
+            case "Trío":
+                trios++;
+                break;
+            case "Doble Pareja":
+                doblesparejas++;
+                break;
+        }
     }
-    doblesparejas -= pokers; // Restamos la cantidad de pokers a las dobles parejas porque una doble pareja del mismo número es póker y así evitamos duplicidad
-    trios -= pokers; // Restamos la cantidad de pokers a los tríos porque si sale póker tambíen cuenta como trío y así evitamos duplicidad
-    simples -= completas;// Restamos la cantidad de escaleras completas a las simples porque si sale escalera completa tambíen cuenta como simple y así evitamos duplicidad
 }
 
 function esDoblePareja(n) {
@@ -79,21 +105,4 @@ function jugar() {
     var matricula = document.getElementById("matricula").value;
     document.getElementById("resultado").innerHTML = "La matrícula " + matricula.toString().padStart(4, '0') + " es: " + comprobarMatricula(matricula);
     //Llamamos a la función para comprobar la matrícula introducida por el usuario y devolvemos el resultado
-}
-
-//En esta función comprobamos una matrícula concreta y devolvemos de qué tipo es, es necesario hacerlo en el orden correcto
-function comprobarMatricula(n) {
-    if (esEscaleraCompleta(n)) {
-        return "Escalera Completa";
-    } else if (esEscaleraSimple(n)) {
-        return "Escalera Simple";
-    } else if (esPoker(n)) {
-        return "Póker";
-    } else if (esTrio(n)) {
-        return "Trío";
-    } else if (esDoblePareja(n)) {
-        return "Doble Pareja";
-    } else {
-        return "Nada";
-    }
 }
