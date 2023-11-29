@@ -103,10 +103,11 @@ function esEscaleraCompleta(n) {
 
 function jugar() {
     var matricula = document.getElementById("matricula").value;
-    if (matricula.length == 4 || matricula > 0 || matricula < 9999) {
+    if (matricula.length == 4 && matricula >= 0 && matricula <= 9999) {
         document.getElementById("resultado").innerHTML = "La matrícula " + matricula.toString().padStart(4, '0') + " es: " + comprobarMatricula(matricula);
+        //Llamamos a la función para comprobar la matrícula introducida por el usuario y actualizamos la cookie del contador de veces que se ha jugado
     } else {
         alert("La matrícula introducida no es correcta, introduce un núero de 4 dígitos entre 0000 y 9999");
+        //En caso de introducir una matrícula incorrecta saltará un mensaje de error
     }
-    //Llamamos a la función para comprobar la matrícula introducida por el usuario y devolvemos el resultado
 }
