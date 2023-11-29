@@ -2,3 +2,7 @@ body {
   margin: 0 auto;
   width: 60rem;
 }
+
+.botones :last-child {
+  float: right;
+}
