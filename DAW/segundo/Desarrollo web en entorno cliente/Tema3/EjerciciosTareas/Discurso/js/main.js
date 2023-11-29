@@ -70,8 +70,19 @@ var parte4 = [
     "de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora."
 ];
 
+var contador = 0;
+
+//Esta función devuelve un número entero entre 2 números incluidos.
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+function cookieFrasesGeneradas() {
+    var fecha = new Date();
+    fecha.setTime(fecha.getTime() + (7 * 24 * 60 * 60 * 1000));//fecha para que expire en una semana
+    var expira = "expires=" + fecha.toUTCString();
+    document.cookie = "Frases generadas=" + contador + ";" + expira + ";path=/";//Actualizamos la cookie
 }
 
 function escribirFrase() {
@@ -90,6 +101,9 @@ function escribirFrase() {
             parte3.splice(tres, 1);
             parte4.splice(cuatro, 1);
         }
+        //Actualizamos el contador de frases generadas y su cookie asociada
+        contador++;
+        cookieFrasesGeneradas();
     } else {
         alert("¡No quedan frases por escribir!");
     }
