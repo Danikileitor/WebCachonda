@@ -83,14 +83,14 @@ function esPoker(n) {
 
 function esEscaleraSimple(n) {
     var num = n.toString().padStart(4, '0').split('').sort().join("");
+    /* Es necesario no tener en cuenta los números repetidos porque entonces la matrícula 2123 no contaría como escalera simple ya que sería 1223 y devolvería false,
+    por lo que el ejemplo es erróneo, hay más de 600 combinaciones de escaleras simples, el resto son correctas. */
     var numeroSinRepetidos = "";
     for (let i = 0; i < num.length; i++) {
         if (numeroSinRepetidos.indexOf(num.charAt(i)) == -1) {
             numeroSinRepetidos += num.charAt(i);
         }
     }
-    /* Es necesario no tener en cuenta los números repetidos porque entonces la matrícula 2123 no contaría como escalera simple ya que sería 1223 y devolvería false,
-    por lo que el ejemplo es erróneo, hay más de 600 combinaciones de escaleras simples, el resto son correctas. */
     return (numeroSinRepetidos.charAt(2) == parseInt(numeroSinRepetidos.charAt(1)) + 1 && numeroSinRepetidos.charAt(1) == parseInt(numeroSinRepetidos.charAt(0)) + 1);
     //Comparamos si hay una escalera de 3 dígitos consecutiva ascendente o descendente
 }
