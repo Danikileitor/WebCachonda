@@ -1,21 +1,25 @@
-var doblesparejas, trios, simples, completas, pokers;
+var doblesparejas, trios, simples, completas, pokers, ventana;
 
 function combinaciones() {
-    var div = document.getElementById("combinaciones");
     doblesparejas = 0;
     trios = 0;
     simples = 0;
     completas = 0;
     pokers = 0;
-    calcularCombinaciones();
-    div.innerHTML = "<h2>Combinaciones posibles</h2>";
-    div.innerHTML += "<ul>";
-    div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
-    div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
-    div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
-    div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
-    div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
-    div.innerHTML += "</ul>";
+    var parametros = "width=400, height=300, left=200, top=150 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
+    ventana = window.open("combinaciones.html", "ventana", parametros);
+    ventana.onload = function () {
+        var div = ventana.document.getElementById("combinaciones");
+        calcularCombinaciones();
+        div.innerHTML += "<ul>";
+        div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
+        div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
+        div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
+        div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
+        div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
+        div.innerHTML += "</ul>";
+    }
+    setTimeout("ventana.close()", 10000);
 }
 
 function calcularCombinaciones() {
