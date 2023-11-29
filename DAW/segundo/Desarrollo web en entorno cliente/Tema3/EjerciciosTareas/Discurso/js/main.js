@@ -70,6 +70,13 @@ var parte4 = [
     "de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora."
 ];
 
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function escribirFrase() {
-    
+    var frase = "";
+    var comienzo = ;
+    var cuerpo = ;
+    var final = ;
 }
