@@ -14,9 +14,9 @@ function combinaciones() {
         div.innerHTML += "<ul>";
         div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
         div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
-        div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
         div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
         div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
+        div.innerHTML += "<li>Escalera Simple: " + simples + " (" + simples / 100 + "%)</li>"
         div.innerHTML += "</ul>";
     }
     setTimeout("ventana.close()", 10000);//Cerramos la ventana pasados 10 segundos
@@ -33,58 +33,38 @@ function calcularCombinaciones() {
     }
     doblesparejas -= pokers; // Restamos la cantidad de pokers a las dobles parejas porque una doble pareja del mismo número es póker y así evitamos duplicidad
     trios -= pokers; // Restamos la cantidad de pokers a los tríos porque si sale póker tambíen cuenta como trío y así evitamos duplicidad
+    simples -= completas;// Restamos la cantidad de escaleras completas a las simples porque si sale escalera completa tambíen cuenta como simple y así evitamos duplicidad
 }
 
 function esDoblePareja(n) {
-    var num = n.toString().padStart(4, '0');
-    return (num.charAt(0) === num.charAt(1) && num.charAt(2) === num.charAt(3)) ||
-        (num.charAt(0) === num.charAt(2) && num.charAt(1) === num.charAt(3)) ||
-        (num.charAt(0) === num.charAt(3) && num.charAt(1) === num.charAt(2));//Se compara si hay 2 parejas de dígitos
+    var num = n.toString().padStart(4, '0').split('').sort().join("");/* De esta forma rellenamos con ceros a la izquierda por si el usuario no escribe una matrícula completa
+    además convertimos el número en un array para poder ordenarlo y volvemos a convertirlo a cadena, este truco lo usaremos bastante */
+    return num.charAt(0) == num.charAt(1) && num.charAt(2) == num.charAt(3);
+    //Se compara si hay 2 parejas de dígitos
 }
 
 function esTrio(n) {
-    var num = n.toString().padStart(4, '0');
-    for (let i = 0; i < num.length; i++) {
-        for (let j = i + 1; j < num.length; j++) {
-            for (let k = j + 1; k < num.length; k++) {
-                if (num.charAt(i) === num.charAt(j) && num.charAt(i) === num.charAt(k)) {//Se compara si hay al menos 3 dígitos iguales
-                    return true;
-                }
-            }
-        }
-    }
-    return false;
+    var num = n.toString().padStart(4, '0').split('').sort().join("");
+    return (num.charAt(0) == num.charAt(1) && num.charAt(1) == num.charAt(2)) || (num.charAt(1) == num.charAt(2) && num.charAt(2) == num.charAt(3));
+    //Se compara si hay al menos 3 dígitos iguales
 }
 
 function esPoker(n) {
     var num = n.toString().padStart(4, '0');
-    if (num.charAt(0) == num.charAt(1) && num.charAt(0) == num.charAt(2) && num.charAt(0) == num.charAt(3)) {//Se compara si los 4 dígitos son iguales
-        return true;
-    } else {
-        return false;
-    }
+    return (num.charAt(0) == num.charAt(1) && num.charAt(0) == num.charAt(2) && num.charAt(0) == num.charAt(3));
+    //Se compara si los 4 dígitos son iguales
 }
 
 function esEscaleraSimple(n) {
-    var num = n.toString().padStart(4, '0');
-    if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1) ||
-        (num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == num.charAt(0) + 1) ||
-        (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1) ||
-        (num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
-        return true;
-    } else {
-        return false;
-    }
+    var num = n.toString().padStart(4, '0').split('').sort().join("");
+    return (num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == parseInt(num.charAt(0)) + 1);
+    //Comparamos si hay una escalera de 3 dígitos consecutiva ascendente o descendente
 }
 
 function esEscaleraCompleta(n) {
-    var num = n.toString().padStart(4, '0');
-    if ((num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == parseInt(num.charAt(0)) + 1) ||
-        (num.charAt(3) == parseInt(num.charAt(2)) - 1 && num.charAt(2) == parseInt(num.charAt(1)) - 1 && num.charAt(1) == parseInt(num.charAt(0)) - 1)) {
-        return true;//Comparamos si hay una escalera de 4 dígitos consecutiva ascendente o descendente
-    } else {
-        return false;
-    }
+    var num = n.toString().padStart(4, '0').split('').sort().join("");
+    return (num.charAt(3) == parseInt(num.charAt(2)) + 1 && num.charAt(2) == parseInt(num.charAt(1)) + 1 && num.charAt(1) == parseInt(num.charAt(0)) + 1);
+    //Comparamos si hay una escalera de 4 dígitos consecutiva ascendente o descendente
 }
 
 function jugar() {
