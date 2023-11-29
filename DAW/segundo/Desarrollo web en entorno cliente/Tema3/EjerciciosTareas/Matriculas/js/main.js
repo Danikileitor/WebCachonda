@@ -1,11 +1,11 @@
 var doblesparejas, trios, simples, completas, pokers, ventana;
 
-function combinaciones() {
-    doblesparejas = 0;
-    trios = 0;
-    simples = 0;
-    completas = 0;
-    pokers = 0;
+function combinaciones() {  // Es posible que las combinaciones que el profesor tenga en mente no sean equivalentes a las que yo he pensado, las describo:
+    doblesparejas = 0;  // La matrícula tiene 2 pares de números iguales (no tienen que ser consecutivos). Ej: 1122 4545 6886
+    trios = 0;          // La matrícula tiene 3 números iguales consecutivos. Ej: 0666 7773
+    simples = 0;        // La matrícula tiene una escalera de 3 elementos consecutivos de forma ascendente o descendente. Ej: 0129 6321
+    completas = 0;      // La matrícula tiene una escalera de 4 elementos consecutivos de forma ascendente o descendente. Ej: 6789 7654
+    pokers = 0;         // La matrícula tiene los 4 números iguales. Ej: 8888
     var parametros = "width=400, height=300, left=200, top=150 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
     ventana = window.open("combinaciones.html", "ventana", parametros);
     ventana.onload = function () {
