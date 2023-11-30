@@ -38,7 +38,7 @@ function combinaciones() {
     simples = 0;        // La matrícula tiene una escalera de 3 elementos consecutivos de forma ascendente o descendente. Ej: 0129 6321 4856
     completas = 0;      // La matrícula tiene una escalera de 4 elementos consecutivos de forma ascendente o descendente. Ej: 6789 7654 7698
     pokers = 0;         // La matrícula tiene los 4 números iguales. Ej: 8888
-    var parametros = "width=400, height=300, left=200, top=150 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
+    var parametros = "width=400, height=220, left=200, top=150 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
     ventana = window.open("combinaciones.html", "ventana", parametros);
     ventana.onload = function () {//Nos aseguramos de que la ventana está cargada para poder escribir en ella los resultados de las combinaciones
         var div = ventana.document.getElementById("combinaciones");
