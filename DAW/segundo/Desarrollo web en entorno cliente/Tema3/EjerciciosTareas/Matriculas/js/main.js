@@ -23,18 +23,12 @@ function obtenerValorCookie(nombre) {
 }
 
 //Esta función actualiza la cookie con el contador de veces que se ha jugado
-function cookieVecesJugado() {
+function cookieVecesJugado(n = contador) {//Si no se pasa parámetro se utilizará el valor del contador, si se pasa por ejemplo un 0 se cambiará su valor
+    contador = n;
     var fecha = new Date();
     fecha.setTime(fecha.getTime() + (7 * 24 * 60 * 60 * 1000));//Fecha para que expire en una semana
     var expira = "expires=" + fecha.toUTCString();
     document.cookie = "Jugadas=" + contador + ";" + expira + ";path=/";//Actualizamos la cookie
-    mostrarContador();
-}
-
-//Esta función cambia el valor del contador a 0 y actualiza la cookie
-function cookieReiniciar() {
-    contador = 0;
-    document.cookie = "Jugadas=" + contador + ";" + expira + ";path=/";
     mostrarContador();
 }
 
