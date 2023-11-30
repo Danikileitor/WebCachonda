@@ -1,6 +1,8 @@
 body {
   width: fit-content;
   margin: 2% auto;
+  border: 1px dashed black;
+  padding: 0 21px 21px 21px;
 }
 
 input[type="number"] {
