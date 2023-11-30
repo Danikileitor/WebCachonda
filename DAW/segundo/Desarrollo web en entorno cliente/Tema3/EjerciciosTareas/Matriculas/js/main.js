@@ -135,7 +135,7 @@ function jugar() {
         cookieVecesJugado();
         //Llamamos a la función para comprobar la matrícula introducida por el usuario y actualizamos la cookie del contador de veces que se ha jugado
     } else {
-        alert("La matrícula introducida no es correcta, introduce un núero de 4 dígitos entre 0000 y 9999");
+        alert("La matrícula introducida no es correcta, introduce un número de 4 dígitos entre 0000 y 9999");
         //En caso de introducir una matrícula incorrecta saltará un mensaje de error
     }
 }
