@@ -79,6 +79,10 @@ function random(min, max) {
 var contador = obtenerValorCookie("Frases generadas");
 contador = contador == null ? 0 : contador;// Si es la primera vez que visitamos la página y no existe la cookie, el valor por defecto será 0
 
+function mostrarContador() {
+    document.getElementById("contador").innerHTML = contador;// Actualizamos el contador en la web
+}
+
 //Con esta función obtendremos el valor actual del contador de frases generadas
 function obtenerValorCookie(nombre) {
     const nombreCookie = nombre + "=";
@@ -95,11 +99,13 @@ function obtenerValorCookie(nombre) {
 }
 
 //Esta función actualiza la cookie con el contador de frases generadas
-function cookieFrasesGeneradas() {
+function cookieFrasesGeneradas(n = contador) {//Si no se pasa parámetro se utilizará el valor del contador, si se pasa por ejemplo un 0 se cambiará su valor
+    contador = n;//En caso de pasar un parámetro actualizamos el contador
     var fecha = new Date();
     fecha.setTime(fecha.getTime() + (7 * 24 * 60 * 60 * 1000));//fecha para que expire en una semana
     var expira = "expires=" + fecha.toUTCString();
     document.cookie = "Frases generadas=" + contador + ";" + expira + ";path=/";//Actualizamos la cookie
+    mostrarContador();
 }
 
 function escribirFrase() {

@@ -9,9 +9,9 @@
     <script src="js/main.js"></script>
 </head>
 
-<body>
+<body onload="mostrarContador()">
     <h1>Hablar sin decir nada</h1>
-    <div class="botones"><button onclick="escribirFrase()">Añadir frase al discurso</button> <input type="checkbox" id="repetir"> <label for="repetir">Repetir</label> <button onclick="alert(document.cookie);">Ver cookies</button></div>
+    <div class="botones"><button onclick="escribirFrase()">Añadir frase al discurso</button> <input type="checkbox" id="repetir"> <label for="repetir">Repetir</label><span><button onclick="cookieFrasesGeneradas(0)">Reiniciar</button> Frases generadas:&nbsp;<span id="contador"></span></span></div>
     <h2>Discurso</h2>
     <div id="discurso"></div>
 </body>
