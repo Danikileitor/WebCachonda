@@ -44,7 +44,7 @@ function combinaciones() {
         var div = ventana.document.getElementById("combinaciones");
         calcularCombinaciones();
         div.innerHTML += "<ul>";
-        div.innerHTML += "<li>Poker: " + pokers + " (" + pokers / 100 + "%)</li>"
+        div.innerHTML += "<li>Póker: " + pokers + " (" + pokers / 100 + "%)</li>"
         div.innerHTML += "<li>Escalera Completa: " + completas + " (" + completas / 100 + "%)</li>"
         div.innerHTML += "<li>Doble Pareja: " + doblesparejas + " (" + doblesparejas / 100 + "%)</li>"
         div.innerHTML += "<li>Trío: " + trios + " (" + trios / 100 + "%)</li>"
