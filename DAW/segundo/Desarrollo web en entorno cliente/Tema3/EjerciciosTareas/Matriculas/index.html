@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
 </head>
-<body>
+<body onload="mostrarContador()">
     <h1>Juego de las Matrículas</h1>
     <label for="matricula">Matrícula:</label>
     <input type="number" id="matricula" max="9999" min="0000" value="0000">
     <p id="resultado">&nbsp;</p>
-    <button onclick="jugar()">Jugar</button> <button onclick="combinaciones()">Mostrar todas las combinaciones</button> <button onclick="alert(document.cookie);">Ver cookies</button>
+    <button onclick="jugar()">Jugar</button> <button onclick="combinaciones()">Mostrar todas las combinaciones</button>
+    <p>Veces jugadas: <span id="contador"></span></p>
 </body>
 </html>

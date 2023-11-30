@@ -3,6 +3,10 @@ var doblesparejas, trios, simples, completas, pokers, ventana;
 var contador = obtenerValorCookie("Jugadas");
 contador = contador == null ? 0 : contador;// Si es la primera vez que visitamos la página y no existe la cookie, el valor por defecto será 0
 
+function mostrarContador() {
+    document.getElementById("contador").innerHTML = contador;// Actualizamos el contador en la web
+}
+
 //Con esta función obtendremos el valor actual del contador de veces que se ha jugado
 function obtenerValorCookie(nombre) {
     const nombreCookie = nombre + "=";
@@ -24,6 +28,7 @@ function cookieVecesJugado() {
     fecha.setTime(fecha.getTime() + (7 * 24 * 60 * 60 * 1000));//Fecha para que expire en una semana
     var expira = "expires=" + fecha.toUTCString();
     document.cookie = "Jugadas=" + contador + ";" + expira + ";path=/";//Actualizamos la cookie
+    mostrarContador();
 }
 
 function combinaciones() {

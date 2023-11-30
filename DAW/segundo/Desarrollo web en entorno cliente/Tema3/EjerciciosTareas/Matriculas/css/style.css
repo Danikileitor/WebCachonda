@@ -11,3 +11,9 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
+button + p {
+  border: 1px solid black;
+  padding: 10px;
+  max-width: fit-content;
+}
