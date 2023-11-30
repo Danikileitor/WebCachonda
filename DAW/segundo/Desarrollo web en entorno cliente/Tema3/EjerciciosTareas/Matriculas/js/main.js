@@ -31,6 +31,13 @@ function cookieVecesJugado() {
     mostrarContador();
 }
 
+//Esta función cambia el valor del contador a 0 y actualiza la cookie
+function cookieReiniciar() {
+    contador = 0;
+    document.cookie = "Jugadas=" + contador + ";" + expira + ";path=/";
+    mostrarContador();
+}
+
 function combinaciones() {
     doblesparejas = 0;  // La matrícula tiene 2 pares de números iguales. Ej: 1122 4545 6886
     trios = 0;          // La matrícula tiene 3 números iguales. Ej: 0666 7377
