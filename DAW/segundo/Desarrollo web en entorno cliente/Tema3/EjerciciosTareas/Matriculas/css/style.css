@@ -7,6 +7,7 @@ body {
 
 input[type="number"] {
   width: 2rem;
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
