@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
 </head>
+
 <body onload="mostrarContador()">
     <h1>Juego de las Matrículas</h1>
-    <label for="matricula">Matrícula:</label>
-    <input type="number" id="matricula" max="9999" min="0000" value="0000">
+    <div id="panel">
+        <label for="matricula">Matrícula:</label>
+        <input type="number" id="matricula" max="9999" min="0000" value="0000">
+    </div>
     <p id="resultado">&nbsp;</p>
-    <button onclick="jugar()">Jugar</button> <button onclick="combinaciones()">Mostrar todas las combinaciones</button>
-    <p>Matrículas correctas: <span id="contador"></span></p>
-    <button onclick="cookieVecesJugado(0)">Reiniciar contador</button>
+    <div id="botones">
+        <button onclick="jugar()">Jugar</button> <button onclick="combinaciones()">Mostrar todas las
+            combinaciones</button>
+    </div>
+    <p id="zona-contador">Matrículas correctas: <span id="contador"></span></p>
+    <button onclick="cookieVecesJugado(0)" id="reiniciar">Reiniciar contador</button>
 </body>
+
 </html>
