@@ -1,35 +1,44 @@
-<?php
-function listado($ruta)
-{
-    if ($directorio = opendir($ruta)) {
-        while (false !== ($fichero = readdir($directorio))) {
-            $rutaCompleta = "$ruta/$fichero";
-            if (is_dir($rutaCompleta))
-                echo "<p>Directorio: [$fichero] - " . date("F d Y H:i:s.", filemtime($rutaCompleta)) . '</p>';
-            else
-                echo "<p>Fichero: [$fichero] - " . date("F d Y H:i:s", filemtime($rutaCompleta)) . " - " . filesize($rutaCompleta) . ' bytes.</p>';
-        }
-        closedir($directorio);
-    } else {
-        echo "<font color='red'>¡El directorio indicado no existe!</font>";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3 - Listado</title>
+    <title>Ejercicio 4 - Sugerencias</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        td:first-child {
+            vertical-align: top;
+            max-width: 13rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <?php
-    $ruta = "../../../Parte3/Formularios";
-    listado($ruta);
-    ?>
+    <h1>Sugerencias para nuestra página web</h1>
+    <form name="formulario" action="pagina2.php" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="nombre">Introduzca su nombre:</label></td>
+                <td><input type="text" name="nombre" id="nombre"></td>
+            </tr>
+            <tr>
+                <td><label for="comentario">Comentarios sobre esta página web:</label></td>
+                <td><textarea name="comentario" id="comentario" cols="50" rows="10"></textarea></td>
+            </tr>
+        </table>
+    </form>
 </body>
 
 </html>
