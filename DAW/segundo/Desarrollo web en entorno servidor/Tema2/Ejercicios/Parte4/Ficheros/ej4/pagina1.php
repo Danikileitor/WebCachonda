@@ -37,6 +37,9 @@
                 <td><label for="comentario">Comentarios sobre esta página web:</label></td>
                 <td><textarea name="comentario" id="comentario" cols="50" rows="10"></textarea></td>
             </tr>
+            <td>
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
+            </td>
         </table>
     </form>
 </body>
