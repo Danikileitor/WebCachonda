@@ -1,7 +1,7 @@
 <?php
 if (isset($_REQUEST['enviar'])) {
     if ($fichero = @fopen("viajes.txt", "a")) {
-        $linea = $_REQUEST['nombre'] . ":" . $_REQUEST['destino'] . ":" . $_REQUEST['duracion'] . ":" . $_REQUEST['dias'];
+        $linea = $_REQUEST['nombre'] . ":" . $_REQUEST['destino'] . ":" . $_REQUEST['duracion'] . ":" . $_REQUEST['salida'];
         fwrite($fichero, "$linea\n");
         fclose($fichero);
     }
@@ -93,8 +93,8 @@ if (isset($_REQUEST['enviar'])) {
                 <td><input type="text" name="duracion" id="duracion"></td>
             </tr>
             <tr>
-                <td><label for="dias">Introduzca los días de salida</label></td>
-                <td><input type="text" name="dias" id="dias"></td>
+                <td><label for="salida">Introduzca los días de salida</label></td>
+                <td><input type="text" name="salida" id="salida"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" name="enviar" value="Enviar"></td>
