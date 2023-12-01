@@ -14,7 +14,7 @@ if (isset($_REQUEST['enviar'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1</title>
+    <title>Ejercicio 5 - Travelmas</title>
     <style>
         * {
             font-family: Arial, sans-serif;
@@ -89,19 +89,19 @@ if (isset($_REQUEST['enviar'])) {
         <table>
             <tr>
                 <td><label for="nombre">Introduzca el nombre del circuito</label></td>
-                <td><input type="text" name="nombre" id="nombre"></td>
+                <td><input type="text" name="nombre" id="nombre" required></td>
             </tr>
             <tr>
                 <td><label for="destino">Introduzca el destino</label></td>
-                <td><input type="text" name="destino" id="destino"></td>
+                <td><input type="text" name="destino" id="destino" required></td>
             </tr>
             <tr>
                 <td><label for="duracion">Introduzca la duración</label></td>
-                <td><input type="text" name="duracion" id="duracion"></td>
+                <td><input type="text" name="duracion" id="duracion" required></td>
             </tr>
             <tr>
                 <td><label for="salida">Introduzca los días de salida</label></td>
-                <td><input type="text" name="salida" id="salida"></td>
+                <td><input type="text" name="salida" id="salida" required></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" name="enviar" value="Enviar"></td>
