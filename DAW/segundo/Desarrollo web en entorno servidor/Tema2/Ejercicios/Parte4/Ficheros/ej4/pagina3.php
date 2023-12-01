@@ -7,7 +7,6 @@ function mostrarDatos()
     } else {
         echo "<p>No se pudo acceder al fichero 'datos.txt'</p>";
     }
-    
 }
 ?>
 
