@@ -20,14 +20,33 @@ if (isset($_REQUEST['enviar'])) {
             font-family: Arial, sans-serif;
         }
 
+        body {
+            margin: 0 auto;
+            width: fit-content;
+        }
+
         h1 {
             color: blue;
             font-style: italic;
         }
 
         table {
-            border: 1px dotted blue;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid lightgray;
             padding: 5px;
+        }
+
+        td {
+            background-color: lightyellow;
+        }
+
+        th {
+            background-color: magenta;
         }
     </style>
 </head>
