@@ -3,8 +3,9 @@ function listado($ruta)
 {
     if ($directorio = opendir($ruta)) {
         while (false !== ($fichero = readdir($directorio))) {
-            if (!is_dir($fichero))
-                echo "<p>$fichero: " . date("F d Y H:i:s.", filemtime($fichero)) . '</p>';
+            $rutaCompleta = "$ruta/$fichero";
+            if (is_file($rutaCompleta))
+                echo "<p>$fichero: " . date("F d Y H:i:s.", filemtime($rutaCompleta)) . '</p>';
         }
         closedir($directorio);
     } else {
