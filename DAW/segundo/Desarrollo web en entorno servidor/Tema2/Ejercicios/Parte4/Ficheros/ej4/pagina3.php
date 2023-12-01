@@ -2,7 +2,14 @@
 function mostrarDatos()
 {
     if ($fichero = @fopen("datos.txt", "r")) {
-        echo fread($fichero, filesize("datos.txt"));
+        $contenido = file("datos.txt");
+
+        echo "<pre>";
+        foreach ($contenido as $linea) {
+            echo "$linea\n";
+        }
+        echo "</pre>";
+
         fclose($fichero);
     } else {
         echo "<p>No se pudo acceder al fichero 'datos.txt'</p>";
