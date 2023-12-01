@@ -86,7 +86,7 @@ if (isset($_REQUEST['enviar'])) {
             </tr>
             <tr>
                 <td><label for="destino">Introduzca el destino</label></td>
-                <td><input type="text" name="nomdestinobre" id="destino"></td>
+                <td><input type="text" name="destino" id="destino"></td>
             </tr>
             <tr>
                 <td><label for="duracion">Introduzca la duración</label></td>
