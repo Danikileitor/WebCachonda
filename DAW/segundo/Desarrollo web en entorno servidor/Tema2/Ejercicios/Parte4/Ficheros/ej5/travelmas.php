@@ -55,7 +55,7 @@ if (isset($_REQUEST['enviar'])) {
     <h1>Agencia de viajes travelmas</h1>
     <?php
     if ($fichero = @fopen("viajes.txt", "r") && filesize("viajes.txt") > 0) {
-        $contenido = file("datos.txt");
+        $contenido = file("viajes.txt");
 
         echo "<table>";
         echo "<tr>";
