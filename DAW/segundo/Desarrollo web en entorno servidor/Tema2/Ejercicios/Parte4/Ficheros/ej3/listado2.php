@@ -4,10 +4,8 @@ function listado($ruta)
     if ($directorio = opendir($ruta)) {
         while (false !== ($fichero = readdir($directorio))) {
             $rutaCompleta = "$ruta/$fichero";
-            if (is_dir($rutaCompleta))
-                echo "<p>Directorio: [$fichero] - " . date("F d Y H:i:s.", filemtime($rutaCompleta)) . '</p>';
-            else
-                echo "<p>Fichero: [$fichero] - " . date("F d Y H:i:s", filemtime($rutaCompleta)) . " - " . filesize($rutaCompleta) . ' bytes.</p>';
+            if (is_file($rutaCompleta))
+            echo "<p>Fichero: [$fichero] - " . date("F d Y H:i:s", filemtime($rutaCompleta)) . " - " . filesize($rutaCompleta) . ' bytes.</p>';
         }
         closedir($directorio);
     } else {
