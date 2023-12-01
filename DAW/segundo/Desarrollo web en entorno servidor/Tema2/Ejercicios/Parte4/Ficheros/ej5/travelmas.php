@@ -33,6 +33,11 @@ if (isset($_REQUEST['enviar'])) {
         table {
             border: 2px solid black;
             border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        table+form {
+            margin-top: 20px;
         }
 
         td,
@@ -54,28 +59,30 @@ if (isset($_REQUEST['enviar'])) {
 <body>
     <h1>Agencia de viajes travelmas</h1>
     <?php
-    if ($fichero = @fopen("viajes.txt", "r") && filesize("viajes.txt") > 0) {
-        $contenido = file("viajes.txt");
+    if (filesize("viajes.txt") > 0) {
+        if ($fichero = @fopen("viajes.txt", "r")) {
+            $contenido = file("viajes.txt");
 
-        echo "<table>";
-        echo "<tr>";
-        echo "<th>nombre</th>";
-        echo "<th>destino</th>";
-        echo "<th>duración</th>";
-        echo "<th>salida</th>";
-        echo "</tr>";
-
-        foreach ($contenido as $linea) {
+            echo "<table>";
             echo "<tr>";
-            $celdas = explode(":", $linea);
-            foreach ($celdas as $celda) {
-                echo "<td>$celda</td>";
-            }
-            echo "</td>";
-        }
+            echo "<th>nombre</th>";
+            echo "<th>destino</th>";
+            echo "<th>duración</th>";
+            echo "<th>salida</th>";
+            echo "</tr>";
 
-        echo "</table>";
-        fclose($fichero);
+            foreach ($contenido as $linea) {
+                echo "<tr>";
+                $celdas = explode(":", $linea);
+                foreach ($celdas as $celda) {
+                    echo "<td>$celda</td>";
+                }
+                echo "</td>";
+            }
+
+            echo "</table>";
+            fclose($fichero);
+        }
     }
     ?>
     <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
