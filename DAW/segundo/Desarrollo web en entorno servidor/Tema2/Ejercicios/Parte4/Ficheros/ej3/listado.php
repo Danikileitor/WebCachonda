@@ -1,15 +1,15 @@
 <?php
-function contadorVisitas($fichero = "visitas.txt", $bytes = 8)
+function listado($ruta)
 {
-    $fvisitas = @fopen($fichero, 'r+');
-    $contador = fgets($fvisitas, $bytes);
-
-    echo "<p>Esta es la visita número: $contador</p>";
-    $contador++;
-    rewind($fvisitas);
-    fwrite($fvisitas, $contador);
-
-    fclose($fvisitas);
+    if ($directorio = opendir($ruta)) {
+        while (false !== ($fichero = readdir($directorio))) {
+            if (!is_dir($fichero))
+                echo "<p>$fichero: " . date("F d Y H:i:s.", filemtime($fichero)) . '</p>';
+        }
+        closedir($directorio);
+    } else {
+        echo "<font color='red'>¡El directorio indicado no existe!</font>";
+    }
 }
 ?>
 
@@ -24,7 +24,8 @@ function contadorVisitas($fichero = "visitas.txt", $bytes = 8)
 
 <body>
     <?php
-    contadorVisitas();
+    $ruta = "../../../Parte3/Formularios";
+    listado($ruta);
     ?>
 </body>
 
