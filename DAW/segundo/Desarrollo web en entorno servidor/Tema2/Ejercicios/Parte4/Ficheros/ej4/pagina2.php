@@ -1,14 +1,23 @@
 <?php
-function informar()
+function guardareinformar()
 {
     $nombre = $_REQUEST["nombre"];
     $comentario = $_REQUEST["comentario"];
-    echo "<pre>Los datos se guardaron correctamente:\n";
-    echo "--------------------------------------------------------\n";
-    echo "$nombre\n";
-    echo "$comentario\n";
-    echo "--------------------------------------------------------</pre>";
-    echo "<p><a href='datos.txt'>ver fichero</a></p>";
+    if ($fichero = @fopen("datos.txt", "a")) {
+        fwrite($fichero, "--------------------------------------------------------\n");
+        fwrite($fichero, "$nombre\n");
+        fwrite($fichero, "$comentario\n");
+        fclose($fichero);
+        echo "<pre>Los datos se guardaron correctamente:\n";
+        echo "--------------------------------------------------------\n";
+        echo "$nombre\n";
+        echo "$comentario\n";
+        echo "--------------------------------------------------------</pre>";
+        echo "<p><a href='pagina3.php'>ver fichero</a></p>";
+    } else {
+       echo "<p>No se pudo acceder al fichero 'datos.txt'</p>";
+    }
+    
 }
 ?>
 
@@ -22,7 +31,7 @@ function informar()
 </head>
 
 <body>
-    <?php informar(); ?>
+    <?php guardareinformar(); ?>
 </body>
 
 </html>
