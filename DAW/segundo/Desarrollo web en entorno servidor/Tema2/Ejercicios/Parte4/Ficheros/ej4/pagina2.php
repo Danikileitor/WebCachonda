@@ -8,7 +8,7 @@ function informar()
     echo "$nombre\n";
     echo "$comentario\n";
     echo "--------------------------------------------------------</pre>";
-    echo "<p><a href='#'></a></p>";
+    echo "<p><a href='datos.txt'>ver fichero</a></p>";
 }
 ?>
 
