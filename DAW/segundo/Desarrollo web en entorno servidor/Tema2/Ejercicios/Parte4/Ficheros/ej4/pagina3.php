@@ -6,7 +6,7 @@ function mostrarDatos()
 
         echo "<pre>";
         foreach ($contenido as $linea) {
-            echo "$linea\n";
+            echo "$linea";
         }
         echo "</pre>";
 
