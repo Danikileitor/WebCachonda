@@ -27,7 +27,7 @@
 
 <body>
     <h1>Sugerencias para nuestra página web</h1>
-    <form name="formulario" action="pagina2.php" method="post" enctype="multipart/form-data">
+    <form name="formulario" action="pagina2.php" method="post">
         <table>
             <tr>
                 <td><label for="nombre">Introduzca su nombre:</label></td>
