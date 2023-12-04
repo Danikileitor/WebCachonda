@@ -4,4 +4,5 @@ function ej46() {
     for (let i = 0; i < 1000; i++) {
         rifa.push(random(1, 1000));
     }
+    //No entiendo lo que se pide en el ejercicio
 }
