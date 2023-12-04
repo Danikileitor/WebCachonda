@@ -11,5 +11,5 @@ function ej47() {
     var suma = a + b;
 
     //Mostramos la suma y el tamaño final del vector
-    alert("Suma de los 2 últimos valores: " + suma + "\nTamaño final del vector: " + vector.length);
+    document.getElementById("47").innerHTML = "Suma de los 2 últimos valores: " + suma + "<br>Tamaño final del vector: " + vector.length;
 }
