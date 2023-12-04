@@ -26,8 +26,8 @@ p {
   margin: 0 auto;
 }
 
-pre {
-  text-align: left;
+div + p {
+  margin-top: 10px;
 }
 
 button {

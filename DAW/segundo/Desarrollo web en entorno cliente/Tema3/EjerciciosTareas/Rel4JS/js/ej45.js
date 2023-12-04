@@ -16,7 +16,7 @@ function ej45() {
     }
 
     //Mostramos los tamaños de los vectores 2 y 3
-    alert("Tamaño del vector2: [" + vector2.length + "]\nTamaño del vector3: [" + vector3.length + "]");
+    document.getElementById("45").innerHTML = "Tamaño del vector2: [" + vector2.length + "]<br>Tamaño del vector3: [" + vector3.length + "]<br>";
     //Mostramos los valores de los 3 vectores
-    alert("vector1: [" + vector1.toString() + "]\nvector2: [" + vector2.toString() + "]\nvector3: [" + vector3.toString() + "]");
+    document.getElementById("45").innerHTML += "vector1: [" + vector1.toString() + "]<br>vector2: [" + vector2.toString() + "]<br>vector3: [" + vector3.toString() + "]";
 }
