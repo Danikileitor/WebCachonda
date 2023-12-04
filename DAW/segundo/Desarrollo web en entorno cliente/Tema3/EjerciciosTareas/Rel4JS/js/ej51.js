@@ -12,7 +12,7 @@ function ej51() {
     //Lo rerorremos desde el final hacia el principio
     for (let i = vector.length - 1; i >= 0; i--) {
         if (vector[i] == 2) {
-            vector.splice(i, 1, 1, 1);
+            vector.splice(i, 1, 1, 1);//primer argumento: posición, segundo argumento: cantidad a remplazar (solo 1), los siguientes argumentos son los valores que se van a insertar (en este caso dos valores 1)
         }
     }
 
