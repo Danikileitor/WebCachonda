@@ -6,7 +6,7 @@ function ej51() {
     }
 
     //Mostramos el vector original para luego poder compararlo
-    alert(vector.toString());
+    document.getElementById("51").innerHTML = "Vector original: " + vector.toString();
 
     //Recorremos el array y por cada elemento con valor 2 lo sustituimos por dos elementos con valor 1
     //Lo rerorremos desde el final hacia el principio
@@ -17,5 +17,5 @@ function ej51() {
     }
 
     //Mostramos el vector final
-    alert(vector.toString());
+    document.getElementById("51").innerHTML += "<br>Vector final: " + vector.toString();
 }
