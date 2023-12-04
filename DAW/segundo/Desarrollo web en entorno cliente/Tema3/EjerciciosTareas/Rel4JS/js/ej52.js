@@ -6,7 +6,7 @@ function ej52() {
     }
 
     //Mostramos el vector original para luego poder compararlo
-    alert(vector.toString());
+    document.getElementById("52").innerHTML = "Vector original: " + vector.toString();
 
     //Obtenemos el valor más pequeño y su posición
     var menor = Math.min(...vector);
@@ -16,5 +16,5 @@ function ej52() {
     var vector2 = vector.slice(posMenor);
 
     //Mostramos el nuevo vector
-    alert(vector2.toString());
+    document.getElementById("52").innerHTML += "<br>Vector final: " + vector2.toString();
 }
