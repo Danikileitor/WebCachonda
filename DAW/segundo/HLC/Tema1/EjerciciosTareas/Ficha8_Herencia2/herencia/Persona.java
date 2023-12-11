@@ -43,4 +43,12 @@ public class Persona {
     public String toString() {
         return "NIF: " + getNif() + "\nAltura: " + getAltura() + " cm\nEdad: " + getEdad();
     }
+
+    public void hablar() {
+        System.out.println("Buenos días, ¿cómo estas?");
+    }
+
+    public void comer() {
+        System.out.println("*Se pone a comer*");
+    }
 }
