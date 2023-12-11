@@ -38,4 +38,9 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return "NIF: " + getNif() + "\nAltura: " + getAltura() + " cm\nEdad: " + getEdad();
+    }
 }
