@@ -1,0 +1,22 @@
+body {
+  margin: 0 auto;
+  max-width: max-content;
+}
+
+h1,
+h2,
+p {
+  max-width: max-content;
+  margin: 10px auto;
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}

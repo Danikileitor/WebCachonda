@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana 1</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        p {
+            font-size: 14px;
+        }
+    </style>
+    <script src="../js/ventana1.js"></script>
+</head>
+
+<body>
+    <h1>Ventana 1</h1>
+    <p>
+        <label for="usuario">Usuario:</label> <input type="text" id="usuario" name="usuario">
+    </p>
+    <p>
+        <label for="contra1">Contraseña:</label> <input type="password" id="contra1" name="contra1">
+    </p>
+    <p>
+        <label for="contra2">Nueva Contraseña:</label> <input type="password" id="contra2" name="contra2">
+    </p>
+    <p>
+        <button onclick="usuario.login()">Login</button>
+    </p>
+    <p>
+        <button onclick="usuario.cambiarContra()">Cambiar contraseña</button>
+    </p>
+</body>
+
+</html>
