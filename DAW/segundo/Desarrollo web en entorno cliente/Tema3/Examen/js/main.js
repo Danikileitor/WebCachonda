@@ -6,27 +6,35 @@ var lista, valores;//Variables para los arrays
 function abrirVentana1() {
     var parametros = "width=300, height=300, left=0, top=0 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
     ventana1 = window.open("ventanas/ventana1.html", "ventana1", parametros);
-    ventana1.document.body.style.backgroundColor = "lightgreen";
+    ventana1.onload = () => {
+        ventana1.document.body.style.backgroundColor = "lightgreen";
+    }
 }
 
 function abrirVentana2() {
     var parametros = "width=300, height=300, left=1920, top=0 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
     ventana2 = window.open("ventanas/ventana2.html", "ventana2", parametros);
-    ventana2.document.body.style.backgroundColor = "lightblue";
-    mostrarLista();
+    ventana2.onload = () => {
+        ventana2.document.body.style.backgroundColor = "lightblue";
+        mostrarLista();
+    }
 }
 
 function abrirVentana3() {
     var parametros = "width=300, height=300, left=1920, top=1080 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
     ventana3 = window.open("ventanas/ventana3.html", "ventana3", parametros);
-    ventana3.document.body.style.backgroundColor = "pink";
-    mostrarImpares();
+    ventana3.onload = () => {
+        ventana3.document.body.style.backgroundColor = "pink";
+        mostrarImpares();
+    }
 }
 
 function abrirVentana4() {
     var parametros = "width=300, height=300, left=0, top=1080 resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
     ventana4 = window.open("ventanas/ventana4.html", "ventana4", parametros);
-    ventana4.document.body.style.backgroundColor = "orange";
+    ventana4.onload = () => {
+        ventana4.document.body.style.backgroundColor = "orange";
+    }
 }
 
 //Función para generar un número aleatorio que usaremos más adelante
