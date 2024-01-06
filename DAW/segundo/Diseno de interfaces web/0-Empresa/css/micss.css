@@ -341,14 +341,13 @@ iframe {
     padding: 0;
   }
 
-  .logo > img {
+  .logo > picture img {
     animation: entrar-por-izquierda 2s;
     transition: transform 2s ease-out 1s;
   }
 
-  .logo:hover > img {
-    transform: scale(1, 1.5) skew(30deg, 5deg) translate(100px, -20px)
-      rotate(180deg);
+  .logo:hover > picture img {
+    transform: scale(1, 1.5) skew(30deg, 5deg) translate(100px, -20px) rotate(180deg);
   }
 }
 
