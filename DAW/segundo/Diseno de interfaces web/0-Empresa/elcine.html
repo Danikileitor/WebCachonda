@@ -32,7 +32,11 @@
                 </div>
             </div>
             <div class="col logo">
-                <img src="img/logo.png" class="img-fluid rounded-top" alt="Ocine Copo">
+                <picture>
+                    <source type="image/avif" srcset="img/logo-S.avif 576w, img/logo-M.avif 768w, img/logo-L.avif 992w, img/logo-XL.avif 2000w" sizes="100vw, 240px">
+                    <source type="image/webp" srcset="img/logo-S.webp 576w, img/logo-M.webp 768w, img/logo-L.webp 992w, img/logo-XL.webp 2000w" sizes="100vw, 240px">
+                    <img src="img/logo.png" class="img-fluid rounded-top" alt="Ocine Copo">
+                </picture>
             </div>
             <!-- Menú -->
             <nav class="col navbar navbar-expand-sm navbar-light">
@@ -169,7 +173,13 @@
                 <p>Con la financiación del Instituto de la Cinematografía y de las Artes Audiovisuales/Ministerio de Cultura y Deporte/Gobierno de España</p>
             </div>
             <div class="col-12 col-md-6 contacto">
-                <p><img class="img-fluid" src="img/legal_footer.png" alt="legal"></p><br>
+                <p>
+                    <picture>
+                        <source type="image/avif" srcset="img/legal_footer-S.avif 576w, img/legal_footer-M.avif 768w, img/legal_footer-L.avif 992w, img/legal_footer-XL.avif 2000w" sizes="100vw, 613px">
+                        <source type="image/webp" srcset="img/legal_footer-S.webp 576w, img/legal_footer-M.webp 768w, img/legal_footer-L.webp 992w, img/legal_footer-XL.webp 2000w" sizes="100vw, 613px">
+                        <img class="img-fluid" src="img/legal_footer.png" alt="legal">
+                    </picture>
+                </p><br>
                 <p><a href="#">Aviso legal</a>: <a href="#">Política de privacidad</a>, <a href="#">Política de compra</a> y <a href="#">Política de cookies</a></p>
             </div>
             <div class="col-12 col-md-6 align-self-center self text-end">
