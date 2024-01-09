@@ -1,6 +1,6 @@
 package herencia;
 
-class Tipo16 extends Articulo {
+public class Tipo16 extends Articulo {
     private static final double TIPO = 16.0;
 
     public Tipo16(String nombre, double precio) {

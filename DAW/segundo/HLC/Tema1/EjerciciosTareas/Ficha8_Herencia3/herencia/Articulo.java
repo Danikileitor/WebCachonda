@@ -1,6 +1,6 @@
 package herencia;
 
-class Articulo {
+public class Articulo {
     private String nombre;
     private double precio;
 
