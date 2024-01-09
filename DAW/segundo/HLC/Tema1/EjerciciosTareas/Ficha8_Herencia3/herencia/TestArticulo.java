@@ -1,6 +1,6 @@
 package herencia;
 
-public class Main {
+public class TestArticulo {
     public static void main(String[] args) {
         Tipo4 articuloTipo4 = new Tipo4("Articulo Tipo 4", 100.0);
         Tipo7 articuloTipo7 = new Tipo7("Articulo Tipo 7", 150.0);
