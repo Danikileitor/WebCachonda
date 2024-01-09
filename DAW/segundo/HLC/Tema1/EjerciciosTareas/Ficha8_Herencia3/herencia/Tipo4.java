@@ -8,7 +8,7 @@ public class Tipo4 extends Articulo {
     }
 
     public double getParteIVA() {
-        return getPrecio() * TIPO / 100;
+        return super.getPrecio() * TIPO / 100;
     }
 
     @Override
