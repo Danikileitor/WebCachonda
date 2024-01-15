@@ -4,8 +4,8 @@ import java.io.IOException;
 
 public class Lectura {
     public static void main(String[] args) {
-        // Ruta del archivo de texto
-        String archivo = "/home/daniel/GitHub/WebCachonda/DAW/segundo/HLC/Tema1/EjerciciosTareas/Ficha10_Ficheros1/archivo.txt";
+        // Ruta del archivo de texto (modificar antes de iniciar el programa)
+        String archivo = "archivo.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
