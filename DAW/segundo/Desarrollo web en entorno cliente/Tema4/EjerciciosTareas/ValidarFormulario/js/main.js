@@ -22,7 +22,23 @@ inputApellidos.addEventListener('blur', function () {
 
 inputEdad.addEventListener('blur', function () {
     if (isNaN(this.value) || this.value < 0 || this.value > 105) {
-        errores.innerHTML = "¡El campo edad tiene que contener un valor numérico entre 0 y 105!";
+        errores.innerHTML = "*El campo edad tiene que contener un valor numérico entre 0 y 105";
+        this.value = "";
+        this.focus();
+    }
+});
+
+inputNIF.addEventListener('blur', function () {
+    const validarNIF = /^\d{8}-[a-zA-Z]$/;
+    /*
+    La expresión se escrite entre barras /expresión/
+    Con los caracteres ^ y $ indicamos inicio y final de la expresión
+    La expresión \d{8} valida 8 números
+    Se indica un '-' para validar que se ha escrito un guión entre los números y la letra
+    Posteriormente se indica la expresión [a-zA-Z] que valida 1 letra ya sea minúscula o mayúscula
+    */
+    if (validarNIF.test(this.value) === false) {
+        errores.innerHTML = "*El NIF introducido no es correcto";
         this.value = "";
         this.focus();
     }
