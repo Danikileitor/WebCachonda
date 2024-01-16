@@ -1,5 +1,6 @@
 //Daniel Marcos Guerra Gómez
 
+const errores = document.getElementById("errores");
 const inputNombre = document.getElementById("nombre");
 const inputApellidos = document.getElementById("apellidos");
 const inputEdad = document.getElementById("edad");
@@ -14,7 +15,7 @@ inputApellidos.addEventListener('blur', function () {
 
 inputEdad.addEventListener('blur', function () {
     if (isNaN(this.value) || this.value < 0 || this.value > 105) {
-        alert("¡El campo edad tiene que contener un valor numérico entre 0 y 105!");
+        errores.innerHTML = "¡El campo edad tiene que contener un valor numérico entre 0 y 105!";
         this.value = "";
         this.focus();
     }
