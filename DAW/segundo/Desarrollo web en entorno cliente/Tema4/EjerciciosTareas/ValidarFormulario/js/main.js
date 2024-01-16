@@ -1,9 +1,16 @@
 //Daniel Marcos Guerra Gómez
 
 const errores = document.getElementById("errores");
+const intentos = document.getElementById("intentos");
 const inputNombre = document.getElementById("nombre");
 const inputApellidos = document.getElementById("apellidos");
 const inputEdad = document.getElementById("edad");
+const inputNIF = document.getElementById("nif");
+const inputEmail = document.getElementById("email");
+const inputProvincia = document.getElementById("provincia");
+const inputFecha = document.getElementById("fecha");
+const inputTelefono = document.getElementById("telefono");
+const inputHora = document.getElementById("hora");
 
 inputNombre.addEventListener('blur', function () {
     this.value = this.value.toUpperCase();
