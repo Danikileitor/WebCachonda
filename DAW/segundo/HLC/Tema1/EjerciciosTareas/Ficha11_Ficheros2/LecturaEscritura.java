@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Lectura {
+public class LecturaEscritura {
     public static void main(String[] args) {
         // Ruta de los archivos de texto (modificar antes de iniciar el programa)
         String entrada = "fichero-a.txt";
