@@ -72,3 +72,7 @@ inputProvincia.addEventListener('blur', function () {
         errores.innerHTML = "";
     }
 });
+
+inputFecha.addEventListener('blur', function () {
+    const validarFecha = /^(0[1-9]|[12][0-9]|3[01])[-\/](0[1-9]|1[0-2])[-\/]\d{4}$/;
+});
