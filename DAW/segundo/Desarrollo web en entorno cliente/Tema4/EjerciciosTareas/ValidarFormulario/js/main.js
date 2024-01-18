@@ -32,7 +32,7 @@ inputEdad.addEventListener('blur', function () {
 inputNIF.addEventListener('blur', function () {
     const validarNIF = /^\d{8}-[a-zA-Z]$/;
     /*
-    La expresión se escrite entre barras /expresión/
+    La expresión se escribe entre barras /expresión/
     Con los caracteres ^ y $ indicamos inicio y final de la expresión
     La expresión \d{8} valida 8 números
     Se indica un '-' para validar que se ha escrito un guión entre los números y la letra
@@ -49,7 +49,7 @@ inputNIF.addEventListener('blur', function () {
 inputEmail.addEventListener('blur', function () {
     const validarEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     /*
-    La expresión se escrite entre barras /expresión/
+    La expresión se escribe entre barras /expresión/
     Con los caracteres ^ y $ indicamos inicio y final de la expresión
     La expresión [a-zA-Z0-9._%+-]+ valida que se escriban 1 o más caracteres alfanuméricos, además de los caracteres ._%+-
     Se valida que entre la expresión anterior y la siguiente se escriba un @
@@ -75,4 +75,19 @@ inputProvincia.addEventListener('blur', function () {
 
 inputFecha.addEventListener('blur', function () {
     const validarFecha = /^(0[1-9]|[12][0-9]|3[01])[-\/](0[1-9]|1[0-2])[-\/]\d{4}$/;
+    /*
+    La expresión se escribe entre barras /expresión/
+    Con los caracteres ^ y $ indicamos inicio y final de la expresión
+    La expresión (0[1-9]|[12][0-9]|3[01]) valida que se escriban los días del 1 al 31
+    Se valida que a continuación se escriba un guión o una barra
+    La expresión (0[1-9]|1[0-2]) valida que se esctiban los meses del 1 al 12
+    Se valida que a continuación se escriba un guión o una barra
+    La expresión \d{4} valida que se escriban exactamente 4 dígitos para el año
+    */
+    if (validarFecha.test(this.value) === false) {
+        errores.innerHTML = "*La fecha introducida no es correcta";
+        this.focus();
+    } else {
+        errores.innerHTML = "";
+    }
 });
