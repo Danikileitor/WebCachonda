@@ -106,3 +106,14 @@ inputTelefono.addEventListener('blur', function () {
         errores.innerHTML = "";
     }
 });
+
+inputHora.addEventListener('blur', function () {
+    const validarHora = /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;
+    /*
+    La expresión se escribe entre barras /expresión/
+    Con los caracteres ^ y $ indicamos inicio y final de la expresión
+    La expresión (0[0-9]|1[0-9]|2[0-3]) valida que se ecriban las horas correctamente entre 00 y 23
+    A continación se valida que se ha escrito ':' (dos puntos)
+    La expresión [0-5][0-9] valida que se esctiban los minutos correctamente de 00 a 59
+    */
+});
