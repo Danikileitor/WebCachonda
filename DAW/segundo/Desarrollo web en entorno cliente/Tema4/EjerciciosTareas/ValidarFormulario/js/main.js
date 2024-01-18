@@ -91,3 +91,18 @@ inputFecha.addEventListener('blur', function () {
         errores.innerHTML = "";
     }
 });
+
+inputTelefono.addEventListener('blur', function () {
+    const validarTLF = /^\d{9}$/;
+    /*
+    La expresión se escribe entre barras /expresión/
+    Con los caracteres ^ y $ indicamos inicio y final de la expresión
+    La expresión \d{9} valida que se escriban 9 dígitos obligatoriamente
+    */
+    if (validarTLF.test(this.value) === false) {
+        errores.innerHTML = "*El teléfono introducido no es correcto";
+        this.focus();
+    } else {
+        errores.innerHTML = "";
+    }
+});
