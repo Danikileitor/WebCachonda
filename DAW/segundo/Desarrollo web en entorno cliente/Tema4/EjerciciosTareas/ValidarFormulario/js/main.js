@@ -1,5 +1,6 @@
 //Daniel Marcos Guerra Gómez
 
+const formulario = document.getElementById("formulario");
 const errores = document.getElementById("errores");
 const intentos = document.getElementById("intentos");
 const inputNombre = document.getElementById("nombre");
@@ -39,7 +40,7 @@ inputNIF.addEventListener('blur', function () {
     Posteriormente se indica la expresión [a-zA-Z] que valida 1 letra ya sea minúscula o mayúscula
     */
     if (validarNIF.test(this.value) === false) {
-        errores.innerHTML = "*El NIF introducido no es correcto";
+        errores.innerHTML = "*El NIF introducido no es válido";
         this.focus();
     } else {
         errores.innerHTML = "";
@@ -58,7 +59,7 @@ inputEmail.addEventListener('blur', function () {
     LA expresión [a-zA-Z]{2,} valida que se escriban 2 o más caracteres alfabéticos
     */
     if (validarEmail.test(this.value) === false) {
-        errores.innerHTML = "*El email introducido no es correcto";
+        errores.innerHTML = "*El email introducido no es válido";
         this.focus();
     } else {
         errores.innerHTML = "";
@@ -85,7 +86,7 @@ inputFecha.addEventListener('blur', function () {
     La expresión \d{4} valida que se escriban exactamente 4 dígitos para el año
     */
     if (validarFecha.test(this.value) === false) {
-        errores.innerHTML = "*La fecha introducida no es correcta";
+        errores.innerHTML = "*La fecha introducida no es válida";
         this.focus();
     } else {
         errores.innerHTML = "";
@@ -100,7 +101,7 @@ inputTelefono.addEventListener('blur', function () {
     La expresión \d{9} valida que se escriban 9 dígitos obligatoriamente
     */
     if (validarTLF.test(this.value) === false) {
-        errores.innerHTML = "*El teléfono introducido no es correcto";
+        errores.innerHTML = "*El teléfono introducido no es válido";
         this.focus();
     } else {
         errores.innerHTML = "";
@@ -116,4 +117,23 @@ inputHora.addEventListener('blur', function () {
     A continación se valida que se ha escrito ':' (dos puntos)
     La expresión [0-5][0-9] valida que se esctiban los minutos correctamente de 00 a 59
     */
+    if (validarHora.test(this.value) === false) {
+        errores.innerHTML = "*La hora introducida no es válida";
+        this.focus();
+    } else {
+        errores.innerHTML = "";
+    }
+});
+
+formulario.addEventListener('submit', function (evento) {
+    // Previene el envío automático del formulario
+    evento.preventDefault();
+
+    const confirmacion = confirm('¿Estás seguro de que deseas enviar el formulario?');
+
+    if (confirmacion) {
+        this.submit();
+    } else {
+        alert("Envío cancelado");
+    }
 });
