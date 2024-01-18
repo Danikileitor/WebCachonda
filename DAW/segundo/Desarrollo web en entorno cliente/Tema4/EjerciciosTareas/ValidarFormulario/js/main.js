@@ -15,10 +15,28 @@ const inputHora = document.getElementById("hora");
 
 inputNombre.addEventListener('blur', function () {
     this.value = this.value.toUpperCase();
+
+    const validarNombre = /^[a-zA-Z ]+$/;
+
+    if (validarNombre.test(this.value) === false) {
+        errores.innerHTML = "*El nombre introducido no es válido";
+        this.focus();
+    } else {
+        errores.innerHTML = "";
+    }
 });
 
 inputApellidos.addEventListener('blur', function () {
     this.value = this.value.toUpperCase();
+
+    const validarApellidos = /^[a-zA-Z ]+$/;
+
+    if (validarApellidos.test(this.value) === false) {
+        errores.innerHTML = "*Los apellidos introducidos no son válidos";
+        this.focus();
+    } else {
+        errores.innerHTML = "";
+    }
 });
 
 inputEdad.addEventListener('blur', function () {
