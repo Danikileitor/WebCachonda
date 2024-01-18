@@ -23,8 +23,9 @@ inputApellidos.addEventListener('blur', function () {
 inputEdad.addEventListener('blur', function () {
     if (isNaN(this.value) || this.value < 0 || this.value > 105) {
         errores.innerHTML = "*El campo edad tiene que contener un valor numérico entre 0 y 105";
-        this.value = "";
         this.focus();
+    } else {
+        errores.innerHTML = "";
     }
 });
 
@@ -39,8 +40,9 @@ inputNIF.addEventListener('blur', function () {
     */
     if (validarNIF.test(this.value) === false) {
         errores.innerHTML = "*El NIF introducido no es correcto";
-        this.value = "";
         this.focus();
+    } else {
+        errores.innerHTML = "";
     }
 });
 
@@ -57,7 +59,16 @@ inputEmail.addEventListener('blur', function () {
     */
     if (validarEmail.test(this.value) === false) {
         errores.innerHTML = "*El email introducido no es correcto";
-        this.value = "";
         this.focus();
+    } else {
+        errores.innerHTML = "";
+    }
+});
+
+inputProvincia.addEventListener('blur', function () {
+    if (this.value === '' || this.value === "0") {
+        errores.innerHTML = "*Selecciona una provincia";
+    } else {
+        errores.innerHTML = "";
     }
 });
