@@ -43,3 +43,21 @@ inputNIF.addEventListener('blur', function () {
         this.focus();
     }
 });
+
+inputEmail.addEventListener('blur', function () {
+    const validarEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    /*
+    La expresión se escrite entre barras /expresión/
+    Con los caracteres ^ y $ indicamos inicio y final de la expresión
+    La expresión [a-zA-Z0-9._%+-]+ valida que se escriban 1 o más caracteres alfanuméricos, además de los caracteres ._%+-
+    Se valida que entre la expresión anterior y la siguiente se escriba un @
+    La expresión [a-zA-Z0-9.-]+ valida que se escriba 1 o más caracteres alfanuméricos con la posibilidad de incluir puntos o guiones
+    Se valida que entre la expresión anterior y la siguiente se escriba un punto
+    LA expresión [a-zA-Z]{2,} valida que se escriban 2 o más caracteres alfabéticos
+    */
+    if (validarEmail.test(this.value) === false) {
+        errores.innerHTML = "*El email introducido no es correcto";
+        this.value = "";
+        this.focus();
+    }
+});
