@@ -11,7 +11,11 @@ grosor del borde de la tabla mediante un boton.
       P&aacute;gina con Javascript.
    </title>
    <script language="javascript">
-
+      function leerBorde() {
+         tabla = document.getElementById("tabla1");
+         const grosorBorde = window.getComputedStyle(tabla).borderWidth;
+         document.getElementById("borde").innerHTML = grosorBorde;
+      }
    </script>
 </head>
 
@@ -53,8 +57,10 @@ grosor del borde de la tabla mediante un boton.
       </tr>
    </table>
 
-   <p>
-   </p>
+   <div style="display: inline-block; margin-left: 10px;">
+      <button onclick="leerBorde()">Ver el grosor del borde de la tabla</button>
+      <p id="borde"></p>
+   </div>
 
 </body>
 
