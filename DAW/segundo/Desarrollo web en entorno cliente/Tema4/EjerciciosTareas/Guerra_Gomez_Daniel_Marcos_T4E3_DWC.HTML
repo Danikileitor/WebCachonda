@@ -7,10 +7,11 @@
    <script language="javascript">
       function crearNodo() {
          nodoImagen = document.getElementById("imagen");
+         nodoTitulo = document.getElementById("titulo");
       }
 
       function agregar() {
-         nodoImagen.setAttribute("title", "Trozo de hielo");
+         nodoImagen.setAttribute("title", nodoTitulo.value);
       }
 
       function eliminar() {
@@ -20,12 +21,13 @@
 </head>
 
 <body onLoad="crearNodo();">
-   <img id="imagen"
-      src="iceberg.jpg">
-   <br>
+   <img id="imagen" src="iceberg.jpg">
+   <br><br>
    <form>
+      <input type="text" id="titulo">
+      <br><br>
       <input type="button" value="Agregar 'title' a la imagen" onClick="agregar();">
-      <br>
+      <br><br>
       <input type="button" value="Borrar 'title' de la imagen" onClick="eliminar();">
    </form>
 </body>
