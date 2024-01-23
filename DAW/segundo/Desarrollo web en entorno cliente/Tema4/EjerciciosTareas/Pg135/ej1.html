@@ -12,11 +12,21 @@
     <button type="submit" onclick="modificarTexto ('reducir', 0.05, 'parrafol'); ">Reducir</button>
     <button type="submit" onclick="modificarTexto ('original', 0.05, 'parrafol'); ">Original</button>
 
+    <p id="parrafo2">Texto del segundo párrafo</p>
+    <button type="submit" onclick="modificarTexto ('aumentar', 0.05, 'parrafo2'); ">Agrandar</button>
+    <button type="submit" onclick="modificarTexto ('reducir', 0.05, 'parrafo2'); ">Reducir</button>
+    <button type="submit" onclick="modificarTexto ('original', 0.05, 'parrafo2'); ">Original</button>
+
+    <p id="parrafo3">Texto del tercer párrafo</p>
+    <button type="submit" onclick="modificarTexto ('aumentar', 0.05, 'parrafo3'); ">Agrandar</button>
+    <button type="submit" onclick="modificarTexto ('reducir', 0.05, 'parrafo3'); ">Reducir</button>
+    <button type="submit" onclick="modificarTexto ('original', 0.05, 'parrafo3'); ">Original</button>
+
     <script>
         var tamano = 1;
         var tamanoOriginal = 1;
-        function modificarTexto(elEvento, pixel, id) {
-            var elemento = document.getElementById(id);
+        function modificarTexto(elEvento, pixel, id) {//Se añade el parámetro id
+            var elemento = document.getElementById(id);//Se cambia la id a buscar por la del parámetro introducido
             switch (elEvento) {
                 case 'aumentar':
                     if (tamano > 2) {
