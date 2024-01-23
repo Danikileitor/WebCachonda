@@ -22,7 +22,7 @@
         @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
         $error = $dwes->connect_errno;
         if ($error == null) {
-            $resultado = $dwes->query('SELECT titulo, texto, categoria, fecha, imagen FROM noticias ORDER BY fecha');
+            $resultado = $dwes->query('SELECT titulo, texto, categoria, fecha, imagen FROM noticias ORDER BY fecha DESC');
             $noticia = $resultado->fetch_object();
             while ($noticia != null) {
                 print "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td></tr>";
