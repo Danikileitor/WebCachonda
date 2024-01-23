@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    Hola
+    <h1>Consulta de noticias</h1>
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Texto</th>
+            <th>Categoría</th>
+            <th>Fecha</th>
+            <th>Imagen</th>
+        </tr>
+    </table>
 </body>
 
 </html>
