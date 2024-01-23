@@ -8,15 +8,15 @@
 
 <body>
     <p id="parrafol">Texto a agrandar, reducir o dejar de forma original</p>
-    <button type="submit" onclick="modificarTexto ('aumentar', 0.05); ">Agrandar</button>
-    <button type="submit" onclick="modificarTexto ('reducir', 0.05); ">Reducir</button>
-    <button type="submit" onclick="modificarTexto ('original', 0.05); ">Original</button>
+    <button type="submit" onclick="modificarTexto ('aumentar', 0.05, 'parrafol'); ">Agrandar</button>
+    <button type="submit" onclick="modificarTexto ('reducir', 0.05, 'parrafol'); ">Reducir</button>
+    <button type="submit" onclick="modificarTexto ('original', 0.05, 'parrafol'); ">Original</button>
 
     <script>
         var tamano = 1;
         var tamanoOriginal = 1;
-        function modificarTexto(elEvento, pixel) {
-            var elemento = document.getElementById('parrafol');
+        function modificarTexto(elEvento, pixel, id) {
+            var elemento = document.getElementById(id);
             switch (elEvento) {
                 case 'aumentar':
                     if (tamano > 2) {
