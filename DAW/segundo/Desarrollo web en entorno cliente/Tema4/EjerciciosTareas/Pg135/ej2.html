@@ -11,6 +11,19 @@
         <input type="text" name="apellidos" id="apellidos">
     </form>
     <hr>
-    <button>Validar</button>
+    <button onclick="validar()">Validar</button>
+
+    <script>
+        function validar() {
+            nombre = document.getElementById("nombre").value;
+            apellidos = document.getElementById("apellidos").value;
+
+            if ((nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) && (apellidos == null || apellidos.length == 0 || /^\s+$/.test(apellidos))) {
+                alert("Ambos campos han de estar rellenos");
+            } else {
+                alert("Formulario validado correctamente");
+            }
+        }
+    </script>
 </body>
 </html>
