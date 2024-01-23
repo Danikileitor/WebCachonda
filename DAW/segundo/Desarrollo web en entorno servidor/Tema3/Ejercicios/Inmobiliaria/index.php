@@ -18,6 +18,9 @@
             <th>Fecha</th>
             <th>Imagen</th>
         </tr>
+        <?php
+        
+        ?>
     </table>
 </body>
 
