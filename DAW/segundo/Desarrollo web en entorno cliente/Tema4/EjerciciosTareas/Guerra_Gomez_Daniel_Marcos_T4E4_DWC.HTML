@@ -4,7 +4,25 @@
    <title>
       P&aacute;gina con Javascript.
    </title>
+   <script>
+      function crearNodos() {
+         cabecera = document.getElementById("cabecera");
+         btnCambiar = document.getElementById("cambiar");
+         btnRestaurar = document.getElementById("restaurar");
+      }
 
+      function cambiar() {
+         cabecera.innerHTML = "Se ha cambiado la cabecera.";
+         btnCambiar.style.display = "none";
+         btnRestaurar.style.display = "";
+      }
+
+      function restaurar() {
+         cabecera.innerHTML = "Esto es la cabecera de la tabla.";
+         btnRestaurar.style.display = "none";
+         btnCambiar.style.display = "";
+      }
+   </script>
 </head>
 
 <body onLoad="crearNodos();">
@@ -50,6 +68,11 @@
    </table>
 
    <br>
+
+   <center>
+      <button id="cambiar" onclick="cambiar()">Cambiar cabecera</button>
+      <button id="restaurar" onclick="restaurar()" style="display: none;">Restaurar cabecera</button>
+   </center>
 
 </body>
 
