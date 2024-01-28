@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="css/principal.css" rel="stylesheet" type="text/css" />
+    <link href="css/pokedex.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/pokedex.js"></script>
+    <title>Pokeinfo - Pokédex</title>
+  </head>
+  <body onload="getPokemon(1)">
+    <header id="inicio">
+        <marquee behavior="alternate"><img src="img/pokemon/025.png" alt="Pikachu"><img src="img/pokemon/001.png" alt="Bulbasaur"><img src="img/pokemon/004.png" alt="Charmander"><img src="img/pokemon/007.png" alt="Squirtle"><img src="img/pokemon/132.png" alt="Ditto"><h1>Pokeinfo</h1><img src="img/pokemon/417.png" alt="Pachirisu"><img src="img/pokemon/252.png" alt="Treecko"><img src="img/pokemon/255.png" alt="Torchic"><img src="img/pokemon/258.png" alt="Mudkip"><img src="img/pokemon/133.png" alt="Eevee"></marquee>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Inicio"><img src="img/pokeball.svg" width="15"> Home</a></li>
+            <li class="pokedex">
+              <a href="pokedex.html" title="Pokédex"><img src="img/pokeball.svg" width="15"> Pokédex</a>
+              <a href="kanto.html" title="Kanto" class="contenido">Kanto</a>
+              <a href="johto.html" title="Johto" class="contenido">Johto</a>
+              <a href="hoenn.html" title="Hoenn" class="contenido">Hoenn</a>
+              <a href="sinnoh.html" title="Sinnoh" class="contenido">Sinnoh</a>
+              <a href="teselia.html" title="Teselia" class="contenido">Teselia</a>
+              <a href="kalos.html" title="Kalos" class="contenido">Kalos</a>
+              <a href="alola.html" title="Alola" class="contenido">Alola</a>
+              <a href="galar.html" title="Galar" class="contenido">Galar</a>
+              <a href="hisui.html" title="Hisui" class="contenido">Hisui</a>
+              <a href="paldea.html" title="Paldea" class="contenido">Paldea</a>
+            </li>
+            <li><a href="curiosidades.html" title="Curiosidades"><img src="img/pokeball.svg" width="15px"> Curiosidades</a></li>
+            <li><a href="contacto.html" title="Contacto"><img src="img/pokeball.svg" width="15px"> Contacto</a></li>
+        </ul>
+    <audio controls><source src="audio/musica.mp3" type="audio/mpeg"></audio>
+    </nav>
+    <section>
+      <article>
+        <div class="lapokedex">
+          <div class="info-display center">
+            <div class="name-display">Pokédex nacional</div>
+          </div>
+          <div class="info-display center">
+            <form name="pokemonKeySend" method="POST" action="">
+              <input type="text" id="pokemonId" name="pokemonId" class="id-display" value="" onKeyUp="pokemonKeyId()"/>
+            </form>
+            <div class="name-display">
+              <b id="name-display"></b>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+          <div class="pokemon-display">
+            <div class="pokemon">
+              <img id="imgPokemon" src="" width="100%" height="100%">
+            </div>
+            <div class="pokemon type">
+              <span id="pokemonType"></span>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="button" onClick="previous()">&lt;&lt; Anterior</div>
+            <div class="button" onClick="next()">Siguiente &gt;&gt;</div>
+          </div>
+          <div class="center">
+            <div class="button" id="bshiny" onClick="marcar('shiny');getPokemon(document.getElementById('pokemonId').value)"><input id="shiny" type="checkbox" hidden disabled>Shiny</div>
+            <div class="button" onClick="vermasinfo()">Más info +</div>
+          </div>
+          <div class="api">
+            API: <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co/</a>
+          </div>
+        </div>
+      </article>
+      <article class="oculto" id="masinfo">
+        <div class="lapokedex">
+          <div class="dato-display center">
+            <div class="masinfo-title">Información</div>
+          </div>
+          <div class="dato-display center">
+            <div class="dato">Categoría</div>
+            <input class="dato" id="categoria" type="text" value="" disabled>
+          </div>
+          <div class="dato-display center">
+            <div class="dato">Altura</div>
+            <input class="dato" id="altura" type="text" value="" disabled>
+          </div>
+          <div class="dato-display center">
+            <div class="dato">Peso</div>
+            <input class="dato" id="peso" type="text" value="" disabled>
+          </div>
+          <div class="dato-display center">
+            <div class="dato">Habilidad</div>
+            <input class="dato" id="habilidad" type="text" value="" disabled>
+          </div>
+          <div class="center">
+            <textarea class="dato-desc" id="desc-habilidad" disabled></textarea>
+          </div>
+          <div class="center">
+            <div class="desc-title">Nota sobre el pokémon</div>
+          </div>
+          <div class="center">
+            <textarea class="dato-desc" id="descripcion" disabled></textarea>
+          </div>
+          <div class="api">
+            Información adicional
+          </div>
+        </div>
+      </article>
+    </section>
+    <aside>
+      <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
+    </aside>
+    <footer>
+      <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img src="img/rrss/facebook.svg"></a><a href="https://twitter.com/Pokemon_ES_ESP" alt="Twitter"><img src="img/rrss/twitter.svg"></a><a href="https://www.youtube.com/user/PokemonOficialES" alt="YouTube"><img src="img/rrss/youtube.svg"><a href="https://www.reddit.com/r/pokemon/" alt="Reddit"><img src="img/rrss/reddit.svg"></a></a></figure>
+      <p>Copyright &copy; 2022 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+article{    /* ajustamos tamaño y colores */
+    width: 95%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: aqua;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    padding: auto;
+}
+h2, h3{ /* cambiamos color para los títulos */
+    color: yellow;
+}
+ol{ /* alineación justificada para el texto de la lista ordenada */
+    text-align: justify;
+    margin: 1%;
+}
+ol > li::marker { /* Ajustamos tamaño, color y negrita de los números de la lista */
+    font-weight: bold;
+    color: yellow;
+    font-size: large;
+}
+figure img{ /* ajustamos que las imágenes vayan separadas del texto */
+    display: block;
+    margin: auto;
+}
+div figure, div figure img{ /* ajustamos posición y tamaño, movemos a la derecha */
+    display: flex;
+    margin: auto;
+    margin-right: 1%;
+    justify-content: right;
+    width: 30%;
+}
+div figure img:hover{   /* cambiamos el cursor al ponerse sobre la imagen */
+    cursor: url(../cursores/vaporeon.cur), pointer;
+}
+span{   /* ponemos en negrita las frases marcadas con span */
+    font-weight: bold;
+}

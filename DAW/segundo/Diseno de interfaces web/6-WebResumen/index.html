@@ -1,50 +1,75 @@
 <!DOCTYPE html>
+<!--
+  Esta web está orientada a información sobre Pokémon, podemos navegar entre las diferentes páginas con un menú.
+  En la portada podemos ver un mapa con las diferentes regiones del mundo Pokémon, un video y una cita sobre Pokémon.
+-->
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Mi Sitio de Comida</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Mi Sitio de Comida</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="css/principal.css" rel="stylesheet" type="text/css" />
+    <title>Pokeinfo</title>
+  </head>
+  <body>
+    <header id="inicio">
+        <marquee behavior="alternate"><img src="img/pokemon/025.png" alt="Pikachu"><img src="img/pokemon/001.png" alt="Bulbasaur"><img src="img/pokemon/004.png" alt="Charmander"><img src="img/pokemon/007.png" alt="Squirtle"><img src="img/pokemon/132.png" alt="Ditto"><h1>Pokeinfo</h1><img src="img/pokemon/417.png" alt="Pachirisu"><img src="img/pokemon/252.png" alt="Treecko"><img src="img/pokemon/255.png" alt="Torchic"><img src="img/pokemon/258.png" alt="Mudkip"><img src="img/pokemon/133.png" alt="Eevee"></marquee>
     </header>
-
-    <main>
-        <!-- Contenido principal de la página de inicio -->
-        <div class="container mt-5">
-            <h1>Bienvenido a Mi Sitio de Comida</h1>
-            <p>Explora nuestras deliciosas opciones de comida y encuentra algo que te encante.</p>
-        </div>
-    </main>
-
-    <footer class="mt-5 text-center">
-        <p>Derechos de autor © 2024 Mi Sitio de Comida. Todos los derechos reservados.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Inicio"><img src="img/pokeball.svg" width="15"> Home</a></li>
+            <li class="pokedex">
+              <a href="pokedex.html" title="Pokédex"><img src="img/pokeball.svg" width="15"> Pokédex</a>
+              <a href="kanto.html" title="Kanto" class="contenido">Kanto</a>
+              <a href="johto.html" title="Johto" class="contenido">Johto</a>
+              <a href="hoenn.html" title="Hoenn" class="contenido">Hoenn</a>
+              <a href="sinnoh.html" title="Sinnoh" class="contenido">Sinnoh</a>
+              <a href="teselia.html" title="Teselia" class="contenido">Teselia</a>
+              <a href="kalos.html" title="Kalos" class="contenido">Kalos</a>
+              <a href="alola.html" title="Alola" class="contenido">Alola</a>
+              <a href="galar.html" title="Galar" class="contenido">Galar</a>
+              <a href="hisui.html" title="Hisui" class="contenido">Hisui</a>
+              <a href="paldea.html" title="Paldea" class="contenido">Paldea</a>
+            </li>
+            <li><a href="curiosidades.html" title="Curiosidades"><img src="img/pokeball.svg" width="15px"> Curiosidades</a></li>
+            <li><a href="contacto.html" title="Contacto"><img src="img/pokeball.svg" width="15px"> Contacto</a></li>
+        </ul>
+        <audio controls><source src="audio/musica.mp3" type="audio/mpeg"></audio>
+    </nav>
+    <section>
+      <article>
+        <h2>Selecciona una región para acceder a su pokédex</h2>
+        <figure class="mapa">
+          <img src="img/mapa.webp" alt="Mapa" usemap="#mapa" width="720px" height="452px">
+          <map name="mapa">
+            <area shape="rect" coords="241,303,423,435" alt="Kanto" href="kanto.html">
+            <area shape="rect" coords="55,303,240,435" alt="Johto" href="johto.html">
+            <area shape="rect" coords="55,15,294,142" alt="Hoenn" href="hoenn.html">
+            <area shape="rect" coords="306,151,498,286" alt="Sinnoh" href="sinnoh.html">
+            <area shape="rect" coords="433,288,684,435" alt="Teselia" href="teselia.html">
+            <area shape="rect" coords="55,143,297,295" alt="Kalos" href="kalos.html">
+            <area shape="rect" coords="500,15,679,287" alt="Alola" href="alola.html">
+            <area shape="rect" coords="309,15,487,150" alt="Galar" href="galar.html">
+          </map>
+          <figcaption>Dato: Teselia en inglés es Unova</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h2>Intro de Pokémon</h2>
+        <video width="1280px" height="720px" controls><source src="video/opening.mp4" type="video/mp4">Opening de pokémon</video>
+        <dl>
+          <dt>“Las circunstancias en las que uno nace no tienen importancia, es lo que uno hace con el don de la vida lo que nos dice quiénes somos.”</dt>
+          <dd>- Mewtwo</dd>
+        </dl>
+      </article>
+    </section>
+    <aside>
+      <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
+    </aside>
+    <footer>
+      <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img src="img/rrss/facebook.svg"></a><a href="https://twitter.com/Pokemon_ES_ESP" alt="Twitter"><img src="img/rrss/twitter.svg"></a><a href="https://www.youtube.com/user/PokemonOficialES" alt="YouTube"><img src="img/rrss/youtube.svg"><a href="https://www.reddit.com/r/pokemon/" alt="Reddit"><img src="img/rrss/reddit.svg"></a></a></figure>
+      <p>Copyright &copy; 2022 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
     </footer>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
