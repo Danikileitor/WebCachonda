@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <label for="texto">Click: </label><input type="text" name="texto1" id="texto1"><br><br>
+    <label for="texto">MouseOver: </label><input type="text" name="texto2" id="texto2"><br><br>
+    <label for="texto">MouseOut: </label><input type="text" name="texto3" id="texto3">
+    <hr>
+    <button onclick="borrarEventos()">Borrar eventos</button>
+    <script>
+        const inputTexto1 = document.getElementById("texto1");
+        const inputTexto2 = document.getElementById("texto2");
+        const inputTexto3 = document.getElementById("texto3");
+
+        inputTexto1.addEventListener('click', mayusculas);
+        inputTexto2.addEventListener('mouseover', mayusculas);
+        inputTexto3.addEventListener('mouseout', mayusculas);
+
+        function mayusculas(event) {
+            event.target.value = event.target.value.toUpperCase();
+        }
+
+        function borrarEventos() {
+            inputTexto1.removeEventListener('click', mayusculas);
+            inputTexto2.removeEventListener('mouseover', mayusculas);
+            inputTexto3.removeEventListener('mouseout', mayusculas);
+        }
+    </script>
+</body>
+</html>
