@@ -1,0 +1,11 @@
+* {
+  cursor: url("../cursores/pokeball.cur"), auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+}
+
+.dropdown a.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}/*# sourceMappingURL=style.css.map */
