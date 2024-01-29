@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <label for="texto">Texto: </label><input type="text" name="texto" id="texto">
+    <script>
+        const inputTexto = document.getElementById("texto");
+        inputTexto.addEventListener('mouseover', function () {
+            this.value = this.value.toUpperCase();
+        });
+    </script>
+</body>
+</html>
