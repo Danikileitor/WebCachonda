@@ -8,12 +8,12 @@
 <body>
     <script>
         var str = "Aprende javaScript de 10 en Síntesis";
-        var m = str.search(/[St]/i);
-        console.log(m);
-        var n = str.search(/[0-9]/i);
-        console.log(n);
-        var a = str.search(/0+/i);
-        console.log(a);
+        var m = str.search(/[St]/i);//Busca en la string str la primera ocurrencia 'S' o 't', sin importar si están en mayúsculas o minúsculas por el modificador 'i'
+        console.log(m);//resultado: 12
+        var n = str.search(/[0-9]/i);//Lo mismo que la anterior pero en su lugar busca un dígito cualquiera del 0 al 9.
+        console.log(n);//resultado: 22
+        var a = str.search(/0+/i);//Esta expresión busca la primera ocurrencia en la que aparezca uno o más '0' consecutivos.
+        console.log(a);//resultado: 23
     </script>
 </body>
 </html>
