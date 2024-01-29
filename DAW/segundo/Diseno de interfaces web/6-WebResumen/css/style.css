@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   cursor: url("../cursores/pokeball.cur"), auto;
   -webkit-user-select: none;
@@ -8,4 +9,76 @@
 
 .dropdown a.dropdown-item:hover {
   background-color: rgba(0, 0, 0, 0.25);
+}
+
+marquee img {
+  /* ponemos animación a las imágenes de la marquesina (los pokemon bailando) */
+  animation: 1s rotar infinite alternate;
+}
+
+aside {
+  /* estilos para el aside, en este caso será la flecha para subir al inicio de la página, ajustamos posición y que siempre se vea por encima de todo */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+aside:hover {
+  /* al pasar por encima se activa la animación que sube y baja */
+  animation: 0.5s subir infinite alternate;
+}
+
+aside img {
+  /* al pasar por encima se cambia el cursor */
+  cursor: url(../cursores/squirtle.cur), pointer;
+}
+
+footer {
+  /* estilos para el pie de página, posicion, tamaño y colores */
+  width: 100%;
+  height: auto;
+  background-color: silver;
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  bottom: 0;
+}
+
+footer p {
+  /* estilos para los párrafos del pie de página, tipo de letra y posición del texto al centro */
+  font-family: Arial;
+  text-align: center;
+}
+
+.mapa area {
+  /* al pasar por encima del mapa se cambia el cursor */
+  cursor: url(../cursores/pikachu.cur), pointer;
+}
+
+.logos img {
+  /* al pasar por encima de las imágenes de redes sociales se cambia el cursor */
+  cursor: url(../cursores/bulbasur.cur), pointer;
+}
+
+.logos,
+.logos img {
+  /* ajustamos margen y posición de las imágenes de redes sociales */
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+@keyframes rotar {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes subir {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 1%;
+  }
 }/*# sourceMappingURL=style.css.map */
