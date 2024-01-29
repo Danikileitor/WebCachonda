@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <form action="#">
+        <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre"><br><br>
+        <label for="apellidos">Apellidos: </label><input type="text" name="apellidos" id="apellidos"><br><br>
+        <label for="nombre">Email: </label><input type="email" name="email" id="email"><br><br>
+        <label for="tlf">Teléfono: </label><input type="tel" name="tlf" id="tlf">
+    </form>
+    <hr>
+    <button onclick="validar()">Validar</button>
+
+    <script>
+        function validar() {
+            const nombre = document.getElementById("nombre").value;
+            const apellidos = document.getElementById("apellidos").value;
+            const email = document.getElementById("email").value;
+            const tlf = document.getElementById("tlf").value;
+
+            const validarEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if ((nombre == null || nombre.length == 0 || /^\s+$/.test(nombre) == false) && (apellidos == null || apellidos.length == 0 || /^\s+$/.test(apellidos) == false) && (email == null || email.length == 0 || validarEmail.test(email) == false) && (tlf == null || tlf.length == 0 || /^\d{9}$/.test(tlf) == false)) {
+                alert("Todos los campos han de estar rellenos correctamente");
+            } else {
+                alert("Formulario validado correctamente");
+            }
+        }
+    </script>
+</body>
+</html>
