@@ -8,6 +8,7 @@
 
 body {
     background-color: #ffd865;
+    background-attachment: fixed;
 }
 
 .bg {
@@ -17,6 +18,10 @@ body {
 
     &-johto {
         background-image: url("../img/fondos/johto.jpg");
+    }
+
+    &-hoenn {
+        background-image: url("../img/fondos/hoenn.jpg");
     }
 }
 

@@ -9,6 +9,7 @@
 
 body {
   background-color: #ffd865;
+  background-attachment: fixed;
 }
 
 .bg-kanto {
@@ -16,6 +17,9 @@ body {
 }
 .bg-johto {
   background-image: url("../img/fondos/johto.jpg");
+}
+.bg-hoenn {
+  background-image: url("../img/fondos/hoenn.jpg");
 }
 
 .row {
