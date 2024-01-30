@@ -39,6 +39,10 @@ body {
     &-alola {
         background-image: url("../img/fondos/alola.jpg");
     }
+
+    &-galar {
+        background-image: url("../img/fondos/galar.jpg");
+    }
 }
 
 .row {
@@ -112,14 +116,16 @@ aside img {
     cursor: url(../cursores/squirtle.cur), pointer;
 }
 
-footer.row {
-    /* estilos para el pie de página, posicion, tamaño y colores */
-    background-color: #e0d58d;
-}
+footer {
+    &.row {
+        /* estilos para el pie de página, posicion, tamaño y colores */
+        background-color: #e0d58d;
+    }
 
-footer p {
-    /* estilos para los párrafos del pie de página, tipo de letra y posición del texto al centro */
-    font-family: Arial;
+    p {
+        /* estilos para los párrafos del pie de página, tipo de letra y posición del texto al centro */
+        font-family: Arial;
+    }
 }
 
 .mapa area {

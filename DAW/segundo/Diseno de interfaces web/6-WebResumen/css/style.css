@@ -33,6 +33,9 @@ body {
 .bg-alola {
   background-image: url("../img/fondos/alola.jpg");
 }
+.bg-galar {
+  background-image: url("../img/fondos/galar.jpg");
+}
 
 .row {
   background-color: #fffad9;
@@ -96,7 +99,6 @@ footer.row {
   /* estilos para el pie de página, posicion, tamaño y colores */
   background-color: #e0d58d;
 }
-
 footer p {
   /* estilos para los párrafos del pie de página, tipo de letra y posición del texto al centro */
   font-family: Arial;
