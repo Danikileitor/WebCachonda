@@ -14,6 +14,9 @@ body {
 .bg-kanto {
   background-image: url("../img/fondos/kanto.jpg");
 }
+.bg-johto {
+  background-image: url("../img/fondos/johto.jpg");
+}
 
 .row {
   background-color: #fffad9;
