@@ -27,6 +27,9 @@ body {
 .bg-teselia {
   background-image: url("../img/fondos/teselia.jpg");
 }
+.bg-kalos {
+  background-image: url("../img/fondos/kalos.jpg");
+}
 
 .row {
   background-color: #fffad9;
