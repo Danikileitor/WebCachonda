@@ -10,6 +10,12 @@ body {
     background-color: #ffd865;
 }
 
+.bg {
+    &-kanto {
+        background-image: url("img/fondos/kanto.jpg")
+    }
+}
+
 .row {
     background-color: #fffad9;
 }
