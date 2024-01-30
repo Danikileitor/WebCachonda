@@ -1,0 +1,53 @@
+@import "variables";
+
+article {
+
+    h2,
+    h3 {
+        color: $curiosidades-color;
+    }
+
+    ol {
+        text-align: justify;
+        margin: 1%;
+
+        >li::marker {
+            font-weight: bold;
+            color: $curiosidades-color;
+            font-size: large;
+        }
+    }
+
+    figure {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    div {
+        figure {
+            display: flex;
+            margin: auto;
+            margin-right: 1%;
+            justify-content: right;
+            width: 30%;
+
+            img {
+                display: flex;
+                margin: auto;
+                margin-right: 1%;
+                justify-content: right;
+                width: 30%;
+
+                &:hover {
+                    cursor: url(../cursores/vaporeon.cur), pointer;
+                }
+            }
+        }
+    }
+}
+
+span {
+    font-weight: bold;
+}

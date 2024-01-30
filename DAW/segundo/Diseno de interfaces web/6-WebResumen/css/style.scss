@@ -25,6 +25,10 @@ marquee img {
     animation: 1s rotar infinite alternate;
 }
 
+section.row > :first-child, marquee {
+    padding-top: 1rem;
+}
+
 audio {
     height: 2.7vh;
 }

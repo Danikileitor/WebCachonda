@@ -1,138 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="css/principal.css" rel="stylesheet" type="text/css" />
-    <link href="css/curiosidades.css" rel="stylesheet" type="text/css" />
-    <title>Pokeinfo</title>
-  </head>
-  <body>
-    <header id="inicio">
-        <marquee behavior="alternate"><img src="img/pokemon/025.png" alt="Pikachu"><img src="img/pokemon/001.png" alt="Bulbasaur"><img src="img/pokemon/004.png" alt="Charmander"><img src="img/pokemon/007.png" alt="Squirtle"><img src="img/pokemon/132.png" alt="Ditto"><h1>Pokeinfo</h1><img src="img/pokemon/417.png" alt="Pachirisu"><img src="img/pokemon/252.png" alt="Treecko"><img src="img/pokemon/255.png" alt="Torchic"><img src="img/pokemon/258.png" alt="Mudkip"><img src="img/pokemon/133.png" alt="Eevee"></marquee>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/curiosidades.css" rel="stylesheet" type="text/css" />
+  <title>Pokeinfo</title>
+</head>
+
+<body>
+  <div class="container-lg bg-primary border-start border-end border-dark">
+    <header class="row justify-content-center align-items-center" id="inicio">
+      <div class="col bg-dark text-warning">
+        <marquee behavior="alternate">
+          <h1><img src="img/pokemon/025.png" alt="Pikachu"><img src="img/pokemon/001.png" alt="Bulbasaur"><img
+              src="img/pokemon/004.png" alt="Charmander"><img src="img/pokemon/007.png" alt="Squirtle"><img
+              src="img/pokemon/132.png" alt="Ditto">Pokeinfo<img src="img/pokemon/417.png" alt="Pachirisu"><img
+              src="img/pokemon/252.png" alt="Treecko"><img src="img/pokemon/255.png" alt="Torchic"><img
+              src="img/pokemon/258.png" alt="Mudkip"><img src="img/pokemon/133.png" alt="Eevee"></h1>
+        </marquee>
+      </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html" title="Inicio"><img src="img/pokeball.svg" width="15"> Home</a></li>
-            <li class="pokedex">
-              <a href="pokedex.html" title="Pokédex"><img src="img/pokeball.svg" width="15"> Pokédex</a>
-              <a href="kanto.html" title="Kanto" class="contenido">Kanto</a>
-              <a href="johto.html" title="Johto" class="contenido">Johto</a>
-              <a href="hoenn.html" title="Hoenn" class="contenido">Hoenn</a>
-              <a href="sinnoh.html" title="Sinnoh" class="contenido">Sinnoh</a>
-              <a href="teselia.html" title="Teselia" class="contenido">Teselia</a>
-              <a href="kalos.html" title="Kalos" class="contenido">Kalos</a>
-              <a href="alola.html" title="Alola" class="contenido">Alola</a>
-              <a href="galar.html" title="Galar" class="contenido">Galar</a>
-              <a href="hisui.html" title="Hisui" class="contenido">Hisui</a>
-              <a href="paldea.html" title="Paldea" class="contenido">Paldea</a>
-            </li>
-            <li><a href="curiosidades.html" title="Curiosidades"><img src="img/pokeball.svg" width="15px"> Curiosidades</a></li>
-            <li><a href="contacto.html" title="Contacto"><img src="img/pokeball.svg" width="15px"> Contacto</a></li>
-        </ul>
-    <audio controls><source src="audio/musica.mp3" type="audio/mpeg"></audio>
-    </nav>
-    <section>
-      <article>
+    <div class="row justify-content-center align-items-center">
+      <div class="col bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html" aria-current="page"><img src="img/pokeball.svg"
+                      width="15px" class="align-baseline"> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="pokedex.html" id="dropdownId" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><img src="img/pokeball.svg" width="15px"
+                      class="align-baseline"> Pokédex</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="kanto.html">Kanto</a>
+                    <a class="dropdown-item" href="johto.html">Johto</a>
+                    <a class="dropdown-item" href="hoenn.html">Hoenn</a>
+                    <a class="dropdown-item" href="sinnoh.html">Sinnoh</a>
+                    <a class="dropdown-item" href="teselia.html">Teselia</a>
+                    <a class="dropdown-item" href="kalos.html">Kalos</a>
+                    <a class="dropdown-item" href="alola.html">Alola</a>
+                    <a class="dropdown-item" href="galar.html">Galar</a>
+                    <a class="dropdown-item" href="hisui.html">Hisui</a>
+                    <a class="dropdown-item" href="paldea.html">Paldea</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><img src="img/pokeball.svg" width="15px" class="align-baseline">
+                    Curiosidades
+                    <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html"><img src="img/pokeball.svg" width="15px"
+                      class="align-baseline"> Contacto</a>
+                </li>
+              </ul>
+              <audio controls>
+                <source src="audio/musica.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section class="row justify-content-center align-items-center">
+      <article class="col-12 text-center bg-black text-light">
         <h2>20 curiosidades de Pokémon</h2>
         <ol>
           <li>
             <h3>Pokémon tiene apoyo y aprobación por parte del Vaticano</h3>
-            <p>Tal vez esto pueda parecer una locura pero sí, es cierto. A inicios de los 2000 la popularidad de Pokémon despegó en todo el mundo, esto causó que grupos religiosos criticaran la franquicia alegando que Pokémon estaba relacionado con ritos satánicos, entre otras cosas. En respuesta a estos ataques, <span>el Vaticano declaró y dio su aprobación el 21 de abril del año 2000 a Pokémon</span>, diciendo que los juegos estaban llenos de imaginación y basados en el concepto de la amistad.</p>
+            <p>Tal vez esto pueda parecer una locura pero sí, es cierto. A inicios de los 2000 la popularidad de Pokémon
+              despegó en todo el mundo, esto causó que grupos religiosos criticaran la franquicia alegando que Pokémon
+              estaba relacionado con ritos satánicos, entre otras cosas. En respuesta a estos ataques, <span>el Vaticano
+                declaró y dio su aprobación el 21 de abril del año 2000 a Pokémon</span>, diciendo que los juegos
+              estaban llenos de imaginación y basados en el concepto de la amistad.</p>
           </li>
           <li>
             <h3>Pikachu ocupó el segundo lugar en la lista “The Best People of 1999”</h3>
-            <p>A finales de los 90 Pikachu ya era toda una celebridad en el mundo entero, y no es para menos. <span>La revista Time</span> incluyó a Pikachu en su lista de <span>“The Best People of 1999”</span>, en un segundo puesto, justo por detrás de Ricky Martin. ¿Merecía más ese primer puesto Ricky Martín o Pikachu?</p>
+            <p>A finales de los 90 Pikachu ya era toda una celebridad en el mundo entero, y no es para menos. <span>La
+                revista Time</span> incluyó a Pikachu en su lista de <span>“The Best People of 1999”</span>, en un
+              segundo puesto, justo por detrás de Ricky Martin. ¿Merecía más ese primer puesto Ricky Martín o Pikachu?
+            </p>
           </li>
           <li>
             <h3>Los entrenadores Pareja Joven usan Pokémon que se complementan entre ellos</h3>
-            <p><span>Pareja Joven</span> es una pareja de entrenadores introducida en la <span>tercera generación</span>. La pareja está formada por un chico y una chica que luchan en combates dobles. Suelen utilizar Pokémon que se complementan entre ellos como Nidoran hembra y macho o Plusle y Minun, entre muchos otros. La pareja se hizo muy popular en internet ya que en uno de los videojuegos ambos sacan a combatir un Onix y un Cloyster y claro, no pueden faltar los memes.</p>
+            <p><span>Pareja Joven</span> es una pareja de entrenadores introducida en la <span>tercera
+                generación</span>. La pareja está formada por un chico y una chica que luchan en combates dobles. Suelen
+              utilizar Pokémon que se complementan entre ellos como Nidoran hembra y macho o Plusle y Minun, entre
+              muchos otros. La pareja se hizo muy popular en internet ya que en uno de los videojuegos ambos sacan a
+              combatir un Onix y un Cloyster y claro, no pueden faltar los memes.</p>
           </li>
           <li>
             <h3>Poliwhirl es el Pokémon favorito de Satoshi Tajiri</h3>
-            <p>¿Alguna vez te has preguntado cuál es el Pokémon favorito del propio creador de la serie? El Pokémon favorito de <span>Satoshi Tajiri</span> no es otro que <span>Poliwhirl</span>. Por esta razón el inicial de Red en el manga es este Pokémon. ¿Lo sabías?</p>
+            <p>¿Alguna vez te has preguntado cuál es el Pokémon favorito del propio creador de la serie? El Pokémon
+              favorito de <span>Satoshi Tajiri</span> no es otro que <span>Poliwhirl</span>. Por esta razón el inicial
+              de Red en el manga es este Pokémon. ¿Lo sabías?</p>
           </li>
           <li>
             <h3>La franquicia en Japón tiene un nombre diferente</h3>
-            <p>A diferencia del resto del mundo donde la franquicia es conocida como Pokémon, en Japón se llama <span>Pocket Monsters (ポケットモンスター)</span>. Pero a pesar de esto sí nombran Pokémon a las criaturas de la serie, por lo que son los únicos capaces de diferenciar entre la franquicia y los seres Pokémon. ¿Tal vez el cambio de nombre sea por esto?</p>
+            <p>A diferencia del resto del mundo donde la franquicia es conocida como Pokémon, en Japón se llama
+              <span>Pocket Monsters (ポケットモンスター)</span>. Pero a pesar de esto sí nombran Pokémon a las criaturas de la
+              serie, por lo que son los únicos capaces de diferenciar entre la franquicia y los seres Pokémon. ¿Tal vez
+              el cambio de nombre sea por esto?
+            </p>
           </li>
           <li>
             <h3>Las películas de Pokémon siempre se estrenan en julio</h3>
-            <p>Hasta antes de la pandemia causada por el COVID,  cada año y <span>desde 1998 se ha estrenado una película nueva de Pokémon</span> y casualmente todas lo hacen <span>en el mes de julio. Pokémon: los secretos de la selva</span>, es la única película que no se ha estrenado en ese mes, posiblemente debido a la pandemia, ya que el primer avance de la película se mostró en enero de 2020 pero no se pudo estrenar en cines hasta diciembre de ese mismo año.</p>
+            <p>Hasta antes de la pandemia causada por el COVID, cada año y <span>desde 1998 se ha estrenado una película
+                nueva de Pokémon</span> y casualmente todas lo hacen <span>en el mes de julio. Pokémon: los secretos de
+                la selva</span>, es la única película que no se ha estrenado en ese mes, posiblemente debido a la
+              pandemia, ya que el primer avance de la película se mostró en enero de 2020 pero no se pudo estrenar en
+              cines hasta diciembre de ese mismo año.</p>
           </li>
           <li>
             <h3>Kangaskhan siempre es hembra</h3>
-            <p><span>Kangaskhan</span> es un personaje muy conocido por ser el Pokémon que siempre lleva a su bebé en su bolsa o marsupio. Curiosamente este Pokémon <span>siempre es hembra</span>, nunca ha aparecido ningún macho en el anime, videojuegos o manga. Entonces, ¿Cómo crían estos Pokémon?</p>
+            <p><span>Kangaskhan</span> es un personaje muy conocido por ser el Pokémon que siempre lleva a su bebé en su
+              bolsa o marsupio. Curiosamente este Pokémon <span>siempre es hembra</span>, nunca ha aparecido ningún
+              macho en el anime, videojuegos o manga. Entonces, ¿Cómo crían estos Pokémon?</p>
           </li>
           <li>
             <h3>El Pokémon más feo y el más bonito</h3>
-            <p>Según la propia Pokédex <span>el Pokémon más feo</span> de todas las criaturas del juego sería <span>Feebas</span>, un Pokémon tipo agua de la tercera generación y contraparte de Magikarp. Por el contrario, el Pokémon que es reconocido como <span>el más hermoso</span> es la propia evolución de Feebas, <span>Milotic</span>. Feebas evoluciona a Milotic cuando su belleza aumenta a 170 puntos y subiendo un nivel, o bien intercambiándolo equipado con escama bella.</p>
+            <p>Según la propia Pokédex <span>el Pokémon más feo</span> de todas las criaturas del juego sería
+              <span>Feebas</span>, un Pokémon tipo agua de la tercera generación y contraparte de Magikarp. Por el
+              contrario, el Pokémon que es reconocido como <span>el más hermoso</span> es la propia evolución de Feebas,
+              <span>Milotic</span>. Feebas evoluciona a Milotic cuando su belleza aumenta a 170 puntos y subiendo un
+              nivel, o bien intercambiándolo equipado con escama bella.
+            </p>
             <figure><img src="img/curiosidades/feebasmilotic.jpg" width="35%"></figure>
           </li>
           <li>
             <h3>La evolución de Magikarp está basada en una leyenda china</h3>
-            <p>Está claro que la evolución de Magikarp a Gyarados es una de las evoluciones más impactantes de todos los Pokémon. Pero, ¿Sabías que esta evolución está basada en una leyenda china?. Esta leyenda narra cómo carpas se precipitan por una cascada llamada la Puerta del Dragón y se convierten en dragones, dice literalmente <span>“la carpa salta por encima de la Puerta del Dragón”</span> y refleja la fuerza interior que todos tenemos en nosotros. Se dice que esta es una de las evoluciones más drásticas del juego debido a su aumento de poder.</p>
+            <p>Está claro que la evolución de Magikarp a Gyarados es una de las evoluciones más impactantes de todos los
+              Pokémon. Pero, ¿Sabías que esta evolución está basada en una leyenda china?. Esta leyenda narra cómo
+              carpas se precipitan por una cascada llamada la Puerta del Dragón y se convierten en dragones, dice
+              literalmente <span>“la carpa salta por encima de la Puerta del Dragón”</span> y refleja la fuerza interior
+              que todos tenemos en nosotros. Se dice que esta es una de las evoluciones más drásticas del juego debido a
+              su aumento de poder.</p>
           </li>
           <li>
             <h3>MissingNo. el glitch de la primera generación</h3>
-            <p><span>MissingNo.</span> es un <span>Pokémon glitch</span> que aparece principalmente en <span>las versiones Roja y Azul de la primera generación</span>. Es un fallo de los videojuegos que genera errores gráficos, pero a pesar de ello, tiene efectos beneficiosos para aumentar de nivel. Este “Pokémon” tiene muchas curiosidades y actualmente existen un sinfín de guías en internet para poder encontrarlo y atraparlo en los juegos, aunque parece ser que jamás llegó a España ya que el error fue arreglado durante la fase de traducción.</p>
+            <p><span>MissingNo.</span> es un <span>Pokémon glitch</span> que aparece principalmente en <span>las
+                versiones Roja y Azul de la primera generación</span>. Es un fallo de los videojuegos que genera errores
+              gráficos, pero a pesar de ello, tiene efectos beneficiosos para aumentar de nivel. Este “Pokémon” tiene
+              muchas curiosidades y actualmente existen un sinfín de guías en internet para poder encontrarlo y
+              atraparlo en los juegos, aunque parece ser que jamás llegó a España ya que el error fue arreglado durante
+              la fase de traducción.</p>
             <figure><img src="img/curiosidades/missingno.jpg"></figure>
           </li>
           <li>
             <h3>El nombre de Ash en japonés</h3>
-            <p>Todos sabemos quién es Ash pero, ¿sabes cuál es su nombre en japonés?. Ash fue llamado <span>Satoshi</span> en japonés en honor al creador de  Pokémon, <span>Satoshi Tajiri</span>. Generalmente todos los personajes de la franquicia tienen nombres diferentes en Occidente y Japón, siendo Pikachu uno de los pocos personajes que mantiene el mismo nombre.</p>
+            <p>Todos sabemos quién es Ash pero, ¿sabes cuál es su nombre en japonés?. Ash fue llamado
+              <span>Satoshi</span> en japonés en honor al creador de Pokémon, <span>Satoshi Tajiri</span>. Generalmente
+              todos los personajes de la franquicia tienen nombres diferentes en Occidente y Japón, siendo Pikachu uno
+              de los pocos personajes que mantiene el mismo nombre.
+            </p>
           </li>
           <li>
             <h3>Las cartas de Pokémon fueron prohibidas en Arabia Saudí</h3>
-            <p>Con la fama vienen los problemas. Es muy conocido por todos la censura que ha tenido el anime numerosas veces en varios países pero la franquicia ha tenido muchos problemas diferentes a lo largo de su historia. En <span>2001 las cartas de Pokémon fueron prohibidas en Arabia Saudí</span> por mostrar la estrella de David, esto sentó muy mal a las autoridades conservadoras musulmanes del estado y terminaron prohibiendo las cartas alegando que el juego promovía las apuestas y el Sionismo (un movimiento que quería restablecer y proteger la nación judía).</p>
+            <p>Con la fama vienen los problemas. Es muy conocido por todos la censura que ha tenido el anime numerosas
+              veces en varios países pero la franquicia ha tenido muchos problemas diferentes a lo largo de su historia.
+              En <span>2001 las cartas de Pokémon fueron prohibidas en Arabia Saudí</span> por mostrar la estrella de
+              David, esto sentó muy mal a las autoridades conservadoras musulmanes del estado y terminaron prohibiendo
+              las cartas alegando que el juego promovía las apuestas y el Sionismo (un movimiento que quería restablecer
+              y proteger la nación judía).</p>
           </li>
           <li>
             <h3>Mew no puede aprender todos los ataques</h3>
-            <p>Existe el falso mito de que Mew es capaz de aprender todos los movimientos existentes en los juegos. Esto es falso ya que al entregar a Mew al tutor de movimientos este <span>no será capaz de aprender Cometa Draco</span>. Tampoco puede aprender otros movimientos como planta feroz, hidrocañón, anillo ígneo o voto de agua.</p>
+            <p>Existe el falso mito de que Mew es capaz de aprender todos los movimientos existentes en los juegos. Esto
+              es falso ya que al entregar a Mew al tutor de movimientos este <span>no será capaz de aprender Cometa
+                Draco</span>. Tampoco puede aprender otros movimientos como planta feroz, hidrocañón, anillo ígneo o
+              voto de agua.</p>
           </li>
           <li>
             <h3>Más de 600 niños fueron hospitalizados en Japón por un episodio de Pokémon</h3>
-            <p>Incluso en su país de origen Pokémon ha tenido varias polémicas. Una de ellas muy conocida fue cuando el <span>16 de diciembre de 1997 se emitió el episodio 38 de la primera temporada</span>. Este episodio contenía diferentes destellos y movimientos de cámara que provocó que más de 600 niños sufrieran ataques epilépticos. Debido a esto la emisión del anime se paralizó durante 4 meses y el episodio nunca fue transmitido en el resto del mundo.</p>
+            <p>Incluso en su país de origen Pokémon ha tenido varias polémicas. Una de ellas muy conocida fue cuando el
+              <span>16 de diciembre de 1997 se emitió el episodio 38 de la primera temporada</span>. Este episodio
+              contenía diferentes destellos y movimientos de cámara que provocó que más de 600 niños sufrieran ataques
+              epilépticos. Debido a esto la emisión del anime se paralizó durante 4 meses y el episodio nunca fue
+              transmitido en el resto del mundo.
+            </p>
           </li>
           <li>
             <h3>En 2006 China hizo boicot a varias series de animación, entre ellas Pokémon</h3>
-            <p>En <span>2006</span> la fama de Pokémon estaba disparada en todo el mundo, incluido China.  Ese año <span>China decidió hacer un boicot</span> a diferentes series de animación como los Simpson, Disney y Pokémon y prohibieron emitirlas en prime-time para que su propia industria de animación tuviese más apoyo que series extranjeras.</p>
+            <p>En <span>2006</span> la fama de Pokémon estaba disparada en todo el mundo, incluido China. Ese año
+              <span>China decidió hacer un boicot</span> a diferentes series de animación como los Simpson, Disney y
+              Pokémon y prohibieron emitirlas en prime-time para que su propia industria de animación tuviese más apoyo
+              que series extranjeras.
+            </p>
           </li>
           <li>
             <h3>Existen 28 formas de Unown</h3>
-            <p><span>Unown</span> es un Pokémon psíquico introducido en la segunda generación. Existen <span>28 formas</span> diferentes de Unown, cada una representa una letra del abecedario y los signos de interrogación y exclamación, además cada forma de Unown significa una palabra por la letra de la forma que representan pero en inglés.</p>
+            <p><span>Unown</span> es un Pokémon psíquico introducido en la segunda generación. Existen <span>28
+                formas</span> diferentes de Unown, cada una representa una letra del abecedario y los signos de
+              interrogación y exclamación, además cada forma de Unown significa una palabra por la letra de la forma que
+              representan pero en inglés.</p>
             <figure><img src="img/curiosidades/unown.png"></figure>
           </li>
           <li>
             <h3>La generación más poderosa y la más débil</h3>
-            <p>Después de ocho generaciones de Pokémon se estima que <span>la más débil es la segunda generación</span> con solo 17 Pokémon que superan los 85.000 puntos de estadísticas. Por otro lado, <span>la más fuerte sería la cuarta generación</span> con un total de 37 Pokémon que superan los 85.000 puntos de estadísticas.</p>
+            <p>Después de ocho generaciones de Pokémon se estima que <span>la más débil es la segunda generación</span>
+              con solo 17 Pokémon que superan los 85.000 puntos de estadísticas. Por otro lado, <span>la más fuerte
+                sería la cuarta generación</span> con un total de 37 Pokémon que superan los 85.000 puntos de
+              estadísticas.</p>
           </li>
           <li>
             <h3>Tipo con mayor y menor número de movimientos</h3>
-            <p>Se dice que el <span>tipo con mayor cantidad de movimientos es el de tipo normal</span> mientras que <span>el que menos tiene es el de tipo dragón</span>. Además, en la segunda generación había un tipo llamado <span>tipo ???</span>  (ya inexistente) con el ataque maldición, que pasó a ser de tipo fantasma en la quinta generación.</p>
+            <p>Se dice que el <span>tipo con mayor cantidad de movimientos es el de tipo normal</span> mientras que
+              <span>el que menos tiene es el de tipo dragón</span>. Además, en la segunda generación había un tipo
+              llamado <span>tipo ???</span> (ya inexistente) con el ataque maldición, que pasó a ser de tipo fantasma en
+              la quinta generación.
+            </p>
           </li>
           <li>
             <h3>Los nombres de los profesores</h3>
-            <p>Casualmente todos los nombres de los profesores en los videojuegos principales tienen nombre de algún <span>árbol o planta</span> en algún idioma. Por ejemplo, Oak significa roble y Elm significa olmo. ¿Lo habías notado?</p>
+            <p>Casualmente todos los nombres de los profesores en los videojuegos principales tienen nombre de algún
+              <span>árbol o planta</span> en algún idioma. Por ejemplo, Oak significa roble y Elm significa olmo. ¿Lo
+              habías notado?
+            </p>
           </li>
           <li>
             <h3>Game Freak se hubiese arruinado si Pokémon no hubiera tenido éxito</h3>
-            <p>El coste inicial de las primeras ediciones de Pokémon fue tan alto que se estima que si no hubiera tenido éxito posiblemente Game Freak se hubiese arruinado ya que en aquel entonces la empresa contaba con muy poco presupuesto. ¡Menos mal que no fue así!</p>
+            <p>El coste inicial de las primeras ediciones de Pokémon fue tan alto que se estima que si no hubiera tenido
+              éxito posiblemente Game Freak se hubiese arruinado ya que en aquel entonces la empresa contaba con muy
+              poco presupuesto. ¡Menos mal que no fue así!</p>
           </li>
         </ol>
         <div>
-          <figure><a href="https://www.reddit.com/r/copypasta_es/comments/jwvl5i/copypasta_de_vaporeon_en_espa%C3%B1ol_buena_traducci%C3%B3n/" alt="Vaporeon"><img src="img/curiosidades/vaporeon.svg"></a></figure>
+          <figure><a
+              href="https://www.reddit.com/r/copypasta_es/comments/jwvl5i/copypasta_de_vaporeon_en_espa%C3%B1ol_buena_traducci%C3%B3n/"
+              alt="Vaporeon"><img src="img/curiosidades/vaporeon.svg"></a></figure>
         </div>
       </article>
     </section>
-    <aside>
-      <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
-    </aside>
-    <footer>
-      <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img src="img/rrss/facebook.svg"></a><a href="https://twitter.com/Pokemon_ES_ESP" alt="Twitter"><img src="img/rrss/twitter.svg"></a><a href="https://www.youtube.com/user/PokemonOficialES" alt="YouTube"><img src="img/rrss/youtube.svg"><a href="https://www.reddit.com/r/pokemon/" alt="Reddit"><img src="img/rrss/reddit.svg"></a></a></figure>
-      <p>Copyright &copy; 2022 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
+    <footer class="row justify-content-center align-items-center border-top border-dark">
+      <div class="col text-center">
+        <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img
+              src="img/rrss/facebook.svg"></a><a href="https://twitter.com/Pokemon_ES_ESP" alt="Twitter"><img
+              src="img/rrss/twitter.svg"></a><a href="https://www.youtube.com/user/PokemonOficialES" alt="YouTube"><img
+              src="img/rrss/youtube.svg"><a href="https://www.reddit.com/r/pokemon/" alt="Reddit"><img
+                src="img/rrss/reddit.svg"></a></a></figure>
+        <p>Copyright &copy; 2022-2024 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
+      </div>
     </footer>
-  </body>
+    <aside class="row justify-content-center align-items-center">
+      <div class="col">
+        <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
+      </div>
+    </aside>
+  </div>
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
