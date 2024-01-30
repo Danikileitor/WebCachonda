@@ -30,6 +30,9 @@ body {
 .bg-kalos {
   background-image: url("../img/fondos/kalos.jpg");
 }
+.bg-alola {
+  background-image: url("../img/fondos/alola.jpg");
+}
 
 .row {
   background-color: #fffad9;
