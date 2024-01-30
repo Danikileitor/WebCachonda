@@ -117,6 +117,60 @@ form textarea {
   height: 200px;
 }
 
+table {
+  /* ajustamos margen, tamaño y borde de la tabla */
+  margin: auto;
+  width: 95%;
+  border: 0;
+}
+table.dex {
+  border-width: 0px;
+  box-shadow: 1px 1px 3px #666, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000;
+}
+table.dex tr.sort_even td {
+  border-color: #999;
+  background-color: #e0e0e0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+}
+table.dex tr.sort_odd td {
+  border-color: #999;
+  background-color: #f0f0f0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+}
+table.dexg {
+  border-width: 0px;
+  box-shadow: 1px 1px 4px #333, 1px 1px #666, -1px 1px #666, 1px -1px #666, -1px -1px #666;
+}
+table td.row0 {
+  text-align: center;
+  background-color: #ccc;
+  border-color: #333;
+  padding: 5px;
+  border: 0px solid;
+  border-bottom: 1px #666 solid;
+}
+table td.row1 {
+  border-color: #999;
+  background-color: #f0f0f0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+}
+table td.row2 {
+  border-color: #999;
+  background-color: #e0e0e0;
+  border-top: 1px #999 solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+}
+table td.center {
+  text-align: center;
+}
+
 @keyframes rotar {
   100% {
     transform: rotate(360deg);
