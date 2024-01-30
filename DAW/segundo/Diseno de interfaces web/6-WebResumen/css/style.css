@@ -12,7 +12,7 @@ body {
 }
 
 .bg-kanto {
-  background-image: url("img/fondos/kanto.jpg");
+  background-image: url("../img/fondos/kanto.jpg");
 }
 
 .row {
