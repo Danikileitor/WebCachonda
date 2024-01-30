@@ -25,6 +25,10 @@ marquee img {
     animation: 1s rotar infinite alternate;
 }
 
+audio {
+    height: 2.7vh;
+}
+
 aside.row {
     /* estilos para el aside, en este caso será la flecha para subir al inicio de la página, ajustamos posición y que siempre se vea por encima de todo */
     position: fixed;
