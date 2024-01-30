@@ -7,6 +7,14 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #ffd865;
+}
+
+.row {
+  background-color: #fffad9;
+}
+
 .dropdown a.dropdown-item:hover {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -16,12 +24,13 @@ marquee img {
   animation: 1s rotar infinite alternate;
 }
 
-aside {
+aside.row {
   /* estilos para el aside, en este caso será la flecha para subir al inicio de la página, ajustamos posición y que siempre se vea por encima de todo */
   position: fixed;
   right: 0;
   bottom: 0;
   z-index: 1;
+  background-color: initial;
 }
 
 aside:hover {
@@ -34,21 +43,14 @@ aside img {
   cursor: url(../cursores/squirtle.cur), pointer;
 }
 
-footer {
+footer.row {
   /* estilos para el pie de página, posicion, tamaño y colores */
-  width: 100%;
-  height: auto;
-  background-color: silver;
-  border: 1px solid black;
-  border-left: 0;
-  border-right: 0;
-  bottom: 0;
+  background-color: #e0d58d;
 }
 
 footer p {
   /* estilos para los párrafos del pie de página, tipo de letra y posición del texto al centro */
   font-family: Arial;
-  text-align: center;
 }
 
 .mapa area {
@@ -63,10 +65,7 @@ footer p {
 
 .logos,
 .logos img {
-  /* ajustamos margen y posición de las imágenes de redes sociales */
-  display: flex;
   margin: auto;
-  justify-content: center;
 }
 
 @keyframes rotar {
