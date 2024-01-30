@@ -21,6 +21,9 @@ body {
 .bg-hoenn {
   background-image: url("../img/fondos/hoenn.jpg");
 }
+.bg-sinnoh {
+  background-image: url("../img/fondos/sinnoh.jpg");
+}
 
 .row {
   background-color: #fffad9;
