@@ -24,6 +24,17 @@ marquee img {
   animation: 1s rotar infinite alternate;
 }
 
+nav li {
+  /* al pasar por encima la pokeball gira y se cambia el cursor */
+}
+nav li:hover a {
+  cursor: url(../cursores/charmander.cur), pointer;
+}
+nav li:hover img {
+  animation: 1s rotar infinite;
+  cursor: url(../cursores/charmander.cur), pointer;
+}
+
 section.row > :first-child,
 marquee {
   padding-top: 1rem;
@@ -31,6 +42,12 @@ marquee {
 
 audio {
   height: 2.7vh;
+}
+audio::-webkit-media-controls-panel {
+  background-color: #fffad9;
+}
+audio::-webkit-media-controls-play-button:hover, audio::-webkit-media-controls-timeline:hover, audio::-webkit-media-controls-volume-slider:hover, audio::-webkit-media-controls-mute-button:hover {
+  cursor: url(../cursores/music.cur), pointer;
 }
 
 aside.row {
