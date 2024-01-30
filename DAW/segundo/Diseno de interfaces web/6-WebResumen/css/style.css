@@ -12,6 +12,12 @@ body {
   background-attachment: fixed;
 }
 
+.bg-index {
+  background-color: #fffad9;
+}
+.bg-dex {
+  background-color: rgba(255, 250, 217, 0.5);
+}
 .bg-kanto {
   background-image: url("../img/fondos/kanto.jpg");
 }
@@ -36,9 +42,11 @@ body {
 .bg-galar {
   background-image: url("../img/fondos/galar.jpg");
 }
-
-.row {
-  background-color: #fffad9;
+.bg-hisui {
+  background-image: url("../img/fondos/hisui.jpg");
+}
+.bg-paldea {
+  background-image: url("../img/fondos/paldea.jpg");
 }
 
 .dropdown a.dropdown-item:hover {
