@@ -24,6 +24,9 @@ body {
 .bg-sinnoh {
   background-image: url("../img/fondos/sinnoh.jpg");
 }
+.bg-teselia {
+  background-image: url("../img/fondos/teselia.jpg");
+}
 
 .row {
   background-color: #fffad9;
