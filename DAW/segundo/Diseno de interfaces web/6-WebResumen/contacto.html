@@ -1,121 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="css/principal.css" rel="stylesheet" type="text/css" />
-  <link href="css/contacto.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
   <title>Pokeinfo - Contacto</title>
 </head>
+
 <body>
-  <header id="inicio">
-    <marquee behavior="alternate">
-      <img src="img/pokemon/025.png" alt="Pikachu"><img src="img/pokemon/001.png" alt="Bulbasaur"><img src="img/pokemon/004.png" alt="Charmander"><img src="img/pokemon/007.png" alt="Squirtle"><img src="img/pokemon/132.png" alt="Ditto"><h1>Pokeinfo</h1><img src="img/pokemon/417.png" alt="Pachirisu"><img src="img/pokemon/252.png" alt="Treecko"><img src="img/pokemon/255.png" alt="Torchic"><img src="img/pokemon/258.png" alt="Mudkip"><img src="img/pokemon/133.png" alt="Eevee">
-    </marquee>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="index.html" title="Inicio"><img src="img/pokeball.svg" width="15"> Home</a></li>
-      <li class="pokedex">
-        <a href="pokedex.html" title="Pokédex"><img src="img/pokeball.svg" width="15"> Pokédex</a>
-        <a href="kanto.html" title="Kanto" class="contenido">Kanto</a>
-        <a href="johto.html" title="Johto" class="contenido">Johto</a>
-        <a href="hoenn.html" title="Hoenn" class="contenido">Hoenn</a>
-        <a href="sinnoh.html" title="Sinnoh" class="contenido">Sinnoh</a>
-        <a href="teselia.html" title="Teselia" class="contenido">Teselia</a>
-        <a href="kalos.html" title="Kalos" class="contenido">Kalos</a>
-        <a href="alola.html" title="Alola" class="contenido">Alola</a>
-        <a href="galar.html" title="Galar" class="contenido">Galar</a>
-        <a href="hisui.html" title="Hisui" class="contenido">Hisui</a>
-        <a href="paldea.html" title="Paldea" class="contenido">Paldea</a>
-      </li>
-      <li><a href="curiosidades.html" title="Curiosidades"><img src="img/pokeball.svg" width="15px"> Curiosidades</a>
-      </li>
-      <li><a href="contacto.html" title="Contacto"><img src="img/pokeball.svg" width="15px"> Contacto</a></li>
-    </ul>
-    <audio controls><source src="audio/musica.mp3" type="audio/mpeg"></audio>
-    </nav>
-  <section>
-    <article>
-      <form action="/enviar.php" method="post" enctype="text/plain">
-        <fieldset>
-          <legend>Datos de usuario</legend>
-          <label for="Usuario">Usuario<span>*</span>:</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Usuario" required><br><br>
-          <label for="contrasena">Contraseña<span>*</span>:</label>
-          <input type="password" id="contrasena" name="contrasena" placeholder="********" required>
-        </fieldset>
-        <fieldset>
-          <legend>Datos personales</legend>
-          <label for="nombre">Nombre<span>*</span>:</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
-          <label for="apellidos">Apellidos<span>*</span>:</label>
-          <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
-          <label for="email">Email<span>*</span>:</label>
-          <input type="email" id="email" name="email" placeholder=".....@.....com" required><br><br>
-          <label for="fecha">Fecha de nacimiento<span>*</span>:</label>
-          <input type="date" id="fecha" name="fecha" required><br><br>
-          <label for="telefono">Número de teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="699999999" maxlength="9"><br><br>
-          <label>Sexo:</label>
-          <input type="radio" id="hombre" name="sexo">
-          <label for="hombre">Hombre</label>
-          <input type="radio" id="mujer" name="sexo">
-          <label for="mujer">Mujer</label><br><br>
-          <label for="inicial">Pokémon inicial favorito:</label>
-          <select id="inicial" name="inicial">
-            <option value="bulbasaur">Bulbasaur</option>
-            <option value="charmander">Charmander</option>
-            <option value="squirtle">Squirtle</option>
-            <option value="pikachu">Pikachu</option>
-            <option value="eevee">Eevee</option>
-            <option value="chikorita">Chikorita</option>
-            <option value="cyndaquil">Cyndaquil</option>
-            <option value="totodile">Totodile</option>
-            <option value="treecko">Treecko</option>
-            <option value="torchic">Torchic</option>
-            <option value="mudkip" selected>Mudkip</option>
-            <option value="turtwig">Turtwig</option>
-            <option value="chimchar">Chimchar</option>
-            <option value="piplup">Piplup</option>
-            <option value="snivy">Snivy</option>
-            <option value="tepig">Tepig</option>
-            <option value="oshawott">Oshawott</option>
-            <option value="chespin">Chespin</option>
-            <option value="fennekin">Fennekin</option>
-            <option value="froakie">Froakie</option>
-            <option value="rowlet">Rowlet</option>
-            <option value="litten">Litten</option>
-            <option value="popplio">Popplio</option>
-            <option value="grookey">Grookey</option>
-            <option value="scorbunny">Scorbunny</option>
-            <option value="sobble">Sobble</option>
-            <option value="sprigatito">Sprigatito</option>
-            <option value="fuecoco">Fuecoco</option>
-            <option value="quaxly">Quaxly</option>
-          </select>          
-        </fieldset>
-        <fieldset>
-          <legend>Consulta</legend>
-          <textarea id="consulta" name="consulta" placeholder="Consulta a realizar"></textarea><br><br>
-          <label for="archivo">Enviar documento: </label>
-          <input type="file" id="archivo" name="archivo"><br><br>
-          <input type="checkbox" id="aceptar" name="aceptar">
-          <label for="aceptar">Suscribirse a nuestro boletín de noticias</label><br><br>
-          <input type="submit" value="Enviar">
-          <input type="reset" value="Borrar">
-        </fieldset>
-      </form>
-    </article>
-  </section>
-  <aside>
-    <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
-  </aside>
-  <footer>
-    <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img src="img/rrss/facebook.svg"></a><a href="https://twitter.com/Pokemon_ES_ESP" alt="Twitter"><img src="img/rrss/twitter.svg"></a><a href="https://www.youtube.com/user/PokemonOficialES" alt="YouTube"><img src="img/rrss/youtube.svg"><a href="https://www.reddit.com/r/pokemon/" alt="Reddit"><img src="img/rrss/reddit.svg"></a></a></figure>
-    <p>Copyright &copy; 2022 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
-  </footer>
+  <div class="container-lg bg-primary border-start border-end border-dark">
+    <header class="row justify-content-center align-items-center" id="inicio">
+      <div class="col bg-dark text-warning">
+        <marquee behavior="alternate">
+          <h1><img src="img/pokemon/025.png" alt="Pikachu"><img src="img/pokemon/001.png" alt="Bulbasaur"><img
+              src="img/pokemon/004.png" alt="Charmander"><img src="img/pokemon/007.png" alt="Squirtle"><img
+              src="img/pokemon/132.png" alt="Ditto">Pokeinfo<img src="img/pokemon/417.png" alt="Pachirisu"><img
+              src="img/pokemon/252.png" alt="Treecko"><img src="img/pokemon/255.png" alt="Torchic"><img
+              src="img/pokemon/258.png" alt="Mudkip"><img src="img/pokemon/133.png" alt="Eevee"></h1>
+        </marquee>
+      </div>
+    </header>
+    <div class="row justify-content-center align-items-center">
+      <div class="col bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html" aria-current="page"><img src="img/pokeball.svg" width="15px"
+                      class="align-baseline"> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="pokedex.html" id="dropdownId" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><img src="img/pokeball.svg" width="15px"
+                      class="align-baseline"> Pokédex</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="kanto.html">Kanto</a>
+                    <a class="dropdown-item" href="johto.html">Johto</a>
+                    <a class="dropdown-item" href="hoenn.html">Hoenn</a>
+                    <a class="dropdown-item" href="sinnoh.html">Sinnoh</a>
+                    <a class="dropdown-item" href="teselia.html">Teselia</a>
+                    <a class="dropdown-item" href="kalos.html">Kalos</a>
+                    <a class="dropdown-item" href="alola.html">Alola</a>
+                    <a class="dropdown-item" href="galar.html">Galar</a>
+                    <a class="dropdown-item" href="hisui.html">Hisui</a>
+                    <a class="dropdown-item" href="paldea.html">Paldea</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="curiosidades.html"><img src="img/pokeball.svg" width="15px"
+                      class="align-baseline"> Curiosidades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><img src="img/pokeball.svg" width="15px" class="align-baseline">
+                    Contacto
+                    <span class="visually-hidden">(current)</span></a>
+                </li>
+              </ul>
+              <audio controls>
+                <source src="audio/musica.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section class="row justify-content-center align-items-center bg-black text-light">
+      <article class="col-12 text-center">
+        <form action="/enviar.php" method="post" enctype="text/plain">
+          <fieldset class="border border-2 p-2">
+            <legend class="float-none w-auto p-2">Datos de usuario</legend>
+            <label for="Usuario">Usuario<span class="fw-bold text-danger">*</span>:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Usuario" required><br><br>
+            <label for="contrasena">Contraseña<span class="fw-bold text-danger">*</span>:</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="********" required>
+          </fieldset>
+          <fieldset class="border border-2 p-2">
+            <legend class="float-none w-auto p-2">Datos personales</legend>
+            <label for="nombre">Nombre<span class="fw-bold text-danger">*</span>:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
+            <label for="apellidos">Apellidos<span class="fw-bold text-danger">*</span>:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
+            <label for="email">Email<span class="fw-bold text-danger">*</span>:</label>
+            <input type="email" id="email" name="email" placeholder=".....@.....com" required><br><br>
+            <label for="fecha">Fecha de nacimiento<span class="fw-bold text-danger">*</span>:</label>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="699999999" maxlength="9"><br><br>
+            <label>Sexo:</label>
+            <input type="radio" id="hombre" name="sexo">
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="sexo">
+            <label for="mujer">Mujer</label><br><br>
+            <label for="inicial">Pokémon inicial favorito:</label>
+            <select id="inicial" name="inicial">
+              <option value="bulbasaur">Bulbasaur</option>
+              <option value="charmander">Charmander</option>
+              <option value="squirtle">Squirtle</option>
+              <option value="pikachu">Pikachu</option>
+              <option value="eevee">Eevee</option>
+              <option value="chikorita">Chikorita</option>
+              <option value="cyndaquil">Cyndaquil</option>
+              <option value="totodile">Totodile</option>
+              <option value="treecko">Treecko</option>
+              <option value="torchic">Torchic</option>
+              <option value="mudkip" selected>Mudkip</option>
+              <option value="turtwig">Turtwig</option>
+              <option value="chimchar">Chimchar</option>
+              <option value="piplup">Piplup</option>
+              <option value="snivy">Snivy</option>
+              <option value="tepig">Tepig</option>
+              <option value="oshawott">Oshawott</option>
+              <option value="chespin">Chespin</option>
+              <option value="fennekin">Fennekin</option>
+              <option value="froakie">Froakie</option>
+              <option value="rowlet">Rowlet</option>
+              <option value="litten">Litten</option>
+              <option value="popplio">Popplio</option>
+              <option value="grookey">Grookey</option>
+              <option value="scorbunny">Scorbunny</option>
+              <option value="sobble">Sobble</option>
+              <option value="sprigatito">Sprigatito</option>
+              <option value="fuecoco">Fuecoco</option>
+              <option value="quaxly">Quaxly</option>
+            </select>
+          </fieldset>
+          <fieldset class="border border-2 p-2">
+            <legend class="float-none w-auto p-2">Consulta</legend>
+            <textarea id="consulta" name="consulta" placeholder="Consulta a realizar"></textarea><br><br>
+            <label for="archivo">Enviar documento: </label>
+            <input type="file" id="archivo" name="archivo"><br><br>
+            <input type="checkbox" id="aceptar" name="aceptar">
+            <label for="aceptar">Suscribirse a nuestro boletín de noticias</label><br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+          </fieldset>
+        </form>
+      </article>
+    </section>
+    <footer class="row justify-content-center align-items-center border-top border-dark">
+      <div class="col text-center">
+        <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img
+              src="img/rrss/facebook.svg"></a><a href="https://twitter.com/Pokemon_ES_ESP" alt="Twitter"><img
+              src="img/rrss/twitter.svg"></a><a href="https://www.youtube.com/user/PokemonOficialES" alt="YouTube"><img
+              src="img/rrss/youtube.svg"><a href="https://www.reddit.com/r/pokemon/" alt="Reddit"><img
+                src="img/rrss/reddit.svg"></a></a></figure>
+        <p>Copyright &copy; 2022-2024 Daniel Marcos Guerra Gómez - All Rights Reserved.</p>
+      </div>
+    </footer>
+    <aside class="row justify-content-center align-items-center">
+      <div class="col">
+        <a href="#inicio"><img src="img/flecha-hacia-arriba.png" width="50px"></a>
+      </div>
+    </aside>
+  </div>
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

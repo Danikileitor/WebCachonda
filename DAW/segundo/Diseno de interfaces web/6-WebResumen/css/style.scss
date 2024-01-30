@@ -25,7 +25,8 @@ marquee img {
     animation: 1s rotar infinite alternate;
 }
 
-section.row > :first-child, marquee {
+section.row> :first-child,
+marquee {
     padding-top: 1rem;
 }
 
@@ -75,6 +76,30 @@ footer p {
 .logos,
 .logos img {
     margin: auto;
+}
+
+form {
+    padding-bottom: 1.5rem;
+
+    fieldset {
+        &.border {
+            /* redondeamos el borde y le cambiamos el color */
+            border-radius: 25px;
+            border-color: red !important;
+        }
+    }
+
+    legend {
+        /* cambiamos el color y añadimos negrita */
+        color: yellow;
+        font-weight: bold;
+    }
+
+    textarea {
+        /* cambiamos tamaño */
+        width: 90%;
+        height: 200px;
+    }
 }
 
 @keyframes rotar {
