@@ -10,33 +10,30 @@
 
 <body>
     <h1>Inserción de nueva noticia</h1>
-    <form name="formulario" action="./ej2-resultado.php" method="post" enctype="multipart/form-data">
-        <table>
-            <tr>
-                <th>Título: *</th>
-                <td><input type="text" name="titulo" required></td>
-            </tr>
-            <tr>
-                <th>Texto: *</th>
-                <td><textarea name="texto" required></textarea></td>
-            </tr>
-            <tr>
-                <th>Categoría:</th>
-                <td><select name="categoria">
-                        <option value="promociones" selected>promociones</option>
-                        <option value="costas">costas</option>
-                        <option value="ofertas">ofertas</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <th>Imagen:</th>
-                <td><input type="file" accept="image/*" name="imagen"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="insertar" value="Insertar noticia"></td>
-            </tr>
-        </table>
+    <form name="formulario" action="./ej2-resultado.php" method="post" enctype="multipart/form-data" class="borde">
+        <p><label>Título: *</label>
+            <input type="text" name="titulo" required>
+        </p>
+
+        <p><label>Texto: *</label>
+            <textarea name="texto" required></textarea>
+        </p>
+
+        <p><label>Categoría:</label>
+            <select name="categoria">
+                <option value="promociones" selected>promociones</option>
+                <option value="costas">costas</option>
+                <option value="ofertas">ofertas</option>
+            </select>
+        </p>
+
+        <p><label>Imagen:</label>
+            <input type="file" accept="image/*" name="imagen">
+        </p>
+
+        <p><input type="submit" name="insertar" value="Insertar noticia"></p>
     </form>
+    <p>NOTA: los datos marcados con (*) deben ser rellenados obligatoriamente</p>
 </body>
 
 </html>
