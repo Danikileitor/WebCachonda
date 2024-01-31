@@ -38,7 +38,7 @@
         }
         ?>
     </ul>
-    <p>[ <a href="./ejercicio2.php">Nueva búsqueda</a> ]</p>
+    <p>[ <a href="./ej2.php">Insertar nueva noticia</a> ]</p>
 </body>
 
 </html>
