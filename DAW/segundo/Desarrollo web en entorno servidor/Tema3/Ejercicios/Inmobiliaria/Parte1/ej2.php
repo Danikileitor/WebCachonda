@@ -14,11 +14,11 @@
         <table>
             <tr>
                 <th>Título: *</th>
-                <td><input type="text" name="titulo"></td>
+                <td><input type="text" name="titulo" required></td>
             </tr>
             <tr>
                 <th>Texto: *</th>
-                <td><textarea name="texto"></textarea></td>
+                <td><textarea name="texto" required></textarea></td>
             </tr>
             <tr>
                 <th>Categoría:</th>
