@@ -12,7 +12,7 @@
     <h1>Inserción de nueva noticia</h1>
     <form name="formulario" action="./ej2-resultado.php" method="post" enctype="multipart/form-data" class="borde">
         <p><label>Título: *</label>
-            <input type="text" name="titulo" required>
+            <input type="text" name="titulo" size="40" maxlength="100" required>
         </p>
 
         <p><label>Texto: *</label>
