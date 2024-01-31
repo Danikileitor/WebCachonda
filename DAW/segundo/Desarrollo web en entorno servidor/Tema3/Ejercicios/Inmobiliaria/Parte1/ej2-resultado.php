@@ -36,7 +36,7 @@
                     if ($error == null) {
                         $insertar = $dwes->stmt_init();
                         $insertar->prepare('INSERT INTO noticias (titulo, texto, categoria, fecha, imagen) VALUES (?, ?, ?, ? ,?)');
-                        $insertar->bind_param('ss', $_POST["titulo"], $_POST["texto"], $_POST["categoria"], $fecha, $nombreFichero);
+                        $insertar->bind_param('sssss', $_POST["titulo"], $_POST["texto"], $_POST["categoria"], $fecha, $nombreFichero);
                         $insertar->execute();
                         $insertar->close();
                         $dwes->close();
