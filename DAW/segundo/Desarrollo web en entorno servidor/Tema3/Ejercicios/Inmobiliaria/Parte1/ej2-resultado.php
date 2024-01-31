@@ -27,6 +27,18 @@
                     echo "<li>Texto: " . $_POST["texto"] . "</li>";
                     echo "<li>Categoría: " . $_POST["categoria"] . "</li>";
                     echo "<li>Imagen:<br><img src='" . $nombreCompleto . "'></li>";
+
+                    //Aquí va la parte de la conexión a la DB y la inserción de datos
+                    @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
+                    $error = $dwes->connect_errno;
+                    if ($error == null) {
+                        $insertar = $dwes->stmt_init();
+                        $insertar->prepare('INSERT INTO noticias (titulo, texto, categoria, fecha, imagen) VALUES (?, ?, ?, ? ,?)');
+                        $insertar->bind_param('ss', $_POST["titulo"], $_POST["texto"], $_POST["categoria"], $nombreFichero);
+                        $insertar->execute();
+                        $insertar->close();
+                        $dwes->close();
+                    }
                 } else {
                     echo "<li>Directorio no válido</li>";
                 }
