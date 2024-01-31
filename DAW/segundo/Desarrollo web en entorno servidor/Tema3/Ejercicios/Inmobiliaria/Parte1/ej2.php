@@ -16,7 +16,7 @@
         </p>
 
         <p><label>Texto: *</label>
-            <textarea name="texto" required></textarea>
+            <textarea name="texto" cols="50" rows="6" required></textarea>
         </p>
 
         <p><label>Categoría:</label>
