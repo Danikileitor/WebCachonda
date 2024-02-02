@@ -13,8 +13,22 @@
     if (isset($_POST["eliminar"])) {
         if (isset($_POST["ids"])) {
             $ids = $_POST["ids"];
-            foreach ($ids as $id) {
-                echo "<p>" . $id . "</p>";
+            @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
+            $error = $dwes->connect_errno;
+            if ($error == null) {
+                foreach ($ids as $id) {
+                    $eliminar = $dwes->stmt_init();
+                    $eliminar->prepare('DELETE FROM noticias WHERE id=?');
+                    $eliminar->bind_param('s', $id);
+                    $eliminar->execute();
+                    $eliminar->close();
+                }
+                $dwes->close();
+                echo "Se han eliminado las noticias: ";
+                foreach ($ids as $id) {
+                    echo "$id ";
+                }
+                echo "correctamente.";
             }
         }
     }
