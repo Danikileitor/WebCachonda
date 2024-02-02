@@ -10,8 +10,13 @@
 
 <body>
     <?php
-    if (isset($_POST['eliminar'])) {
-        print "Work in progreso...";
+    if (isset($_POST["eliminar"])) {
+        if (isset($_POST["ids"])) {
+            $ids = $_POST["ids"];
+            foreach ($ids as $id) {
+                echo "<p>" . $id . "</p>";
+            }
+        }
     }
     ?>
     <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
@@ -29,13 +34,11 @@
             @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
             $error = $dwes->connect_errno;
             if ($error == null) {
-                $resultado = $dwes->query('SELECT titulo, texto, categoria, fecha, imagen FROM noticias ORDER BY fecha DESC');
+                $resultado = $dwes->query('SELECT titulo, texto, categoria, fecha, imagen, id FROM noticias ORDER BY fecha DESC');
                 $noticia = $resultado->fetch_object();
-                $n = 1;
                 while ($noticia != null) {
-                    print "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td><td><input type='checkbox' id='$n'></td></tr>";
+                    print "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td><td><input type='checkbox' name='ids[]' value='$noticia->id'></td></tr>";
                     $noticia = $resultado->fetch_object();
-                    $n++;
                 }
                 $dwes->close();
             }
