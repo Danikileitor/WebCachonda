@@ -10,12 +10,14 @@
 
 <body>
     <h1>Consulta de noticias</h1>
-    <p>Mostrar noticias de la categoría: <select name="filtro">
-        <option selected value="todas">Todas</option>
-        <option value="promociones">Promociones</option>
-        <option value="ofertas">Ofertas</option>
-        <option value="costas">Costas</option>
-    </select> <input type="submit" name="actualizar" value="Actualizar"></p>
+    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+        <p>Mostrar noticias de la categoría: <select name="filtro">
+                <option selected value="todas">Todas</option>
+                <option value="promociones">Promociones</option>
+                <option value="ofertas">Ofertas</option>
+                <option value="costas">Costas</option>
+            </select> <input type="submit" name="actualizar" value="Actualizar"></p>
+    </form>
     <table>
         <tr>
             <th>Título</th>
