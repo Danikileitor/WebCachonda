@@ -18,6 +18,7 @@
                 <option value="costas">Costas</option>
             </select> <input type="submit" name="actualizar" value="Actualizar"></p>
     </form>
+    <br>
     <table>
         <tr>
             <th>Título</th>
