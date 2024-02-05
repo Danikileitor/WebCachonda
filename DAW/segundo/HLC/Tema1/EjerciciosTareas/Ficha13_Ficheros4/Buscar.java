@@ -8,7 +8,7 @@ public class Buscar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese el nombre del archivo de texto:");
+        System.out.println("Ingrese la ruta y el nombre del archivo de texto:");
         String nombreArchivo = scanner.nextLine();
 
         System.out.println("Ingrese la palabra a buscar:");
