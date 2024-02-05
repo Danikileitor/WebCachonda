@@ -31,15 +31,14 @@
                     echo "<li>Imagen:<br><img src='" . $nombreCompleto . "'></li>";
 
                     //Aquí va la parte de la conexión a la DB y la inserción de datos
-                    @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
-                    $error = $dwes->connect_errno;
-                    if ($error == null) {
-                        $insertar = $dwes->stmt_init();
-                        $insertar->prepare('INSERT INTO noticias (titulo, texto, categoria, fecha, imagen) VALUES (?, ?, ?, ? ,?)');
-                        $insertar->bind_param('sssss', $_POST["titulo"], $_POST["texto"], $_POST["categoria"], $fecha, $nombreFichero);
-                        $insertar->execute();
-                        $insertar->close();
-                        $dwes->close();
+                    $dwes = new PDO('mysql:host=localhost;dbname=inmobiliaria', 'dwes', 'abc123.');
+                    $dwes->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    try {
+                        $sql = "INSERT INTO noticias (titulo, texto, categoria, fecha, imagen) VALUES (?, ?, ?, ? ,?)";
+                        $resultado = $dwes->prepare($sql);
+                        $resultado->execute([$_POST["titulo"], $_POST["texto"], $_POST["categoria"], $fecha, $nombreFichero]);
+                    } catch (PDOException $e) {
+                        echo "Error: " . $e->getMessage();
                     }
                 } else {
                     echo "<li>Directorio no válido</li>";
