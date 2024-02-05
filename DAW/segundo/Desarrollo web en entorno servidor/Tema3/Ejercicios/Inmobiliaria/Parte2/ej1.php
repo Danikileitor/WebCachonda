@@ -29,8 +29,6 @@
             while ($noticia = $resultado->fetch(PDO::FETCH_OBJ)) {
                 echo "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td></tr>";
             }
-
-            $dwes = null; // Cerramos la conexión
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
