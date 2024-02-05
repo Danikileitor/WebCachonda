@@ -28,26 +28,25 @@
             <th>Imagen</th>
         </tr>
         <?php
-        @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
-        $error = $dwes->connect_errno;
-        if ($error == null) {
+
+        $dwes = new PDO('mysql:host=localhost;dbname=inmobiliaria', 'dwes', 'abc123.');
+        $dwes->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        try {
             if (isset($_POST["filtro"]) && $_POST["filtro"] !== "todas") {
                 $filtro = $_POST["filtro"];
-                $resultado = $dwes->query("SELECT titulo, texto, categoria, fecha, imagen FROM noticias WHERE categoria = '$filtro' ORDER BY fecha DESC");
-                $noticia = $resultado->fetch_object();
-                while ($noticia != null) {
-                    print "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td></tr>";
-                    $noticia = $resultado->fetch_object();
-                }
+                $sql = "SELECT titulo, texto, categoria, fecha, imagen FROM noticias WHERE categoria = ? ORDER BY fecha DESC";
+                $resultado = $dwes->prepare($sql);
+                $resultado->execute([$filtro]);
             } else {
-                $resultado = $dwes->query('SELECT titulo, texto, categoria, fecha, imagen FROM noticias ORDER BY fecha DESC');
-                $noticia = $resultado->fetch_object();
-                while ($noticia != null) {
-                    print "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td></tr>";
-                    $noticia = $resultado->fetch_object();
-                }
+                $sql = "SELECT titulo, texto, categoria, fecha, imagen FROM noticias ORDER BY fecha DESC";
+                $resultado = $dwes->query($sql);
             }
-            $dwes->close();
+
+            while ($noticia = $resultado->fetch(PDO::FETCH_OBJ)) {
+                echo "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td></tr>";
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
         ?>
     </table>
