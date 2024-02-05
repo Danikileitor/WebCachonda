@@ -45,16 +45,17 @@
                 <th>Borrar</th>
             </tr>
             <?php
-            @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
-            $error = $dwes->connect_errno;
-            if ($error == null) {
-                $resultado = $dwes->query('SELECT titulo, texto, categoria, fecha, imagen, id FROM noticias ORDER BY fecha DESC');
-                $noticia = $resultado->fetch_object();
-                while ($noticia != null) {
-                    print "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td><td><input type='checkbox' name='ids[]' value='$noticia->id'></td></tr>";
-                    $noticia = $resultado->fetch_object();
+            $dwes = new PDO('mysql:host=localhost;dbname=inmobiliaria', 'dwes', 'abc123.');
+            $dwes->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            try {
+                $sql = "SELECT titulo, texto, categoria, fecha, imagen, id FROM noticias ORDER BY fecha DESC";
+                $resultado = $dwes->query($sql);
+
+                while ($noticia = $resultado->fetch(PDO::FETCH_OBJ)) {
+                    echo "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td><td><input type='checkbox' name='ids[]' value='$noticia->id'></td></tr>";
                 }
-                $dwes->close();
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
             }
             ?>
         </table><br>
