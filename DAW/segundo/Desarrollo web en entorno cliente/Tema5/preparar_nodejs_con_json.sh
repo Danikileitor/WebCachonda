@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 sudo npm install -g n
