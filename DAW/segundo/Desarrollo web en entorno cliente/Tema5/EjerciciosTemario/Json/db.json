@@ -1,0 +1,18 @@
+{
+  "Lenguaje de Marcas": [
+    {
+      "RA1": "texto RA1",
+      "Criterios": {
+        "a": "texto critero a",
+        "b": "texto critero b"
+      }
+    },
+    {
+      "RA2": "texto RA2",
+      "Criterios": {
+        "a": "texto critero a",
+        "b": "texto critero b"
+      }
+    }
+  ]
+}
