@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<h2>El Objeto XMLHttpRequest </h2>
+
+<p id="demo">Mediante la tecnología AJAX se cambiará este contenido del párrafo.</p>
+
+<button type="button" onclick="loadDoc()">Cambio de Contenido</button>
+
+<script>
+function loadDoc() 
+{
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() 
+  {
+    console.log(xhttp.readyState)
+    if (this.readyState == 4 && this.status == 200)
+    {
+      console.log("se cargo correctamente")
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
