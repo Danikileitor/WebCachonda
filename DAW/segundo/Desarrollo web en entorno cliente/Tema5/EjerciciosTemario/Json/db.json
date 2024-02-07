@@ -1,18 +1,105 @@
 {
   "Lenguaje de Marcas": [
     {
-      "RA1": "texto RA1",
+      "RA1": "Interpretar lenguajes de marcas reconociendo sus principales características e identificando sus elementos.",
       "Criterios": {
-        "a": "texto critero a",
-        "b": "texto critero b"
-      }
+        "a": "Se han identificado las características generales de los lenguajes de marcas.",
+        "b": "Se han reconocido las ventajas que proporcionan en el tratamiento de la información.",
+        "c": "Se han clasificado los lenguajes de marcas e identificado los más relevantes.",
+        "d": "Se han diferenciado sus ámbitos de aplicación.",
+        "e": "Se ha reconocido la necesidad y los ámbitos específicos de aplicación de un lenguaje de marcas de propósito general.",
+        "f": "Se han analizado las características propias del lenguaje XML.",
+        "g": "Se ha identificado la estructura de un documento XML y sus reglas sintácticas.",
+        "h": "Se ha contrastado la necesidad de crear documentos XML bien formados y la influencia en su procesamiento.",
+        "i": "Se han identificado las ventajas que aportan los espacios de nombres."
+      },
+      "Peso": "2%"
     },
     {
-      "RA2": "texto RA2",
+      "RA2": "Utilizar Lenguajes de Marcas para la transmisión de información a través de la Web analizando la estructura de los documentos e identificando sus elementos.",
       "Criterios": {
-        "a": "texto critero a",
-        "b": "texto critero b"
-      }
+        "a": "Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones.",
+        "b": "Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.",
+        "c": "Se ha reconocido la funcionalidad de las principales etiquetas y atributos del lenguaje HTML.",
+        "d": "Se han establecido las semejanzas y diferencias entre los lenguajes HTML y XHTML.",
+        "e": "Se ha reconocido la utilidad de XHTML en los sistemas de gestión de información.",
+        "f": "Se han utilizado herramientas en la creación documentos web.",
+        "g": "Se han identificado las ventajas que aporta la utilización de hojas de estilo.",
+        "h": "Se han aplicado hojas de estilo."
+      },
+      "Peso": "28%"
+    },
+    {
+      "RA3": "Generar canales de contenidos analizando y utilizando tecnologías de sindicación.",
+      "Criterios": {
+        "a": "Se han identificado las ventajas que aporta la sindicación de contenidos en la gestión y transmisión de la información.",
+        "b": "Se han definido sus ámbitos de aplicación.",
+        "c": "Se han analizado las tecnologías en que se basa la sindicación de contenidos.",
+        "d": "Se ha identificado la estructura y la sintaxis de un canal de contenidos.",
+        "e": "Se han creado y validado canales de contenidos.",
+        "f": "Se ha comprobado la funcionalidad y el acceso a los canales.",
+        "g": " Se han utilizado herramientas específicas como agregadotes y directorios de canales."
+      },
+      "Peso": "14%"
+    },
+    {
+      "RA4": "Establecer mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.",
+      "Criterios": {
+        "a": "Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.",
+        "b": "Se han identificado las tecnologías relacionadas con la definición de documentos XML.",
+        "c": "Se ha analizado la estructura y sintaxis específica utilizada en la descripción.",
+        "d": "Se han creado descripciones de documentos XML.",
+        "e": "Se han utilizado descripciones en la elaboración y validación de documentos XML.",
+        "f": "Se han asociado las descripciones con los documentos.",
+        "g": "Se han utilizado herramientas específicas.",
+        "h": "Se han documentado las descripciones."
+      },
+      "Peso": "14%"
+    },
+    {
+      "RA5": "Realizar conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.",
+      "Criterios": {
+        "a": "Se ha identificado la necesidad de la conversión de documentos XML.",
+        "b": "Se han establecido ámbitos de aplicación.",
+        "c": "Se han analizado las tecnologías implicadas y su modo de funcionamiento.",
+        "d": "Se ha descrito la sintaxis específica utilizada en la conversión y adaptación de documentos XML.",
+        "e": "Se han creado especificaciones de conversión.",
+        "f": "Se han identificado y caracterizado herramientas específicas relacionadas con la conversión de documentos XML.",
+        "g": "Se han realizado conversiones con distintos formatos de salida.",
+        "h": "Se han documentado y depurado las especificaciones."
+      },
+      "Peso": "14%"
+    },
+    {
+      "RA6": "Gestionar información en formato XML analizando y utilizando tecnología de almacenamiento y lenguajes de consulta.",
+      "Criterios": {
+        "a": "Se han identificado los principales métodos de almacenamiento de la información usada en documentos XML.",
+        "b": "Se han utilizado sistemas gestores de bases de datos relacionales en el almacenamiento de información en formato XML.",
+        "c": "Se han utilizado técnicas específicas para crear documentos XML a partir de información almacenada en bases de datos relacionales.",
+        "d": "Se han identificado las características de los sistemas gestores de bases de datos nativas XML.",
+        "e": "Se han instalado y analizado sistemas gestores de bases de datos nativas XML.",
+        "f": "Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.",
+        "g": "Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML.",
+        "h": "Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.",
+        "i": "Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML."
+      },
+      "Peso": "14%"
+    },
+    {
+      "RA7": "Trabajar con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.",
+      "Criterios": {
+        "a": "Se han reconocido las ventajas de los sistemas de gestión y planificación de recursos empresariales.",
+        "b": "Se han evaluado las características de las principales aplicaciones de gestión empresarial.",
+        "c": "Se han instalado aplicaciones de gestión empresarial.",
+        "d": "Se han configurado y adaptado las aplicaciones.",
+        "e": "Se ha establecido y verificado el acceso seguro a la información.",
+        "f": "Se han generado informes.",
+        "g": "Se han realizado tareas de integración con aplicaciones ofimáticas.",
+        "h": "Se han realizado procedimientos de extracción de información para su tratamiento e incorporación a diversos sistemas.",
+        "i": "Se han realizado tareas de asistencia y resolución de incidencias.",
+        "j": "Se han elaborado documentos relativos a la explotación de la aplicación."
+      },
+      "Peso": "14%"
     }
   ]
 }
