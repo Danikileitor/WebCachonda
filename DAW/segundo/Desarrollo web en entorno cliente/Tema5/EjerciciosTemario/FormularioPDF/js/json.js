@@ -6,7 +6,7 @@ function obtener_datos() {
             if (solicitud.status == 200) {
                 var msj = JSON.parse(solicitud.responseText);
             } else {
-                alert();
+                alert("Error al leer el archivo: " + solicitud.status);
             }
         }
     }
