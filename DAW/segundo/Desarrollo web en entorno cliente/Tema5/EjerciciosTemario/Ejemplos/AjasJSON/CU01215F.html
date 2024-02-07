@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head><title>Cursos aprende a programar</title><meta charset="utf-8">
+ <style type="text/css">
+ *{font-family:sans-serif;} a:link {text-decoration:none;} select{font-size:18px;}
+ div div {color: blue; background-color:#F1FEC6; font-size: 20px; float:left; border: solid; margin: 20px; padding:15px;}
+ </style>
+ 
+<script>
+function mostrarSugerencia(str) 
+{
+    var paisElegido='';
+    if (str=='spain') {paisElegido='España';}
+    else if (str=='mexico') {paisElegido='México';}
+    else if (str=='argentina') {paisElegido='Argentina';}
+    else if (str=='colombia') {paisElegido='Colombia';}
+    else {paisElegido='none';}
+
+    var xmlhttp;
+    if (str.length==0 ||paisElegido=='none')
+    { 
+     document.getElementById("txtInformacion").innerHTML="no hay datos";
+     mostrarCiudades(); 
+     return; 
+    }
+
+    xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+        {
+        var jsonResponse = xmlhttp.responseText;
+        var objeto_json = JSON.parse(jsonResponse);
+        paisesRecibidos = objeto_json.listadoPaises.pais;
+ 
+            for (var i=0; i<paisesRecibidos.length;i++) 
+            {
+                var nombrePais = objeto_json.listadoPaises.pais[i].nombre;
+                    if (nombrePais==paisElegido)
+                    {
+                    document.getElementById("txtInformacion").innerHTML = 'El pais recibido por get en segundo plano es '+nombrePais+ ' y tiene indice '+i;
+                    var ciudadesPais = objeto_json.listadoPaises.pais[i].ciudadImportante;
+                    mostrarCiudades(ciudadesPais);
+                    }
+            }
+    
+        }
+    }
+
+xmlhttp.open("GET","listadoPaises.json?nocache=' + (new Date()).getTime()");
+xmlhttp.send();
+}
+
+function mostrarCiudades (arrayCiudades)
+{
+    var nodoMostrarResultados = document.getElementById('listaCiudades');
+    if (!arrayCiudades) {nodoMostrarResultados.innerHTML = ''; return}
+    var contenidosAMostrar = '';
+    for (var i=0; i<arrayCiudades.length;i++)
+    {
+        contenidosAMostrar = contenidosAMostrar+'<div id="ciudades'+i+'">';
+        contenidosAMostrar += '<a href="http://aprenderaprogramar.com">' + arrayCiudades[i]+ '</a></div>';
+    }
+    if (contenidosAMostrar)
+    {
+         nodoMostrarResultados.innerHTML = contenidosAMostrar;
+    }
+}
+</script></head>
+
+<body style="margin:20px;"><h2>Elige un país:</h2>
+<form action="">
+ <select onchange="mostrarSugerencia(this.value)">
+ <option value="none">Elige</option> 
+  <option value="spain">España</option>
+  <option value="mexico">México</option>
+  <option value="argentina">Argentina</option>
+  <option value="colombia">Colombia</option>
+</select>
+</form>
+<br/>
+<p>Informacion sobre operacion en segundo plano con Ajax: <span style="color:brown;" id="txtInformacion"></span></p>
+<div id="listaCiudades"> </div>
+</body></html>
