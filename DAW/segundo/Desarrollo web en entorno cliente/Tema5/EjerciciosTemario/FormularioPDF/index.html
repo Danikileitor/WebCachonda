@@ -60,6 +60,7 @@
 			
 		}
 		</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -79,7 +80,7 @@
 			<label for="provincia">Provincia:</label>
 			<select name="provincia" id="provincia">
 				<option value="0" selected="selected">Seleccione Provincia</option>
-				<option value="A">Almería</option>
+				<option value="Almería">Almería</option>
 				
 			</select>
 			<label for="fecha">Fecha Nacimiento:</label>
@@ -90,11 +91,13 @@
 			<input name="hora" type="text" id="hora" />
 			<input type="reset" name="limpiar" id="button" value="Limpiar" />
 			<input type="submit" name="enviar" id="enviar" value="Enviar" />
+			<input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
 		</form>
 		<div id="errores"></div>
 		<div id="intentos"></div>
 	</fieldset>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/pdf.js"></script>
 </body>
 
 </html>
