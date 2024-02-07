@@ -32,7 +32,7 @@
       "peso": "28%"
     },
     {
-      "id": "RA2",
+      "id": "RA3",
       "textoRA": "Generar canales de contenidos analizando y utilizando tecnologías de sindicación.",
       "criterios": {
         "a": "Se han identificado las ventajas que aporta la sindicación de contenidos en la gestión y transmisión de la información.",
@@ -46,7 +46,7 @@
       "peso": "14%"
     },
     {
-      "id": "RA3",
+      "id": "RA4",
       "textoRA": "Establecer mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.",
       "criterios": {
         "a": "Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.",
@@ -61,7 +61,7 @@
       "peso": "14%"
     },
     {
-      "id": "RA4",
+      "id": "RA5",
       "textoRA": "Realizar conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.",
       "criterios": {
         "a": "Se ha identificado la necesidad de la conversión de documentos XML.",
@@ -76,7 +76,7 @@
       "peso": "14%"
     },
     {
-      "id": "RA5",
+      "id": "RA6",
       "textoRA": "Gestionar información en formato XML analizando y utilizando tecnología de almacenamiento y lenguajes de consulta.",
       "criterios": {
         "a": "Se han identificado los principales métodos de almacenamiento de la información usada en documentos XML.",
@@ -92,7 +92,7 @@
       "peso": "14%"
     },
     {
-      "id": "RA6",
+      "id": "RA7",
       "textoRA": "Trabajar con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.",
       "criterios": {
         "a": "Se han reconocido las ventajas de los sistemas de gestión y planificación de recursos empresariales.",
