@@ -1,8 +1,9 @@
 {
   "Lenguaje de Marcas": [
     {
-      "RA1": "Interpretar lenguajes de marcas reconociendo sus principales características e identificando sus elementos.",
-      "Criterios": {
+      "id": "RA1",
+      "textoRA": "Interpretar lenguajes de marcas reconociendo sus principales características e identificando sus elementos.",
+      "criterios": {
         "a": "Se han identificado las características generales de los lenguajes de marcas.",
         "b": "Se han reconocido las ventajas que proporcionan en el tratamiento de la información.",
         "c": "Se han clasificado los lenguajes de marcas e identificado los más relevantes.",
@@ -13,11 +14,12 @@
         "h": "Se ha contrastado la necesidad de crear documentos XML bien formados y la influencia en su procesamiento.",
         "i": "Se han identificado las ventajas que aportan los espacios de nombres."
       },
-      "Peso": "2%"
+      "peso": "2%"
     },
     {
-      "RA2": "Utilizar Lenguajes de Marcas para la transmisión de información a través de la Web analizando la estructura de los documentos e identificando sus elementos.",
-      "Criterios": {
+      "id": "RA2",
+      "textoRA": "Utilizar Lenguajes de Marcas para la transmisión de información a través de la Web analizando la estructura de los documentos e identificando sus elementos.",
+      "criterios": {
         "a": "Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones.",
         "b": "Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.",
         "c": "Se ha reconocido la funcionalidad de las principales etiquetas y atributos del lenguaje HTML.",
@@ -27,11 +29,12 @@
         "g": "Se han identificado las ventajas que aporta la utilización de hojas de estilo.",
         "h": "Se han aplicado hojas de estilo."
       },
-      "Peso": "28%"
+      "peso": "28%"
     },
     {
-      "RA3": "Generar canales de contenidos analizando y utilizando tecnologías de sindicación.",
-      "Criterios": {
+      "id": "RA2",
+      "textoRA": "Generar canales de contenidos analizando y utilizando tecnologías de sindicación.",
+      "criterios": {
         "a": "Se han identificado las ventajas que aporta la sindicación de contenidos en la gestión y transmisión de la información.",
         "b": "Se han definido sus ámbitos de aplicación.",
         "c": "Se han analizado las tecnologías en que se basa la sindicación de contenidos.",
@@ -40,11 +43,12 @@
         "f": "Se ha comprobado la funcionalidad y el acceso a los canales.",
         "g": " Se han utilizado herramientas específicas como agregadotes y directorios de canales."
       },
-      "Peso": "14%"
+      "peso": "14%"
     },
     {
-      "RA4": "Establecer mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.",
-      "Criterios": {
+      "id": "RA3",
+      "textoRA": "Establecer mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.",
+      "criterios": {
         "a": "Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.",
         "b": "Se han identificado las tecnologías relacionadas con la definición de documentos XML.",
         "c": "Se ha analizado la estructura y sintaxis específica utilizada en la descripción.",
@@ -54,11 +58,12 @@
         "g": "Se han utilizado herramientas específicas.",
         "h": "Se han documentado las descripciones."
       },
-      "Peso": "14%"
+      "peso": "14%"
     },
     {
-      "RA5": "Realizar conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.",
-      "Criterios": {
+      "id": "RA4",
+      "textoRA": "Realizar conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.",
+      "criterios": {
         "a": "Se ha identificado la necesidad de la conversión de documentos XML.",
         "b": "Se han establecido ámbitos de aplicación.",
         "c": "Se han analizado las tecnologías implicadas y su modo de funcionamiento.",
@@ -68,11 +73,12 @@
         "g": "Se han realizado conversiones con distintos formatos de salida.",
         "h": "Se han documentado y depurado las especificaciones."
       },
-      "Peso": "14%"
+      "peso": "14%"
     },
     {
-      "RA6": "Gestionar información en formato XML analizando y utilizando tecnología de almacenamiento y lenguajes de consulta.",
-      "Criterios": {
+      "id": "RA5",
+      "textoRA": "Gestionar información en formato XML analizando y utilizando tecnología de almacenamiento y lenguajes de consulta.",
+      "criterios": {
         "a": "Se han identificado los principales métodos de almacenamiento de la información usada en documentos XML.",
         "b": "Se han utilizado sistemas gestores de bases de datos relacionales en el almacenamiento de información en formato XML.",
         "c": "Se han utilizado técnicas específicas para crear documentos XML a partir de información almacenada en bases de datos relacionales.",
@@ -83,11 +89,12 @@
         "h": "Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.",
         "i": "Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML."
       },
-      "Peso": "14%"
+      "peso": "14%"
     },
     {
-      "RA7": "Trabajar con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.",
-      "Criterios": {
+      "id": "RA6",
+      "textoRA": "Trabajar con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.",
+      "criterios": {
         "a": "Se han reconocido las ventajas de los sistemas de gestión y planificación de recursos empresariales.",
         "b": "Se han evaluado las características de las principales aplicaciones de gestión empresarial.",
         "c": "Se han instalado aplicaciones de gestión empresarial.",
@@ -99,7 +106,7 @@
         "i": "Se han realizado tareas de asistencia y resolución de incidencias.",
         "j": "Se han elaborado documentos relativos a la explotación de la aplicación."
       },
-      "Peso": "14%"
+      "peso": "14%"
     }
   ]
 }
