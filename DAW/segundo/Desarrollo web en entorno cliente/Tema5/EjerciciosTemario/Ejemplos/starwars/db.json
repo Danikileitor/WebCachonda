@@ -1,5 +1,5 @@
-  {
-   "people":[
+{
+  "people": [
     {
       "edited": "2014-12-20T21:17:56.891Z",
       "name": "Luke Skywalker",
@@ -14,7 +14,7 @@
       "birth_year": "19BBY",
       "image": "luke_skywalker.jpg"
     },
-   {
+    {
       "edited": "2014-12-20T21:17:50.309Z",
       "name": "C-3PO",
       "created": "2014-12-10T15:10:51.357Z",
@@ -28,7 +28,7 @@
       "birth_year": "112BBY",
       "image": "c-3po.jpg"
     },
-  {
+    {
       "edited": "2014-12-20T21:17:50.311Z",
       "name": "R2-D2",
       "created": "2014-12-10T15:11:50.376Z",
@@ -42,7 +42,7 @@
       "birth_year": "33BBY",
       "image": "r2-d2.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.313Z",
       "name": "Darth Vader",
@@ -57,7 +57,7 @@
       "birth_year": "41.9BBY",
       "image": "darth_vader.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.315Z",
       "name": "Leia Organa",
@@ -72,7 +72,7 @@
       "birth_year": "19BBY",
       "image": "leia_organa.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.317Z",
       "name": "Owen Lars",
@@ -87,7 +87,7 @@
       "birth_year": "52BBY",
       "image": "owen_lars.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.319Z",
       "name": "Beru Whitesun lars",
@@ -102,7 +102,7 @@
       "birth_year": "47BBY",
       "image": "beru_whitesun_lars.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.321Z",
       "name": "R5-D4",
@@ -117,7 +117,7 @@
       "birth_year": "unknown",
       "image": "r5-d4.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.323Z",
       "name": "Biggs Darklighter",
@@ -132,7 +132,7 @@
       "birth_year": "24BBY",
       "image": "biggs_darklighter.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.325Z",
       "name": "Obi-Wan Kenobi",
@@ -147,8 +147,7 @@
       "birth_year": "57BBY",
       "image": "obi-wan_kenobi.jpg"
     },
-    
- 
+
     {
       "edited": "2014-12-20T21:17:50.327Z",
       "name": "Anakin Skywalker",
@@ -163,8 +162,8 @@
       "birth_year": "41.9BBY",
       "image": "anakin_skywalker.jpg"
     },
-    
-  {
+
+    {
       "edited": "2014-12-20T21:17:50.330Z",
       "name": "Wilhuff Tarkin",
       "created": "2014-12-10T16:26:56.138Z",
@@ -178,9 +177,9 @@
       "birth_year": "64BBY",
       "image": "wilhuff_tarkin.jpg"
     },
-    
-   {
-       "edited": "2014-12-20T21:17:50.332Z",
+
+    {
+      "edited": "2014-12-20T21:17:50.332Z",
       "name": "Chewbacca",
       "created": "2014-12-10T16:42:45.066Z",
       "gender": "male",
@@ -193,9 +192,9 @@
       "birth_year": "200BBY",
       "image": "chewbacca.jpg"
     },
-    
-   {
-       "edited": "2014-12-20T21:17:50.334Z",
+
+    {
+      "edited": "2014-12-20T21:17:50.334Z",
       "name": "Han Solo",
       "created": "2014-12-10T16:49:14.582Z",
       "gender": "male",
@@ -208,8 +207,8 @@
       "birth_year": "29BBY",
       "image": "han_solo.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.336Z",
       "name": "Greedo",
       "created": "2014-12-10T17:03:30.334Z",
@@ -223,8 +222,8 @@
       "birth_year": "44BBY",
       "image": "greedo.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.338Z",
       "name": "Jabba Desilijic Tiure",
       "created": "2014-12-10T17:11:31.638Z",
@@ -238,8 +237,8 @@
       "birth_year": "600BBY",
       "image": "jabba_desilijic_tiure.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.341Z",
       "name": "Wedge Antilles",
       "created": "2014-12-12T11:08:06.469Z",
@@ -253,8 +252,8 @@
       "birth_year": "21BBY",
       "image": "wedge_antilles.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.343Z",
       "name": "Jek Tono Porkins",
       "created": "2014-12-12T11:16:56.569Z",
@@ -268,7 +267,7 @@
       "birth_year": "unknown",
       "image": "jek_tono_porkins.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.345Z",
       "name": "Yoda",
@@ -283,8 +282,8 @@
       "birth_year": "896BBY",
       "image": "yoda.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.347Z",
       "name": "Palpatine",
       "created": "2014-12-15T12:48:05.971Z",
@@ -298,8 +297,8 @@
       "birth_year": "82BBY",
       "image": "palpatine.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.349Z",
       "name": "Boba Fett",
       "created": "2014-12-15T12:49:32.457Z",
@@ -313,7 +312,7 @@
       "birth_year": "31.5BBY",
       "image": "boba_fett.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.351Z",
       "name": "IG-88",
@@ -328,7 +327,7 @@
       "birth_year": "15BBY",
       "image": "ig-88.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.355Z",
       "name": "Bossk",
@@ -343,8 +342,8 @@
       "birth_year": "53BBY",
       "image": "bossk.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.357Z",
       "name": "Lando Calrissian",
       "created": "2014-12-15T12:56:32.683Z",
@@ -358,7 +357,7 @@
       "birth_year": "31BBY",
       "image": "lando_calrissian.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.359Z",
       "name": "Lobot",
@@ -373,7 +372,7 @@
       "birth_year": "37BBY",
       "image": "lobot.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.362Z",
       "name": "Ackbar",
@@ -388,7 +387,7 @@
       "birth_year": "41BBY",
       "image": "ackbar.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.364Z",
       "name": "Mon Mothma",
@@ -403,8 +402,8 @@
       "birth_year": "48BBY",
       "image": "mon_mothma.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.367Z",
       "name": "Arvel Crynyd",
       "created": "2014-12-18T11:16:33.020Z",
@@ -418,8 +417,8 @@
       "birth_year": "unknown",
       "image": "arvel_crynyd.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.369Z",
       "name": "Wicket Systri Warrick",
       "created": "2014-12-18T11:21:58.954Z",
@@ -433,7 +432,7 @@
       "birth_year": "8BBY",
       "image": "wicket_systri_warrick.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.371Z",
       "name": "Nien Nunb",
@@ -448,7 +447,7 @@
       "birth_year": "unknown",
       "image": "nien_nunb.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.375Z",
       "name": "Qui-Gon Jinn",
@@ -463,7 +462,7 @@
       "birth_year": "92BBY",
       "image": "qui-gon_jinn.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.377Z",
       "name": "Nute Gunray",
@@ -478,7 +477,7 @@
       "birth_year": "unknown",
       "image": "nute_gunray.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.379Z",
       "name": "Finis Valorum",
@@ -493,8 +492,8 @@
       "birth_year": "91BBY",
       "image": "finis_valorum.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.381Z",
       "name": "Padmé Amidala",
       "created": "2014-12-19T17:28:26.926Z",
@@ -508,8 +507,8 @@
       "birth_year": "46BBY",
       "image": "padme_amidala.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.383Z",
       "name": "Jar Jar Binks",
       "created": "2014-12-19T17:29:32.489Z",
@@ -523,7 +522,7 @@
       "birth_year": "52BBY",
       "image": "jar_jar_binks.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.385Z",
       "name": "Roos Tarpals",
@@ -538,7 +537,7 @@
       "birth_year": "unknown",
       "image": "roos_tarpals.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.388Z",
       "name": "Rugor Nass",
@@ -553,8 +552,8 @@
       "birth_year": "unknown",
       "image": "rugor_nass.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.392Z",
       "name": "Ric Olié",
       "created": "2014-12-19T17:45:01.522Z",
@@ -568,7 +567,7 @@
       "birth_year": "unknown",
       "image": "ric_olie.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.395Z",
       "name": "Watto",
@@ -583,7 +582,7 @@
       "birth_year": "unknown",
       "image": "watto.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.397Z",
       "name": "Sebulba",
@@ -598,7 +597,7 @@
       "birth_year": "unknown",
       "image": "sebulba.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.399Z",
       "name": "Quarsh Panaka",
@@ -613,7 +612,7 @@
       "birth_year": "62BBY",
       "image": "quarsh_panaka.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.401Z",
       "name": "Shmi Skywalker",
@@ -628,8 +627,8 @@
       "birth_year": "72BBY",
       "image": "shmi_skywalker.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.403Z",
       "name": "Darth Maul",
       "created": "2014-12-19T18:00:41.929Z",
@@ -643,8 +642,8 @@
       "birth_year": "54BBY",
       "image": "darth_maul.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.407Z",
       "name": "Bib Fortuna",
       "created": "2014-12-20T09:47:02.512Z",
@@ -658,7 +657,7 @@
       "birth_year": "unknown",
       "image": "bib_fortuna.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.409Z",
       "name": "Ayla Secura",
@@ -673,7 +672,7 @@
       "birth_year": "48BBY",
       "image": "ayla_secura.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.410Z",
       "name": "Ratts Tyerel",
@@ -688,7 +687,7 @@
       "birth_year": "unknown",
       "image": "ratts_tyerel.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.414Z",
       "name": "Dud Bolt",
@@ -703,7 +702,7 @@
       "birth_year": "unknown",
       "image": "dud_bolt.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.416Z",
       "name": "Gasgano",
@@ -718,7 +717,7 @@
       "birth_year": "unknown",
       "image": "gasgano.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.417Z",
       "name": "Ben Quadinaros",
@@ -733,8 +732,8 @@
       "birth_year": "unknown",
       "image": "ben_quadinaros.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.420Z",
       "name": "Mace Windu",
       "created": "2014-12-20T10:12:30.846Z",
@@ -748,8 +747,8 @@
       "birth_year": "72BBY",
       "image": "mace_windu.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.422Z",
       "name": "Ki-Adi-Mundi",
       "created": "2014-12-20T10:15:32.293Z",
@@ -763,7 +762,7 @@
       "birth_year": "92BBY",
       "image": "ki-adi-mundi.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.424Z",
       "name": "Kit Fisto",
@@ -778,7 +777,7 @@
       "birth_year": "unknown",
       "image": "kit_fisto.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.427Z",
       "name": "Eeth Koth",
@@ -793,7 +792,7 @@
       "birth_year": "unknown",
       "image": "eeth_koth.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.432Z",
       "name": "Adi Gallia",
@@ -808,7 +807,7 @@
       "birth_year": "unknown",
       "image": "adi_gallia.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.434Z",
       "name": "Saesee Tiin",
@@ -823,7 +822,7 @@
       "birth_year": "unknown",
       "image": "saesee_tiin.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.437Z",
       "name": "Yarael Poof",
@@ -838,8 +837,8 @@
       "birth_year": "unknown",
       "image": "yarael_poof.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.439Z",
       "name": "Plo Koon",
       "created": "2014-12-20T10:49:19.859Z",
@@ -853,8 +852,8 @@
       "birth_year": "22BBY",
       "image": "plo_koon.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.442Z",
       "name": "Mas Amedda",
       "created": "2014-12-20T10:53:26.457Z",
@@ -868,8 +867,8 @@
       "birth_year": "unknown",
       "image": "mas_amedda.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.445Z",
       "name": "Gregar Typho",
       "created": "2014-12-20T11:10:10.381Z",
@@ -883,7 +882,7 @@
       "birth_year": "unknown",
       "image": "gregar_typho.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.449Z",
       "name": "Cordé",
@@ -898,8 +897,8 @@
       "birth_year": "unknown",
       "image": "corde.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.451Z",
       "name": "Cliegg Lars",
       "created": "2014-12-20T15:59:03.958Z",
@@ -913,8 +912,8 @@
       "birth_year": "82BBY",
       "image": "cliegg_lars.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.453Z",
       "name": "Poggle the Lesser",
       "created": "2014-12-20T16:40:43.977Z",
@@ -928,7 +927,7 @@
       "birth_year": "unknown",
       "image": "poggle_the_lesser.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.455Z",
       "name": "Luminara Unduli",
@@ -943,7 +942,7 @@
       "birth_year": "58BBY",
       "image": "luminara_unduli.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.457Z",
       "name": "Barriss Offee",
@@ -958,7 +957,7 @@
       "birth_year": "40BBY",
       "image": "barriss_offee.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.460Z",
       "name": "Dormé",
@@ -973,7 +972,7 @@
       "birth_year": "unknown",
       "image": "dorme.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.462Z",
       "name": "Dooku",
@@ -988,7 +987,7 @@
       "birth_year": "102BBY",
       "image": "dooku.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.463Z",
       "name": "Bail Prestor Organa",
@@ -1003,8 +1002,8 @@
       "birth_year": "67BBY",
       "image": "bail_prestor_organa.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.465Z",
       "name": "Jango Fett",
       "created": "2014-12-20T16:54:41.620Z",
@@ -1018,7 +1017,7 @@
       "birth_year": "66BBY",
       "image": "jango_fett.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.468Z",
       "name": "Zam Wesell",
@@ -1033,7 +1032,7 @@
       "birth_year": "unknown",
       "image": "zam_wesell.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.470Z",
       "name": "Dexter Jettster",
@@ -1048,7 +1047,7 @@
       "birth_year": "unknown",
       "image": "dexter_jettster.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.473Z",
       "name": "Lama Su",
@@ -1063,7 +1062,7 @@
       "birth_year": "unknown",
       "image": "lama_su.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.474Z",
       "name": "Taun We",
@@ -1078,7 +1077,7 @@
       "birth_year": "unknown",
       "image": "taun_we.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.476Z",
       "name": "Jocasta Nu",
@@ -1093,8 +1092,8 @@
       "birth_year": "unknown",
       "image": "jocasta_nu.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.478Z",
       "name": "R4-P17",
       "created": "2014-12-20T17:43:36.409Z",
@@ -1108,8 +1107,8 @@
       "birth_year": "unknown",
       "image": "r4-p17.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.481Z",
       "name": "Wat Tambor",
       "created": "2014-12-20T17:53:52.607Z",
@@ -1123,8 +1122,8 @@
       "birth_year": "unknown",
       "image": "wat_tambor.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.484Z",
       "name": "San Hill",
       "created": "2014-12-20T17:58:17.049Z",
@@ -1138,7 +1137,7 @@
       "birth_year": "unknown",
       "image": "san_hill.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.486Z",
       "name": "Shaak Ti",
@@ -1153,7 +1152,7 @@
       "birth_year": "unknown",
       "image": "shaak_ti.jpg"
     },
-    
+
     {
       "edited": "2014-12-20T21:17:50.488Z",
       "name": "Grievous",
@@ -1168,8 +1167,8 @@
       "birth_year": "unknown",
       "image": "grievous.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.491Z",
       "name": "Tarfful",
       "created": "2014-12-20T19:46:34.209Z",
@@ -1183,8 +1182,8 @@
       "birth_year": "unknown",
       "image": "tarfful.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.493Z",
       "name": "Raymus Antilles",
       "created": "2014-12-20T19:49:35.583Z",
@@ -1198,8 +1197,8 @@
       "birth_year": "unknown",
       "image": "raymus_antilles.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.496Z",
       "name": "Sly Moore",
       "created": "2014-12-20T20:18:37.619Z",
@@ -1213,8 +1212,8 @@
       "birth_year": "unknown",
       "image": "sly_moore.jpg"
     },
-    
-     {
+
+    {
       "edited": "2014-12-20T21:17:50.498Z",
       "name": "Tion Medon",
       "created": "2014-12-20T20:35:04.260Z",
