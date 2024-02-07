@@ -32,21 +32,10 @@ document.getElementById('previsualizarPDF').addEventListener('click', function (
     doc.text(20, 90, 'Teléfono: ' + document.getElementById('telefono').value);
     doc.text(20, 100, 'Hora de Visita: ' + document.getElementById('hora').value);
 
-    // Obtiene la URL del PDF como un blob
+    // Obtiene la URL del PDF como un blob y editar el iframe
     var blobPDF = doc.output('bloburl');
-
-    // Muestra el PDF en un iframe
-    var iframe = document.createElement('iframe');
+    var iframe = document.getElementById('iframe');
     iframe.src = blobPDF;
     iframe.width = '100%';
     iframe.height = '500px';
-
-    // Elimina el iframe existente si lo hay
-    var existingIframe = document.getElementById('pdfIframe');
-    if (existingIframe) {
-        existingIframe.parentNode.removeChild(existingIframe);
-    }
-
-    // Agrega el iframe al documento
-    document.body.appendChild(iframe);
 });
