@@ -4,6 +4,15 @@ function prepararPDF() {
     // Crea un nuevo objeto JSPDF
     doc = new jspdf.jsPDF();
 
+    // Agregamos los metadatos al PDF
+    doc.setProperties({
+        title: 'Formulario',
+        subject: 'Prueba PDF',
+        author: 'Daniel Marcos Guerra Gómez',
+        keywords: 'formulario, pdf, daw, dwec',
+        creator: 'Daniel Marcos Guerra Gómez'
+    });
+
     // Agrega el contenido del formulario al PDF
     doc.text(20, 20, 'Nombre: ' + document.getElementById('nombre').value);
     doc.text(20, 30, 'Apellidos: ' + document.getElementById('apellidos').value);
