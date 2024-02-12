@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+        function muestraSugerencias(str)
+         {
+            if(str.length == 0)
+            {
+               document.getElementById("txtSugerencia").innerHTML= "";  
+               return;
+            }
+            else
+            {
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function()
+                 {
+                    
+                    if (this.readyState == 4 && this.status == 200)
+                    {
+                        console.log(str);
+                        document.getElementById("txtSugerencia").innerHTML = this.responseText;
+                    }
+                };
+                
+             xmlhttp.open("GET", "http://10.10.3.243/getSugerencia.php?param=" + str, true);
+             xmlhttp.send();
+             }
+
+        }
+        </script>
+    </head>
+
+    <body>
+        <p><b>Escribe el nombre de alguna ciudad donde quieras ir</b></p>
+        <form>
+             Ciudad: <input type="text" onkeyup="muestraSugerencias(this.value)">
+        </form>
+        <p>Sugerencias: <span id="txtSugerencia"></span></p>
+    </body>
+</html>
