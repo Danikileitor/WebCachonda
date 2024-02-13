@@ -7,7 +7,7 @@
     <div id="lasWebs"></div>
     <script>
         var xmlhttp = new XMLHttpRequest();
-        var url = "mywebs.txt";
+        var url = "db.json";
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var listaWebs = JSON.parse(this.responseText);
@@ -20,8 +20,7 @@
             var out = "";
             var i;
             for (i = 0; i < arr.length; i++) {
-                out += '<a href="' + arr[i].url + '">' +
-                    arr[i].display + '</a><br>';
+                out += '<a href="' + arr[i].id + '">' + arr[i].textoRA + '</a><br>';
             }
             document.getElementById("lasWebs").innerHTML = out;
         }
