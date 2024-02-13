@@ -17,10 +17,11 @@
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
         function getWebs(arr) {
+            var modulo = arr.Lenguaje_de_Marcas
             var out = "";
             var i;
-            for (i = 0; i < arr.length; i++) {
-                out += '<a href="' + arr[i].id + '">' + arr[i].textoRA + '</a><br>';
+            for (i = 0; i < modulo.length; i++) {
+                out += '<a href="' + modulo[i].id + '">' + modulo[i].textoRA + '</a><br>';
             }
             document.getElementById("lasWebs").innerHTML = out;
         }
