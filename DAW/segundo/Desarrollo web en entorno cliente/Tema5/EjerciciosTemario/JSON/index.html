@@ -23,7 +23,7 @@
             for (i = 0; i < modulo.length; i++) {
                 out += '<li>' + modulo[i].id + ': ' + modulo[i].textoRA + '<ol type="a">';
                 var criterios = modulo[i].criterios;
-                for (const key in criterios) {
+                for (var key in criterios) {
                     if (criterios.hasOwnProperty(key)) {
                         out += '<li>' + criterios[key] + '</li>';
                     }
