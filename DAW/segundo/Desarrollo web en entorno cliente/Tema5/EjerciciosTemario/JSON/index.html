@@ -18,11 +18,19 @@
         xmlhttp.send();
         function getWebs(arr) {
             var modulo = arr.Lenguaje_de_Marcas
-            var out = "";
+            var out = "<ul>";
             var i;
             for (i = 0; i < modulo.length; i++) {
-                out += '<a href="' + modulo[i].id + '">' + modulo[i].textoRA + '</a><br>';
+                out += '<li>' + modulo[i].id + ': ' + modulo[i].textoRA + '<ol type="a">';
+                var criterios = modulo[i].criterios;
+                for (const key in criterios) {
+                    if (criterios.hasOwnProperty(key)) {
+                        out += '<li>' + criterios[key] + '</li>';
+                    }
+                }
+                out += '</ol></li>';
             }
+            out += "</ul>";
             document.getElementById("lasWebs").innerHTML = out;
         }
     </script>
