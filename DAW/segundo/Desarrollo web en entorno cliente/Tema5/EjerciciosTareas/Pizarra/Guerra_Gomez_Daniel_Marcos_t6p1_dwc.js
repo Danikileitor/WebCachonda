@@ -1,42 +1,57 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Variables para el estado del pincel y el color seleccionado
-    var pincelActivo = false;
-    var colorSeleccionado = "";
+// Obtener el elemento del tablero de dibujo
+const zonadibujo = document.getElementById("zonadibujo");
 
-    // Obtener la paleta de colores y las celdas del tablero
-    var paleta = document.getElementById("paleta");
-    var celdas = document.querySelectorAll("#zonadibujo td");
+// Crear el tablero de 30x30 celdas
+const tablero = document.createElement("table");
+tablero.classList.add("tablerodibujo");
+zonadibujo.appendChild(tablero);
 
-    // Manejar clic en la paleta de colores
-    paleta.addEventListener("click", function (event) {
-        var target = event.target;
-        if (target.tagName === "TD") {
-            // Cambiar el color seleccionado y activar/desactivar el pincel
-            colorSeleccionado = target.className;
-            pincelActivo = !pincelActivo;
-            updatePincelMensaje();
-        }
-    });
+for (let i = 0; i < 30; i++) {
+    const fila = document.createElement("tr");
+    tablero.appendChild(fila);
+  for (let j = 0; j < 30; j++) {
+    const columna = document.createElement("td");
+    columna.classList.add("celda");
+    fila.appendChild(columna);
+  }
+}
 
-    // Manejar clic en las celdas del tablero
-    celdas.forEach(function (celda) {
-        celda.addEventListener("click", function () {
-            if (pincelActivo) {
-                // Cambiar el color de la celda al color seleccionado
-                celda.className = colorSeleccionado;
-            }
-        });
-        celda.addEventListener("mouseover", function (event) {
-            if (pincelActivo && event.buttons === 1) {
-                // Cambiar el color de la celda al color seleccionado al mantener presionado el botón del ratón
-                celda.className = colorSeleccionado;
-            }
-        });
-    });
+// Obtener los elementos de la paleta de colores
+const colores = document.querySelectorAll("#paleta td");
 
-    // Función para actualizar el mensaje del pincel
-    function updatePincelMensaje() {
-        var pincelMensaje = document.getElementById("pincel");
-        pincelMensaje.textContent = pincelActivo ? "PINCEL ACTIVADO" : "PINCEL DESACTIVADO";
-    }
+// Color activo inicial
+let colorActivo = "white"; // Color blanco (borrador)
+
+// Asignar eventos a los colores de la paleta
+colores.forEach((color) => {
+  color.addEventListener("click", () => {
+    colorActivo = color.style.backgroundColor;
+    colores.forEach((c) => c.classList.remove("seleccionado"));
+    color.classList.add("seleccionado");
+    mostrarMensajePincel(true);
+  });
 });
+
+// Función para pintar una celda
+function pintarCelda(event) {
+  if (event.buttons === 1) {
+    event.target.style.backgroundColor = colorActivo;
+  }
+}
+
+// Asignar eventos a las celdas del tablero
+const celdas = document.querySelectorAll(".celda");
+celdas.forEach((celda) => {
+  celda.addEventListener("mousemove", pintarCelda);
+  celda.addEventListener("mousedown", pintarCelda);
+  celda.addEventListener("mouseup", () => mostrarMensajePincel(false));
+});
+
+// Función para mostrar el mensaje del pincel
+function mostrarMensajePincel(activado) {
+  const pincel = document.getElementById("pincel");
+  pincel.textContent = activado ? "PINCEL ACTIVADO" : "PINCEL DESACTIVADO";
+}
+
+// Mostrar mensaje inicial
+mostrarMensajePincel(false);
