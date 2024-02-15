@@ -7,8 +7,8 @@ tablero.classList.add("tablerodibujo");
 zonadibujo.appendChild(tablero);
 
 for (let i = 0; i < 30; i++) {
-    const fila = document.createElement("tr");
-    tablero.appendChild(fila);
+  const fila = document.createElement("tr");
+  tablero.appendChild(fila);
   for (let j = 0; j < 30; j++) {
     const columna = document.createElement("td");
     columna.classList.add("celda");
@@ -52,6 +52,3 @@ function mostrarMensajePincel(activado) {
   const pincel = document.getElementById("pincel");
   pincel.textContent = activado ? "PINCEL ACTIVADO" : "PINCEL DESACTIVADO";
 }
-
-// Mostrar mensaje inicial
-mostrarMensajePincel(false);
