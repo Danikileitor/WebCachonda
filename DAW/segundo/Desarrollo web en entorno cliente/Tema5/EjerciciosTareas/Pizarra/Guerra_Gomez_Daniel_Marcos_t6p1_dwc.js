@@ -19,17 +19,19 @@ for (let i = 0; i < 30; i++) {
 // Obtener los elementos de la paleta de colores
 const colores = document.querySelectorAll("#paleta td");
 
-// Color activo inicial
-let colorActivo = "white"; // Color blanco (borrador)
+// Variable para definir el color activo
+let colorActivo = "";
 
 // Asignar eventos a los colores de la paleta
 colores.forEach((color) => {
-  color.addEventListener("click", () => {
-    colores.forEach((c) => c.classList.remove("seleccionado"));
-    colorActivo = color.className;
-    color.classList.add("seleccionado");
-    mostrarMensajePincel(true);
-  });
+  if (color.id != "pincel") {
+    color.addEventListener("click", () => {
+      colores.forEach((c) => c.classList.remove("seleccionado"));
+      colorActivo = color.className;
+      color.classList.add("seleccionado");
+      mostrarMensajePincel(true);
+    });
+  }
 });
 
 // Función para pintar una celda
