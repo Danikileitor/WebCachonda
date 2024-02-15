@@ -57,8 +57,6 @@ const celdas = document.querySelectorAll(".celda");
 celdas.forEach((celda) => {
   celda.addEventListener("click", actualizarPincel);
   celda.addEventListener("mousemove", pintarCelda);
-  celda.addEventListener("mousedown", pintarCelda);
-  celda.addEventListener("mouseup", pintarCelda);
 });
 
 // Función para mostrar el mensaje del pincel
