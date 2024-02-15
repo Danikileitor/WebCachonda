@@ -34,7 +34,7 @@ colores.forEach((color) => {
 
 // Función para pintar una celda
 function pintarCelda(event) {
-  if (event.buttons === 1) {
+  if (event.buttons === 1 && document.getElementById("pincel").textContent == "PINCEL ACTIVADO") {
     event.target.className = colorActivo;
   }
 }
