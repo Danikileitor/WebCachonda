@@ -1,3 +1,6 @@
+// Escribimos el mensaje de ayuda en el <p>
+document.querySelectorAll("p:last-of-type")[0].innerHTML = "Haga CLICK en cualquier celda para activar/desactivar el Pincel";
+
 // Obtener el elemento del tablero de dibujo
 const zonadibujo = document.getElementById("zonadibujo");
 
