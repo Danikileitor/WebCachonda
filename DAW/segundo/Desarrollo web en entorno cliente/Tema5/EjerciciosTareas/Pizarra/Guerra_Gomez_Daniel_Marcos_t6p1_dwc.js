@@ -25,8 +25,8 @@ let colorActivo = "white"; // Color blanco (borrador)
 // Asignar eventos a los colores de la paleta
 colores.forEach((color) => {
   color.addEventListener("click", () => {
-    colorActivo = color.style.backgroundColor;
     colores.forEach((c) => c.classList.remove("seleccionado"));
+    colorActivo = color.className;
     color.classList.add("seleccionado");
     mostrarMensajePincel(true);
   });
@@ -35,7 +35,7 @@ colores.forEach((color) => {
 // Función para pintar una celda
 function pintarCelda(event) {
   if (event.buttons === 1) {
-    event.target.style.backgroundColor = colorActivo;
+    event.target.className = colorActivo;
   }
 }
 
