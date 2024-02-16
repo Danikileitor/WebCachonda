@@ -96,7 +96,7 @@ GRANT ALL ON `dwes`.* TO `dwes`;
 USE `dwes`;
 
 -- Creamos el usuario dwes
-INSERT INTO `usuarios` `(usuario`, `contrasena`) VALUES
+INSERT INTO `usuarios` (`usuario`, `contrasena`) VALUES
 ('dwes', 'e8dc8ccd5e5f9e3a54f07350ce8a2d3d');
 
 INSERT INTO `tienda` (`cod`, `nombre`, `tlf`) VALUES
