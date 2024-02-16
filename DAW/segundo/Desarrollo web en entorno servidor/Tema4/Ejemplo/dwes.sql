@@ -1,6 +1,6 @@
 -- Creamos la base de datos
 
-CREATE DATABASE `dwes` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+CREATE DATABASE IF NOT EXISTS `dwes` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 USE `dwes`;
 
 -- Creamos las tablas
