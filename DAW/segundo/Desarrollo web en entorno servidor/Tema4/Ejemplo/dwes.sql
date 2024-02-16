@@ -60,9 +60,9 @@ PRIMARY KEY (  `producto` ,  `tienda` )
 ) ENGINE = INNODB;
 
 -- Creamos la tabla usuarios
-CREATE TABLE 'dwes'.'usuarios' (
-usuario VARCHAR(20) NOT NULL PRIMARY KEY,
-contrasena VARCHAR(32) NOT NULL
+CREATE TABLE `dwes`.`usuarios` (
+`usuario` VARCHAR(20) NOT NULL PRIMARY KEY,
+`contrasena` VARCHAR(32) NOT NULL
 ) ENGINE = INNODB;
 
  
@@ -89,20 +89,14 @@ ADD CONSTRAINT `stock_ibfk_1`
 
 FOREIGN KEY (`producto`) REFERENCES `producto` (`cod`) ON UPDATE CASCADE;
 
- 
-
-CREATE USER `dwes`
-
-IDENTIFIED BY 'abc123.';
-
- 
+CREATE USER IF NOT EXISTS `dwes` IDENTIFIED BY 'abc123.';
 
 GRANT ALL ON `dwes`.* TO `dwes`;
 
 USE `dwes`;
 
 -- Creamos el usuario dwes
-INSERT INTO usuarios (usuario, contrasena) VALUES
+INSERT INTO `usuarios` `(usuario`, `contrasena`) VALUES
 ('dwes', 'e8dc8ccd5e5f9e3a54f07350ce8a2d3d');
 
 INSERT INTO `tienda` (`cod`, `nombre`, `tlf`) VALUES
