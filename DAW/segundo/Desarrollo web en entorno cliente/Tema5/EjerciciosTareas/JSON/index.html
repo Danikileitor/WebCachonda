@@ -7,25 +7,40 @@
     <h1>Lenguaje de Marcas</h1>
     <select id="losRA" onchange="actualizarRA()">
         <option id="vacio" value="">Selecciona un RA</option>
-        <option id="RA1" value="0">RA1</option>
-        <option id="RA2" value="1">RA2</option>
-        <option id="RA3" value="2">RA3</option>
-        <option id="RA4" value="3">RA4</option>
-        <option id="RA5" value="4">RA5</option>
-        <option id="RA6" value="5">RA6</option>
-        <option id="RA7" value="6">RA7</option>
     </select>
     <div id="resultado"></div>
     <script>
-        function actualizarRA() {
-            //Adaptación cross-browser
-            var xmlhttp;
-            if (window.XMLHttpRequest) {
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
+        //Adaptación cross-browser
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
 
+        function listadoRA() {
+            var listado = document.getElementById("losRA");
+            var url = "db.json";
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var listaRA = JSON.parse(this.responseText);
+                    var i = 0;
+                    listaRA.Lenguaje_de_Marcas.forEach(function (ra) {
+                        var option = document.createElement("option");
+                        option.id = ra.id;
+                        option.value = i;
+                        option.textContent = ra.id + ": " + ra.textoRA;
+                        listado.appendChild(option);
+                        i++;
+                    });
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+        listadoRA();
+
+        function actualizarRA() {
             var url = "db.json";
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
