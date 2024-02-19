@@ -7,7 +7,14 @@
     <h1>Lenguaje de Marcas</h1>
     <div id="lasWebs"></div>
     <script>
-        var xmlhttp = new XMLHttpRequest();
+        //Adaptación cross-browser
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
         var url = "db.json";
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -17,6 +24,7 @@
         };
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
+        
         function getWebs(arr) {
             var modulo = arr.Lenguaje_de_Marcas
             var out = "<ul>";
