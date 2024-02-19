@@ -1,0 +1,59 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Lenguaje de Marcas</h1>
+    <select id="losRA" onchange="actualizarRA()">
+        <option id="vacio" value="">Selecciona un RA</option>
+        <option id="RA1" value="0">RA1</option>
+        <option id="RA2" value="1">RA2</option>
+        <option id="RA3" value="2">RA3</option>
+        <option id="RA4" value="3">RA4</option>
+        <option id="RA5" value="4">RA5</option>
+        <option id="RA6" value="5">RA6</option>
+        <option id="RA7" value="6">RA7</option>
+    </select>
+    <div id="resultado"></div>
+    <script>
+        function actualizarRA() {
+            //Adaptación cross-browser
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            var url = "db.json";
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var listaRA = JSON.parse(this.responseText);
+                    getRA(listaRA);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+
+        function getRA(arr) {
+            var modulo = arr.Lenguaje_de_Marcas
+            var RA = document.getElementById("losRA").value;
+            RA = modulo[RA];
+            var out = "<ul>";
+            out += '<li>' + RA.id + ': ' + RA.textoRA + '<ol type="a">';
+            var criterios = RA.criterios;
+            for (var key in criterios) {
+                if (criterios.hasOwnProperty(key)) {
+                    out += '<li>' + criterios[key] + '</li>';
+                }
+            }
+            out += '</ol></li><br>';
+            out += "</ul>";
+            document.getElementById("resultado").innerHTML = out;
+        }
+    </script>
+</body>
+
+</html>
