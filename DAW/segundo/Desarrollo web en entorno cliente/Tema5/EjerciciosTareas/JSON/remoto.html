@@ -1,0 +1,73 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Lenguaje de Marcas</h1>
+    <select id="losRA" onchange="actualizarRA()">
+        <option id="vacio" value="">Selecciona un RA</option>
+    </select>
+    <div id="resultado"></div>
+    <script>
+        //Adaptación cross-browser
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        function listadoRA() {
+            var listado = document.getElementById("losRA");
+            var url = "http://192.168.106.128:3005/Lenguaje_de_Marcas";
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var listaRA = JSON.parse(this.responseText);
+                    var i = 0;
+                    listaRA.forEach(function (ra) {
+                        var option = document.createElement("option");
+                        option.id = ra.id;
+                        option.value = i;
+                        option.textContent = ra.id + ": " + ra.textoRA;
+                        listado.appendChild(option);
+                        i++;
+                    });
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+        listadoRA();
+
+        function actualizarRA() {
+            var url = "http://192.168.106.128:3005/Lenguaje_de_Marcas";
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var listaRA = JSON.parse(this.responseText);
+                    getRA(listaRA);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+
+        function getRA(arr) {
+            var RA = document.getElementById("losRA").value;
+            RA = arr[RA];
+            var out = "<ul>";
+            out += '<li>' + RA.id + ': ' + RA.textoRA + '<ol type="a">';
+            var criterios = RA.criterios;
+            for (var key in criterios) {
+                if (criterios.hasOwnProperty(key)) {
+                    out += '<li>' + criterios[key] + '</li>';
+                }
+            }
+            out += '</ol></li><br>';
+            out += "</ul>";
+            document.getElementById("resultado").innerHTML = out;
+        }
+    </script>
+</body>
+
+</html>
