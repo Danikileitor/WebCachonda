@@ -17,7 +17,11 @@ function prepararPDF() {
         creator: 'Daniel Marcos Guerra Gómez'
     });
 
+    // Información de las imágenes
+    //var juntaData = 'data:image/jpeg;base64,'+ Base64.encode('img/junta.jpg');
+
     // Agrega el contenido del formulario al PDF
+    //doc.addImage(juntaData, 'JPEG', 15, 40, 180, 160);
     doc.text(20, 20, 'Lenguaje de Marcas');
     doc.text(20, 30, pdfRA.options[pdfRA.selectedIndex].text);
     doc.text(20, 40, pdfCriterio.options[pdfCriterio.selectedIndex].text);
