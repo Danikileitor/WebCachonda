@@ -6,7 +6,16 @@ function prepararPDF() {
     var pdfCriterio = document.getElementById('losCriterios');
 
     // Crea un nuevo objeto JSPDF
-    doc = new jspdf.jsPDF();
+    var options = {
+        orientation: 'p',
+        unit: 'mm',
+        format: 'a4',
+        putOnlyUsedFonts: true,
+        compress: false,
+        precision: 2,
+        userUnit: 1.0
+    };
+    doc = new jspdf.jsPDF(options);
 
     // Agregamos los metadatos al PDF
     doc.setProperties({
@@ -18,10 +27,14 @@ function prepararPDF() {
     });
 
     // Información de las imágenes
-    //var juntaData = 'data:image/jpeg;base64,'+ Base64.encode('img/junta.jpg');
+    var imgJunta = new Image;
+    var imgMurgi = new Image;
+    imgJunta.src = "img/junta.jpg";
+    imgMurgi.src = "img/murgi.png";
 
     // Agrega el contenido del formulario al PDF
-    //doc.addImage(juntaData, 'JPEG', 15, 40, 180, 160);
+    doc.addImage(imgJunta, 5, 5, 50, 32);
+    doc.addImage(imgMurgi, 5, 5, 50, 32);
     doc.text(20, 20, 'Lenguaje de Marcas');
     doc.text(20, 30, pdfRA.options[pdfRA.selectedIndex].text);
     doc.text(20, 40, pdfCriterio.options[pdfCriterio.selectedIndex].text);
