@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguaje de Marcas</title>
+    <script src="js/jspdf.js"></script>
+    <script src="js/json.js" defer></script>
+    <script src="js/pdf.js" defer></script>
+</head>
+
+<body>
+    <h1>Lenguaje de Marcas</h1>
+    <select id="losRA" onchange="actualizarRA()">
+        <option id="RAvacio" value="">Selecciona un RA</option>
+    </select>
+    <hr>
+    <select id="losCriterios">
+        <option id="Cvacio" value="">Selecciona un criterio</option>
+    </select>
+    <div id="resultado"></div>
+    <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+	<input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+    <iframe id="iframe" src="" frameborder="0"></iframe>
+</body>
+
+</html>
