@@ -33,8 +33,8 @@ function prepararPDF() {
     imgMurgi.src = "img/murgi.png";
 
     // Agrega el contenido del formulario al PDF
-    doc.addImage(imgJunta, 5, 5, 50, 32);
-    doc.addImage(imgMurgi, 5, 5, 50, 32);
+    doc.addImage(imgJunta, "JPEG", 5, 5, 50, 32);
+    doc.addImage(imgMurgi, "PNG", 162, 8, 40, 38);
     doc.text(20, 20, 'Lenguaje de Marcas');
     doc.text(20, 30, pdfRA.options[pdfRA.selectedIndex].text);
     doc.text(20, 40, pdfCriterio.options[pdfCriterio.selectedIndex].text);
