@@ -1,6 +1,10 @@
 var doc;
 
 function prepararPDF() {
+    // Variables
+    var pdfRA = document.getElementById('losRA');
+    var pdfCriterio = document.getElementById('losCriterios');
+
     // Crea un nuevo objeto JSPDF
     doc = new jspdf.jsPDF();
 
@@ -15,8 +19,8 @@ function prepararPDF() {
 
     // Agrega el contenido del formulario al PDF
     doc.text(20, 20, 'Lenguaje de Marcas');
-    doc.text(20, 30, document.getElementById('losRA').value);
-    doc.text(20, 40, document.getElementById('losCriterios').value);
+    doc.text(20, 30, pdfRA.options[pdfRA.selectedIndex].text);
+    doc.text(20, 40, pdfCriterio.options[pdfCriterio.selectedIndex].text);
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {
@@ -36,5 +40,5 @@ document.getElementById('previsualizarPDF').addEventListener('click', function (
     var iframe = document.getElementById('iframe');
     iframe.src = blobPDF;
     iframe.width = '100%';
-    iframe.height = '500px';
+    iframe.height = '1177px';
 });
