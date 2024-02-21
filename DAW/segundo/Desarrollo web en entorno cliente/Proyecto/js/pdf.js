@@ -11,7 +11,7 @@ function prepararPDF() {
         unit: 'mm',
         format: 'a4',
         putOnlyUsedFonts: true,
-        compress: false,
+        compress: true,
         precision: 2,
         userUnit: 1.0
     };
