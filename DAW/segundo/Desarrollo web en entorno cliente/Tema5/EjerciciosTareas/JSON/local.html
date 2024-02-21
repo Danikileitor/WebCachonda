@@ -1,74 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguaje de Marcas</title>
+    <script src="js/jspdf.js"></script>
+    <script src="js/local.js" defer></script>
+    <script src="js/pdf.js" defer></script>
 </head>
 
 <body>
     <h1>Lenguaje de Marcas</h1>
     <select id="losRA" onchange="actualizarRA()">
-        <option id="vacio" value="">Selecciona un RA</option>
+        <option id="RAvacio" value="">Selecciona un RA</option>
+    </select>
+    <hr>
+    <select id="losCriterios">
+        <option id="Cvacio" value="">Selecciona un criterio</option>
     </select>
     <div id="resultado"></div>
-    <script>
-        //Adaptación cross-browser
-        var xmlhttp;
-        if (window.XMLHttpRequest) {
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        function listadoRA() {
-            var listado = document.getElementById("losRA");
-            var url = "db.json";
-            xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    var listaRA = JSON.parse(this.responseText);
-                    var i = 0;
-                    listaRA.Lenguaje_de_Marcas.forEach(function (ra) {
-                        var option = document.createElement("option");
-                        option.id = ra.id;
-                        option.value = i;
-                        option.textContent = ra.id + ": " + ra.textoRA;
-                        listado.appendChild(option);
-                        i++;
-                    });
-                }
-            };
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-        }
-        listadoRA();
-
-        function actualizarRA() {
-            var url = "db.json";
-            xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    var listaRA = JSON.parse(this.responseText);
-                    getRA(listaRA);
-                }
-            };
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-        }
-
-        function getRA(arr) {
-            var modulo = arr.Lenguaje_de_Marcas
-            var RA = document.getElementById("losRA").value;
-            RA = modulo[RA];
-            var out = "<ul>";
-            out += '<li>' + RA.id + ': ' + RA.textoRA + '<ol type="a">';
-            var criterios = RA.criterios;
-            for (var key in criterios) {
-                if (criterios.hasOwnProperty(key)) {
-                    out += '<li>' + criterios[key] + '</li>';
-                }
-            }
-            out += '</ol></li><br>';
-            out += "</ul>";
-            document.getElementById("resultado").innerHTML = out;
-        }
-    </script>
+    <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+	<input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+    <iframe id="iframe" src="" frameborder="0"></iframe>
 </body>
 
 </html>
