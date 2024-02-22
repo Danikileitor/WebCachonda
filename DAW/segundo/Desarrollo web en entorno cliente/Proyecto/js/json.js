@@ -5,7 +5,7 @@ if (window.XMLHttpRequest) {
 } else {
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
-var url = "http://192.168.106.128:3005/Lenguaje_de_Marcas";// Para cambiar a local modificar a "db.json"
+var url = "http://10.147.20.155:3005/Lenguaje_de_Marcas";// Para cambiar a local modificar a "db.json"
 var listado1 = document.getElementById("losRA");
 var listado2 = document.getElementById("losCriterios");
 var resultado = document.getElementById("resultado");
