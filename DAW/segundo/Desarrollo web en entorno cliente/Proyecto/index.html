@@ -4,24 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenguaje de Marcas</title>
+    <title>Unidad Didáctica</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jspdf.js"></script>
     <script src="js/json.js" defer></script>
     <script src="js/pdf.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <h1>Lenguaje de Marcas</h1>
-    <select id="losRA" onchange="actualizarRA()">
-        <option id="RAvacio" value="">Selecciona un RA</option>
-    </select>
-    <hr>
-    <select id="losCriterios">
-        <option id="Cvacio" value="">Selecciona un criterio</option>
-    </select>
-    <div id="resultado"></div>
-    <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
-	<input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+    <form>
+        <h1>Unidad Didáctica</h1>
+        <h2>Módulo: Desarrollo Web en Entorno Cliente</h2>
+        <h3><label for="profesor">Profesor: </label><input type="text" id="profesor" name="profesor"></h3>
+        <div>
+            <label>Cargar datos</label>
+            <button onclick="verlogin()">Botón Acceso Admin</button>
+        </div>
+        <div id="login">
+            <table>
+                <tr>
+                    <th><label for="usuario">usuario:</label></th>
+                    <td><input type="text" id="usuario" name="usuario"></td>
+                </tr>
+                <tr>
+                    <th><label for="pass">contraseña:</label></th>
+                    <td><input type="password" id="pass" name="pass"></td>
+                </tr>
+            </table>
+        </div>
+        <select id="losRA" onchange="actualizarRA()">
+            <option id="RAvacio" value="">Selecciona un RA</option>
+        </select>
+        <hr>
+        <select id="losCriterios">
+            <option id="Cvacio" value="">Selecciona un criterio</option>
+        </select>
+        <div id="resultado"></div>
+        <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+        <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+    </form>
     <iframe id="iframe" src="" frameborder="0"></iframe>
 </body>
 
