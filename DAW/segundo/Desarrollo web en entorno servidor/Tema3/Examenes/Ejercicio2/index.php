@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen Instituto</title>
     <link rel="stylesheet" href="dwes.css">
+    <?php
+    include_once 'fecha.php';
+    $instituto = new PDO('mysql:host=localhost;dbname=Instituto', 'instituto', 'instituto');
+    $instituto->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    ?>
 </head>
 
 <body>
@@ -14,13 +19,33 @@
         <p>Filtrar por curso y letra:
             <select name="filtroCurso">
                 <option value="todos" selected>Todos</option>
-                <option value="1">1º</option>
-                <option value="2">2º</option>
+                <?php
+                try {
+                    $sql = "SELECT DISTINCT Curso FROM Alumnos";
+                    $resultadoFiltroCurso = $instituto->query($sql);
+
+                    while ($cursos = $resultadoFiltroCurso->fetch(PDO::FETCH_OBJ)) {
+                        echo "<option value='$cursos->Curso'>$cursos->Curso</option>";
+                    }
+                } catch (PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                }
+                ?>
             </select>
             <select name="filtroLetra">
                 <option value="cualquiera" selected>Cualquiera</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
+                <?php
+                try {
+                    $sql = "SELECT DISTINCT Letra FROM Alumnos";
+                    $resultadoFiltroLetra = $instituto->query($sql);
+
+                    while ($letras = $resultadoFiltroLetra->fetch(PDO::FETCH_OBJ)) {
+                        echo "<option value='$letras->Letra'>$letras->Letra</option>";
+                    }
+                } catch (PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                }
+                ?>
             </select>
             <input type="submit" name="actualizar" value="Actualizar">
         </p>
@@ -35,10 +60,6 @@
             <th>Letra</th>
         </tr>
         <?php
-        include_once 'fecha.php';
-        $instituto = new PDO('mysql:host=localhost;dbname=Instituto', 'instituto', 'instituto');
-        $instituto->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         try {
             if (isset($_POST["filtroCurso"]) && $_POST["filtroCurso"] !== "todos") {
                 $filtroCurso = $_POST["filtroCurso"];
