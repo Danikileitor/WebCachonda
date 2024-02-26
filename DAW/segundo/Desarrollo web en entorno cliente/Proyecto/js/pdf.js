@@ -35,9 +35,12 @@ function prepararPDF() {
     // Agrega el contenido del formulario al PDF
     doc.addImage(imgJunta, "JPEG", 5, 5, 50, 32);
     doc.addImage(imgMurgi, "PNG", 162, 8, 40, 38);
-    doc.text(20, 60, 'Lenguaje de Marcas');
-    doc.text(20, 70, pdfRA.options[pdfRA.selectedIndex].text);
-    doc.text(20, 80, pdfCriterio.options[pdfCriterio.selectedIndex].text);
+    doc.text(20, 60, 'Unidad Didáctica');
+    doc.text(20, 70, 'Módulo: Desarrollo Web en Entorno Cliente');
+    doc.text(20, 80, 'Profesor: ' + document.getElementById('profesor').value);
+    doc.text(20, 90, 'Lenguaje de Marcas');
+    doc.text(20, 100, pdfRA.options[pdfRA.selectedIndex].text);
+    doc.text(20, 110, pdfCriterio.options[pdfCriterio.selectedIndex].text);
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {
