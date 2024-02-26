@@ -1,4 +1,4 @@
-var panel = document.getElementById("login");
+var panel = document.getElementById("formulariologin");
 
 var admin = {
     user: "admin",
