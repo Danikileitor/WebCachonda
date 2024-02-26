@@ -17,7 +17,8 @@
     <form>
         <h1>Unidad Didáctica</h1>
         <h2>Módulo: Desarrollo Web en Entorno Cliente</h2>
-        <h3><label for="profesor">Profesor: </label><input type="text" id="profesor" name="profesor" autocomplete="name" disabled></h3>
+        <h3><label for="profesor">Profesor: </label><input type="text" id="profesor" name="profesor" autocomplete="name"
+                disabled></h3>
         <div>
             <label>Cargar datos</label>
             <button type="button" onclick="verlogin()">Botón Acceso Admin</button>
@@ -38,14 +39,60 @@
                 </tr>
             </table>
         </div>
-        <select id="losRA" name="losRA" onchange="actualizarRA()">
-            <option id="RAvacio" value="">Selecciona un RA</option>
-        </select>
-        <hr>
-        <select id="losCriterios" name="losCriterios">
-            <option id="Cvacio" value="">Selecciona un criterio</option>
-        </select>
-        <div id="resultado"></div>
+        <table id="tablapdf">
+            <tr>
+                <td colspan="2">Objetivo</td>
+                <td colspan="5">Pendiente de programar</td>
+            </tr>
+            <tr>
+                <td>RA</td>
+                <td colspan="3">
+                    <select id="losRA" name="losRA" onchange="actualizarRA()">
+                        <option id="RAvacio" value="">Selecciona un RA</option>
+                    </select>
+                </td>
+                <td>Añadir RA</td>
+                <td>Quitar RA</td>
+                <td>Peso RA</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Criterio</td>
+                <td colspan="2">
+                    <select id="losCriterios" name="losCriterios">
+                        <option id="Cvacio" value="">Selecciona un criterio</option>
+                    </select>
+                </td>
+                <td>Añadir Cr.</td>
+                <td>Quitar Cr.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Tipo Tarea</td>
+                <td>Nombre Tarea</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">Contenido</td>
+                <td>Nombre:</td>
+                <td></td>
+                <td>Fuente:</td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
         <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
         <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
     </form>

@@ -8,7 +8,6 @@ if (window.XMLHttpRequest) {
 var url = "http://10.147.20.155:3005/Lenguaje_de_Marcas";// Para cambiar a local modificar a "db.json"
 var listado1 = document.getElementById("losRA");
 var listado2 = document.getElementById("losCriterios");
-var resultado = document.getElementById("resultado");
 
 function listadoRA() {
     xmlhttp.onreadystatechange = function () {
