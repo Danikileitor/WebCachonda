@@ -291,14 +291,26 @@ form {
         }
 
         table {
+            margin: auto;
+            width: 95%;
+            border: 0;
+
             tr {
                 td:first-child {
+                    width: 50%;
                     text-align: right;
                     padding-right: 1rem;
                 }
 
                 td:last-child {
+                    width: 50%;
                     text-align: left;
+                }
+
+                &:last-child {
+                    td {
+                        padding-bottom: 1rem;
+                    }
                 }
             }
         }
@@ -318,12 +330,11 @@ form {
 }
 
 table {
-    /* ajustamos margen, tamaño y borde de la tabla */
-    margin: auto;
-    width: 95%;
-    border: 0;
-
     &.dex {
+        /* ajustamos margen, tamaño y borde de la tabla */
+        margin: auto;
+        width: 95%;
+        border: 0;
         border-width: 0px;
         box-shadow: 1px 1px 3px #666, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000;
 
@@ -342,6 +353,37 @@ table {
             border-left: 1px #ccc solid;
             border-right: 1px #ccc solid;
         }
+
+        td {
+            &.row0 {
+                text-align: center;
+                background-color: #ccc;
+                border-color: #333;
+                padding: 5px;
+                border: 0px solid;
+                border-bottom: 1px #666 solid;
+            }
+
+            &.row1 {
+                border-color: #999;
+                background-color: #f0f0f0;
+                border-top: 1px #999 solid;
+                border-left: 1px #ccc solid;
+                border-right: 1px #ccc solid;
+            }
+
+            &.row2 {
+                border-color: #999;
+                background-color: #e0e0e0;
+                border-top: 1px #999 solid;
+                border-left: 1px #ccc solid;
+                border-right: 1px #ccc solid;
+            }
+
+            &.center {
+                text-align: center;
+            }
+        }
     }
 
     &.dexg {
@@ -349,36 +391,6 @@ table {
         box-shadow: 1px 1px 4px #333, 1px 1px #666, -1px 1px #666, 1px -1px #666, -1px -1px #666;
     }
 
-    td {
-        &.row0 {
-            text-align: center;
-            background-color: #ccc;
-            border-color: #333;
-            padding: 5px;
-            border: 0px solid;
-            border-bottom: 1px #666 solid;
-        }
-
-        &.row1 {
-            border-color: #999;
-            background-color: #f0f0f0;
-            border-top: 1px #999 solid;
-            border-left: 1px #ccc solid;
-            border-right: 1px #ccc solid;
-        }
-
-        &.row2 {
-            border-color: #999;
-            background-color: #e0e0e0;
-            border-top: 1px #999 solid;
-            border-left: 1px #ccc solid;
-            border-right: 1px #ccc solid;
-        }
-
-        &.center {
-            text-align: center;
-        }
-    }
 }
 
 @keyframes rotar {
