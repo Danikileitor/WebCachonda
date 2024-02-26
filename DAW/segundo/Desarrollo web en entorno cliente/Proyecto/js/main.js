@@ -1,4 +1,8 @@
+var profesor = document.getElementById("profesor");
 var panel = document.getElementById("formulariologin");
+var user = document.getElementById("usuario");
+var pass = document.getElementById("pass");
+var errores = document.getElementById("errores");
 
 var admin = {
     user: "admin",
@@ -12,4 +16,14 @@ function verlogin() {
 
 function ocultar(elemento) {
     elemento.style.display = "none";
+}
+
+function login() {
+    errores.innerHTML = "";
+    if (usuario.value == admin.user && pass.value == admin.pass) {
+        profesor.disabled = false;
+        ocultar(panel);
+    } else {
+        errores.innerHTML = "Credenciales incorrectas";
+    }
 }
