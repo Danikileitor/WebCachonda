@@ -4,7 +4,7 @@ form {
     text-align: center;
 }
 
-#formulariologin {
+#formulariologin, #tablapdfresultado {
     display: none;
 }
 

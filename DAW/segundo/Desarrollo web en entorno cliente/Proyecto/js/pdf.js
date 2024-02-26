@@ -4,6 +4,12 @@ function prepararPDF() {
     // Variables
     var pdfRA = document.getElementById('losRA');
     var pdfCriterio = document.getElementById('losCriterios');
+    var RASeleccionado = document.getElementById('RASeleccionado');
+    var criterioSeleccionado = document.getElementById('criterioSeleccionado');
+
+    // Preparar la tabla
+    RASeleccionado.innerHTML = pdfRA.options[pdfRA.selectedIndex].text;
+    criterioSeleccionado.innerHTML = pdfCriterio.options[pdfCriterio.selectedIndex].text;
 
     // Crea un nuevo objeto JSPDF
     var options = {
@@ -43,8 +49,7 @@ function prepararPDF() {
     doc.text(20, 90, 'Lenguaje de Marcas');
     doc.setFont(undefined, 'normal');
     doc.setFontSize(10);
-    doc.text(20, 100, pdfRA.options[pdfRA.selectedIndex].text);
-    doc.text(20, 110, pdfCriterio.options[pdfCriterio.selectedIndex].text);
+    doc.autoTable({ html: '#tablapdfresultado', startY: 100 });
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {
