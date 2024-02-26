@@ -1,7 +1,7 @@
 var panel = document.getElementById("login");
 
-var profesor1 = {
-    user: "gabriel",
+var admin = {
+    user: "admin",
     pass: "1234"
 };
 
