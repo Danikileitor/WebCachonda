@@ -328,6 +328,7 @@ form fieldset table {
 form fieldset table tr td:first-child {
   width: 50%;
   text-align: right;
+  vertical-align: top;
   padding-right: 1rem;
 }
 form fieldset table tr td:last-child {
