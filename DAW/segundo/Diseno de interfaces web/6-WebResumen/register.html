@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,8 +13,8 @@
   <title>Pokeinfo - Registro</title>
 </head>
 
-<body>
-  <div class="container-lg border-start border-end border-dark">
+<body class="h-100">
+  <div class="container-lg border-start border-end border-dark d-flex flex-column h-100">
     <header class="row justify-content-center align-items-center" id="inicio">
       <div class="col bg-dark text-warning">
         <marquee behavior="alternate">
@@ -81,7 +81,7 @@
         </nav>
       </div>
     </div>
-    <section class="row justify-content-center align-items-center bg-black text-light">
+    <section class="row justify-content-center align-items-top bg-black text-light h-100">
       <article class="col-12 text-center">
         <form action="/enviar.php" method="post" enctype="text/plain">
           <fieldset class="border border-2 p-2">
@@ -89,11 +89,13 @@
             <table>
               <tr>
                 <td><label for="usuario">Usuario<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="text" id="usuario" name="usuario" placeholder="Usuario" required autocomplete="username" autofocus></td>
+                <td><input type="text" id="usuario" name="usuario" placeholder="Usuario" required
+                    autocomplete="username" autofocus></td>
               </tr>
               <tr>
                 <td><label for="contrasena">Contraseña<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="password" id="contrasena" name="contrasena" placeholder="********" required autocomplete="new-password"></td>
+                <td><input type="password" id="contrasena" name="contrasena" placeholder="********" required
+                    autocomplete="new-password"></td>
               </tr>
             </table>
           </fieldset>
@@ -102,11 +104,13 @@
             <table>
               <tr>
                 <td><label for="nombre">Nombre<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="text" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="given-name"></td>
+                <td><input type="text" id="nombre" name="nombre" placeholder="Nombre" required
+                    autocomplete="given-name"></td>
               </tr>
               <tr>
                 <td><label for="apellidos">Apellidos<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required autocomplete="family-name"></td>
+                <td><input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required
+                    autocomplete="family-name"></td>
               </tr>
               <tr>
                 <td><label for="email">Email<span class="fw-bold text-danger">*</span>:</label></td>
@@ -167,10 +171,14 @@
               </tr>
             </table>
           </fieldset>
+          <div class="pt-3">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+          </div>
         </form>
       </article>
     </section>
-    <footer class="row justify-content-center align-items-center border-top border-dark">
+    <footer class="row justify-content-center align-items-center border-top border-dark mt-auto">
       <div class="col text-center">
         <figure class="logos"><a href="https://www.facebook.com/PokemonOficialES/" alt="FaceBook"><img
               src="img/rrss/facebook.svg" alt="FaceBook"></a><a href="https://twitter.com/Pokemon_ES_ESP"
