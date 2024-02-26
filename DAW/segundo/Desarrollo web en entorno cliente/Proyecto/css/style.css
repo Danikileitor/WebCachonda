@@ -12,6 +12,10 @@ form {
     color: red;
 }
 
-#tablapdf, td {
+#tablapdf, #tablapdf td {
     border: 1px solid black;
+}
+
+#tablapdf {
+    border-collapse: collapse;
 }
