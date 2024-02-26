@@ -45,6 +45,7 @@ function prepararPDF() {
     doc.setFontSize(10);
     doc.text(20, 100, pdfRA.options[pdfRA.selectedIndex].text);
     doc.text(20, 110, pdfCriterio.options[pdfCriterio.selectedIndex].text);
+    //doc.autoTable({ html: '#tablapdf' })
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {
