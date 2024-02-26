@@ -39,17 +39,18 @@ function prepararPDF() {
     imgMurgi.src = "img/murgi.png";
 
     // Agrega el contenido del formulario al PDF
+    const centrar = (doc.internal.pageSize.width || doc.internal.pageSize.getWidth()) / 2;
     doc.addImage(imgJunta, "JPEG", 5, 5, 50, 32);
     doc.addImage(imgMurgi, "PNG", 162, 8, 40, 38);
     doc.setFont(undefined, 'bold');
     doc.setFontSize(12);
-    doc.text(20, 60, 'Unidad Didáctica');
-    doc.text(20, 70, 'Módulo: Desarrollo Web en Entorno Cliente');
-    doc.text(20, 80, 'Profesor: ' + document.getElementById('profesor').value);
-    doc.text(20, 90, 'Lenguaje de Marcas');
+    doc.text(centrar, 60, 'Unidad Didáctica', { align: 'center' });
+    doc.text(centrar, 70, 'Módulo: Desarrollo Web en Entorno Cliente', { align: 'center' });
+    doc.text(centrar, 80, 'Profesor: ' + document.getElementById('profesor').value, { align: 'center' });
+    doc.text(centrar, 90, 'Lenguaje de Marcas', { align: 'center' });
     doc.setFont(undefined, 'normal');
     doc.setFontSize(10);
-    doc.autoTable({ html: '#tablapdfresultado', startY: 100 });
+    doc.autoTable({ html: '#tablapdfresultado', startY: 100, useCss: true });
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {

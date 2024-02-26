@@ -12,10 +12,16 @@ form {
     color: red;
 }
 
-#tablapdf, #tablapdf td {
+#tablapdf,  #tablapdfresultado, #tablapdf td,  #tablapdfresultado td {
     border: 1px solid black;
 }
 
-#tablapdf {
+#tablapdf,  #tablapdfresultado {
     border-collapse: collapse;
+}
+
+#tablapdf td,  #tablapdfresultado td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
 }
