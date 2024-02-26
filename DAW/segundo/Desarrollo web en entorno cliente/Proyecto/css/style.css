@@ -11,3 +11,7 @@ form {
 #errores {
     color: red;
 }
+
+#tablapdf, td {
+    border: 1px solid black;
+}
