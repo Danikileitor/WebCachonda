@@ -8,6 +8,10 @@ form {
     display: none;
 }
 
+#cargarDatos {
+    margin-bottom: 10px;
+}
+
 #errores {
     color: red;
 }

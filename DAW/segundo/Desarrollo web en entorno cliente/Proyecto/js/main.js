@@ -23,6 +23,7 @@ function login() {
     if (usuario.value == admin.user && pass.value == admin.pass) {
         profesor.disabled = false;
         ocultar(panel);
+        ocultar(cargarDatos);
     } else {
         errores.innerHTML = "Credenciales incorrectas";
     }

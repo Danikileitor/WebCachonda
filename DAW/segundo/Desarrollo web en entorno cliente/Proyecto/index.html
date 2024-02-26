@@ -19,7 +19,7 @@
         <h2>Módulo: Desarrollo Web en Entorno Cliente</h2>
         <h3><label for="profesor">Profesor: </label><input type="text" id="profesor" name="profesor" autocomplete="name"
                 disabled></h3>
-        <div>
+        <div id="cargarDatos">
             <label>Cargar datos</label>
             <button type="button" onclick="verlogin()">Botón Acceso Admin</button>
         </div>
@@ -93,9 +93,11 @@
                 <td colspan="2"></td>
             </tr>
         </table>
+        <br>
         <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
         <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
     </form>
+    <hr>
     <table id="tablapdfresultado">
         <tr>
             <td colspan="2">Objetivo</td>
