@@ -73,5 +73,8 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
         emailError.style.display = 'none';
         emailOK = true;
     }
-    this.submit();
+
+    if (usuarioOK && contrasenaOK && nombreOK && apellidosOK && emailOK) {
+        this.submit();
+    }
 });
