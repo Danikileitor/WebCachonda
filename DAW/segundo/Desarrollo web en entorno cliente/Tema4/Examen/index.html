@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examen</title>
+    <title>Prueba Evaluable RA5_fgh RA6_f DWC</title>
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
-    <h1>Examen</h1>
-    <form action="#">
-        <table>
-            <tr>
-                <td>Nombre:</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Apellidos:</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Código de verificación:</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2">submit</td>
-            </tr>
-        </table>
-    </form>
-    <form action="#">
-        <table>
-            <tr>
-                <td>Usuario Administrador:</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Clave de acceso:</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2">mensaje de verificación</td>
-            </tr>
-            <tr>
-                <td colspan="2">submit</td>
-            </tr>
-        </table>
-    </form>
-    <div>
-        <button type="button">Cambiar a Inglés</button>
-        <button type="button">Salir</button>
-    </div>
+    <center>
+        <h1>Prueba Evaluable RA5_fgh RA6_f DWC</h1>
+        <form action="#" id="formulario1">
+            <table>
+                <tr>
+                    <td><label for="nombre" id="labelNombre">Nombre:</label></td>
+                    <td><input type="text" name="nombre" id="nombre"></td>
+                </tr>
+                <tr>
+                    <td><label for="apellidos" id="labelApellidos">Apellidos:</label></td>
+                    <td><input type="text" name="apellidos" id="apellidos"></td>
+                </tr>
+                <tr>
+                    <td><label for="codigo" id="labelCodigo">Código de verificación:</label></td>
+                    <td><input type="password" name="codigo" id="codigo"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="error1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Enviar" id="enviar1"></td>
+                </tr>
+            </table>
+        </form>
+        <hr>
+        <form action="#" id="formulario2">
+            <table>
+                <tr>
+                    <td><label for="usuario" id="labelUsuario">Usuario Administrador:</label></td>
+                    <td><input type="text" name="usuario" id="usuario"></td>
+                </tr>
+                <tr>
+                    <td><label for="clave" id="labelClave">Clave de acceso:</label></td>
+                    <td><input type="password" name="clave" id="clave"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="error2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Enviar" id="enviar2"></td>
+                </tr>
+            </table>
+        </form>
+        <div id="panel" style="display: none;">
+            <hr>
+            <button type="button" id="cambiar">Cambiar a Inglés</button>
+            <button type="button" id="salir">Salir</button>
+        </div>
+    </center>
 </body>
+
 </html>
