@@ -328,6 +328,11 @@ form {
         width: 90%;
         height: 200px;
     }
+
+    .formError {
+        color: red;
+        display: none;
+    }
 }
 
 table {

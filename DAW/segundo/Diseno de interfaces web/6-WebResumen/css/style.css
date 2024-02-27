@@ -348,6 +348,10 @@ form textarea {
   width: 90%;
   height: 200px;
 }
+form .formError {
+  color: red;
+  display: none;
+}
 
 table.dex {
   /* ajustamos margen, tamaño y borde de la tabla */
