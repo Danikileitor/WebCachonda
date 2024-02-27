@@ -11,6 +11,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <title>Pokeinfo - Registro</title>
+  <script src="js/ria.js" defer></script>
 </head>
 
 <body class="h-100">
@@ -83,7 +84,7 @@
     </div>
     <section class="row justify-content-center align-items-top bg-black text-light h-100">
       <article class="col-12 text-center">
-        <form action="#" method="post" enctype="text/plain">
+        <form action="#" method="post" enctype="text/plain" id="formularioRegistro">
           <fieldset class="border border-2 p-2">
             <legend class="float-none w-auto p-2">Datos de usuario</legend>
             <table>
@@ -114,7 +115,10 @@
               </tr>
               <tr>
                 <td><label for="email">Email<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="email" id="email" name="email" placeholder=".....@.....com" required></td>
+                <td>
+                  <input type="email" id="email" name="email" placeholder=".....@.....com" aria-required="true" aria-describedby="emailError">
+                  <span id="emailError" style="color: red; display: none;">Por favor, ingrese un correo electrónico válido.</span>
+                </td>
               </tr>
               <tr>
                 <td><label for="fecha">Fecha de nacimiento<span class="fw-bold text-danger">*</span>:</label></td>
