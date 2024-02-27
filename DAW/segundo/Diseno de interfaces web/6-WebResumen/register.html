@@ -90,13 +90,20 @@
             <table>
               <tr>
                 <td><label for="usuario">Usuario<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="text" id="usuario" name="usuario" placeholder="Usuario" required
-                    autocomplete="username" autofocus></td>
+                <td>
+                  <input type="text" id="usuario" name="usuario" placeholder="Usuario" aria-required="true"
+                    autocomplete="username" aria-describedby="usuarioError" autofocus>
+                  <span id="usuarioError" class="formError">Por favor, ingrese un nombre de usuario.</span>
+                </td>
               </tr>
               <tr>
                 <td><label for="contrasena">Contraseña<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required
-                    autocomplete="new-password"></td>
+                <td>
+                  <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" aria-required="true"
+                    autocomplete="new-password" aria-describedby="contrasenaError">
+                  <span id="contrasenaError" class="formError">Por favor, ingrese una contraseña que contenga como
+                    mínimo una letra mayúscula, una letra minúscula y un número.</span>
+                </td>
               </tr>
             </table>
           </fieldset>
@@ -105,13 +112,19 @@
             <table>
               <tr>
                 <td><label for="nombre">Nombre<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="text" id="nombre" name="nombre" placeholder="Nombre" required
-                    autocomplete="given-name"></td>
+                <td>
+                  <input type="text" id="nombre" name="nombre" placeholder="Nombre" aria-required="true"
+                    autocomplete="given-name" aria-describedby="nombreError">
+                  <span id="nombreError" class="formError">Por favor, ingrese su nombre.</span>
+                </td>
               </tr>
               <tr>
                 <td><label for="apellidos">Apellidos<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required
-                    autocomplete="family-name"></td>
+                <td>
+                  <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" aria-required="true"
+                    autocomplete="family-name" aria-describedby="apellidosError">
+                  <span id="apellidosError" class="formError">Por favor, ingrese sus apellidos.</span>
+                </td>
               </tr>
               <tr>
                 <td><label for="email">Email<span class="fw-bold text-danger">*</span>:</label></td>
@@ -123,7 +136,7 @@
               </tr>
               <tr>
                 <td><label for="fecha">Fecha de nacimiento<span class="fw-bold text-danger">*</span>:</label></td>
-                <td><input type="date" id="fecha" name="fecha" required autocomplete="bday"></td>
+                <td><input type="date" id="fecha" name="fecha" autocomplete="bday"></td>
               </tr>
               <tr>
                 <td><label for="telefono">Número de teléfono:</label></td>
