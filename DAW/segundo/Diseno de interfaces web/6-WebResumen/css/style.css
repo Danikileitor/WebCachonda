@@ -325,18 +325,31 @@ form fieldset table {
   width: 95%;
   border: 0;
 }
-form fieldset table tr td:first-child {
+form fieldset table tr td {
   width: 50%;
+  padding-bottom: 1rem;
+}
+form fieldset table tr td:first-child {
   text-align: right;
   vertical-align: top;
   padding-right: 1rem;
 }
 form fieldset table tr td:last-child {
-  width: 50%;
   text-align: left;
 }
 form fieldset table tr:last-child td {
   padding-bottom: 1rem;
+}
+form fieldset input[type=checkbox],
+form fieldset input[type=radio] {
+  margin: 0;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+form fieldset input[type=radio],
+form fieldset label {
+  display: inline;
+  vertical-align: middle;
 }
 form legend {
   /* cambiamos el color y añadimos negrita */
@@ -350,6 +363,7 @@ form textarea {
 }
 form .formError {
   color: red;
+  font-weight: bold;
   display: none;
 }
 

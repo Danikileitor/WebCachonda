@@ -296,15 +296,18 @@ form {
             border: 0;
 
             tr {
-                td:first-child {
+                td {
                     width: 50%;
+                    padding-bottom: 1rem;
+                }
+
+                td:first-child {
                     text-align: right;
                     vertical-align: top;
                     padding-right: 1rem;
                 }
 
                 td:last-child {
-                    width: 50%;
                     text-align: left;
                 }
 
@@ -314,6 +317,19 @@ form {
                     }
                 }
             }
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin: 0;
+            min-width: 2rem;
+            min-height: 2rem;
+        }
+
+        input[type='radio'],
+        label {
+            display: inline;
+            vertical-align: middle;
         }
     }
 
@@ -331,6 +347,7 @@ form {
 
     .formError {
         color: red;
+        font-weight: bold;
         display: none;
     }
 }
