@@ -53,8 +53,8 @@
                         <option id="RAvacio" value="">Selecciona un RA</option>
                     </select>
                 </td>
-                <td>Añadir RA</td>
-                <td>Quitar RA</td>
+                <td><button type="button">Añadir RA</button></td>
+                <td><button type="button">Quitar RA</button></td>
                 <td><input type="number" id="peso" name="peso" placeholder="Peso RA"> %</td>
             </tr>
             <tr>
@@ -65,8 +65,8 @@
                         <option id="Cvacio" value="">Selecciona un criterio</option>
                     </select>
                 </td>
-                <td>Añadir Cr.</td>
-                <td>Quitar Cr.</td>
+                <td><button type="button">Añadir Cr.</button></td>
+                <td><button type="button">Quitar Cr.</button></td>
                 <td></td>
             </tr>
             <tr>
@@ -80,7 +80,11 @@
             </tr>
             <tr>
                 <td colspan="2">Contenido</td>
-                <td>Nombre:</td>
+                <td>Nombre: <select id="contenido" name="contenido">
+                    <option value="1">Prueba 1</option>
+                    <option value="2">Prueba 2</option>
+                    <option value="3">Prueba 3</option>
+                </select></td>
                 <td></td>
                 <td>Fuente:</td>
                 <td colspan="2"><input type="text" name="fuente" id="fuente"></td>
@@ -126,7 +130,7 @@
         </tr>
         <tr>
             <td colspan="2">Contenido</td>
-            <td>Nombre:</td>
+            <td>Nombre: <span id="contenido2"></span></td>
             <td></td>
             <td>Fuente:</td>
             <td colspan="2" id="fuente2"></td>
