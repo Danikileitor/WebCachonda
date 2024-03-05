@@ -10,11 +10,14 @@ function prepararPDF() {
     var criterioSeleccionado = document.getElementById('criterioSeleccionado');
     var peso = document.getElementById('peso');
     var peso2 = document.getElementById('peso2');
+    var fuente = document.getElementById('fuente');
+    var fuente2 = document.getElementById('fuente2');
 
     // Preparar la tabla
     RASeleccionado.innerHTML = pdfRA.options[pdfRA.selectedIndex].text;
     criterioSeleccionado.innerHTML = pdfCriterio.options[pdfCriterio.selectedIndex].text;
     peso2.innerHTML = peso.value + " %";
+    fuente2.innerHTML = fuente.value;
 
     // Crea un nuevo objeto JSPDF
     var options = {
