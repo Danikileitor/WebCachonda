@@ -8,10 +8,13 @@ function prepararPDF() {
     var pdfCriterio = document.getElementById('losCriterios');
     var RASeleccionado = document.getElementById('RASeleccionado');
     var criterioSeleccionado = document.getElementById('criterioSeleccionado');
+    var peso = document.getElementById('peso');
+    var peso2 = document.getElementById('peso2');
 
     // Preparar la tabla
     RASeleccionado.innerHTML = pdfRA.options[pdfRA.selectedIndex].text;
     criterioSeleccionado.innerHTML = pdfCriterio.options[pdfCriterio.selectedIndex].text;
+    peso2.innerHTML = peso.value + " %";
 
     // Crea un nuevo objeto JSPDF
     var options = {
