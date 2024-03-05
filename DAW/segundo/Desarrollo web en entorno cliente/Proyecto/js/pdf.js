@@ -14,6 +14,10 @@ function prepararPDF() {
     var fuente2 = document.getElementById('fuente2');
     var contenido = document.getElementById('contenido');
     var contenido2 = document.getElementById('contenido2');
+    var tipoTarea = document.getElementById('tipoTarea');
+    var tipoTarea2 = document.getElementById('tipoTarea2');
+    var nombreTarea = document.getElementById('nombreTarea');
+    var nombreTarea2 = document.getElementById('nombreTarea2');
 
     // Preparar la tabla
     RASeleccionado.innerHTML = pdfRA.options[pdfRA.selectedIndex].text;
@@ -21,6 +25,8 @@ function prepararPDF() {
     peso2.innerHTML = peso.value + " %";
     fuente2.innerHTML = fuente.value;
     contenido2.innerHTML = contenido.options[contenido.selectedIndex].text;
+    tipoTarea2.innerHTML = tipoTarea.options[tipoTarea.selectedIndex].text;
+    nombreTarea2.innerHTML = nombreTarea.value;
 
     // Crea un nuevo objeto JSPDF
     var options = {
