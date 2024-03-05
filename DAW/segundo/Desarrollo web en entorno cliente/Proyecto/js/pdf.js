@@ -27,7 +27,7 @@ function prepararPDF() {
     peso2.innerHTML = peso.value + " %";
     fuente2.innerHTML = fuente.value;
     objetivoSeleccionado.innerHTML = objetivo.options[objetivo.selectedIndex].text;
-    contenido2.innerHTML = contenido.options[contenido.selectedIndex].text;
+    contenido2.innerHTML = contenido.value;
     tipoTarea2.innerHTML = tipoTarea.options[tipoTarea.selectedIndex].text;
     nombreTarea2.innerHTML = nombreTarea.value;
 
