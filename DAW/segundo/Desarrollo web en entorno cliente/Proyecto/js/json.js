@@ -13,6 +13,7 @@ function listadoRA() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var listaRA = JSON.parse(this.responseText);
+            document.getElementById("modulo").innerHTML = url.split("/").pop().replaceAll("_", " ");//Obtenemos el nombre del módulo y cambiamos los _ por espacios.
             var i = 0;
             listaRA.forEach(function (ra) {
                 var option = document.createElement("option");
