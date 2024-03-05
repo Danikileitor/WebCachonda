@@ -8,6 +8,8 @@ function prepararPDF() {
     var pdfCriterio = document.getElementById('losCriterios');
     var RASeleccionado = document.getElementById('RASeleccionado');
     var criterioSeleccionado = document.getElementById('criterioSeleccionado');
+    var objetivo = document.getElementById('objetivo');
+    var objetivoSeleccionado = document.getElementById('objetivoSeleccionado');
     var peso = document.getElementById('peso');
     var peso2 = document.getElementById('peso2');
     var fuente = document.getElementById('fuente');
@@ -24,6 +26,7 @@ function prepararPDF() {
     criterioSeleccionado.innerHTML = pdfCriterio.options[pdfCriterio.selectedIndex].text;
     peso2.innerHTML = peso.value + " %";
     fuente2.innerHTML = fuente.value;
+    objetivoSeleccionado.innerHTML = objetivo.options[objetivo.selectedIndex].text;
     contenido2.innerHTML = contenido.options[contenido.selectedIndex].text;
     tipoTarea2.innerHTML = tipoTarea.options[tipoTarea.selectedIndex].text;
     nombreTarea2.innerHTML = nombreTarea.value;
