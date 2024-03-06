@@ -3,7 +3,7 @@ var doc;
 function prepararPDF() {
     // Variables
     var pdfRA = document.getElementById('losRA');
-    var modulo = document.getElementById('modulo');
+    var modulo = document.getElementById('losModulos');
     var profesor = document.getElementById('profesor');
     var pdfCriterio = document.getElementById('losCriterios');
     var RASeleccionado = document.getElementById('RASeleccionado');
@@ -65,7 +65,7 @@ function prepararPDF() {
     doc.setFont(undefined, 'bold');
     doc.setFontSize(12);
     doc.text(centrar, 60, 'Unidad Didáctica', { align: 'center' });
-    doc.text(centrar, 70, 'Módulo: ' + modulo.innerHTML, { align: 'center' });
+    doc.text(centrar, 70, 'Módulo: ' + modulo.options[modulo.selectedIndex].text, { align: 'center' });
     doc.text(centrar, 80, 'Profesor: ' + profesor.value, { align: 'center' });
     doc.setFont(undefined, 'normal');
     doc.setFontSize(10);

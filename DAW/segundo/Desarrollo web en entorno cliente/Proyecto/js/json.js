@@ -6,8 +6,29 @@ if (window.XMLHttpRequest) {
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
 var url = "http://10.147.20.155:3005/db";
+var listado0 = document.getElementById("losModulos");
 var listado1 = document.getElementById("losRA");
 var listado2 = document.getElementById("losCriterios");
+
+function listadoModulos() {
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var modulos = JSON.parse(this.responseText);
+            var i = 0;
+            modulos.forEach(function (modulo) {
+                var option = document.createElement("option");
+                option.id = modulo.id;
+                option.value = i;
+                option.textContent = modulo.id + ": " + modulo.textoRA;
+                listado0.appendChild(option);
+                i++;
+            });
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+}
+listadoModulos();
 
 function listadoRA() {
     xmlhttp.onreadystatechange = function () {
