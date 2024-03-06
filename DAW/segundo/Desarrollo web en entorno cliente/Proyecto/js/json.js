@@ -5,17 +5,18 @@ if (window.XMLHttpRequest) {
 } else {
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
-var url = "http://10.147.20.155:3005/Lenguaje_de_Marcas";// Para cambiar a local modificar a "db.json"
+var url = "http://10.147.20.155:3005/db";
 var listado1 = document.getElementById("losRA");
 var listado2 = document.getElementById("losCriterios");
 
 function listadoRA() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var listaRA = JSON.parse(this.responseText);
-            document.getElementById("modulo").innerHTML = url.split("/").pop().replaceAll("_", " ");//Obtenemos el nombre del módulo y cambiamos los _ por espacios.
+            var modulos = JSON.parse(this.responseText);
+            var modulo = Object.keys(modulos)[0];//Obtenemos el módulo
+            document.getElementById("modulo").innerHTML = modulo.replaceAll("_", " ");
             var i = 0;
-            listaRA.forEach(function (ra) {
+            modulos[modulo].forEach(function (ra) {
                 var option = document.createElement("option");
                 option.id = ra.id;
                 option.value = i;
@@ -33,8 +34,9 @@ listadoRA();
 function actualizarRA() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var listaRA = JSON.parse(this.responseText);
-            getRA(listaRA);
+            var modulos = JSON.parse(this.responseText);
+            var modulo = Object.keys(modulos)[0];
+            getRA(modulos[modulo]);
         }
     };
     xmlhttp.open("GET", url, true);
