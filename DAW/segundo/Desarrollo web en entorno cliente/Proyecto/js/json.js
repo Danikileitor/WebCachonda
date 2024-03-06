@@ -15,11 +15,12 @@ function listadoModulos() {
         if (this.readyState == 4 && this.status == 200) {
             var modulos = JSON.parse(this.responseText);
             var i = 0;
-            modulos.forEach(function (modulo) {
+            console.log(Object.keys(modulos));
+            Object.keys(modulos).forEach(function (modulo) {
                 var option = document.createElement("option");
-                option.id = modulo.id;
+                option.id = "modulo" + i;
                 option.value = i;
-                option.textContent = modulo.id + ": " + modulo.textoRA;
+                option.textContent = modulo;
                 listado0.appendChild(option);
                 i++;
             });
@@ -35,7 +36,6 @@ function listadoRA() {
         if (this.readyState == 4 && this.status == 200) {
             var modulos = JSON.parse(this.responseText);
             var modulo = Object.keys(modulos)[0];//Obtenemos el módulo
-            document.getElementById("modulo").innerHTML = modulo.replaceAll("_", " ");
             var i = 0;
             modulos[modulo].forEach(function (ra) {
                 var option = document.createElement("option");
