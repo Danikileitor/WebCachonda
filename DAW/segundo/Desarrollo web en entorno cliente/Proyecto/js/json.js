@@ -15,12 +15,11 @@ function listadoModulos() {
         if (this.readyState == 4 && this.status == 200) {
             var modulos = JSON.parse(this.responseText);
             var i = 0;
-            console.log(Object.keys(modulos));
             Object.keys(modulos).forEach(function (modulo) {
                 var option = document.createElement("option");
                 option.id = "modulo" + i;
-                option.value = i;
-                option.textContent = modulo;
+                option.value = modulo;
+                option.textContent = modulo.replaceAll("_", " ");
                 listado0.appendChild(option);
                 i++;
             });
@@ -35,7 +34,15 @@ function listadoRA() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var modulos = JSON.parse(this.responseText);
-            var modulo = Object.keys(modulos)[0];//Obtenemos el módulo
+            var modulo = listado0.value;
+            //Primero limpiamos los listados de RA y criterios
+            while (listado1.lastChild.id !== 'RAvacio') {
+                listado1.removeChild(listado1.lastChild);
+            }
+            while (listado2.lastChild.id !== 'Cvacio') {
+                listado2.removeChild(listado2.lastChild);
+            }
+            //Ahora rellenamos el listado con los RA
             var i = 0;
             modulos[modulo].forEach(function (ra) {
                 var option = document.createElement("option");
@@ -50,13 +57,12 @@ function listadoRA() {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
-listadoRA();
 
 function actualizarRA() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var modulos = JSON.parse(this.responseText);
-            var modulo = Object.keys(modulos)[0];
+            var modulo = listado0.value;
             getRA(modulos[modulo]);
         }
     };
