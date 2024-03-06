@@ -3,11 +3,17 @@ var panel = document.getElementById("formulariologin");
 var user = document.getElementById("usuario");
 var pass = document.getElementById("pass");
 var errores = document.getElementById("errores");
+var logeo = document.getElementById("login");
 
 var admin = {
     user: "admin",
     pass: "1234"
 };
+
+function submitForm(event) {
+    event.preventDefault();
+    login();
+}
 
 function verlogin() {
     panel.style.display = "block";
@@ -28,3 +34,5 @@ function login() {
         errores.innerHTML = "Credenciales incorrectas";
     }
 }
+
+logeo.addEventListener('submit', submitForm);
