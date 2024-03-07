@@ -37,7 +37,7 @@ function login() {
 
 logeo.addEventListener('submit', submitForm);
 
-// Código para añadir RA y Criterios
+// Código para los botones de añadir y quitar
 
 // Encuentra el botón "Añadir RA" por su ID
 function addRA(element) {
@@ -80,4 +80,24 @@ function quitarCriterio(element) {
 
     // Elimina la fila de criterio y la siguiente fila, que es la de tipo tarea
     rowRemoveCriterio.nextElementSibling.parentNode.removeChild(rowRemoveCriterio.nextElementSibling);
+}
+
+// Botones para los objetivos
+function addObjetivo(element) {
+    // Encuentra la fila que contiene el botón "Añadir Objetivo"
+    var rowAddObjetivo = element.parentNode.parentNode;
+
+    // Clona la fila de Objetivo
+    var clonedRowObjetivo = rowAddObjetivo.cloneNode(true);
+
+    // Inserta la fila clonada de Objetivo justo debajo de la fila de Objetivo original
+    rowAddObjetivo.parentNode.insertBefore(clonedRowObjetivo, rowAddObjetivo.nextElementSibling);
+}
+
+function quitarObjetivo(element) {
+    // Encuentra la fila que contiene el botón "Quitar Objetivo"
+    var rowRemoveObjetivo = element.parentNode.parentNode;
+
+    // Elimina la fila de Objetivo y la siguiente fila, que es la de tipo tarea
+    rowRemoveObjetivo.nextElementSibling.parentNode.removeChild(rowRemoveObjetivo.nextElementSibling);
 }
