@@ -46,8 +46,8 @@
     </div>
     <table id="tablapdf">
         <tr>
-            <td colspan="2">Objetivo</td>
-            <td colspan="5"><select id="objetivo" name="objetivo" style="width: 60rem;">
+            <td>Objetivo</td>
+            <td colspan="4"><select id="objetivo" name="objetivo" style="width: 60rem;">
                     <option value="1">Ajustar la configuración lógica analizando las necesidades y criterios
                         establecidos para configurar y explotar sistemas informáticos.</option>
                     <option value="2">Identificar las necesidades de seguridad verificando el plan preestablecido
@@ -119,6 +119,8 @@
                         en cuenta el marco legal que regula las condiciones sociales y laborales para participar
                         como ciudadano democrático.</option>
                 </select></td>
+            <td><button type="button" id="addObjetivo" onclick="addObjetivo(this)">Añadir Objetivo</button></td>
+            <td><button type="button" id="quitarObjetivo" onclick="quitarObjetivo(this)">Quitar Objetivo</button></td>
         </tr>
         <tr>
             <td>RA</td>
