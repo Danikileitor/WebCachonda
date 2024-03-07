@@ -127,8 +127,8 @@
                     <option id="RAvacio" value="">Selecciona un RA</option>
                 </select>
             </td>
-            <td><button type="button">Añadir RA</button></td>
-            <td><button type="button">Quitar RA</button></td>
+            <td><button type="button" id="addRA">Añadir RA</button></td>
+            <td><button type="button" id="quitarRA">Quitar RA</button></td>
             <td><input type="number" id="peso" name="peso" placeholder="Peso RA"> %</td>
         </tr>
         <tr>
@@ -139,8 +139,8 @@
                     <option id="Cvacio" value="">Selecciona un criterio</option>
                 </select>
             </td>
-            <td><button type="button">Añadir Cr.</button></td>
-            <td><button type="button">Quitar Cr.</button></td>
+            <td><button type="button" id="addCriterio">Añadir Cr.</button></td>
+            <td><button type="button" id="quitarCriterio">Quitar Cr.</button></td>
             <td></td>
         </tr>
         <tr>
@@ -169,31 +169,43 @@
     <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
     <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
     <hr>
-    <table id="tablapdfresultado">
+    <table id="tablapdfresultado" style="width: 100%;">
         <tr>
-            <td colspan="2">Objetivo</td>
-            <td colspan="5" id="objetivoSeleccionado"></td>
+            <td>Objetivo</td>
+            <td colspan="10" id="objetivoSeleccionado"></td>
         </tr>
         <tr>
             <td>RA</td>
-            <td colspan="5" id="RASeleccionado"></td>
+            <td colspan="9" id="RASeleccionado"></td>
             <td id="peso2"></td>
         </tr>
         <tr>
-            <td></td>
-            <td>Criterio</td>
-            <td colspan="5" id="criterioSeleccionado"></td>
+            <td colspan="2">Criterio</td>
+            <td colspan="9" id="criterioSeleccionado"></td>
         </tr>
         <tr>
-            <td></td>
             <td>Tipo Tarea: <span id="tipoTarea2"></span></td>
-            <td id="nombreTarea2" colspan="5"></td>
+            <td id="nombreTarea2" colspan="10"></td>
         </tr>
         <tr>
             <td>Contenido</td>
-            <td colspan="3">Nombre: <span id="contenido2"></span></td>
+            <td>Nombre:</td>
+            <td colspan="4" id="contenido2"></td>
             <td>Fuente:</td>
-            <td colspan="2" id="fuente2"></td>
+            <td colspan="4" id="fuente2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
     <iframe id="iframe" src="" frameborder="0"></iframe>

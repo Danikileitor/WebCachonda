@@ -16,7 +16,7 @@
     color: red;
 }
 
-#tablapdf,  #tablapdfresultado, #tablapdf td,  #tablapdfresultado td {
+#tablapdf,  #tablapdf td/*, #tablapdfresultado,  #tablapdfresultado td*/ {
     border: 1px solid black;
 }
 
