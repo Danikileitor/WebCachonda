@@ -34,3 +34,8 @@
     display:inline-block;
     width: 100%;
 }
+
+#tablapdf input[type=text] {
+    display:inline-block;
+    width: 98%;
+}
