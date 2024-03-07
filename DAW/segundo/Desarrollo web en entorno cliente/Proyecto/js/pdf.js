@@ -69,7 +69,7 @@ function prepararPDF() {
     doc.text(centrar, 80, 'Profesor: ' + profesor.value, { align: 'center' });
     doc.setFont(undefined, 'normal');
     doc.setFontSize(10);
-    doc.autoTable({ html: '#tablapdfresultado', startY: 90, useCss: true });
+    doc.autoTable({ html: '#tablapdfresultado', startY: 90, useCss: false });
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {
