@@ -71,7 +71,7 @@ if (!isset($_SESSION['usuario'])) {
             <?php
             try {
                 $opc = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
-                $dsn = "mysql:host=localhost;dbname=dwes";
+                $dsn = "mysql:host=10.147.20.155;dbname=dwes";
                 $dwes = new PDO($dsn, "dwes", "abc123.", $opc);
             } catch (PDOException $e) {
                 $error = $e->getCode();
