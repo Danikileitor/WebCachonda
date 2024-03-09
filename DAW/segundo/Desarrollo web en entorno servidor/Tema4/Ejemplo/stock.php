@@ -23,7 +23,7 @@ http://www.w3.org/TR/html4/loose.dtd">
 
 
                 // Rellenamos el desplegable con los datos de todos los productos
-                @$dwes = new mysqli("localhost", "dwes", "abc123.", "dwes");
+                @$dwes = new mysqli("10.147.20.155", "dwes", "abc123.", "dwes");
                 $error = $dwes->connect_errno;
                 if ($error == null) {
                     $sql = "SELECT cod, nombre_corto FROM producto";

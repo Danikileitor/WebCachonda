@@ -16,7 +16,7 @@ http://www.w3.org/TR/html4/loose.dtd">
     if (isset($_POST['producto']))
         $producto = $_POST['producto'];
 
-    @$dwes = new mysqli("localhost", "dwes", "abc123.", "dwes");
+    @$dwes = new mysqli("10.147.20.155", "dwes", "abc123.", "dwes");
     $error = $dwes->connect_errno;
     if ($error == null) {
         // Comprobamos si tenemos que actualizar los valores

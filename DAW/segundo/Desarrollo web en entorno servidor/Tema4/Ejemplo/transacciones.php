@@ -12,7 +12,7 @@
 
 <body>
      <?php
-     @$dwes = new mysqli("localhost", "dwes", "abc123.", "dwes");
+     @$dwes = new mysqli("10.147.20.155", "dwes", "abc123.", "dwes");
      $error = $dwes->connect_errno;
 
      if ($error != null) {
