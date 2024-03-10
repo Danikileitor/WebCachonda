@@ -28,8 +28,8 @@ if (!isset($_SESSION['usuario'])) {
             if (isset($_POST["ids"])) {
                 $ids = $_POST["ids"];
                 foreach ($ids as $id) {
-                    $eliminar->prepare('DELETE FROM productos WHERE id=:id');
-                    $eliminar->bind_param('id', $id);
+                    $eliminar = $connection->prepare('DELETE FROM productos WHERE id=:id');
+                    $eliminar->bindParam("id", $id);
                     $eliminar->execute();
                 }
                 echo "Se han eliminado las noticias: ";
@@ -43,31 +43,35 @@ if (!isset($_SESSION['usuario'])) {
         <div class="container-lg d-flex flex-column min-vh-100">
             <?php include("includes/header.php"); ?>
             <main class="row gy-2 mb-2">
-                <div class="col admin">
-                    <form class="borde" name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+                <div class="col table-responsive">
+                    <form class="" name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
                         <h1>Gestión de Videojuegos</h1>
-                        <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Imagen</th>
-                                <th>Descripcion</th>
-                                <th>Precio</th>
-                                <th>Borrar</th>
-                            </tr>
-                            <?php
-                            try {
-                                $sql = "SELECT * FROM productos";
-                                $resultado = $connection->query($sql);
+                        <table class="table table-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Borrar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                try {
+                                    $sql = "SELECT * FROM productos";
+                                    $resultado = $connection->query($sql);
 
-                                while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {
-                                    echo "<tr><td>$juego->id</td><td>$juego->nombre</td><td><img class='img-fluid' alt='$juego->imagen' src='" . $juego->imagen . "'></td><td>$juego->descripcion</td><td>$juego->precio</td><td><input type='checkbox' name='ids[]' value='$juego->id'></td></tr>";
+                                    while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {
+                                        echo "<tr><td scope='row'>$juego->id</td><td>$juego->nombre</td><td><img class='img-fluid' alt='$juego->imagen' src='" . $juego->imagen . "'></td><td>$juego->descripcion</td><td>$juego->precio</td><td><input type='checkbox' name='ids[]' value='$juego->id'></td></tr>";
+                                    }
+                                } catch (PDOException $e) {
+                                    echo "Error: " . $e->getMessage();
                                 }
-                            } catch (PDOException $e) {
-                                echo "Error: " . $e->getMessage();
-                            }
-                            ?>
-                        </table><br>
+                                ?>
+                            </tbody>
+                        </table>
                         <input type="submit" name="eliminar" value="Eliminar juegos marcados">
                     </form>
                 </div>
