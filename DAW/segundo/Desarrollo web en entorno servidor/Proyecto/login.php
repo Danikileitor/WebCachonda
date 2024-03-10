@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
             <input type="password" name="password" required />
         </div>
         <button type="submit" name="login" value="login">Iniciar sesión</button>
-        <button onclick="location.href='logout.php'" type="button" name="registrarse" value="registrarse">Registrarse</button>
+        <button onclick="location.href='registro.php'" type="button" name="registrarse" value="registrarse">Registrarse</button>
     </form>
 </body>
 
