@@ -1,6 +1,9 @@
 <?php
 include_once('config/config.php');
 session_start();
+if (!isset($_COOKIE["tema"])) {
+    setcookie("tema", "light");
+}
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit;
@@ -10,7 +13,7 @@ if (!isset($_SESSION['usuario'])) {
     }
 ?>
     <!DOCTYPE html>
-    <html lang="es">
+    <html lang="es" data-bs-theme="<?php echo $_COOKIE["tema"]; ?>">
 
     <head>
         <meta charset="UTF-8">
