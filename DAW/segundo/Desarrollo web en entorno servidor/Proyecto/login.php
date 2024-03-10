@@ -37,6 +37,7 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
+    <h1>Iniciar sesión</h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="signin-form">
         <div class="form-element">
             <label>Usuario</label>

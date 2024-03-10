@@ -1,7 +1,7 @@
 <?php
 include_once('config.php');
 session_start();
-if (isset($_POST['register'])) {
+if (isset($_POST['registro'])) {
     $nombre = $_POST['nombre'];
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
@@ -24,6 +24,7 @@ if (isset($_POST['register'])) {
         $query->bindParam("perfil", "normal", PDO::PARAM_STR);
         $result = $query->execute();
         if ($result) {
+            header("Refresh:3; url=login.php");
             echo '<p class="success">¡Usuario registrado correctamente!</p>';
         } else {
             echo '<p class="error">¡Algo ha ido mal!</p>';
@@ -31,3 +32,41 @@ if (isset($_POST['register'])) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Registrar usuario</h1>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="signin-form">
+        <div class="form-element">
+            <label>Nombre</label>
+            <input type="text" name="nombre" pattern="[a-zA-Z ]+" required />
+        </div>
+        <div class="form-element">
+            <label>Usuario</label>
+            <input type="text" name="usuario" pattern="[a-zA-Z0-9]+" required />
+        </div>
+        <div class="form-element">
+            <label>Contraseña</label>
+            <input type="password" name="password" required />
+        </div>
+        <div class="form-element">
+            <label>Email</label>
+            <input type="email" name="email" required />
+        </div>
+        <div class="form-element">
+            <label>Dirección</label>
+            <input type="text" name="direccion" required />
+        </div>
+        <button type="submit" name="registro" value="registro">Log In</button>
+    </form>
+</body>
+
+</html>

@@ -21,6 +21,8 @@ if (!isset($_SESSION['user_id'])) {
 
     <body>
         <h1>Tienda de videojuegos</h1>
+
+        <button onclick="location.href='logout.php'" type="button">Cerrar sesión</button>
     </body>
 
     </html>
