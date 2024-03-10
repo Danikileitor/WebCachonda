@@ -1,13 +1,3 @@
-<?php
-function cambiarTema()
-{
-    $_COOKIE["tema"] == "light" ? setcookie("tema", "dark") : setcookie("tema", "light");
-}
-if (isset($_POST["cambiarTema"])) {
-    cambiarTema();
-    header("Refresh:0");
-}
-?>
 <header class="row justify-content-around align-items-center g-2 mt-2">
     <div class="col">
         <h1>Tienda de videojuegos</h1>

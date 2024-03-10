@@ -1,4 +1,5 @@
 <?php
+include_once('config/funciones.php');
 include_once('config/config.php');
 session_start();
 if (isset($_POST['login'])) {
