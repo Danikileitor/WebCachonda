@@ -1,6 +1,3 @@
-<?php
-$logout = "logout.php";
-echo "  <footer>
-            <button onclick='location.href='" . $logout . " type='button'>Cerrar sesión</button>
-        </footer>";
-?>
+<footer>
+    <button onclick="location.href='logout.php'" type="button">Cerrar sesión</button>
+</footer>
