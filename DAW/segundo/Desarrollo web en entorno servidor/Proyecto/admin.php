@@ -47,34 +47,42 @@ if (!isset($_SESSION['usuario'])) {
             }
         }
         ?>
-        <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
-            <h1>Eliminación de noticias</h1>
-            <table>
-                <tr>
-                    <th>Título</th>
-                    <th>Texto</th>
-                    <th>Categoría</th>
-                    <th>Fecha</th>
-                    <th>Imagen</th>
-                    <th>Borrar</th>
-                </tr>
-                <?php
-                $dwes = new PDO('mysql:host=localhost;dbname=inmobiliaria', 'dwes', 'abc123.');
-                $dwes->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                try {
-                    $sql = "SELECT titulo, texto, categoria, fecha, imagen, id FROM noticias ORDER BY fecha DESC";
-                    $resultado = $dwes->query($sql);
+        <div class="container-lg d-flex flex-column min-vh-100">
+            <?php include("includes/header.php"); ?>
+            <main class="row gy-2 mb-2">
+                <div class="col">
+                    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+                        <h1>Eliminación de noticias</h1>
+                        <table>
+                            <tr>
+                                <th>Título</th>
+                                <th>Texto</th>
+                                <th>Categoría</th>
+                                <th>Fecha</th>
+                                <th>Imagen</th>
+                                <th>Borrar</th>
+                            </tr>
+                            <?php
+                            $dwes = new PDO('mysql:host=localhost;dbname=inmobiliaria', 'dwes', 'abc123.');
+                            $dwes->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                            try {
+                                $sql = "SELECT titulo, texto, categoria, fecha, imagen, id FROM noticias ORDER BY fecha DESC";
+                                $resultado = $dwes->query($sql);
 
-                    while ($noticia = $resultado->fetch(PDO::FETCH_OBJ)) {
-                        echo "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td><td><input type='checkbox' name='ids[]' value='$noticia->id'></td></tr>";
-                    }
-                } catch (PDOException $e) {
-                    echo "Error: " . $e->getMessage();
-                }
-                ?>
-            </table><br>
-            <input type="submit" name="eliminar" value="Eliminar noticias marcadas">
-        </form>
+                                while ($noticia = $resultado->fetch(PDO::FETCH_OBJ)) {
+                                    echo "<tr><td>$noticia->titulo</td><td>$noticia->texto</td><td>$noticia->categoria</td><td>$noticia->fecha</td><td>$noticia->imagen</td><td><input type='checkbox' name='ids[]' value='$noticia->id'></td></tr>";
+                                }
+                            } catch (PDOException $e) {
+                                echo "Error: " . $e->getMessage();
+                            }
+                            ?>
+                        </table><br>
+                        <input type="submit" name="eliminar" value="Eliminar noticias marcadas">
+                    </form>
+                </div>
+            </main>
+            <?php include("includes/footer.php"); ?>
+        </div>
     </body>
 
     </html>
