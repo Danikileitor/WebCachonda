@@ -65,7 +65,7 @@ if (isset($_POST['registro'])) {
             <label>Dirección</label>
             <input type="text" name="direccion" required />
         </div>
-        <button type="submit" name="registro" value="registro">Log In</button>
+        <button type="submit" name="registro" value="registro">Registrarse</button>
     </form>
 </body>
 
