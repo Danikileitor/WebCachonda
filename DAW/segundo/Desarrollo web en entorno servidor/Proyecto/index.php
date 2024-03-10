@@ -29,9 +29,23 @@ if (!isset($_SESSION['usuario'])) {
             <?php include("includes/header.php"); ?>
 
             <main class="row justify-content-center align-items-center g-2">
-                <div class="col">Column</div>
-                <div class="col">Column</div>
-                <div class="col">Column</div>
+                <?php
+                try {
+                    $sql = "SELECT nombre, imagen, descripcion, precio FROM productos";
+                    $resultado = $connection->query($sql);
+
+                    while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {
+                        echo "<div class='card' style='width: 18rem;'>";
+                        echo "<img src='" . $juego->imagen . "' class='card-img-top' alt='" . $juego->nombre . "'>";
+                        echo "<div class='card-body'>";
+                        echo "<h5 class='card-title'>" . $juego->nombre . "</h5>";
+                        echo "<p class='card-text'>" . $juego->descripcion . "</p>";
+                        echo "<a href='#' class='btn btn-primary'>Comprar</a></div></div>";
+                    }
+                } catch (PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                }
+                ?>
             </main>
 
             <?php include("includes/footer.php"); ?>
