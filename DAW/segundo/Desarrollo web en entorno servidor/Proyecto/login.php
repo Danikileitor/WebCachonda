@@ -16,11 +16,10 @@ if (isset($_POST['login'])) {
             $_SESSION['usuario'] = $result['usuario'];
             $_SESSION['perfil'] = $result['perfil'];
             if ($_SESSION['perfil'] == 'administrador') {
-                header("Refresh:3; url=admin.php");
+                header("Location:admin.php");
             } else {
-                header("Refresh:3; url=index.php");
+                header("Location:index.php");
             }
-            echo '<p class="success">¡Inicio de sesión correcto!</p>';
         } else {
             echo '<p class="error">¡Usuario o contraseña incorrectos!</p>';
         }
