@@ -11,6 +11,7 @@ if (!isset($_SESSION['usuario'])) {
 } else {
     if ($_SESSION['perfil'] == 'administrador') {
         header('Location: admin.php');
+        exit;
     }
 ?>
     <!DOCTYPE html>
