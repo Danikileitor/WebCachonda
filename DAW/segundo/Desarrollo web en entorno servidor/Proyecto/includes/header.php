@@ -5,6 +5,7 @@ function cambiarTema()
 }
 if (isset($_POST["cambiarTema"])) {
     cambiarTema();
+    header("Refresh:0");
 }
 ?>
 <header class="row justify-content-around align-items-center g-2 mt-2">
