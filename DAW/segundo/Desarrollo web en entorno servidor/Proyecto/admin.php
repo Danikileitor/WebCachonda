@@ -1,11 +1,11 @@
 <?php
 include_once('config.php');
 session_start();
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit;
 } else {
-    if (!str_contains($_SESSION['user_id'], "admin")) {
+    if ($_SESSION['perfil'] != 'administrador') {
         header('Location: index.php');
     }
 ?>

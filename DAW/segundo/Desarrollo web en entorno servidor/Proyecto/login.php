@@ -12,11 +12,11 @@ if (isset($_POST['login'])) {
         echo '<p class="error">¡Usuario o contraseña incorrectos!</p>';
     } else {
         if (password_verify($password, $result['contrasena'])) {
-            if ($result['perfil'] == 'administrador') {
-                $_SESSION['user_id'] = $result['id'] . "admin";
+            $_SESSION['usuario'] = $result['usuario'];
+            $_SESSION['perfil'] = $result['perfil'];
+            if ($_SESSION['perfil'] == 'administrador') {
                 header("Refresh:3; url=admin.php");
             } else {
-                $_SESSION['user_id'] = $result['id'];
                 header("Refresh:3; url=index.php");
             }
             echo '<p class="success">¡Inicio de sesión correcto!</p>';
