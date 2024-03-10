@@ -33,23 +33,39 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Iniciar sesión</h1>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="signin-form">
-        <div class="form-element">
-            <label>Usuario</label>
-            <input type="text" name="usuario" pattern="[a-zA-Z0-9]+" required />
+    <div class="container-lg">
+        <?php include("includes/header.php"); ?>
+        <div class="mb-3 row">
+            <div class="col">
+                <h1>Iniciar sesión</h1>
+            </div>
         </div>
-        <div class="form-element">
-            <label>Contraseña</label>
-            <input type="password" name="password" required />
-        </div>
-        <button type="submit" name="login" value="login">Iniciar sesión</button>
-        <button onclick="location.href='registro.php'" type="button" name="registrarse" value="registrarse">Registrarse</button>
-    </form>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formulariologin">
+            <div class="mb-3 row">
+                <label for="usuario" class="col-4 col-form-label">Usuario</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="usuario" pattern="[a-zA-Z0-9]+" required />
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="usuario" class="col-4 col-form-label">Contraseña</label>
+                <div class="col-8">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="usuario" required />
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="offset-sm-4 col-sm-8">
+                    <button type="submit" class="btn btn-primary" name="login" value="login">Iniciar sesión</button>
+                    <button type="button" class="btn btn-primary" name="registrarse" value="registrarse" onclick="location.href='registro.php'">Registrarse</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
