@@ -32,7 +32,7 @@ if (!isset($_SESSION['usuario'])) {
                     $eliminar->bindParam("id", $id);
                     $eliminar->execute();
                 }
-                echo "Se han eliminado las noticias: ";
+                echo "Se han eliminado los videojuegos: ";
                 foreach ($ids as $id) {
                     echo "$id ";
                 }
