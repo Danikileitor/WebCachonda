@@ -9,7 +9,7 @@ CREATE TABLE usuarios (
     contrasena CHAR(60) NOT NULL,
     email NVARCHAR(320) NOT NULL,
     direccion TEXT NOT NULL,
-    perfil ENUM('normal', 'administrador') NOT NULL
+    perfil ENUM('normal', 'administrador') NULL DEFAULT 'normal'
 );
 
 CREATE TABLE productos (
