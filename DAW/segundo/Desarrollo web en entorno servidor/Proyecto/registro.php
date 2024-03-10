@@ -17,7 +17,7 @@ if (isset($_POST['registro'])) {
     if ($query->rowCount() == 0) {
         $query = $connection->prepare("INSERT INTO usuarios(nombre,usuario,contrasena,email,direccion) VALUES (:nombre,:usuario,:password_hash,:email,:direccion)");
         $query->bindParam("nombre", $nombre, PDO::PARAM_STR);
-        $query->bindParam("usuario", $username, PDO::PARAM_STR);
+        $query->bindParam("usuario", $usuario, PDO::PARAM_STR);
         $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->bindParam("direccion", $direccion, PDO::PARAM_STR);
