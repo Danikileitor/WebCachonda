@@ -1,7 +1,7 @@
 <?php
-include_once('config/funciones.php');
 include_once('config/config.php');
 session_start();
+include_once('config/funciones.php');
 if (isset($_POST['registro'])) {
     $nombre = $_POST['nombre'];
     $usuario = $_POST['usuario'];
