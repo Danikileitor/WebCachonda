@@ -17,8 +17,10 @@ if (isset($_POST['login'])) {
             $_SESSION['perfil'] = $result['perfil'];
             if ($_SESSION['perfil'] == 'administrador') {
                 header("Location:admin.php");
+                exit;
             } else {
                 header("Location:index.php");
+                exit;
             }
         } else {
             echo '<p class="error">¡Usuario o contraseña incorrectos!</p>';
