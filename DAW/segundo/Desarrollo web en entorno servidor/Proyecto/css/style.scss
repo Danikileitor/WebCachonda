@@ -1,0 +1,54 @@
+/* Tablas del panel de administrador */
+.admin {
+    font-family: verdana, arial, sans-serif;
+    font-size: 10pt;
+
+    FORM {
+        &.borde {
+            border: 1px dotted #0066CC;
+            padding: 0.5em 0.2em;
+            width: 80%;
+        }
+
+        P {
+            clear: left;
+            margin: 0.2em;
+            padding: 0.1em;
+
+            LABEL {
+                float: left;
+                width: 25%;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .error {
+        color: red;
+    }
+
+    TH {
+        font-size: 10pt;
+        font-weight: bold;
+        color: white;
+        background: #0066CC;
+        text-align: left;
+    }
+
+    TD {
+        font-size: 10pt;
+        background: #CCCCCC;
+
+        &.derecha {
+            font-size: 10pt;
+            text-align: right;
+            background: #FFFFFF;
+        }
+
+        &.izquierda {
+            font-size: 10pt;
+            text-align: left;
+            background: #FFFFFF;
+        }
+    }
+}
