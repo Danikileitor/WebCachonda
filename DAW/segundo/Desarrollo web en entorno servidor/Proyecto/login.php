@@ -27,7 +27,7 @@ if (isset($_POST['login'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="<?php echo $_COOKIE["tema"]; ?>">
 
 <head>
     <meta charset="UTF-8">
