@@ -22,24 +22,15 @@ if (!isset($_SESSION['usuario'])) {
 
     <body>
         <div class="container-lg">
+            <?php include_once("includes/header.php"); ?>
 
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Tienda de Videojuegos</title>
-                <link rel="stylesheet" href="css/style.css">
-            </head>
+            <main class="row justify-content-center align-items-center g-2">
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+            </main>
 
-            <body>
-                <?php include_once("includes/header.php"); ?>
-
-                <main class="row justify-content-center align-items-center g-2">
-                    <div class="col">Column</div>
-                    <div class="col">Column</div>
-                    <div class="col">Column</div>
-                </main>
-
-                <?php include_once("includes/footer.php"); ?>
+            <?php include_once("includes/footer.php"); ?>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </body>
