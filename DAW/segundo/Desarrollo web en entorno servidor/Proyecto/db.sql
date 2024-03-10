@@ -6,7 +6,7 @@ CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     usuario VARCHAR(50) NOT NULL UNIQUE,
-    contrasena VARCHAR(255) NOT NULL,
+    contrasena CHAR(60) NOT NULL,
     email NVARCHAR(320) NOT NULL,
     direccion TEXT NOT NULL,
     perfil ENUM('normal', 'administrador') NOT NULL
