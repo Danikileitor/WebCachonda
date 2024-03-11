@@ -43,18 +43,22 @@ if (!isset($_SESSION['usuario'])) {
         // Insertar videojuego
         if (isset($_POST["insertar"])) {
             if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
-                $directorio = "img/";
+                $ruta = "img/";
+                $temporal = $_FILES['imagen']['tmp_name'];
                 $nombre = $_FILES['imagen']['name'];
-                if (is_dir($directorio)) {
-                    $idUnico = time();
-                    $fecha = date("Y-m-d");
-                    $nombreFichero = $idUnico . "-" . $nombre;
-                    $nombreCompleto = $directorio . $nombreFichero;
-                    move_uploaded_file($_FILES['imagen']['tmp_name'], $nombreCompleto);
-                    $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
-                    $insertar = $connection->prepare($sql);
-                    $insertar->execute([$_POST["nombre"], $rutaImagen, $_POST["descripcion"], $_POST["precio"]]);
-                }
+                $nombre = time() . substr($nombre, 0, strpos($nombre, ".")) . ".jpg";
+                $rutaCompleta = $ruta . $nombre;
+                $imagen = new Imagick();
+                $imagen->setFormat('jpg');
+                $imagen->readImage($temporal);
+                $imagen->setImageCompressionQuality(80);
+                $imagen->scaleImage(512, 512);
+                $imagen->writeImage(__DIR__ . $rutaCompleta);
+                $imagen->destroy();
+
+                $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
+                $insertar = $connection->prepare($sql);
+                $insertar->execute([$_POST["nombre"], $rutaCompleta, $_POST["descripcion"], $_POST["precio"]]);
             }
         }
         ?>
