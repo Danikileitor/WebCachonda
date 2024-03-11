@@ -2,6 +2,10 @@
 include_once('config/config.php');
 include_once('includes/funciones.php');
 session_start();
+if (isset($_SESSION['usuario'])) {
+    header('Location: index.php');
+    exit;
+}
 if (isset($_POST['login'])) {
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
