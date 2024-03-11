@@ -1,3 +1,3 @@
 # Proyecto Tienda de Videojuegos
-Requisitos:
-    * Módulos php: php-imagick: sudo apt-get install php-imagick
+Módulos php requeridos:
+-     php-imagick: `php-imagick: sudo apt-get install php-imagick`
