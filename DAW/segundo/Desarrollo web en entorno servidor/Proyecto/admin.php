@@ -43,25 +43,30 @@ if (!isset($_SESSION['usuario'])) {
         // Insertar videojuego
         if (isset($_POST["insertar"])) {
             if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
-                $ruta = "img/";
-                $temporal = $_FILES['imagen']['tmp_name'];
-                $nombre = $_FILES['imagen']['name'];
-                $nombre = time() . substr($nombre, 0, strpos($nombre, ".")) . ".jpg";
-                $rutaCompleta = $ruta . $nombre;
-                //Gracias al módulo php-imagick podemos redimensionar la imagen y convertirla a jpg!
-                $imagen = new Imagick();
-                $imagen->setFormat('jpg');
-                $imagen->readImage($temporal);
-                $imagen->setImageCompressionQuality(80);
-                $imagen->scaleImage(512, 512);
-                $imagen->writeImage($rutaCompleta);
-                $imagen->destroy();
+                $info = getimagesize($_FILES['imagen']['tmp_name']);
+                if ($info !== false) {
+                    $ruta = "img/";
+                    $temporal = $_FILES['imagen']['tmp_name'];
+                    $nombre = $_FILES['imagen']['name'];
+                    $nombre = time() . substr($nombre, 0, strpos($nombre, ".")) . ".jpg";
+                    $rutaCompleta = $ruta . $nombre;
+                    //Gracias al módulo php-imagick podemos redimensionar la imagen y convertirla a jpg!
+                    $imagen = new Imagick();
+                    $imagen->setFormat('jpg');
+                    $imagen->readImage($temporal);
+                    $imagen->setImageCompressionQuality(80);
+                    $imagen->scaleImage(512, 512);
+                    $imagen->writeImage($rutaCompleta);
+                    $imagen->destroy();
 
-                $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
-                $insertar = $connection->prepare($sql);
-                $insertar->execute([$_POST["nombre"], $rutaCompleta, $_POST["descripcion"], $_POST["precio"]]);
+                    $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
+                    $insertar = $connection->prepare($sql);
+                    $insertar->execute([$_POST["nombre"], $rutaCompleta, $_POST["descripcion"], $_POST["precio"]]);
 
-                echo "<script>alert('El videojuego [" . $_POST["nombre"] . "] se ha insertado correctamente.')</script>";
+                    echo "<script>alert('El videojuego [" . $_POST["nombre"] . "] se ha insertado correctamente.')</script>";
+                } else {
+                    echo "<script>alert('¡El archivo subido no es una imagen!')</script>";
+                }
             }
         }
         // Registrar usuario
