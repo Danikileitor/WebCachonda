@@ -42,13 +42,13 @@ if (!isset($_SESSION['usuario'])) {
 
             <?php
             if (isset($_SESSION['carro'])) { ?>
-                <div class="row gy-2 mt-1 mb-2 border border-success rounded">
-                    <div class="col-1">
-                        <div><img class="img-fluid bg-success rounded p-2" alt="carrito" src="assets/cesta.png"></div>
+                <div class="row p-2 pt-0 mb-2 border border-success rounded">
+                    <div class="col-1 mt-2">
+                        <a href="comprar.php" class="badge h-100 bg-success rounded d-flex justify-content-center align-items-center"><img class="img-fluid" alt="carrito" src="assets/cesta.png"></a>
                     </div>
                     <?php foreach ($_SESSION['carro'] as $producto) { ?>
-                        <div class="col-1">
-                            <div><?php echo $producto->nombre; ?></div>
+                        <div class="col-1 mt-2">
+                            <span class="badge border border-secondray text-wrap h-100 d-flex justify-content-center align-items-center"><?php echo $producto->nombre; ?></span>
                         </div>
                     <?php } ?>
                 </div>

@@ -24,7 +24,7 @@ function verGestionar()
         $resultado = $connection->query($sql);
 
         while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {
-            echo "<tr><td scope='row'>$juego->id</td><td>$juego->nombre</td><td><img class='img-fluid' alt='$juego->imagen' src='" . $juego->imagen . "'></td><td>$juego->descripcion</td><td>$juego->precio</td><td><input type='checkbox' name='ids[]' value='$juego->id'></td></tr>";
+            echo "<tr><td scope='row'>$juego->id</td><td>$juego->nombre</td><td><img class='img-fluid' alt='$juego->nombre' src='" . $juego->imagen . "'></td><td>$juego->descripcion</td><td>$juego->precio</td><td><input type='checkbox' name='ids[]' value='$juego->id'></td></tr>";
         }
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
