@@ -35,15 +35,16 @@ if (!isset($_SESSION['usuario'])) {
                     $sql = "SELECT nombre, imagen, descripcion, precio FROM productos";
                     $resultado = $connection->query($sql);
 
-                    while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {
-                        echo "<div class='col-md-3'>";
-                        echo "<div class='card h-100'>";
-                        echo "<img src='" . $juego->imagen . "' class='card-img-top' alt='" . $juego->nombre . "'>";
-                        echo "<div class='card-body'>";
-                        echo "<h5 class='card-title text-center' style='height: 3em'>" . $juego->nombre . "</h5>";
-                        echo "<p class='card-text overflow-auto' style='height: 10rem'>" . $juego->descripcion . "</p>";
-                        echo "<div class='d-flex justify-content-around'><a href='#' class='btn btn-primary'>Comprar</a>";
-                        echo "<span class='btn btn-success pe-none'>" . $juego->precio . " €</span></div></div></div></div>";
+                    while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {?>
+                        <div class='col-md-3'>
+                        <div class='card h-100'>
+                        <img src='<?php echo $juego->imagen; ?>' class='card-img-top' alt='<?php echo $juego->nombre; ?>'>
+                        <div class='card-body'>
+                        <h5 class='card-title text-center' style='height: 3em'><?php echo $juego->nombre; ?></h5>
+                        <p class='card-text overflow-auto' style='height: 10rem'><?php echo $juego->descripcion; ?></p>
+                        <div class='d-flex justify-content-around'><a href='#' class='btn btn-primary'>Comprar</a>
+                        <span class='btn btn-success pe-none'><?php echo $juego->precio; ?> €</span></div></div></div></div>
+                    <?php
                     }
                 } catch (PDOException $e) {
                     echo "Error: " . $e->getMessage();
