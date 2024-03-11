@@ -45,7 +45,7 @@ function verRegistrar()
 function verEliminar()
 {
     echo "<form class='' name='formulario' action='admin.php' method='post' enctype='multipart/form-data'>";
-    echo "<h1>Eliminar Usuarios</h1><table class='table table-primary'><thead><tr><th scope='col'>ID</th><th scope='col'>Nombre</th><th scope='col'>Usuario</th><th scope='col'>Email</th><th scope='col'>Dirección</th><th scope='col'>Borrar</th></tr></thead>";
+    echo "<h1>Eliminar Usuarios</h1><table class='table table-primary'><thead><tr><th scope='col'>ID</th><th scope='col'>Nombre</th><th scope='col'>Usuario</th><th scope='col'>Email</th><th scope='col'>Dirección</th><th scope='col'>Perfil</th><th scope='col'>Borrar</th></tr></thead>";
     $connection = new PDO("mysql:host=" . HOST . ";dbname=" . DATABASE, USER, PASSWORD);
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     try {
@@ -53,7 +53,7 @@ function verEliminar()
         $resultado = $connection->query($sql);
 
         while ($usuario = $resultado->fetch(PDO::FETCH_OBJ)) {
-            echo "<tr><td scope='row'>$usuario->id</td><td>$usuario->nombre</td><td>$usuario->usuario</td><td>$usuario->email</td><td>$usuario->direccion</td><td><input type='checkbox' name='ids[]' value='$usuario->id'></td></tr>";
+            echo "<tr><td scope='row'>$usuario->id</td><td>$usuario->nombre</td><td>$usuario->usuario</td><td>$usuario->email</td><td>$usuario->direccion</td><td>$usuario->perfil</td><td><input type='checkbox' name='ids[]' value='$usuario->id'></td></tr>";
         }
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
