@@ -71,7 +71,7 @@ if (!isset($_SESSION['usuario'])) {
                         <div class="nav navbar-nav">
                             <button type="button" id="btnGestionar" class="nav-item btn btn-primary">Gestionar</button>
                             <button type="button" id="btnInsertar" class="nav-item btn btn-primary ms-2">Insertar</button>
-                            <button type="button" id="btnCrearUsuario" class="nav-item btn btn-primary ms-2">Crear usuario</button>
+                            <button type="button" id="btnRegistrar" class="nav-item btn btn-primary ms-2">Registrar usuario</button>
                         </div>
                     </nav>
                 </div>
