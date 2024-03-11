@@ -15,8 +15,10 @@ if (isset($_POST["cambiarTema"])) {
 
 function verGestionar()
 {
-    echo "<form class='' name='formulario' action='" . $_SERVER['PHP_SELF'] . "' method='post' enctype='multipart/form-data'>";
+    echo "<form class='' name='formulario' action='admin.php' method='post' enctype='multipart/form-data'>";
     echo "<h1>Gestión de Videojuegos</h1><table class='table table-primary'><thead><tr><th scope='col'>ID</th><th scope='col'>Nombre</th><th scope='col'>Imagen</th><th scope='col'>Descripcion</th><th scope='col'>Precio</th><th scope='col'>Borrar</th></tr></thead>";
+    $connection = new PDO("mysql:host=" . HOST . ";dbname=" . DATABASE, USER, PASSWORD);
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     try {
         $sql = "SELECT * FROM productos";
         $resultado = $connection->query($sql);
