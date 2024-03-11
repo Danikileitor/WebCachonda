@@ -1,0 +1,101 @@
+body{
+background:linear-gradient(lightblue, blue);
+background-color:lightblue;
+}
+h1{font-family:"monospace";}
+header{
+background-color:red;
+border-radius:10px;
+}
+nav{
+position:fixed;
+width:99%;
+background-color:green;
+border-radius:10px;
+}
+nav table{
+border-color:transparent;
+}
+nav button{
+width:100%;
+font-weight:bold;
+border-radius:10px;
+}
+consultas{
+background-color:blue;
+border-radius:10px;
+}
+#tablabuscador{
+background-color:brown;
+border-color:transparent;
+border-radius:10px;
+}
+#tablabuscador input{
+border-radius:10px;
+}
+#tablaconsultas{
+background-color:blue;
+border-color:transparent;
+border-radius:10px;
+}
+#tablaconsultas button{
+border-radius:10px;
+}
+#tablaconsultas table{
+border-color:yellow;
+color:white;
+}
+#tablaeditar{
+background-color:gold;
+border-color:transparent;
+border-radius:10px;
+}
+#tablaeditar button{
+border-radius:10px;
+}
+#agregarcliente{
+background-color:orange;
+border-color:transparent;
+border-radius:10px;
+}
+#agregarcliente input{
+border-radius:10px;
+}
+#agregarproducto{
+background-color:orange;
+border-color:transparent;
+border-radius:10px;
+}
+#agregarproducto input{
+border-radius:10px;
+}
+#agregarproveedor{
+background-color:orange;
+border-color:transparent;
+border-radius:10px;
+}
+#agregarproveedor input{
+border-radius:10px;
+}
+#realizarpedido{
+background-color:orange;
+border-color:transparent;
+border-radius:10px;
+}
+#realizarpedido input{
+border-radius:10px;
+}
+footer{
+position:fixed;
+bottom:0.5%;
+background-color:grey;
+border-radius:10px;
+width:99%;
+padding:1px;
+font-family:Arial;
+}
+#buscadore{
+background-color:blue;
+border-color:yellow;
+color:white;
+}
