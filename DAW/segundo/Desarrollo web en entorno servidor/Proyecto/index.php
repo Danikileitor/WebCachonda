@@ -26,25 +26,41 @@ if (!isset($_SESSION['usuario'])) {
     </head>
 
     <body>
+        <?php
+        if (isset($_POST["comprar"])) {
+            $compra = (object) [
+                'producto' => $_POST['comprar_id'],
+                'precio' => $_POST['comprar_precio']
+            ];
+            $_SESSION['carro'][] = $compra;
+        }
+        ?>
         <div class="container-lg d-flex flex-column min-vh-100">
             <?php include("includes/header.php"); ?>
 
             <main class="row gy-2 mb-2">
                 <?php
                 try {
-                    $sql = "SELECT nombre, imagen, descripcion, precio FROM productos";
+                    $sql = "SELECT * FROM productos";
                     $resultado = $connection->query($sql);
 
-                    while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {?>
-                        <div class='col-md-3'>
-                        <div class='card h-100'>
-                        <img src='<?php echo $juego->imagen; ?>' class='card-img-top' alt='<?php echo $juego->nombre; ?>'>
-                        <div class='card-body'>
-                        <h5 class='card-title text-center' style='height: 3em'><?php echo $juego->nombre; ?></h5>
-                        <p class='card-text overflow-auto' style='height: 10rem'><?php echo $juego->descripcion; ?></p>
-                        <div class='d-flex justify-content-around'><a href='#' class='btn btn-primary'>Comprar</a>
-                        <span class='btn btn-success pe-none'><?php echo $juego->precio; ?> €</span></div></div></div></div>
-                    <?php
+                    while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) { ?>
+                        <form class='col-md-3' method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="palcarro">
+                            <div class='card h-100'>
+                                <img src='<?php echo $juego->imagen; ?>' class='card-img-top' alt='<?php echo $juego->nombre; ?>'>
+                                <div class='card-body'>
+                                    <h5 class='card-title text-center' style='height: 2.5em'><?php echo $juego->nombre; ?></h5>
+                                    <p class='card-text overflow-auto' style='height: 10rem'><?php echo $juego->descripcion; ?></p>
+                                    <div class='d-flex justify-content-around'>
+                                        <input type="hidden" name="comprar_id" value="<?php echo $juego->id; ?>">
+                                        <input type="hidden" name="comprar_precio" value="<?php echo $juego->precio; ?>">
+                                        <input type="submit" name="comprar" value="Comprar" class='btn btn-primary'>
+                                        <span class='btn btn-success pe-none'><?php echo $juego->precio; ?> €</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                <?php
                     }
                 } catch (PDOException $e) {
                     echo "Error: " . $e->getMessage();
