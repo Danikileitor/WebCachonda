@@ -48,6 +48,7 @@ if (!isset($_SESSION['usuario'])) {
                 $nombre = $_FILES['imagen']['name'];
                 $nombre = time() . substr($nombre, 0, strpos($nombre, ".")) . ".jpg";
                 $rutaCompleta = $ruta . $nombre;
+                //Gracias al módulo php-imagick podemos redimensionar la imagen y convertirla a jpg!
                 $imagen = new Imagick();
                 $imagen->setFormat('jpg');
                 $imagen->readImage($temporal);
