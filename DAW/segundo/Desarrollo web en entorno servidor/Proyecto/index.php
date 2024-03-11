@@ -29,10 +29,12 @@ if (!isset($_SESSION['usuario'])) {
         <?php
         if (isset($_POST["comprar"])) {
             $compra = (object) [
-                'producto' => $_POST['comprar_id'],
+                'id' => $_POST['comprar_id'],
+                'producto' => $_POST['comprar_nombre'],
                 'precio' => $_POST['comprar_precio']
             ];
-            $_SESSION['carro'][] = $compra;//Me lo robaron
+            $_SESSION['carro'][] = $compra;
+            //Me lo robaron^
         }
         ?>
         <div class="container-lg d-flex flex-column min-vh-100">
@@ -53,6 +55,7 @@ if (!isset($_SESSION['usuario'])) {
                                     <p class='card-text overflow-auto' style='height: 10rem'><?php echo $juego->descripcion; ?></p>
                                     <div class='d-flex justify-content-around'>
                                         <input type="hidden" name="comprar_id" value="<?php echo $juego->id; ?>">
+                                        <input type="hidden" name="comprar_nombre" value="<?php echo $juego->nombre; ?>">
                                         <input type="hidden" name="comprar_precio" value="<?php echo $juego->precio; ?>">
                                         <input type="submit" name="comprar" value="Comprar" class='btn btn-primary'>
                                         <span class='btn btn-success pe-none'><?php echo $juego->precio; ?> €</span>
