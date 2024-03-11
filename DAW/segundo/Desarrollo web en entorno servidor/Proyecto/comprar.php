@@ -31,6 +31,12 @@ if (!isset($_SESSION['usuario'])) {
             header('Location: index.php');
             exit;
         }
+        if (isset($_POST["finalizarcompra"])) {
+            header("Refresh:0; url=index.php");
+            echo "<script>alert('Compra realizada con éxito.¡Gracias por su compra!')</script>";
+            unset($_SESSION['carro']);
+            exit;
+        }
         ?>
         <div class="container-lg d-flex flex-column min-vh-100">
             <?php include("includes/header.php"); ?>
@@ -61,6 +67,7 @@ if (!isset($_SESSION['usuario'])) {
                                 </tr>
                             </tbody>
                         </table>
+                        <input type='submit' name='finalizarcompra' value='Comprar' class="btn btn-success">
                     </form>
                 </div>
             </main>
