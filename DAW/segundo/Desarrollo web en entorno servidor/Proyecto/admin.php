@@ -94,6 +94,22 @@ if (!isset($_SESSION['usuario'])) {
                 }
             }
         }
+        // Eliminar usuarios
+        if (isset($_POST["eliminarUsuario"])) {
+            if (isset($_POST["ids"])) {
+                $ids = $_POST["ids"];
+                foreach ($ids as $id) {
+                    $eliminar = $connection->prepare('DELETE FROM usuarios WHERE id=:id');
+                    $eliminar->bindParam("id", $id);
+                    $eliminar->execute();
+                }
+                echo "<script>alert(Se han eliminado los usuarios con ID: ";
+                foreach ($ids as $id) {
+                    echo "$id ";
+                }
+                echo "correctamente.)</script>";
+            }
+        }
         ?>
         <div class="container-lg d-flex flex-column min-vh-100">
             <?php include("includes/header.php"); ?>
