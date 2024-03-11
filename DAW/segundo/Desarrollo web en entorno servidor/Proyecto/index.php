@@ -32,7 +32,7 @@ if (!isset($_SESSION['usuario'])) {
                 'producto' => $_POST['comprar_id'],
                 'precio' => $_POST['comprar_precio']
             ];
-            $_SESSION['carro'][] = $compra;
+            $_SESSION['carro'][] = $compra;//Me lo robaron
         }
         ?>
         <div class="container-lg d-flex flex-column min-vh-100">
