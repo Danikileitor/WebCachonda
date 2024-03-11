@@ -1,6 +1,6 @@
 <?php
-include_once('includes/funciones.php');
 include_once('config/config.php');
+include_once('includes/funciones.php');
 session_start();
 if (isset($_POST['login'])) {
     $usuario = $_POST['usuario'];

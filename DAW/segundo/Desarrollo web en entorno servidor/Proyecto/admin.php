@@ -1,6 +1,6 @@
 <?php
-include_once('includes/funciones.php');
 include_once('config/config.php');
+include_once('includes/funciones.php');
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
@@ -46,8 +46,8 @@ if (!isset($_SESSION['usuario'])) {
                 <div class="col-12">
                     <nav class="navbar navbar-expand">
                         <div class="nav navbar-nav">
-                            <button type="button" class="nav-item btn btn-primary" href="#">Gestionar</button>
-                            <button type="button" class="nav-item btn btn-primary ms-2" href="#">Añadir</button>
+                            <button type="button" id="btnGestionar" class="nav-item btn btn-primary">Gestionar</button>
+                            <button type="button" id="btnInsertar" class="nav-item btn btn-primary ms-2">Añadir</button>
                         </div>
                     </nav>
                 </div>
@@ -86,8 +86,10 @@ if (!isset($_SESSION['usuario'])) {
             </main>
             <?php include("includes/footer.php"); ?>
         </div>
-        <script>
+        <script type="text/javascript">
             const panel = document.getElementById("contenido");
+            const btnGestionar = document.getElementById("btnGestionar");
+            const btnInsertar = document.getElementById("btnInsertar");
 
             function mostrarGestionar() {
                 panel.innerHTML = "<?php verGestionar(); ?>";
@@ -96,6 +98,9 @@ if (!isset($_SESSION['usuario'])) {
             function mostrarInsertar() {
                 panel.innerHTML = "<?php verInsertar(); ?>";
             }
+
+            btnGestionar.addEventListener("click", mostrarGestionar);
+            btnInsertar.addEventListener("click", mostrarInsertar);
         </script>
     </body>
 

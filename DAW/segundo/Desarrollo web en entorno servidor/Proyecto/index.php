@@ -1,6 +1,6 @@
 <?php
-include_once('includes/funciones.php');
 include_once('config/config.php');
+include_once('includes/funciones.php');
 session_start();
 if (!isset($_COOKIE["tema"])) {
     setcookie("tema", "light");
