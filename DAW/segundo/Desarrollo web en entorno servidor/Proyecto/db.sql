@@ -16,7 +16,7 @@ CREATE TABLE `productos` (
   `id` INT NOT NULL,
   `nombre` VARCHAR(255) NOT NULL,
   `imagen` VARCHAR(255) NOT NULL,
-  `descripcion` TEXT, NOT NULL,
+  `descripcion` TEXT NOT NULL,
   `precio` DECIMAL(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
