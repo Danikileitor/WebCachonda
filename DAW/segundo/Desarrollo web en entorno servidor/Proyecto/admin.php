@@ -24,6 +24,7 @@ if (!isset($_SESSION['usuario'])) {
 
     <body>
         <?php
+        // Eliminar videojuegos
         if (isset($_POST["eliminar"])) {
             if (isset($_POST["ids"])) {
                 $ids = $_POST["ids"];
@@ -37,6 +38,23 @@ if (!isset($_SESSION['usuario'])) {
                     echo "$id ";
                 }
                 echo "correctamente.";
+            }
+        }
+        // Insertar videojuego
+        if (isset($_POST["insertar"])) {
+            if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
+                $directorio = "img/";
+                $nombre = $_FILES['imagen']['name'];
+                if (is_dir($directorio)) {
+                    $idUnico = time();
+                    $fecha = date("Y-m-d");
+                    $nombreFichero = $idUnico . "-" . $nombre;
+                    $nombreCompleto = $directorio . $nombreFichero;
+                    move_uploaded_file($_FILES['imagen']['tmp_name'], $nombreCompleto);
+                    $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
+                    $insertar = $connection->prepare($sql);
+                    $insertar->execute([$_POST["nombre"], $rutaImagen, $_POST["descripcion"], $_POST["precio"]]);
+                }
             }
         }
         ?>
@@ -57,12 +75,20 @@ if (!isset($_SESSION['usuario'])) {
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <td scope="row"><label for="nombre">Nombre:</label></td>
-                                    <td><input type="text" name="nombre" id="nombre" placeholder="Nombre" required></td>
+                                    <td scope="row"><label for="nombre" class="form-label">Nombre:</label></td>
+                                    <td><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" class="form-control" required></td>
                                 </tr>
                                 <tr>
                                     <td scope="row"><label for="imagen">Imagen:</label></td>
-                                    <td><input type="file" accept="image/*" name="imagen" id="imagen" placeholder="Nombre" required></td>
+                                    <td><input type="file" accept="image/*" name="imagen" id="imagen" required></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"><label for="descripcion" class="form-label">Descripcion:</label></td>
+                                    <td><textarea name="descripcion" id="descripcion" class="form-control" rows="3" required>Descripción del videojuego.</textarea></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"><label for="precio" class="form-label">Precio:</label></td>
+                                    <td><input type="number" name="precio" id="precio" class="form-control" min="0" pattern="^\d*(\.\d{0,2})?$" placeholder="0,00" step="0.01" class="form-control" required></td>
                                 </tr>
                             </tbody>
                         </table>
