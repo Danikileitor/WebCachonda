@@ -33,11 +33,11 @@ if (!isset($_SESSION['usuario'])) {
                     $eliminar->bindParam("id", $id);
                     $eliminar->execute();
                 }
-                echo "<script>alert(Se han eliminado los videojuegos con ID: ";
+                echo "<script>alert('Se han eliminado los videojuegos con ID: ";
                 foreach ($ids as $id) {
                     echo "$id ";
                 }
-                echo "correctamente.)</script>";
+                echo "correctamente.')</script>";
             }
         }
         // Insertar videojuego
@@ -60,6 +60,8 @@ if (!isset($_SESSION['usuario'])) {
                 $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
                 $insertar = $connection->prepare($sql);
                 $insertar->execute([$_POST["nombre"], $rutaCompleta, $_POST["descripcion"], $_POST["precio"]]);
+
+                echo "<script>alert('El videojuego [" . $_POST["nombre"] . "] se ha insertado correctamente.')</script>";
             }
         }
         // Registrar usuario
@@ -75,7 +77,7 @@ if (!isset($_SESSION['usuario'])) {
             $query->bindParam("usuario", $usuario, PDO::PARAM_STR);
             $query->execute();
             if ($query->rowCount() > 0) {
-                echo '<script>alert(¡El usuario [' . $usuario . '] ya se encuentra registrado!)</script>';
+                echo "<script>alert('¡El usuario [$usuario] ya se encuentra registrado!')</script>";
             }
             if ($query->rowCount() == 0) {
                 $query = $connection->prepare("INSERT INTO usuarios(nombre,usuario,contrasena,email,direccion,perfil) VALUES (:nombre,:usuario,:password_hash,:email,:direccion,:perfil)");
@@ -88,9 +90,9 @@ if (!isset($_SESSION['usuario'])) {
                 $result = $query->execute();
                 if ($result) {
                     header("Refresh:3; url=login.php");
-                    echo '<script>alert(¡Usuario registrado correctamente!)</script>';
+                    echo "<script>alert('¡Usuario registrado correctamente!')</script>";
                 } else {
-                    echo '<script>alert(¡Algo ha ido mal!)</script>';
+                    echo "<script>alert('¡Algo ha ido mal!')</script>";
                 }
             }
         }
@@ -103,11 +105,11 @@ if (!isset($_SESSION['usuario'])) {
                     $eliminar->bindParam("id", $id);
                     $eliminar->execute();
                 }
-                echo "<script>alert(Se han eliminado los usuarios con ID: ";
+                echo "<script>alert('Se han eliminado los usuarios con ID: ";
                 foreach ($ids as $id) {
                     echo "$id ";
                 }
-                echo "correctamente.)</script>";
+                echo "correctamente.')</script>";
             }
         }
         ?>
@@ -117,9 +119,10 @@ if (!isset($_SESSION['usuario'])) {
                 <div class="col-12">
                     <nav class="navbar navbar-expand">
                         <div class="nav navbar-nav">
-                            <button type="button" id="btnGestionar" class="nav-item btn btn-primary">Gestionar</button>
-                            <button type="button" id="btnInsertar" class="nav-item btn btn-primary ms-2">Insertar</button>
-                            <button type="button" id="btnRegistrar" class="nav-item btn btn-primary ms-2">Registrar usuario</button>
+                            <button type="button" id="btnGestionar" class="nav-item btn btn-primary">Gestionar Videojuegos</button>
+                            <button type="button" id="btnInsertar" class="nav-item btn btn-primary ms-2">Insertar Videojuego</button>
+                            <button type="button" id="btnRegistrar" class="nav-item btn btn-primary ms-2">Registrar Usuario</button>
+                            <button type="button" id="btnEliminar" class="nav-item btn btn-primary ms-2">Gestionar Usuarios</button>
                         </div>
                     </nav>
                 </div>
@@ -134,6 +137,7 @@ if (!isset($_SESSION['usuario'])) {
             const btnGestionar = document.getElementById("btnGestionar");
             const btnInsertar = document.getElementById("btnInsertar");
             const btnRegistrar = document.getElementById("btnRegistrar");
+            const btnEliminar = document.getElementById("btnEliminar");
 
             function mostrarGestionar() {
                 panel.innerHTML = "<?php verGestionar(); ?>";
@@ -147,9 +151,14 @@ if (!isset($_SESSION['usuario'])) {
                 panel.innerHTML = "<?php verRegistrar(); ?>";
             }
 
+            function mostrarEliminar() {
+                panel.innerHTML = "<?php verEliminar(); ?>";
+            }
+
             btnGestionar.addEventListener("click", mostrarGestionar);
             btnInsertar.addEventListener("click", mostrarInsertar);
             btnRegistrar.addEventListener("click", mostrarRegistrar);
+            btnEliminar.addEventListener("click", mostrarEliminar);
         </script>
     </body>
 
