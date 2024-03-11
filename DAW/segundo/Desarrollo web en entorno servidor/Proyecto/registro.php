@@ -39,34 +39,47 @@ if (isset($_POST['registro'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Videojuegos - Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Registrar usuario</h1>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="signin-form">
-        <div class="form-element">
-            <label>Nombre</label>
-            <input type="text" name="nombre" pattern="[a-zA-Z ]+" required />
-        </div>
-        <div class="form-element">
-            <label>Usuario</label>
-            <input type="text" name="usuario" pattern="[a-zA-Z0-9]+" required />
-        </div>
-        <div class="form-element">
-            <label>Contraseña</label>
-            <input type="password" name="password" required />
-        </div>
-        <div class="form-element">
-            <label>Email</label>
-            <input type="email" name="email" required />
-        </div>
-        <div class="form-element">
-            <label>Dirección</label>
-            <input type="text" name="direccion" required />
-        </div>
-        <button type="submit" name="registro" value="registro">Registrarse</button>
-    </form>
+    <div class="container-lg d-flex flex-column min-vh-100">
+        <main class="row gy-2 mb-2">
+            <div class="col table-responsive">
+                <h1>Registrar usuario</h1>
+                <form class="" name="formulario" action="admin.php" method="post" enctype="multipart/form-data">
+                    <h1>Creación de usuarios</h1>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td scope="row"><label for="" class="form-label">Nombre</label></td>
+                                <td><input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="[a-zA-Z ]+" class="form-control" required /></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><label for="usuario" class="form-label">Usuario</label></td>
+                                <td><input type="text" name="usuario" id="usuario" pattern="[a-zA-Z0-9]+" placeholder="Usuario" class="form-control" required /></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><label for="password" class="form-label">Contraseña</label></td>
+                                <td><input type="password" name="password" id="password" placeholder="Contraseña" class="form-control" required /></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><label for="email" class="form-label">Email</label></td>
+                                <td><input type="email" name="email" id="email" placeholder="correo@electronico.com" class="form-control" required /></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><label for="direccion" class="form-label">Dirección</label></td>
+                                <td><input type="text" name="direccion" id="direccion" placeholder="Dirección" class="form-control" required /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" name="registro" value="Registrar usuario"></input>
+                </form>
+                <?php include("includes/footer.php"); ?>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
