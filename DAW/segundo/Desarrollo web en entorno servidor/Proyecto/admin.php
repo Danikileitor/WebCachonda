@@ -75,30 +75,7 @@ if (!isset($_SESSION['usuario'])) {
                     </nav>
                 </div>
                 <div id="contenido" class="col table-responsive">
-                    <form class="" name="formulario" action="admin.php" method="post" enctype="multipart/form-data">
-                        <h1>Inserción de Videojuegos</h1>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td scope="row"><label for="nombre" class="form-label">Nombre:</label></td>
-                                    <td><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" class="form-control" required></td>
-                                </tr>
-                                <tr>
-                                    <td scope="row"><label for="imagen">Imagen:</label></td>
-                                    <td><input type="file" accept="image/*" name="imagen" id="imagen" required></td>
-                                </tr>
-                                <tr>
-                                    <td scope="row"><label for="descripcion" class="form-label">Descripcion:</label></td>
-                                    <td><textarea name="descripcion" id="descripcion" class="form-control" rows="3" required>Descripción del videojuego.</textarea></td>
-                                </tr>
-                                <tr>
-                                    <td scope="row"><label for="precio" class="form-label">Precio:</label></td>
-                                    <td><input type="number" name="precio" id="precio" class="form-control" min="0" pattern="^\d*(\.\d{0,2})?$" placeholder="0,00" step="0.01" class="form-control" required></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <input type="submit" name="insertar" value="Insertar juego">
-                    </form>
+                    <?php verGestionar() ?>
                 </div>
             </main>
             <?php include("includes/footer.php"); ?>
