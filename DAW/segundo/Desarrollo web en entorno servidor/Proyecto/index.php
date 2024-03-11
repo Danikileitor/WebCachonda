@@ -42,30 +42,19 @@ if (!isset($_SESSION['usuario'])) {
 
             <?php
             if (isset($_SESSION['carro'])) { ?>
-                <div class="row gy-2 mb-2">
-                    <div class="col">
-                        <nav class="navbar navbar-expand">
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item bg-success rounded w-25">
-                                    <span class="nav-link"><img class="img-fluid" alt="carrito" src="assets/cesta.png"></span>
-                                </li>
-                                <li class="nav-item">
-                                    <span class="nav-link">
-                                        <h5>Productos:</h5>
-                                    </span>
-                                </li>
-                                <?php foreach ($_SESSION['carro'] as $producto) { ?>
-                                    <li class="nav-item">
-                                        <span class="nav-link"><?php echo $producto->nombre; ?></span>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        </nav>
+                <div class="row gy-2 mt-1 mb-2 border border-success rounded">
+                    <div class="col-1">
+                        <div><img class="img-fluid bg-success rounded p-2" alt="carrito" src="assets/cesta.png"></div>
                     </div>
+                    <?php foreach ($_SESSION['carro'] as $producto) { ?>
+                        <div class="col-1">
+                            <div><?php echo $producto->nombre; ?></div>
+                        </div>
+                    <?php } ?>
                 </div>
             <?php } ?>
 
-            <main class="row gy-2 mb-2">
+            <main class="row gy-2 mt-1 mb-2 pb-2">
                 <?php
                 try {
                     $sql = "SELECT * FROM productos";
