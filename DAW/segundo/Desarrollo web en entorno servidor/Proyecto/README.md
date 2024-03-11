@@ -1,3 +1,3 @@
 # Proyecto Tienda de Videojuegos
 Requisitos:
-    *Módulos php: php-imagick
+    * Módulos php: php-imagick
