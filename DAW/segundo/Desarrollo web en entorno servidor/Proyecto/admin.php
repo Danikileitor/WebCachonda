@@ -85,6 +85,7 @@ if (!isset($_SESSION['usuario'])) {
             const panel = document.getElementById("contenido");
             const btnGestionar = document.getElementById("btnGestionar");
             const btnInsertar = document.getElementById("btnInsertar");
+            const btnRegistrar = document.getElementById("btnRegistrar");
 
             function mostrarGestionar() {
                 panel.innerHTML = "<?php verGestionar(); ?>";
@@ -94,8 +95,13 @@ if (!isset($_SESSION['usuario'])) {
                 panel.innerHTML = "<?php verInsertar(); ?>";
             }
 
+            function mostrarRegistrar() {
+                panel.innerHTML = "<?php verRegistrar(); ?>";
+            }
+
             btnGestionar.addEventListener("click", mostrarGestionar);
             btnInsertar.addEventListener("click", mostrarInsertar);
+            btnRegistrar.addEventListener("click", mostrarRegistrar);
         </script>
     </body>
 
