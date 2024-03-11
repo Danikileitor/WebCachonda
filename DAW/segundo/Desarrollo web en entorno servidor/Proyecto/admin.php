@@ -53,7 +53,7 @@ if (!isset($_SESSION['usuario'])) {
                 $imagen->readImage($temporal);
                 $imagen->setImageCompressionQuality(80);
                 $imagen->scaleImage(512, 512);
-                $imagen->writeImage(__DIR__ . $rutaCompleta);
+                $imagen->writeImage($rutaCompleta);
                 $imagen->destroy();
 
                 $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
