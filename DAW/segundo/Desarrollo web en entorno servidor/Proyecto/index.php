@@ -30,7 +30,7 @@ if (!isset($_SESSION['usuario'])) {
         if (isset($_POST["comprar"])) {
             $compra = (object) [
                 'id' => $_POST['comprar_id'],
-                'producto' => $_POST['comprar_nombre'],
+                'nombre' => $_POST['comprar_nombre'],
                 'precio' => $_POST['comprar_precio']
             ];
             $_SESSION['carro'][] = $compra;
@@ -39,6 +39,31 @@ if (!isset($_SESSION['usuario'])) {
         ?>
         <div class="container-lg d-flex flex-column min-vh-100">
             <?php include("includes/header.php"); ?>
+
+            <?php
+            if (isset($_SESSION['carro'])) { ?>
+                <div class="row gy-2 mb-2">
+                    <div class="col">
+                        <nav class="navbar navbar-expand">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item bg-success rounded w-25">
+                                    <span class="nav-link"><img class="img-fluid" alt="carrito" src="assets/cesta.png"></span>
+                                </li>
+                                <li class="nav-item">
+                                    <span class="nav-link">
+                                        <h5>Productos:</h5>
+                                    </span>
+                                </li>
+                                <?php foreach ($_SESSION['carro'] as $producto) { ?>
+                                    <li class="nav-item">
+                                        <span class="nav-link"><?php echo $producto->nombre; ?></span>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            <?php } ?>
 
             <main class="row gy-2 mb-2">
                 <?php
