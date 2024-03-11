@@ -40,24 +40,24 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
-    <div class="container-lg">
+    <div class="container-lg d-flex flex-column min-vh-100">
         <?php include("includes/header.php"); ?>
-        <div class="mb-3 row">
+        <div class="row w-50 ms-auto me-auto mt-auto mb-2">
             <div class="col">
                 <h1>Iniciar sesión</h1>
             </div>
         </div>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formulariologin">
+        <form class="w-50 ms-auto me-auto mb-auto mt-2" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formulariologin">
             <div class="mb-3 row">
                 <label for="usuario" class="col-4 col-form-label">Usuario</label>
                 <div class="col-8">
-                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="usuario" pattern="[a-zA-Z0-9]+" required />
+                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" pattern="[a-zA-Z0-9]+" required />
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="usuario" class="col-4 col-form-label">Contraseña</label>
                 <div class="col-8">
-                    <input type="password" class="form-control" name="password" id="password" placeholder="contraseña" required />
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required />
                 </div>
             </div>
             <div class="mb-3 row">
@@ -67,6 +67,7 @@ if (isset($_POST['login'])) {
                 </div>
             </div>
         </form>
+        <?php include("includes/footer2.php"); ?>
     </div>
 </body>
 

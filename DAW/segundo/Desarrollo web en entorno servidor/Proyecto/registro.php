@@ -33,7 +33,7 @@ if (isset($_POST['registro'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="<?php echo $_COOKIE["tema"]; ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -45,11 +45,11 @@ if (isset($_POST['registro'])) {
 
 <body>
     <div class="container-lg d-flex flex-column min-vh-100">
-        <main class="row gy-2 mb-2">
+        <?php include("includes/header.php"); ?>
+        <main class="row gy-2 w-50 m-auto">
             <div class="col table-responsive">
-                <h1>Registrar usuario</h1>
                 <form class="" name="formulario" action="admin.php" method="post" enctype="multipart/form-data">
-                    <h1>Creación de usuarios</h1>
+                    <h1>Registrar usuario</h1>
                     <table class="table">
                         <tbody>
                             <tr>
@@ -74,11 +74,12 @@ if (isset($_POST['registro'])) {
                             </tr>
                         </tbody>
                     </table>
-                    <input type="submit" name="registro" value="Registrar usuario"></input>
+                    <input type="submit" name="registro" value="Registrar usuario" class="btn btn-primary" />
+                    <input type="button" name="volverLogin" value="Volver" class="btn btn-primary" onclick="location.href='login.php'" />
                 </form>
-                <?php include("includes/footer.php"); ?>
             </div>
         </main>
+        <?php include("includes/footer2.php"); ?>
     </div>
 </body>
 
