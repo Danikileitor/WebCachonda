@@ -43,6 +43,14 @@ if (!isset($_SESSION['usuario'])) {
         <div class="container-lg d-flex flex-column min-vh-100">
             <?php include("includes/header.php"); ?>
             <main class="row gy-2 mb-2">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand">
+                        <div class="nav navbar-nav">
+                            <button type="button" class="nav-item btn btn-primary" href="#">Gestionar</button>
+                            <button type="button" class="nav-item btn btn-primary ms-2" href="#">Añadir</button>
+                        </div>
+                    </nav>
+                </div>
                 <div class="col table-responsive">
                     <form class="" name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
                         <h1>Gestión de Videojuegos</h1>
