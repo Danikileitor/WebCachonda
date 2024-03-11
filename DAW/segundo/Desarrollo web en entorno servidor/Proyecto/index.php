@@ -36,7 +36,7 @@ if (!isset($_SESSION['usuario'])) {
                     $resultado = $connection->query($sql);
 
                     while ($juego = $resultado->fetch(PDO::FETCH_OBJ)) {
-                        echo "<div class='col'>";
+                        echo "<div class='col-md-3'>";
                         echo "<div class='card h-100'>";
                         echo "<img src='" . $juego->imagen . "' class='card-img-top' alt='" . $juego->nombre . "'>";
                         echo "<div class='card-body'>";
