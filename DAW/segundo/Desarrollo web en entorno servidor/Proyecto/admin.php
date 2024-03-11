@@ -33,11 +33,11 @@ if (!isset($_SESSION['usuario'])) {
                     $eliminar->bindParam("id", $id);
                     $eliminar->execute();
                 }
-                echo "Se han eliminado los videojuegos: ";
+                echo "<script>alert(Se han eliminado los videojuegos con ID: ";
                 foreach ($ids as $id) {
                     echo "$id ";
                 }
-                echo "correctamente.";
+                echo "correctamente.)</script>";
             }
         }
         // Insertar videojuego
@@ -60,6 +60,38 @@ if (!isset($_SESSION['usuario'])) {
                 $sql = "INSERT INTO productos (nombre, imagen, descripcion, precio) VALUES (?, ?, ?, ?)";
                 $insertar = $connection->prepare($sql);
                 $insertar->execute([$_POST["nombre"], $rutaCompleta, $_POST["descripcion"], $_POST["precio"]]);
+            }
+        }
+        // Registrar usuario
+        if (isset($_POST['registro'])) {
+            $nombre = $_POST['nombre'];
+            $usuario = $_POST['usuario'];
+            $password = $_POST['password'];
+            $password_hash = password_hash($password, PASSWORD_BCRYPT);
+            $email = $_POST['email'];
+            $direccion = $_POST['direccion'];
+            $perfil = $_POST['perfil'];
+            $query = $connection->prepare("SELECT * FROM usuarios WHERE usuario=:usuario");
+            $query->bindParam("usuario", $usuario, PDO::PARAM_STR);
+            $query->execute();
+            if ($query->rowCount() > 0) {
+                echo '<script>alert(¡El usuario [' . $usuario . '] ya se encuentra registrado!)</script>';
+            }
+            if ($query->rowCount() == 0) {
+                $query = $connection->prepare("INSERT INTO usuarios(nombre,usuario,contrasena,email,direccion,perfil) VALUES (:nombre,:usuario,:password_hash,:email,:direccion,:perfil)");
+                $query->bindParam("nombre", $nombre, PDO::PARAM_STR);
+                $query->bindParam("usuario", $usuario, PDO::PARAM_STR);
+                $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
+                $query->bindParam("email", $email, PDO::PARAM_STR);
+                $query->bindParam("direccion", $direccion, PDO::PARAM_STR);
+                $query->bindParam("perfil", $perfil, PDO::PARAM_STR);
+                $result = $query->execute();
+                if ($result) {
+                    header("Refresh:3; url=login.php");
+                    echo '<script>alert(¡Usuario registrado correctamente!)</script>';
+                } else {
+                    echo '<script>alert(¡Algo ha ido mal!)</script>';
+                }
             }
         }
         ?>
