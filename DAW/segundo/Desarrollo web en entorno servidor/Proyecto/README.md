@@ -1,3 +1,5 @@
 # Proyecto Tienda de Videojuegos
 Módulos php requeridos
-- `sudo apt-get install php-imagick`
+- ```bash
+sudo apt-get install php-imagick
+```
