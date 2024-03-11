@@ -42,7 +42,8 @@ if (!isset($_SESSION['usuario'])) {
                         echo "<div class='card-body'>";
                         echo "<h5 class='card-title text-center' style='height: 3em'>" . $juego->nombre . "</h5>";
                         echo "<p class='card-text overflow-auto' style='height: 10rem'>" . $juego->descripcion . "</p>";
-                        echo "<a href='#' class='btn btn-primary'>Comprar</a></div></div></div>";
+                        echo "<div class='d-flex justify-content-around'><a href='#' class='btn btn-primary'>Comprar</a>";
+                        echo "<span class='btn btn-success disabled'>" . $juego->precio . "</span></div></div></div></div>";
                     }
                 } catch (PDOException $e) {
                     echo "Error: " . $e->getMessage();
