@@ -51,7 +51,7 @@ if (!isset($_SESSION['usuario'])) {
                         </div>
                     </nav>
                 </div>
-                <div class="col table-responsive">
+                <div id="contenido" class="col table-responsive">
                     <form class="" name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
                         <h1>Gestión de Videojuegos</h1>
                         <table class="table table-primary">
@@ -86,6 +86,17 @@ if (!isset($_SESSION['usuario'])) {
             </main>
             <?php include("includes/footer.php"); ?>
         </div>
+        <script>
+            const panel = document.getElementById("contenido");
+
+            function mostrarGestionar() {
+                panel.innerHTML = "<?php verGestionar(); ?>";
+            }
+
+            function mostrarInsertar() {
+                panel.innerHTML = "<?php verInsertar(); ?>";
+            }
+        </script>
     </body>
 
     </html>
