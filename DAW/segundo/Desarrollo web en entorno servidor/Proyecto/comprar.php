@@ -33,7 +33,7 @@ if (!isset($_SESSION['usuario'])) {
         }
         if (isset($_POST["finalizarcompra"])) {
             header("Refresh:0; url=index.php");
-            echo "<script>alert('Compra realizada con éxito.¡Gracias por su compra!')</script>";
+            echo "<script>alert('Compra realizada con éxito. ¡Gracias por su compra!')</script>";
             unset($_SESSION['carro']);
             exit;
         }
