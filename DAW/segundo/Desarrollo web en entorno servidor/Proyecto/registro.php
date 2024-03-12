@@ -62,11 +62,11 @@ if (isset($_POST['registro'])) {
                             </tr>
                             <tr>
                                 <td scope="row"><label for="usuario" class="form-label">Usuario</label></td>
-                                <td><input type="text" name="usuario" id="usuario" pattern="[a-zA-Z0-9]+" placeholder="Usuario" class="form-control" required /></td>
+                                <td><input type="text" name="usuario" id="usuario" pattern="^[a-z0-9_ ]{4,255}$" placeholder="Usuario" class="form-control" required oninvalid="this.setCustomValidity('¡El usuario debe tener al menos 4 caracteres!')" oninput="this.setCustomValidity('')" /></td>
                             </tr>
                             <tr>
                                 <td scope="row"><label for="password" class="form-label">Contraseña</label></td>
-                                <td><input type="password" name="password" id="password" placeholder="Contraseña" class="form-control" required /></td>
+                                <td><input type="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&,\.])[A-Za-z\d@$!%*?&,\.]{8,}$" placeholder="Contraseña" class="form-control" required oninvalid="this.setCustomValidity('¡La contraseña ha de tener un mínimo de 8 caracteres con al menos 1 minúscula, 1 mayúscula, 1 número y un caracter especial!')" oninput="this.setCustomValidity('')" /></td>
                             </tr>
                             <tr>
                                 <td scope="row"><label for="email" class="form-label">Email</label></td>
