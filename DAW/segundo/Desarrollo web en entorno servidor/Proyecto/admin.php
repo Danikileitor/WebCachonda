@@ -29,6 +29,14 @@ if (!isset($_SESSION['usuario'])) {
             if (isset($_POST["ids"])) {
                 $ids = $_POST["ids"];
                 foreach ($ids as $id) {
+                    try {
+                        $sql = "SELECT * FROM productos WHERE id='$id'";
+                        $resultado = $connection->query($sql);
+                        $juego = $resultado->fetch(PDO::FETCH_OBJ);
+                        unlink($juego->imagen);
+                    } catch (Exception $e) {
+                        echo "<script>alert('¡No se ha podido borrar la imagen del videojuego con ID [$id]!')</script>";
+                    }
                     $eliminar = $connection->prepare('DELETE FROM productos WHERE id=:id');
                     $eliminar->bindParam("id", $id);
                     $eliminar->execute();
