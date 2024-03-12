@@ -44,11 +44,11 @@ if (!isset($_SESSION['usuario'])) {
             if (isset($_SESSION['carro'])) { ?>
                 <div class="row p-2 pt-0 mb-2 border border-success rounded">
                     <div class="col-1 mt-2">
-                        <a href="comprar.php" class="badge h-100 bg-success rounded d-flex justify-content-center align-items-center"><img class="img-fluid" alt="carrito" src="assets/cesta.png"></a>
+                        <a href="comprar.php" class="badge bg-success border border-success h-100 rounded d-flex justify-content-center align-items-center"><img class="img-fluid" alt="carrito" src="assets/cesta.png"></a>
                     </div>
                     <?php foreach ($_SESSION['carro'] as $producto) { ?>
                         <div class="col-1 mt-2">
-                            <span class="badge border border-secondray text-wrap h-100 d-flex justify-content-center align-items-center"><?php echo $producto->nombre; ?></span>
+                            <span class="badge bg-secondary border border-secondray text-wrap h-100 d-flex justify-content-center align-items-center"><?php echo $producto->nombre; ?></span>
                         </div>
                     <?php } ?>
                 </div>
