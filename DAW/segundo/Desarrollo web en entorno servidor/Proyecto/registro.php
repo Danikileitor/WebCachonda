@@ -62,7 +62,7 @@ if (isset($_POST['registro'])) {
                             </tr>
                             <tr>
                                 <td scope="row"><label for="usuario" class="form-label">Usuario</label></td>
-                                <td><input type="text" name="usuario" id="usuario" pattern="^[a-z0-9_ ]{4,255}$" placeholder="Usuario" class="form-control" required oninvalid="this.setCustomValidity('¡El usuario debe tener al menos 4 caracteres!')" oninput="this.setCustomValidity('')" /></td>
+                                <td><input type="text" name="usuario" id="usuario" pattern="^[a-z0-9_]{4,255}$" placeholder="Usuario" class="form-control" required oninvalid="this.setCustomValidity('¡El usuario debe tener al menos 4 caracteres usando solo mínusculas, números y guión bajo!')" oninput="this.setCustomValidity('')" /></td>
                             </tr>
                             <tr>
                                 <td scope="row"><label for="password" class="form-label">Contraseña</label></td>
